@@ -148,6 +148,7 @@ Each class draws its spells from one or two Iron's Spells schools (see `docs/CON
 | Create | 6.0.10 | both | Machines, conveyors, trains; Yellow's home mod | Flywheel, Ponder (bundled) | — | testing |
 | Sable | 2.0.6 | both | Physics "sub-levels" that ships, and Create: Lanterns' planets (Oa, Korugar), are built on | — | — | testing |
 | Create Aeronautics (bundled) | 1.3.2 | both | **Airships**: propellers, balloons, levitite. Includes Create: Simulated | Create, Sable | — | testing |
+| **Create Cosmonautics** | 26.08.307 (**beta**, CurseForge-only; size matches CurseForge file 8612744) | both | **Space:** rockets, thrusters, titanium ore, the Moon and deep space. With it, Create: Lanterns creates **Oa** and **Korugar** as real worlds, and a lit ring can fly its bearer into space past ~20,000 blocks (with life support) | Create, Aeronautics, Sable (bundles Dimensional Sable 1.0.5) | added after the first pre-generation, so the world was generated again (titanium ore) | testing |
 | Create Crafts & Additions | 1.7.2 | both | Electricity for Create (alternators, motors, wires) | Create | — | testing |
 | **Create: Lanterns** | 20.11-alpha | both | **The heart of the story:** the power rings of every light, lanterns, power batteries, constructs, the crashed Lantern ship, Oa and Korugar. Private build, personal use | Create, Sable, Simulated, Aeronautics | server config tuned (rings don't choose on their own, deeds off); 24 items of unused lights hidden; 3 recipe categories fixed | tuned |
 | Spectral Hub | 4 | both | Create: Lanterns add-on: press **J** for the spectrum screen. With our settings it says "Rings do not choose in this world" (the ring trial hands out rings) | Create: Lanterns | — | testing |
@@ -502,3 +503,6 @@ Structurify is the **only** thing that controls placement. Cristel Lib's auto-co
 | 2026-11-09 | + Castle in the Sky | 55 | 22.8s → 22.9s | 1 → 0 (recipe fixed) (+6 known) |
 | 2026-11-09 | **The big build** (+92 jars: magic, combat, creatures, bosses, tech, quests, skills, QoL) | 147 | 43.9s | tag cascade (DtE), 2 broken Dungeons Weapons files, 35 dead recipes/loot tables → 0 (+2 known) |
 | 2026-11-09 | + story engine, quest book (26 chapters, 645 quests), skill trees (8), tiered loot (747 tables), party glue | 147 | 44.5s | 0 (+2 known), 0 unreviewed warnings; selftest 32/32 |
+| 2026-11-09 | Quest book fixes: ids kept below 8000…, stage tasks as `gamestage` (FTB had silently re-id'd ~half the quests and dropped all 44 stage tasks) | 147 | 44.4s | 0 (+2 known) |
+| 2026-11-09 | + Create Cosmonautics (Oa, Korugar, Moon, deep space become real dimensions) | 148 | 44.2s | 0 (+2 known); Lanterns config gained a `[cosmonautics]` section |
+| 2026-11-09 | **Final real world**, pre-generated 1,200 blocks around spawn (≈22,800 chunks, ~8 min) | 148 | — | 0 (+ known Philips Ruins item frames during generation) |

@@ -10,9 +10,10 @@ check. Everything is committed to git, so any decision can be undone (`git log -
 | | |
 |---|---|
 | **Server** | Boots in ~45 s with **0 errors** and **0 unreviewed warnings** (2 known, harmless and explained) |
-| **Mods** | 147 server jars + 9 client-only; the `greenlanterns` client is **in sync** |
+| **Mods** | 148 server jars + 9 client-only; the `greenlanterns` client is **in sync** |
 | **World** | Fresh world `greenlanterns`, pre-generated 1,200 blocks around the spawn village. Older worlds are in `server/backups/` |
-| **Quest book** | "The Book of Oa": **26 chapters, 645 quests** (story, 7 classes, finale, 16 mod guides) |
+| **Quest book** | "The Book of Oa": **26 chapters, 646 quests** (story, 7 classes, finale, 16 mod guides) |
+| **Space** | Oa, Korugar, the Moon and deep space are real places (Create Cosmonautics) |
 | **Classes** | 8 skill trees (Adventurer + 7 lights): 22 + 7 × 34 nodes |
 | **Loot** | 747 chest tables sorted into 5 difficulty tiers, items from every gear/magic mod, scaled by Luck |
 | **Self-test** | `/gl_dev selftest`: **32/32 checks pass** on a fresh world (IDs, skill categories, trial scoring, the outpost, Warlord Vex, the crash site, both NPCs) |
@@ -152,6 +153,7 @@ The ones you're most likely to want to change are marked ★.
 | View distance 12 (was 10) | The Devourer is ~335 blocks long; clients only see entities inside the view distance, so at 10 he went invisible mid-fight |
 | Mod guides unlock in stages | Keeps the start simple: only "how to play" at first |
 | Dropped **Illager Invasion** | Needs a library (`extensibleenums`) that isn't published for 1.21.1 |
+| ★ Added **Create Cosmonautics** (beta) | Without it, Create: Lanterns' Oa and Korugar don't exist. With it they're real worlds, and a lit ring can fly you into space (see §7) |
 
 ## 5. Please check in-game
 
@@ -164,6 +166,8 @@ Things that need a real player, so I couldn't test them headless:
 - [ ] Killing Vex: the crash happens ~10 s later and Kaelen glows green.
 - [ ] The ring trial: clickable answers in chat, a ring arrives, it can be worn (Curios ring
       slot). Test a White and a Black path too.
+- [ ] Space: fly straight up with a lit, charged ring and check you reach deep space, can steer
+      toward Oa, and land there.
 
 **Systems**
 - [ ] Skill trees: open the skills screen (default key **K**), check a class tree unlocks after
@@ -184,8 +188,9 @@ Things that need a real player, so I couldn't test them headless:
 
 ## 6. Known limits
 
-- **Oa and Korugar** (the Lantern planets) need **Create Cosmonautics**. See section 7 for what
-  happened with it.
+- Create Cosmonautics is a **beta**. It booted cleanly in every test, but space travel hasn't been
+  tried by a player yet. If it causes trouble, remove its jar from the server and the client.
+  The Oa / Korugar / deep-space quests then can't be completed; everything else is unaffected.
 - Create: Lanterns has **no ring-forging recipes** in this alpha. Rings come only from the trial
   (or `/give` as op).
 - Some guide quests are checkmarks, because the mod has no item or advancement to detect:
@@ -194,9 +199,30 @@ Things that need a real player, so I couldn't test them headless:
   progress too (and can both claim rewards). For separate class paths, keep separate teams. Boss
   credit works between teams anyway (the 64-block rule).
 
-## 7. Create Cosmonautics
+## 7. Create Cosmonautics, and two quest-book bugs caught at the end
 
-*(filled in below after testing)*
+**Cosmonautics.** The guide writer noticed that Create: Lanterns' Lantern worlds only exist with
+**Create Cosmonautics**. It's on CurseForge for NeoForge 1.21.1, as beta 26.08.307: I checked
+the file size against CurseForge, and its dependencies were already in the pack. With it:
+- the server has 4 new dimensions: `createlanterns:oa`, `createlanterns:korugar`,
+  `rocketnautics:moon` and `rocketnautics:deep_space`;
+- a lit ring keeps flying past ~20,000 blocks up, into deep space, and keeps you breathing there
+  (new `[cosmonautics]` section in the Lanterns config; our own settings were untouched);
+- rockets, thrusters, a space helmet, jetpack and **titanium ore** are added.
+
+Because titanium generates in the Overworld, I **generated the world again** after adding it. The
+"Oa" and "Korugar" quests now require actually going there, after a new "Beyond the Sky" quest
+(reach deep space by ring or rocket). Yellow's "Starship" quest ends in deep space.
+
+**Two bugs FTB Quests hides completely.** Both were found by comparing the quest files before and
+after a boot, and both are fixed and guarded against in `tools/questgen.py`:
+1. FTB reads quest IDs as *signed* numbers. About half of our IDs started with 8–F, so FTB quietly
+   gave those quests new IDs. Their titles and dependency lines no longer matched.
+2. FTB's stage task is called `gamestage`, not `stage`. FTB deleted all 44 story stage tasks on
+   load: the trials, the ring, the raid, the crash, the Lantern's tale.
+
+Now: 646 quests, all titled, all 772 dependency links resolve, every task type and field survives
+a boot, and a second boot leaves the files byte-for-byte unchanged.
 
 ## 8. Still yours to decide
 
