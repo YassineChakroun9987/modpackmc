@@ -52,7 +52,7 @@ def scan(jar_bytes, label, owners, results):
                 continue
             try:  # Minecraft reads JSON leniently, so some mods ship // comments; strip full-line ones
                 text = z.read(n).decode("utf-8", "replace")
-                d = json.loads(re.sub(r"(?m)^\s*//.*$", "", text))
+                d = json.loads(re.sub(r",(\s*[}\]])", r"\1", re.sub(r"(?m)^\s*//.*$", "", text)))  # + trailing commas
             except ValueError:
                 info["unparsed"] = info.get("unparsed", 0) + 1
                 continue

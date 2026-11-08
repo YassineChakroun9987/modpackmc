@@ -29,7 +29,7 @@ JAVA = Path(os.environ["APPDATA"]) / ".minecraft/runtime/java-runtime-delta/wind
 FRESH_DIR = ".boottest"
 # Replies to the commands we send (locate, give, summon, ...). Keep these specific: startup lines
 # such as "Successfully initialized permission handler" can land right after Done.
-REPLY = re.compile(r"^The nearest |^Could not find |^Unknown |^Incorrect argument|^There is no |^Invalid |"
+REPLY = re.compile(r"^The nearest |^Could not find |^Can't locate |^Unknown |^Incorrect argument|^There is no |^Invalid |"
                    r"^Teleported |^Set the |^Gave |^Showing |^Changed |^No (entity|player) |^Summoned ", re.I)
 
 
