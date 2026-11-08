@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "minecraft:elytra"
+    },
+    "M": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "pattern": [
+    "MNM",
+    "NEN",
+    "MNM"
+  ],
+  "result": {
+    "count": 1,
+    "id": "castle_in_the_sky:levitation_stone"
+  }
+}
