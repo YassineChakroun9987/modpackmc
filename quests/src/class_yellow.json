@@ -836,7 +836,7 @@
       "desc": [
         "Oa and Korugar hang among the stars. A Lantern can fly there, but a Stormwright brings the whole party.",
         "",
-        "Build a ship that can reach another world (Create Aeronautics + Create: Lanterns). Craft &e16 Pearlescent Levitite&r for the hull, then tick the checkmark when your crew is aboard."
+        "Build a ship that can leave the world: Create Aeronautics for the hull (&e16 Pearlescent Levitite&r), Create Cosmonautics' titanium thrusters to break the sky. Then take your crew into &edeep space&r."
       ],
       "icon": "aeronautics:pearlescent_levitite",
       "x": 25.25,
@@ -844,7 +844,7 @@
       "deps": ["ring", "levitite"],
       "tasks": [
         {"type": "item", "item": "aeronautics:pearlescent_levitite", "count": 16},
-        {"type": "checkmark"}
+        {"type": "dimension", "dimension": "rocketnautics:deep_space"}
       ],
       "rewards": [
         {"type": "loot", "table": "greenlanterns:rewards/tier_4"},

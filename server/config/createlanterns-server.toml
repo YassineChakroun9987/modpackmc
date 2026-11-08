@@ -1144,3 +1144,22 @@
 	# Default: 2.0
 	# Range: 1.0 ~ 10.0
 	times = 2.0
+
+#With Create Cosmonautics installed. What a lit ring does for its bearer in space. A world without Create
+#Cosmonautics won't have this section.
+[cosmonautics]
+	#If true, a lit ring keeps its bearer breathing wherever Create Cosmonautics says there's no air
+	#(high above the overworld, on the Moon, in deep space), like its space helmet does (underwater, ring.waterBreathing
+	#decides). If false, a bearer needs a helmet and a backtank up there like anyone else.
+	lifeSupport = true
+	#Energy the ring burns each second keeping its bearer breathing there. A stronger bearer pays less.
+	# Default: 0.2
+	# Range: 0.0 ~ 1000.0
+	lifeSupportPerSecond = 0.2
+	#If true, the ring flies its bearer out of the world the way Create Cosmonautics takes a rocket. Past
+	#the height where rockets go into deep space (20000 above the overworld, the Moon and every Lantern world), they go into a
+	#space of their own. The ring flies that through Create Cosmonautics' universe as they fly (faster the further they are
+	#from anything), and they come down on whatever world they fly at, like a ship does. If false, they keep flying up the
+	#world's own sky however high they go and never leave it. In deep space (if they got there on a ship) they only fly around the
+	#space they're in.
+	spaceFlight = true

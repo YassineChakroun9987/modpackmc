@@ -33,6 +33,7 @@ both    combat_roll-neoforge-2.0.6+1.21.1.jar                          8b9676996
 both    companions-neoforge-1.21.1-1.3.7.jar                           9cf5956952cbc4c48e3018511bfb47b9eebebc53
 both    Corgilib-NeoForge-1.21.1-5.0.0.10.jar                          78a1b2f0b4e2b816aeffb0e6a2cc0062aa343e46
 both    corpse-neoforge-1.21.1-1.1.22.jar                              0d73e082e4d5c0f185aa8030bcefb68c259d1107
+both    cosmonautics-26.08.307.jar                                     9b70ebf3ff2beaee0ab0ba6c8f46643da3e4f4fc
 both    create-1.21.1-6.0.10.jar                                       0e97e49837bed766e6f28a4c95b04885d6acc353
 both    create-aeronautics-bundled-1.21.1-1.3.2.jar                    ddbe9cbc25e8f663218aa1e9fdfc4b99f0e11e4b
 both    createaddition-1.7.2.jar                                       8e7158d3144b1ee97e58092fe006675b0e09f6d8

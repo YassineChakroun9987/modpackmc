@@ -222,17 +222,38 @@
       ]
     },
     {
+      "key": "space",
+      "title": "Beyond the Sky",
+      "subtitle": "Leave the world",
+      "desc": [
+        "The sky has a ceiling, and above it is &edeep space&r (Create Cosmonautics). There are two ways up:",
+        "&a1.&r A lit ring: keep flying up. Past about &e20,000 blocks&r the ring carries you out of the world, and keeps you breathing while its charge lasts.",
+        "&a2.&r A rocket: Cosmonautics' thrusters and engines (made with &etitanium&r, a new ore), plus a space helmet. Bring the whole party.",
+        "Out there you fly toward a world to land on it: the Moon, Oa or Korugar."
+      ],
+      "icon": "rocketnautics:space_helmet",
+      "x": 12.5, "y": 1.5,
+      "shape": "hexagon", "size": 1.25,
+      "deps": ["airship", "ring"],
+      "dep_mode": "one",
+      "tasks": [{"type": "dimension", "dimension": "rocketnautics:deep_space"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 200}
+      ]
+    },
+    {
       "key": "oa",
       "title": "Oa",
       "desc": [
-        "Far beyond the sky lies &aOa&r, the Guardians' world: the Citadel, the Guardian Outpost, the Lantern Spire, and the great Central Power Battery that recharges ten times faster than any other. Ships reach it.",
-        "Fly there with your party and recharge every ring and Lantern you carry."
+        "Far beyond the sky lies &aOa&r, the Guardians' world: the Citadel, the Guardian Outpost, the Lantern Spire, and the great Central Power Battery that recharges ten times faster than any other.",
+        "Fly there from deep space with your party and recharge every ring and Lantern you carry."
       ],
       "icon": "createlanterns:oa_flower",
       "x": 15, "y": 0,
       "shape": "octagon", "size": 1.75,
-      "deps": ["airship", "central_battery", "constructs"],
-      "tasks": [{"type": "checkmark"}],
+      "deps": ["space"],
+      "tasks": [{"type": "dimension", "dimension": "createlanterns:oa"}],
       "rewards": [
         {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
         {"type": "skill_xp", "category": "adventurer", "amount": 300},
@@ -243,14 +264,14 @@
       "key": "korugar",
       "title": "Korugar",
       "desc": [
-        "Korugar is a darker world: the Dread Plains, the Fear Bogs, the Fear Spire and Sinestro's Watchtower. Here it is the world of storms, and the Stormwright's trial climbs its spire.",
-        "Reach it by ship. Go armed."
+        "Korugar is a darker world: the Dread Plains, the Fear Bogs, the Fear Spire and Sinestro's Watchtower. The Yellow light was born here, in fear and storms.",
+        "Reach it from deep space, by ring or by ship. Go armed."
       ],
       "icon": "createlanterns:yellow_power_battery",
       "x": 15, "y": 3,
       "shape": "octagon", "size": 1.5,
-      "deps": ["airship", "ring"],
-      "tasks": [{"type": "checkmark"}],
+      "deps": ["space"],
+      "tasks": [{"type": "dimension", "dimension": "createlanterns:korugar"}],
       "rewards": [
         {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
         {"type": "skill_xp", "category": "adventurer", "amount": 250}
