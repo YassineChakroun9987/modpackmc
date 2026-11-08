@@ -1,0 +1,1030 @@
+{
+  "id": "class_blue",
+  "title": "&bThe Blue Light: Path of Winter",
+  "subtitle": "Frostbinder. Winter keeps what it loves.",
+  "icon": "createlanterns:blue_dust",
+  "group": "classes",
+  "order": 4,
+  "quests": [
+    {
+      "key": "join",
+      "title": "&bThe Frostbinder",
+      "subtitle": "Join this light",
+      "desc": [
+        "&o\"Winter keeps what it loves.\"&r",
+        "Blue is the light of hope: an ice battlemage of sword and spell, who explores frozen lands and the sky islands, and protects the party.",
+        "",
+        "Claim the reward to join Blue and unlock its talent tree. You can still join other lights later."
+      ],
+      "icon": "createlanterns:blue_dust",
+      "x": 0,
+      "y": 0,
+      "shape": "pentagon",
+      "size": 2,
+      "deps": ["act1:choose_path"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "command", "command": "/gl class join {p} blue"},
+        {"type": "item", "item": "minecraft:spyglass"},
+        {"type": "item", "item": "minecraft:leather_boots"},
+        {"type": "item", "item": "minecraft:cooked_salmon", "count": 8},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "blue", "amount": 50}
+      ]
+    },
+    {
+      "key": "first_frost",
+      "title": "First Frost",
+      "desc": [
+        "Your breath fogs indoors. Frost creeps across your windows in summer.",
+        "",
+        "Craft an &eIce Rune&r (see JEI). Look for &eIce Block&r, &eFrostwave&r, &eRay of Frost&r and &eIce Tomb&r scrolls."
+      ],
+      "icon": "irons_spellbooks:ice_rune",
+      "x": 1.5,
+      "y": 0,
+      "deps": ["join"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:ice_rune"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "blue", "amount": 75}
+      ]
+    },
+    {
+      "key": "cold_lands",
+      "title": "Where Breath Freezes",
+      "desc": [
+        "The light is strongest where the world is coldest.",
+        "",
+        "Visit one of the harsh frozen biomes below. Ice spell kills in cold biomes give extra Blue XP."
+      ],
+      "icon": "minecraft:snow_block",
+      "x": 3,
+      "y": 0,
+      "deps": ["first_frost"],
+      "tasks": [
+        {"type": "biome", "biome": "minecraft:ice_spikes", "optional": true},
+        {"type": "biome", "biome": "minecraft:frozen_peaks", "optional": true},
+        {"type": "biome", "biome": "terralith:glacial_chasm", "optional": true},
+        {"type": "biome", "biome": "terralith:frozen_cliffs", "optional": true},
+        {"type": "biome", "biome": "terralith:ice_marsh", "optional": true},
+        {"type": "biome", "biome": "minecraft:deep_frozen_ocean", "optional": true},
+        {"type": "biome", "biome": "terralith:alpha_islands_winter", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "blue", "amount": 75}
+      ]
+    },
+    {
+      "key": "under_ice",
+      "title": "Under the Ice",
+      "desc": [
+        "Frozen ruins keep their secrets well. Too well.",
+        "",
+        "Explore a frozen ruin: Terralith's &eFrosted Dungeon&r or &eGlacial Hut&r, an igloo, or Iron's &eImpaled Icebreaker&r ship."
+      ],
+      "icon": "minecraft:packed_ice",
+      "x": 4.5,
+      "y": 0,
+      "deps": ["cold_lands"],
+      "tasks": [
+        {"type": "structure", "structure": "terralith:underground/frosted_dungeon", "optional": true},
+        {"type": "structure", "structure": "terralith:glacial_hut", "optional": true},
+        {"type": "structure", "structure": "minecraft:igloo", "optional": true},
+        {"type": "structure", "structure": "terralith:igloo", "optional": true},
+        {"type": "structure", "structure": "irons_spellbooks:impaled_icebreaker", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "blue", "amount": 75}
+      ]
+    },
+    {
+      "key": "ice_spider",
+      "title": "The Ice Spider Den",
+      "desc": [
+        "Spiders that spit frost, nesting in a cave of blue ice.",
+        "",
+        "Find an Iron's &eIce Spider Den&r in a snowy biome and kill an &eIce Spider&r."
+      ],
+      "icon": "irons_spellbooks:icy_fang",
+      "x": 6,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 1.25,
+      "deps": ["under_ice"],
+      "tasks": [
+        {"type": "structure", "structure": "irons_spellbooks:ice_spider_den"},
+        {"type": "kill", "entity": "irons_spellbooks:ice_spider"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp_levels", "levels": 2},
+        {"type": "xp", "xp": 150},
+        {"type": "skill_xp", "category": "blue", "amount": 100}
+      ]
+    },
+    {
+      "key": "skyward",
+      "title": "Skyward",
+      "desc": [
+        "Islands drift above the clouds. Blue wants to stand on all of them.",
+        "",
+        "Reach a &efloating island&r (Ember's Floating Islands). Look up; build a tower or use ender pearls."
+      ],
+      "icon": "minecraft:feather",
+      "x": 1.5,
+      "y": -1.5,
+      "deps": ["join"],
+      "tasks": [
+        {"type": "structure", "structure": "floating_islands:amethyst_island", "optional": true},
+        {"type": "structure", "structure": "floating_islands:camp_island", "optional": true},
+        {"type": "structure", "structure": "floating_islands:cemetery_island", "optional": true},
+        {"type": "structure", "structure": "floating_islands:cherry_island_with_shrine", "optional": true},
+        {"type": "structure", "structure": "floating_islands:drifting_island", "optional": true},
+        {"type": "structure", "structure": "floating_islands:flower_island2", "optional": true},
+        {"type": "structure", "structure": "floating_islands:hut_with_waystone", "optional": true},
+        {"type": "structure", "structure": "floating_islands:paradise_island", "optional": true},
+        {"type": "structure", "structure": "floating_islands:shrine", "optional": true},
+        {"type": "structure", "structure": "floating_islands:tower_island", "optional": true},
+        {"type": "structure", "structure": "floating_islands:villager_island", "optional": true},
+        {"type": "structure", "structure": "floating_islands:witch_island", "optional": true},
+        {"type": "structure", "structure": "floating_islands:steampunk_island", "optional": true}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:ender_pearl", "count": 4},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "blue", "amount": 75}
+      ]
+    },
+    {
+      "key": "sky_village",
+      "title": "Village in the Clouds",
+      "desc": [
+        "Somebody lives up there. Somebody trades up there.",
+        "",
+        "Find a &eSky Village&r floating high above the land."
+      ],
+      "icon": "minecraft:white_wool",
+      "x": 3,
+      "y": -1.5,
+      "deps": ["skyward"],
+      "tasks": [
+        {"type": "structure", "structure": "skyvillages:skyvillage"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 120},
+        {"type": "skill_xp", "category": "blue", "amount": 100}
+      ]
+    },
+    {
+      "key": "cryomancer",
+      "title": "The Cryomancer",
+      "desc": [
+        "A mage in white wanders the snow, freezing anything that comes close.",
+        "",
+        "Defeat an Iron's &eCryomancer&r in cold lands (or near ice structures). Frost resistance helps."
+      ],
+      "icon": "irons_spellbooks:cryomancer_spawn_egg",
+      "x": 1.5,
+      "y": 1.5,
+      "shape": "hexagon",
+      "deps": ["join"],
+      "tasks": [
+        {"type": "kill", "entity": "irons_spellbooks:cryomancer"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp", "xp": 120},
+        {"type": "skill_xp", "category": "blue", "amount": 100}
+      ]
+    },
+    {
+      "key": "frostbranded",
+      "title": "The Frostbranded Book",
+      "desc": [
+        "A spellbook bound in ice that never melts.",
+        "",
+        "Get the &eFrostbranded Book&r, the ice school's spellbook (see JEI)."
+      ],
+      "icon": "irons_spellbooks:ice_spell_book",
+      "x": 3,
+      "y": 1.5,
+      "deps": ["cryomancer", "first_frost"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:ice_spell_book"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp", "xp": 120},
+        {"type": "skill_xp", "category": "blue", "amount": 100}
+      ]
+    },
+    {
+      "key": "powder",
+      "title": "Light Feet",
+      "desc": [
+        "A Frostbinder walks on snow that swallows others.",
+        "",
+        "Walk on powder snow wearing leather boots."
+      ],
+      "icon": "minecraft:powder_snow_bucket",
+      "x": 1.5,
+      "y": 3,
+      "deps": ["cryomancer"],
+      "tasks": [
+        {"type": "advancement", "advancement": "minecraft:adventure/walk_on_powder_snow_with_leather_boots"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:powder_snow_bucket"},
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "blue", "amount": 50}
+      ]
+    },
+    {
+      "key": "whisper",
+      "title": "The Light Whispers",
+      "subtitle": "Class level 10",
+      "desc": [
+        "Snow falls around you on a clear day, and it whispers: &o\"Hope is cold, and it does not break.\"&r",
+        "",
+        "Reach &eBlue level 10&r. Ice spells, kills in cold biomes, shared party kills and flying all count."
+      ],
+      "icon": "createlanterns:blue_dust",
+      "x": 9,
+      "y": 0,
+      "shape": "octagon",
+      "size": 1.5,
+      "deps": ["ice_spider", "frostbranded"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_whisper_blue"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "skill_xp", "category": "blue", "amount": 150}
+      ]
+    },
+    {
+      "key": "cryo_set",
+      "title": "The Cryomancer's Coat",
+      "desc": [
+        "White fur and blue thread. The cold bends around you.",
+        "",
+        "Craft the full &eCryomancer&r set (Iron's Spells). It boosts ice spell power and mana."
+      ],
+      "icon": "irons_spellbooks:cryomancer_chestplate",
+      "x": 10.5,
+      "y": 0,
+      "shape": "rsquare",
+      "size": 1.25,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:cryomancer_helmet"},
+        {"type": "item", "item": "irons_spellbooks:cryomancer_chestplate"},
+        {"type": "item", "item": "irons_spellbooks:cryomancer_leggings"},
+        {"type": "item", "item": "irons_spellbooks:cryomancer_boots"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "blue", "amount": 200}
+      ]
+    },
+    {
+      "key": "ice_orb",
+      "title": "Deep Winter",
+      "desc": [
+        "Colder.",
+        "",
+        "Craft an &eIce Upgrade Orb&r and apply it at the Arcane Anvil."
+      ],
+      "icon": "irons_spellbooks:ice_upgrade_orb",
+      "x": 12,
+      "y": 0,
+      "deps": ["cryo_set"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:ice_upgrade_orb"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "irons_spellbooks:arcane_essence", "count": 16},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "blue", "amount": 150}
+      ]
+    },
+    {
+      "key": "ice_staff",
+      "title": "The Ice Staff",
+      "desc": [
+        "A battlemage's off-hand: a staff that sharpens every frost spell.",
+        "",
+        "Craft Iron's &eIce Staff&r."
+      ],
+      "icon": "irons_spellbooks:ice_staff",
+      "x": 13.5,
+      "y": 0,
+      "deps": ["ice_orb"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:ice_staff"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "blue", "amount": 200}
+      ]
+    },
+    {
+      "key": "lich_tower",
+      "title": "The Frozen Tower",
+      "desc": [
+        "A black tower in the snow, glowing blue at the top. The cold comes from there.",
+        "",
+        "Find the &eLich Tower&r (Bosses of Mass Destruction) in frozen lands. Mark it."
+      ],
+      "icon": "bosses_of_mass_destruction:soul_star",
+      "x": 15,
+      "y": 0,
+      "deps": ["ice_staff"],
+      "tasks": [
+        {"type": "structure", "structure": "bosses_of_mass_destruction:lich_tower"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "blue", "amount": 200}
+      ]
+    },
+    {
+      "key": "skylands",
+      "title": "Skylands",
+      "desc": [
+        "Whole lands float above the clouds, with forests, rivers and their own seasons.",
+        "",
+        "Visit one of Terralith's &eSkylands&r biomes (spring, summer, autumn or winter)."
+      ],
+      "icon": "minecraft:elytra",
+      "x": 10.5,
+      "y": -1.5,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "biome", "biome": "terralith:skylands_spring", "optional": true},
+        {"type": "biome", "biome": "terralith:skylands_summer", "optional": true},
+        {"type": "biome", "biome": "terralith:skylands_autumn", "optional": true},
+        {"type": "biome", "biome": "terralith:skylands_winter", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "blue", "amount": 150}
+      ]
+    },
+    {
+      "key": "heavenly",
+      "title": "Fortress in the Sky",
+      "desc": [
+        "A fortress hanging at the edge of the sky, built by riders who never landed.",
+        "",
+        "Find a When Dungeons Arise sky fortress: &eHeavenly Rider&r, &eChallenger&r or &eConqueror&r (around Y 200). Bring slow falling."
+      ],
+      "icon": "minecraft:phantom_membrane",
+      "x": 12,
+      "y": -1.5,
+      "shape": "pentagon",
+      "size": 1.25,
+      "deps": ["skylands"],
+      "tasks": [
+        {"type": "structure", "structure": "dungeons_arise:heavenly_rider", "optional": true},
+        {"type": "structure", "structure": "dungeons_arise:heavenly_challenger", "optional": true},
+        {"type": "structure", "structure": "dungeons_arise:heavenly_conqueror", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 300},
+        {"type": "skill_xp", "category": "blue", "amount": 250}
+      ]
+    },
+    {
+      "key": "whale",
+      "title": "Whale Song",
+      "desc": [
+        "A whale swims through the clouds with a ship on its back.",
+        "",
+        "Find a &eSky Whale Ship&r (or the rare frozen whale) and board it."
+      ],
+      "icon": "minecraft:prismarine_shard",
+      "x": 13.5,
+      "y": -1.5,
+      "deps": ["heavenly"],
+      "tasks": [
+        {"type": "structure", "structure": "sky_whale_ship:whale", "optional": true},
+        {"type": "structure", "structure": "sky_whale_ship:whaleship", "optional": true},
+        {"type": "structure", "structure": "sky_whale_ship:frozen_whale", "optional": true},
+        {"type": "structure", "structure": "sky_whale_ship:whalearena", "optional": true},
+        {"type": "structure", "structure": "sky_whale_ship:whalelight", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "blue", "amount": 200}
+      ]
+    },
+    {
+      "key": "frostmaw",
+      "title": "The White Beast",
+      "desc": [
+        "A great white ape sleeps in the snow, a crystal of living ice clutched in its fist.",
+        "",
+        "Kill the &eFrostmaw&r (Mowzie's Mobs) in snowy lands. Its breath freezes; dodge the ground slams."
+      ],
+      "icon": "mowziesmobs:ice_crystal",
+      "x": 12,
+      "y": -3,
+      "shape": "hexagon",
+      "size": 1.5,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "kill", "entity": "mowziesmobs:frostmaw"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 350},
+        {"type": "skill_xp", "category": "blue", "amount": 250}
+      ]
+    },
+    {
+      "key": "ice_crystal",
+      "title": "Heart of the Beast",
+      "desc": [
+        "The crystal still holds the Frostmaw's breath.",
+        "",
+        "Claim the &eIce Crystal&r. Use it to breathe frost yourself."
+      ],
+      "icon": "mowziesmobs:ice_crystal",
+      "x": 13.5,
+      "y": -3,
+      "deps": ["frostmaw"],
+      "tasks": [
+        {"type": "item", "item": "mowziesmobs:ice_crystal"}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "blue", "amount": 200}
+      ]
+    },
+    {
+      "key": "ice_roost",
+      "title": "Blue Scales",
+      "desc": [
+        "Frozen bones, frozen gold. An ice dragon's den.",
+        "",
+        "Find an &eice dragon&r roost or cave (Ice and Fire) in frozen lands."
+      ],
+      "icon": "iceandfire:dragonscales_blue",
+      "x": 10.5,
+      "y": 1.5,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "structure", "structure": "iceandfire:ice_dragon_roost", "optional": true},
+        {"type": "structure", "structure": "iceandfire:ice_dragon_cave", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "blue", "amount": 150}
+      ]
+    },
+    {
+      "key": "ice_egg",
+      "title": "A Bond, Not a Conquest",
+      "desc": [
+        "You don't tame a dragon. You raise one.",
+        "",
+        "Take an &eice dragon egg&r (blue, white, sapphire or silver). Ice eggs hatch when placed in water; stay close so it bonds with you."
+      ],
+      "icon": "iceandfire:dragonegg_blue",
+      "x": 12,
+      "y": 1.5,
+      "deps": ["ice_roost"],
+      "tasks": [
+        {"type": "item", "item": "iceandfire:dragonegg_blue", "optional": true},
+        {"type": "item", "item": "iceandfire:dragonegg_white", "optional": true},
+        {"type": "item", "item": "iceandfire:dragonegg_sapphire", "optional": true},
+        {"type": "item", "item": "iceandfire:dragonegg_silver", "optional": true}
+      ],
+      "rewards": [
+        {"type": "item", "item": "iceandfire:dragon_meal", "count": 8},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "blue", "amount": 200}
+      ]
+    },
+    {
+      "key": "ice_mount",
+      "title": "Wings of Winter",
+      "desc": [
+        "Your dragon grows. One day soon it will carry you.",
+        "",
+        "Raise your ice dragon (feed it fish; Dragon Meal speeds growth) and forge it &esilver dragon armor&r (head and body). Ride it at stage 3."
+      ],
+      "icon": "iceandfire:dragonarmor_silver_head",
+      "x": 13.5,
+      "y": 1.5,
+      "shape": "rsquare",
+      "size": 1.25,
+      "deps": ["ice_egg"],
+      "tasks": [
+        {"type": "item", "item": "iceandfire:dragonarmor_silver_head"},
+        {"type": "item", "item": "iceandfire:dragonarmor_silver_body"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "item", "item": "iceandfire:dragon_meal", "count": 16},
+        {"type": "xp", "xp": 300},
+        {"type": "skill_xp", "category": "blue", "amount": 250}
+      ]
+    },
+    {
+      "key": "crystal",
+      "title": "Crystal Canyons",
+      "desc": [
+        "Under the ground, caves of singing crystal glow in the dark.",
+        "",
+        "Explore Galosphere's &eCrystal Canyons&r and gather &e8 allurite&r and &e8 lumiere shards&r."
+      ],
+      "icon": "galosphere:allurite_shard",
+      "x": 10.5,
+      "y": 3,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "biome", "biome": "galosphere:crystal_canyons", "optional": true},
+        {"type": "item", "item": "galosphere:allurite_shard", "count": 8},
+        {"type": "item", "item": "galosphere:lumiere_shard", "count": 8}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "blue", "amount": 150}
+      ]
+    },
+    {
+      "key": "sterling",
+      "title": "The Sterling Tome",
+      "desc": [
+        "Crystal magic, bound in silver.",
+        "",
+        "Craft the &eSterling Tome&r (Galosphere: Spellbooks, see JEI). It favours Blue's crystal spells."
+      ],
+      "icon": "galosphere_spellbooks:sterling_spell_book",
+      "x": 12,
+      "y": 3,
+      "deps": ["crystal"],
+      "tasks": [
+        {"type": "item", "item": "galosphere_spellbooks:sterling_spell_book"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "blue", "amount": 200}
+      ]
+    },
+    {
+      "key": "dream",
+      "title": "The Dream",
+      "subtitle": "Class level 25",
+      "desc": [
+        "You dream of crystal peaks floating in the void, and of a frozen heart that beats once a year.",
+        "",
+        "Reach &eBlue level 25&r. Then the trial."
+      ],
+      "icon": "createlanterns:blue_liquid_light_bucket",
+      "x": 16.5,
+      "y": 0,
+      "shape": "octagon",
+      "size": 1.5,
+      "deps": ["lich_tower", "cryo_set"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_dream_blue"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "skill_xp", "category": "blue", "amount": 250}
+      ]
+    },
+    {
+      "key": "trial",
+      "title": "&bThe Lich of the North",
+      "subtitle": "Ring trial: the boss",
+      "desc": [
+        "At the top of the frozen tower, the Night Lich raises its staff, and the snow begins to scream.",
+        "",
+        "Kill the &eNight Lich&r at the top of its Lich Tower in frozen lands. Dodge its frost volleys; kill the summoned minions. Party members within 64 blocks get the trial credit too."
+      ],
+      "icon": "bosses_of_mass_destruction:soul_star",
+      "x": 18.75,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 2.25,
+      "deps": ["dream", "lich_tower"],
+      "tasks": [
+        {"type": "kill", "entity": "bosses_of_mass_destruction:lich", "optional": true},
+        {"type": "stage", "stage": "gl_trial_blue", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/class_blue"},
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp_levels", "levels": 8},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "blue", "amount": 500}
+      ]
+    },
+    {
+      "key": "choice",
+      "title": "The Ring Judges",
+      "subtitle": "The ring will judge you",
+      "desc": [
+        "The Lich shatters like a dropped icicle, and a blue light settles on your shoulder like snow.",
+        "When all seems lost, what do you still believe in?",
+        "",
+        "Claim this reward to begin the &ering trial&r: a conversation in chat. The ring will judge you. Your &eanswers&r decide whether you receive your own light, the &fWhite&r, or the &8Black&r. Answer as who you really are.",
+        "&7(Only works once you have the trial credit from the quest before.)"
+      ],
+      "icon": "createlanterns:ring_blank",
+      "x": 21,
+      "y": 0,
+      "shape": "diamond",
+      "size": 1.75,
+      "deps": ["trial"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "command", "command": "/gl trial begin {p} blue"}
+      ]
+    },
+    {
+      "key": "ring",
+      "title": "&bRing-Bearer",
+      "subtitle": "Ring-bearer",
+      "desc": [
+        "A ring found you. Blue, White or Black, you are a &eLantern&r now: you can fly, and your will takes shape as constructs.",
+        "",
+        "This completes when you have &eany&r ring from the trial. The Blue path continues; the &6Last Light&r chapter has opened."
+      ],
+      "icon": "createlanterns:blue_power_ring",
+      "x": 23.25,
+      "y": 0,
+      "shape": "octagon",
+      "size": 2.5,
+      "deps": ["choice"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_ringbearer"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 10},
+        {"type": "xp", "xp": 1000},
+        {"type": "skill_xp", "category": "blue", "amount": 750}
+      ]
+    },
+    {
+      "key": "true_blue",
+      "title": "The Blue Answered",
+      "desc": [
+        "The blue ring stayed. Near you, every Green ring burns brighter.",
+        "",
+        "Optional, Blue ring only: learn &eFrost Ward&r and &eGlacial Sanctum&r (Spectral Hub HUD). Stand near Green Lanterns to charge them."
+      ],
+      "icon": "createlanterns:blue_power_battery",
+      "x": 25.25,
+      "y": -1.5,
+      "deps": ["ring"],
+      "optional": true,
+      "tasks": [
+        {"type": "stage", "stage": "gl_ring_blue"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "blue", "amount": 300}
+      ]
+    },
+    {
+      "key": "frosted_prison",
+      "title": "The Frosted Prison",
+      "desc": [
+        "A prison carved into a glacier, built to hold one man forever. It didn't.",
+        "",
+        "Find the &eFrosted Prison&r (L_Ender's Cataclysm) in frozen lands. An &eEye of Curse&r points the way."
+      ],
+      "icon": "cataclysm:cursed_eye",
+      "x": 25.25,
+      "y": -3,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "structure", "structure": "cataclysm:frosted_prison"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 400},
+        {"type": "skill_xp", "category": "blue", "amount": 300}
+      ]
+    },
+    {
+      "key": "maledictus",
+      "title": "Prison of Curses",
+      "desc": [
+        "Maledictus: a cursed warlord with a phantom army and a grudge older than the ice.",
+        "",
+        "Kill &eMaledictus&r in the Frosted Prison. He summons phantom weapons; keep moving and fight as a party."
+      ],
+      "icon": "cataclysm:cursium_ingot",
+      "x": 26.75,
+      "y": -3,
+      "shape": "hexagon",
+      "size": 1.4,
+      "deps": ["frosted_prison"],
+      "tasks": [
+        {"type": "kill", "entity": "cataclysm:maledictus"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 900},
+        {"type": "skill_xp", "category": "blue", "amount": 600}
+      ]
+    },
+    {
+      "key": "cursium",
+      "title": "Cursium Mage",
+      "desc": [
+        "The warlord's cursed metal, reforged into a battlemage's armor.",
+        "",
+        "Craft the &eCursium Mage&r set (Cataclysm: Spellbooks): circlet, breastplate, skirt and greaves."
+      ],
+      "icon": "cataclysm_spellbooks:cursium_mage_chestplate",
+      "x": 28.25,
+      "y": -3,
+      "shape": "rsquare",
+      "size": 1.25,
+      "deps": ["maledictus"],
+      "tasks": [
+        {"type": "item", "item": "cataclysm_spellbooks:cursium_mage_circlet"},
+        {"type": "item", "item": "cataclysm_spellbooks:cursium_mage_chestplate"},
+        {"type": "item", "item": "cataclysm_spellbooks:cursium_mage_skirt"},
+        {"type": "item", "item": "cataclysm_spellbooks:cursium_mage_boots"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 700},
+        {"type": "skill_xp", "category": "blue", "amount": 450}
+      ]
+    },
+    {
+      "key": "frostbitten",
+      "title": "The Frostbitten Golem",
+      "desc": [
+        "A temple frozen solid, and a golem of primal ice that has forgotten how to stop.",
+        "",
+        "Defeat the &eFrostbitten Golem&r (Legendary Monsters) in its Frostbitten Temple. The mod's &eGuide Book&r helps you find it."
+      ],
+      "icon": "legendary_monsters:primal_ice_shard",
+      "x": 26.75,
+      "y": -1.5,
+      "shape": "hexagon",
+      "size": 1.4,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "kill", "entity": "legendary_monsters:frostbitten_golem"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 800},
+        {"type": "skill_xp", "category": "blue", "amount": 500}
+      ]
+    },
+    {
+      "key": "great_frost",
+      "title": "The Great Frost",
+      "desc": [
+        "A weapon carved from the golem's heart.",
+        "",
+        "Claim &eThe Great Frost&r (see JEI)."
+      ],
+      "icon": "legendary_monsters:the_great_frost",
+      "x": 28.25,
+      "y": -1.5,
+      "deps": ["frostbitten"],
+      "tasks": [
+        {"type": "item", "item": "legendary_monsters:the_great_frost"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "blue", "amount": 300}
+      ]
+    },
+    {
+      "key": "crystal_peaks",
+      "title": "Heart of Winter",
+      "desc": [
+        "In the End, crystal mountains float over the void, colder than any glacier.",
+        "",
+        "Fly to Nullscape's &eCrystal Peaks&r in the End's outer islands."
+      ],
+      "icon": "minecraft:amethyst_cluster",
+      "x": 25.25,
+      "y": 0,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "biome", "biome": "nullscape:crystal_peaks"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "blue", "amount": 300}
+      ]
+    },
+    {
+      "key": "levitation",
+      "title": "The Levitation Stone",
+      "desc": [
+        "Legends speak of a castle in the sky, and a stone that points to it.",
+        "",
+        "Craft (or trade a master Cartographer for) a &eLevitation Stone&r (Castle in the Sky). It needs an elytra and netherite."
+      ],
+      "icon": "castle_in_the_sky:levitation_stone",
+      "x": 26.75,
+      "y": 0,
+      "deps": ["crystal_peaks"],
+      "tasks": [
+        {"type": "item", "item": "castle_in_the_sky:levitation_stone"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "blue", "amount": 300}
+      ]
+    },
+    {
+      "key": "laputa",
+      "title": "Laputa",
+      "desc": [
+        "The Castle in the Sky: coloured keys, locked doors, and a crystal at its heart.",
+        "",
+        "Find the &eCastle in the Sky&r (very far from spawn) and conquer it. Collect the keys; take the whole party."
+      ],
+      "icon": "castle_in_the_sky:laputa_core",
+      "x": 28.25,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 1.4,
+      "deps": ["levitation"],
+      "tasks": [
+        {"type": "advancement", "advancement": "castle_in_the_sky:conquer_castle"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 10},
+        {"type": "xp", "xp": 1200},
+        {"type": "skill_xp", "category": "blue", "amount": 700}
+      ]
+    },
+    {
+      "key": "ice_dragonsteel",
+      "title": "Ice Dragonsteel",
+      "desc": [
+        "Your own dragon's breath, caught in a forge of ice.",
+        "",
+        "Build an &eIce Dragonforge&r and fuel it with your grown ice dragon's breath. Smelt &e4 ice dragonsteel ingots&r."
+      ],
+      "icon": "iceandfire:dragonsteel_ice_ingot",
+      "x": 25.25,
+      "y": 1.5,
+      "deps": ["ring", "ice_mount"],
+      "tasks": [
+        {"type": "item", "item": "iceandfire:dragonsteel_ice_ingot", "count": 4}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 600},
+        {"type": "skill_xp", "category": "blue", "amount": 400}
+      ]
+    },
+    {
+      "key": "ice_dragonsteel_set",
+      "title": "Armor of the Frozen Wyrm",
+      "desc": [
+        "The finest steel winter has ever made.",
+        "",
+        "Forge the full &eIce Dragonsteel&r armor set."
+      ],
+      "icon": "iceandfire:dragonsteel_ice_chestplate",
+      "x": 26.75,
+      "y": 1.5,
+      "shape": "rsquare",
+      "size": 1.25,
+      "deps": ["ice_dragonsteel"],
+      "tasks": [
+        {"type": "item", "item": "iceandfire:dragonsteel_ice_helmet"},
+        {"type": "item", "item": "iceandfire:dragonsteel_ice_chestplate"},
+        {"type": "item", "item": "iceandfire:dragonsteel_ice_leggings"},
+        {"type": "item", "item": "iceandfire:dragonsteel_ice_boots"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp", "xp": 900},
+        {"type": "skill_xp", "category": "blue", "amount": 600}
+      ]
+    },
+    {
+      "key": "frost_blades",
+      "title": "Blades of Winter",
+      "desc": [
+        "Every winter has its sword.",
+        "",
+        "Optional: find a legendary frost weapon: the &eBoreal Blade&r, &eFrostfall&r, &eIcewhisper&r, &eThe Snowgrave&r or &eThe Ice Spear&r."
+      ],
+      "icon": "irons_spellbooks:boreal_blade",
+      "x": 26.75,
+      "y": 3,
+      "deps": ["ring"],
+      "optional": true,
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:boreal_blade", "optional": true},
+        {"type": "item", "item": "simplyswords:frostfall", "optional": true},
+        {"type": "item", "item": "simplyswords:icewhisper", "optional": true},
+        {"type": "item", "item": "discerning_the_eldritch:snowgrave", "optional": true},
+        {"type": "item", "item": "discerning_the_eldritch:ice_spear", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 400},
+        {"type": "skill_xp", "category": "blue", "amount": 300}
+      ]
+    },
+    {
+      "key": "mythic",
+      "title": "Mythic Winter",
+      "subtitle": "Extreme gear",
+      "desc": [
+        "Ice that never melts, and a will that never breaks.",
+        "",
+        "Unlock the &ePinnacle&r world tier (Apotheosis: a full Epic affix set and the Ender Dragon slain; CTRL+T switches tiers) and wield a &6Mythic&r battlemage blade with ice gems. Tick the checkmark when you do."
+      ],
+      "icon": "apotheosis:sigil_of_supremacy",
+      "x": 31.25,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 1.5,
+      "deps": ["cursium", "great_frost", "laputa", "ice_dragonsteel_set"],
+      "tasks": [
+        {"type": "advancement", "advancement": "apotheosis:progression/pinnacle"},
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 15},
+        {"type": "xp", "xp": 1500},
+        {"type": "skill_xp", "category": "blue", "amount": 1000}
+      ]
+    },
+    {
+      "key": "legend",
+      "title": "&bLegend of the Blue Light",
+      "subtitle": "After the Last Light",
+      "desc": [
+        "When the Devourer fell, every ally the Frostbinder shielded was still alive to see it.",
+        "",
+        "Complete the Last Light and the Blue path. Winter keeps what it loves."
+      ],
+      "icon": "createlanterns:blue_power_ring",
+      "x": 36.25,
+      "y": 0,
+      "shape": "gear",
+      "size": 2,
+      "deps": ["mythic", "finale:last_light"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 20},
+        {"type": "xp", "xp": 2000},
+        {"type": "skill_xp", "category": "blue", "amount": 1500}
+      ]
+    }
+  ]
+}

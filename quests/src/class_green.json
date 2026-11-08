@@ -1,0 +1,963 @@
+{
+  "id": "class_green",
+  "title": "&aThe Green Light: Path of the Shield",
+  "subtitle": "Lightwarden. In brightest day, in blackest night.",
+  "icon": "createlanterns:green_dust",
+  "group": "classes",
+  "order": 3,
+  "quests": [
+    {
+      "key": "join",
+      "title": "&aThe Lightwarden",
+      "subtitle": "Join this light",
+      "desc": [
+        "&o\"In brightest day, in blackest night...\"&r",
+        "Green is the light of will: a paladin of sword, shield and evocation magic, who protects villages, wins raids and heals allies.",
+        "",
+        "Claim the reward to join Green and unlock its talent tree. You can still join other lights later."
+      ],
+      "icon": "createlanterns:green_dust",
+      "x": 0,
+      "y": 0,
+      "shape": "pentagon",
+      "size": 2,
+      "deps": ["act1:choose_path"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "command", "command": "/gl class join {p} green"},
+        {"type": "item", "item": "minecraft:iron_sword"},
+        {"type": "item", "item": "minecraft:emerald", "count": 8},
+        {"type": "item", "item": "minecraft:bread", "count": 8},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "green", "amount": 50}
+      ]
+    },
+    {
+      "key": "mercy",
+      "title": "Mercy",
+      "desc": [
+        "Not every monster has to stay one.",
+        "",
+        "Cure a zombie villager: hit it with a &eSplash Potion of Weakness&r, then feed it a &egolden apple&r and keep it safe until it shakes off the curse."
+      ],
+      "icon": "minecraft:golden_apple",
+      "x": 1.5,
+      "y": 0,
+      "deps": ["join"],
+      "tasks": [
+        {"type": "advancement", "advancement": "minecraft:story/cure_zombie_villager"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:golden_apple"},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "green", "amount": 75}
+      ]
+    },
+    {
+      "key": "merchant",
+      "title": "Friend of the Village",
+      "desc": [
+        "A village that trusts you is a village that fights beside you.",
+        "",
+        "Trade until you hold &e32 emeralds&r. Every trade earns Green XP."
+      ],
+      "icon": "minecraft:emerald",
+      "x": 3,
+      "y": 0,
+      "deps": ["mercy"],
+      "tasks": [
+        {"type": "item", "item": "minecraft:emerald", "count": 32}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "green", "amount": 75}
+      ]
+    },
+    {
+      "key": "illagers",
+      "title": "Purge the Warbands",
+      "desc": [
+        "Vex's Warband was one of many.",
+        "",
+        "Kill &e20 pillagers&r and &e10 vindicators&r. Illager kills earn Green XP."
+      ],
+      "icon": "minecraft:iron_axe",
+      "x": 4.5,
+      "y": 0,
+      "deps": ["merchant"],
+      "tasks": [
+        {"type": "kill", "entity": "minecraft:pillager", "count": 20},
+        {"type": "kill", "entity": "minecraft:vindicator", "count": 10}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 120},
+        {"type": "skill_xp", "category": "green", "amount": 100}
+      ]
+    },
+    {
+      "key": "exile",
+      "title": "Voluntary Exile",
+      "desc": [
+        "Cut off the head of a patrol and its banner falls with it.",
+        "",
+        "Kill a &eraid captain&r (the illager carrying the banner). Careful: it gives you Bad Omen, which brings a raid to the next village you visit."
+      ],
+      "icon": "minecraft:white_banner",
+      "x": 6,
+      "y": 0,
+      "deps": ["illagers"],
+      "tasks": [
+        {"type": "advancement", "advancement": "minecraft:adventure/voluntary_exile"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "green", "amount": 75}
+      ]
+    },
+    {
+      "key": "evocation",
+      "title": "Fang and Ward",
+      "desc": [
+        "Evocation is the paladin's art: fangs from the ground, a shield of force, a summoned steed.",
+        "",
+        "Craft an &eEvocation Rune&r (see JEI). Look for &eFang Strike&r, &eFang Ward&r, &eShield&r and &eSummon Horse&r scrolls."
+      ],
+      "icon": "irons_spellbooks:evocation_rune",
+      "x": 1.5,
+      "y": -1.5,
+      "deps": ["join"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:evocation_rune"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "green", "amount": 75}
+      ]
+    },
+    {
+      "key": "holy",
+      "title": "Hands That Heal",
+      "desc": [
+        "A Lightwarden's second blade is mercy.",
+        "",
+        "Craft a &eHoly Rune&r. Holy spells like &eHeal&r and &eFortify&r keep the party standing; healing allies earns Green XP."
+      ],
+      "icon": "irons_spellbooks:holy_rune",
+      "x": 3,
+      "y": -1.5,
+      "deps": ["evocation"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:holy_rune"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "green", "amount": 75}
+      ]
+    },
+    {
+      "key": "bible",
+      "title": "The Villager Bible",
+      "desc": [
+        "A worn book of village prayers, still warm with faith.",
+        "",
+        "Get the &eVillager Bible&r spellbook (Iron's Spells, see JEI). It favours holy spells."
+      ],
+      "icon": "irons_spellbooks:villager_spell_book",
+      "x": 4.5,
+      "y": -1.5,
+      "deps": ["holy"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:villager_spell_book"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp", "xp": 120},
+        {"type": "skill_xp", "category": "green", "amount": 100}
+      ]
+    },
+    {
+      "key": "shield",
+      "title": "Shield of the Watch",
+      "desc": [
+        "Mail on your back, a heater shield on your arm. The watch's uniform.",
+        "",
+        "Craft &eEpic Knights&r chainmail and a &eSteel Heater Shield&r."
+      ],
+      "icon": "magistuarmory:steel_heatershield",
+      "x": 1.5,
+      "y": 1.5,
+      "deps": ["join"],
+      "tasks": [
+        {"type": "item", "item": "magistuarmory:chainmail_chestplate"},
+        {"type": "item", "item": "magistuarmory:steel_heatershield"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "magistuarmory:steel_ingot", "count": 4},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "green", "amount": 75}
+      ]
+    },
+    {
+      "key": "watchman",
+      "title": "Watchman",
+      "desc": [
+        "A lit village sleeps. A dark one bleeds.",
+        "",
+        "Craft &e16 lanterns&r and light up a village you protect."
+      ],
+      "icon": "minecraft:lantern",
+      "x": 3,
+      "y": 1.5,
+      "deps": ["shield"],
+      "tasks": [
+        {"type": "item", "item": "minecraft:lantern", "count": 16}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:torch", "count": 32},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "green", "amount": 50}
+      ]
+    },
+    {
+      "key": "fortified",
+      "title": "A Village Worth Defending",
+      "desc": [
+        "Some villages already learned to build walls. They need a captain.",
+        "",
+        "Visit a &efortified village&r (CTOV): plains, taiga, mesa or swamp styles have walls and towers."
+      ],
+      "icon": "minecraft:stone_bricks",
+      "x": 4.5,
+      "y": 1.5,
+      "deps": ["watchman"],
+      "tasks": [
+        {"type": "structure", "structure": "ctov:small/village_plains_fortified", "optional": true},
+        {"type": "structure", "structure": "ctov:small/village_taiga_fortified", "optional": true},
+        {"type": "structure", "structure": "ctov:small/village_mesa_fortified", "optional": true},
+        {"type": "structure", "structure": "ctov:small/village_swamp_fortified", "optional": true},
+        {"type": "structure", "structure": "ctov:medium/village_plains_fortified", "optional": true},
+        {"type": "structure", "structure": "ctov:medium/village_taiga_fortified", "optional": true},
+        {"type": "structure", "structure": "ctov:medium/village_mesa_fortified", "optional": true},
+        {"type": "structure", "structure": "ctov:medium/village_swamp_fortified", "optional": true},
+        {"type": "structure", "structure": "ctov:large/village_plains_fortified", "optional": true},
+        {"type": "structure", "structure": "ctov:large/village_taiga_fortified", "optional": true},
+        {"type": "structure", "structure": "ctov:large/village_mesa_fortified", "optional": true},
+        {"type": "structure", "structure": "ctov:large/village_swamp_fortified", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "green", "amount": 75}
+      ]
+    },
+    {
+      "key": "golems",
+      "title": "Iron Guardians",
+      "desc": [
+        "The village's last line, if you aren't there.",
+        "",
+        "Build an &eIron Golem&r for a village you protect."
+      ],
+      "icon": "minecraft:iron_block",
+      "x": 6,
+      "y": 1.5,
+      "deps": ["fortified"],
+      "tasks": [
+        {"type": "advancement", "advancement": "minecraft:adventure/summon_iron_golem"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:iron_block", "count": 2},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "green", "amount": 75}
+      ]
+    },
+    {
+      "key": "warhorse",
+      "title": "Warhorse",
+      "desc": [
+        "A paladin rides to war.",
+        "",
+        "Tame a horse and craft it &eBarding&r (Epic Knights horse armor) and a &esaddle&r. The &eSummon Horse&r spell gives you a spectral steed too."
+      ],
+      "icon": "magistuarmory:barding",
+      "x": 3,
+      "y": 3,
+      "deps": ["shield"],
+      "tasks": [
+        {"type": "advancement", "advancement": "minecraft:husbandry/tame_an_animal"},
+        {"type": "item", "item": "magistuarmory:barding"},
+        {"type": "item", "item": "minecraft:saddle"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:golden_carrot", "count": 8},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "green", "amount": 75}
+      ]
+    },
+    {
+      "key": "whisper",
+      "title": "The Light Whispers",
+      "subtitle": "Class level 10",
+      "desc": [
+        "A steady voice, calm as a heartbeat: &o\"You stood when others ran. Stand again.\"&r",
+        "",
+        "Reach &eGreen level 10&r. Raids won count the most; trades, cures and healing count too."
+      ],
+      "icon": "createlanterns:green_dust",
+      "x": 9,
+      "y": 0,
+      "shape": "octagon",
+      "size": 1.5,
+      "deps": ["exile", "bible"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_whisper_green"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "skill_xp", "category": "green", "amount": 150}
+      ]
+    },
+    {
+      "key": "evoker_fort",
+      "title": "The Evoker's Fort",
+      "desc": [
+        "In the dark forest, a fortress of illager magi practises evocation of the worst kind.",
+        "",
+        "Find an &eEvoker Fort&r (Iron's Spells), usually in dark forests and taigas."
+      ],
+      "icon": "minecraft:totem_of_undying",
+      "x": 10.5,
+      "y": 0,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "structure", "structure": "irons_spellbooks:evoker_fort"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "green", "amount": 150}
+      ]
+    },
+    {
+      "key": "archevoker",
+      "title": "The Archevoker",
+      "desc": [
+        "The master of the fort casts fangs, vexes and worse.",
+        "",
+        "Defeat the &eArchevoker&r in the Evoker Fort. Kill the vexes first; fight as a party."
+      ],
+      "icon": "irons_spellbooks:archevoker_logbook_untranslated",
+      "x": 12,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 1.5,
+      "deps": ["evoker_fort"],
+      "tasks": [
+        {"type": "kill", "entity": "irons_spellbooks:archevoker"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 350},
+        {"type": "skill_xp", "category": "green", "amount": 250}
+      ]
+    },
+    {
+      "key": "grimoire",
+      "title": "Grimoire of Evokation",
+      "desc": [
+        "The Archevoker's own book, its pages still twitching.",
+        "",
+        "Get the &eGrimoire of Evokation&r, the evocation spellbook (see JEI)."
+      ],
+      "icon": "irons_spellbooks:evoker_spell_book",
+      "x": 13.5,
+      "y": 0,
+      "deps": ["archevoker"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:evoker_spell_book"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "green", "amount": 200}
+      ]
+    },
+    {
+      "key": "catacombs",
+      "title": "The Catacombs",
+      "desc": [
+        "Bells ring under the earth. A king who should be dead is holding court.",
+        "",
+        "Find and enter Iron's &eCatacombs&r, a vast underground crypt."
+      ],
+      "icon": "irons_spellbooks:bone_key",
+      "x": 15,
+      "y": 0,
+      "deps": ["grimoire"],
+      "tasks": [
+        {"type": "advancement", "advancement": "irons_spellbooks:irons_spellbooks/enter_catacombs"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "green", "amount": 200}
+      ]
+    },
+    {
+      "key": "archevoker_set",
+      "title": "The Archevoker's Mantle",
+      "desc": [
+        "Robes of the illager magi, turned to a better cause.",
+        "",
+        "Craft the full &eArchevoker&r set (Iron's Spells). It boosts evocation spell power."
+      ],
+      "icon": "irons_spellbooks:archevoker_chestplate",
+      "x": 12,
+      "y": -1.5,
+      "shape": "rsquare",
+      "size": 1.25,
+      "deps": ["archevoker"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:archevoker_helmet"},
+        {"type": "item", "item": "irons_spellbooks:archevoker_chestplate"},
+        {"type": "item", "item": "irons_spellbooks:archevoker_leggings"},
+        {"type": "item", "item": "irons_spellbooks:archevoker_boots"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "green", "amount": 200}
+      ]
+    },
+    {
+      "key": "lightbringer",
+      "title": "Lightbringer",
+      "desc": [
+        "Plate that shines like a sunrise and makes holy spells hit like hammers.",
+        "",
+        "Craft the &eLightbringer Chestplate&r (Iron's Spells paladin armor, see JEI)."
+      ],
+      "icon": "irons_spellbooks:paladin_chestplate",
+      "x": 13.5,
+      "y": -1.5,
+      "deps": ["archevoker_set"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:paladin_chestplate"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "green", "amount": 200}
+      ]
+    },
+    {
+      "key": "overrun",
+      "title": "Overrun",
+      "desc": [
+        "A village fell to the dead. Its people are still there, tormented.",
+        "",
+        "Find an &eoverrun village&r (The Graveyard). Fight through the undead."
+      ],
+      "icon": "graveyard:skull_pile",
+      "x": 10.5,
+      "y": -3,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "structure", "structure": "graveyard:overrun_plains_village", "optional": true},
+        {"type": "structure", "structure": "graveyard:overrun_taiga_village", "optional": true},
+        {"type": "structure", "structure": "graveyard:overrun_savanna_village", "optional": true},
+        {"type": "structure", "structure": "graveyard:overrun_snowy_village", "optional": true},
+        {"type": "structure", "structure": "graveyard:overrun_desert_village", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "green", "amount": 150}
+      ]
+    },
+    {
+      "key": "redeem",
+      "title": "Redemption",
+      "desc": [
+        "Even the tormented can be brought home.",
+        "",
+        "Redeem a &etormented villager&r by ringing a &ebell&r near it (The Graveyard)."
+      ],
+      "icon": "minecraft:golden_apple",
+      "x": 12,
+      "y": -3,
+      "deps": ["overrun"],
+      "tasks": [
+        {"type": "advancement", "advancement": "graveyard:graveyard/redeem_tormented_villager"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "green", "amount": 200}
+      ]
+    },
+    {
+      "key": "manor",
+      "title": "The Illager Manor",
+      "desc": [
+        "Illagers build big when nobody stops them.",
+        "",
+        "Find an illager stronghold: a Woodland Mansion, a Dungeons and Taverns &eIllager Manor&r, or a When Dungeons Arise &eIllager Fort&r or &eWindmill&r."
+      ],
+      "icon": "minecraft:crossbow",
+      "x": 10.5,
+      "y": 1.5,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "structure", "structure": "minecraft:mansion", "optional": true},
+        {"type": "structure", "structure": "nova_structures:illager_manor", "optional": true},
+        {"type": "structure", "structure": "dungeons_arise:illager_fort", "optional": true},
+        {"type": "structure", "structure": "dungeons_arise:illager_windmill", "optional": true},
+        {"type": "structure", "structure": "nova_structures:illager_hideout", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "green", "amount": 200}
+      ]
+    },
+    {
+      "key": "ravager",
+      "title": "Break the Beast",
+      "desc": [
+        "The illagers' siege beasts break walls. Break them first.",
+        "",
+        "Kill &e3 ravagers&r and &e5 evokers&r. Raids at higher Bad Omen levels bring them."
+      ],
+      "icon": "minecraft:saddle",
+      "x": 12,
+      "y": 1.5,
+      "shape": "hexagon",
+      "deps": ["manor"],
+      "tasks": [
+        {"type": "kill", "entity": "minecraft:ravager", "count": 3},
+        {"type": "kill", "entity": "minecraft:evoker", "count": 5}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 300},
+        {"type": "skill_xp", "category": "green", "amount": 250}
+      ]
+    },
+    {
+      "key": "hippogryph",
+      "title": "White Wings",
+      "desc": [
+        "Half eagle, half horse, all pride. A paladin's true steed flies.",
+        "",
+        "Tame a &ehippogryph&r (Ice and Fire), found in hills and mountains. The &eBestiary&r explains how. A white one suits a Lightwarden."
+      ],
+      "icon": "iceandfire:hippogryph_talon",
+      "x": 10.5,
+      "y": 3,
+      "deps": ["warhorse", "whisper"],
+      "tasks": [
+        {"type": "advancement", "advancement": "iceandfire:iceandfire/tame_hippogryph"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 300},
+        {"type": "skill_xp", "category": "green", "amount": 250}
+      ]
+    },
+    {
+      "key": "hippo_armor",
+      "title": "Barding for the Sky",
+      "desc": [
+        "Armor for your winged steed.",
+        "",
+        "Craft &eHippogryph Armor&r (iron or better)."
+      ],
+      "icon": "iceandfire:iron_hippogryph_armor",
+      "x": 12,
+      "y": 3,
+      "deps": ["hippogryph"],
+      "tasks": [
+        {"type": "item", "item": "iceandfire:iron_hippogryph_armor", "optional": true},
+        {"type": "item", "item": "iceandfire:gold_hippogryph_armor", "optional": true},
+        {"type": "item", "item": "iceandfire:diamond_hippogryph_armor", "optional": true},
+        {"type": "item", "item": "iceandfire:netherite_hippogryph_armor", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "green", "amount": 150}
+      ]
+    },
+    {
+      "key": "dream",
+      "title": "The Dream",
+      "subtitle": "Class level 25",
+      "desc": [
+        "You dream of a green world beneath a vast lantern, and of a battery the size of a mountain humming with will.",
+        "",
+        "Reach &eGreen level 25&r. Then the trial."
+      ],
+      "icon": "createlanterns:green_liquid_light_bucket",
+      "x": 16.5,
+      "y": 0,
+      "shape": "octagon",
+      "size": 1.5,
+      "deps": ["catacombs", "archevoker_set"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_dream_green"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "skill_xp", "category": "green", "amount": 250}
+      ]
+    },
+    {
+      "key": "trial",
+      "title": "&aThe Dead King",
+      "subtitle": "Ring trial: the boss",
+      "desc": [
+        "On a throne of bone in the Catacombs, a crowned corpse opens its eyes. His court rises with him.",
+        "",
+        "Defeat the &eDead King&r deep in Iron's Catacombs (disturb his corpse on the throne). Holy spells and fire hurt him. Party members within 64 blocks get the trial credit too."
+      ],
+      "icon": "irons_spellbooks:tarnished_helmet",
+      "x": 18.75,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 2.25,
+      "deps": ["dream", "catacombs"],
+      "tasks": [
+        {"type": "kill", "entity": "irons_spellbooks:dead_king", "optional": true},
+        {"type": "stage", "stage": "gl_trial_green", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/class_green"},
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp_levels", "levels": 8},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "green", "amount": 500}
+      ]
+    },
+    {
+      "key": "choice",
+      "title": "The Ring Judges",
+      "subtitle": "The ring will judge you",
+      "desc": [
+        "The Dead King's crown clatters to the floor, and a green light rises from the dust, steady and unafraid.",
+        "Will you stand when standing costs you everything?",
+        "",
+        "Claim this reward to begin the &ering trial&r: a conversation in chat. The ring will judge you. Your &eanswers&r decide whether you receive your own light, the &fWhite&r, or the &8Black&r. Answer as who you really are.",
+        "&7(Only works once you have the trial credit from the quest before.)"
+      ],
+      "icon": "createlanterns:ring_blank",
+      "x": 21,
+      "y": 0,
+      "shape": "diamond",
+      "size": 1.75,
+      "deps": ["trial"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "command", "command": "/gl trial begin {p} green"}
+      ]
+    },
+    {
+      "key": "ring",
+      "title": "&aRing-Bearer",
+      "subtitle": "Ring-bearer",
+      "desc": [
+        "A ring found you. Green, White or Black, you are a &eLantern&r now: you can fly, and your will takes shape as constructs.",
+        "",
+        "This completes when you have &eany&r ring from the trial. The Green path continues; the &6Last Light&r chapter has opened."
+      ],
+      "icon": "createlanterns:power_ring",
+      "x": 23.25,
+      "y": 0,
+      "shape": "octagon",
+      "size": 2.5,
+      "deps": ["choice"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_ringbearer"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 10},
+        {"type": "xp", "xp": 1000},
+        {"type": "skill_xp", "category": "green", "amount": 750}
+      ]
+    },
+    {
+      "key": "true_green",
+      "title": "The Green Answered",
+      "desc": [
+        "The green ring stayed, the ring of the Corps that came to Earth first.",
+        "",
+        "Optional, Green ring only: learn &eAegis&r and &eHammer of Light&r (Spectral Hub HUD). Your constructs cost less will."
+      ],
+      "icon": "createlanterns:power_battery",
+      "x": 25.25,
+      "y": -1.5,
+      "deps": ["ring"],
+      "optional": true,
+      "tasks": [
+        {"type": "stage", "stage": "gl_ring_green"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "green", "amount": 300}
+      ]
+    },
+    {
+      "key": "bastion",
+      "title": "Bastion of the Realm",
+      "desc": [
+        "The illagers send their strongest raids against the one who keeps winning.",
+        "",
+        "Kill &e10 ravagers&r and &e10 evokers&r: win big raids (drink ominous bottles to call them). Defend with the whole party."
+      ],
+      "icon": "minecraft:ominous_bottle",
+      "x": 25.25,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 1.4,
+      "deps": ["ring", "ravager"],
+      "tasks": [
+        {"type": "kill", "entity": "minecraft:ravager", "count": 10},
+        {"type": "kill", "entity": "minecraft:evoker", "count": 10}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 800},
+        {"type": "skill_xp", "category": "green", "amount": 500}
+      ]
+    },
+    {
+      "key": "battlemage",
+      "title": "Netherite Battlemage",
+      "desc": [
+        "The heaviest mage armor there is. A paladin's kind of robe.",
+        "",
+        "Craft the full &eNetherite Battlemage&r set (Iron's Spells)."
+      ],
+      "icon": "irons_spellbooks:netherite_mage_chestplate",
+      "x": 26.75,
+      "y": 1.5,
+      "shape": "rsquare",
+      "size": 1.25,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:netherite_mage_helmet"},
+        {"type": "item", "item": "irons_spellbooks:netherite_mage_chestplate"},
+        {"type": "item", "item": "irons_spellbooks:netherite_mage_leggings"},
+        {"type": "item", "item": "irons_spellbooks:netherite_mage_boots"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 700},
+        {"type": "skill_xp", "category": "green", "amount": 450}
+      ]
+    },
+    {
+      "key": "holy_orb",
+      "title": "Blessed Steel",
+      "desc": [
+        "Will, poured into steel.",
+        "",
+        "Craft a &eHoly Upgrade Orb&r and an &eEvocation Upgrade Orb&r; apply them at the Arcane Anvil."
+      ],
+      "icon": "irons_spellbooks:holy_upgrade_orb",
+      "x": 25.25,
+      "y": 1.5,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:holy_upgrade_orb"},
+        {"type": "item", "item": "irons_spellbooks:evocation_upgrade_orb"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "irons_spellbooks:arcane_essence", "count": 32},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "green", "amount": 300}
+      ]
+    },
+    {
+      "key": "lost_castle",
+      "title": "The Lost Castle",
+      "desc": [
+        "Far from any road stands a castle no king has held for centuries. Its halls are full of the dead.",
+        "",
+        "Find &eThe Lost Castle&r: one huge castle, very far from spawn (thousands of blocks). Fly there with the party."
+      ],
+      "icon": "minecraft:stone_bricks",
+      "x": 26.75,
+      "y": -3,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "structure", "structure": "tlc:lost_castle"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 800},
+        {"type": "skill_xp", "category": "green", "amount": 500}
+      ]
+    },
+    {
+      "key": "shrine5",
+      "title": "The Highest Trial",
+      "desc": [
+        "The tallest shrine. The hardest voice. 'Prove yourself' once more.",
+        "",
+        "Beat a tier-5 &eCombat Shrine&r (Dungeons and Taverns)."
+      ],
+      "icon": "minecraft:lodestone",
+      "x": 25.25,
+      "y": -3,
+      "shape": "hexagon",
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "structure", "structure": "nova_structures:shrine_combat_tier_5"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 700},
+        {"type": "skill_xp", "category": "green", "amount": 450}
+      ]
+    },
+    {
+      "key": "paladin_boss",
+      "title": "The Fallen Paladin",
+      "desc": [
+        "A paladin who swore your oath once. Something else holds his sword now.",
+        "",
+        "Defeat the &ePossessed Paladin&r (Legendary Monsters). Its &eGuide Book&r and structure advancements show where he waits."
+      ],
+      "icon": "legendary_monsters:knights_sword",
+      "x": 28.25,
+      "y": -1.5,
+      "shape": "hexagon",
+      "size": 1.4,
+      "deps": ["bastion", "lost_castle"],
+      "tasks": [
+        {"type": "kill", "entity": "legendary_monsters:posessed_paladin"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 10},
+        {"type": "xp", "xp": 1200},
+        {"type": "skill_xp", "category": "green", "amount": 700}
+      ]
+    },
+    {
+      "key": "suns_grace",
+      "title": "Sun's Grace",
+      "desc": [
+        "A mace that heals the ones who stand behind it.",
+        "",
+        "Optional: find &eSun's Grace&r (Dungeons Weapons unique)."
+      ],
+      "icon": "minecraftdungeonsv1:suns_grace_mace",
+      "x": 26.75,
+      "y": 3,
+      "deps": ["ring"],
+      "optional": true,
+      "tasks": [
+        {"type": "item", "item": "minecraftdungeonsv1:suns_grace_mace"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 400},
+        {"type": "skill_xp", "category": "green", "amount": 300}
+      ]
+    },
+    {
+      "key": "mutant",
+      "title": "Too Big to Bury",
+      "desc": [
+        "Something huge is beating on the village walls.",
+        "",
+        "Optional: kill a &eMutant Zombie&r (Mutant Monsters). Burn it before it gets back up."
+      ],
+      "icon": "mutantmonsters:hulk_hammer",
+      "x": 28.25,
+      "y": 1.5,
+      "shape": "hexagon",
+      "deps": ["battlemage"],
+      "optional": true,
+      "tasks": [
+        {"type": "kill", "entity": "mutantmonsters:mutant_zombie"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "green", "amount": 300}
+      ]
+    },
+    {
+      "key": "mythic",
+      "title": "Mythic Bulwark",
+      "subtitle": "Extreme gear",
+      "desc": [
+        "The shield that never breaks.",
+        "",
+        "Unlock the &ePinnacle&r world tier (Apotheosis: a full Epic affix set and the Ender Dragon slain; CTRL+T switches tiers) and carry a &6Mythic&r sword and shield with holy gems. Tick the checkmark when you do."
+      ],
+      "icon": "apotheosis:sigil_of_supremacy",
+      "x": 31.25,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 1.5,
+      "deps": ["paladin_boss", "battlemage", "holy_orb", "shrine5"],
+      "tasks": [
+        {"type": "advancement", "advancement": "apotheosis:progression/pinnacle"},
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 15},
+        {"type": "xp", "xp": 1500},
+        {"type": "skill_xp", "category": "green", "amount": 1000}
+      ]
+    },
+    {
+      "key": "legend",
+      "title": "&aLegend of the Green Light",
+      "subtitle": "After the Last Light",
+      "desc": [
+        "When the Devourer fell, every Lantern was still standing, because a Lightwarden stood in front of them.",
+        "",
+        "Complete the Last Light and the Green path. In brightest day, in blackest night."
+      ],
+      "icon": "createlanterns:power_ring",
+      "x": 36.25,
+      "y": 0,
+      "shape": "gear",
+      "size": 2,
+      "deps": ["mythic", "finale:last_light"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 20},
+        {"type": "xp", "xp": 2000},
+        {"type": "skill_xp", "category": "green", "amount": 1500}
+      ]
+    }
+  ]
+}

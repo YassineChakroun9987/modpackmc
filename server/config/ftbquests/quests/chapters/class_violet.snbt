@@ -1,0 +1,1710 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "class_violet"
+	group: ""
+	icon: {
+		id: "createlanterns:violet_dust"
+	}
+	id: "265DBE4CCDDDF0D0"
+	images: [ ]
+	order_index: 8
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "createlanterns:violet_dust"
+			}
+			id: "6AA3AE02444C8A52"
+			rewards: [
+				{
+					command: "/gl class join {p} violet"
+					id: "13BB8331DD4B3BF2"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "42AA10C92356FE67"
+					item: {
+						count: 1
+						id: "minecraftdungeonsv1:dagger"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "0F9251FD023BAAEE"
+					item: {
+						count: 1
+						id: "minecraft:ender_pearl"
+					}
+					type: "item"
+				}
+				{
+					count: 8
+					id: "6D5F9E5E2E076BF9"
+					item: {
+						count: 1
+						id: "minecraft:cooked_chicken"
+					}
+					type: "item"
+				}
+				{
+					id: "78280065ECBAAE0A"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 50"
+					id: "7A55918A55D92033"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "pentagon"
+			size: 2.0d
+			tasks: [{
+				id: "38E4C914324C22AC"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6AA3AE02444C8A52"]
+			icon: {
+				id: "minecraftdungeonsv1:dagger"
+			}
+			id: "45EDBAFE5385B1CF"
+			rewards: [
+				{
+					id: "0432F2650174D608"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 50"
+					id: "28E2E469A3EE82AF"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6A659CDB2E4F215A"
+					item: { count: 1, id: "minecraftdungeonsv1:dagger" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "3A1A7C892C337B96"
+					item: { count: 1, id: "magistuarmory:steel_stylet" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "4F744A0A355754E0"
+					item: { count: 1, id: "graveyard:bone_dagger" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "15F55A0CC8D53ABC"
+					item: { count: 1, id: "simplyswords:iron_sai" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "4DFF91E0DC0F703F"
+					item: { count: 1, id: "born_in_chaos_v1:intoxicating_dagger" }
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["45EDBAFE5385B1CF"]
+			icon: {
+				id: "minecraft:phantom_membrane"
+			}
+			id: "7C1FF337E551EFCE"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					id: "412A27A897056B5B"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "1C66E97340210746"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 75"
+					id: "73299B41921EC0D8"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:zombie"
+					id: "25783BD023F8B2E0"
+					type: "kill"
+					value: 20L
+				}
+				{
+					entity: "minecraft:skeleton"
+					id: "063C58EC284F56F6"
+					type: "kill"
+					value: 10L
+				}
+				{
+					entity: "minecraft:phantom"
+					id: "19B6C106CDA4FDD4"
+					type: "kill"
+					value: 3L
+				}
+			]
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7C1FF337E551EFCE"]
+			icon: {
+				id: "born_in_chaos_v1:nightmare_claw"
+			}
+			id: "2BDDF6ED76D0BB73"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					id: "66AB107688E98C70"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "672A798A40D527CB"
+					type: "xp_levels"
+					xp_levels: 2
+				}
+				{
+					id: "0E893D5311A6701A"
+					type: "xp"
+					xp: 200
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 150"
+					id: "3AD150CD77B5601F"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				entity: "born_in_chaos_v1:nightmare_stalker"
+				id: "31FC639300790402"
+				type: "kill"
+				value: 1L
+			}]
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2BDDF6ED76D0BB73"]
+			icon: {
+				id: "born_in_chaos_v1:nightmare_mantleofthe_night_chestplate"
+			}
+			id: "773ED4E4900917E6"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					id: "6127D3A8F8D729B3"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "7163478876E9313A"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 100"
+					id: "45F36F4776E2867F"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3A930BBA0A8C3F25"
+					item: { count: 1, id: "born_in_chaos_v1:nightmare_mantleofthe_night_helmet" }
+					type: "item"
+				}
+				{
+					id: "38C614AF3CAE7F85"
+					item: { count: 1, id: "born_in_chaos_v1:nightmare_mantleofthe_night_chestplate" }
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6AA3AE02444C8A52"]
+			icon: {
+				id: "irons_spellbooks:ender_rune"
+			}
+			id: "118BE5EE44E88CCB"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/scrolls_1"
+					id: "2CA5F96BDCF0BB88"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "06E7A8DC89E2DDEB"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 75"
+					id: "68E9F3E7B8D3FF5C"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				id: "270C5C6472D7151D"
+				item: { count: 1, id: "irons_spellbooks:ender_rune" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			icon: {
+				id: "irons_spellbooks:invisibility_elixir"
+			}
+			id: "5D2F92E87B9DBBF5"
+			rewards: [
+				{
+					count: 2
+					id: "3845797CCF63BB19"
+					item: {
+						count: 1
+						id: "irons_spellbooks:invisibility_elixir"
+					}
+					type: "item"
+				}
+				{
+					id: "641667A3E5DD72C9"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 75"
+					id: "06B3B3A67BB02DE0"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				id: "75D76F4676ACC5B7"
+				item: { count: 1, id: "irons_spellbooks:invisibility_elixir" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			icon: {
+				id: "born_in_chaos_v1:charmof_stealth"
+			}
+			id: "02896C09001ED155"
+			rewards: [
+				{
+					id: "04225E024903C7D6"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 75"
+					id: "0EBDEADC91734986"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				id: "561FEFF32A7E7EC5"
+				item: { count: 1, id: "born_in_chaos_v1:charmof_stealth" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6AA3AE02444C8A52"]
+			icon: {
+				id: "graveyard:skull_pile"
+			}
+			id: "2730B0C1DE3C2F9B"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					id: "4157DADA265DAEF7"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "4A3FA540A4F3C07C"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 75"
+					id: "1673532FAFE13822"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "27D6C34E4FB9D793"
+					optional_task: true
+					structure: "graveyard:crypt"
+					type: "structure"
+				}
+				{
+					id: "42AD6E5C29753C64"
+					optional_task: true
+					structure: "graveyard:haunted_house"
+					type: "structure"
+				}
+				{
+					id: "32B949044CB3C472"
+					optional_task: true
+					structure: "nova_structures:undead_crypt"
+					type: "structure"
+				}
+				{
+					id: "00E58208D5B88EFF"
+					optional_task: true
+					structure: "nova_structures:creeping_crypt"
+					type: "structure"
+				}
+				{
+					id: "0EEEDCA8C155DCA6"
+					optional_task: true
+					structure: "philipsruins:ancient_crypt"
+					type: "structure"
+				}
+			]
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			icon: {
+				id: "graveyard:bone_dagger"
+			}
+			id: "6C2B523ABA420A40"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					id: "70119F35B59B2465"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "08371021FA89C1BF"
+					type: "xp"
+					xp: 120
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 100"
+					id: "69755B16F42DE175"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				advancement: "graveyard:graveyard/kill_wraith"
+				criterion: ""
+				id: "5D1BFEC164C7FE7E"
+				type: "advancement"
+			}]
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			icon: {
+				id: "graveyard:vial_of_blood"
+			}
+			id: "1713ED5FD70D53F3"
+			rewards: [
+				{
+					id: "66D8616447324232"
+					type: "xp"
+					xp: 120
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 100"
+					id: "4714C7347BC47EE0"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				id: "1D3BB82887DA00A1"
+				item: { count: 1, id: "graveyard:vial_of_blood" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2BDDF6ED76D0BB73"]
+			icon: {
+				id: "createlanterns:violet_dust"
+			}
+			id: "231F7273D3EE21B6"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					id: "6D9A331A9AD6BCB4"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/scrolls_1"
+					id: "4635634B216804C6"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "2471DED29236E494"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 150"
+					id: "033BC43EFA33A5CD"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "octagon"
+			size: 1.5d
+			tasks: [{
+				id: "514FE472AF28044A"
+				type: "custom"
+			}]
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["231F7273D3EE21B6"]
+			icon: {
+				components: {
+					"irons_spellbooks:spell_container": {
+						data: [ ]
+						maxSpells: 1
+						mustEquip: 1b
+						spellWheel: 1b
+					}
+				}
+				id: "irons_spellbooks:shadowwalker_chestplate"
+			}
+			id: "44C4C486E87E9DBB"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					id: "50B7C70F5294DAA8"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/scrolls_2"
+					id: "1FD4600A6B22537E"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "5985E1D070F1772D"
+					type: "xp"
+					xp: 250
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 200"
+					id: "4C853422C037E706"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [
+				{
+					id: "0BA74FA91FA03CCA"
+					item: { count: 1, id: "irons_spellbooks:shadowwalker_helmet" }
+					type: "item"
+				}
+				{
+					id: "1F00BD06C6FAB641"
+					item: { components: { "irons_spellbooks:spell_container": { data: [ ], maxSpells: 1, mustEquip: 1b, spellWheel: 1b } }, count: 1, id: "irons_spellbooks:shadowwalker_chestplate" }
+					type: "item"
+				}
+				{
+					id: "560F3A5E94E1E49F"
+					item: { count: 1, id: "irons_spellbooks:shadowwalker_leggings" }
+					type: "item"
+				}
+				{
+					id: "005C52FAE52E0527"
+					item: { count: 1, id: "irons_spellbooks:shadowwalker_boots" }
+					type: "item"
+				}
+			]
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "irons_spellbooks:ender_upgrade_orb"
+			}
+			id: "74934E59ECB55A19"
+			rewards: [
+				{
+					count: 16
+					id: "25C458F662D4AD23"
+					item: {
+						count: 1
+						id: "irons_spellbooks:arcane_essence"
+					}
+					type: "item"
+				}
+				{
+					id: "662F28976088C8CF"
+					type: "xp"
+					xp: 200
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 150"
+					id: "01E64B47DBC5CD52"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				id: "390A9474E084AA4C"
+				item: { count: 1, id: "irons_spellbooks:ender_upgrade_orb" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["74934E59ECB55A19"]
+			icon: {
+				id: "graveyard:upper_bone_staff"
+			}
+			id: "469B6BE5E9322B28"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					id: "4E4D5D0691D2560A"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "7CAD49E56F77321E"
+					type: "xp"
+					xp: 250
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 200"
+					id: "707D240A982D378E"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4D1348CCE4E76B4E"
+					item: { count: 1, id: "graveyard:lower_bone_staff" }
+					type: "item"
+				}
+				{
+					id: "5A4F41749C703ED6"
+					item: { count: 1, id: "graveyard:middle_bone_staff" }
+					type: "item"
+				}
+				{
+					id: "12168C26D8C8C59E"
+					item: { count: 1, id: "graveyard:upper_bone_staff" }
+					type: "item"
+				}
+			]
+			x: 13.5d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "graveyard:skull_with_rib_cage"
+			}
+			id: "1BB81249A8570D48"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					id: "4A8E122F9E13681E"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "5102CAE092962227"
+					type: "xp"
+					xp: 250
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 200"
+					id: "514EAD90C80D1697"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				id: "5390D1A4479941E0"
+				structure: "graveyard:lich_prison"
+				type: "structure"
+			}]
+			x: 15.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["231F7273D3EE21B6"]
+			icon: {
+				id: "minecraft:sculk_sensor"
+			}
+			id: "683E56B6DACC44C5"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					id: "39FA80A43E7852D8"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "503FDF3242A4FCB9"
+					type: "xp"
+					xp: 250
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 200"
+					id: "5DC17CFF670C8F21"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "22D802B9A1B1556B"
+					structure: "minecraft:ancient_city"
+					type: "structure"
+				}
+				{
+					advancement: "minecraft:adventure/avoid_vibration"
+					criterion: ""
+					id: "0B763D0B7A1ECF84"
+					type: "advancement"
+				}
+			]
+			x: 10.5d
+			y: -1.5d
+		}
+		{
+			icon: {
+				id: "minecraft:echo_shard"
+			}
+			id: "2FDAFDFEC10078B7"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "76D9BE9B56B43BBE"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "64E82AE1A010AC8C"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+				{
+					id: "4E83E251AA6D55CE"
+					type: "xp"
+					xp: 350
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 250"
+					id: "0ED794D19186FC22"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "minecraft:warden"
+					id: "636535374616168C"
+					optional_task: true
+					type: "kill"
+					value: 1L
+				}
+				{
+					count: 16L
+					id: "4D3092923C2ABF15"
+					item: { count: 1, id: "minecraft:echo_shard" }
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 12.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"2FDAFDFEC10078B7"
+				"02896C09001ED155"
+			]
+			icon: {
+				id: "irons_spellbooks:invisibility_ring"
+			}
+			id: "35447B1C2FDF5187"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					id: "258BA2879800F4DC"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "5969EAFB226A7ED8"
+					type: "xp"
+					xp: 250
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 200"
+					id: "2A2C4DD2AC13C220"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				id: "536FEE77369F8335"
+				item: { count: 1, id: "irons_spellbooks:invisibility_ring" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["231F7273D3EE21B6"]
+			icon: {
+				id: "bookofdragons:nightfury_scales"
+			}
+			id: "226E6720BCDFDEFC"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					id: "47F5A3B355820662"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "36AAB741125B2C94"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 250"
+					id: "44E0C822D1ADB6A6"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				advancement: "bookofdragons:lightning_and_death"
+				criterion: ""
+				id: "71261C90A5CE8C62"
+				type: "advancement"
+			}]
+			x: 10.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["226E6720BCDFDEFC"]
+			icon: {
+				id: "bookofdragons:dragon_whistle"
+			}
+			id: "5B0E6736D77B2F73"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					id: "7E2297CA3A717C09"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "114DFB1C94755084"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 250"
+					id: "37403E00175E81AE"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				advancement: "bookofdragons:true_bond"
+				criterion: ""
+				id: "1C29C4EF8B0EB8FE"
+				type: "advancement"
+			}]
+			x: 12.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["226E6720BCDFDEFC"]
+			icon: {
+				id: "mutantmonsters:mutant_skeleton_skull"
+			}
+			id: "703346804CA6E5C9"
+			optional: true
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					id: "201A4AFD056CF1DB"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "50754D3FBC09D5C3"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 200"
+					id: "6E1F00B51EF52E01"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			tasks: [{
+				entity: "mutantmonsters:mutant_skeleton"
+				id: "325F96BF71A5860B"
+				type: "kill"
+				value: 1L
+			}]
+			x: 12.0d
+			y: 3.0d
+		}
+		{
+			icon: {
+				id: "createlanterns:violet_liquid_light_bucket"
+			}
+			id: "1519CF452877BC5E"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "6496BEC2B2B23C79"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/scrolls_2"
+					id: "57142EB57C3D1C1A"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "1D9A8F6157310C6C"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 250"
+					id: "66C7C36095650107"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "octagon"
+			size: 1.5d
+			tasks: [{
+				id: "5B464B13BEF24B69"
+				type: "custom"
+			}]
+			x: 16.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1519CF452877BC5E"]
+			icon: {
+				id: "graveyard:black_bone_staff"
+			}
+			id: "13DC9C345CA75F0D"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/class_violet"
+					id: "0AFD4A74D3EF764B"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "2546219E613DB785"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "5DF4EAD08A2776AC"
+					type: "xp_levels"
+					xp_levels: 8
+				}
+				{
+					id: "5136BC84C8C2DB16"
+					type: "xp"
+					xp: 500
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 500"
+					id: "6CF61B10E12828B9"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 2.25d
+			tasks: [
+				{
+					entity: "graveyard:lich"
+					id: "2B27CA4E3FE950A4"
+					optional_task: true
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "578BCE8911A300A3"
+					optional_task: true
+					type: "custom"
+				}
+			]
+			x: 18.75d
+			y: 0.0d
+		}
+		{
+			dependencies: ["13DC9C345CA75F0D"]
+			icon: {
+				id: "createlanterns:ring_blank"
+			}
+			id: "4D2214F3985AFF96"
+			rewards: [{
+				command: "/gl trial begin {p} violet"
+				id: "214BF8CFE4E43FF2"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			shape: "diamond"
+			size: 1.75d
+			tasks: [{
+				id: "790CEADEC1875C34"
+				type: "checkmark"
+			}]
+			x: 21.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4D2214F3985AFF96"]
+			icon: {
+				id: "createlanterns:violet_power_ring"
+			}
+			id: "026303C6D76AC6B0"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "1A26C62FD583AD47"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "0EC60380BFC4052A"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+				{
+					id: "7988B54C4DE93B5E"
+					type: "xp"
+					xp: 1000
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 750"
+					id: "121E0082338C4724"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "octagon"
+			size: 2.5d
+			tasks: [{
+				id: "36614307B2F9ED3D"
+				type: "custom"
+			}]
+			x: 23.25d
+			y: 0.0d
+		}
+		{
+			dependencies: ["026303C6D76AC6B0"]
+			icon: {
+				id: "createlanterns:violet_power_battery"
+			}
+			id: "1ECAE28D914DD08D"
+			optional: true
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "601D505BBA2164AA"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 300"
+					id: "13740070F2668A4D"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				id: "1A8393D3343EB203"
+				type: "custom"
+			}]
+			x: 25.25d
+			y: -1.5d
+		}
+		{
+			dependencies: ["026303C6D76AC6B0"]
+			icon: {
+				id: "minecraft:chorus_fruit"
+			}
+			id: "4344CB6C93D771DF"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "780D3EFA7A27C2F9"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "6D96BFF3A62D52EE"
+					type: "xp"
+					xp: 500
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 300"
+					id: "3D27CFEB3B71C461"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "nullscape:shadowlands"
+					id: "7BC376BC9A951C10"
+					type: "biome"
+				}
+				{
+					biome: "nullscape:void_barrens"
+					id: "77FF1AADF299A1D5"
+					type: "biome"
+				}
+			]
+			x: 25.25d
+			y: -3.0d
+		}
+		{
+			icon: {
+				components: {
+					"irons_spellbooks:spell_container": {
+						data: [ ]
+						maxSpells: 12
+						mustEquip: 1b
+						spellWheel: 1b
+					}
+				}
+				id: "irons_spellbooks:dragonskin_spell_book"
+			}
+			id: "236EE676F59D999E"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/scrolls_3"
+					id: "6AEDB812CA1E2FCE"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "1CF100E5A40F19ED"
+					type: "xp"
+					xp: 600
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 400"
+					id: "3319A7312180F85E"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				id: "30E4BEE46141BB20"
+				item: { components: { "irons_spellbooks:spell_container": { data: [ ], maxSpells: 12, mustEquip: 1b, spellWheel: 1b } }, count: 1, id: "irons_spellbooks:dragonskin_spell_book" }
+				type: "item"
+			}]
+			x: 26.75d
+			y: -3.0d
+		}
+		{
+			dependencies: ["026303C6D76AC6B0"]
+			icon: {
+				id: "bosses_of_mass_destruction:obsidian_heart"
+			}
+			id: "584D0173CCE0FD42"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "46EF9C64FF625F80"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "385039A3A0EE3FE3"
+					type: "xp"
+					xp: 500
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 300"
+					id: "19E509E77146192E"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				id: "2620391DD54BB841"
+				structure: "bosses_of_mass_destruction:obsidilith_arena"
+				type: "structure"
+			}]
+			x: 26.75d
+			y: -1.5d
+		}
+		{
+			dependencies: ["584D0173CCE0FD42"]
+			icon: {
+				id: "bosses_of_mass_destruction:obsidian_heart"
+			}
+			id: "38EDB527E584D24F"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "69800E93466443E2"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "56E0B7E0925FFDB2"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					id: "0D903C28564B470E"
+					type: "xp"
+					xp: 900
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 600"
+					id: "23A183B2FCE81B0A"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.4d
+			tasks: [{
+				entity: "bosses_of_mass_destruction:obsidilith"
+				id: "44C60552E1A50F7F"
+				type: "kill"
+				value: 1L
+			}]
+			x: 28.25d
+			y: -1.5d
+		}
+		{
+			dependencies: ["026303C6D76AC6B0"]
+			icon: {
+				id: "cataclysm:void_eye"
+			}
+			id: "2FCC7E6F361CAB3A"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "3A23ADA6E6C4C337"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "4CA3FB3F87EA0B4D"
+					type: "xp"
+					xp: 400
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 300"
+					id: "45820E8090F8FAB4"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				id: "7145410B872858FA"
+				structure: "cataclysm:ruined_citadel"
+				type: "structure"
+			}]
+			x: 25.25d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "cataclysm:void_core"
+			}
+			id: "51C99F51AA795336"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "0F3BF537F2B6EC57"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "7170E123B2C885CD"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					id: "7D274D6159B7EE74"
+					type: "xp"
+					xp: 900
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 600"
+					id: "7A43442E4EFE3E02"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.4d
+			tasks: [{
+				entity: "cataclysm:ender_guardian"
+				id: "52BF5CDAEB14DC55"
+				type: "kill"
+				value: 1L
+			}]
+			x: 26.75d
+			y: 0.0d
+		}
+		{
+			dependencies: ["026303C6D76AC6B0"]
+			icon: {
+				id: "irons_spellbooks:eldritch_manuscript"
+			}
+			id: "261B6391E6E23C48"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/scrolls_3"
+					id: "7B5FE429DA5C9E43"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "296CF49B289A236E"
+					type: "xp"
+					xp: 600
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 400"
+					id: "7F2C9E92136F93C7"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				id: "5C54D0C0D8C2BB81"
+				item: { count: 1, id: "irons_spellbooks:eldritch_manuscript" }
+				type: "item"
+			}]
+			x: 25.25d
+			y: 1.5d
+		}
+		{
+			icon: {
+				id: "discerning_the_eldritch:eldritch_rune"
+			}
+			id: "5A8D0F520FD317ED"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "62ECB11D1A9E1938"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "771503417D29ECF2"
+					type: "xp"
+					xp: 500
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 300"
+					id: "0893E9546E13CB9F"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				id: "137F83F2BFB20AF5"
+				structure: "discerning_the_eldritch:cultist_base"
+				type: "structure"
+			}]
+			x: 26.75d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5A8D0F520FD317ED"]
+			icon: {
+				id: "discerning_the_eldritch:ascended_key"
+			}
+			id: "14077ED9DC80B3C2"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_5"
+					id: "54C9CBAE45ECAA4E"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "3D2F297A38D4192E"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+				{
+					id: "064263D8752ED522"
+					type: "xp"
+					xp: 1200
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 700"
+					id: "05CD0B8AC31CDE50"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.4d
+			tasks: [{
+				entity: "discerning_the_eldritch:ascended_one"
+				id: "34548EB666CC46ED"
+				type: "kill"
+				value: 1L
+			}]
+			x: 28.25d
+			y: 1.5d
+		}
+		{
+			icon: {
+				id: "irons_spellbooks:betrayer_signet"
+			}
+			id: "711970A3EDD93629"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "4CF176C51F82BA89"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "5D245EB1B3190631"
+					type: "xp"
+					xp: 700
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 450"
+					id: "18536DC4D866FEE1"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				id: "618873EA39494D11"
+				item: { count: 1, id: "irons_spellbooks:betrayer_signet" }
+				type: "item"
+			}]
+			x: 29.75d
+			y: 1.5d
+		}
+		{
+			dependencies: ["026303C6D76AC6B0"]
+			icon: {
+				id: "simplyswords:shadowsting"
+			}
+			id: "2E4793C9CB927B30"
+			optional: true
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "569FF5883A76BCCE"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "73E88EDFBE3D4ABA"
+					type: "xp"
+					xp: 400
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 300"
+					id: "49CA31C1578B3735"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2EB5E4CB3FD93634"
+					item: { count: 1, id: "simplyswords:shadowsting" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "6C4D2575DDD3524D"
+					item: { count: 1, id: "simplyswords:soulrender" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "7EAE7EB83151D4F0"
+					item: { count: 1, id: "simplyswords:soulstealer" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "64D2BBE902E0A6B5"
+					item: { count: 1, id: "simplyswords:wraithfang" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "2D3D0195800EE612"
+					item: { count: 1, id: "simplyswords:twisted_blade" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "2F2E95B0AE7F688B"
+					item: { count: 1, id: "simplyswords:riftmane" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "09F0B05DD793ED3B"
+					item: { count: 1, id: "simplyswords:enigma" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "528B9B6B04FA4BF0"
+					item: { count: 1, id: "simplyswords:whisperwind" }
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 26.75d
+			y: 3.0d
+		}
+		{
+			dependencies: ["236EE676F59D999E"]
+			icon: {
+				id: "apotheosis:sigil_of_supremacy"
+			}
+			id: "696A00ECEEB8ECA1"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_5"
+					id: "154BFC32387F81C8"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "04DA271108A233F4"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+				{
+					id: "2F76F3B82B5129A7"
+					type: "xp"
+					xp: 1500
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 1000"
+					id: "6642C17DA236B7D1"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					advancement: "apotheosis:progression/pinnacle"
+					criterion: ""
+					id: "33DD75C404EE2F2F"
+					type: "advancement"
+				}
+				{
+					id: "6ECB0B8146AA2E3C"
+					type: "checkmark"
+				}
+			]
+			x: 31.25d
+			y: 0.0d
+		}
+		{
+			dependencies: ["52A174FAC254E04A"]
+			icon: {
+				id: "createlanterns:violet_power_ring"
+			}
+			id: "413AF904B6574A79"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_5"
+					id: "3AEB8BCB41B58A54"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "10545ADBE9D6DF69"
+					type: "xp_levels"
+					xp_levels: 20
+				}
+				{
+					id: "6BDD9D88404805E7"
+					type: "xp"
+					xp: 2000
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:violet 1500"
+					id: "29712DDE43327021"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "18DB442B7DB0CA93"
+				type: "checkmark"
+			}]
+			x: 36.25d
+			y: 0.0d
+		}
+	]
+}

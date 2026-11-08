@@ -1,0 +1,931 @@
+{
+  "id": "class_violet",
+  "title": "&5The Violet Light: Path of the Void",
+  "subtitle": "Voidblade. The void doesn't see you coming. Neither will they.",
+  "icon": "createlanterns:violet_dust",
+  "group": "classes",
+  "order": 6,
+  "quests": [
+    {
+      "key": "join",
+      "title": "&5The Voidblade",
+      "subtitle": "Join this light",
+      "desc": [
+        "&o\"The void doesn't see you coming. Neither will they.\"&r",
+        "Violet is the light of the void: an assassin with daggers and ender and eldritch magic, who hunts the undead at night and walks the End.",
+        "",
+        "Claim the reward to join Violet and unlock its talent tree. You can still join other lights later."
+      ],
+      "icon": "createlanterns:violet_dust",
+      "x": 0,
+      "y": 0,
+      "shape": "pentagon",
+      "size": 2,
+      "deps": ["act1:choose_path"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "command", "command": "/gl class join {p} violet"},
+        {"type": "item", "item": "minecraftdungeonsv1:dagger"},
+        {"type": "item", "item": "minecraft:ender_pearl", "count": 4},
+        {"type": "item", "item": "minecraft:cooked_chicken", "count": 8},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "violet", "amount": 50}
+      ]
+    },
+    {
+      "key": "daggers",
+      "title": "Silent Steel",
+      "desc": [
+        "A long blade is a warning. A short one is an answer.",
+        "",
+        "Craft any dagger below. Daggers strike fast; sneak attacks with them earn double Violet XP."
+      ],
+      "icon": "minecraftdungeonsv1:dagger",
+      "x": 1.5,
+      "y": 0,
+      "deps": ["join"],
+      "tasks": [
+        {"type": "item", "item": "minecraftdungeonsv1:dagger", "optional": true},
+        {"type": "item", "item": "magistuarmory:steel_stylet", "optional": true},
+        {"type": "item", "item": "graveyard:bone_dagger", "optional": true},
+        {"type": "item", "item": "simplyswords:iron_sai", "optional": true},
+        {"type": "item", "item": "born_in_chaos_v1:intoxicating_dagger", "optional": true}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "violet", "amount": 50}
+      ]
+    },
+    {
+      "key": "nightwalker",
+      "title": "Nightwalker",
+      "desc": [
+        "The night belongs to the hunters. Be the worst of them.",
+        "",
+        "Kill &e20 zombies&r, &e10 skeletons&r and &e3 phantoms&r. Night kills, sneaking kills and undead kills all give extra Violet XP."
+      ],
+      "icon": "minecraft:phantom_membrane",
+      "x": 3,
+      "y": 0,
+      "deps": ["daggers"],
+      "tasks": [
+        {"type": "kill", "entity": "minecraft:zombie", "count": 20},
+        {"type": "kill", "entity": "minecraft:skeleton", "count": 10},
+        {"type": "kill", "entity": "minecraft:phantom", "count": 3}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "violet", "amount": 75}
+      ]
+    },
+    {
+      "key": "stalker",
+      "title": "The Stalker",
+      "desc": [
+        "Something follows you home on dark nights. It only moves when you aren't looking.",
+        "",
+        "Kill the &eNightmare Stalker&r (Born in Chaos). It hunts at night; keep it in front of you."
+      ],
+      "icon": "born_in_chaos_v1:nightmare_claw",
+      "x": 4.5,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 1.5,
+      "deps": ["nightwalker"],
+      "tasks": [
+        {"type": "kill", "entity": "born_in_chaos_v1:nightmare_stalker"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp_levels", "levels": 2},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "violet", "amount": 150}
+      ]
+    },
+    {
+      "key": "mantle",
+      "title": "Mantle of the Night",
+      "desc": [
+        "Its claws, sewn into a robe. Now you're the thing in the dark.",
+        "",
+        "Craft the &eNightmare Mask&r and &eNightmare Robe&r (Born in Chaos, see JEI)."
+      ],
+      "icon": "born_in_chaos_v1:nightmare_mantleofthe_night_chestplate",
+      "x": 6,
+      "y": 0,
+      "deps": ["stalker"],
+      "tasks": [
+        {"type": "item", "item": "born_in_chaos_v1:nightmare_mantleofthe_night_helmet"},
+        {"type": "item", "item": "born_in_chaos_v1:nightmare_mantleofthe_night_chestplate"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 150},
+        {"type": "skill_xp", "category": "violet", "amount": 100}
+      ]
+    },
+    {
+      "key": "ender_rune",
+      "title": "Blink",
+      "desc": [
+        "Here. Then there. Then behind them.",
+        "",
+        "Craft an &eEnder Rune&r (see JEI). Look for &eTeleport&r, &eShadow Slash&r and &eEchoing Strikes&r scrolls."
+      ],
+      "icon": "irons_spellbooks:ender_rune",
+      "x": 1.5,
+      "y": -1.5,
+      "deps": ["join"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:ender_rune"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "violet", "amount": 75}
+      ]
+    },
+    {
+      "key": "unseen",
+      "title": "Unseen",
+      "desc": [
+        "The best fight is the one they never knew started.",
+        "",
+        "Brew an &eInvisibility Elixir&r (Iron's Spells alchemy). Mobs here hear you too (sound draws them), so move quietly."
+      ],
+      "icon": "irons_spellbooks:invisibility_elixir",
+      "x": 3,
+      "y": -1.5,
+      "deps": ["ender_rune"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:invisibility_elixir"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "irons_spellbooks:invisibility_elixir", "count": 2},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "violet", "amount": 75}
+      ]
+    },
+    {
+      "key": "charm",
+      "title": "Charm of Stealth",
+      "desc": [
+        "A little bone token that makes the dark forget you.",
+        "",
+        "Craft or find a &eCharm of Stealth&r (Born in Chaos)."
+      ],
+      "icon": "born_in_chaos_v1:charmof_stealth",
+      "x": 4.5,
+      "y": -1.5,
+      "deps": ["unseen"],
+      "tasks": [
+        {"type": "item", "item": "born_in_chaos_v1:charmof_stealth"}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "violet", "amount": 75}
+      ]
+    },
+    {
+      "key": "crypt",
+      "title": "Where the Dead Rest",
+      "desc": [
+        "Every crypt has a door. Few have locks that work from the inside.",
+        "",
+        "Find a crypt: The Graveyard's &eCrypt&r or &eHaunted House&r, a Dungeons and Taverns &eUndead Crypt&r, or a Philips Ruins &eAncient Crypt&r."
+      ],
+      "icon": "graveyard:skull_pile",
+      "x": 1.5,
+      "y": 1.5,
+      "deps": ["join"],
+      "tasks": [
+        {"type": "structure", "structure": "graveyard:crypt", "optional": true},
+        {"type": "structure", "structure": "graveyard:haunted_house", "optional": true},
+        {"type": "structure", "structure": "nova_structures:undead_crypt", "optional": true},
+        {"type": "structure", "structure": "nova_structures:creeping_crypt", "optional": true},
+        {"type": "structure", "structure": "philipsruins:ancient_crypt", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "violet", "amount": 75}
+      ]
+    },
+    {
+      "key": "wraith",
+      "title": "Taking From the Dead",
+      "desc": [
+        "Some coffins are sealed for a reason.",
+        "",
+        "Desecrate a coffin in a Graveyard crypt to summon its &ewraith&r, then put it back to rest."
+      ],
+      "icon": "graveyard:bone_dagger",
+      "x": 3,
+      "y": 1.5,
+      "deps": ["crypt"],
+      "tasks": [
+        {"type": "advancement", "advancement": "graveyard:graveyard/kill_wraith"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 120},
+        {"type": "skill_xp", "category": "violet", "amount": 100}
+      ]
+    },
+    {
+      "key": "vial",
+      "title": "A Vial of Blood",
+      "desc": [
+        "The Graveyard's champion answers only to blood.",
+        "",
+        "Get a &eVial of Blood&r (The Graveyard). Keep it: you'll need it &efull&r for the ring trial (its advancement tab shows how)."
+      ],
+      "icon": "graveyard:vial_of_blood",
+      "x": 4.5,
+      "y": 1.5,
+      "deps": ["wraith"],
+      "tasks": [
+        {"type": "item", "item": "graveyard:vial_of_blood"}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 120},
+        {"type": "skill_xp", "category": "violet", "amount": 100}
+      ]
+    },
+    {
+      "key": "whisper",
+      "title": "The Light Whispers",
+      "subtitle": "Class level 10",
+      "desc": [
+        "In the silence between heartbeats, a voice: &o\"They never see the ones who matter.\"&r",
+        "",
+        "Reach &eViolet level 10&r. Night kills, sneak kills, undead kills and End kills all count."
+      ],
+      "icon": "createlanterns:violet_dust",
+      "x": 9,
+      "y": 0,
+      "shape": "octagon",
+      "size": 1.5,
+      "deps": ["stalker", "ender_rune"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_whisper_violet"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "skill_xp", "category": "violet", "amount": 150}
+      ]
+    },
+    {
+      "key": "shadowwalker",
+      "title": "The Shadow-Walker",
+      "desc": [
+        "Armor stitched from shadow. It makes no sound.",
+        "",
+        "Craft the full &eShadow-Walker&r set (Iron's Spells). It boosts ender spells."
+      ],
+      "icon": "irons_spellbooks:shadowwalker_chestplate",
+      "x": 10.5,
+      "y": 0,
+      "shape": "rsquare",
+      "size": 1.25,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:shadowwalker_helmet"},
+        {"type": "item", "item": "irons_spellbooks:shadowwalker_chestplate"},
+        {"type": "item", "item": "irons_spellbooks:shadowwalker_leggings"},
+        {"type": "item", "item": "irons_spellbooks:shadowwalker_boots"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "violet", "amount": 200}
+      ]
+    },
+    {
+      "key": "ender_orb",
+      "title": "Deeper Void",
+      "desc": [
+        "Let more of the void in.",
+        "",
+        "Craft an &eEnder Upgrade Orb&r and apply it at the Arcane Anvil."
+      ],
+      "icon": "irons_spellbooks:ender_upgrade_orb",
+      "x": 12,
+      "y": 0,
+      "deps": ["shadowwalker"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:ender_upgrade_orb"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "irons_spellbooks:arcane_essence", "count": 16},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "violet", "amount": 150}
+      ]
+    },
+    {
+      "key": "staff",
+      "title": "The Ominous Staff",
+      "desc": [
+        "Three pieces of a broken bone staff, scattered among the graves. Put together, they call a champion.",
+        "",
+        "Collect all three &eOminous Bone Staff Fragments&r (lower, middle, upper) from The Graveyard's structures."
+      ],
+      "icon": "graveyard:upper_bone_staff",
+      "x": 13.5,
+      "y": 0,
+      "deps": ["ender_orb", "vial"],
+      "tasks": [
+        {"type": "item", "item": "graveyard:lower_bone_staff"},
+        {"type": "item", "item": "graveyard:middle_bone_staff"},
+        {"type": "item", "item": "graveyard:upper_bone_staff"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "violet", "amount": 200}
+      ]
+    },
+    {
+      "key": "lich_prison",
+      "title": "The Lich Prison",
+      "desc": [
+        "A prison of black stone, an altar, and chains that don't hold anything any more.",
+        "",
+        "Find the &eLich Prison&r (The Graveyard). Its altar is where the trial begins."
+      ],
+      "icon": "graveyard:skull_with_rib_cage",
+      "x": 15,
+      "y": 0,
+      "deps": ["staff"],
+      "tasks": [
+        {"type": "structure", "structure": "graveyard:lich_prison"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "violet", "amount": 200}
+      ]
+    },
+    {
+      "key": "ancient_city",
+      "title": "Into the Deep Dark",
+      "desc": [
+        "Far below, a city of the dead, wired with ears.",
+        "",
+        "Find an &eAncient City&r in the Deep Dark and sneak past a sculk sensor without setting it off."
+      ],
+      "icon": "minecraft:sculk_sensor",
+      "x": 10.5,
+      "y": -1.5,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "structure", "structure": "minecraft:ancient_city"},
+        {"type": "advancement", "advancement": "minecraft:adventure/avoid_vibration"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "violet", "amount": 200}
+      ]
+    },
+    {
+      "key": "warden",
+      "title": "Outlast the Warden",
+      "desc": [
+        "The Warden is blind. It doesn't need eyes.",
+        "",
+        "Either &ekill the Warden&r, or outlast it: loot &e16 echo shards&r from the city while it hunts you."
+      ],
+      "icon": "minecraft:echo_shard",
+      "x": 12,
+      "y": -1.5,
+      "shape": "hexagon",
+      "size": 1.5,
+      "deps": ["ancient_city"],
+      "tasks": [
+        {"type": "kill", "entity": "minecraft:warden", "optional": true},
+        {"type": "item", "item": "minecraft:echo_shard", "count": 16, "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 350},
+        {"type": "skill_xp", "category": "violet", "amount": 250}
+      ]
+    },
+    {
+      "key": "invis_ring",
+      "title": "Ring of the Unseen",
+      "desc": [
+        "A ring that turns you into rumour.",
+        "",
+        "Craft or find a &eRing of Invisibility&r (Iron's Spells)."
+      ],
+      "icon": "irons_spellbooks:invisibility_ring",
+      "x": 12,
+      "y": -3,
+      "deps": ["warden", "charm"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:invisibility_ring"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "violet", "amount": 200}
+      ]
+    },
+    {
+      "key": "nightfury",
+      "title": "Offspring of Lightning and Death",
+      "desc": [
+        "A black dragon you can only see when it wants you to. The perfect partner.",
+        "",
+        "Tame a &eNight Fury&r (Book of Dragons): find one near a roost, climb on and hold on until it stops bucking."
+      ],
+      "icon": "bookofdragons:nightfury_scales",
+      "x": 10.5,
+      "y": 1.5,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "advancement", "advancement": "bookofdragons:lightning_and_death"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 300},
+        {"type": "skill_xp", "category": "violet", "amount": 250}
+      ]
+    },
+    {
+      "key": "nightfury_bond",
+      "title": "Shadow Wings",
+      "desc": [
+        "You fly at night, unseen, and land behind the enemy.",
+        "",
+        "Reach a &etrue bond&r with your dragon (keep riding, feeding and fighting together)."
+      ],
+      "icon": "bookofdragons:dragon_whistle",
+      "x": 12,
+      "y": 1.5,
+      "deps": ["nightfury"],
+      "tasks": [
+        {"type": "advancement", "advancement": "bookofdragons:true_bond"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 300},
+        {"type": "skill_xp", "category": "violet", "amount": 250}
+      ]
+    },
+    {
+      "key": "mutant",
+      "title": "Bones of a Giant",
+      "desc": [
+        "A skeleton the size of a house, and it shoots like one.",
+        "",
+        "Optional: kill a &eMutant Skeleton&r (Mutant Monsters). Its bones make armor."
+      ],
+      "icon": "mutantmonsters:mutant_skeleton_skull",
+      "x": 12,
+      "y": 3,
+      "shape": "hexagon",
+      "deps": ["nightfury"],
+      "optional": true,
+      "tasks": [
+        {"type": "kill", "entity": "mutantmonsters:mutant_skeleton"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 300},
+        {"type": "skill_xp", "category": "violet", "amount": 200}
+      ]
+    },
+    {
+      "key": "dream",
+      "title": "The Dream",
+      "subtitle": "Class level 25",
+      "desc": [
+        "You dream of a violet void where islands drift in silence, and of a lantern that only shines in the dark.",
+        "",
+        "Reach &eViolet level 25&r. Then the trial."
+      ],
+      "icon": "createlanterns:violet_liquid_light_bucket",
+      "x": 16.5,
+      "y": 0,
+      "shape": "octagon",
+      "size": 1.5,
+      "deps": ["lich_prison", "shadowwalker"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_dream_violet"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "skill_xp", "category": "violet", "amount": 250}
+      ]
+    },
+    {
+      "key": "trial",
+      "title": "&5The Corrupted Champion",
+      "subtitle": "Ring trial: the boss",
+      "desc": [
+        "At the altar, at night, blood and bone call him back: the Corrupted Champion, the Graveyard's lich.",
+        "",
+        "At the &eLich Prison&r altar, at &enight&r, use a &efull Vial of Blood&r and all &ethree bone staff pieces&r to summon him, then kill him. Party members within 64 blocks get the trial credit too."
+      ],
+      "icon": "graveyard:black_bone_staff",
+      "x": 18.75,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 2.25,
+      "deps": ["dream", "lich_prison"],
+      "tasks": [
+        {"type": "kill", "entity": "graveyard:lich", "optional": true},
+        {"type": "stage", "stage": "gl_trial_violet", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/class_violet"},
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp_levels", "levels": 8},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "violet", "amount": 500}
+      ]
+    },
+    {
+      "key": "choice",
+      "title": "The Ring Judges",
+      "subtitle": "The ring will judge you",
+      "desc": [
+        "The Champion falls apart into dust and bone, and a violet light slips out of the shadows as if it had always been there.",
+        "Who would you give everything for?",
+        "",
+        "Claim this reward to begin the &ering trial&r: a conversation in chat. The ring will judge you. Your &eanswers&r decide whether you receive your own light, the &fWhite&r, or the &8Black&r. Answer as who you really are.",
+        "&7(Only works once you have the trial credit from the quest before.)"
+      ],
+      "icon": "createlanterns:ring_blank",
+      "x": 21,
+      "y": 0,
+      "shape": "diamond",
+      "size": 1.75,
+      "deps": ["trial"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "command", "command": "/gl trial begin {p} violet"}
+      ]
+    },
+    {
+      "key": "ring",
+      "title": "&5Ring-Bearer",
+      "subtitle": "Ring-bearer",
+      "desc": [
+        "A ring found you. Violet, White or Black, you are a &eLantern&r now: you can fly, and your will takes shape as constructs.",
+        "",
+        "This completes when you have &eany&r ring from the trial. The Violet path continues; the &6Last Light&r chapter has opened."
+      ],
+      "icon": "createlanterns:violet_power_ring",
+      "x": 23.25,
+      "y": 0,
+      "shape": "octagon",
+      "size": 2.5,
+      "deps": ["choice"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_ringbearer"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 10},
+        {"type": "xp", "xp": 1000},
+        {"type": "skill_xp", "category": "violet", "amount": 750}
+      ]
+    },
+    {
+      "key": "true_violet",
+      "title": "The Violet Answered",
+      "desc": [
+        "The violet ring stayed. It loves you, and it is terrifying.",
+        "",
+        "Optional, Violet ring only: learn &eVoid Lure&r (Spectral Hub HUD)."
+      ],
+      "icon": "createlanterns:violet_power_battery",
+      "x": 25.25,
+      "y": -1.5,
+      "deps": ["ring"],
+      "optional": true,
+      "tasks": [
+        {"type": "stage", "stage": "gl_ring_violet"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "violet", "amount": 300}
+      ]
+    },
+    {
+      "key": "shadowlands",
+      "title": "The Void Walk",
+      "desc": [
+        "In the End, there are islands where even light is afraid to go.",
+        "",
+        "Cross Nullscape's &eShadowlands&r and &eVoid Barrens&r in the outer End."
+      ],
+      "icon": "minecraft:chorus_fruit",
+      "x": 25.25,
+      "y": -3,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "biome", "biome": "nullscape:shadowlands"},
+        {"type": "biome", "biome": "nullscape:void_barrens"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "violet", "amount": 300}
+      ]
+    },
+    {
+      "key": "dragonskin",
+      "title": "Dragonskin",
+      "desc": [
+        "The old dragon's hide, bound around a void-hungry spellbook.",
+        "",
+        "Make the &eDragonskin Spell Book&r (Iron's Spells; dragonskin comes from the Ender Dragon)."
+      ],
+      "icon": "irons_spellbooks:dragonskin_spell_book",
+      "x": 26.75,
+      "y": -3,
+      "deps": ["shadowlands"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:dragonskin_spell_book"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_3"},
+        {"type": "xp", "xp": 600},
+        {"type": "skill_xp", "category": "violet", "amount": 400}
+      ]
+    },
+    {
+      "key": "obsidilith_arena",
+      "title": "The Black Monolith",
+      "desc": [
+        "An obsidian pillar on a lonely End island. It hums. It waits.",
+        "",
+        "Find the &eObsidilith's arena&r (Bosses of Mass Destruction) in the End."
+      ],
+      "icon": "bosses_of_mass_destruction:obsidian_heart",
+      "x": 26.75,
+      "y": -1.5,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "structure", "structure": "bosses_of_mass_destruction:obsidilith_arena"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "violet", "amount": 300}
+      ]
+    },
+    {
+      "key": "obsidilith",
+      "title": "Obsidilith",
+      "desc": [
+        "The monolith wakes, and it remembers being a god.",
+        "",
+        "Kill the &eObsidilith&r. Its attack patterns are colour-coded; learn them, then strike."
+      ],
+      "icon": "bosses_of_mass_destruction:obsidian_heart",
+      "x": 28.25,
+      "y": -1.5,
+      "shape": "hexagon",
+      "size": 1.4,
+      "deps": ["obsidilith_arena"],
+      "tasks": [
+        {"type": "kill", "entity": "bosses_of_mass_destruction:obsidilith"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 900},
+        {"type": "skill_xp", "category": "violet", "amount": 600}
+      ]
+    },
+    {
+      "key": "ruined_citadel",
+      "title": "The Ruined Citadel",
+      "desc": [
+        "A citadel at the edge of the End, guarded by a colossus of void-steel. Perfect for an assassination.",
+        "",
+        "Find the &eRuined Citadel&r (Cataclysm). An &eEye of Void&r points the way."
+      ],
+      "icon": "cataclysm:void_eye",
+      "x": 25.25,
+      "y": 0,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "structure", "structure": "cataclysm:ruined_citadel"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 400},
+        {"type": "skill_xp", "category": "violet", "amount": 300}
+      ]
+    },
+    {
+      "key": "ender_guardian",
+      "title": "Assassinate the Guardian",
+      "desc": [
+        "It is huge. It is armored. It never saw you.",
+        "",
+        "Kill the &eEnder Guardian&r in the Ruined Citadel. Strike from behind; dodge the void runes."
+      ],
+      "icon": "cataclysm:void_core",
+      "x": 26.75,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 1.4,
+      "deps": ["ruined_citadel"],
+      "tasks": [
+        {"type": "kill", "entity": "cataclysm:ender_guardian"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 900},
+        {"type": "skill_xp", "category": "violet", "amount": 600}
+      ]
+    },
+    {
+      "key": "eldritch",
+      "title": "Void Touched",
+      "desc": [
+        "Some knowledge doesn't want to be known. Know it anyway.",
+        "",
+        "Find an &eEldritch Manuscript&r and learn an eldritch spell (&eSonic Boom&r, &eSculk Tentacles&r, &ePocket Dimension&r)."
+      ],
+      "icon": "irons_spellbooks:eldritch_manuscript",
+      "x": 25.25,
+      "y": 1.5,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:eldritch_manuscript"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_3"},
+        {"type": "xp", "xp": 600},
+        {"type": "skill_xp", "category": "violet", "amount": 400}
+      ]
+    },
+    {
+      "key": "cultist_base",
+      "title": "The Cult of the Ascended",
+      "desc": [
+        "Robed figures pray to something that answered.",
+        "",
+        "Find and enter the &eCultist Base&r (Discerning the Eldritch)."
+      ],
+      "icon": "discerning_the_eldritch:eldritch_rune",
+      "x": 26.75,
+      "y": 1.5,
+      "deps": ["eldritch"],
+      "tasks": [
+        {"type": "structure", "structure": "discerning_the_eldritch:cultist_base"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "violet", "amount": 300}
+      ]
+    },
+    {
+      "key": "ascended",
+      "title": "The Ascended One",
+      "desc": [
+        "Their god walks. It wears a human shape badly.",
+        "",
+        "Defeat the &eAscended One&r (Discerning the Eldritch) at the heart of the cult. One of the hardest void fights in the pack: bring the party."
+      ],
+      "icon": "discerning_the_eldritch:ascended_key",
+      "x": 28.25,
+      "y": 1.5,
+      "shape": "hexagon",
+      "size": 1.4,
+      "deps": ["cultist_base"],
+      "tasks": [
+        {"type": "kill", "entity": "discerning_the_eldritch:ascended_one"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 10},
+        {"type": "xp", "xp": 1200},
+        {"type": "skill_xp", "category": "violet", "amount": 700}
+      ]
+    },
+    {
+      "key": "signet",
+      "title": "Signet of the Betrayer",
+      "desc": [
+        "A ring that once belonged to someone who sold out the stars.",
+        "",
+        "Obtain the &eSignet of the Betrayer&r (Iron's Spells, see JEI)."
+      ],
+      "icon": "irons_spellbooks:betrayer_signet",
+      "x": 29.75,
+      "y": 1.5,
+      "deps": ["ascended"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:betrayer_signet"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 700},
+        {"type": "skill_xp", "category": "violet", "amount": 450}
+      ]
+    },
+    {
+      "key": "void_blades",
+      "title": "Blades of the Void",
+      "desc": [
+        "Every assassin dreams of a blade like this.",
+        "",
+        "Optional: find a void-touched &eSimply Swords&r unique (dungeon and boss loot)."
+      ],
+      "icon": "simplyswords:shadowsting",
+      "x": 26.75,
+      "y": 3,
+      "deps": ["ring"],
+      "optional": true,
+      "tasks": [
+        {"type": "item", "item": "simplyswords:shadowsting", "optional": true},
+        {"type": "item", "item": "simplyswords:soulrender", "optional": true},
+        {"type": "item", "item": "simplyswords:soulstealer", "optional": true},
+        {"type": "item", "item": "simplyswords:wraithfang", "optional": true},
+        {"type": "item", "item": "simplyswords:twisted_blade", "optional": true},
+        {"type": "item", "item": "simplyswords:riftmane", "optional": true},
+        {"type": "item", "item": "simplyswords:enigma", "optional": true},
+        {"type": "item", "item": "simplyswords:whisperwind", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 400},
+        {"type": "skill_xp", "category": "violet", "amount": 300}
+      ]
+    },
+    {
+      "key": "mythic",
+      "title": "Mythic Shadow",
+      "subtitle": "Extreme gear",
+      "desc": [
+        "One cut. That's all it ever takes.",
+        "",
+        "Unlock the &ePinnacle&r world tier (Apotheosis: a full Epic affix set and the Ender Dragon slain; CTRL+T switches tiers) and wield &6Mythic&r daggers with void gems. Tick the checkmark when you do."
+      ],
+      "icon": "apotheosis:sigil_of_supremacy",
+      "x": 31.25,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 1.5,
+      "deps": ["obsidilith", "ender_guardian", "signet", "dragonskin"],
+      "tasks": [
+        {"type": "advancement", "advancement": "apotheosis:progression/pinnacle"},
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 15},
+        {"type": "xp", "xp": 1500},
+        {"type": "skill_xp", "category": "violet", "amount": 1000}
+      ]
+    },
+    {
+      "key": "legend",
+      "title": "&5Legend of the Violet Light",
+      "subtitle": "After the Last Light",
+      "desc": [
+        "When the Devourer fell, nobody saw the blow that opened its armor. That was the point.",
+        "",
+        "Complete the Last Light and the Violet path. They never saw you coming."
+      ],
+      "icon": "createlanterns:violet_power_ring",
+      "x": 36.25,
+      "y": 0,
+      "shape": "gear",
+      "size": 2,
+      "deps": ["mythic", "finale:last_light"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 20},
+        {"type": "xp", "xp": 2000},
+        {"type": "skill_xp", "category": "violet", "amount": 1500}
+      ]
+    }
+  ]
+}

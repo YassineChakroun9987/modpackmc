@@ -1,0 +1,278 @@
+{
+  "id": "guide_create",
+  "title": "&aGears of Progress",
+  "subtitle": "Create from the first water wheel to trains, plus electric power from Crafts & Additions.",
+  "icon": "create:cogwheel",
+  "group": "mods",
+  "order": 11,
+  "quests": [
+    {
+      "key": "ponder",
+      "title": "Ponder Everything",
+      "subtitle": "Create",
+      "desc": [
+        "&eCreate&r builds machines from spinning shafts and gears. Hover any Create item and &ehold W&r to &ePonder&r it: an animated lesson that shows how it works.",
+        "Make a &eWrench&r (rotates blocks; shift-right-click picks up Create blocks) and &eEngineer's Goggles&r (show speed and stress when you look at machines)."
+      ],
+      "icon": "create:goggles",
+      "x": 0, "y": 0,
+      "shape": "hexagon", "size": 1.5,
+      "deps": ["act1:choose_path"],
+      "tasks": [
+        {"type": "item", "item": "create:wrench"},
+        {"type": "item", "item": "create:goggles"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 50}
+      ]
+    },
+    {
+      "key": "water_wheel",
+      "title": "Power From the River",
+      "desc": [
+        "Machines need rotation. A &eWater Wheel&r on a shaft beside flowing water makes it; a windmill bearing with sails makes more.",
+        "Every source has a &estress capacity&r (SU), and every machine uses some. Goggles and a Stressometer show how much you have left."
+      ],
+      "icon": "create:water_wheel",
+      "x": 2.5, "y": -2,
+      "deps": ["ponder"],
+      "tasks": [{"type": "advancement", "advancement": "create:water_wheel"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "millstone",
+      "title": "Grind It Down",
+      "desc": [
+        "A &eMillstone&r grinds what you put in: wheat into flour, ores into crushed ore, flowers into dye.",
+        "Gears change speed: a large cogwheel driving a small one doubles the speed (and the stress)."
+      ],
+      "icon": "create:millstone",
+      "x": 2.5, "y": 0,
+      "deps": ["ponder"],
+      "tasks": [{"type": "advancement", "advancement": "create:millstone"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "crushing_wheels",
+      "title": "Crushing Wheels",
+      "desc": [
+        "Two &eCrushing Wheels&r spinning toward each other crush whatever falls between them, faster than a millstone and with a chance of bonus output.",
+        "Crushed ore smelts into more ingots than raw ore, and often gives Experience Nuggets too."
+      ],
+      "icon": "create:crushing_wheel",
+      "x": 5, "y": 0,
+      "deps": ["millstone"],
+      "tasks": [{"type": "advancement", "advancement": "create:crushing_wheel"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "fan_processing",
+      "title": "Wind Through Fire and Water",
+      "desc": [
+        "An &eEncased Fan&r blowing through something processes items in its path: through &9water&r it washes, through &clava or fire&r it smelts, through a campfire it smokes, through &bsoul fire&r it haunts.",
+        "Washing crushed ore gives extra nuggets. Put the fan beside a belt for a free furnace line."
+      ],
+      "icon": "create:encased_fan",
+      "x": 7.5, "y": 0,
+      "deps": ["crushing_wheels"],
+      "tasks": [{"type": "advancement", "advancement": "create:fan_processing"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "press",
+      "title": "The Mechanical Press",
+      "desc": [
+        "A &eMechanical Press&r over a depot or belt flattens ingots into &esheets&r. Over a basin it compacts things together.",
+        "Iron sheets go into a lot of Create recipes, and into Crafts & Additions parts."
+      ],
+      "icon": "create:mechanical_press",
+      "x": 2.5, "y": 2,
+      "deps": ["ponder"],
+      "tasks": [{"type": "advancement", "advancement": "create:mechanical_press"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "mixer",
+      "title": "The Mechanical Mixer",
+      "desc": [
+        "A &eMechanical Mixer&r above a &eBasin&r mixes ingredients: dough, alloys, liquids.",
+        "Some mixes need heat under the basin. That's the next step."
+      ],
+      "icon": "create:mechanical_mixer",
+      "x": 5, "y": 2,
+      "deps": ["press"],
+      "tasks": [{"type": "advancement", "advancement": "create:mechanical_mixer"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "blaze_burner",
+      "title": "A Blaze in a Cage",
+      "desc": [
+        "Right-click a blaze with an &eEmpty Blaze Burner&r to catch it. Feed it fuel to heat the basin above; a &eBlaze Cake&r makes it superheated for a while.",
+        "Blazes live in Nether fortresses. A Central Power Battery keeps burners lit for free (see the Lanterns chapter)."
+      ],
+      "icon": "create:empty_blaze_burner",
+      "x": 7.5, "y": 2,
+      "deps": ["mixer"],
+      "tasks": [{"type": "advancement", "advancement": "create:burner"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "brass",
+      "title": "Brass",
+      "desc": [
+        "Mix &ecopper&r and &ezinc&r in a heated basin to make &eBrass&r, Create's second-tier metal. Brass casing makes the smarter machines (brass funnels, tunnels, arms, crafters).",
+        "Yellow Stormwrights: brass is your bread and butter."
+      ],
+      "icon": "create:brass_ingot",
+      "x": 10, "y": 2,
+      "deps": ["blaze_burner"],
+      "tasks": [{"type": "advancement", "advancement": "create:brass"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "precision_mechanism",
+      "title": "Precision Mechanism",
+      "desc": [
+        "A &ePrecision Mechanism&r is made by &esequenced assembly&r: a gold sheet passes under deployers and a press several times on a belt. Some come out as scrap, so make a few.",
+        "Many advanced machines need them, and so does the Lantern &ePower Core&r."
+      ],
+      "icon": "create:precision_mechanism",
+      "x": 12.5, "y": 2,
+      "deps": ["brass", "mechanical_arm"],
+      "dep_mode": "one",
+      "tasks": [{"type": "advancement", "advancement": "create:precision_mechanism"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "belt",
+      "title": "Belts and Funnels",
+      "desc": [
+        "Use a &eMechanical Belt&r on two shafts to link them with a conveyor. Funnels put items on and take them off; chutes drop them down.",
+        "A belt through a fan, under a press, past a saw: that's a factory line."
+      ],
+      "icon": "create:belt_connector",
+      "x": 2.5, "y": 4,
+      "deps": ["ponder"],
+      "tasks": [{"type": "advancement", "advancement": "create:belt"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "mechanical_arm",
+      "title": "The Mechanical Arm",
+      "desc": [
+        "A &eMechanical Arm&r picks items up from one place and puts them somewhere else: depots, belts, chests, machines, even Blaze Burners.",
+        "Click the input and output blocks with the arm in hand before you place it."
+      ],
+      "icon": "create:mechanical_arm",
+      "x": 5, "y": 4,
+      "deps": ["belt"],
+      "tasks": [{"type": "advancement", "advancement": "create:mechanical_arm"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "steam_engine",
+      "title": "Steam Power",
+      "desc": [
+        "Fill a block of &eFluid Tanks&r with water (a mechanical pump), heat it with Blaze Burners underneath, and put a &eSteam Engine&r on its side. It makes far more stress than any wheel.",
+        "Bigger boilers and more burners mean more engines. Ponder the Steam Engine for the full rules."
+      ],
+      "icon": "create:steam_engine",
+      "x": 10, "y": -2,
+      "deps": ["blaze_burner", "water_wheel"],
+      "tasks": [{"type": "advancement", "advancement": "create:steam_engine"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "train",
+      "title": "All Aboard",
+      "desc": [
+        "Lay &eTrain Track&r, place a &eTrain Station&r, build a train on bogeys with &eTrain Casing&r and &eControls&r, then assemble it at the station.",
+        "Give it a &eSchedule&r and it runs on its own. A rail line between bases is a great party project."
+      ],
+      "icon": "create:track_station",
+      "x": 10, "y": 4,
+      "deps": ["mechanical_arm", "brass"],
+      "tasks": [{"type": "advancement", "advancement": "create:train"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 100}
+      ]
+    },
+    {
+      "key": "alternator",
+      "title": "From Rotation to Power",
+      "subtitle": "Create Crafts & Additions",
+      "desc": [
+        "&eCrafts & Additions&r links Create to electricity (FE). An &eAlternator&r on a fast, strong shaft turns rotation into energy.",
+        "FE powers Mekanism machines and AE2 networks. Put a steam engine on an alternator and you have a power plant."
+      ],
+      "icon": "createaddition:alternator",
+      "x": 5, "y": 6,
+      "deps": ["press"],
+      "tasks": [{"type": "item", "item": "createaddition:alternator"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "wires",
+      "title": "Power Lines",
+      "desc": [
+        "A &eRolling Mill&r makes rods and wire. Wind &eCopper Wire&r onto a spool, then click two &eConnectors&r with it to string a power line between them.",
+        "Large Connectors carry more over longer distances. Run lines from your power plant to every machine."
+      ],
+      "icon": "createaddition:copper_spool",
+      "x": 7.5, "y": 6,
+      "deps": ["alternator"],
+      "tasks": [
+        {"type": "item", "item": "createaddition:copper_spool"},
+        {"type": "item", "item": "createaddition:connector", "count": 2}
+      ],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "accumulator",
+      "title": "Store the Spark",
+      "desc": [
+        "A &eModular Accumulator&r stores energy; stack several into one big battery. A &eTesla Coil&r charges items placed under it.",
+        "Store power by day so night-time machines keep running."
+      ],
+      "icon": "createaddition:modular_accumulator",
+      "x": 10, "y": 6,
+      "deps": ["wires"],
+      "tasks": [{"type": "item", "item": "createaddition:modular_accumulator"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "electric_motor",
+      "title": "The Electric Motor",
+      "desc": [
+        "An &eElectric Motor&r does the reverse: it turns FE back into rotation, at a speed you set. Power a contraption anywhere a wire can reach.",
+        "With alternators, wires, accumulators and motors, your factory has no limits but your imagination (and your stress budget)."
+      ],
+      "icon": "createaddition:electric_motor",
+      "x": 12.5, "y": 6,
+      "deps": ["accumulator", "brass"],
+      "tasks": [{"type": "item", "item": "createaddition:electric_motor"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "factory",
+      "title": "The Clockwork Factory",
+      "desc": [
+        "Steam, brass, precision, trains and electricity: you've mastered Create. The Stormwright's machines hum with your light.",
+        "Next: take it to the sky with Create Aeronautics."
+      ],
+      "icon": "create:brass_casing",
+      "x": 15, "y": 2,
+      "shape": "octagon", "size": 1.5,
+      "deps": ["precision_mechanism", "train", "steam_engine", "electric_motor"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 150},
+        {"type": "xp", "xp": 300}
+      ]
+    }
+  ]
+}

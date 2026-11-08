@@ -1,0 +1,304 @@
+{
+  "id": "guide_dragons",
+  "title": "&aHere Be Dragons",
+  "subtitle": "Ice and Fire's dragons and myths, and the dragons of Berk you can bond with.",
+  "icon": "iceandfire:dragonegg_red",
+  "group": "mods",
+  "order": 8,
+  "quests": [
+    {
+      "key": "bestiary",
+      "title": "The Bestiary",
+      "subtitle": "Ice and Fire",
+      "desc": [
+        "&eIce and Fire&r fills the world with myths: fire, ice and lightning dragons, hippogryphs, cyclopes, gorgons, sirens, trolls, sea serpents, the Hydra.",
+        "Craft the &eBestiary&r (see JEI). Its pages fill in as you find manuscripts, and it explains how to fight, tame or hatch each creature."
+      ],
+      "icon": "iceandfire:bestiary",
+      "x": 0, "y": 0,
+      "shape": "hexagon", "size": 1.5,
+      "deps": ["act1:choose_path"],
+      "tasks": [{"type": "item", "item": "iceandfire:bestiary"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 50}
+      ]
+    },
+    {
+      "key": "roost",
+      "title": "Scorched Earth",
+      "desc": [
+        "Dragons grow in five &estages&r, from hatchling to ancient. Wild adults live in &eroosts&r on the surface (burnt or frozen land, piles of gold) or in deep caves full of treasure.",
+        "Find a fire dragon roost and look, from a distance. If the dragon is asleep, leave it that way for now."
+      ],
+      "icon": "minecraft:gold_block",
+      "x": 2.5, "y": 0,
+      "deps": ["bestiary"],
+      "tasks": [{"type": "structure", "structure": "iceandfire:fire_dragon_roost"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "slay",
+      "title": "Dragonslayer",
+      "desc": [
+        "Slay a dragon. Never alone: one player draws its breath while the others shoot. Fire resistance potions help a lot against fire dragons.",
+        "Dragons are flying bosses. Fight in the open where you can see them coming, and bring lots of arrows."
+      ],
+      "icon": "iceandfire:dragon_skull_fire",
+      "x": 5, "y": 0,
+      "shape": "diamond", "size": 1.25,
+      "deps": ["roost"],
+      "tasks": [{"type": "advancement", "advancement": "iceandfire:iceandfire/kill_if_dragon"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 150}
+      ]
+    },
+    {
+      "key": "dragonbone",
+      "title": "Bone, Blood and Scale",
+      "desc": [
+        "A dead dragon is a treasure chest: &escales&r for armour, &ebones&r for tools and weapons, &eblood&r and a &eheart&r.",
+        "Make a dragonbone tool. Then bathe a dragonbone sword in dragon blood for a Flamed, Iced or Lightning blade."
+      ],
+      "icon": "iceandfire:dragonbone",
+      "x": 7.5, "y": 0,
+      "deps": ["slay"],
+      "tasks": [{"type": "advancement", "advancement": "iceandfire:iceandfire/dragonbone_tool"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "dragonforge",
+      "title": "The Dragonforge",
+      "desc": [
+        "A &eDragonforge&r is a 3x3x3 shell of Dragonforge Bricks with a core in the centre and an aperture in the wall. A dragon's breath into the aperture is what heats it.",
+        "Use your own tamed dragon (or a captured one). Build the core."
+      ],
+      "icon": "iceandfire:dragonforge_fire_core",
+      "x": 10, "y": 0,
+      "deps": ["dragonbone", "dragon_staff"],
+      "dep_mode": "one",
+      "tasks": [{"type": "advancement", "advancement": "iceandfire:iceandfire/dragon_forge_core"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "dragonsteel",
+      "title": "Dragonsteel",
+      "desc": [
+        "Put iron and dragon blood into a burning Dragonforge and it makes &eDragonsteel&r: the best armour and weapons Ice and Fire offers.",
+        "Fire, ice and lightning dragonsteel each burn, freeze or shock what you hit."
+      ],
+      "icon": "iceandfire:dragonsteel_fire_ingot",
+      "x": 12.5, "y": 0,
+      "shape": "octagon", "size": 1.5,
+      "deps": ["dragonforge"],
+      "tasks": [{"type": "advancement", "advancement": "iceandfire:iceandfire/dragonsteel"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 200}
+      ]
+    },
+    {
+      "key": "dragon_egg",
+      "title": "A Dragon of Your Own",
+      "desc": [
+        "Roosts and caves often hold &edragon eggs&r. Take one while the parent is away (or dead).",
+        "Fire eggs hatch in fire, ice eggs in water, lightning eggs under a stormy sky. The Bestiary has the details."
+      ],
+      "icon": "iceandfire:dragonegg_red",
+      "x": 5, "y": -2,
+      "deps": ["roost"],
+      "tasks": [{"type": "advancement", "advancement": "iceandfire:iceandfire/dragon_egg"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "dragon_staff",
+      "title": "Raising a Dragon",
+      "desc": [
+        "Feed your hatchling meat and it grows, stage by stage, over many days. Once it's big enough you can ride it.",
+        "The &eDragon Command Staff&r tells it to sit, follow or wander. A &eDragon Horn&r carries it in your pocket."
+      ],
+      "icon": "iceandfire:dragon_stick",
+      "x": 7.5, "y": -2,
+      "deps": ["dragon_egg"],
+      "tasks": [{"type": "advancement", "advancement": "iceandfire:iceandfire/dragon_staff"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "dragon_armor",
+      "title": "Armour for a Dragon",
+      "desc": [
+        "Your dragon can wear armour too: head, neck, body and tail pieces in iron, gold, diamond, netherite, silver or dragonsteel.",
+        "Armour it before you take it into a boss fight."
+      ],
+      "icon": "iceandfire:dragonarmor_iron_head",
+      "x": 10, "y": -2,
+      "deps": ["dragon_staff"],
+      "tasks": [{"type": "advancement", "advancement": "iceandfire:iceandfire/dragonarmor"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "hippogryph",
+      "title": "Wings of the Griffon",
+      "desc": [
+        "&eHippogryphs&r (half eagle, half horse) live in the hills and mountains. Tame one and you have a flying mount long before you have a dragon.",
+        "Lightwardens: the white hippogryph is your path's steed."
+      ],
+      "icon": "iceandfire:hippogryph_talon",
+      "x": 2.5, "y": 2,
+      "deps": ["bestiary"],
+      "tasks": [{"type": "advancement", "advancement": "iceandfire:iceandfire/tame_hippogryph"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 50}
+      ]
+    },
+    {
+      "key": "troll",
+      "title": "Troll Hunt",
+      "desc": [
+        "&eTrolls&r (forest, frost and mountain) live underground and turn to stone in sunlight. Lure one out at dawn, or fight it in its cave.",
+        "Their leather makes troll armour; their weapons are tree trunks and stone columns."
+      ],
+      "icon": "iceandfire:troll_tusk",
+      "x": 5, "y": 2,
+      "shape": "diamond",
+      "deps": ["hippogryph"],
+      "tasks": [{"type": "advancement", "advancement": "iceandfire:iceandfire/kill_troll"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "cyclops",
+      "title": "The One-Eyed Giant",
+      "desc": [
+        "A &eCyclops&r guards its sheep in a cave by the hills. It grabs players and eats them. Don't get grabbed.",
+        "Keep your distance and hit it from range."
+      ],
+      "icon": "iceandfire:cyclops_eye",
+      "x": 7.5, "y": 2,
+      "shape": "diamond",
+      "deps": ["troll"],
+      "tasks": [{"type": "advancement", "advancement": "iceandfire:iceandfire/kill_cyclops"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "gorgon",
+      "title": "Don't Look",
+      "desc": [
+        "The &eGorgon&r waits in a temple by the sea. Meet her gaze and you turn to stone. Fight with your eyes turned away from her.",
+        "Her head, once taken, turns others to stone instead."
+      ],
+      "icon": "iceandfire:gorgon_head",
+      "x": 10, "y": 2,
+      "shape": "diamond",
+      "deps": ["cyclops"],
+      "tasks": [{"type": "advancement", "advancement": "iceandfire:iceandfire/gorgon_head"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "sea_serpent",
+      "title": "The Sea Serpent",
+      "desc": [
+        "Far out at sea, &eSea Serpents&r hunt in the deep ocean. Their scales make Tide Guardian armour, the best for underwater fighting.",
+        "The &eHydra&r in its swamp cave is a myth of its own: the Wildheart's trial."
+      ],
+      "icon": "iceandfire:sea_serpent_fang",
+      "x": 12.5, "y": 2,
+      "shape": "diamond",
+      "deps": ["gorgon"],
+      "optional": true,
+      "tasks": [{"type": "advancement", "advancement": "iceandfire:iceandfire/kill_sea_serpent"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "book_of_dragons",
+      "title": "The Book of Dragons",
+      "subtitle": "Book of Dragons",
+      "desc": [
+        "Other dragons fly here too: Gronckles, Deadly Nadders, Monstrous Nightmares, Skrills, Whispering Deaths, and the Night Fury. These ones can be &ebefriended&r.",
+        "Find a &eHooligan&r (a travelling Viking) and trade with them for the &eBook of Dragons&r. It records what you learn about each species."
+      ],
+      "icon": "bookofdragons:book_of_dragons",
+      "x": 2.5, "y": 4.5,
+      "deps": ["bestiary"],
+      "tasks": [{"type": "advancement", "advancement": "bookofdragons:root"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "bod_roost",
+      "title": "Find a Roost",
+      "desc": [
+        "Book of Dragons species live in &eroosts&r: barren, cave, cliff, glade and wetland. Roost maps point the way to them.",
+        "Find a roost and step inside. Quietly."
+      ],
+      "icon": "bookofdragons:glade_roost_map",
+      "x": 5, "y": 4.5,
+      "deps": ["book_of_dragons"],
+      "tasks": [{"type": "advancement", "advancement": "bookofdragons:roost_discoverer"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "bod_trust",
+      "title": "Earning Trust",
+      "desc": [
+        "Bonding starts slowly. Watch a wild dragon: it will show you what it wants. Give a wild dragon what it asks for.",
+        "Patience, not swords. Write what you learn in the Book of Dragons."
+      ],
+      "icon": "minecraft:cod",
+      "x": 7.5, "y": 4.5,
+      "deps": ["bod_roost"],
+      "tasks": [{"type": "advancement", "advancement": "bookofdragons:sworn_you_had_teeth"}],
+      "rewards": [{"type": "xp", "xp": 150}]
+    },
+    {
+      "key": "bod_tame",
+      "title": "Hold On Tight",
+      "desc": [
+        "Once it trusts you, climb on. A wild dragon bucks: hold on until it calms down, and it's yours.",
+        "Bind it to a &eRattlestaff&r or &eDragon Whistle&r to call and command it."
+      ],
+      "icon": "bookofdragons:dragon_whistle",
+      "x": 10, "y": 4.5,
+      "deps": ["bod_trust"],
+      "tasks": [{"type": "advancement", "advancement": "bookofdragons:dragon_tamer"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 100}
+      ]
+    },
+    {
+      "key": "bod_bond",
+      "title": "A True Bond",
+      "desc": [
+        "Keep flying with your dragon, feeding it and fighting beside it, and the two of you bond.",
+        "A bonded dragon is a partner, not a pet. Wildhearts know the difference."
+      ],
+      "icon": "bookofdragons:nightfury_scales",
+      "x": 12.5, "y": 4.5,
+      "deps": ["bod_tame"],
+      "tasks": [{"type": "advancement", "advancement": "bookofdragons:true_bond"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 150}
+      ]
+    },
+    {
+      "key": "night_fury",
+      "title": "The Unholy Offspring of Lightning and Death",
+      "desc": [
+        "The &eNight Fury&r is the rarest and fastest of them all. Few have seen one; fewer have tamed one.",
+        "Optional, and a long hunt."
+      ],
+      "icon": "bookofdragons:fury_plush",
+      "x": 15, "y": 4.5,
+      "shape": "octagon", "size": 1.25,
+      "deps": ["bod_bond"],
+      "optional": true,
+      "tasks": [{"type": "advancement", "advancement": "bookofdragons:lightning_and_death"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 200}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "id": "guide_mekanism",
+  "title": "&aThe Machine Age",
+  "subtitle": "Mekanism: power, steel, ore that multiplies, and the MekaSuit.",
+  "icon": "mekanism:steel_casing",
+  "group": "mods",
+  "order": 13,
+  "quests": [
+    {
+      "key": "osmium",
+      "title": "Osmium",
+      "subtitle": "Mekanism",
+      "desc": [
+        "&eMekanism&r is industry: machines that process ore, chemicals and energy. Almost all of them start with &eosmium&r.",
+        "Smelt some osmium ingots. JEI (press &eU&r on an item) shows every machine that uses it."
+      ],
+      "icon": "mekanism:ingot_osmium",
+      "x": 0, "y": 0,
+      "shape": "hexagon", "size": 1.5,
+      "deps": ["act1:choose_path"],
+      "tasks": [{"type": "item", "item": "mekanism:ingot_osmium", "count": 16}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 50}
+      ]
+    },
+    {
+      "key": "metallurgic_infuser",
+      "title": "The Metallurgic Infuser",
+      "desc": [
+        "Your first machine. The &eMetallurgic Infuser&r soaks metal in an infusion type: iron with carbon (coal) becomes Enriched Iron and then &esteel&r, copper with redstone becomes &eInfused Alloy&r.",
+        "Steel is the backbone of every other Mekanism machine."
+      ],
+      "icon": "mekanism:metallurgic_infuser",
+      "x": 2.5, "y": 0,
+      "deps": ["osmium"],
+      "tasks": [{"type": "advancement", "advancement": "mekanism:metallurgic_infuser"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "steel_casing",
+      "title": "Steel Casing",
+      "desc": [
+        "Steel, osmium and glass make a &eSteel Casing&r: the frame of almost every Mekanism machine.",
+        "Make a few. You'll need them for everything from here on."
+      ],
+      "icon": "mekanism:steel_casing",
+      "x": 5, "y": 0,
+      "deps": ["metallurgic_infuser"],
+      "tasks": [{"type": "advancement", "advancement": "mekanism:steel_casing"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "power",
+      "title": "Power Up",
+      "subtitle": "Mekanism Generators",
+      "desc": [
+        "Mekanism machines run on energy (they take FE too). A &eHeat Generator&r burns lava or fuel; solar and wind generators make free power; a Create alternator works as well.",
+        "Build a Heat Generator to start."
+      ],
+      "icon": "mekanismgenerators:heat_generator",
+      "x": 2.5, "y": -2,
+      "deps": ["osmium"],
+      "tasks": [{"type": "advancement", "advancement": "mekanismgenerators:heat_generator"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "energy_cube",
+      "title": "Cables and Cubes",
+      "desc": [
+        "&eUniversal Cables&r carry power; an &eEnergy Cube&r stores it. Use a &eConfigurator&r on a machine to set which side takes power, items or chemicals in and out (each side shows a colour).",
+        "Build an Energy Cube and wire your generator to it."
+      ],
+      "icon": "mekanism:basic_energy_cube",
+      "x": 5, "y": -2,
+      "deps": ["power", "steel_casing"],
+      "tasks": [{"type": "advancement", "advancement": "mekanism:energy_cube"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "enrichment",
+      "title": "Two for One",
+      "subtitle": "Ore processing, tier 1",
+      "desc": [
+        "Mekanism multiplies ore. An &eEnrichment Chamber&r turns one ore into &etwo&r dusts; smelt them for two ingots.",
+        "Every later tier builds on the one before, so keep this machine."
+      ],
+      "icon": "mekanism:enrichment_chamber",
+      "x": 2.5, "y": 2,
+      "deps": ["steel_casing"],
+      "tasks": [{"type": "advancement", "advancement": "mekanism:enricher"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "purification",
+      "title": "Three for One",
+      "desc": [
+        "A &ePurification Chamber&r fed with &eoxygen&r turns ore into three clumps. Crush them, enrich them, smelt them.",
+        "Get oxygen (and hydrogen) by splitting water in an &eElectrolytic Separator&r."
+      ],
+      "icon": "mekanism:purification_chamber",
+      "x": 5, "y": 2,
+      "deps": ["enrichment"],
+      "tasks": [{"type": "advancement", "advancement": "mekanism:purification_chamber"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "injection",
+      "title": "Four for One",
+      "desc": [
+        "A &eChemical Injection Chamber&r fed with &ehydrogen chloride&r turns ore into four shards, which go down the purification line.",
+        "Hydrogen chloride comes from hydrogen and chlorine (from salt water) in a Chemical Infuser."
+      ],
+      "icon": "mekanism:chemical_injection_chamber",
+      "x": 7.5, "y": 2,
+      "deps": ["purification"],
+      "tasks": [{"type": "advancement", "advancement": "mekanism:injection_chamber"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "crystallizer",
+      "title": "Five for One",
+      "desc": [
+        "The top tier: dissolve ore in sulfuric acid (&eChemical Dissolution Chamber&r), clean the slurry (&eChemical Washer&r), and grow crystals (&eChemical Crystallizer&r). Five ingots per ore.",
+        "A big build, but it pays back every ore you ever mine. Orange Hoardwardens approve."
+      ],
+      "icon": "mekanism:chemical_crystallizer",
+      "x": 10, "y": 2,
+      "deps": ["injection"],
+      "tasks": [{"type": "advancement", "advancement": "mekanism:chemical_crystallizer"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 100}
+      ]
+    },
+    {
+      "key": "factory",
+      "title": "Factories",
+      "desc": [
+        "Right-click a machine with a &eTier Installer&r and it becomes a &eFactory&r that works on several items at once (three, five, seven, nine as you upgrade).",
+        "Speed and Energy Upgrades in its upgrade slot make it faster or cheaper."
+      ],
+      "icon": "mekanism:basic_tier_installer",
+      "x": 7.5, "y": 0,
+      "deps": ["steel_casing"],
+      "tasks": [{"type": "advancement", "advancement": "mekanism:factory"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "digital_miner",
+      "title": "The Digital Miner",
+      "desc": [
+        "The &eDigital Miner&r mines a huge area underground for you, picking only the blocks you filter for (ores, say) and leaving the rest.",
+        "It needs a lot of power. Put it in a forceloaded, claimed chunk and it keeps mining while you're off adventuring."
+      ],
+      "icon": "mekanism:digital_miner",
+      "x": 10, "y": 0,
+      "deps": ["factory", "energy_cube"],
+      "tasks": [{"type": "advancement", "advancement": "mekanism:digital_miner"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "jetpack",
+      "title": "Hydrogen Flight",
+      "desc": [
+        "A &eJetpack&r burns hydrogen to fly. Fill it from a chemical tank fed by your Electrolytic Separator.",
+        "Hold jump to rise. Good for scouting and for reaching floating islands before you have an airship or a ring."
+      ],
+      "icon": "mekanism:jetpack",
+      "x": 7.5, "y": -2,
+      "deps": ["energy_cube"],
+      "tasks": [{"type": "item", "item": "mekanism:jetpack"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "alloys",
+      "title": "The Alloy Ladder",
+      "desc": [
+        "Infused Alloy (copper and redstone), then &eReinforced Alloy&r (with diamond), then &eAtomic Alloy&r (with refined obsidian). Each tier of machine and circuit needs the next alloy.",
+        "Make Atomic Alloy."
+      ],
+      "icon": "mekanism:alloy_atomic",
+      "x": 5, "y": -4,
+      "deps": ["energy_cube"],
+      "tasks": [{"type": "advancement", "advancement": "mekanism:atomic_alloy"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "ultimate_circuit",
+      "title": "Ultimate Control Circuit",
+      "desc": [
+        "Circuits follow the alloys: Basic, Advanced, Elite, &eUltimate&r. Ultimate circuits go into the best machines and the MekaSuit.",
+        "Make one."
+      ],
+      "icon": "mekanism:ultimate_control_circuit",
+      "x": 7.5, "y": -4,
+      "deps": ["alloys"],
+      "tasks": [{"type": "advancement", "advancement": "mekanism:ultimate_control_circuit"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "polonium",
+      "title": "Polonium",
+      "desc": [
+        "The MekaSuit needs &epolonium&r. A &eFission Reactor&r makes nuclear waste; a &eSolar Neutron Activator&r turns it into polonium.",
+        "&cRadiation is real here.&r Wear a Hazmat suit, carry a Dosimeter, and never break a tank of waste. Build it far from home."
+      ],
+      "icon": "mekanism:pellet_polonium",
+      "x": 10, "y": -4,
+      "deps": ["ultimate_circuit"],
+      "tasks": [{"type": "advancement", "advancement": "mekanism:polonium"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "modification_station",
+      "title": "The Modification Station",
+      "desc": [
+        "MekaSuit pieces and the Meka-Tool take &emodules&r (jetpack, nutrition, vision, speed, shields...). You install them at the &eModification Station&r.",
+        "Build one."
+      ],
+      "icon": "mekanism:modification_station",
+      "x": 12.5, "y": -2,
+      "deps": ["ultimate_circuit", "digital_miner"],
+      "tasks": [{"type": "advancement", "advancement": "mekanism:modification_station"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "mekasuit",
+      "title": "The MekaSuit",
+      "desc": [
+        "The &eMekaSuit&r: powered armour that absorbs huge damage, flies with its jetpack unit, feeds you, filters the air and more, all from its battery.",
+        "Its parts need HDPE, ultimate circuits and polonium. The Stormwright's late-game armour, and a fine one for anyone."
+      ],
+      "icon": "mekanism:mekasuit_helmet",
+      "x": 12.5, "y": 0.5,
+      "shape": "octagon", "size": 1.75,
+      "deps": ["polonium", "modification_station", "crystallizer"],
+      "tasks": [{"type": "advancement", "advancement": "mekanism:mekasuit"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 250},
+        {"type": "xp", "xp": 500}
+      ]
+    },
+    {
+      "key": "upgraded_mekasuit",
+      "title": "Fully Loaded",
+      "desc": [
+        "Fill your MekaSuit with modules until it can't take any more.",
+        "Optional. The corruption has never met anything like you."
+      ],
+      "icon": "mekanism:mekasuit_bodyarmor",
+      "x": 15, "y": 0.5,
+      "deps": ["mekasuit"],
+      "optional": true,
+      "tasks": [{"type": "advancement", "advancement": "mekanism:upgraded_mekasuit"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_4"}]
+    }
+  ]
+}

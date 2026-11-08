@@ -1,0 +1,195 @@
+{
+  "id": "guide_farming",
+  "title": "&aHearth and Harvest",
+  "subtitle": "Farmer's Delight: crops, the cooking pot and feasts for the party.",
+  "icon": "farmersdelight:cooking_pot",
+  "group": "mods",
+  "order": 4,
+  "quests": [
+    {
+      "key": "wild_crops",
+      "title": "Crops of the Wild",
+      "desc": [
+        "&eFarmer's Delight&r adds four crops: &acabbage&r, &ctomato&r, &6onion&r and &frice&r. They grow wild across many biomes (fields, beaches, swamps, riverbanks).",
+        "Break the wild plants for seeds, or check village chests."
+      ],
+      "icon": "farmersdelight:cabbage",
+      "x": 0, "y": 0,
+      "shape": "hexagon", "size": 1.5,
+      "deps": ["prologue:tools"],
+      "tasks": [{"type": "advancement", "advancement": "farmersdelight:main/get_fd_seed"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 50}
+      ]
+    },
+    {
+      "key": "knife",
+      "title": "A Cook's Knife",
+      "desc": [
+        "Knives are the cook's tool. Kill animals with one for extra cuts (ham, bacon), and use it on tall grass to gather &eStraw&r.",
+        "Start with flint; upgrade to iron, gold, diamond or netherite later."
+      ],
+      "icon": "farmersdelight:flint_knife",
+      "x": 2, "y": -2,
+      "deps": ["wild_crops"],
+      "tasks": [{"type": "item", "item": "farmersdelight:flint_knife"}],
+      "rewards": [{"type": "item", "item": "farmersdelight:rope", "count": 16}]
+    },
+    {
+      "key": "cutting_board",
+      "title": "The Cutting Board",
+      "desc": [
+        "Place an ingredient on a &eCutting Board&r and right-click it with a knife to slice it: cabbage leaves, raw pasta, sliced meat. Other tools work too: an axe strips logs, a pickaxe breaks bricks.",
+        "Many pot recipes need ingredients cut first, so keep the board next to your stove."
+      ],
+      "icon": "farmersdelight:cutting_board",
+      "x": 4, "y": -2,
+      "deps": ["knife"],
+      "tasks": [{"type": "advancement", "advancement": "farmersdelight:main/use_cutting_board"}],
+      "rewards": [{"type": "xp", "xp": 75}]
+    },
+    {
+      "key": "skillet",
+      "title": "The Skillet",
+      "desc": [
+        "Put a &eSkillet&r on a campfire or stove and right-click raw food onto it to cook it quickly.",
+        "It's also a heavy, clanging weapon in a pinch."
+      ],
+      "icon": "farmersdelight:skillet",
+      "x": 6, "y": -2,
+      "deps": ["cutting_board"],
+      "tasks": [{"type": "item", "item": "farmersdelight:skillet"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "first_stew",
+      "title": "Soup's On",
+      "subtitle": "The Cooking Pot",
+      "desc": [
+        "The &eCooking Pot&r is the heart of the kitchen. Set it over heat (campfire, fire, magma or a Stove), put in up to six ingredients and a bowl, and it cooks a meal.",
+        "Cook a &eBeef Stew&r. JEI (press &eU&r on the pot) lists every pot recipe."
+      ],
+      "icon": "farmersdelight:beef_stew",
+      "x": 2.5, "y": 0,
+      "deps": ["wild_crops"],
+      "tasks": [{"type": "item", "item": "farmersdelight:beef_stew"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "stove",
+      "title": "A Proper Kitchen",
+      "desc": [
+        "A &eStove&r is a tidy heat source: put the pot or skillet on top, or cook six things at once on its own surface.",
+        "Build a kitchen near your base's waystone. Your party will thank you before every boss."
+      ],
+      "icon": "farmersdelight:stove",
+      "x": 5, "y": 0,
+      "deps": ["first_stew"],
+      "tasks": [{"type": "item", "item": "farmersdelight:stove"}],
+      "rewards": [{"type": "xp", "xp": 75}]
+    },
+    {
+      "key": "nourishing",
+      "title": "Nourishment and Comfort",
+      "desc": [
+        "Hearty meals give &eNourishment&r: your food bar stops dropping (except while you heal). Soups and stews give &eComfort&r: you regenerate however hungry you are.",
+        "Eat one before a long dungeon. AppleSkin shows how much each meal restores."
+      ],
+      "icon": "farmersdelight:steak_and_potatoes",
+      "x": 7.5, "y": 0,
+      "deps": ["stove"],
+      "tasks": [{"type": "advancement", "advancement": "farmersdelight:main/eat_nourishing_food"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "feast",
+      "title": "A Feast for the Party",
+      "desc": [
+        "Some meals are too big for one person. &eFeasts&r (Roast Chicken, Stuffed Pumpkin, Honey Glazed Ham, Shepherd's Pie) are placed as blocks.",
+        "Right-click a feast with a bowl to serve a portion. One feast feeds the whole party before a boss fight."
+      ],
+      "icon": "farmersdelight:roast_chicken_block",
+      "x": 10, "y": 0,
+      "deps": ["nourishing"],
+      "tasks": [{"type": "advancement", "advancement": "farmersdelight:main/place_feast"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 150}
+      ]
+    },
+    {
+      "key": "rice",
+      "title": "Rice Paddies",
+      "desc": [
+        "Plant &erice&r in a shallow puddle, one block of water deep. It grows up out of the water and gives rice panicles (and straw).",
+        "Rice is in many good meals: fried rice, cabbage rolls, stuffed pumpkin."
+      ],
+      "icon": "farmersdelight:rice",
+      "x": 2, "y": 2,
+      "deps": ["wild_crops"],
+      "tasks": [{"type": "advancement", "advancement": "farmersdelight:main/plant_rice"}],
+      "rewards": [{"type": "xp", "xp": 75}]
+    },
+    {
+      "key": "rich_soil",
+      "title": "Rich Soil",
+      "desc": [
+        "Craft &eOrganic Compost&r and place it: it slowly decays into &eRich Soil&r. Crops on Rich Soil farmland grow faster.",
+        "Plant a red or brown mushroom on Rich Soil and it becomes a &eMushroom Colony&r you can harvest again and again."
+      ],
+      "icon": "farmersdelight:rich_soil",
+      "x": 4, "y": 2,
+      "deps": ["rice"],
+      "tasks": [{"type": "advancement", "advancement": "farmersdelight:main/get_rich_soil"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "tomato_rope",
+      "title": "Tomatoes on a Rope",
+      "desc": [
+        "Tomato vines climb &eRope&r. Hang rope above a tomato plant and it keeps growing upward, giving more tomatoes from the same spot.",
+        "Optional, but tomato sauce goes into a lot of recipes."
+      ],
+      "icon": "farmersdelight:tomato",
+      "x": 6, "y": 2,
+      "deps": ["rich_soil"],
+      "optional": true,
+      "tasks": [{"type": "advancement", "advancement": "farmersdelight:main/harvest_ropelogged_tomato"}],
+      "rewards": [{"type": "xp", "xp": 75}]
+    },
+    {
+      "key": "harvester",
+      "title": "Let the Machines Farm",
+      "desc": [
+        "A Create &eMechanical Harvester&r on a moving contraption (a piston, bearing or cart) cuts ripe crops and replants them as it passes.",
+        "Add a belt or chute to collect the harvest. See the Create chapter for the basics."
+      ],
+      "icon": "create:mechanical_harvester",
+      "x": 8, "y": 2,
+      "deps": ["rich_soil", "tomato_rope"],
+      "dep_mode": "one",
+      "optional": true,
+      "tasks": [{"type": "item", "item": "create:mechanical_harvester"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "master_chef",
+      "title": "Master Chef",
+      "desc": [
+        "Eat a course of every meal Farmer's Delight can make. It takes every crop, every pot recipe and a few feasts.",
+        "A well-fed party is a party that survives the Blood Moon."
+      ],
+      "icon": "farmersdelight:honey_glazed_ham_block",
+      "x": 12.5, "y": 0,
+      "shape": "octagon", "size": 1.5,
+      "deps": ["feast", "skillet", "rich_soil"],
+      "tasks": [{"type": "advancement", "advancement": "farmersdelight:main/master_chef"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 150},
+        {"type": "xp", "xp": 300}
+      ]
+    }
+  ]
+}

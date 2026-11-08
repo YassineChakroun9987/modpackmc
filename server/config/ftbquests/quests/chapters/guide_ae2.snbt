@@ -1,0 +1,413 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "guide_ae2"
+	group: "4FA3695F5F82A1E1"
+	icon: {
+		id: "ae2:controller"
+	}
+	id: "73C89C47B06F0FAE"
+	images: [ ]
+	order_index: 14
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "ae2:sky_stone_block"
+			}
+			id: "33B51F52054C0302"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					id: "41C8E553433F3016"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "3F66F5C982CE24EE"
+					type: "xp"
+					xp: 50
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "5047343759F0003A"
+				structure: "ae2:meteorite"
+				type: "structure"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "ae2:certus_quartz_crystal"
+			}
+			id: "6A100BE6A6B3CAF1"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "4B4342461DF1962B"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				count: 16L
+				id: "649951FFD3D492C5"
+				item: { count: 1, id: "ae2:certus_quartz_crystal" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["6A100BE6A6B3CAF1"]
+			icon: {
+				id: "ae2:charger"
+			}
+			id: "387D3BB2DCB55035"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "308E7905841EADE9"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "ae2:main/charged_quartz"
+				criterion: ""
+				id: "300B8939E0E9BC92"
+				type: "advancement"
+			}]
+			x: 5.0d
+			y: -2.0d
+		}
+		{
+			icon: {
+				id: "ae2:fluix_crystal"
+			}
+			id: "1B461C01C2B78409"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "3459F7CEF4331875"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "ae2:main/fluix"
+				criterion: ""
+				id: "2DD4C35343017D50"
+				type: "advancement"
+			}]
+			x: 7.5d
+			y: -2.0d
+		}
+		{
+			icon: {
+				id: "ae2:logic_processor_press"
+			}
+			id: "76421A904E7E478D"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "70B6A6B5F15BEF24"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "ae2:main/presses"
+				criterion: ""
+				id: "76FDF8CF5FB5A2BF"
+				type: "advancement"
+			}]
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			dependency_requirement: "one_completed"
+			icon: {
+				id: "ae2:inscriber"
+			}
+			id: "51984DB03224B9F1"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "4AEA3F83A5D61A7B"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "2A2CE5826B0D3F9B"
+				item: { count: 1, id: "ae2:inscriber" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "ae2:calculation_processor"
+			}
+			id: "08F82C31E3FF7828"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "375814F6519B2BD7"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [
+				{
+					id: "4204C1B3A1DEC348"
+					item: { count: 1, id: "ae2:logic_processor" }
+					type: "item"
+				}
+				{
+					id: "33986D74B6BB7ABA"
+					item: { count: 1, id: "ae2:calculation_processor" }
+					type: "item"
+				}
+				{
+					id: "775852BC145F9EAB"
+					item: { count: 1, id: "ae2:engineering_processor" }
+					type: "item"
+				}
+			]
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1B461C01C2B78409"]
+			icon: {
+				id: "ae2:controller"
+			}
+			id: "2959699612EF554F"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "285BBFB2F3D73122"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "ae2:main/controller"
+				criterion: ""
+				id: "486E6920BF832229"
+				type: "advancement"
+			}]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "ae2:item_storage_cell_1k"
+			}
+			id: "4DC2B95E32186D4F"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "4EB2F10403FE0CED"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [
+				{
+					advancement: "ae2:main/storage_cell"
+					criterion: ""
+					id: "4BFACC649ED471F7"
+					type: "advancement"
+				}
+				{
+					id: "2FE7717D9AFB77C4"
+					item: { count: 1, id: "ae2:drive" }
+					type: "item"
+				}
+			]
+			x: 12.5d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "ae2:fluix_glass_cable"
+			}
+			id: "4ABA87F568949DC7"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "0159DCBB5D1502BE"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [
+				{
+					advancement: "ae2:main/glass_cable"
+					criterion: ""
+					id: "669EF64BAB232776"
+					type: "advancement"
+				}
+				{
+					id: "317BD8B017F9D806"
+					item: { count: 1, id: "ae2:network_tool" }
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4ABA87F568949DC7"]
+			icon: {
+				id: "ae2:crafting_terminal"
+			}
+			id: "485A63C848E7FF97"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "7CCB4D428C603EC7"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "ae2:main/crafting_terminal"
+				criterion: ""
+				id: "6262DF1D5883D665"
+				type: "advancement"
+			}]
+			x: 12.5d
+			y: 2.0d
+		}
+		{
+			icon: {
+				id: "ae2:storage_bus"
+			}
+			id: "5EBCB3443C5F2341"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "1528CA22DEABF58F"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "ae2:main/storage_bus"
+				criterion: ""
+				id: "5D0A6351CF5EC061"
+				type: "advancement"
+			}]
+			x: 15.0d
+			y: 2.0d
+		}
+		{
+			icon: {
+				id: "ae2:pattern_encoding_terminal"
+			}
+			id: "647E8E2E39C45C3F"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "1895DE2C1C000BC5"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "ae2:main/pattern_encoding_terminal"
+				criterion: ""
+				id: "36038FCE374C617F"
+				type: "advancement"
+			}]
+			x: 12.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["647E8E2E39C45C3F"]
+			icon: {
+				id: "ae2:crafting_unit"
+			}
+			id: "3736D7249C82ABF0"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "7A013D32BFFC5BFF"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "ae2:main/crafting_cpu"
+				criterion: ""
+				id: "0531100B382A59F7"
+				type: "advancement"
+			}]
+			x: 15.0d
+			y: -2.0d
+		}
+		{
+			icon: {
+				id: "ae2:pattern_provider"
+			}
+			id: "78A4EF0CE1FA80ED"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "075A0805C89D6104"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [
+				{
+					id: "746729EBB0FA0263"
+					item: { count: 1, id: "ae2:pattern_provider" }
+					type: "item"
+				}
+				{
+					id: "6F2760E9CD3F2494"
+					item: { count: 1, id: "ae2:molecular_assembler" }
+					type: "item"
+				}
+			]
+			x: 17.5d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"78A4EF0CE1FA80ED"
+				"5EBCB3443C5F2341"
+			]
+			icon: {
+				id: "ae2:wireless_terminal"
+			}
+			id: "16E161B20D198398"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "01040C56CC5394B2"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 150"
+					id: "05530CD25250AD33"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "18BFFDBA7FF79CED"
+					type: "xp"
+					xp: 300
+				}
+			]
+			shape: "octagon"
+			size: 1.5d
+			tasks: [{
+				id: "7A633D50F309CDF8"
+				type: "checkmark"
+			}]
+			x: 17.5d
+			y: 0.5d
+		}
+	]
+}

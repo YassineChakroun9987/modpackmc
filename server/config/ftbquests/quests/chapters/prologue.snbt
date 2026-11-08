@@ -1,0 +1,799 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "prologue"
+	group: ""
+	icon: {
+		id: "minecraft:goat_horn"
+	}
+	id: "7A48A5C74985F285"
+	images: [ ]
+	order_index: 1
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "ftbquests:book"
+			}
+			id: "79F159C80410A9FF"
+			rewards: [
+				{
+					count: 4
+					id: "62D7757D0F8BD174"
+					item: {
+						count: 1
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+				{
+					id: "09EA9787E2F45A63"
+					type: "xp"
+					xp: 20
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [{
+				id: "35FC762A1368AE9C"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["79F159C80410A9FF"]
+			icon: {
+				id: "minecraft:oak_log"
+			}
+			id: "0A4EBA326C7B6DF0"
+			rewards: [
+				{
+					count: 3
+					id: "126308D63EC6508C"
+					item: {
+						count: 1
+						id: "minecraft:apple"
+					}
+					type: "item"
+				}
+				{
+					id: "6D325CBF3960E17C"
+					type: "xp"
+					xp: 20
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 10"
+					id: "0C4100CDA0DA9DDC"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "45F7653285BCC176"
+					item: { count: 1, id: "minecraft:oak_log" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "701829B39175FA28"
+					item: { count: 1, id: "minecraft:acacia_log" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "40F4619A05B13212"
+					item: { count: 1, id: "minecraft:birch_log" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "2A3B90D53CC6A28C"
+					item: { count: 1, id: "minecraft:spruce_log" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "3DDAEB392457FC75"
+					item: { count: 1, id: "minecraft:dark_oak_log" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "7470F28ABDD26FF9"
+					item: { count: 1, id: "minecraft:jungle_log" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "30BA9AC4A8DF28B9"
+					item: { count: 1, id: "minecraft:cherry_log" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "67D6E5DAAD4EA21C"
+					item: { count: 1, id: "minecraft:mangrove_log" }
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "minecraft:crafting_table"
+			}
+			id: "278BFE6601A6C15F"
+			rewards: [
+				{
+					count: 8
+					id: "73EAB2B3D8904F32"
+					item: {
+						count: 1
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "06B9A3372631E953"
+					type: "xp"
+					xp: 25
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 10"
+					id: "7B84475F1962BC45"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4AA35A68D72BF8CC"
+					item: { count: 1, id: "minecraft:crafting_table" }
+					type: "item"
+				}
+				{
+					id: "28A0FA749C5BB293"
+					item: { count: 1, id: "minecraft:wooden_pickaxe" }
+					type: "item"
+				}
+			]
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "irons_spellbooks:scroll"
+			}
+			id: "41722EC03995F59B"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/scrolls_1"
+					id: "3E3D730C614FF972"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "358C965634C59E53"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 20"
+					id: "1D3B6B3406ED5732"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				id: "61C15C2A8285E1F7"
+				item: { count: 1, id: "irons_spellbooks:scroll" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			icon: {
+				id: "minecraft:bread"
+			}
+			id: "039F43AC620B8F8F"
+			rewards: [
+				{
+					count: 4
+					id: "75F347BCD4790D4B"
+					item: {
+						count: 1
+						id: "minecraft:cooked_beef"
+					}
+					type: "item"
+				}
+				{
+					id: "1CB759500D798837"
+					type: "xp"
+					xp: 25
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 10"
+					id: "0BF28C4116326CED"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 6L
+					id: "50FE0D144DB8FD91"
+					item: { count: 1, id: "minecraft:bread" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					count: 6L
+					id: "1FC9B1A0A1180B08"
+					item: { count: 1, id: "minecraft:cooked_beef" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					count: 6L
+					id: "6AD09F77EF6B1978"
+					item: { count: 1, id: "minecraft:cooked_porkchop" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					count: 6L
+					id: "4C56FA1D0CCC017F"
+					item: { count: 1, id: "minecraft:cooked_mutton" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					count: 6L
+					id: "29298F0337BA6AFB"
+					item: { count: 1, id: "minecraft:cooked_chicken" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					count: 6L
+					id: "2A2472B3DB8A8E8C"
+					item: { count: 1, id: "minecraft:baked_potato" }
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			icon: {
+				id: "minecraft:red_bed"
+			}
+			id: "2AE6C960575D7929"
+			rewards: [
+				{
+					count: 3
+					id: "72A14B3CF4C69B59"
+					item: {
+						count: 1
+						id: "minecraft:white_wool"
+					}
+					type: "item"
+				}
+				{
+					id: "1794D4421ABF6C30"
+					type: "xp"
+					xp: 25
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 10"
+					id: "55A8E5B86068FFD5"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				advancement: "minecraft:adventure/sleep_in_bed"
+				criterion: ""
+				id: "6B5F5F690F9C230D"
+				type: "advancement"
+			}]
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			icon: {
+				id: "minecraft:shield"
+			}
+			id: "0C1EA8A1216376F7"
+			rewards: [
+				{
+					count: 4
+					id: "039DD57C96DEDCF0"
+					item: {
+						count: 1
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "1B9ED85FD0F6A9EA"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 20"
+					id: "4577621784935786"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "16C795492EB5D1F4"
+					item: { count: 1, id: "minecraft:iron_sword" }
+					type: "item"
+				}
+				{
+					id: "529A8ABBA022FC7D"
+					item: { count: 1, id: "minecraft:shield" }
+					type: "item"
+				}
+			]
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0C1EA8A1216376F7"]
+			icon: {
+				id: "minecraft:iron_chestplate"
+			}
+			id: "1BCA73E1CE923FFA"
+			rewards: [
+				{
+					count: 6
+					id: "72509FE70FD29D7D"
+					item: {
+						count: 1
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "75EB5A92930F52FA"
+					type: "xp"
+					xp: 50
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 20"
+					id: "732B7A67D44FD8C2"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				advancement: "minecraft:story/obtain_armor"
+				criterion: ""
+				id: "46498B8101674AE1"
+				type: "advancement"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0C1EA8A1216376F7"]
+			icon: {
+				id: "minecraft:torch"
+			}
+			id: "31BDBA6B4E83C3CB"
+			rewards: [
+				{
+					count: 4
+					id: "2A5283695A4F8B38"
+					item: {
+						count: 1
+						id: "minecraft:lantern"
+					}
+					type: "item"
+				}
+				{
+					id: "17F70682E69887FB"
+					type: "xp"
+					xp: 40
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 15"
+					id: "53A533A4BFF9C710"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				count: 32L
+				id: "1D6EB40AEA3D77A9"
+				item: { count: 1, id: "minecraft:torch" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["2AE6C960575D7929"]
+			icon: {
+				id: "guardvillagers:guard_spawn_egg"
+			}
+			id: "1C7CF2E95844D04B"
+			rewards: [
+				{
+					id: "4FBA187F9B19F260"
+					item: {
+						count: 1
+						id: "minecraft:iron_sword"
+					}
+					type: "item"
+				}
+				{
+					id: "528DD531E8501614"
+					type: "xp"
+					xp: 50
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 25"
+					id: "591029C5B15311A7"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				advancement: "guardvillagers:adventure/recruit_guard"
+				criterion: ""
+				id: "18C9D116EBFD0A60"
+				type: "advancement"
+			}]
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1C7CF2E95844D04B"]
+			icon: {
+				id: "minecraft:carved_pumpkin"
+			}
+			id: "4D02A6FF51227430"
+			optional: true
+			rewards: [
+				{
+					id: "1301698F811511FC"
+					item: {
+						count: 1
+						id: "minecraft:poppy"
+					}
+					type: "item"
+				}
+				{
+					id: "29C3EBDF5874BD74"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 25"
+					id: "2A6075755CA5A039"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				advancement: "minecraft:adventure/summon_iron_golem"
+				criterion: ""
+				id: "37691F9365478E55"
+				type: "advancement"
+			}]
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1BCA73E1CE923FFA"]
+			icon: {
+				id: "minecraft:spyglass"
+			}
+			id: "52B329F4448ADA07"
+			rewards: [
+				{
+					count: 16
+					id: "5941F2EA83E855F0"
+					item: {
+						count: 1
+						id: "minecraft:arrow"
+					}
+					type: "item"
+				}
+				{
+					id: "373DAD84F6F2CC1D"
+					item: {
+						count: 1
+						id: "minecraft:spyglass"
+					}
+					type: "item"
+				}
+				{
+					id: "5D979515727C1648"
+					type: "xp"
+					xp: 60
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 30"
+					id: "0AA779A931AB3851"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				entity: "minecraft:pillager"
+				id: "2154A2E956163F45"
+				type: "kill"
+				value: 5L
+			}]
+			x: 7.5d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"1BCA73E1CE923FFA"
+				"1C7CF2E95844D04B"
+			]
+			icon: {
+				id: "minecraft:bell"
+			}
+			id: "5CFBB82C1E32B22F"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					id: "18F390EA9949C109"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					count: 8
+					id: "0ECF0EC91C84D72E"
+					item: {
+						count: 1
+						id: "minecraft:emerald"
+					}
+					type: "item"
+				}
+				{
+					id: "1ECB0BFEF2745618"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "014414699E387E99"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 100"
+					id: "65DD9DCA8B18A66A"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.75d
+			tasks: [
+				{
+					id: "07E86D9617FE613F"
+					optional_task: true
+					type: "custom"
+				}
+				{
+					advancement: "minecraft:adventure/hero_of_the_village"
+					criterion: ""
+					id: "33C95697FE812068"
+					optional_task: true
+					type: "advancement"
+				}
+			]
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "minecraft:crossbow"
+			}
+			id: "72ACEA773BF9E64B"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					id: "7B1D50A665FDA5E1"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "45CE0FC358547D11"
+					item: {
+						count: 1
+						id: "minecraft:golden_apple"
+					}
+					type: "item"
+				}
+				{
+					id: "027D9B22E25C7239"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "22CC88F116198D80"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 100"
+					id: "22BEEF026CAF7EBE"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					custom_name: "Warlord Vex"
+					entity: "minecraft:pillager"
+					id: "3DE6D1E7D0CFAD78"
+					optional_task: true
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "070391049416730D"
+					optional_task: true
+					type: "custom"
+				}
+			]
+			x: 10.75d
+			y: -1.75d
+		}
+		{
+			icon: {
+				id: "minecraft:fire_charge"
+			}
+			id: "7FBF260747BE587A"
+			rewards: [
+				{
+					id: "6BE0065F80F0FDCB"
+					type: "xp"
+					xp: 80
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 40"
+					id: "5B91BD5E65CAFAF3"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [{
+				id: "1B387428BAA290BA"
+				type: "custom"
+			}]
+			x: 12.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7FBF260747BE587A"]
+			icon: {
+				id: "createlanterns:power_battery"
+			}
+			id: "4CD191ECF590F37C"
+			rewards: [
+				{
+					command: "/gl lore {p} crash"
+					id: "637494BF91F0C40D"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "4EAAA92EFA67CA89"
+					type: "xp"
+					xp: 100
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 50"
+					id: "61D09CF6E7F6B34C"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [{
+				id: "0F7EF6042C6D5FDF"
+				type: "custom"
+			}]
+			x: 14.25d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4CD191ECF590F37C"]
+			icon: {
+				id: "createlanterns:green_dust"
+			}
+			id: "2081EC708C761510"
+			rewards: [
+				{
+					command: "/gl lore {p} oa"
+					id: "047ADC9D6C8E0F98"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					id: "20B950DA5A06BBD6"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "122DA65E331FE27C"
+					type: "xp"
+					xp: 150
+				}
+				{
+					id: "0BF8210C59141D39"
+					type: "xp_levels"
+					xp_levels: 2
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 75"
+					id: "13FD97F4FCEA2B18"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "54415D583EAFF734"
+				type: "checkmark"
+			}]
+			x: 16.25d
+			y: 0.0d
+		}
+	]
+}

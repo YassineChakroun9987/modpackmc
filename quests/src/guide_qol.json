@@ -1,0 +1,214 @@
+{
+  "id": "guide_qol",
+  "title": "&aHow to Play This Pack",
+  "subtitle": "Keys, tools and friends: what makes the long road easier.",
+  "icon": "ftbquests:book",
+  "group": "mods",
+  "order": 0,
+  "quests": [
+    {
+      "key": "welcome",
+      "title": "Read Me First",
+      "subtitle": "The Guides tab, and how to use it",
+      "desc": [
+        "The corruption is spreading and the Lantern Corps are watching who rises to meet it. This &aGuides&r tab helps you get ready: one chapter per big mod or system.",
+        "Each chapter teaches by doing. Finish a quest, claim its reward, and the next ones open. Start anywhere: the chapters run side by side.",
+        "&eCo-op:&r quests belong to your team, so play them together. This chapter shows how."
+      ],
+      "icon": "ftbquests:book",
+      "x": 0, "y": 0,
+      "shape": "hexagon", "size": 1.5,
+      "deps": ["prologue:wake"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 50}
+      ]
+    },
+    {
+      "key": "jei",
+      "title": "Just Enough Items",
+      "subtitle": "Every recipe, one key away",
+      "desc": [
+        "&eJEI&r is the item list beside your inventory. Hover any item and press &eR&r for its recipes, or &eU&r for what uses it.",
+        "Search with the bar at the bottom. Start with &e@&r to search a mod (&e@create&r, &e@irons&r). Press &eA&r over an item to bookmark it.",
+        "Stuck on a quest? Look the item up in JEI first."
+      ],
+      "icon": "minecraft:knowledge_book",
+      "x": 2, "y": -2,
+      "deps": ["welcome"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [{"type": "xp", "xp": 50}]
+    },
+    {
+      "key": "jade",
+      "title": "What Am I Looking At?",
+      "desc": [
+        "&eJade&r shows a small panel at the top of the screen: the block or mob under your crosshair, its health, and which mod it comes from.",
+        "Use it to name a strange ore or mob, and to check a machine's progress or a crop's growth without opening anything."
+      ],
+      "icon": "minecraft:spyglass",
+      "x": 4, "y": -2,
+      "deps": ["jei"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [{"type": "xp", "xp": 50}]
+    },
+    {
+      "key": "appleskin",
+      "title": "Eat Well, Fight Well",
+      "desc": [
+        "&eAppleSkin&r shows how much a food will restore on your hunger bar, and your hidden &esaturation&r (the yellow outline).",
+        "Saturation keeps you healing in a long fight. Farmer's Delight meals have the most; see the Farming chapter. Carry real food, not just raw meat."
+      ],
+      "icon": "minecraft:golden_apple",
+      "x": 6, "y": -2,
+      "deps": ["jade"],
+      "tasks": [{"type": "item", "item": "minecraft:bread", "count": 8}],
+      "rewards": [{"type": "item", "item": "minecraft:cooked_beef", "count": 8}]
+    },
+    {
+      "key": "mouse_tweaks",
+      "title": "Faster Fingers",
+      "desc": [
+        "&eMouse Tweaks&r speeds up inventories. &eScroll the wheel&r over a stack to move items one at a time into the other inventory.",
+        "&eHold Shift and drag&r across slots to move many stacks at once. &eRight-click and drag&r to spread a stack evenly over several slots."
+      ],
+      "icon": "minecraft:chest",
+      "x": 8, "y": -2,
+      "deps": ["appleskin"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [{"type": "xp", "xp": 50}]
+    },
+    {
+      "key": "controlling",
+      "title": "Too Many Keys",
+      "subtitle": "Find and fix keybind clashes",
+      "desc": [
+        "Dozens of mods add keys, and some clash. Open &eOptions > Controls > Key Binds&r: &eControlling&r adds a search box and marks conflicts.",
+        "Search a word like &espell&r, &ebackpack&r, &eroll&r or &eultimine&r to find a mod's keys. Fix the red ones now, before a boss fight finds them for you."
+      ],
+      "icon": "minecraft:lever",
+      "x": 10, "y": -2,
+      "deps": ["mouse_tweaks"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "ftb_teams",
+      "title": "Form a Team",
+      "subtitle": "Shared quest progress",
+      "desc": [
+        "Quest progress belongs to your &eFTB Team&r. Make one with the team button in your inventory (the small icons at the top left) or &e/ftbteams party create <name>&r, then &e/ftbteams party invite <player>&r.",
+        "Team members share quest progress, but each member claims their own rewards, so nobody misses out."
+      ],
+      "icon": "minecraft:white_banner",
+      "x": 2.5, "y": 0,
+      "deps": ["welcome"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [{"type": "xp", "xp": 50}]
+    },
+    {
+      "key": "opac_party",
+      "title": "A Party of Your Own",
+      "subtitle": "Open Parties and Claims",
+      "desc": [
+        "&eOpen Parties and Claims&r (OPAC) guards your land. Its parties are separate from FTB Teams, so make one here too.",
+        "Press &e'&r (apostrophe) to open the OPAC menu, choose &eParty&r and create one, then invite your friends by name. You can also type &e/openpac-parties create&r.",
+        "Party members can build in each other's claims and see each other on the map."
+      ],
+      "icon": "minecraft:shield",
+      "x": 5, "y": 0,
+      "deps": ["ftb_teams"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [{"type": "xp", "xp": 75}]
+    },
+    {
+      "key": "opac_claim",
+      "title": "Stake Your Claim",
+      "subtitle": "Protect your base",
+      "desc": [
+        "Claimed chunks stop other players from breaking your blocks or opening your chests. Open the world map (&eM&r), right-click a chunk (or drag to select several) and pick the claim option. Or stand in the chunk and type &e/openpac-claims claim&r.",
+        "Each player can claim up to &e500&r chunks and forceload &e10&r, which keeps farms and machines running while you're away."
+      ],
+      "icon": "minecraft:filled_map",
+      "x": 7.5, "y": 0,
+      "deps": ["opac_party"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 75}
+      ]
+    },
+    {
+      "key": "loot_share",
+      "title": "Share the Spoils",
+      "desc": [
+        "Dungeon chests here use &eLootr&r: every player gets their own loot from every chest. Don't race your friends; everyone loots everything.",
+        "Open ten structure chests. Shared things (a boss drop on the floor, a feast) are yours to split fairly."
+      ],
+      "icon": "lootr:lootr_chest",
+      "x": 10, "y": 0,
+      "deps": ["opac_claim"],
+      "tasks": [{"type": "advancement", "advancement": "lootr:10loot"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "skill_tree",
+      "title": "The Skill Tree",
+      "subtitle": "Press K",
+      "desc": [
+        "Press &eK&r to open your skill trees (Pufferfish's Skills). The &eAdventurer&r tree is open to everyone: you earn its points by fighting, exploring and beating bosses.",
+        "Each class you join unlocks its own tree. Hover a node to read it, click to spend a point. Some quests in these guides give skill XP too."
+      ],
+      "icon": "minecraft:experience_bottle",
+      "x": 2.5, "y": 2,
+      "deps": ["welcome"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [{"type": "skill_xp", "category": "adventurer", "amount": 50}]
+    },
+    {
+      "key": "moons",
+      "title": "Watch the Moon",
+      "desc": [
+        "Some nights the moon changes (&eEnhanced Celestials&r). A &cBlood Moon&r brings hordes of undead: get behind walls or fight it out together.",
+        "A &9Blue Moon&r makes you lucky, and a &6Harvest Moon&r gives better harvests. A message in chat tells you when each one rises."
+      ],
+      "icon": "minecraft:clock",
+      "x": 5, "y": 2,
+      "deps": ["skill_tree"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [{"type": "xp", "xp": 50}]
+    },
+    {
+      "key": "polymorph",
+      "title": "Two Recipes, One Grid",
+      "desc": [
+        "Sometimes two mods use the same ingredients for different items. &ePolymorph&r then shows a small button next to the crafting result.",
+        "Click it to choose which item you want. It works in crafting tables, furnaces and many machines."
+      ],
+      "icon": "minecraft:crafting_table",
+      "x": 7.5, "y": 2,
+      "deps": ["moons"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [{"type": "xp", "xp": 50}]
+    },
+    {
+      "key": "ready",
+      "title": "Ready for the Road",
+      "desc": [
+        "You know the tools. Now pick a chapter: magic, dragons, machines, monsters. Follow whatever you and your friends enjoy most.",
+        "The Lantern Corps reward those who keep going. So does this book."
+      ],
+      "icon": "minecraft:compass",
+      "x": 12.5, "y": 0,
+      "shape": "octagon", "size": 1.25,
+      "deps": ["controlling", "loot_share", "polymorph"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 75},
+        {"type": "xp", "xp": 100}
+      ]
+    }
+  ]
+}

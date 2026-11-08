@@ -1,0 +1,696 @@
+{
+  "id": "act1",
+  "title": "&6Act I: Proving Ground",
+  "subtitle": "First dungeons, first spells, and the seven lights.",
+  "icon": "minecraft:iron_sword",
+  "group": "story",
+  "order": 1,
+  "quests": [
+    {
+      "key": "start",
+      "title": "Proving Ground",
+      "desc": [
+        "The village is safe, for now. The Lantern's warning isn't. The Guardians want warriors, and warriors are made, not born.",
+        "",
+        "This chapter teaches the pack's essentials. Party up: dungeons are friendlier with friends."
+      ],
+      "icon": "minecraft:compass",
+      "x": 0,
+      "y": 0,
+      "shape": "diamond",
+      "size": 1.5,
+      "deps": ["prologue:finale"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:bread", "count": 8},
+        {"type": "xp", "xp": 50},
+        {"type": "skill_xp", "category": "adventurer", "amount": 25}
+      ]
+    },
+    {
+      "key": "hud",
+      "title": "Eyes of the Wise",
+      "desc": [
+        "A good adventurer reads the world before it bites.",
+        "",
+        "&eJade&r shows what you look at (block, mob, its health, which mod it's from). &eAppleSkin&r shows hunger and saturation. Press &eR/U&r on an item for JEI recipes and uses."
+      ],
+      "icon": "minecraft:spyglass",
+      "x": 1.5,
+      "y": -1.5,
+      "deps": ["start"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:cooked_beef", "count": 6},
+        {"type": "xp", "xp": 30},
+        {"type": "skill_xp", "category": "adventurer", "amount": 15}
+      ]
+    },
+    {
+      "key": "combat",
+      "title": "Swing With Weight",
+      "desc": [
+        "Weapons here have reach, rhythm and combos. Two-handers sweep, daggers flurry, shields parry.",
+        "",
+        "&eBetter Combat&r: hold attack to chain combos, and watch each weapon's range. Two-handers need an empty off-hand. &eCombat Roll&r lets you dodge."
+      ],
+      "icon": "simplyswords:iron_longsword",
+      "x": 1.5,
+      "y": 0,
+      "deps": ["start"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "simplyswords:iron_longsword"},
+        {"type": "xp", "xp": 40},
+        {"type": "skill_xp", "category": "adventurer", "amount": 20}
+      ]
+    },
+    {
+      "key": "blade",
+      "title": "A Proper Blade",
+      "desc": [
+        "The Warband's swords were cheap. Yours shouldn't be.",
+        "",
+        "Craft any one of these weapons (Simply Swords, Epic Knights or Dungeons Weapons). JEI shows the recipes."
+      ],
+      "icon": "simplyswords:iron_claymore",
+      "x": 3,
+      "y": 0,
+      "deps": ["combat"],
+      "tasks": [
+        {"type": "item", "item": "simplyswords:iron_claymore", "optional": true},
+        {"type": "item", "item": "simplyswords:iron_katana", "optional": true},
+        {"type": "item", "item": "simplyswords:iron_rapier", "optional": true},
+        {"type": "item", "item": "simplyswords:iron_greataxe", "optional": true},
+        {"type": "item", "item": "magistuarmory:steel_zweihander", "optional": true},
+        {"type": "item", "item": "magistuarmory:steel_bastardsword", "optional": true},
+        {"type": "item", "item": "minecraftdungeonsv1:claymore", "optional": true},
+        {"type": "item", "item": "minecraftdungeonsv1:dagger", "optional": true},
+        {"type": "item", "item": "minecraftdungeonsv1:mace", "optional": true}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:iron_ingot", "count": 8},
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "adventurer", "amount": 30}
+      ]
+    },
+    {
+      "key": "shield",
+      "title": "Parry!",
+      "desc": [
+        "A raised shield at the right moment turns a killing blow into an opening.",
+        "",
+        "Craft an &eIron Shield&r (Shield Expansion). Block just as a hit lands to parry and stagger the attacker."
+      ],
+      "icon": "shieldexp:iron_shield",
+      "x": 3,
+      "y": 1.5,
+      "deps": ["combat"],
+      "tasks": [
+        {"type": "item", "item": "shieldexp:iron_shield"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:iron_ingot", "count": 4},
+        {"type": "xp", "xp": 50},
+        {"type": "skill_xp", "category": "adventurer", "amount": 25}
+      ]
+    },
+    {
+      "key": "armor",
+      "title": "Steel and Mail",
+      "desc": [
+        "The village smith has finally shown you how real armor is riveted.",
+        "",
+        "Craft any one &eEpic Knights&r chest piece below. Steel comes from the smith's recipes (see JEI)."
+      ],
+      "icon": "magistuarmory:brigandine_chestplate",
+      "x": 4.5,
+      "y": 0,
+      "deps": ["blade"],
+      "tasks": [
+        {"type": "item", "item": "magistuarmory:chainmail_chestplate", "optional": true},
+        {"type": "item", "item": "magistuarmory:gambeson_chestplate", "optional": true},
+        {"type": "item", "item": "magistuarmory:brigandine_chestplate", "optional": true},
+        {"type": "item", "item": "magistuarmory:lamellar_chestplate", "optional": true},
+        {"type": "item", "item": "magistuarmory:platemail_chestplate", "optional": true},
+        {"type": "item", "item": "magistuarmory:knight_chestplate", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "adventurer", "amount": 40}
+      ]
+    },
+    {
+      "key": "hearth",
+      "title": "Hearth and Pot",
+      "desc": [
+        "A warm stew keeps you fed far longer than raw bread.",
+        "",
+        "Craft a &eCooking Pot&r (Farmer's Delight) and place it over a fire. Meals give strong, long buffs."
+      ],
+      "icon": "farmersdelight:cooking_pot",
+      "x": 1.5,
+      "y": -3,
+      "deps": ["hud"],
+      "tasks": [
+        {"type": "item", "item": "farmersdelight:cooking_pot"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "farmersdelight:beef_stew", "count": 3},
+        {"type": "item", "item": "farmersdelight:tomato", "count": 4},
+        {"type": "xp", "xp": 40},
+        {"type": "skill_xp", "category": "adventurer", "amount": 20}
+      ]
+    },
+    {
+      "key": "waystone",
+      "title": "Stones That Remember",
+      "desc": [
+        "Old carved stones hum in many villages. Touch one and it remembers you.",
+        "",
+        "Right-click any &eWaystone&r you find to activate it; then you can travel between activated stones. Craft a &eWarp Stone&r to build your own waystones."
+      ],
+      "icon": "waystones:waystone",
+      "x": 3,
+      "y": -1.5,
+      "deps": ["hud"],
+      "tasks": [
+        {"type": "item", "item": "waystones:warp_stone"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "waystones:return_scroll", "count": 2},
+        {"type": "item", "item": "waystones:warp_scroll", "count": 2},
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "adventurer", "amount": 30}
+      ]
+    },
+    {
+      "key": "backpack",
+      "title": "Pack Mule",
+      "desc": [
+        "Loot is heavy. Glory is heavier.",
+        "",
+        "Craft a &eBackpack&r (Sophisticated Backpacks). Wear it or place it; add upgrades like Pickup or Magnet later."
+      ],
+      "icon": "sophisticatedbackpacks:backpack",
+      "x": 4.5,
+      "y": -1.5,
+      "deps": ["waystone"],
+      "tasks": [
+        {"type": "item", "item": "sophisticatedbackpacks:backpack"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "sophisticatedbackpacks:pickup_upgrade"},
+        {"type": "xp", "xp": 50},
+        {"type": "skill_xp", "category": "adventurer", "amount": 25}
+      ]
+    },
+    {
+      "key": "dungeon",
+      "title": "Into the Dark",
+      "desc": [
+        "Under the hills, old cellars still breed the dead.",
+        "",
+        "Find a &eYUNG's Better Dungeon&r (zombie, skeleton, spider or small dungeon). They hide underground: follow caves and listen for mobs."
+      ],
+      "icon": "minecraft:spawner",
+      "x": 6,
+      "y": 0,
+      "shape": "pentagon",
+      "deps": ["armor"],
+      "tasks": [
+        {"type": "structure", "structure": "betterdungeons:zombie_dungeon", "optional": true},
+        {"type": "structure", "structure": "betterdungeons:skeleton_dungeon", "optional": true},
+        {"type": "structure", "structure": "betterdungeons:spider_dungeon", "optional": true},
+        {"type": "structure", "structure": "betterdungeons:small_dungeon", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "adventurer", "amount": 50}
+      ]
+    },
+    {
+      "key": "lootr",
+      "title": "Yours Alone",
+      "desc": [
+        "Friends share danger, not loot. The chests here remember who opened them.",
+        "",
+        "Open a structure chest. With &eLootr&r every player gets their own loot from each chest, so nobody steals from the party."
+      ],
+      "icon": "minecraft:chest",
+      "x": 6,
+      "y": -1.5,
+      "deps": ["dungeon"],
+      "tasks": [
+        {"type": "advancement", "advancement": "lootr:1chest"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:gold_ingot", "count": 4},
+        {"type": "xp", "xp": 40},
+        {"type": "skill_xp", "category": "adventurer", "amount": 20}
+      ]
+    },
+    {
+      "key": "tavern",
+      "title": "A Warm Tavern",
+      "desc": [
+        "Travellers gather where the ale flows, and so do rumours of treasure.",
+        "",
+        "Find a &eDungeons and Taverns&r tavern. Taverns sit near roads in most biomes; their traders sell maps to other structures."
+      ],
+      "icon": "minecraft:barrel",
+      "x": 7.5,
+      "y": -1.5,
+      "deps": ["lootr"],
+      "tasks": [
+        {"type": "structure", "structure": "nova_structures:tavern_oak", "optional": true},
+        {"type": "structure", "structure": "nova_structures:tavern_acacia", "optional": true},
+        {"type": "structure", "structure": "nova_structures:tavern_birch", "optional": true},
+        {"type": "structure", "structure": "nova_structures:tavern_spruce", "optional": true},
+        {"type": "structure", "structure": "nova_structures:tavern_dark_oak", "optional": true},
+        {"type": "structure", "structure": "nova_structures:tavern_desert", "optional": true},
+        {"type": "structure", "structure": "nova_structures:tavern_snowy", "optional": true},
+        {"type": "structure", "structure": "nova_structures:tavern_jungle", "optional": true},
+        {"type": "structure", "structure": "nova_structures:tavern_swamp", "optional": true},
+        {"type": "structure", "structure": "nova_structures:tavern_cherry", "optional": true},
+        {"type": "structure", "structure": "nova_structures:tavern_mangrove", "optional": true}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:emerald", "count": 6},
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "adventurer", "amount": 30}
+      ]
+    },
+    {
+      "key": "shrine",
+      "title": "Trial of the Shrine",
+      "desc": [
+        "A stone tower with a sealed door, and a voice: 'Prove yourself.'",
+        "",
+        "Find a tier-1 &eCombat Shrine&r (Dungeons and Taverns) and beat its trial. Higher tiers come later; tier 1 is fair for fresh iron."
+      ],
+      "icon": "minecraft:lodestone",
+      "x": 7.5,
+      "y": -3,
+      "shape": "hexagon",
+      "deps": ["tavern"],
+      "tasks": [
+        {"type": "structure", "structure": "nova_structures:shrine_combat_tier_1"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "adventurer", "amount": 50}
+      ]
+    },
+    {
+      "key": "scroll",
+      "title": "Scrolls of Power",
+      "desc": [
+        "Every scroll is a spell someone was too afraid to cast.",
+        "",
+        "Collect &e3 Iron's Spells scrolls&r from chests and mob drops. Keep the good ones: you can write them into a spellbook."
+      ],
+      "icon": "irons_spellbooks:scroll",
+      "x": 6,
+      "y": 1.5,
+      "deps": ["dungeon"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:scroll", "count": 3}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "adventurer", "amount": 30}
+      ]
+    },
+    {
+      "key": "spellbook",
+      "title": "A Book of Your Own",
+      "desc": [
+        "A spellbook holds spells for good, and lets you cast them with mana instead of burning scrolls.",
+        "",
+        "Get any &eIron's Spells spellbook&r (craft one or loot it) and equip it in its curio slot. Pick and cast spells with the spell-wheel keybind (see Controls)."
+      ],
+      "icon": "irons_spellbooks:copper_spell_book",
+      "x": 7.5,
+      "y": 1.5,
+      "deps": ["scroll"],
+      "tasks": [
+        {"type": "advancement", "advancement": "irons_spellbooks:irons_spellbooks/spell_book_equip"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "item", "item": "irons_spellbooks:arcane_essence", "count": 8},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "adventurer", "amount": 40}
+      ]
+    },
+    {
+      "key": "inscription",
+      "title": "Ink and Quill",
+      "desc": [
+        "Scrolls fade. Ink binds.",
+        "",
+        "Craft an &eInscription Table&r. Put your spellbook and a scroll in it to write the spell into the book permanently."
+      ],
+      "icon": "irons_spellbooks:inscription_table",
+      "x": 9,
+      "y": 1.5,
+      "deps": ["spellbook"],
+      "tasks": [
+        {"type": "advancement", "advancement": "irons_spellbooks:irons_spellbooks/make_inscription_table"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "irons_spellbooks:common_ink", "count": 4},
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "adventurer", "amount": 30}
+      ]
+    },
+    {
+      "key": "diamonds",
+      "title": "Diamonds!",
+      "desc": [
+        "Deep under the deepslate, something glitters.",
+        "",
+        "Mine a diamond (best at Y -50 and below). Bring torches; the caves are crowded."
+      ],
+      "icon": "minecraft:diamond",
+      "x": 4.5,
+      "y": 3,
+      "deps": ["shield"],
+      "tasks": [
+        {"type": "advancement", "advancement": "minecraft:story/mine_diamond"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:diamond"},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "adventurer", "amount": 40}
+      ]
+    },
+    {
+      "key": "enchant",
+      "title": "Apothic Arts",
+      "desc": [
+        "Enchanting runs deeper here: bookshelves of many kinds shape what the table offers.",
+        "",
+        "Enchant an item. &eApotheosis&r reworks enchanting: hover over the table's stats and try special shelves later."
+      ],
+      "icon": "minecraft:enchanting_table",
+      "x": 6,
+      "y": 3,
+      "deps": ["diamonds"],
+      "tasks": [
+        {"type": "advancement", "advancement": "minecraft:story/enchant_item"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:lapis_lazuli", "count": 16},
+        {"type": "item", "item": "minecraft:experience_bottle", "count": 8},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "adventurer", "amount": 40}
+      ]
+    },
+    {
+      "key": "mage_tower",
+      "title": "The Mage's Spire",
+      "desc": [
+        "Wizards build tall and live alone, and their libraries outlive them.",
+        "",
+        "Find a mage tower: a &eTerralith&r Mage Tower or an &eIron's Spells&r mountain tower. Loot the bookshelves and chests for spells."
+      ],
+      "icon": "irons_spellbooks:wizard_hat",
+      "x": 9,
+      "y": 3,
+      "deps": ["inscription"],
+      "tasks": [
+        {"type": "structure", "structure": "terralith:mage_tower", "optional": true},
+        {"type": "structure", "structure": "terralith:mage_tower_spring", "optional": true},
+        {"type": "structure", "structure": "terralith:mage_tower_summer", "optional": true},
+        {"type": "structure", "structure": "terralith:mage_tower_autumn", "optional": true},
+        {"type": "structure", "structure": "terralith:mage_tower_winter", "optional": true},
+        {"type": "structure", "structure": "terralith:mage_complex", "optional": true},
+        {"type": "structure", "structure": "irons_spellbooks:mountain_tower", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "adventurer", "amount": 50}
+      ]
+    },
+    {
+      "key": "first_boss",
+      "title": "A Champion Falls",
+      "desc": [
+        "The dungeons have masters. Topple one and the world will start to notice you.",
+        "",
+        "Defeat one early champion: Mowzie's &eFerrous Wroughtnaut&r (Wrought Chamber, underground), Born in Chaos's &eSupreme Bonescaller&r or &eNightmare Stalker&r, or Iron's &eAncient Knight&r (Citadel). Fight as a party."
+      ],
+      "icon": "mowziesmobs:wrought_axe",
+      "x": 7.5,
+      "y": 4.5,
+      "shape": "hexagon",
+      "size": 1.5,
+      "deps": ["enchant"],
+      "tasks": [
+        {"type": "kill", "entity": "mowziesmobs:ferrous_wroughtnaut", "optional": true},
+        {"type": "kill", "entity": "born_in_chaos_v1:supreme_bonescaller", "optional": true},
+        {"type": "kill", "entity": "born_in_chaos_v1:nightmare_stalker", "optional": true},
+        {"type": "kill", "entity": "irons_spellbooks:citadel_keeper", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 150},
+        {"type": "skill_xp", "category": "adventurer", "amount": 100}
+      ]
+    },
+    {
+      "key": "frontier",
+      "title": "Beyond the Haven",
+      "desc": [
+        "The world is getting more dangerous, and its treasures richer.",
+        "",
+        "Wear a full set of &eaffix gear&r (helmet, chestplate, leggings, boots and a weapon with coloured Apotheosis names), then press &eCTRL+T&r to enter the Frontier world tier. Higher tiers: tougher mobs, better loot."
+      ],
+      "icon": "apotheosis:gem",
+      "x": 9,
+      "y": 4.5,
+      "deps": ["first_boss"],
+      "tasks": [
+        {"type": "advancement", "advancement": "apotheosis:progression/frontier"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 120},
+        {"type": "skill_xp", "category": "adventurer", "amount": 75}
+      ]
+    },
+    {
+      "key": "choose_path",
+      "title": "The Seven Lights",
+      "subtitle": "Choose your path",
+      "desc": [
+        "The Lantern said the spectrum has seven lights. Each one calls a different kind of hero:",
+        "&cRed&r Bloodfire Berserker: fire, rage, the Nether.  &6Orange&r Hoardwarden: earth, mines, treasure.",
+        "&eYellow&r Stormwright: lightning, speed, machines.  &aGreen&r Lightwarden: paladin of villages and raids.",
+        "&bBlue&r Frostbinder: ice and sky.  &9Indigo&r Wildheart: beasts, dragons, familiars.  &5Violet&r Voidblade: night, undead, the End.",
+        "",
+        "Open &bThe Seven Lights&r chapters and join one, or several: each class has its own talent tree and questline. Try the taste quests here first if you can't decide."
+      ],
+      "icon": "createlanterns:lantern_frame",
+      "x": 11,
+      "y": 0,
+      "shape": "gear",
+      "size": 2.25,
+      "deps": ["armor", "dungeon", "spellbook"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp", "xp": 150},
+        {"type": "xp_levels", "levels": 2},
+        {"type": "skill_xp", "category": "adventurer", "amount": 100}
+      ]
+    },
+    {
+      "key": "taste_red",
+      "title": "A Taste of Rage",
+      "desc": [
+        "The Red light burns hottest where the world is already on fire.",
+        "",
+        "Optional: build an obsidian portal and step into the &cNether&r. Red's path lives there."
+      ],
+      "icon": "minecraft:blaze_powder",
+      "x": 14,
+      "y": -4.5,
+      "deps": ["choose_path"],
+      "optional": true,
+      "tasks": [
+        {"type": "dimension", "dimension": "minecraft:the_nether"}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "adventurer", "amount": 30}
+      ]
+    },
+    {
+      "key": "taste_orange",
+      "title": "A Taste of Avarice",
+      "desc": [
+        "Orange hears the ore singing inside the stone.",
+        "",
+        "Optional: find any &6YUNG's Better Mineshaft&r. They come in many biome styles."
+      ],
+      "icon": "minecraft:raw_gold",
+      "x": 14,
+      "y": -3,
+      "deps": ["choose_path"],
+      "optional": true,
+      "tasks": [
+        {"type": "structure", "structure": "bettermineshafts:mineshaft_oak", "optional": true},
+        {"type": "structure", "structure": "bettermineshafts:mineshaft_spruce", "optional": true},
+        {"type": "structure", "structure": "bettermineshafts:mineshaft_acacia", "optional": true},
+        {"type": "structure", "structure": "bettermineshafts:mineshaft_desert", "optional": true},
+        {"type": "structure", "structure": "bettermineshafts:mineshaft_mesa", "optional": true},
+        {"type": "structure", "structure": "bettermineshafts:mineshaft_dripstone", "optional": true},
+        {"type": "structure", "structure": "bettermineshafts:mineshaft_lush", "optional": true},
+        {"type": "structure", "structure": "bettermineshafts:mineshaft_jungle", "optional": true},
+        {"type": "structure", "structure": "bettermineshafts:mineshaft_ice", "optional": true}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "adventurer", "amount": 30}
+      ]
+    },
+    {
+      "key": "taste_yellow",
+      "title": "A Taste of the Storm",
+      "desc": [
+        "Yellow sees a thunderstorm and asks how to bottle it.",
+        "",
+        "Optional: make &eAndesite Alloy&r, the first step of every &eCreate&r machine."
+      ],
+      "icon": "create:andesite_alloy",
+      "x": 14,
+      "y": -1.5,
+      "deps": ["choose_path"],
+      "optional": true,
+      "tasks": [
+        {"type": "advancement", "advancement": "create:andesite_alloy"}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "adventurer", "amount": 30}
+      ]
+    },
+    {
+      "key": "taste_green",
+      "title": "A Taste of Will",
+      "desc": [
+        "Green is the light of those who keep others safe, and that starts with knowing them.",
+        "",
+        "Optional: trade with a villager."
+      ],
+      "icon": "minecraft:emerald",
+      "x": 14,
+      "y": 0,
+      "deps": ["choose_path"],
+      "optional": true,
+      "tasks": [
+        {"type": "advancement", "advancement": "minecraft:adventure/trade"}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "adventurer", "amount": 30}
+      ]
+    },
+    {
+      "key": "taste_blue",
+      "title": "A Taste of Winter",
+      "desc": [
+        "Blue walks where breath turns to frost and the sky is close.",
+        "",
+        "Optional: visit a frozen biome (snowy plains, ice spikes, a glacier, frozen peaks...)."
+      ],
+      "icon": "minecraft:blue_ice",
+      "x": 14,
+      "y": 1.5,
+      "deps": ["choose_path"],
+      "optional": true,
+      "tasks": [
+        {"type": "biome", "biome": "minecraft:snowy_plains", "optional": true},
+        {"type": "biome", "biome": "minecraft:ice_spikes", "optional": true},
+        {"type": "biome", "biome": "minecraft:frozen_peaks", "optional": true},
+        {"type": "biome", "biome": "minecraft:snowy_slopes", "optional": true},
+        {"type": "biome", "biome": "minecraft:grove", "optional": true},
+        {"type": "biome", "biome": "terralith:glacial_chasm", "optional": true},
+        {"type": "biome", "biome": "terralith:frozen_cliffs", "optional": true},
+        {"type": "biome", "biome": "terralith:wintry_forest", "optional": true},
+        {"type": "biome", "biome": "terralith:siberian_taiga", "optional": true},
+        {"type": "biome", "biome": "terralith:snowy_shield", "optional": true},
+        {"type": "biome", "biome": "terralith:ice_marsh", "optional": true}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "adventurer", "amount": 30}
+      ]
+    },
+    {
+      "key": "taste_indigo",
+      "title": "A Taste of Compassion",
+      "desc": [
+        "Indigo never fights alone: there is always a beast at its side.",
+        "",
+        "Optional: tame an animal (a wolf with bones, a cat with fish, a horse by riding it)."
+      ],
+      "icon": "minecraft:lead",
+      "x": 14,
+      "y": 3,
+      "deps": ["choose_path"],
+      "optional": true,
+      "tasks": [
+        {"type": "advancement", "advancement": "minecraft:husbandry/tame_an_animal"}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "adventurer", "amount": 30}
+      ]
+    },
+    {
+      "key": "taste_violet",
+      "title": "A Taste of the Void",
+      "desc": [
+        "Violet hunts at night, where the dead don't stay buried.",
+        "",
+        "Optional: find a graveyard (The Graveyard mod). Come at night if you're brave."
+      ],
+      "icon": "minecraft:ender_pearl",
+      "x": 14,
+      "y": 4.5,
+      "deps": ["choose_path"],
+      "optional": true,
+      "tasks": [
+        {"type": "structure", "structure": "graveyard:small_graveyard", "optional": true},
+        {"type": "structure", "structure": "graveyard:medium_graveyard", "optional": true},
+        {"type": "structure", "structure": "graveyard:large_graveyard", "optional": true},
+        {"type": "structure", "structure": "graveyard:small_grave", "optional": true},
+        {"type": "structure", "structure": "graveyard:crypt", "optional": true},
+        {"type": "structure", "structure": "graveyard:small_desert_graveyard", "optional": true}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "adventurer", "amount": 30}
+      ]
+    }
+  ]
+}

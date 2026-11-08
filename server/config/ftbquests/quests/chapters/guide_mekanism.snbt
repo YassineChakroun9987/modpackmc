@@ -1,0 +1,445 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "guide_mekanism"
+	group: "4FA3695F5F82A1E1"
+	icon: {
+		id: "mekanism:steel_casing"
+	}
+	id: "2396F1933449B02E"
+	images: [ ]
+	order_index: 13
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "mekanism:ingot_osmium"
+			}
+			id: "2CFA23BB96D7B48C"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					id: "5F6B54664B47D2DE"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "2E39979C6959F312"
+					type: "xp"
+					xp: 50
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				count: 16L
+				id: "03D896C57E332B82"
+				item: { count: 1, id: "mekanism:ingot_osmium" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2CFA23BB96D7B48C"]
+			icon: {
+				id: "mekanism:metallurgic_infuser"
+			}
+			id: "269607E68DC71B58"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "29A2CF860761C9DE"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:metallurgic_infuser"
+				criterion: ""
+				id: "281DB1C442037B3C"
+				type: "advancement"
+			}]
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["269607E68DC71B58"]
+			icon: {
+				id: "mekanism:steel_casing"
+			}
+			id: "46D10E57CDB7239B"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "1DC54A47391DCE09"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:steel_casing"
+				criterion: ""
+				id: "05BF180FDE5B3B16"
+				type: "advancement"
+			}]
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2CFA23BB96D7B48C"]
+			icon: {
+				id: "mekanismgenerators:heat_generator"
+			}
+			id: "1F1FE50908BB6FCA"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "0BE1DEF6EB2AA1A5"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanismgenerators:heat_generator"
+				criterion: ""
+				id: "60DE176C35BE742C"
+				type: "advancement"
+			}]
+			x: 2.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1F1FE50908BB6FCA"]
+			icon: {
+				id: "mekanism:basic_energy_cube"
+			}
+			id: "56E20DE941CBFB2E"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "710DC6E65FEF4983"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:energy_cube"
+				criterion: ""
+				id: "25A1131856628B74"
+				type: "advancement"
+			}]
+			x: 5.0d
+			y: -2.0d
+		}
+		{
+			icon: {
+				id: "mekanism:enrichment_chamber"
+			}
+			id: "25DDBB1E29BA8F0B"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "3549A8E896464604"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:enricher"
+				criterion: ""
+				id: "1D0CA1CCF41FDC2D"
+				type: "advancement"
+			}]
+			x: 2.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["25DDBB1E29BA8F0B"]
+			icon: {
+				id: "mekanism:purification_chamber"
+			}
+			id: "1B8A7286079299AB"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "0E66F78E6C9258A4"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:purification_chamber"
+				criterion: ""
+				id: "4D0A5317F57952D3"
+				type: "advancement"
+			}]
+			x: 5.0d
+			y: 2.0d
+		}
+		{
+			icon: {
+				id: "mekanism:chemical_injection_chamber"
+			}
+			id: "172A3C1A7C98214B"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "57994661607261E5"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:injection_chamber"
+				criterion: ""
+				id: "7D6CC1073BF8A4B1"
+				type: "advancement"
+			}]
+			x: 7.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["172A3C1A7C98214B"]
+			icon: {
+				id: "mekanism:chemical_crystallizer"
+			}
+			id: "26FD64CCF4AF880D"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "45ECEFA86E8936C0"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 100"
+					id: "6807170B378B028D"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				advancement: "mekanism:chemical_crystallizer"
+				criterion: ""
+				id: "423831F77829D08E"
+				type: "advancement"
+			}]
+			x: 10.0d
+			y: 2.0d
+		}
+		{
+			icon: {
+				id: "mekanism:basic_tier_installer"
+			}
+			id: "79EC1B9BADFDD48C"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "7DA9983C4063C582"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:factory"
+				criterion: ""
+				id: "5CB0DC68E73C5A37"
+				type: "advancement"
+			}]
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["79EC1B9BADFDD48C"]
+			icon: {
+				id: "mekanism:digital_miner"
+			}
+			id: "6090D03341E0CE8D"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "5AB2DA8FBF4879E0"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:digital_miner"
+				criterion: ""
+				id: "4369078E91BB71AC"
+				type: "advancement"
+			}]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "mekanism:jetpack"
+			}
+			id: "7FD453C12DE7E35C"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "34075B921F01FA03"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "36760D439F08B35A"
+				item: { count: 1, id: "mekanism:jetpack" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: -2.0d
+		}
+		{
+			icon: {
+				id: "mekanism:alloy_atomic"
+			}
+			id: "270A24D0F4DA18E6"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "6026272F913D10CB"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:atomic_alloy"
+				criterion: ""
+				id: "79102AD4D1B9638B"
+				type: "advancement"
+			}]
+			x: 5.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["270A24D0F4DA18E6"]
+			icon: {
+				id: "mekanism:ultimate_control_circuit"
+			}
+			id: "0DA006622CB27A6F"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "68D7554E76CFD1AE"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:ultimate_control_circuit"
+				criterion: ""
+				id: "0616F199B6E4B236"
+				type: "advancement"
+			}]
+			x: 7.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["0DA006622CB27A6F"]
+			icon: {
+				id: "mekanism:pellet_polonium"
+			}
+			id: "6C7054CF22C2CC9B"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "2225145522CFF0D4"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:polonium"
+				criterion: ""
+				id: "41FF147AEC0A63CD"
+				type: "advancement"
+			}]
+			x: 10.0d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"0DA006622CB27A6F"
+				"6090D03341E0CE8D"
+			]
+			icon: {
+				id: "mekanism:modification_station"
+			}
+			id: "4CA6E68CDAEFD0CD"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "4B80FC00626A732C"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:modification_station"
+				criterion: ""
+				id: "6821424CA46EC0B1"
+				type: "advancement"
+			}]
+			x: 12.5d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"6C7054CF22C2CC9B"
+				"4CA6E68CDAEFD0CD"
+			]
+			icon: {
+				id: "mekanism:mekasuit_helmet"
+			}
+			id: "2235F53F6C4F6AD0"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "1CFDFBF7BA3A9411"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 250"
+					id: "59B4124B52069C11"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "73061099F5777790"
+					type: "xp"
+					xp: 500
+				}
+			]
+			shape: "octagon"
+			size: 1.75d
+			tasks: [{
+				advancement: "mekanism:mekasuit"
+				criterion: ""
+				id: "0B198CCE2870523A"
+				type: "advancement"
+			}]
+			x: 12.5d
+			y: 0.5d
+		}
+		{
+			icon: {
+				id: "mekanism:mekasuit_bodyarmor"
+			}
+			id: "125C30974C3A6BC4"
+			optional: true
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+				id: "6DDE6C0030CC4919"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:upgraded_mekasuit"
+				criterion: ""
+				id: "5601D8A61FD519A4"
+				type: "advancement"
+			}]
+			x: 15.0d
+			y: 0.5d
+		}
+	]
+}

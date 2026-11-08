@@ -1,0 +1,290 @@
+{
+  "id": "guide_irons_spells",
+  "title": "&aThe Arcane Path",
+  "subtitle": "Iron's Spells 'n Spellbooks: books, ink, scrolls, orbs, schools and addons.",
+  "icon": "irons_spellbooks:gold_spell_book",
+  "group": "mods",
+  "order": 7,
+  "quests": [
+    {
+      "key": "arcane_essence",
+      "title": "The Arcane Path",
+      "desc": [
+        "Spells come two ways: &escrolls&r (cast once, then gone) and &espellbooks&r (keep spells for good, cast with mana). You've tried both in Act I; this chapter goes deeper.",
+        "&eArcane Essence&r is the mage's basic reagent. Craft &eIron's Guidebook&r (a book plus one Arcane Essence): the mod's own guide, with a page for every system here."
+      ],
+      "icon": "irons_spellbooks:arcane_essence",
+      "x": 0, "y": 0,
+      "shape": "hexagon", "size": 1.5,
+      "deps": ["act1:choose_path"],
+      "tasks": [{"type": "item", "item": "irons_spellbooks:arcane_essence", "count": 8}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp", "xp": 50}
+      ]
+    },
+    {
+      "key": "casting",
+      "title": "Casting Like a Mage",
+      "desc": [
+        "Hold the &eSpell Wheel&r key to choose a spell from your book, then press &eCast Selected Spell&r. Quick-cast slots let you bind favourites to their own keys. Search 'Iron' in Controls to see and change them.",
+        "Each spell costs mana and has a cooldown. Some are instant, some you hold to channel. Mana refills over time; rings and armour raise it."
+      ],
+      "icon": "irons_spellbooks:copper_spell_book",
+      "x": 2.5, "y": 0,
+      "deps": ["arcane_essence"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/scrolls_1"}]
+    },
+    {
+      "key": "schools",
+      "title": "The Schools of Magic",
+      "desc": [
+        "Every spell belongs to a school: &cFire&r, &bIce&r, &eLightning&r, &6Holy&r, &5Ender&r, &4Blood&r, &fEvocation&r, &aNature&r, &3Eldritch&r. The addons add Abyssal and others.",
+        "Each light leans on its own: Red fire and blood, Blue ice, Yellow lightning, Green evocation and holy, Orange earthy nature, Violet ender and eldritch, Indigo summons. School armour and orbs make your school stronger."
+      ],
+      "icon": "irons_spellbooks:fire_rune",
+      "x": 5, "y": 0,
+      "deps": ["casting"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [{"type": "skill_xp", "category": "adventurer", "amount": 50}]
+    },
+    {
+      "key": "cauldron",
+      "title": "The Alchemist Cauldron",
+      "desc": [
+        "The &eAlchemist Cauldron&r brews elixirs (healing, evasion, invisibility, oakskin) and upgrades ink. Light a fire under it and fill it with water or ink.",
+        "It needs Cinder Essence, which the Ancient Knights of the old citadels drop."
+      ],
+      "icon": "irons_spellbooks:alchemist_cauldron",
+      "x": 2.5, "y": -2,
+      "deps": ["casting"],
+      "tasks": [{"type": "item", "item": "irons_spellbooks:alchemist_cauldron"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "ink",
+      "title": "The Ink Ladder",
+      "desc": [
+        "Ink sets how rare a scroll you can write. Pour a bucket's worth (four bottles) of ink into the cauldron and add a metal to brew the next rarity:",
+        "&fCommon&r + copper = &aUncommon&r, + iron = &9Rare&r, + gold = &5Epic&r, + amethyst = &6Legendary&r. Brew some &9Rare Ink&r."
+      ],
+      "icon": "irons_spellbooks:rare_ink",
+      "x": 5, "y": -2,
+      "deps": ["cauldron"],
+      "tasks": [{"type": "item", "item": "irons_spellbooks:rare_ink", "count": 2}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "scroll_forge",
+      "title": "The Scroll Forge",
+      "desc": [
+        "Build a &eScroll Forge&r (polished deepslate and crying obsidian). Put in ink, paper and a &eschool focus&r (a blaze rod for fire, a frozen bone for ice...), then pick a spell to write.",
+        "Rarer ink unlocks rarer spells. This is how you get the exact spell you want instead of hoping for loot."
+      ],
+      "icon": "irons_spellbooks:scroll_forge",
+      "x": 7.5, "y": -2,
+      "deps": ["ink"],
+      "tasks": [{"type": "advancement", "advancement": "irons_spellbooks:irons_spellbooks/make_scroll_forge"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/scrolls_2"}]
+    },
+    {
+      "key": "arcane_anvil",
+      "title": "The Arcane Anvil",
+      "desc": [
+        "The &eArcane Anvil&r is the mage's workbench. Combine two scrolls of the same spell and level into one of the next level. &eImbue&r a spell into a weapon so it casts on use.",
+        "It also applies &eupgrade orbs&r to armour and trinkets. Craft one (amethyst blocks, a diamond, an anvil, polished deepslate)."
+      ],
+      "icon": "irons_spellbooks:arcane_anvil",
+      "x": 10, "y": -2,
+      "deps": ["scroll_forge"],
+      "tasks": [{"type": "advancement", "advancement": "irons_spellbooks:irons_spellbooks/make_arcane_anvil"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "upgrade_orb",
+      "title": "Runes and Orbs",
+      "desc": [
+        "Surround a &eBlank Runestone&r with eight focus items of one school to make that school's &erune&r. Eight runes around an &eEmpty Upgrade Orb&r make a school orb.",
+        "The empty orb takes arcane ingots, cinder essence and mithril. Make one."
+      ],
+      "icon": "irons_spellbooks:upgrade_orb",
+      "x": 7.5, "y": -4,
+      "deps": ["scroll_forge"],
+      "tasks": [{"type": "item", "item": "irons_spellbooks:upgrade_orb"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "mana_orb",
+      "title": "More Mana",
+      "desc": [
+        "A &eMana Upgrade Orb&r (arcane runes) raises your maximum mana; a school orb raises that school's spell power. Apply them at the Arcane Anvil.",
+        "Each piece of gear takes a limited number of upgrades. Pick the orbs that match your class."
+      ],
+      "icon": "irons_spellbooks:mana_upgrade_orb",
+      "x": 10, "y": -4,
+      "deps": ["upgrade_orb", "arcane_anvil"],
+      "tasks": [{"type": "item", "item": "irons_spellbooks:mana_upgrade_orb"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "iron_book",
+      "title": "A Bigger Book",
+      "desc": [
+        "Better spellbooks hold more spells and add mana. The ladder goes Flimsy Journal, &eIronbound Tome&r, Apprentice's Spell Book, Enchanted Spell Book, Ancient Codex.",
+        "Unique books (Necronomicon, Druidic Tome, Frostbranded Book...) come from bosses and dungeons and boost one school. Get an Ironbound Tome."
+      ],
+      "icon": "irons_spellbooks:iron_spell_book",
+      "x": 2.5, "y": 2,
+      "deps": ["casting"],
+      "tasks": [{"type": "advancement", "advancement": "irons_spellbooks:irons_spellbooks/spell_book_iron"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/scrolls_1"}]
+    },
+    {
+      "key": "school_armor",
+      "title": "Robes of Your School",
+      "desc": [
+        "School armour boosts one school's power and your mana: &cPyromancer&r, &bCryomancer&r, &eElectromancer&r, &6Priest&r, &5Shadow-Walker&r, &4Cultist&r, &aPlagued&r, &fArchevoker&r, and the all-round Wizard robes.",
+        "Most need &eArcane Cloth&r. Craft or loot a set for your school."
+      ],
+      "icon": "irons_spellbooks:pyromancer_helmet",
+      "x": 5, "y": 2,
+      "deps": ["iron_book"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "mithril_weave",
+      "title": "Mithril Weave",
+      "desc": [
+        "Mithril from deep in the deepslate turns into scrap, ingots, then &eMithril Weave&r, which goes into the strongest robes (Netherite Battlemage).",
+        "See the Mining chapter for where to find it."
+      ],
+      "icon": "irons_spellbooks:mithril_weave",
+      "x": 7.5, "y": 2,
+      "deps": ["school_armor"],
+      "tasks": [{"type": "item", "item": "irons_spellbooks:mithril_weave"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "diamond_book",
+      "title": "The Enchanted Spell Book",
+      "desc": [
+        "The &eEnchanted Spell Book&r (diamond) holds a proper arsenal: attack, defence, movement and healing all in one book.",
+        "Each book has a rarity limit: a scroll that's too rare won't go into a cheap book. Inscribe your best scrolls at the Inscription Table."
+      ],
+      "icon": "irons_spellbooks:diamond_spell_book",
+      "x": 10, "y": 2,
+      "deps": ["mithril_weave"],
+      "tasks": [{"type": "advancement", "advancement": "irons_spellbooks:irons_spellbooks/spell_book_diamond"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/scrolls_2"}]
+    },
+    {
+      "key": "ancient_codex",
+      "title": "The Ancient Codex",
+      "desc": [
+        "The &eAncient Codex&r is the best crafted spellbook: the most slots and the most mana.",
+        "A full Codex of Legendary spells is the mark of an archmage. The corruption fears it."
+      ],
+      "icon": "irons_spellbooks:netherite_spell_book",
+      "x": 12.5, "y": 0,
+      "shape": "octagon", "size": 1.5,
+      "deps": ["diamond_book", "mana_orb"],
+      "tasks": [{"type": "advancement", "advancement": "irons_spellbooks:irons_spellbooks/spell_book_netherite"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_3"},
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 200}
+      ]
+    },
+    {
+      "key": "catacombs",
+      "title": "Into the Catacombs",
+      "desc": [
+        "A &eWayward Compass&r points to the &eCatacombs&r, the crypt where the Dead King sleeps. Iron's other structures (pyromancer towers, the evoker fort, the ice spider den, the citadel) hide mages, knights and rare books.",
+        "Enter the Catacombs. The Dead King himself is in the Bosses chapter."
+      ],
+      "icon": "irons_spellbooks:wayward_compass",
+      "x": 2.5, "y": 4,
+      "deps": ["iron_book"],
+      "tasks": [{"type": "structure", "structure": "irons_spellbooks:catacombs"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "familiars",
+      "title": "A Familiar of Your Own",
+      "subtitle": "Alshanex's Familiars",
+      "desc": [
+        "Little magical &efamiliars&r live all over the world: archmages, clerics, druids, hunters, necromancers, scorchers and more. Right-click one with &eArcane Essence&r to tame it (each try has a 40% chance).",
+        "Craft the &eFamiliar Compendium&r (a book and a rabbit's foot) to learn where each lives. Wildheart players: familiars are part of your path."
+      ],
+      "icon": "familiarslib:familiar_compendium",
+      "x": 5, "y": 4,
+      "deps": ["catacombs"],
+      "tasks": [{"type": "advancement", "advancement": "alshanex_familiars:alshanex_familiars/root"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 50}
+      ]
+    },
+    {
+      "key": "galosphere_spellbooks",
+      "title": "The Sterling Tome",
+      "subtitle": "Galosphere: Spellbooks",
+      "desc": [
+        "&eGalosphere: Spellbooks&r turns Galosphere's metals and crystals into magic gear: the &eSterling Tome&r (palladium), Sterling robes and the Allurite Pendant.",
+        "Craft a Sterling Tome. Palladium is in the Mining chapter."
+      ],
+      "icon": "galosphere_spellbooks:sterling_spell_book",
+      "x": 7.5, "y": 4,
+      "deps": ["familiars"],
+      "tasks": [{"type": "item", "item": "galosphere_spellbooks:sterling_spell_book"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/scrolls_1"}]
+    },
+    {
+      "key": "cataclysm_spellbooks",
+      "title": "Spells of the Cataclysm",
+      "subtitle": "Cataclysm: Spellbooks",
+      "desc": [
+        "&eCataclysm: Spellbooks&r adds the &3Abyssal&r school and gear forged from Cataclysm bosses: Ignis mage robes, Abyssal Warlock robes, Excelsius armour, the Book o' R'lyeh.",
+        "Bless a Ruined Book on a Cataclysm amethyst altar to make the Book o' R'lyeh. Abyssal runes take abyssal focus items. Use JEI to plan your set."
+      ],
+      "icon": "cataclysm_spellbooks:abyssal_rune",
+      "x": 10, "y": 4,
+      "deps": ["galosphere_spellbooks"],
+      "tasks": [{"type": "item", "item": "cataclysm_spellbooks:abyssal_rune"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "cultist_base",
+      "title": "Discerning the Eldritch",
+      "desc": [
+        "Eldritch cults gather in hidden places: the &eCultist Base&r, blood cultist huts and the Electromancer Tower. Their apostles and acolytes cast forbidden spells.",
+        "Find a Cultist Base. Read their &eGuardian's Guidebook&r if you find one: it is this addon's guide."
+      ],
+      "icon": "discerning_the_eldritch:eldritch_rune",
+      "x": 5, "y": 6,
+      "deps": ["familiars"],
+      "tasks": [{"type": "advancement", "advancement": "discerning_the_eldritch:discerning_the_eldritch/main/enter_cultist_base"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "ascended_one",
+      "title": "The Ascended One",
+      "desc": [
+        "At the heart of the cult waits the &5Ascended One&r, one of the deadliest mages in the world. Its fall opens the way to the eldritch arts (Eldritch Soulshards, the Apocrypha, demonic weapons).",
+        "An extreme fight. Bring your best book, your best robes and your whole party."
+      ],
+      "icon": "discerning_the_eldritch:eldritch_soul_shard",
+      "x": 7.5, "y": 6,
+      "shape": "diamond", "size": 1.25,
+      "deps": ["cultist_base"],
+      "tasks": [{"type": "kill", "entity": "discerning_the_eldritch:ascended_one", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 300}
+      ]
+    }
+  ]
+}

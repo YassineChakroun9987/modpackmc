@@ -1,0 +1,245 @@
+{
+  "id": "guide_ae2",
+  "title": "&aThe Storage Network",
+  "subtitle": "Applied Energistics 2: from a fallen meteorite to your first ME network and autocrafting.",
+  "icon": "ae2:controller",
+  "group": "mods",
+  "order": 14,
+  "quests": [
+    {
+      "key": "meteorite",
+      "title": "A Stone From the Sky",
+      "subtitle": "Applied Energistics 2",
+      "desc": [
+        "&eApplied Energistics 2&r stores every item you own in one digital network. It starts with a &emeteorite&r: a crater with a sky-stone core holding inscriber presses and budding certus quartz.",
+        "AE2 has a full guide built in: hover any AE2 item and hold &eG&r. Find a meteorite (a Meteorite Compass helps once you have certus)."
+      ],
+      "icon": "ae2:sky_stone_block",
+      "x": 0, "y": 0,
+      "shape": "hexagon", "size": 1.5,
+      "deps": ["act1:choose_path"],
+      "tasks": [{"type": "structure", "structure": "ae2:meteorite"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 50}
+      ]
+    },
+    {
+      "key": "certus",
+      "title": "Growing Certus",
+      "desc": [
+        "&eBudding certus quartz&r grows crystal buds on its faces. Harvest the fully grown clusters for &eCertus Quartz Crystals&r. Breaking a budding block downgrades it, so leave them where they are and harvest around them.",
+        "A &eGrowth Accelerator&r next to them speeds things up a lot."
+      ],
+      "icon": "ae2:certus_quartz_crystal",
+      "x": 2.5, "y": -2,
+      "deps": ["meteorite"],
+      "tasks": [{"type": "item", "item": "ae2:certus_quartz_crystal", "count": 16}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "charger",
+      "title": "Charged Certus",
+      "desc": [
+        "A &eCharger&r puts power into certus crystals. It needs energy: AE2 takes FE (from a Create alternator or Mekanism) through an Energy Acceptor, or you can crank it by hand.",
+        "Make Charged Certus Quartz."
+      ],
+      "icon": "ae2:charger",
+      "x": 5, "y": -2,
+      "deps": ["certus"],
+      "tasks": [{"type": "advancement", "advancement": "ae2:main/charged_quartz"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "fluix",
+      "title": "Fluix",
+      "desc": [
+        "Drop charged certus, redstone and nether quartz into water together: they react into &eFluix Crystals&r.",
+        "Fluix makes cables and most network parts. Make a stack's worth over time."
+      ],
+      "icon": "ae2:fluix_crystal",
+      "x": 7.5, "y": -2,
+      "deps": ["charger"],
+      "tasks": [{"type": "advancement", "advancement": "ae2:main/fluix"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "presses",
+      "title": "The Four Presses",
+      "desc": [
+        "Meteorite cores hold &eInscriber Presses&r: logic, calculation, engineering and silicon. Search every meteorite you find; you need all four.",
+        "An Inscriber can copy a press from an iron block, so one set is enough for the whole party."
+      ],
+      "icon": "ae2:logic_processor_press",
+      "x": 2.5, "y": 0,
+      "deps": ["meteorite"],
+      "tasks": [{"type": "advancement", "advancement": "ae2:main/presses"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "inscriber",
+      "title": "The Inscriber",
+      "desc": [
+        "The &eInscriber&r presses materials between presses. It prints circuits (gold, certus, diamond) and silicon, then joins them with redstone into processors.",
+        "Build one."
+      ],
+      "icon": "ae2:inscriber",
+      "x": 5, "y": 0,
+      "deps": ["presses", "charger"],
+      "dep_mode": "one",
+      "tasks": [{"type": "item", "item": "ae2:inscriber"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "processors",
+      "title": "Processors",
+      "desc": [
+        "Every smart network part needs processors: &eLogic&r (gold), &eCalculation&r (certus) and &eEngineering&r (diamond).",
+        "Make one of each. Automate them later with the Inscriber and a few hoppers."
+      ],
+      "icon": "ae2:calculation_processor",
+      "x": 7.5, "y": 0,
+      "deps": ["inscriber"],
+      "tasks": [
+        {"type": "item", "item": "ae2:logic_processor"},
+        {"type": "item", "item": "ae2:calculation_processor"},
+        {"type": "item", "item": "ae2:engineering_processor"}
+      ],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "controller",
+      "title": "The ME Controller",
+      "desc": [
+        "The &eME Controller&r is the brain of the network. Power it through an &eEnergy Acceptor&r (FE in, AE out) and connect everything to it with cable.",
+        "Without a controller a small network still works, but with one you get many more channels."
+      ],
+      "icon": "ae2:controller",
+      "x": 10, "y": 0,
+      "deps": ["processors", "fluix"],
+      "tasks": [{"type": "advancement", "advancement": "ae2:main/controller"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "drive",
+      "title": "Drives and Cells",
+      "desc": [
+        "Items live on &eStorage Cells&r (1k, 4k, 16k, 64k, 256k) inside an &eME Drive&r. A cell holds a set number of item types and a total amount.",
+        "Craft a storage cell and an ME Drive."
+      ],
+      "icon": "ae2:item_storage_cell_1k",
+      "x": 12.5, "y": 0,
+      "deps": ["controller"],
+      "tasks": [
+        {"type": "advancement", "advancement": "ae2:main/storage_cell"},
+        {"type": "item", "item": "ae2:drive"}
+      ],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "channels",
+      "title": "Cables and Channels",
+      "desc": [
+        "Every device uses a &echannel&r. Normal cable carries 8, dense cable 32, and each face of the controller sends out 32. Run out and devices go dark.",
+        "A &eNetwork Tool&r shows channel use. Fluix glass cable is the place to start."
+      ],
+      "icon": "ae2:fluix_glass_cable",
+      "x": 10, "y": 2,
+      "deps": ["controller"],
+      "tasks": [
+        {"type": "advancement", "advancement": "ae2:main/glass_cable"},
+        {"type": "item", "item": "ae2:network_tool"}
+      ],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "crafting_terminal",
+      "title": "One Chest to Rule Them All",
+      "desc": [
+        "A &eCrafting Terminal&r on the network shows everything you've stored and lets you craft straight from it. Search it like JEI.",
+        "Put one where your whole party can reach it: every item, everyone's, in one place."
+      ],
+      "icon": "ae2:crafting_terminal",
+      "x": 12.5, "y": 2,
+      "deps": ["drive", "channels"],
+      "tasks": [{"type": "advancement", "advancement": "ae2:main/crafting_terminal"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "storage_bus",
+      "title": "The Storage Bus",
+      "desc": [
+        "A &eStorage Bus&r on a chest, a barrel or a Mekanism bin lets the network use that container as storage. Import and export buses move items in and out of machines.",
+        "Hook your old chests into the network."
+      ],
+      "icon": "ae2:storage_bus",
+      "x": 15, "y": 2,
+      "deps": ["crafting_terminal"],
+      "tasks": [{"type": "advancement", "advancement": "ae2:main/storage_bus"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "patterns",
+      "title": "Patterns",
+      "subtitle": "Autocrafting, part 1",
+      "desc": [
+        "A &ePattern Encoding Terminal&r writes recipes onto blank patterns. A pattern tells the network how to make one thing.",
+        "Encode a pattern for something you craft often."
+      ],
+      "icon": "ae2:pattern_encoding_terminal",
+      "x": 12.5, "y": -2,
+      "deps": ["drive"],
+      "tasks": [{"type": "advancement", "advancement": "ae2:main/pattern_encoding_terminal"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "crafting_cpu",
+      "title": "The Crafting CPU",
+      "subtitle": "Autocrafting, part 2",
+      "desc": [
+        "A &eCrafting CPU&r is a block of crafting units with at least one crafting storage inside. It plans and tracks every autocrafting job.",
+        "More storage, bigger jobs; more co-processors, faster jobs."
+      ],
+      "icon": "ae2:crafting_unit",
+      "x": 15, "y": -2,
+      "deps": ["patterns"],
+      "tasks": [{"type": "advancement", "advancement": "ae2:main/crafting_cpu"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "pattern_provider",
+      "title": "Hands for the Network",
+      "subtitle": "Autocrafting, part 3",
+      "desc": [
+        "A &ePattern Provider&r holds your patterns and sends ingredients out. Put a &eMolecular Assembler&r next to it for crafting-table recipes, or face it at a machine (a furnace, a Create press, a Mekanism enricher) for processing.",
+        "Now ask the terminal for 64 of something and watch it happen."
+      ],
+      "icon": "ae2:pattern_provider",
+      "x": 17.5, "y": -2,
+      "deps": ["crafting_cpu"],
+      "tasks": [
+        {"type": "item", "item": "ae2:pattern_provider"},
+        {"type": "item", "item": "ae2:molecular_assembler"}
+      ],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "network_online",
+      "title": "Network Online",
+      "desc": [
+        "Storage, terminals, buses and autocrafting: your base thinks for itself now.",
+        "From here: wireless terminals, P2P tunnels, spatial storage. The AE2 guide (hold &eG&r) covers them all."
+      ],
+      "icon": "ae2:wireless_terminal",
+      "x": 17.5, "y": 0.5,
+      "shape": "octagon", "size": 1.5,
+      "deps": ["pattern_provider", "storage_bus"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 150},
+        {"type": "xp", "xp": 300}
+      ]
+    }
+  ]
+}

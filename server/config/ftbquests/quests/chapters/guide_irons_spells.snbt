@@ -1,0 +1,537 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "guide_irons_spells"
+	group: "4FA3695F5F82A1E1"
+	icon: {
+		components: {
+			"irons_spellbooks:spell_container": {
+				data: [ ]
+				maxSpells: 8
+				mustEquip: 1b
+				spellWheel: 1b
+			}
+		}
+		id: "irons_spellbooks:gold_spell_book"
+	}
+	id: "1F340FB299F82AA8"
+	images: [ ]
+	order_index: 7
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "irons_spellbooks:arcane_essence"
+			}
+			id: "68C2D91EBA520590"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/scrolls_1"
+					id: "1FF406DC8A0ED309"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "5D9E72A3F808C552"
+					type: "xp"
+					xp: 50
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				count: 8L
+				id: "5B056B10FA5BC73A"
+				item: { count: 1, id: "irons_spellbooks:arcane_essence" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["68C2D91EBA520590"]
+			icon: {
+				components: {
+					"irons_spellbooks:spell_container": {
+						data: [ ]
+						maxSpells: 5
+						mustEquip: 1b
+						spellWheel: 1b
+					}
+				}
+				id: "irons_spellbooks:copper_spell_book"
+			}
+			id: "288497335C26C96F"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/scrolls_1"
+				id: "66707EAE41795439"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "708C3F628EFB6DBF"
+				type: "checkmark"
+			}]
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["288497335C26C96F"]
+			icon: {
+				id: "irons_spellbooks:fire_rune"
+			}
+			id: "4CC1EE55918CB067"
+			rewards: [{
+				command: "/puffish_skills experience add {p} greenlanterns:adventurer 50"
+				id: "6009290C84DF5D20"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "639BEF425F1DA471"
+				type: "checkmark"
+			}]
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["288497335C26C96F"]
+			icon: {
+				id: "irons_spellbooks:alchemist_cauldron"
+			}
+			id: "50F50FBC3AD0493A"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "176C1D08F7F216A1"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "3AD6F4F78520E65C"
+				item: { count: 1, id: "irons_spellbooks:alchemist_cauldron" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: -2.0d
+		}
+		{
+			icon: {
+				id: "irons_spellbooks:rare_ink"
+			}
+			id: "16C13F18A08C1E2F"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "398934672661F6DF"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				count: 2L
+				id: "477F71EDE3343B7F"
+				item: { count: 1, id: "irons_spellbooks:rare_ink" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["16C13F18A08C1E2F"]
+			icon: {
+				id: "irons_spellbooks:scroll_forge"
+			}
+			id: "3B32E157345B157F"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/scrolls_2"
+				id: "227724DE1EAEB117"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "irons_spellbooks:irons_spellbooks/make_scroll_forge"
+				criterion: ""
+				id: "4589164E538F52DE"
+				type: "advancement"
+			}]
+			x: 7.5d
+			y: -2.0d
+		}
+		{
+			icon: {
+				id: "irons_spellbooks:arcane_anvil"
+			}
+			id: "2FA49F9A9F170DDB"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "7A281544748AD78C"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "irons_spellbooks:irons_spellbooks/make_arcane_anvil"
+				criterion: ""
+				id: "0812CDCE5B0137F7"
+				type: "advancement"
+			}]
+			x: 10.0d
+			y: -2.0d
+		}
+		{
+			icon: {
+				id: "irons_spellbooks:upgrade_orb"
+			}
+			id: "45FC56A04D3CC373"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "6E219D0F6E755F2C"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "3B5F755270AD5CEB"
+				item: { count: 1, id: "irons_spellbooks:upgrade_orb" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["45FC56A04D3CC373"]
+			icon: {
+				id: "irons_spellbooks:mana_upgrade_orb"
+			}
+			id: "1961549B36324807"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "1D749DC5A74BE35F"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "7C25DA6B88CA59DB"
+				item: { count: 1, id: "irons_spellbooks:mana_upgrade_orb" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["288497335C26C96F"]
+			icon: {
+				components: {
+					"irons_spellbooks:spell_container": {
+						data: [ ]
+						maxSpells: 6
+						mustEquip: 1b
+						spellWheel: 1b
+					}
+				}
+				id: "irons_spellbooks:iron_spell_book"
+			}
+			id: "3E63C9B6F8DCE22D"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/scrolls_1"
+				id: "0900BFDBBB035AC1"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "irons_spellbooks:irons_spellbooks/spell_book_iron"
+				criterion: ""
+				id: "2CCE11F964652FB2"
+				type: "advancement"
+			}]
+			x: 2.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["3E63C9B6F8DCE22D"]
+			icon: {
+				id: "irons_spellbooks:pyromancer_helmet"
+			}
+			id: "0339094B0DA2A8B1"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "3ED64F87C3C11B32"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "04C72F892C982182"
+				type: "checkmark"
+			}]
+			x: 5.0d
+			y: 2.0d
+		}
+		{
+			icon: {
+				id: "irons_spellbooks:mithril_weave"
+			}
+			id: "067775E997069BA2"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "283C3D9C04ACBA68"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "2BF2986DB5D72680"
+				item: { count: 1, id: "irons_spellbooks:mithril_weave" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["067775E997069BA2"]
+			icon: {
+				components: {
+					"irons_spellbooks:spell_container": {
+						data: [ ]
+						maxSpells: 10
+						mustEquip: 1b
+						spellWheel: 1b
+					}
+				}
+				id: "irons_spellbooks:diamond_spell_book"
+			}
+			id: "648562780A0BA6CE"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/scrolls_2"
+				id: "1B06E3316CE05061"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "irons_spellbooks:irons_spellbooks/spell_book_diamond"
+				criterion: ""
+				id: "332103F5C3741BE4"
+				type: "advancement"
+			}]
+			x: 10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["648562780A0BA6CE"]
+			icon: {
+				components: {
+					"irons_spellbooks:spell_container": {
+						data: [ ]
+						maxSpells: 12
+						mustEquip: 1b
+						spellWheel: 1b
+					}
+				}
+				id: "irons_spellbooks:netherite_spell_book"
+			}
+			id: "325B876C2BCA6B1D"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/scrolls_3"
+					id: "0FF409673E476367"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "04FB1538D0DB9DFB"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 200"
+					id: "001B7EF6EF860F0A"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "octagon"
+			size: 1.5d
+			tasks: [{
+				advancement: "irons_spellbooks:irons_spellbooks/spell_book_netherite"
+				criterion: ""
+				id: "572EB6B2F224335D"
+				type: "advancement"
+			}]
+			x: 12.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3E63C9B6F8DCE22D"]
+			icon: {
+				id: "irons_spellbooks:wayward_compass"
+			}
+			id: "191712001806C149"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "56C0B69587B2BDF0"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "3813A5ECCACC0443"
+				structure: "irons_spellbooks:catacombs"
+				type: "structure"
+			}]
+			x: 2.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["191712001806C149"]
+			icon: {
+				id: "familiarslib:familiar_compendium"
+			}
+			id: "1F32B95D6BE71B7B"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					id: "4AECE7E5869B133B"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 50"
+					id: "4CC23912E3641F68"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				advancement: "alshanex_familiars:alshanex_familiars/root"
+				criterion: ""
+				id: "44B488EDC99C12C1"
+				type: "advancement"
+			}]
+			x: 5.0d
+			y: 4.0d
+		}
+		{
+			icon: {
+				components: {
+					"irons_spellbooks:spell_container": {
+						data: [ ]
+						maxSpells: 5
+						mustEquip: 1b
+						spellWheel: 1b
+					}
+				}
+				id: "galosphere_spellbooks:sterling_spell_book"
+			}
+			id: "4E8EB2630EAB8E98"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/scrolls_1"
+				id: "70B2B33EFC68F083"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "5E8BA3B1243261AC"
+				item: { components: { "irons_spellbooks:spell_container": { data: [ ], maxSpells: 5, mustEquip: 1b, spellWheel: 1b } }, count: 1, id: "galosphere_spellbooks:sterling_spell_book" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["4E8EB2630EAB8E98"]
+			icon: {
+				id: "cataclysm_spellbooks:abyssal_rune"
+			}
+			id: "12166EE4F9D0CB07"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "156FAAB85EF5C73F"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "466CCF282E67BEA7"
+				item: { count: 1, id: "cataclysm_spellbooks:abyssal_rune" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 4.0d
+		}
+		{
+			icon: {
+				id: "discerning_the_eldritch:eldritch_rune"
+			}
+			id: "7E023782035521AB"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "7E1EBCB6A4463CD5"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "discerning_the_eldritch:discerning_the_eldritch/main/enter_cultist_base"
+				criterion: ""
+				id: "47B6C5593091B306"
+				type: "advancement"
+			}]
+			x: 5.0d
+			y: 6.0d
+		}
+		{
+			icon: {
+				id: "discerning_the_eldritch:eldritch_soul_shard"
+			}
+			id: "4428B46FAA6F2B38"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "2F09B923F7CF7B28"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/scrolls_3"
+					id: "78B8C1255F8017F5"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 300"
+					id: "75A233438094C6B3"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.25d
+			tasks: [{
+				entity: "discerning_the_eldritch:ascended_one"
+				id: "217EB5A3B6145D95"
+				type: "kill"
+				value: 1L
+			}]
+			x: 7.5d
+			y: 6.0d
+		}
+	]
+}

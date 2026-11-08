@@ -1,0 +1,1011 @@
+{
+  "id": "class_orange",
+  "title": "&6The Orange Light: Path of the Mountain",
+  "subtitle": "Hoardwarden. Mine.",
+  "icon": "createlanterns:orange_dust",
+  "group": "classes",
+  "order": 1,
+  "quests": [
+    {
+      "key": "join",
+      "title": "&6The Hoardwarden",
+      "subtitle": "Join this light",
+      "desc": [
+        "&o\"Mine.\"&r",
+        "Orange is the light of the hoard: an earth-magic tank in heavy plate, who digs deep, loots everything and cuts gems.",
+        "",
+        "Claim the reward to join Orange and unlock its talent tree. You can still join other lights later."
+      ],
+      "icon": "createlanterns:orange_dust",
+      "x": 0,
+      "y": 0,
+      "shape": "pentagon",
+      "size": 2,
+      "deps": ["act1:choose_path"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "command", "command": "/gl class join {p} orange"},
+        {"type": "item", "item": "minecraft:iron_pickaxe"},
+        {"type": "item", "item": "minecraft:torch", "count": 32},
+        {"type": "item", "item": "minecraft:bread", "count": 8},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "orange", "amount": 50}
+      ]
+    },
+    {
+      "key": "shiny",
+      "title": "Shiny",
+      "desc": [
+        "The light hums whenever you hold ore. It wants more.",
+        "",
+        "Mine &e64 raw iron&r and &e16 raw gold&r. With &eFTB Ultimine&r, hold its key (see Controls) to dig a whole vein at once. Ores give Orange lots of XP."
+      ],
+      "icon": "minecraft:raw_iron",
+      "x": 1.5,
+      "y": 0,
+      "deps": ["join"],
+      "tasks": [
+        {"type": "item", "item": "minecraft:raw_iron", "count": 64},
+        {"type": "item", "item": "minecraft:raw_gold", "count": 16}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:torch", "count": 32},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "orange", "amount": 75}
+      ]
+    },
+    {
+      "key": "deep_veins",
+      "title": "Deep Veins",
+      "desc": [
+        "Old miners dug far, and they didn't come back for everything.",
+        "",
+        "Find one of the rarer &eYUNG's Better Mineshaft&r styles: dripstone, lush, mushroom, ice, jungle, mesa, red desert or overgrown. Each matches its biome or cave."
+      ],
+      "icon": "minecraft:rail",
+      "x": 3,
+      "y": 0,
+      "deps": ["shiny"],
+      "tasks": [
+        {"type": "structure", "structure": "bettermineshafts:mineshaft_dripstone", "optional": true},
+        {"type": "structure", "structure": "bettermineshafts:mineshaft_lush", "optional": true},
+        {"type": "structure", "structure": "bettermineshafts:mineshaft_mushroom", "optional": true},
+        {"type": "structure", "structure": "bettermineshafts:mineshaft_ice", "optional": true},
+        {"type": "structure", "structure": "bettermineshafts:mineshaft_jungle", "optional": true},
+        {"type": "structure", "structure": "bettermineshafts:mineshaft_mesa", "optional": true},
+        {"type": "structure", "structure": "bettermineshafts:mineshaft_red_desert", "optional": true},
+        {"type": "structure", "structure": "bettermineshafts:mineshaft_overgrown", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "orange", "amount": 75}
+      ]
+    },
+    {
+      "key": "wroughtnaut",
+      "title": "The Iron Ghost",
+      "desc": [
+        "Below the hills, an empty suit of armor still guards a treasure no one remembers.",
+        "",
+        "Find a Mowzie's &eWrought Chamber&r underground and defeat the &eFerrous Wroughtnaut&r. Hit it only when it's stuck after a swing; its armor shrugs off everything else."
+      ],
+      "icon": "mowziesmobs:wrought_helmet",
+      "x": 4.5,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 1.5,
+      "deps": ["deep_veins"],
+      "tasks": [
+        {"type": "structure", "structure": "mowziesmobs:wrought_chamber"},
+        {"type": "kill", "entity": "mowziesmobs:ferrous_wroughtnaut"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp_levels", "levels": 2},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "orange", "amount": 150}
+      ]
+    },
+    {
+      "key": "wrought_axe",
+      "title": "Axe of a Thousand Metals",
+      "desc": [
+        "A heavy axe that remembers every metal it has ever cut.",
+        "",
+        "Claim the &eAxe of a Thousand Metals&r from the Wroughtnaut."
+      ],
+      "icon": "mowziesmobs:wrought_axe",
+      "x": 6,
+      "y": 0,
+      "deps": ["wroughtnaut"],
+      "tasks": [
+        {"type": "item", "item": "mowziesmobs:wrought_axe"}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 120},
+        {"type": "skill_xp", "category": "orange", "amount": 100}
+      ]
+    },
+    {
+      "key": "archaeology",
+      "title": "Grave Goods",
+      "desc": [
+        "The dead keep their best things close. A Hoardwarden asks politely, with a brush.",
+        "",
+        "Brush suspicious sand or gravel (trail ruins, desert wells, ocean ruins) until you recover a &epottery sherd&r."
+      ],
+      "icon": "minecraft:brush",
+      "x": 1.5,
+      "y": -1.5,
+      "deps": ["join"],
+      "tasks": [
+        {"type": "advancement", "advancement": "minecraft:adventure/salvage_sherd"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "orange", "amount": 75}
+      ]
+    },
+    {
+      "key": "lootr25",
+      "title": "Treasure Hunter",
+      "desc": [
+        "Every chest is a promise.",
+        "",
+        "Open &e25 loot chests&r in structures (Lootr counts each one you open for yourself). Opening loot chests gives Orange XP."
+      ],
+      "icon": "minecraft:chest",
+      "x": 3,
+      "y": -1.5,
+      "deps": ["archaeology"],
+      "tasks": [
+        {"type": "advancement", "advancement": "lootr:25loot"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 120},
+        {"type": "skill_xp", "category": "orange", "amount": 100}
+      ]
+    },
+    {
+      "key": "amethyst",
+      "title": "Singing Stone",
+      "desc": [
+        "There is a canyon where the rock itself is crystal, and it sings when the wind blows.",
+        "",
+        "Visit Terralith's &eAmethyst Canyon&r or &eAmethyst Rainforest&r and gather &e16 amethyst shards&r."
+      ],
+      "icon": "minecraft:amethyst_shard",
+      "x": 4.5,
+      "y": -1.5,
+      "deps": ["lootr25"],
+      "tasks": [
+        {"type": "biome", "biome": "terralith:amethyst_canyon", "optional": true},
+        {"type": "biome", "biome": "terralith:amethyst_rainforest", "optional": true},
+        {"type": "item", "item": "minecraft:amethyst_shard", "count": 16}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:spyglass"},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "orange", "amount": 75}
+      ]
+    },
+    {
+      "key": "knight_plate",
+      "title": "Plate and Rivet",
+      "desc": [
+        "A Hoardwarden is a wall that walks.",
+        "",
+        "Craft the &eEpic Knights&r knight cuirass, leggings and boots (steel plates, see JEI)."
+      ],
+      "icon": "magistuarmory:knight_chestplate",
+      "x": 1.5,
+      "y": 1.5,
+      "deps": ["join"],
+      "tasks": [
+        {"type": "item", "item": "magistuarmory:knight_chestplate"},
+        {"type": "item", "item": "magistuarmory:knight_leggings"},
+        {"type": "item", "item": "magistuarmory:knight_boots"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "magistuarmory:steel_ingot", "count": 4},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "orange", "amount": 75}
+      ]
+    },
+    {
+      "key": "kite",
+      "title": "The Kite Shield",
+      "desc": [
+        "Taller than a door, heavier than a sin.",
+        "",
+        "Craft a &eSteel Kite Shield&r. Hold the line: block for the party while they strike."
+      ],
+      "icon": "magistuarmory:steel_kiteshield",
+      "x": 3,
+      "y": 1.5,
+      "deps": ["knight_plate"],
+      "tasks": [
+        {"type": "item", "item": "magistuarmory:steel_kiteshield"}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "orange", "amount": 75}
+      ]
+    },
+    {
+      "key": "nature_rune",
+      "title": "Rune of the Deep Earth",
+      "desc": [
+        "Earth magic is patient: it shakes the ground, toughens the skin, and swallows enemies.",
+        "",
+        "Craft a &eNature Rune&r (see JEI). Orange's earth spells are &eEarthquake&r, &eStomp&r and &eOakskin&r; hunt for their scrolls."
+      ],
+      "icon": "irons_spellbooks:nature_rune",
+      "x": 4.5,
+      "y": 3,
+      "deps": ["kite"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:nature_rune"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "orange", "amount": 75}
+      ]
+    },
+    {
+      "key": "oakskin",
+      "title": "Skin Like Bark",
+      "desc": [
+        "Drink it and your skin hardens into living wood.",
+        "",
+        "Brew an &eOakskin Elixir&r (Iron's Spells alchemy, see JEI). Great before a boss."
+      ],
+      "icon": "irons_spellbooks:oakskin_elixir",
+      "x": 6,
+      "y": 3,
+      "deps": ["nature_rune"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:oakskin_elixir"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "irons_spellbooks:oakskin_elixir", "count": 2},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "orange", "amount": 75}
+      ]
+    },
+    {
+      "key": "whisper",
+      "title": "The Light Whispers",
+      "subtitle": "Class level 10",
+      "desc": [
+        "The light murmurs from inside the rock: &o\"All of it. It could all be yours.\"&r",
+        "",
+        "Reach &eOrange level 10&r. Mining ores, opening loot chests and trading for emeralds all count."
+      ],
+      "icon": "createlanterns:orange_dust",
+      "x": 9,
+      "y": 0,
+      "shape": "octagon",
+      "size": 1.5,
+      "deps": ["wrought_axe", "lootr25"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_whisper_orange"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "skill_xp", "category": "orange", "amount": 150}
+      ]
+    },
+    {
+      "key": "palladium",
+      "title": "Silver in the Salt",
+      "desc": [
+        "Pink salt caves glitter with a metal the surface has never seen.",
+        "",
+        "Explore Galosphere's &ePink Salt Caves&r and smelt &e8 palladium ingots&r."
+      ],
+      "icon": "galosphere:palladium_ingot",
+      "x": 10.5,
+      "y": -3,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "biome", "biome": "galosphere:pink_salt_caves", "optional": true},
+        {"type": "item", "item": "galosphere:palladium_ingot", "count": 8}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "orange", "amount": 150}
+      ]
+    },
+    {
+      "key": "sculptor",
+      "title": "Earthrend",
+      "desc": [
+        "An old geomancer shapes pillars of stone and dares travellers to climb them.",
+        "",
+        "Find Mowzie's &eSculptor&r and beat his challenge (climb while he attacks). His prize is the &eEarthrend Gauntlet&r."
+      ],
+      "icon": "mowziesmobs:earthrend_gauntlet",
+      "x": 12,
+      "y": -3,
+      "shape": "hexagon",
+      "size": 1.25,
+      "deps": ["palladium"],
+      "tasks": [
+        {"type": "advancement", "advancement": "mowziesmobs:sculptor_challenge"},
+        {"type": "item", "item": "mowziesmobs:earthrend_gauntlet"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 300},
+        {"type": "skill_xp", "category": "orange", "amount": 250}
+      ]
+    },
+    {
+      "key": "void_blossom",
+      "title": "The Deep Bloom",
+      "desc": [
+        "In a lush cave, a flower the size of a house has learned to hate.",
+        "",
+        "Kill the &eVoid Blossom&r (Bosses of Mass Destruction) in its overgrown cavern underground. Kill its spore minions fast."
+      ],
+      "icon": "bosses_of_mass_destruction:void_thorn",
+      "x": 13.5,
+      "y": -3,
+      "shape": "hexagon",
+      "size": 1.5,
+      "deps": ["sculptor"],
+      "tasks": [
+        {"type": "kill", "entity": "bosses_of_mass_destruction:void_blossom"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 400},
+        {"type": "skill_xp", "category": "orange", "amount": 300}
+      ]
+    },
+    {
+      "key": "gem_cutter",
+      "title": "Gem Cutter",
+      "desc": [
+        "A gem in the rough is a promise. A cut gem is a weapon.",
+        "",
+        "Find an &eApotheosis gem&r (rare mob and chest drop) and build a &eGem Cutting Table&r to raise gem rarity."
+      ],
+      "icon": "apotheosis:gem_cutting_table",
+      "x": 10.5,
+      "y": -1.5,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "item", "item": "apotheosis:gem"},
+        {"type": "item", "item": "apotheosis:gem_cutting_table"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "apotheosis:gem_dust", "count": 16},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "orange", "amount": 150}
+      ]
+    },
+    {
+      "key": "sockets",
+      "title": "A Setting for Every Stone",
+      "desc": [
+        "Good armor has room for treasure.",
+        "",
+        "Get a &eSigil of Socketing&r and add a socket to your gear at a smithing table, then set a gem in it. Socketing gems gives Orange XP."
+      ],
+      "icon": "apotheosis:sigil_of_socketing",
+      "x": 12,
+      "y": -1.5,
+      "deps": ["gem_cutter"],
+      "tasks": [
+        {"type": "item", "item": "apotheosis:sigil_of_socketing"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "apotheosis:sigil_of_socketing"},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "orange", "amount": 150}
+      ]
+    },
+    {
+      "key": "bloom_stone",
+      "title": "Bloom Stone Regalia",
+      "desc": [
+        "Stone that flowers. Armor that casts.",
+        "",
+        "Craft the &eBloom Stone&r mage set (Cataclysm: Spellbooks, see JEI): hat, chestplate, skirt and greaves. Orange's earth-school armor."
+      ],
+      "icon": "cataclysm_spellbooks:bloom_stone_chestplate",
+      "x": 13.5,
+      "y": -1.5,
+      "shape": "rsquare",
+      "size": 1.25,
+      "deps": ["sockets", "oakskin"],
+      "tasks": [
+        {"type": "item", "item": "cataclysm_spellbooks:bloom_stone_hat"},
+        {"type": "item", "item": "cataclysm_spellbooks:bloom_stone_chestplate"},
+        {"type": "item", "item": "cataclysm_spellbooks:bloom_stone_skirt"},
+        {"type": "item", "item": "cataclysm_spellbooks:bloom_stone_greaves"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp", "xp": 300},
+        {"type": "skill_xp", "category": "orange", "amount": 250}
+      ]
+    },
+    {
+      "key": "mithril",
+      "title": "Mithril",
+      "desc": [
+        "Lighter than steel, harder than diamond, and only found very, very deep.",
+        "",
+        "Mine &eMithril&r ore deep underground (Iron's Spells) and smelt &e4 mithril ingots&r."
+      ],
+      "icon": "irons_spellbooks:mithril_ingot",
+      "x": 10.5,
+      "y": 0,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:mithril_ingot", "count": 4}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "orange", "amount": 150}
+      ]
+    },
+    {
+      "key": "netherite",
+      "title": "Deeper Than Diamond",
+      "desc": [
+        "Ancient debris hides in the Nether's bones. It doesn't burn. Neither will you.",
+        "",
+        "Mine ancient debris in the Nether and make &e2 netherite ingots&r."
+      ],
+      "icon": "minecraft:netherite_ingot",
+      "x": 12,
+      "y": 0,
+      "deps": ["mithril"],
+      "tasks": [
+        {"type": "item", "item": "minecraft:netherite_ingot", "count": 2}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "orange", "amount": 200}
+      ]
+    },
+    {
+      "key": "ogre_country",
+      "title": "Ogre Country",
+      "desc": [
+        "Big footprints, bigger camps. The ogres pay tribute to a king.",
+        "",
+        "Find an &eogre outpost&r (Kings & Monsters, plains and swamps) and kill &e5 ogre grunts&r."
+      ],
+      "icon": "kingsandmonsters:ogre_tooth_necklace",
+      "x": 13.5,
+      "y": 0,
+      "deps": ["netherite"],
+      "tasks": [
+        {"type": "structure", "structure": "kingsandmonsters:ogre_outpost_plains", "optional": true},
+        {"type": "structure", "structure": "kingsandmonsters:ogre_outpost_swamp", "optional": true},
+        {"type": "kill", "entity": "kingsandmonsters:ogre_grunt", "count": 5}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "orange", "amount": 200}
+      ]
+    },
+    {
+      "key": "ogre_fort",
+      "title": "The King's Fort",
+      "desc": [
+        "Purple banners on a wall of logs. Inside, a throne made for something enormous.",
+        "",
+        "Find the &eOgre King's Fort&r (Kings & Monsters) in plains or swamp lands. Scout the walls; the guards are tough."
+      ],
+      "icon": "kingsandmonsters:ogre_kings_banner",
+      "x": 15,
+      "y": 0,
+      "deps": ["ogre_country"],
+      "tasks": [
+        {"type": "structure", "structure": "kingsandmonsters:ogre_kings_fort"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "orange", "amount": 200}
+      ]
+    },
+    {
+      "key": "roost",
+      "title": "Rock-Eater",
+      "desc": [
+        "A lumpy dragon that eats rocks and spits lava. A Hoardwarden's kind of beast.",
+        "",
+        "Find a &eBook of Dragons&r roost, climb onto a wild dragon and hold on until it stops bucking: then it's yours. A &eGronckle&r suits you best; the Book of Dragons explains each species."
+      ],
+      "icon": "bookofdragons:gronckle_scales",
+      "x": 10.5,
+      "y": 1.5,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "structure", "structure": "bookofdragons:roost_cave", "optional": true},
+        {"type": "structure", "structure": "bookofdragons:roost_cliff", "optional": true},
+        {"type": "structure", "structure": "bookofdragons:roost_barrens", "optional": true},
+        {"type": "structure", "structure": "bookofdragons:roost_glade", "optional": true},
+        {"type": "structure", "structure": "bookofdragons:roost_wetland", "optional": true},
+        {"type": "advancement", "advancement": "bookofdragons:dragon_rider"},
+        {"type": "advancement", "advancement": "bookofdragons:dragon_tamer"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "orange", "amount": 200}
+      ]
+    },
+    {
+      "key": "gronckle_iron",
+      "title": "Gronckle Iron",
+      "desc": [
+        "Feed a Gronckle the right rocks and it spits out the lightest, toughest metal in the world.",
+        "",
+        "Keep your Gronckle fed and collect &e4 Gronckle Iron&r (see the Book of Dragons)."
+      ],
+      "icon": "bookofdragons:gronckle_iron",
+      "x": 12,
+      "y": 1.5,
+      "deps": ["roost"],
+      "tasks": [
+        {"type": "item", "item": "bookofdragons:gronckle_iron", "count": 4}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "orange", "amount": 200}
+      ]
+    },
+    {
+      "key": "deathworm",
+      "title": "Something Under the Sand",
+      "desc": [
+        "The dunes ripple the wrong way.",
+        "",
+        "Optional: kill a &eDeath Worm&r in a desert (Ice and Fire). Its chitin makes good armor."
+      ],
+      "icon": "iceandfire:deathworm_chitin_yellow",
+      "x": 13.5,
+      "y": 3,
+      "shape": "hexagon",
+      "deps": ["gronckle_iron"],
+      "optional": true,
+      "tasks": [
+        {"type": "kill", "entity": "iceandfire:deathworm"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "orange", "amount": 150}
+      ]
+    },
+    {
+      "key": "dream",
+      "title": "The Dream",
+      "subtitle": "Class level 25",
+      "desc": [
+        "You dream of a mountain of gold, and of an orange lantern buried at its heart.",
+        "",
+        "Reach &eOrange level 25&r. Then the trial."
+      ],
+      "icon": "createlanterns:orange_liquid_light_bucket",
+      "x": 16.5,
+      "y": 0,
+      "shape": "octagon",
+      "size": 1.5,
+      "deps": ["ogre_fort", "bloom_stone"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_dream_orange"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "skill_xp", "category": "orange", "amount": 250}
+      ]
+    },
+    {
+      "key": "trial",
+      "title": "&6Crown of the Ogre King",
+      "subtitle": "Ring trial: the boss",
+      "desc": [
+        "The Ogre King rises from his throne, club in hand, crown askew. He thinks the hoard is his.",
+        "",
+        "Kill the &eOgre King&r in his fort (plains or swamp). His guards come first. Party members within 64 blocks get the trial credit too."
+      ],
+      "icon": "kingsandmonsters:ogre_kings_crown",
+      "x": 18.75,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 2.25,
+      "deps": ["dream", "ogre_fort"],
+      "tasks": [
+        {"type": "kill", "entity": "kingsandmonsters:ogre_lord", "optional": true},
+        {"type": "stage", "stage": "gl_trial_orange", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/class_orange"},
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp_levels", "levels": 8},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "orange", "amount": 500}
+      ]
+    },
+    {
+      "key": "choice",
+      "title": "The Ring Judges",
+      "subtitle": "The ring will judge you",
+      "desc": [
+        "The King's crown rolls to your feet, and an orange light rises out of it, hungry and patient.",
+        "What would you give up to keep what you have?",
+        "",
+        "Claim this reward to begin the &ering trial&r: a conversation in chat. The ring will judge you. Your &eanswers&r decide whether you receive your own light, the &fWhite&r, or the &8Black&r. Answer as who you really are.",
+        "&7(Only works once you have the trial credit from the quest before.)"
+      ],
+      "icon": "createlanterns:ring_blank",
+      "x": 21,
+      "y": 0,
+      "shape": "diamond",
+      "size": 1.75,
+      "deps": ["trial"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "command", "command": "/gl trial begin {p} orange"}
+      ]
+    },
+    {
+      "key": "ring",
+      "title": "&6Ring-Bearer",
+      "subtitle": "Ring-bearer",
+      "desc": [
+        "A ring found you. Orange, White or Black, you are a &eLantern&r now: you can fly, and your will takes shape as constructs.",
+        "",
+        "This completes when you have &eany&r ring from the trial. The Orange path continues; the &6Last Light&r chapter has opened."
+      ],
+      "icon": "createlanterns:orange_power_ring",
+      "x": 23.25,
+      "y": 0,
+      "shape": "octagon",
+      "size": 2.5,
+      "deps": ["choice"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_ringbearer"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 10},
+        {"type": "xp", "xp": 1000},
+        {"type": "skill_xp", "category": "orange", "amount": 750}
+      ]
+    },
+    {
+      "key": "true_orange",
+      "title": "The Orange Answered",
+      "desc": [
+        "The orange ring stayed, and it wants everything.",
+        "",
+        "Optional, Orange ring only: learn &eLodestone Pull&r and &eShatterplunder&r (Spectral Hub HUD). Your kills drop more while it's lit."
+      ],
+      "icon": "createlanterns:orange_power_battery",
+      "x": 25.25,
+      "y": -1.5,
+      "deps": ["ring"],
+      "optional": true,
+      "tasks": [
+        {"type": "stage", "stage": "gl_ring_orange"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "orange", "amount": 300}
+      ]
+    },
+    {
+      "key": "crown",
+      "title": "Spoils of the King",
+      "desc": [
+        "A king's crown and a king's club. Both are yours now.",
+        "",
+        "Claim the &eOgre King's Crown&r and the &eOgre King's Club&r."
+      ],
+      "icon": "kingsandmonsters:ogre_kings_club",
+      "x": 25.25,
+      "y": 1.5,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "item", "item": "kingsandmonsters:ogre_kings_crown"},
+        {"type": "item", "item": "kingsandmonsters:ogre_kings_club"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 400},
+        {"type": "skill_xp", "category": "orange", "amount": 300}
+      ]
+    },
+    {
+      "key": "bog_iron",
+      "title": "Bog Iron",
+      "desc": [
+        "With the King gone, the swamp gives up its strange dark iron.",
+        "",
+        "Mine bog iron and craft the full &eBog Iron&r armor set."
+      ],
+      "icon": "kingsandmonsters:bog_iron_chestplate",
+      "x": 26.75,
+      "y": 1.5,
+      "shape": "rsquare",
+      "size": 1.25,
+      "deps": ["crown"],
+      "tasks": [
+        {"type": "item", "item": "kingsandmonsters:bog_iron_helmet"},
+        {"type": "item", "item": "kingsandmonsters:bog_iron_chestplate"},
+        {"type": "item", "item": "kingsandmonsters:bog_iron_leggings"},
+        {"type": "item", "item": "kingsandmonsters:bog_iron_boots"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 600},
+        {"type": "skill_xp", "category": "orange", "amount": 400}
+      ]
+    },
+    {
+      "key": "pyramid",
+      "title": "Pyramid of Greed",
+      "desc": [
+        "A pyramid half-swallowed by the desert, cursed by a pharaoh who never shared.",
+        "",
+        "Find the &eCursed Pyramid&r (L_Ender's Cataclysm) in a desert. An &eEye of Desert&r points the way."
+      ],
+      "icon": "cataclysm:desert_eye",
+      "x": 25.25,
+      "y": 0,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "structure", "structure": "cataclysm:cursed_pyramid"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 400},
+        {"type": "skill_xp", "category": "orange", "amount": 300}
+      ]
+    },
+    {
+      "key": "remnant",
+      "title": "The Ancient Remnant",
+      "desc": [
+        "The pharaoh's guardian: a skeleton the size of a temple, still guarding the gold.",
+        "",
+        "Kill the &eAncient Remnant&r deep in the Cursed Pyramid. Its sandstorms blind; fight it as a party."
+      ],
+      "icon": "cataclysm:remnant_skull",
+      "x": 26.75,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 1.4,
+      "deps": ["pyramid"],
+      "tasks": [
+        {"type": "kill", "entity": "cataclysm:ancient_remnant"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 800},
+        {"type": "skill_xp", "category": "orange", "amount": 500}
+      ]
+    },
+    {
+      "key": "hoard",
+      "title": "The Hoard",
+      "desc": [
+        "A Hoardwarden's vault is never full. But it can be impressive.",
+        "",
+        "Gather &e9 gold blocks&r, &e9 diamond blocks&r and &e9 emerald blocks&r (kept, not consumed)."
+      ],
+      "icon": "minecraft:gold_block",
+      "x": 28.25,
+      "y": 0,
+      "shape": "rsquare",
+      "size": 1.25,
+      "deps": ["remnant"],
+      "tasks": [
+        {"type": "item", "item": "minecraft:gold_block", "count": 9},
+        {"type": "item", "item": "minecraft:diamond_block", "count": 9},
+        {"type": "item", "item": "minecraft:emerald_block", "count": 9}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 600},
+        {"type": "skill_xp", "category": "orange", "amount": 400}
+      ]
+    },
+    {
+      "key": "ruined_citadel",
+      "title": "The Ruined Citadel",
+      "desc": [
+        "On a far End island, a citadel of obsidian and void. Its guardian wears a gauntlet worth a kingdom.",
+        "",
+        "Find the &eRuined Citadel&r (Cataclysm) on the outer End islands. An &eEye of Void&r points the way."
+      ],
+      "icon": "cataclysm:void_eye",
+      "x": 25.25,
+      "y": -3,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "structure", "structure": "cataclysm:ruined_citadel"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 400},
+        {"type": "skill_xp", "category": "orange", "amount": 300}
+      ]
+    },
+    {
+      "key": "ender_guardian",
+      "title": "The Guardian's Fist",
+      "desc": [
+        "A colossus of void-steel, and its fist is the treasure.",
+        "",
+        "Kill the &eEnder Guardian&r in the Ruined Citadel. Watch for its void runes on the floor."
+      ],
+      "icon": "cataclysm:void_core",
+      "x": 26.75,
+      "y": -3,
+      "shape": "hexagon",
+      "size": 1.4,
+      "deps": ["ruined_citadel"],
+      "tasks": [
+        {"type": "kill", "entity": "cataclysm:ender_guardian"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 800},
+        {"type": "skill_xp", "category": "orange", "amount": 500}
+      ]
+    },
+    {
+      "key": "gauntlet_guard",
+      "title": "Gauntlet of Guard",
+      "desc": [
+        "Grab, pull, punch. The perfect tank's tool.",
+        "",
+        "Claim the &eGauntlet of Guard&r from the Ender Guardian."
+      ],
+      "icon": "cataclysm:gauntlet_of_guard",
+      "x": 28.25,
+      "y": -3,
+      "deps": ["ender_guardian"],
+      "tasks": [
+        {"type": "item", "item": "cataclysm:gauntlet_of_guard"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "orange", "amount": 300}
+      ]
+    },
+    {
+      "key": "gem_hoard",
+      "title": "Gem Hoarder",
+      "desc": [
+        "Every colour of stone, every rarity, all of it. Mine.",
+        "",
+        "Collect &e12 Apotheosis gems&r and a &eGem Case&r to keep them in."
+      ],
+      "icon": "apotheosis:gem_case",
+      "x": 28.25,
+      "y": -1.5,
+      "deps": ["ring", "sockets"],
+      "tasks": [
+        {"type": "item", "item": "apotheosis:gem", "count": 12},
+        {"type": "item", "item": "apotheosis:gem_case"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "orange", "amount": 400}
+      ]
+    },
+    {
+      "key": "ancient_guardian",
+      "title": "The Stone That Walks",
+      "desc": [
+        "Under an old stronghold, a guardian of carved stone was built to keep thieves out. You're a thief.",
+        "",
+        "Defeat the &eAncient Guardian&r (Legendary Monsters). Its &eGuide Book&r and structure advancements show where it waits."
+      ],
+      "icon": "legendary_monsters:ancient_spike",
+      "x": 29.75,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 1.4,
+      "deps": ["hoard"],
+      "tasks": [
+        {"type": "kill", "entity": "legendary_monsters:ancient_guardian"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 900},
+        {"type": "skill_xp", "category": "orange", "amount": 600}
+      ]
+    },
+    {
+      "key": "mythic",
+      "title": "Mythic Hoard",
+      "subtitle": "Extreme gear",
+      "desc": [
+        "The best of everything, and all of it yours.",
+        "",
+        "Unlock the &ePinnacle&r world tier (Apotheosis: a full Epic affix set and the Ender Dragon slain; CTRL+T switches tiers) and wear &6Mythic&r armor with every socket filled by perfect gems. Tick the checkmark when you do."
+      ],
+      "icon": "apotheosis:sigil_of_supremacy",
+      "x": 32.75,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 1.5,
+      "deps": ["gauntlet_guard", "ancient_guardian", "gem_hoard", "bog_iron"],
+      "tasks": [
+        {"type": "advancement", "advancement": "apotheosis:progression/pinnacle"},
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 15},
+        {"type": "xp", "xp": 1500},
+        {"type": "skill_xp", "category": "orange", "amount": 1000}
+      ]
+    },
+    {
+      "key": "legend",
+      "title": "&6Legend of the Orange Light",
+      "subtitle": "After the Last Light",
+      "desc": [
+        "When the Devourer fell, the Hoardwarden held the line, and then picked up everything it dropped.",
+        "",
+        "Complete the Last Light and the Orange path. The hoard is yours."
+      ],
+      "icon": "createlanterns:orange_power_ring",
+      "x": 36.25,
+      "y": 0,
+      "shape": "gear",
+      "size": 2,
+      "deps": ["mythic", "finale:last_light"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 20},
+        {"type": "xp", "xp": 2000},
+        {"type": "skill_xp", "category": "orange", "amount": 1500}
+      ]
+    }
+  ]
+}

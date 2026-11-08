@@ -1,0 +1,260 @@
+{
+  "id": "guide_aeronautics_lanterns",
+  "title": "&aSky, Ships and Lanterns",
+  "subtitle": "Create Aeronautics airships, and the rings, lanterns and worlds of the Lantern Corps.",
+  "icon": "createlanterns:power_battery",
+  "group": "mods",
+  "order": 12,
+  "quests": [
+    {
+      "key": "physics",
+      "title": "Physics Be Upon Ye",
+      "subtitle": "Create Aeronautics",
+      "desc": [
+        "&eCreate Aeronautics&r lets you build things that fly. The heart of every flying build is the &ePhysics Assembler&r: it turns a structure into a &eSimulated Contraption&r with real weight and momentum, and you can still walk around on it and use it.",
+        "Hold &eW&r over any Aeronautics block to Ponder it. Get a Physics Assembler."
+      ],
+      "icon": "simulated:physics_assembler",
+      "x": 0, "y": 0,
+      "shape": "hexagon", "size": 1.5,
+      "deps": ["act1:choose_path"],
+      "tasks": [{"type": "advancement", "advancement": "simulated:applied_kinematics"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 50}
+      ]
+    },
+    {
+      "key": "balloon",
+      "title": "Head in the Clouds",
+      "desc": [
+        "A balloon is a closed space walled with &eHot Air Envelope&r blocks. A &eHot Air Burner&r under it fills it with hot air, and the hot air lifts the contraption.",
+        "Bigger balloon, more lift. Heavy blocks (stone, metal) need more; planks and wool are light. Fill an airtight envelope."
+      ],
+      "icon": "aeronautics:white_envelope",
+      "x": 2.5, "y": -2,
+      "deps": ["physics"],
+      "tasks": [{"type": "advancement", "advancement": "aeronautics:head_in_the_clouds"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "propeller",
+      "title": "For Every Action...",
+      "desc": [
+        "Lift gets you up; &ethrust&r moves you. A spinning &ePropeller&r (wooden or andesite) pushes the contraption the other way.",
+        "Place and power a propeller. A wrench reverses a Smart Propeller."
+      ],
+      "icon": "aeronautics:wooden_propeller",
+      "x": 5, "y": -2,
+      "deps": ["balloon"],
+      "tasks": [{"type": "advancement", "advancement": "aeronautics:for_every_action"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "propeller_bearing",
+      "title": "In Thrust We Trust",
+      "desc": [
+        "A &ePropeller Bearing&r builds a big propeller from the blocks you attach in front of it (sails work well). More blades, more thrust.",
+        "The &eGyroscopic Propeller Bearing&r tilts to stay upright: ideal for helicopters. Air gets thinner the higher you go, so engines lose power near the ceiling."
+      ],
+      "icon": "aeronautics:propeller_bearing",
+      "x": 7.5, "y": -2,
+      "deps": ["propeller"],
+      "tasks": [{"type": "advancement", "advancement": "aeronautics:in_thrust_we_trust"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "levitite",
+      "title": "Unidentified Floating Object",
+      "desc": [
+        "&eLevitite&r floats. Attach enough of it to a contraption and the whole thing levitates, no balloon needed.",
+        "Make &eLevitite Blend&r and let it crystallize into Levitite (Ponder the blend to see how). The rarer Pearlescent Levitite is waiting to be discovered."
+      ],
+      "icon": "aeronautics:levitite",
+      "x": 10, "y": -2,
+      "deps": ["propeller_bearing"],
+      "tasks": [{"type": "advancement", "advancement": "aeronautics:unidentified_floating_object"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "portable_engine",
+      "title": "An Engine That Flies",
+      "desc": [
+        "A &ePortable Engine&r burns fuel to make rotation right on your contraption, so propellers turn wherever you go.",
+        "Fill it with coal, charcoal or wood. Place and power one."
+      ],
+      "icon": "simulated:white_portable_engine",
+      "x": 2.5, "y": -4,
+      "deps": ["physics"],
+      "tasks": [{"type": "advancement", "advancement": "simulated:steamless_engine"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "steering",
+      "title": "Hands on the Wheel",
+      "desc": [
+        "A &eSteering Wheel&r turns your ship by hand: grab it and spin. A &eThrottle Lever&r sets engine power, and linked receivers let you fly from a cockpit.",
+        "Grab and spin a Steering Wheel."
+      ],
+      "icon": "simulated:steering_wheel",
+      "x": 5, "y": -4,
+      "deps": ["portable_engine"],
+      "tasks": [{"type": "advancement", "advancement": "simulated:unpowered_steering"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "navigation",
+      "title": "Thataway!",
+      "desc": [
+        "A &eNavigation Table&r points toward a target (a map or compass item) and gives a redstone signal you can wire into your steering. An &eAltitude Sensor&r tells you how high you are.",
+        "Place a Navigation Table. With redstone, your ship can fly itself."
+      ],
+      "icon": "simulated:navigation_table",
+      "x": 7.5, "y": -4,
+      "deps": ["steering"],
+      "tasks": [{"type": "advancement", "advancement": "simulated:thataway"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "airship",
+      "title": "Captain of the Clouds",
+      "desc": [
+        "Lift, thrust, steering and a heading: put them together into a real airship or plane, with a deck your friends can stand on.",
+        "Fly it to a Sky Village or a Heavenly fortress. Name it with a &eNameplate&r; every good ship has a name."
+      ],
+      "icon": "aeronautics:aviators_goggles",
+      "x": 12.5, "y": -3,
+      "shape": "octagon", "size": 1.25,
+      "deps": ["levitite", "navigation"],
+      "tasks": [{"type": "advancement", "advancement": "simulated:i_declare_thee"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 150}
+      ]
+    },
+    {
+      "key": "corps",
+      "title": "The Lantern Corps",
+      "subtitle": "Create: Lanterns",
+      "desc": [
+        "Seven Corps, seven lights, one ring each. Rings aren't crafted: yours comes at the end of your class's road, from its &ering trial&r. The ring chooses; it refuses the unworthy.",
+        "The Guardians on Oa are watching who earns one. Until then, learn what the rings and lanterns do."
+      ],
+      "icon": "createlanterns:lantern_frame",
+      "x": 2.5, "y": 2,
+      "deps": ["physics"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [{"type": "xp", "xp": 100}]
+    },
+    {
+      "key": "ring",
+      "title": "The Ring Chooses",
+      "desc": [
+        "Earn a ring through your class's ring trial. A lit ring lets you &efly&r (double-jump to take off, double-tap forward to shift up a gear, tap back to shift down), forms a hard-light &esuit&r that soaks hits, and keeps you breathing underwater.",
+        "Its &egrip&r grabs, hurls and pins things, even arrows in flight. Each light has two powers and an ultimate on the power key. Search 'Lantern' in Controls for the keys."
+      ],
+      "icon": "createlanterns:power_ring",
+      "x": 5, "y": 2,
+      "shape": "gear", "size": 1.25,
+      "deps": ["corps"],
+      "tasks": [{"type": "stage", "stage": "gl_ringbearer"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 200}
+      ]
+    },
+    {
+      "key": "recharge",
+      "title": "In Brightest Day",
+      "desc": [
+        "Everything the ring does costs charge. Craft the &eLantern&r of your light (see JEI) and stand within 6 blocks of it to start the charging ritual.",
+        "A Lantern holds a lot, but it only refills at a &eCentral Power Battery&r. An idle ring slowly recovers a little on your will alone, and dying costs it a quarter of its charge. A dropped ring flies back to you."
+      ],
+      "icon": "createlanterns:power_battery",
+      "x": 7.5, "y": 2,
+      "deps": ["ring"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "constructs",
+      "title": "Hard Light",
+      "desc": [
+        "The &econstruct wheel&r lets you design, copy and summon &econstructs&r: shapes made of your light. A new bearer's construct holds 32 blocks; it grows with your will and with every minute your ring stays lit.",
+        "Stand on a construct you made and lift it with the grip key to ride it. Engines and burners on a construct run off your ring. Careful: crashing at speed digs a crater, so don't land in a friend's base."
+      ],
+      "icon": "createlanterns:indigo_staff",
+      "x": 10, "y": 2,
+      "deps": ["recharge"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 100}
+      ]
+    },
+    {
+      "key": "power_core",
+      "title": "The Power Core",
+      "desc": [
+        "A &ePower Core&r is the heart of a Central Power Battery: brass blocks, precision mechanisms and a beacon. It comes fully charged and keeps its charge if you break and replace it.",
+        "Make one. You'll need Create's brass and precision mechanisms (see the Create chapter)."
+      ],
+      "icon": "createlanterns:power_core",
+      "x": 5, "y": 4,
+      "deps": ["corps"],
+      "tasks": [{"type": "item", "item": "createlanterns:power_core"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "central_battery",
+      "title": "A Central Power Battery",
+      "desc": [
+        "Build a frame of &ebrass casing&r, glass and your light's key block around the Power Core. A small battery reaches 64 blocks; medium and biggest reach two and four times as far.",
+        "It recharges Lanterns and rings in reach, keeps Blaze Burners lit, and turns a shaft under its core for Create (64 RPM). Your base's beating heart."
+      ],
+      "icon": "create:brass_casing",
+      "x": 7.5, "y": 4,
+      "deps": ["power_core"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 300}
+      ]
+    },
+    {
+      "key": "oa",
+      "title": "Oa",
+      "desc": [
+        "Far beyond the sky lies &aOa&r, the Guardians' world: the Citadel, the Guardian Outpost, the Lantern Spire, and the great Central Power Battery that recharges ten times faster than any other. Ships reach it.",
+        "Fly there with your party and recharge every ring and Lantern you carry."
+      ],
+      "icon": "createlanterns:oa_flower",
+      "x": 15, "y": 0,
+      "shape": "octagon", "size": 1.75,
+      "deps": ["airship", "central_battery", "constructs"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 300},
+        {"type": "command", "command": "/gl lore {p} oa"}
+      ]
+    },
+    {
+      "key": "korugar",
+      "title": "Korugar",
+      "desc": [
+        "Korugar is a darker world: the Dread Plains, the Fear Bogs, the Fear Spire and Sinestro's Watchtower. Here it is the world of storms, and the Stormwright's trial climbs its spire.",
+        "Reach it by ship. Go armed."
+      ],
+      "icon": "createlanterns:yellow_power_battery",
+      "x": 15, "y": 3,
+      "shape": "octagon", "size": 1.5,
+      "deps": ["airship", "ring"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 250}
+      ]
+    }
+  ]
+}

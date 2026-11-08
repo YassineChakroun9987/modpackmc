@@ -1,0 +1,292 @@
+{
+  "id": "guide_apotheosis",
+  "title": "&aAffixes and Arcana",
+  "subtitle": "Apotheosis: rarity, gems, reforging, world tiers, enchanting and spawners.",
+  "icon": "apotheosis:reforging_table",
+  "group": "mods",
+  "order": 6,
+  "quests": [
+    {
+      "key": "rarity",
+      "title": "Loot With a Pedigree",
+      "desc": [
+        "&eApotheosis&r gives gear a &erarity&r (&fCommon&r, &aUncommon&r, &9Rare&r, &5Epic&r, &6Mythic&r) and random &eaffixes&r: bonus damage, life steal, crit, sockets, special effects on hit.",
+        "Read the &eChronicle of Shadows&r, Apotheosis's own guide: craft a book with a gold ingot. It explains every system in this chapter."
+      ],
+      "icon": "minecraft:book",
+      "x": 0, "y": 0,
+      "shape": "hexagon", "size": 1.5,
+      "deps": ["act1:choose_path"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 50}
+      ]
+    },
+    {
+      "key": "ascent",
+      "title": "World Tier: Ascent",
+      "desc": [
+        "You reached Frontier in Act I. World tiers go &eHaven > Frontier > Ascent > Summit > Pinnacle&r: each makes monsters stronger and loot better, and from Frontier on, &cApothic Invaders&r (armed boss mobs) roam.",
+        "Open the tier screen with its key (search 'World Tier' in Controls) to see what unlocks the next tier, then activate it. Each player chooses their own tier."
+      ],
+      "icon": "minecraft:iron_chestplate",
+      "x": 3, "y": 0,
+      "deps": ["rarity"],
+      "tasks": [{"type": "advancement", "advancement": "apotheosis:progression/ascent"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 75}
+      ]
+    },
+    {
+      "key": "summit",
+      "title": "World Tier: Summit",
+      "desc": [
+        "Summit asks for the Wither's death, among other things. Monsters here hit hard; your gear should have Rare or better affixes and socketed gems.",
+        "Lantern ring trials sit around this tier."
+      ],
+      "icon": "minecraft:diamond_chestplate",
+      "x": 6, "y": 0,
+      "deps": ["ascent"],
+      "tasks": [{"type": "advancement", "advancement": "apotheosis:progression/summit"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 150}
+      ]
+    },
+    {
+      "key": "pinnacle",
+      "title": "World Tier: Pinnacle",
+      "desc": [
+        "The top of the mountain. Mythic gear, perfect gems and the hardest monsters in the pack.",
+        "This is the tier the final fight is meant for."
+      ],
+      "icon": "minecraft:netherite_chestplate",
+      "x": 9, "y": 0,
+      "shape": "octagon", "size": 1.5,
+      "deps": ["summit"],
+      "tasks": [{"type": "advancement", "advancement": "apotheosis:progression/pinnacle"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 300},
+        {"type": "xp", "xp": 500}
+      ]
+    },
+    {
+      "key": "salvage",
+      "title": "Salvage, Don't Toss",
+      "desc": [
+        "Affixed gear you don't want goes into the &eSalvaging Table&r. It breaks items down into rarity materials (Mysterious Scrap Metal, Luminous Crystal Shards and rarer ones).",
+        "Those materials pay for reforging, so salvage everything you won't use."
+      ],
+      "icon": "apotheosis:salvaging_table",
+      "x": 2, "y": -2,
+      "deps": ["rarity"],
+      "tasks": [{"type": "item", "item": "apotheosis:salvaging_table"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "simple_reforge",
+      "title": "Reforging",
+      "desc": [
+        "The &eSimple Reforging Table&r rerolls an item's affixes, paid for with &eSigils of Rebirth&r and rarity materials. It offers you three results; pick the one you like.",
+        "It handles the lower rarities. Good for turning a decent sword into a great one."
+      ],
+      "icon": "apotheosis:simple_reforging_table",
+      "x": 4, "y": -2,
+      "deps": ["salvage"],
+      "tasks": [{"type": "item", "item": "apotheosis:simple_reforging_table"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "reforge",
+      "title": "The Reforging Table",
+      "desc": [
+        "The full &eReforging Table&r works on every rarity, up to Mythic. Higher rarities cost rarer materials.",
+        "Reforge the weapon you plan to keep through the late game."
+      ],
+      "icon": "apotheosis:reforging_table",
+      "x": 6, "y": -2,
+      "deps": ["simple_reforge"],
+      "tasks": [{"type": "item", "item": "apotheosis:reforging_table"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "augment",
+      "title": "Augmenting",
+      "desc": [
+        "The &eAugmenting Table&r changes one affix instead of the whole item: upgrade it or reroll just that line, using Sigils of Enhancement.",
+        "This is how you perfect an item without losing what you already like about it."
+      ],
+      "icon": "apotheosis:augmenting_table",
+      "x": 8, "y": -2,
+      "deps": ["reforge"],
+      "tasks": [{"type": "item", "item": "apotheosis:augmenting_table"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "gems",
+      "title": "Gems and Sockets",
+      "desc": [
+        "&eGems&r drop from monsters and chests. Put one into an item with an empty &esocket&r at a &eSmithing Table&r; each gem gives different bonuses on weapons, armour or tools.",
+        "A &eSigil of Socketing&r adds a socket; a &eSigil of Withdrawal&r takes gems back out. Socket a gem now."
+      ],
+      "icon": "apotheosis:sigil_of_socketing",
+      "x": 2, "y": -4,
+      "deps": ["rarity"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "gem_cutting",
+      "title": "Cutting Gems",
+      "desc": [
+        "Gems come in purities: &7Cracked&r, Chipped, Flawed, Normal, Flawless, &6Perfect&r. Higher purity, bigger bonus.",
+        "The &eGem Cutting Table&r uses gem dust and rarity materials to raise a gem's purity. Higher world tiers drop purer gems."
+      ],
+      "icon": "apotheosis:gem_cutting_table",
+      "x": 4, "y": -4,
+      "deps": ["gems"],
+      "tasks": [{"type": "item", "item": "apotheosis:gem_cutting_table"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "ench_30",
+      "title": "Three Stats",
+      "subtitle": "Apothic Enchanting",
+      "desc": [
+        "The enchanting table has three stats. &aEterna&r sets the highest level you can reach, &cQuanta&r adds randomness (stronger and weaker rolls), and &5Arcana&r gives more and rarer enchantments.",
+        "Bookshelves raise them; hover the table's stats to read them. Enchant an item at &elevel 30&r."
+      ],
+      "icon": "minecraft:enchanting_table",
+      "x": 2, "y": 2,
+      "deps": ["rarity"],
+      "tasks": [{"type": "advancement", "advancement": "apothic_enchanting:30ench"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "hellshelf",
+      "title": "Shelves of Fire",
+      "desc": [
+        "Special shelves push the stats much further than wood. The &eHellshelf&r comes from the Nether.",
+        "Mix shelves: each kind adds different amounts of Eterna, Quanta and Arcana. JEI (press &eU&r on a shelf) shows them."
+      ],
+      "icon": "apothic_enchanting:hellshelf",
+      "x": 4, "y": 2,
+      "deps": ["ench_30"],
+      "tasks": [{"type": "advancement", "advancement": "apothic_enchanting:hellshelf"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "seashelf",
+      "title": "Shelves of the Sea",
+      "desc": [
+        "The &eSeashelf&r is built from ocean materials. Some shelves can be &einfused&r on the enchanting table itself into stronger versions.",
+        "Combine Hellshelves and Seashelves to balance your table."
+      ],
+      "icon": "apothic_enchanting:seashelf",
+      "x": 6, "y": 2,
+      "deps": ["hellshelf"],
+      "tasks": [{"type": "advancement", "advancement": "apothic_enchanting:seashelf"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "ench_stats",
+      "title": "A Balanced Table",
+      "desc": [
+        "Enchant an item while your table has at least &e10 of each stat&r.",
+        "A balanced table gives strong, varied enchantments instead of one lucky roll."
+      ],
+      "icon": "minecraft:bookshelf",
+      "x": 8, "y": 2,
+      "deps": ["seashelf"],
+      "tasks": [{"type": "advancement", "advancement": "apothic_enchanting:enchanting_stats"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "library",
+      "title": "The Enchantment Library",
+      "desc": [
+        "Feed enchanted books into an &eEnchantment Library&r. It stores the enchantments, and you can pull out a book of any of them at any level up to the highest you put in.",
+        "One library for the whole party saves a lot of books."
+      ],
+      "icon": "apothic_enchanting:library",
+      "x": 8, "y": 3.5,
+      "deps": ["seashelf"],
+      "tasks": [{"type": "item", "item": "apothic_enchanting:library"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "endshelf",
+      "title": "Shelves of the End",
+      "desc": [
+        "&eEndshelves&r need Infused Dragon's Breath, so they come after the Ender Dragon. They're the strongest shelves, and can be upgraded into Draconic Endshelves.",
+        "Deep-dark &eDeepshelves&r are worth building too."
+      ],
+      "icon": "apothic_enchanting:endshelf",
+      "x": 10, "y": 2,
+      "deps": ["ench_stats"],
+      "tasks": [{"type": "advancement", "advancement": "apothic_enchanting:endshelf"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "ench_100",
+      "title": "Level One Hundred",
+      "desc": [
+        "Enchant an item at &elevel 100&r. Vanilla stops at 30; Apothic Enchanting lets enchantments go far past their normal maximum.",
+        "This is what Pinnacle gear is made of."
+      ],
+      "icon": "minecraft:enchanted_book",
+      "x": 12, "y": 2,
+      "shape": "octagon", "size": 1.25,
+      "deps": ["endshelf"],
+      "tasks": [{"type": "advancement", "advancement": "apothic_enchanting:100ench"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 150}
+      ]
+    },
+    {
+      "key": "spawner",
+      "title": "Take the Spawner",
+      "subtitle": "Apothic Spawners",
+      "desc": [
+        "Break a monster spawner with a &eSilk Touch&r pickaxe and it drops as an item you can place anywhere.",
+        "A dungeon spawner near your base becomes a mob farm."
+      ],
+      "icon": "minecraft:spawner",
+      "x": 2, "y": 5,
+      "deps": ["rarity"],
+      "tasks": [{"type": "advancement", "advancement": "apothic_spawners:root"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "spawner_modifier",
+      "title": "Rewire the Spawner",
+      "desc": [
+        "Right-click a placed spawner with a &espawner modifier&r to change it: spawn more mobs, spawn faster, ignore light, need no player nearby, obey redstone.",
+        "JEI lists every modifier and what it does (search 'spawner')."
+      ],
+      "icon": "apotheosis:spawner_rune",
+      "x": 4, "y": 5,
+      "deps": ["spawner"],
+      "tasks": [{"type": "advancement", "advancement": "apothic_spawners:modifier"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "ultimate_spawner",
+      "title": "The Ultimate Spawner",
+      "desc": [
+        "Build a spawner with the shortest delays, redstone control, no mob AI, no spawn conditions and no need for players.",
+        "An endless supply of drops, on a switch. Put it in a claimed chunk."
+      ],
+      "icon": "apotheosis:infused_spawner_rune",
+      "x": 6.5, "y": 5,
+      "deps": ["spawner_modifier"],
+      "optional": true,
+      "tasks": [{"type": "advancement", "advancement": "apothic_spawners:ultimate_spawner"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    }
+  ]
+}

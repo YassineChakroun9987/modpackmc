@@ -1,0 +1,263 @@
+{
+  "id": "guide_draconic",
+  "title": "&aDraconic Evolution",
+  "subtitle": "Draconium to Wyvern to Draconic to Chaotic: the strongest tech in the pack.",
+  "icon": "draconicevolution:draconic_chestpiece",
+  "group": "mods",
+  "order": 15,
+  "quests": [
+    {
+      "key": "draconium",
+      "title": "Draconium",
+      "subtitle": "Draconic Evolution",
+      "desc": [
+        "&eDraconic Evolution&r is the pack's extreme tech line, and the Stormwright's last step. It begins with &eDraconium&r: ore deep in the Overworld, in the Nether, and richest in the End.",
+        "Smelt its dust into ingots. (Draconic is a beta mod here: report anything strange.)"
+      ],
+      "icon": "draconicevolution:draconium_ingot",
+      "x": 0, "y": 0,
+      "shape": "hexagon", "size": 1.5,
+      "deps": ["act1:choose_path"],
+      "tasks": [{"type": "item", "item": "draconicevolution:draconium_ingot", "count": 16}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 100}
+      ]
+    },
+    {
+      "key": "generator",
+      "title": "Draconic Power",
+      "desc": [
+        "Draconic machines and gear run on energy (FE works). A Draconic &eGenerator&r burns fuel; your Create, Mekanism or Crafts & Additions power works just as well.",
+        "Fusion crafting eats a lot of it, so build a real power supply first."
+      ],
+      "icon": "draconicevolution:generator",
+      "x": 2.5, "y": -2,
+      "deps": ["draconium"],
+      "tasks": [{"type": "item", "item": "draconicevolution:generator"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "draconium_core",
+      "title": "The Draconium Core",
+      "desc": [
+        "A &eDraconium Core&r is the first of four cores: Draconium, Wyvern, Draconic, Chaotic. Each tier of gear and machine needs the matching core.",
+        "Craft one."
+      ],
+      "icon": "draconicevolution:draconium_core",
+      "x": 2.5, "y": 0,
+      "deps": ["draconium"],
+      "tasks": [{"type": "item", "item": "draconicevolution:draconium_core"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "fusion",
+      "title": "Fusion Crafting",
+      "desc": [
+        "Most Draconic items are made by &eFusion Crafting&r. Place a &eFusion Crafting Core&r and set &eCrafting Injectors&r around it, facing the core.",
+        "Put the main item in the core and the ingredients in the injectors, power the injectors, and start the fusion. JEI shows each fusion recipe and the injector tier it needs."
+      ],
+      "icon": "draconicevolution:crafting_core",
+      "x": 5, "y": 0,
+      "deps": ["draconium_core", "generator"],
+      "tasks": [
+        {"type": "item", "item": "draconicevolution:crafting_core"},
+        {"type": "item", "item": "draconicevolution:basic_crafting_injector", "count": 4}
+      ],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "energy_core",
+      "title": "The Energy Core",
+      "desc": [
+        "An &eEnergy Core&r is a giant multiblock battery that grows in tiers. Place the core with four &eEnergy Core Stabilizers&r around it, then build the shell its preview shows.",
+        "Energy Pylons move power in and out. One core can hold enough to run everything else in this chapter."
+      ],
+      "icon": "draconicevolution:energy_core",
+      "x": 5, "y": -2,
+      "deps": ["generator"],
+      "tasks": [
+        {"type": "item", "item": "draconicevolution:energy_core"},
+        {"type": "item", "item": "draconicevolution:energy_core_stabilizer", "count": 4}
+      ],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "wyvern_core",
+      "title": "The Wyvern Core",
+      "desc": [
+        "Fuse Draconium Cores with a Nether Star and more to make a &eWyvern Core&r: the key to the Wyvern tier.",
+        "Wyvern injectors let you fuse the next tier up."
+      ],
+      "icon": "draconicevolution:wyvern_core",
+      "x": 7.5, "y": 0,
+      "deps": ["fusion"],
+      "tasks": [{"type": "item", "item": "draconicevolution:wyvern_core"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "wyvern_tools",
+      "title": "Wyvern Tools",
+      "desc": [
+        "Wyvern tools are powered by energy, mine huge areas at once and never break while charged.",
+        "Make a Wyvern Pickaxe."
+      ],
+      "icon": "draconicevolution:wyvern_pickaxe",
+      "x": 10, "y": -1.5,
+      "deps": ["wyvern_core"],
+      "tasks": [{"type": "item", "item": "draconicevolution:wyvern_pickaxe"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "wyvern_chest",
+      "title": "The Wyvern Chestpiece",
+      "desc": [
+        "The &eWyvern Chestpiece&r gives you an energy &eshield&r that soaks up damage before your health does, and it recharges.",
+        "Charge it from your energy network before every fight."
+      ],
+      "icon": "draconicevolution:wyvern_chestpiece",
+      "x": 10, "y": 0,
+      "deps": ["wyvern_core"],
+      "tasks": [{"type": "item", "item": "draconicevolution:wyvern_chestpiece"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "modules",
+      "title": "Modules",
+      "desc": [
+        "Draconic gear has a &emodule grid&r. Slot in modules for shield capacity, speed, flight, damage, area mining, auto-feeding and more.",
+        "Open an item's module grid with its keybind (search 'Draconic' in Controls). Craft a Module Core and a module for your chestpiece."
+      ],
+      "icon": "draconicevolution:module_core",
+      "x": 10, "y": 1.5,
+      "deps": ["wyvern_core"],
+      "tasks": [
+        {"type": "item", "item": "draconicevolution:module_core"},
+        {"type": "item", "item": "draconicevolution:item_wyvern_shield_capacity"}
+      ],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "dragon_heart",
+      "title": "The Dragon's Heart",
+      "desc": [
+        "The next tier needs a &eDragon Heart&r, and only the Ender Dragon has one. On YUNG's Better End Island you call the dragon at the bell tower.",
+        "Bring the whole party, and a way back up if the dragon knocks you off the island."
+      ],
+      "icon": "draconicevolution:dragon_heart",
+      "x": 12.5, "y": -2,
+      "deps": ["wyvern_chest"],
+      "tasks": [{"type": "item", "item": "draconicevolution:dragon_heart"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 150}
+      ]
+    },
+    {
+      "key": "awakened",
+      "title": "Awakened Draconium",
+      "desc": [
+        "Fuse draconium with the Dragon Heart's power and it &eawakens&r: a much stronger metal that glows with dragon fire.",
+        "Awakened Draconium goes into every Draconic-tier item."
+      ],
+      "icon": "draconicevolution:awakened_draconium_ingot",
+      "x": 12.5, "y": 0,
+      "deps": ["dragon_heart", "wyvern_tools", "modules"],
+      "dep_mode": "one",
+      "tasks": [{"type": "item", "item": "draconicevolution:awakened_draconium_ingot", "count": 4}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "draconic_core",
+      "title": "The Draconic Core",
+      "desc": [
+        "Awakened draconium and Wyvern Cores fuse into a &eDraconic Core&r.",
+        "With it come Draconic injectors, Draconic energy crystals and Draconic gear."
+      ],
+      "icon": "draconicevolution:awakened_core",
+      "x": 15, "y": 0,
+      "deps": ["awakened"],
+      "tasks": [{"type": "item", "item": "draconicevolution:awakened_core"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "draconic_gear",
+      "title": "Draconic Armour",
+      "desc": [
+        "The &eDraconic Chestpiece&r: a far bigger shield, more module space, and creative-style flight with the right module.",
+        "You are now one of the strongest people in this world. The corruption has noticed."
+      ],
+      "icon": "draconicevolution:draconic_chestpiece",
+      "x": 17.5, "y": 0,
+      "shape": "octagon", "size": 1.25,
+      "deps": ["draconic_core"],
+      "tasks": [{"type": "item", "item": "draconicevolution:draconic_chestpiece"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 200}
+      ]
+    },
+    {
+      "key": "reactor",
+      "title": "The Draconic Reactor",
+      "desc": [
+        "The &eDraconic Reactor&r makes more power than anything else in the game, and if you run it wrong it explodes and wipes out everything around it.",
+        "Optional. Read up first, build it far from home and from your friends' bases, and never leave it unwatched."
+      ],
+      "icon": "draconicevolution:reactor_core",
+      "x": 15, "y": 2,
+      "deps": ["draconic_core"],
+      "optional": true,
+      "tasks": [{"type": "item", "item": "draconicevolution:reactor_core"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "chaos_guardian",
+      "title": "The Chaos Guardian",
+      "desc": [
+        "Far out in the End lies &5Chaos Island&r and its Guardian: a dragon of pure chaos with a shield of thousands of points, guarded by crystals that must be broken first. Its attacks ignore armour, and it summons withers.",
+        "Its &eChaos Shards&r unlock the last tier. Keep a spare: the end of this story needs one."
+      ],
+      "icon": "draconicevolution:chaos_shard",
+      "x": 17.5, "y": -2.5,
+      "shape": "diamond", "size": 1.75,
+      "deps": ["draconic_gear"],
+      "tasks": [{"type": "kill", "entity": "draconicevolution:draconic_guardian", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 400},
+        {"type": "xp", "xp": 1000}
+      ]
+    },
+    {
+      "key": "chaotic_core",
+      "title": "The Chaotic Core",
+      "desc": [
+        "Chaos shards and Draconic Cores fuse into the &eChaotic Core&r, the last and strongest core.",
+        "Chaotic injectors, crystals and gear follow."
+      ],
+      "icon": "draconicevolution:chaotic_core",
+      "x": 20, "y": -2.5,
+      "deps": ["chaos_guardian"],
+      "tasks": [{"type": "item", "item": "draconicevolution:chaotic_core"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_4"}]
+    },
+    {
+      "key": "chaotic_gear",
+      "title": "Chaotic",
+      "desc": [
+        "The &eChaotic Chestpiece&r and Chaotic weapons are the peak of Draconic Evolution: the most shield, the most damage, the most modules.",
+        "Few things in any world can stand against a Chaotic Lantern."
+      ],
+      "icon": "draconicevolution:chaotic_chestpiece",
+      "x": 22.5, "y": -1,
+      "shape": "octagon", "size": 1.75,
+      "deps": ["chaotic_core"],
+      "tasks": [{"type": "item", "item": "draconicevolution:chaotic_chestpiece"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 400}
+      ]
+    }
+  ]
+}

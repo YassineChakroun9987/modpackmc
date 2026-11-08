@@ -1,0 +1,255 @@
+{
+  "id": "guide_twilight_forest",
+  "title": "&aThe Twilight Forest",
+  "subtitle": "A realm of endless dusk, and the boss order that unlocks it.",
+  "icon": "twilightforest:naga_trophy",
+  "group": "mods",
+  "order": 9,
+  "quests": [
+    {
+      "key": "portal",
+      "title": "Through the Pool",
+      "desc": [
+        "Dig a &e2x2 pool of water&r in grass, ring it with flowers or other small plants, and throw a &ediamond&r in. Lightning strikes and the portal opens.",
+        "The Twilight Forest is dark and dangerous, and its regions unlock in order: beat a region's boss and the next region opens. Areas you haven't earned hurt you (blindness, hunger, fire)."
+      ],
+      "icon": "minecraft:diamond",
+      "x": 0, "y": 0,
+      "shape": "hexagon", "size": 1.5,
+      "deps": ["act1:choose_path"],
+      "tasks": [{"type": "dimension", "dimension": "twilightforest:twilight_forest"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 50}
+      ]
+    },
+    {
+      "key": "magic_map",
+      "title": "A Map of Twilight",
+      "desc": [
+        "A &eMagic Map&r shows the Forest's biomes and marks boss structures. Make the focus from a raven feather and torchberries, then the map.",
+        "Optional, but it saves hours of wandering."
+      ],
+      "icon": "twilightforest:magic_map_focus",
+      "x": 2, "y": -2.5,
+      "deps": ["portal"],
+      "optional": true,
+      "tasks": [{"type": "advancement", "advancement": "twilightforest:magic_map"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "ironwood",
+      "title": "Twilight Metals",
+      "desc": [
+        "The Forest has its own materials. &eIronwood&r (from raw ironwood found in hollow trees and chests) and &eSteeleaf&r (from steeleaf plants) make sturdy early armour and tools.",
+        "Hollow hills hold ore and treasure, guarded by redcaps."
+      ],
+      "icon": "twilightforest:ironwood_ingot",
+      "x": 2, "y": 2.5,
+      "deps": ["portal"],
+      "tasks": [{"type": "item", "item": "twilightforest:ironwood_ingot", "count": 4}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "naga",
+      "title": "I. The Naga",
+      "desc": [
+        "In a walled &eNaga Courtyard&r coils a giant serpent. It charges in straight lines: sidestep, then hit it while it turns.",
+        "Its scales make Naga armour. Killing it opens the way to the Lich."
+      ],
+      "icon": "twilightforest:naga_scale",
+      "x": 3.5, "y": 0,
+      "shape": "diamond", "size": 1.25,
+      "deps": ["portal"],
+      "tasks": [{"type": "kill", "entity": "twilightforest:naga", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 75}
+      ]
+    },
+    {
+      "key": "lich",
+      "title": "II. The Twilight Lich",
+      "desc": [
+        "Climb the &eLich Tower&r. The Lich hides behind a shield and shadow clones: hit the real one when its shield drops, and swat its fireballs back at it.",
+        "It drops the &eScepters&r (Twilight, Life Draining, Zombie, Fortification). Its death opens three paths: the swamp, the dark forest and the snow."
+      ],
+      "icon": "twilightforest:lich_trophy",
+      "x": 6.5, "y": 0,
+      "shape": "diamond", "size": 1.25,
+      "deps": ["naga"],
+      "tasks": [{"type": "kill", "entity": "twilightforest:lich", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 100}
+      ]
+    },
+    {
+      "key": "minoshroom",
+      "title": "III-a. The Minoshroom",
+      "desc": [
+        "In the &eSwamp&r lies a Labyrinth. A Maze Map helps; minotaurs roam its halls. The &eMinoshroom&r at its heart charges like a bull.",
+        "It drops a Minotaur Axe and &eMeef Stroganoff&r. Eat the stroganoff: the Fire Swamp beyond needs it."
+      ],
+      "icon": "twilightforest:minoshroom_trophy",
+      "x": 9.5, "y": -2.5,
+      "shape": "diamond",
+      "deps": ["lich"],
+      "tasks": [{"type": "kill", "entity": "twilightforest:minoshroom", "count": 1}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "hydra",
+      "title": "IV-a. The Hydra",
+      "desc": [
+        "In the burning &eFire Swamp&r, the three-headed &eHydra&r guards its lair. Hit its heads when they open to bite, and keep out of the fire.",
+        "Its &eFiery Blood&r makes the Fiery set. (This is Twilight's Hydra; Ice and Fire has another.)"
+      ],
+      "icon": "twilightforest:hydra_trophy",
+      "x": 12.5, "y": -2.5,
+      "shape": "diamond", "size": 1.25,
+      "deps": ["minoshroom"],
+      "tasks": [{"type": "kill", "entity": "twilightforest:hydra", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 150}
+      ]
+    },
+    {
+      "key": "knights",
+      "title": "III-b. The Knight Phantoms",
+      "desc": [
+        "In the &eDark Forest&r stands the Goblin Knight Stronghold. Its inner doors only open after you place a boss trophy on the &eTrophy Pedestal&r inside.",
+        "Six &eKnight Phantoms&r guard the deepest hall. Defeat them all for Knightmetal and the way to the Dark Tower."
+      ],
+      "icon": "twilightforest:knight_phantom_trophy",
+      "x": 9.5, "y": 0,
+      "shape": "diamond",
+      "deps": ["lich"],
+      "tasks": [{"type": "advancement", "advancement": "twilightforest:progress_knights"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "ur_ghast",
+      "title": "IV-b. The Ur-Ghast",
+      "desc": [
+        "Climb the &eDark Tower&r (carminite builders, ghastlings, towerwood borers) to the Ur-Ghast's chamber. Kill ghasts near a &eGhast Trap&r to drag it down.",
+        "Its Fiery Tears join the Hydra's blood for Fiery gear."
+      ],
+      "icon": "twilightforest:ur_ghast_trophy",
+      "x": 12.5, "y": 0,
+      "shape": "diamond", "size": 1.25,
+      "deps": ["knights"],
+      "tasks": [{"type": "kill", "entity": "twilightforest:ur_ghast", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 150}
+      ]
+    },
+    {
+      "key": "alpha_yeti",
+      "title": "III-c. The Alpha Yeti",
+      "desc": [
+        "In the &eSnowy Forest&r, a cave holds the &eAlpha Yeti&r. It throws ice and pounds the ground: watch for falling icicles.",
+        "Its fur makes Yeti armour, and its death opens the Glacier."
+      ],
+      "icon": "twilightforest:alpha_yeti_trophy",
+      "x": 9.5, "y": 2.5,
+      "shape": "diamond",
+      "deps": ["lich"],
+      "tasks": [{"type": "kill", "entity": "twilightforest:alpha_yeti", "count": 1}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "snow_queen",
+      "title": "IV-c. The Snow Queen",
+      "desc": [
+        "Atop the &eAurora Palace&r on the Glacier, the &eSnow Queen&r shields herself with orbiting ice crystals and drops blizzards on you.",
+        "Frostbinders will feel at home. Everyone else: break the crystals, then strike while she's exposed."
+      ],
+      "icon": "twilightforest:snow_queen_trophy",
+      "x": 12.5, "y": 2.5,
+      "shape": "diamond", "size": 1.25,
+      "deps": ["alpha_yeti"],
+      "tasks": [{"type": "kill", "entity": "twilightforest:snow_queen", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 150}
+      ]
+    },
+    {
+      "key": "highlands",
+      "title": "V. The Highlands Open",
+      "desc": [
+        "With the Hydra, the Ur-Ghast and the Snow Queen all dead, the &eHighlands&r welcome you.",
+        "Troll caves wind beneath them, and giants walk in the clouds above."
+      ],
+      "icon": "twilightforest:giant_pickaxe",
+      "x": 15.5, "y": 0,
+      "shape": "octagon",
+      "deps": ["hydra", "ur_ghast", "snow_queen"],
+      "tasks": [{"type": "advancement", "advancement": "twilightforest:progress_merge"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "lamp_of_cinders",
+      "title": "VI. The Lamp of Cinders",
+      "desc": [
+        "Deep in the troll caves, a Troll Vault holds the &eLamp of Cinders&r. Its flame burns away the thorns that wall off the last region.",
+        "Bring it out alive."
+      ],
+      "icon": "twilightforest:lamp_of_cinders",
+      "x": 18, "y": 0,
+      "deps": ["highlands"],
+      "tasks": [{"type": "advancement", "advancement": "twilightforest:progress_troll"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "final_plateau",
+      "title": "VII. The Final Plateau",
+      "desc": [
+        "Burn through the Thornlands and climb to the &eFinal Plateau&r and its unfinished castle. The Forest has no final boss yet; reaching it is the victory.",
+        "Few walk this far into the dusk."
+      ],
+      "icon": "twilightforest:lich_tower_miniature_structure",
+      "x": 20.5, "y": 0,
+      "shape": "octagon", "size": 1.75,
+      "deps": ["lamp_of_cinders"],
+      "tasks": [{"type": "advancement", "advancement": "twilightforest:progression_end"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 300},
+        {"type": "xp", "xp": 500}
+      ]
+    },
+    {
+      "key": "uncrafting",
+      "title": "The Uncrafting Table",
+      "desc": [
+        "The &eUncrafting Table&r takes crafted items apart into their ingredients, for a cost in XP.",
+        "Optional, and very handy for recovering diamonds from old tools."
+      ],
+      "icon": "twilightforest:uncrafting_table",
+      "x": 5, "y": 2.5,
+      "deps": ["ironwood"],
+      "optional": true,
+      "tasks": [{"type": "item", "item": "twilightforest:uncrafting_table"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "quest_ram",
+      "title": "The Questing Ram",
+      "desc": [
+        "A big multicoloured ram wanders the Forest's clearings. Feed it one block of wool of every colour and it rewards you.",
+        "Optional, and a good excuse to raise sheep."
+      ],
+      "icon": "twilightforest:quest_ram_trophy",
+      "x": 5, "y": -2.5,
+      "deps": ["magic_map", "portal"],
+      "dep_mode": "one",
+      "optional": true,
+      "tasks": [{"type": "advancement", "advancement": "twilightforest:quest_ram"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    }
+  ]
+}

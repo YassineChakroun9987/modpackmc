@@ -1,0 +1,949 @@
+{
+  "id": "class_red",
+  "title": "&cThe Red Light: Path of Rage",
+  "subtitle": "Bloodfire Berserker. The closer to death, the harder you hit.",
+  "icon": "createlanterns:red_dust",
+  "group": "classes",
+  "order": 0,
+  "quests": [
+    {
+      "key": "join",
+      "title": "&cThe Bloodfire Berserker",
+      "subtitle": "Join this light",
+      "desc": [
+        "&o\"The closer to death you are, the harder you hit.\"&r",
+        "Red is the light of rage: fire and blood magic, huge two-handed weapons, and the burning Nether.",
+        "",
+        "Claim the reward to join Red and unlock its talent tree. You can still join other lights later."
+      ],
+      "icon": "createlanterns:red_dust",
+      "x": 0,
+      "y": 0,
+      "shape": "pentagon",
+      "size": 2,
+      "deps": ["act1:choose_path"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "command", "command": "/gl class join {p} red"},
+        {"type": "item", "item": "simplyswords:iron_claymore"},
+        {"type": "item", "item": "minecraft:fire_charge", "count": 4},
+        {"type": "item", "item": "minecraft:cooked_porkchop", "count": 8},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "red", "amount": 50}
+      ]
+    },
+    {
+      "key": "greatweapon",
+      "title": "Two Hands, One Purpose",
+      "desc": [
+        "A berserker doesn't carry a shield. A berserker carries something bigger.",
+        "",
+        "Craft any two-handed greatweapon below. Better Combat gives each one wide sweeping combos; keep your off-hand empty."
+      ],
+      "icon": "simplyswords:iron_greataxe",
+      "x": 1.5,
+      "y": 0,
+      "deps": ["join"],
+      "tasks": [
+        {"type": "item", "item": "simplyswords:iron_claymore", "optional": true},
+        {"type": "item", "item": "simplyswords:iron_greataxe", "optional": true},
+        {"type": "item", "item": "simplyswords:iron_greathammer", "optional": true},
+        {"type": "item", "item": "minecraftdungeonsv1:claymore", "optional": true},
+        {"type": "item", "item": "minecraftdungeonsv1:great_hammer", "optional": true},
+        {"type": "item", "item": "minecraftdungeonsv1:double_axe", "optional": true},
+        {"type": "item", "item": "magistuarmory:steel_zweihander", "optional": true},
+        {"type": "item", "item": "magistuarmory:steel_lochaberaxe", "optional": true}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "red", "amount": 50}
+      ]
+    },
+    {
+      "key": "first_blood",
+      "title": "First Blood",
+      "desc": [
+        "The light likes the sound of your blade. Give it more.",
+        "",
+        "Kill &e30 zombies&r and &e20 skeletons&r, ideally with your greatweapon. Red XP grows fastest from two-hander kills and fighting at low health."
+      ],
+      "icon": "minecraft:rotten_flesh",
+      "x": 3,
+      "y": 0,
+      "deps": ["greatweapon"],
+      "tasks": [
+        {"type": "kill", "entity": "minecraft:zombie", "count": 30},
+        {"type": "kill", "entity": "minecraft:skeleton", "count": 20}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "red", "amount": 75}
+      ]
+    },
+    {
+      "key": "robes",
+      "title": "Robes of the Wanderer",
+      "desc": [
+        "Even a berserker needs mana to throw fire.",
+        "",
+        "Craft the &eWandering Magician&r robe and pants (Iron's Spells). They add mana and spell power."
+      ],
+      "icon": "irons_spellbooks:wandering_magician_chestplate",
+      "x": 1.5,
+      "y": -1.5,
+      "deps": ["join"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:wandering_magician_chestplate"},
+        {"type": "item", "item": "irons_spellbooks:wandering_magician_leggings"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "irons_spellbooks:magic_cloth", "count": 2},
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "red", "amount": 50}
+      ]
+    },
+    {
+      "key": "kindling",
+      "title": "Kindling",
+      "desc": [
+        "Fire is the oldest rage. Learn to carry it.",
+        "",
+        "Craft a &eFire Rune&r (blank runestone + fire ingredients, see JEI). Runes are the base of every fire-school item. Look for &eFireball&r and &eBurning Dash&r scrolls."
+      ],
+      "icon": "irons_spellbooks:fire_rune",
+      "x": 3,
+      "y": -1.5,
+      "deps": ["robes"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:fire_rune"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "red", "amount": 75}
+      ]
+    },
+    {
+      "key": "blood",
+      "title": "Blood Price",
+      "desc": [
+        "Some spells are paid in mana. Red pays in blood, and hits harder for it.",
+        "",
+        "Craft a &eBlood Rune&r (JEI). Blood spells like &eBlood Slash&r and &eDevour&r heal you as you hurt others."
+      ],
+      "icon": "irons_spellbooks:blood_rune",
+      "x": 4.5,
+      "y": -3,
+      "deps": ["kindling"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:blood_rune"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "red", "amount": 75}
+      ]
+    },
+    {
+      "key": "bonecaller",
+      "title": "Bonecaller",
+      "desc": [
+        "Something raises the dead faster than you can put them down. Find it and break it.",
+        "",
+        "Kill the &eSupreme Bonescaller&r (Born in Chaos). It stalks dark nights and cursed ground with an army of skeletons; bring friends to deal with the minions."
+      ],
+      "icon": "born_in_chaos_v1:bonescaller_staff",
+      "x": 3,
+      "y": 1.5,
+      "shape": "hexagon",
+      "size": 1.25,
+      "deps": ["first_blood"],
+      "tasks": [
+        {"type": "kill", "entity": "born_in_chaos_v1:supreme_bonescaller"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 150},
+        {"type": "skill_xp", "category": "red", "amount": 100}
+      ]
+    },
+    {
+      "key": "nether",
+      "title": "Into the Inferno",
+      "desc": [
+        "The light pulls you toward heat, toward the place where the world itself is angry.",
+        "",
+        "Build a Nether portal (obsidian frame, light it) and enter &cthe Nether&r. Bring fire resistance potions and a stack of blocks."
+      ],
+      "icon": "minecraft:obsidian",
+      "x": 4.5,
+      "y": 0,
+      "deps": ["first_blood"],
+      "tasks": [
+        {"type": "dimension", "dimension": "minecraft:the_nether"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:obsidian", "count": 4},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "red", "amount": 75}
+      ]
+    },
+    {
+      "key": "fortress",
+      "title": "Fortress Breaker",
+      "desc": [
+        "The old fortress still burns with blaze-fire. You want that fire.",
+        "",
+        "Find a &eYUNG's Better Nether Fortress&r and collect &e8 blaze rods&r from its blazes."
+      ],
+      "icon": "minecraft:blaze_rod",
+      "x": 6,
+      "y": 0,
+      "deps": ["nether"],
+      "tasks": [
+        {"type": "structure", "structure": "betterfortresses:fortress"},
+        {"type": "item", "item": "minecraft:blaze_rod", "count": 8}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "item", "item": "minecraft:blaze_rod", "count": 4},
+        {"type": "xp", "xp": 120},
+        {"type": "skill_xp", "category": "red", "amount": 100}
+      ]
+    },
+    {
+      "key": "sanctum",
+      "title": "The Ashen Sanctum",
+      "desc": [
+        "Pilgrims of a dead faith left a temple in the soul sand. Their ghosts didn't leave.",
+        "",
+        "Find a &eSanctum&r (Jaden's Nether Expansion), usually in soul sand valleys. Watch out for banshees."
+      ],
+      "icon": "netherexp:soul_slate",
+      "x": 6,
+      "y": -1.5,
+      "deps": ["nether"],
+      "tasks": [
+        {"type": "structure", "structure": "netherexp:sanctum"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 120},
+        {"type": "skill_xp", "category": "red", "amount": 100}
+      ]
+    },
+    {
+      "key": "whisper",
+      "title": "The Light Whispers",
+      "subtitle": "Class level 10",
+      "desc": [
+        "A voice in the crackle of every fire: &o\"Rage is not weakness. Rage is fuel.\"&r",
+        "",
+        "Reach &eRed level 10&r. Earn Red XP with two-hander kills, Nether kills and bosses."
+      ],
+      "icon": "createlanterns:red_dust",
+      "x": 9,
+      "y": 0,
+      "shape": "octagon",
+      "size": 1.5,
+      "deps": ["fortress", "kindling"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_whisper_red"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "skill_xp", "category": "red", "amount": 150}
+      ]
+    },
+    {
+      "key": "pyromancer",
+      "title": "The Pyromancer's Mantle",
+      "desc": [
+        "Robes woven to drink heat and give it back as power.",
+        "",
+        "Craft the full &ePyromancer&r set (Iron's Spells). It boosts fire spell power and mana."
+      ],
+      "icon": "irons_spellbooks:pyromancer_chestplate",
+      "x": 10.5,
+      "y": -1.5,
+      "shape": "rsquare",
+      "size": 1.25,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:pyromancer_helmet"},
+        {"type": "item", "item": "irons_spellbooks:pyromancer_chestplate"},
+        {"type": "item", "item": "irons_spellbooks:pyromancer_leggings"},
+        {"type": "item", "item": "irons_spellbooks:pyromancer_boots"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "red", "amount": 200}
+      ]
+    },
+    {
+      "key": "pyro_tower",
+      "title": "The Pyromancer's Tower",
+      "desc": [
+        "A tower of black brick and a mage who answers questions with fireballs.",
+        "",
+        "Find an Iron's &ePyromancer Tower&r and defeat a &ePyromancer&r. Its loot is full of fire scrolls."
+      ],
+      "icon": "irons_spellbooks:pyromancer_spawn_egg",
+      "x": 10.5,
+      "y": -3,
+      "shape": "hexagon",
+      "size": 1.25,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "structure", "structure": "irons_spellbooks:pyromancer_tower"},
+        {"type": "kill", "entity": "irons_spellbooks:pyromancer"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "red", "amount": 150}
+      ]
+    },
+    {
+      "key": "blaze_manual",
+      "title": "The Blaze Instruction Manual",
+      "desc": [
+        "A spellbook bound in blaze-hide, warm to the touch, hungry for spells.",
+        "",
+        "Get the &eBlaze Instruction Manual&r, the fire school's spellbook (see JEI). Move your spells into it at the Inscription Table."
+      ],
+      "icon": "irons_spellbooks:blaze_spell_book",
+      "x": 12,
+      "y": -1.5,
+      "deps": ["pyromancer"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:blaze_spell_book"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "red", "amount": 150}
+      ]
+    },
+    {
+      "key": "fire_orb",
+      "title": "Stoke the Flame",
+      "desc": [
+        "Rage can be sharpened.",
+        "",
+        "Craft a &eFire Upgrade Orb&r and apply it to a piece of armor at the &eArcane Anvil&r for more fire spell power."
+      ],
+      "icon": "irons_spellbooks:fire_upgrade_orb",
+      "x": 13.5,
+      "y": -1.5,
+      "deps": ["blaze_manual"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:fire_upgrade_orb"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "irons_spellbooks:arcane_essence", "count": 16},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "red", "amount": 150}
+      ]
+    },
+    {
+      "key": "matriarch",
+      "title": "Mother of Blood",
+      "desc": [
+        "Blood cultists sing to a mother who drinks the strength of her children.",
+        "",
+        "Find a &eBlood Cultist Hut&r (Discerning the Eldritch) and kill the &eBlood Matriarch&r. Bring the party: her cultists heal her."
+      ],
+      "icon": "irons_spellbooks:blood_vial",
+      "x": 12,
+      "y": -3,
+      "shape": "hexagon",
+      "size": 1.5,
+      "deps": ["pyro_tower", "blood"],
+      "tasks": [
+        {"type": "structure", "structure": "discerning_the_eldritch:blood_cultist_hut"},
+        {"type": "kill", "entity": "discerning_the_eldritch:blood_matriarch"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 300},
+        {"type": "skill_xp", "category": "red", "amount": 250}
+      ]
+    },
+    {
+      "key": "roost",
+      "title": "Ash and Embers",
+      "desc": [
+        "Charred hills, melted sand, a smell of burnt gold. A fire dragon lives here.",
+        "",
+        "Find a &efire dragon&r roost or cave (Ice and Fire), in hot or temperate lands. Scout it; don't wake an adult alone."
+      ],
+      "icon": "iceandfire:dragonscales_red",
+      "x": 10.5,
+      "y": 1.5,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "structure", "structure": "iceandfire:fire_dragon_roost", "optional": true},
+        {"type": "structure", "structure": "iceandfire:fire_dragon_cave", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "red", "amount": 150}
+      ]
+    },
+    {
+      "key": "fire_egg",
+      "title": "Firebrood",
+      "desc": [
+        "Every hoard hides an egg. Every egg hides a mount.",
+        "",
+        "Take a &efire dragon egg&r from a roost (red, green, bronze or gray). Fire eggs hatch when placed in fire; the hatchling bonds with whoever is nearest."
+      ],
+      "icon": "iceandfire:dragonegg_red",
+      "x": 12,
+      "y": 1.5,
+      "deps": ["roost"],
+      "tasks": [
+        {"type": "item", "item": "iceandfire:dragonegg_red", "optional": true},
+        {"type": "item", "item": "iceandfire:dragonegg_green", "optional": true},
+        {"type": "item", "item": "iceandfire:dragonegg_bronze", "optional": true},
+        {"type": "item", "item": "iceandfire:dragonegg_gray", "optional": true}
+      ],
+      "rewards": [
+        {"type": "item", "item": "iceandfire:dragon_meal", "count": 8},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "red", "amount": 200}
+      ]
+    },
+    {
+      "key": "fire_mount",
+      "title": "Saddle of Iron, Wings of Fire",
+      "desc": [
+        "Your hatchling grows fast on roasted meat, and it grows angry like you.",
+        "",
+        "Raise your fire dragon (feed it meat; Dragon Meal speeds it up) and forge it &eiron dragon armor&r (head and body). At stage 3 you can ride it into the sky."
+      ],
+      "icon": "iceandfire:dragonarmor_iron_head",
+      "x": 13.5,
+      "y": 1.5,
+      "shape": "rsquare",
+      "size": 1.25,
+      "deps": ["fire_egg"],
+      "tasks": [
+        {"type": "item", "item": "iceandfire:dragonarmor_iron_head"},
+        {"type": "item", "item": "iceandfire:dragonarmor_iron_body"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "item", "item": "iceandfire:dragon_meal", "count": 16},
+        {"type": "xp", "xp": 300},
+        {"type": "skill_xp", "category": "red", "amount": 250}
+      ]
+    },
+    {
+      "key": "ember_edge",
+      "title": "Ember Edge",
+      "desc": [
+        "Some blades are forged. Some are born burning.",
+        "",
+        "Optional: find a fire-touched &eSimply Swords&r unique (dungeon and boss loot)."
+      ],
+      "icon": "simplyswords:emberblade",
+      "x": 12,
+      "y": 0,
+      "deps": ["whisper"],
+      "optional": true,
+      "tasks": [
+        {"type": "item", "item": "simplyswords:brimstone_claymore", "optional": true},
+        {"type": "item", "item": "simplyswords:emberblade", "optional": true},
+        {"type": "item", "item": "simplyswords:hearthflame", "optional": true},
+        {"type": "item", "item": "simplyswords:molten_edge", "optional": true},
+        {"type": "item", "item": "simplyswords:soulpyre", "optional": true},
+        {"type": "item", "item": "simplyswords:emberlash", "optional": true},
+        {"type": "item", "item": "simplyswords:flamewind", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "red", "amount": 150}
+      ]
+    },
+    {
+      "key": "netherite",
+      "title": "Netherite Fury",
+      "desc": [
+        "Ancient debris, melted with gold, shaped into something that doesn't break.",
+        "",
+        "Upgrade a greatweapon to &enetherite&r at a smithing table (netherite template from bastions)."
+      ],
+      "icon": "simplyswords:netherite_claymore",
+      "x": 13.5,
+      "y": 0,
+      "deps": ["fortress", "whisper"],
+      "tasks": [
+        {"type": "item", "item": "simplyswords:netherite_claymore", "optional": true},
+        {"type": "item", "item": "simplyswords:netherite_greataxe", "optional": true},
+        {"type": "item", "item": "simplyswords:netherite_greathammer", "optional": true},
+        {"type": "item", "item": "magistuarmory:netherite_zweihander", "optional": true},
+        {"type": "item", "item": "magistuarmory:netherite_lochaberaxe", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "red", "amount": 200}
+      ]
+    },
+    {
+      "key": "gauntlet_arena",
+      "title": "Black Iron Halls",
+      "desc": [
+        "In the Nether's deep dark, a hall of carved blackstone. Inside, a fist the size of a house waits.",
+        "",
+        "Find the &eGauntlet's arena&r (Bosses of Mass Destruction) somewhere in the Nether. Mark it, then come back ready."
+      ],
+      "icon": "bosses_of_mass_destruction:gauntlet_blackstone",
+      "x": 15,
+      "y": 0,
+      "deps": ["netherite"],
+      "tasks": [
+        {"type": "structure", "structure": "bosses_of_mass_destruction:gauntlet_arena"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "red", "amount": 200}
+      ]
+    },
+    {
+      "key": "dream",
+      "title": "The Dream",
+      "subtitle": "Class level 25",
+      "desc": [
+        "You dream of a red planet under a red sun, and of a ring that tastes like iron.",
+        "",
+        "Reach &eRed level 25&r. Then the trial."
+      ],
+      "icon": "createlanterns:red_liquid_light_bucket",
+      "x": 16.5,
+      "y": 0,
+      "shape": "octagon",
+      "size": 1.5,
+      "deps": ["gauntlet_arena", "pyromancer"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_dream_red"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "skill_xp", "category": "red", "amount": 250}
+      ]
+    },
+    {
+      "key": "trial",
+      "title": "&cThe Crucible of Rage",
+      "subtitle": "Ring trial: the boss",
+      "desc": [
+        "The Gauntlet wakes when you step into its hall: a giant armored fist of the old Nether lords.",
+        "",
+        "Kill the &eNether Gauntlet&r in its blackstone arena in the Nether (the quest before helps you find it). Fire resistance helps. Party members within 64 blocks get the trial credit too."
+      ],
+      "icon": "bosses_of_mass_destruction:blazing_eye",
+      "x": 18.75,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 2.25,
+      "deps": ["dream", "gauntlet_arena"],
+      "tasks": [
+        {"type": "kill", "entity": "bosses_of_mass_destruction:gauntlet", "optional": true},
+        {"type": "stage", "stage": "gl_trial_red", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/class_red"},
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp_levels", "levels": 8},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "red", "amount": 500}
+      ]
+    },
+    {
+      "key": "choice",
+      "title": "The Ring Judges",
+      "subtitle": "The ring will judge you",
+      "desc": [
+        "The Gauntlet's light gutters out, and something red drifts down from the ceiling. It circles you. It asks.",
+        "Is it rage that drives you, or something else?",
+        "",
+        "Claim this reward to begin the &ering trial&r: a conversation in chat. The ring will judge you. Your &eanswers&r decide whether you receive your own light, the &fWhite&r, or the &8Black&r. Answer as who you really are.",
+        "&7(Only works once you have the trial credit from the quest before.)"
+      ],
+      "icon": "createlanterns:ring_blank",
+      "x": 21,
+      "y": 0,
+      "shape": "diamond",
+      "size": 1.75,
+      "deps": ["trial"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "command", "command": "/gl trial begin {p} red"}
+      ]
+    },
+    {
+      "key": "ring",
+      "title": "&cRing-Bearer",
+      "subtitle": "Ring-bearer",
+      "desc": [
+        "A ring found you. Red, White or Black, you are a &eLantern&r now: you can fly, and your will takes shape as constructs.",
+        "",
+        "This completes when you have &eany&r ring from the trial. The Red path continues to the right; the &6Last Light&r chapter has opened."
+      ],
+      "icon": "createlanterns:red_power_ring",
+      "x": 23.25,
+      "y": 0,
+      "shape": "octagon",
+      "size": 2.5,
+      "deps": ["choice"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_ringbearer"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 10},
+        {"type": "xp", "xp": 1000},
+        {"type": "skill_xp", "category": "red", "amount": 750}
+      ]
+    },
+    {
+      "key": "true_red",
+      "title": "The Red Answered",
+      "desc": [
+        "The red ring stayed. It burns under your skin like a second heartbeat.",
+        "",
+        "Optional, Red ring only: learn your powers &eHellbolt&r and &eInferno&r (see the Spectral Hub HUD), and recharge at a Red Lantern."
+      ],
+      "icon": "createlanterns:red_power_battery",
+      "x": 25.25,
+      "y": -1.5,
+      "deps": ["ring"],
+      "optional": true,
+      "tasks": [
+        {"type": "stage", "stage": "gl_ring_red"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "red", "amount": 300}
+      ]
+    },
+    {
+      "key": "soul_forge",
+      "title": "The Soul Forge",
+      "desc": [
+        "Deep in the Nether, an anvil still rings, struck by a smith made of netherite and lava.",
+        "",
+        "Find the &eSoul Black Smith&r (L_Ender's Cataclysm) in the Nether."
+      ],
+      "icon": "cataclysm:netherite_effigy",
+      "x": 25.25,
+      "y": 0,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "structure", "structure": "cataclysm:soul_black_smith"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 400},
+        {"type": "skill_xp", "category": "red", "amount": 300}
+      ]
+    },
+    {
+      "key": "monstrosity",
+      "title": "The Blacksmith's Wrath",
+      "desc": [
+        "The Netherite Monstrosity hammers anything that enters its forge into scrap.",
+        "",
+        "Kill the &eNetherite Monstrosity&r in the Soul Black Smith. It is slow but its lava waves hurt; keep moving. A party helps a lot."
+      ],
+      "icon": "cataclysm:monstrous_horn",
+      "x": 26.75,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 1.4,
+      "deps": ["soul_forge"],
+      "tasks": [
+        {"type": "kill", "entity": "cataclysm:netherite_monstrosity"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 800},
+        {"type": "skill_xp", "category": "red", "amount": 500}
+      ]
+    },
+    {
+      "key": "infernal_forge",
+      "title": "The Infernal Forge",
+      "desc": [
+        "Its hammer was a weapon long before it was a tool.",
+        "",
+        "Claim the &eInfernal Forge&r, the Monstrosity's hammer (drop or JEI recipe)."
+      ],
+      "icon": "cataclysm:infernal_forge",
+      "x": 28.25,
+      "y": 1.5,
+      "deps": ["monstrosity"],
+      "tasks": [
+        {"type": "item", "item": "cataclysm:infernal_forge"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 400},
+        {"type": "skill_xp", "category": "red", "amount": 300}
+      ]
+    },
+    {
+      "key": "burning_arena",
+      "title": "The Burning Arena",
+      "desc": [
+        "A flaming colosseum where a fallen knight still duels the dead.",
+        "",
+        "Find the &eBurning Arena&r (Cataclysm) in the Nether. An &eEye of Flame&r points the way if you have one."
+      ],
+      "icon": "cataclysm:flame_eye",
+      "x": 25.25,
+      "y": -3,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "structure", "structure": "cataclysm:burning_arena"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 400},
+        {"type": "skill_xp", "category": "red", "amount": 300}
+      ]
+    },
+    {
+      "key": "ignis",
+      "title": "Ignis",
+      "desc": [
+        "Ignis was a hero once. Now he is fire wearing armor.",
+        "",
+        "Kill &eIgnis&r in the Burning Arena. He has three phases and his shield reflects; strike between his combos."
+      ],
+      "icon": "cataclysm:ignitium_ingot",
+      "x": 26.75,
+      "y": -3,
+      "shape": "hexagon",
+      "size": 1.4,
+      "deps": ["burning_arena"],
+      "tasks": [
+        {"type": "kill", "entity": "cataclysm:ignis"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 800},
+        {"type": "skill_xp", "category": "red", "amount": 500}
+      ]
+    },
+    {
+      "key": "ignitium",
+      "title": "Ignitium Plate",
+      "desc": [
+        "Armor forged from a burning hero's heart.",
+        "",
+        "Craft the full &eIgnitium&r set from Ignis's ignitium ingots (Mechanical Fusion Anvil, see JEI)."
+      ],
+      "icon": "cataclysm:ignitium_chestplate",
+      "x": 28.25,
+      "y": -3,
+      "shape": "rsquare",
+      "size": 1.25,
+      "deps": ["ignis"],
+      "tasks": [
+        {"type": "item", "item": "cataclysm:ignitium_helmet"},
+        {"type": "item", "item": "cataclysm:ignitium_chestplate"},
+        {"type": "item", "item": "cataclysm:ignitium_leggings"},
+        {"type": "item", "item": "cataclysm:ignitium_boots"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 600},
+        {"type": "skill_xp", "category": "red", "amount": 400}
+      ]
+    },
+    {
+      "key": "dragonsteel",
+      "title": "Fire Dragonsteel",
+      "desc": [
+        "Your dragon's breath, caught in a forge of its own scales, makes the hardest steel there is.",
+        "",
+        "Build a &eDragonforge&r (Ice and Fire) and fuel it with your grown fire dragon's breath. Smelt &e4 fire dragonsteel ingots&r."
+      ],
+      "icon": "iceandfire:dragonsteel_fire_ingot",
+      "x": 28.25,
+      "y": 3,
+      "deps": ["ring", "fire_mount"],
+      "tasks": [
+        {"type": "item", "item": "iceandfire:dragonsteel_fire_ingot", "count": 4}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 600},
+        {"type": "skill_xp", "category": "red", "amount": 400}
+      ]
+    },
+    {
+      "key": "dragonsteel_blade",
+      "title": "Dragonfire Edge",
+      "desc": [
+        "A blade that sets the air on fire as it swings.",
+        "",
+        "Forge a &eFire Dragonsteel Sword&r."
+      ],
+      "icon": "iceandfire:dragonsteel_fire_sword",
+      "x": 29.75,
+      "y": 3,
+      "deps": ["dragonsteel"],
+      "tasks": [
+        {"type": "item", "item": "iceandfire:dragonsteel_fire_sword"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "red", "amount": 300}
+      ]
+    },
+    {
+      "key": "pumpkin",
+      "title": "The Pumpkin King",
+      "desc": [
+        "On the darkest nights a rider with a burning head leads the harvest of souls.",
+        "",
+        "Kill &eLord Pumpkinhead&r (Born in Chaos). Check JEI and the Born in Chaos advancements for how he is called."
+      ],
+      "icon": "born_in_chaos_v1:lord_pumpkinheads_hat_helmet",
+      "x": 28.25,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 1.4,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "kill", "entity": "born_in_chaos_v1:lord_pumpkinhead"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 700},
+        {"type": "skill_xp", "category": "red", "amount": 450}
+      ]
+    },
+    {
+      "key": "tyros",
+      "title": "The Echo of Tyros",
+      "desc": [
+        "An ancient fire-king's echo still burns, waiting for a challenger worthy of his scythe.",
+        "",
+        "Kill &eTyros&r, Iron's Spells' fire boss (see JEI for the &eCinderous Soulcaller&r and how to call him). One of the hardest fire fights in the pack: bring the party."
+      ],
+      "icon": "irons_spellbooks:cinderous_soulcaller",
+      "x": 29.75,
+      "y": -1.5,
+      "shape": "hexagon",
+      "size": 1.4,
+      "deps": ["ignitium", "infernal_forge"],
+      "tasks": [
+        {"type": "kill", "entity": "irons_spellbooks:fire_boss"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 10},
+        {"type": "xp", "xp": 1200},
+        {"type": "skill_xp", "category": "red", "amount": 700}
+      ]
+    },
+    {
+      "key": "scythe",
+      "title": "The Decrepit Scythe",
+      "desc": [
+        "The scythe of a dead king, still warm.",
+        "",
+        "Claim the &eDecrepit Scythe&r from Tyros."
+      ],
+      "icon": "irons_spellbooks:decrepit_scythe",
+      "x": 31.25,
+      "y": -1.5,
+      "deps": ["tyros"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:decrepit_scythe"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 600},
+        {"type": "skill_xp", "category": "red", "amount": 400}
+      ]
+    },
+    {
+      "key": "mythic",
+      "title": "Mythic Fury",
+      "subtitle": "Extreme gear",
+      "desc": [
+        "Rage, polished to perfection.",
+        "",
+        "Unlock the &ePinnacle&r world tier (Apotheosis: a full Epic affix set and the Ender Dragon slain; CTRL+T switches tiers) and wield a &6Mythic&r greatweapon socketed with fire-touched gems. Tick the checkmark when you hold it."
+      ],
+      "icon": "apotheosis:sigil_of_supremacy",
+      "x": 32.75,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 1.5,
+      "deps": ["scythe", "dragonsteel_blade", "pumpkin"],
+      "tasks": [
+        {"type": "advancement", "advancement": "apotheosis:progression/pinnacle"},
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 15},
+        {"type": "xp", "xp": 1500},
+        {"type": "skill_xp", "category": "red", "amount": 1000}
+      ]
+    },
+    {
+      "key": "legend",
+      "title": "&cLegend of the Red Light",
+      "subtitle": "After the Last Light",
+      "desc": [
+        "When the Devourer fell, it was Red who struck first and hardest. The bards will exaggerate. They won't need to.",
+        "",
+        "Complete the Last Light and the Red path. Thank you for burning so bright."
+      ],
+      "icon": "createlanterns:red_power_ring",
+      "x": 36.25,
+      "y": 0,
+      "shape": "gear",
+      "size": 2,
+      "deps": ["mythic", "finale:last_light"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 20},
+        {"type": "xp", "xp": 2000},
+        {"type": "skill_xp", "category": "red", "amount": 1500}
+      ]
+    }
+  ]
+}

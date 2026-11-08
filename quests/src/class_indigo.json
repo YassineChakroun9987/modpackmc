@@ -1,0 +1,995 @@
+{
+  "id": "class_indigo",
+  "title": "&9The Indigo Light: Path of the Pack",
+  "subtitle": "Wildheart. No beast fights alone.",
+  "icon": "createlanterns:indigo_dust",
+  "group": "classes",
+  "order": 5,
+  "quests": [
+    {
+      "key": "join",
+      "title": "&9The Wildheart",
+      "subtitle": "Join this light",
+      "desc": [
+        "&o\"No beast fights alone.\"&r",
+        "Indigo is the light of compassion: a ranger and beast master with bow and summons, who tames, breeds and farms, bonds dragons and keeps familiars.",
+        "",
+        "Claim the reward to join Indigo and unlock its talent tree. You can still join other lights later."
+      ],
+      "icon": "createlanterns:indigo_dust",
+      "x": 0,
+      "y": 0,
+      "shape": "pentagon",
+      "size": 2,
+      "deps": ["act1:choose_path"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "command", "command": "/gl class join {p} indigo"},
+        {"type": "item", "item": "minecraft:bow"},
+        {"type": "item", "item": "minecraft:lead", "count": 2},
+        {"type": "item", "item": "minecraft:bone", "count": 8},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "indigo", "amount": 50}
+      ]
+    },
+    {
+      "key": "friend",
+      "title": "Friend of the Wild",
+      "desc": [
+        "The wild trusts slowly. Earn it.",
+        "",
+        "Tame an animal: a wolf (bones), a cat (raw fish), a horse (keep riding it), a parrot (seeds)... Taming gives Indigo XP."
+      ],
+      "icon": "minecraft:lead",
+      "x": 1.5,
+      "y": 0,
+      "deps": ["join"],
+      "tasks": [
+        {"type": "advancement", "advancement": "minecraft:husbandry/tame_an_animal"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:bone", "count": 8},
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "indigo", "amount": 50}
+      ]
+    },
+    {
+      "key": "new_life",
+      "title": "New Life",
+      "desc": [
+        "The pack grows.",
+        "",
+        "Breed two animals (feed both their favourite food). Every animal you breed earns Indigo XP."
+      ],
+      "icon": "minecraft:wheat",
+      "x": 3,
+      "y": 0,
+      "deps": ["friend"],
+      "tasks": [
+        {"type": "advancement", "advancement": "minecraft:husbandry/breed_an_animal"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:wheat", "count": 16},
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "indigo", "amount": 50}
+      ]
+    },
+    {
+      "key": "pet_bed",
+      "title": "A Bed by the Fire",
+      "desc": [
+        "A tamed beast deserves a home, and a way back if it falls.",
+        "",
+        "Craft a &epet bed&r (Redomesticate). Pets bound to a bed come back to it instead of dying for good."
+      ],
+      "icon": "redomesticate:pet_bed_red",
+      "x": 4.5,
+      "y": 0,
+      "deps": ["new_life"],
+      "tasks": [
+        {"type": "item", "item": "redomesticate:pet_bed_red", "optional": true},
+        {"type": "item", "item": "redomesticate:pet_bed_white", "optional": true},
+        {"type": "item", "item": "redomesticate:pet_bed_brown", "optional": true},
+        {"type": "item", "item": "redomesticate:pet_bed_black", "optional": true},
+        {"type": "item", "item": "redomesticate:pet_bed_blue", "optional": true},
+        {"type": "item", "item": "redomesticate:pet_bed_green", "optional": true},
+        {"type": "item", "item": "redomesticate:pet_bed_yellow", "optional": true},
+        {"type": "item", "item": "redomesticate:pet_bed_orange", "optional": true},
+        {"type": "item", "item": "redomesticate:pet_bed_purple", "optional": true},
+        {"type": "item", "item": "redomesticate:pet_bed_gray", "optional": true},
+        {"type": "item", "item": "redomesticate:pet_bed_cyan", "optional": true},
+        {"type": "item", "item": "redomesticate:pet_bed_pink", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "indigo", "amount": 75}
+      ]
+    },
+    {
+      "key": "falconer",
+      "title": "Falconer",
+      "desc": [
+        "An eagle on your fist is a second pair of eyes, and a second set of claws.",
+        "",
+        "Tame a &ebald eagle&r (Alex's Mobs; see its Animal Dictionary) and craft a &eFalconry Glove&r to launch it."
+      ],
+      "icon": "alexsmobs:falconry_glove",
+      "x": 6,
+      "y": 0,
+      "deps": ["pet_bed"],
+      "tasks": [
+        {"type": "advancement", "advancement": "alexsmobs:alexsmobs/tame_bald_eagle"},
+        {"type": "item", "item": "alexsmobs:falconry_glove"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 120},
+        {"type": "skill_xp", "category": "indigo", "amount": 100}
+      ]
+    },
+    {
+      "key": "harvest",
+      "title": "Harvest Feast",
+      "desc": [
+        "Beasts eat. People eat. A Wildheart keeps both fed.",
+        "",
+        "Grow and harvest &e8 each&r of rice, tomatoes, cabbage and onions (Farmer's Delight; wild crops give seeds). Harvesting earns Indigo XP."
+      ],
+      "icon": "farmersdelight:tomato",
+      "x": 1.5,
+      "y": -1.5,
+      "deps": ["join"],
+      "tasks": [
+        {"type": "item", "item": "farmersdelight:rice", "count": 8},
+        {"type": "item", "item": "farmersdelight:tomato", "count": 8},
+        {"type": "item", "item": "farmersdelight:cabbage", "count": 8},
+        {"type": "item", "item": "farmersdelight:onion", "count": 8}
+      ],
+      "rewards": [
+        {"type": "item", "item": "farmersdelight:rich_soil", "count": 8},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "indigo", "amount": 75}
+      ]
+    },
+    {
+      "key": "feast",
+      "title": "A Feast for the Pack",
+      "desc": [
+        "Set the table. Everyone eats tonight.",
+        "",
+        "Cook and place a &efeast&r block (roast chicken, honey glazed ham, shepherd's pie...) with a Cooking Pot."
+      ],
+      "icon": "farmersdelight:roast_chicken_block",
+      "x": 3,
+      "y": -1.5,
+      "deps": ["harvest"],
+      "tasks": [
+        {"type": "advancement", "advancement": "farmersdelight:main/place_feast"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "farmersdelight:dog_food", "count": 4},
+        {"type": "item", "item": "farmersdelight:horse_feed", "count": 4},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "indigo", "amount": 75}
+      ]
+    },
+    {
+      "key": "longbow",
+      "title": "Ranger's Bow",
+      "desc": [
+        "A ranger strikes from the treeline while the pack closes in.",
+        "",
+        "Craft an &eEpic Knights Longbow&r: slow to draw, hits hard."
+      ],
+      "icon": "magistuarmory:longbow",
+      "x": 1.5,
+      "y": 1.5,
+      "deps": ["join"],
+      "tasks": [
+        {"type": "item", "item": "magistuarmory:longbow"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:arrow", "count": 32},
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "indigo", "amount": 50}
+      ]
+    },
+    {
+      "key": "camp",
+      "title": "The Hunter's Camp",
+      "desc": [
+        "Little hunters with big bows camp in the woods. They might follow someone kind.",
+        "",
+        "Find a &eHunter Campsite&r (Alshanex's Familiars)."
+      ],
+      "icon": "alshanex_familiars:hunter_trinket",
+      "x": 3,
+      "y": 1.5,
+      "deps": ["longbow"],
+      "tasks": [
+        {"type": "structure", "structure": "alshanex_familiars:hunter_campsite"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "indigo", "amount": 75}
+      ]
+    },
+    {
+      "key": "first_familiar",
+      "title": "First Familiar",
+      "desc": [
+        "A familiar is a friend who casts spells.",
+        "",
+        "Tame any &efamiliar&r (Alshanex's Familiars): hunter, druid, mage, cleric, summoner and more. The Familiar Guide explains how."
+      ],
+      "icon": "familiarslib:familiar_egg",
+      "x": 4.5,
+      "y": 1.5,
+      "deps": ["camp"],
+      "tasks": [
+        {"type": "advancement", "advancement": "alshanex_familiars:alshanex_familiars/tame/hunter", "optional": true},
+        {"type": "advancement", "advancement": "alshanex_familiars:alshanex_familiars/tame/druid", "optional": true},
+        {"type": "advancement", "advancement": "alshanex_familiars:alshanex_familiars/tame/mage", "optional": true},
+        {"type": "advancement", "advancement": "alshanex_familiars:alshanex_familiars/tame/cleric", "optional": true},
+        {"type": "advancement", "advancement": "alshanex_familiars:alshanex_familiars/tame/summoner", "optional": true},
+        {"type": "advancement", "advancement": "alshanex_familiars:alshanex_familiars/tame/frostling", "optional": true},
+        {"type": "advancement", "advancement": "alshanex_familiars:alshanex_familiars/tame/scorcher", "optional": true},
+        {"type": "advancement", "advancement": "alshanex_familiars:alshanex_familiars/tame/plague", "optional": true},
+        {"type": "advancement", "advancement": "alshanex_familiars:alshanex_familiars/tame/necromancer", "optional": true},
+        {"type": "advancement", "advancement": "alshanex_familiars:alshanex_familiars/tame/illusionist", "optional": true},
+        {"type": "advancement", "advancement": "alshanex_familiars:alshanex_familiars/tame/archmage", "optional": true},
+        {"type": "advancement", "advancement": "alshanex_familiars:alshanex_familiars/tame/dragoon", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp", "xp": 150},
+        {"type": "skill_xp", "category": "indigo", "amount": 100}
+      ]
+    },
+    {
+      "key": "talisman",
+      "title": "Conjurer's Talisman",
+      "desc": [
+        "Summons from every school answer you: vexes, the raised dead, polar bears.",
+        "",
+        "Craft a &eConjurer's Talisman&r (Iron's Spells) to strengthen your summons. Look for summon scrolls (&eSummon Vex&r, &eRaise Dead&r, &eSummon Polar Bear&r...)."
+      ],
+      "icon": "irons_spellbooks:conjurers_talisman",
+      "x": 6,
+      "y": 1.5,
+      "deps": ["first_familiar"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:conjurers_talisman"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp", "xp": 120},
+        {"type": "skill_xp", "category": "indigo", "amount": 100}
+      ]
+    },
+    {
+      "key": "big_friends",
+      "title": "Big Friends",
+      "desc": [
+        "Some friends are larger than others.",
+        "",
+        "Optional: tame an &eelephant&r, a &egorilla&r or a &egrizzly bear&r (Alex's Mobs)."
+      ],
+      "icon": "alexsmobs:bear_dust",
+      "x": 3,
+      "y": 3,
+      "deps": ["friend"],
+      "optional": true,
+      "tasks": [
+        {"type": "advancement", "advancement": "alexsmobs:alexsmobs/tame_elephant", "optional": true},
+        {"type": "advancement", "advancement": "alexsmobs:alexsmobs/tame_gorilla", "optional": true},
+        {"type": "advancement", "advancement": "alexsmobs:alexsmobs/tame_grizzly_bear", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 120},
+        {"type": "skill_xp", "category": "indigo", "amount": 100}
+      ]
+    },
+    {
+      "key": "whisper",
+      "title": "The Light Whispers",
+      "subtitle": "Class level 10",
+      "desc": [
+        "Every animal you pass turns its head to look at you, and you hear: &o\"We are with you.\"&r",
+        "",
+        "Reach &eIndigo level 10&r. Breeding, taming, harvesting and your summons' kills all count."
+      ],
+      "icon": "createlanterns:indigo_dust",
+      "x": 9,
+      "y": 0,
+      "shape": "octagon",
+      "size": 1.5,
+      "deps": ["falconer", "first_familiar"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_whisper_indigo"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "skill_xp", "category": "indigo", "amount": 150}
+      ]
+    },
+    {
+      "key": "plagued",
+      "title": "The Plague Doctor's Coat",
+      "desc": [
+        "Beaked mask, long coat. Odd for a beast master, but it makes summons stronger.",
+        "",
+        "Craft the full &ePlagued&r set (Iron's Spells)."
+      ],
+      "icon": "irons_spellbooks:plagued_chestplate",
+      "x": 10.5,
+      "y": 0,
+      "shape": "rsquare",
+      "size": 1.25,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:plagued_helmet"},
+        {"type": "item", "item": "irons_spellbooks:plagued_chestplate"},
+        {"type": "item", "item": "irons_spellbooks:plagued_leggings"},
+        {"type": "item", "item": "irons_spellbooks:plagued_boots"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "indigo", "amount": 200}
+      ]
+    },
+    {
+      "key": "greater_talisman",
+      "title": "Greater Conjuring",
+      "desc": [
+        "Call bigger things.",
+        "",
+        "Upgrade to a &eGreater Conjurer's Talisman&r."
+      ],
+      "icon": "irons_spellbooks:greater_conjurers_talisman",
+      "x": 12,
+      "y": 0,
+      "deps": ["plagued", "talisman"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:greater_conjurers_talisman"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "indigo", "amount": 200}
+      ]
+    },
+    {
+      "key": "circle",
+      "title": "A Circle of Familiars",
+      "desc": [
+        "A druid to heal, a cleric to protect, a summoner to call more friends.",
+        "",
+        "Tame a &edruid&r, a &ecleric&r and a &esummoner&r familiar."
+      ],
+      "icon": "alshanex_familiars:familiar_idol",
+      "x": 13.5,
+      "y": 0,
+      "deps": ["greater_talisman"],
+      "tasks": [
+        {"type": "advancement", "advancement": "alshanex_familiars:alshanex_familiars/tame/druid"},
+        {"type": "advancement", "advancement": "alshanex_familiars:alshanex_familiars/tame/cleric"},
+        {"type": "advancement", "advancement": "alshanex_familiars:alshanex_familiars/tame/summoner"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 300},
+        {"type": "skill_xp", "category": "indigo", "amount": 250}
+      ]
+    },
+    {
+      "key": "hydra_cave",
+      "title": "The Swamp's Deep Cave",
+      "desc": [
+        "Bones in the bog. Hissing in the dark, from many throats at once.",
+        "",
+        "Find a &eHydra Cave&r (Ice and Fire) in a swamp. Mark it."
+      ],
+      "icon": "iceandfire:hydra_fang",
+      "x": 15,
+      "y": 0,
+      "deps": ["circle"],
+      "tasks": [
+        {"type": "structure", "structure": "iceandfire:hydra_cave"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "indigo", "amount": 200}
+      ]
+    },
+    {
+      "key": "grove",
+      "title": "The Sun Tribe",
+      "desc": [
+        "Masked warriors dance in a savanna grove around a chief who commands the sun.",
+        "",
+        "Find an &eUmvuthana Grove&r (Mowzie's Mobs) in a savanna."
+      ],
+      "icon": "mowziesmobs:umvuthana_mask_faith",
+      "x": 10.5,
+      "y": -1.5,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "structure", "structure": "mowziesmobs:umvuthana_grove"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "indigo", "amount": 150}
+      ]
+    },
+    {
+      "key": "umvuthi",
+      "title": "Sun and Mask",
+      "desc": [
+        "Umvuthi, the beast-caller, summons his tribe and burns the ground with sunlight.",
+        "",
+        "Defeat &eUmvuthi&r in his grove. Kill his followers and stay out of the sunstrikes."
+      ],
+      "icon": "mowziesmobs:sol_visage",
+      "x": 12,
+      "y": -1.5,
+      "shape": "hexagon",
+      "size": 1.5,
+      "deps": ["grove"],
+      "tasks": [
+        {"type": "kill", "entity": "mowziesmobs:umvuthi"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 350},
+        {"type": "skill_xp", "category": "indigo", "amount": 250}
+      ]
+    },
+    {
+      "key": "sol_visage",
+      "title": "Sol Visage",
+      "desc": [
+        "The chief's mask. It lets you call a tribe of your own.",
+        "",
+        "Claim the &eSol Visage&r."
+      ],
+      "icon": "mowziesmobs:sol_visage",
+      "x": 13.5,
+      "y": -1.5,
+      "deps": ["umvuthi"],
+      "tasks": [
+        {"type": "item", "item": "mowziesmobs:sol_visage"}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "indigo", "amount": 200}
+      ]
+    },
+    {
+      "key": "roost",
+      "title": "Here Be Dragons",
+      "desc": [
+        "There are dragons of every kind, and every kind wants something different from you.",
+        "",
+        "Find a &eBook of Dragons&r roost, climb onto a wild dragon and hold on until it stops bucking. Read the Book of Dragons to learn what each species wants."
+      ],
+      "icon": "bookofdragons:book_of_dragons",
+      "x": 10.5,
+      "y": 1.5,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "structure", "structure": "bookofdragons:roost_glade", "optional": true},
+        {"type": "structure", "structure": "bookofdragons:roost_cave", "optional": true},
+        {"type": "structure", "structure": "bookofdragons:roost_cliff", "optional": true},
+        {"type": "structure", "structure": "bookofdragons:roost_barrens", "optional": true},
+        {"type": "structure", "structure": "bookofdragons:roost_wetland", "optional": true},
+        {"type": "advancement", "advancement": "bookofdragons:dragon_rider"},
+        {"type": "advancement", "advancement": "bookofdragons:dragon_tamer"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "indigo", "amount": 200}
+      ]
+    },
+    {
+      "key": "rider",
+      "title": "The Whistle",
+      "desc": [
+        "Bonding takes time, trust and a lot of fish.",
+        "",
+        "Craft a &eDragon Whistle&r to call your dragon to you."
+      ],
+      "icon": "bookofdragons:dragon_whistle",
+      "x": 12,
+      "y": 1.5,
+      "deps": ["roost"],
+      "tasks": [
+        {"type": "item", "item": "bookofdragons:dragon_whistle"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 300},
+        {"type": "skill_xp", "category": "indigo", "amount": 250}
+      ]
+    },
+    {
+      "key": "roost_home",
+      "title": "A Roost of Your Own",
+      "desc": [
+        "Dragons need a home they can return to.",
+        "",
+        "Craft a &eDragon Roost&r (Book of Dragons) for your dragons."
+      ],
+      "icon": "bookofdragons:roost_controller",
+      "x": 13.5,
+      "y": 1.5,
+      "deps": ["rider"],
+      "tasks": [
+        {"type": "item", "item": "bookofdragons:roost_controller"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "indigo", "amount": 200}
+      ]
+    },
+    {
+      "key": "dream",
+      "title": "The Dream",
+      "subtitle": "Class level 25",
+      "desc": [
+        "You dream of running with a pack across an endless plain, and you can't tell which of the beasts is you.",
+        "",
+        "Reach &eIndigo level 25&r. Then the trial."
+      ],
+      "icon": "createlanterns:indigo_liquid_light_bucket",
+      "x": 16.5,
+      "y": 0,
+      "shape": "octagon",
+      "size": 1.5,
+      "deps": ["hydra_cave", "plagued"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_dream_indigo"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "skill_xp", "category": "indigo", "amount": 250}
+      ]
+    },
+    {
+      "key": "trial",
+      "title": "&9The Many Heads",
+      "subtitle": "Ring trial: the boss",
+      "desc": [
+        "The Hydra rises from the bog: nine heads, nine hungers, and every one of them in pain.",
+        "",
+        "Kill the &eHydra&r in its swamp cave (Ice and Fire). Its heads grow back, so focus them down together; your beasts and summons can keep the others busy. Party members within 64 blocks get the trial credit too."
+      ],
+      "icon": "iceandfire:hydra_heart",
+      "x": 18.75,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 2.25,
+      "deps": ["dream", "hydra_cave"],
+      "tasks": [
+        {"type": "kill", "entity": "iceandfire:hydra", "optional": true},
+        {"type": "stage", "stage": "gl_trial_indigo", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/class_indigo"},
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp_levels", "levels": 8},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "indigo", "amount": 500}
+      ]
+    },
+    {
+      "key": "choice",
+      "title": "The Ring Judges",
+      "subtitle": "The ring will judge you",
+      "desc": [
+        "The Hydra's last head sinks into the mud, and an indigo light rises like a breath on a cold morning.",
+        "Can you feel another's pain as your own?",
+        "",
+        "Claim this reward to begin the &ering trial&r: a conversation in chat. The ring will judge you. Your &eanswers&r decide whether you receive your own light, the &fWhite&r, or the &8Black&r. Answer as who you really are.",
+        "&7(Only works once you have the trial credit from the quest before.)"
+      ],
+      "icon": "createlanterns:ring_blank",
+      "x": 21,
+      "y": 0,
+      "shape": "diamond",
+      "size": 1.75,
+      "deps": ["trial"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "command", "command": "/gl trial begin {p} indigo"}
+      ]
+    },
+    {
+      "key": "ring",
+      "title": "&9Ring-Bearer",
+      "subtitle": "Ring-bearer",
+      "desc": [
+        "A ring found you. Indigo, White or Black, you are a &eLantern&r now: you can fly, and your will takes shape as constructs.",
+        "",
+        "This completes when you have &eany&r ring from the trial. The Indigo path continues; the &6Last Light&r chapter has opened."
+      ],
+      "icon": "createlanterns:indigo_power_ring",
+      "x": 23.25,
+      "y": 0,
+      "shape": "octagon",
+      "size": 2.5,
+      "deps": ["choice"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_ringbearer"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 10},
+        {"type": "xp", "xp": 1000},
+        {"type": "skill_xp", "category": "indigo", "amount": 750}
+      ]
+    },
+    {
+      "key": "true_indigo",
+      "title": "The Indigo Answered",
+      "desc": [
+        "The indigo ring stayed. Any lantern's light will feed it now.",
+        "",
+        "Optional, Indigo ring only: learn &ePack Leap&r and &eSwap with your beast&r (Spectral Hub HUD)."
+      ],
+      "icon": "createlanterns:indigo_power_battery",
+      "x": 25.25,
+      "y": -1.5,
+      "deps": ["ring"],
+      "optional": true,
+      "tasks": [
+        {"type": "stage", "stage": "gl_ring_indigo"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "indigo", "amount": 300}
+      ]
+    },
+    {
+      "key": "sunken_city",
+      "title": "The Sunken City",
+      "desc": [
+        "A drowned city on the deep sea floor, ruled by a beast too large to see whole.",
+        "",
+        "Find the &eSunken City&r (L_Ender's Cataclysm) under the ocean. An &eEye of Abyss&r points the way. Bring water breathing."
+      ],
+      "icon": "cataclysm:abyss_eye",
+      "x": 25.25,
+      "y": -3,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "structure", "structure": "cataclysm:sunken_city"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 400},
+        {"type": "skill_xp", "category": "indigo", "amount": 300}
+      ]
+    },
+    {
+      "key": "leviathan",
+      "title": "Leviathan",
+      "desc": [
+        "The Leviathan is the sea's oldest beast. It does not hate you. It is just hungry.",
+        "",
+        "Kill &eThe Leviathan&r in the Sunken City. Fight it underwater with the party; its tentacles grab and its beam burns."
+      ],
+      "icon": "cataclysm:abyssal_egg",
+      "x": 26.75,
+      "y": -3,
+      "shape": "hexagon",
+      "size": 1.4,
+      "deps": ["sunken_city"],
+      "tasks": [
+        {"type": "kill", "entity": "cataclysm:the_leviathan"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 900},
+        {"type": "skill_xp", "category": "indigo", "amount": 600}
+      ]
+    },
+    {
+      "key": "tidal_claws",
+      "title": "Tidal Claws",
+      "desc": [
+        "Its claws, still dripping.",
+        "",
+        "Claim the &eTidal Claws&r."
+      ],
+      "icon": "cataclysm:tidal_claws",
+      "x": 28.25,
+      "y": -3,
+      "deps": ["leviathan"],
+      "tasks": [
+        {"type": "item", "item": "cataclysm:tidal_claws"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "indigo", "amount": 300}
+      ]
+    },
+    {
+      "key": "sea_serpent",
+      "title": "Serpent of the Deep",
+      "desc": [
+        "A serpent as long as a ship circles in the open ocean.",
+        "",
+        "Kill a &eSea Serpent&r (Ice and Fire) in deep ocean. A boat is a bad idea; fly."
+      ],
+      "icon": "iceandfire:sea_serpent_fang",
+      "x": 26.75,
+      "y": -1.5,
+      "shape": "hexagon",
+      "size": 1.4,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "kill", "entity": "iceandfire:sea_serpent"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 800},
+        {"type": "skill_xp", "category": "indigo", "amount": 500}
+      ]
+    },
+    {
+      "key": "tide_armor",
+      "title": "Tide Guardian",
+      "desc": [
+        "Scales of the deep, shaped into armor.",
+        "",
+        "Craft a full &eTide Guardian&r set from sea serpent scales (any colour; this checks the blue set, see JEI)."
+      ],
+      "icon": "iceandfire:tide_blue_chestplate",
+      "x": 28.25,
+      "y": -1.5,
+      "shape": "rsquare",
+      "size": 1.25,
+      "deps": ["sea_serpent"],
+      "tasks": [
+        {"type": "item", "item": "iceandfire:tide_blue_helmet"},
+        {"type": "item", "item": "iceandfire:tide_blue_chestplate"},
+        {"type": "item", "item": "iceandfire:tide_blue_leggings"},
+        {"type": "item", "item": "iceandfire:tide_blue_boots"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 700},
+        {"type": "skill_xp", "category": "indigo", "amount": 450}
+      ]
+    },
+    {
+      "key": "true_bond",
+      "title": "Dragon Whisperer",
+      "desc": [
+        "You and your dragon think the same thought at the same time.",
+        "",
+        "Reach a &etrue bond&r with a Book of Dragons dragon (keep riding, feeding and fighting together)."
+      ],
+      "icon": "bookofdragons:nightfury_scales",
+      "x": 25.25,
+      "y": 0,
+      "deps": ["ring", "roost_home"],
+      "tasks": [
+        {"type": "advancement", "advancement": "bookofdragons:true_bond"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 800},
+        {"type": "skill_xp", "category": "indigo", "amount": 500}
+      ]
+    },
+    {
+      "key": "dragon_master",
+      "title": "Dragon Master",
+      "desc": [
+        "Every dragon in the sky knows your name.",
+        "",
+        "Fill &eevery dragon's entry&r in the Book of Dragons: meet, study and tame them all."
+      ],
+      "icon": "bookofdragons:roost_controller",
+      "x": 26.75,
+      "y": 0,
+      "deps": ["true_bond"],
+      "tasks": [
+        {"type": "advancement", "advancement": "bookofdragons:dragon_master"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 900},
+        {"type": "skill_xp", "category": "indigo", "amount": 600}
+      ]
+    },
+    {
+      "key": "colossus",
+      "title": "The Overgrown Colossus",
+      "desc": [
+        "A giant of moss and stone, the forest's anger given legs.",
+        "",
+        "Defeat the &eOvergrown Colossus&r (Legendary Monsters). Its &eGuide Book&r and structure advancements show where it sleeps."
+      ],
+      "icon": "legendary_monsters:nature_crystal",
+      "x": 28.25,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 1.4,
+      "deps": ["dragon_master"],
+      "tasks": [
+        {"type": "kill", "entity": "legendary_monsters:overgrown_colossus"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 10},
+        {"type": "xp", "xp": 1200},
+        {"type": "skill_xp", "category": "indigo", "amount": 700}
+      ]
+    },
+    {
+      "key": "familiar_upgrade",
+      "title": "Bond of Many",
+      "desc": [
+        "Your familiars grow with you.",
+        "",
+        "Upgrade a familiar (Alshanex's Familiars; see the Familiar Guide)."
+      ],
+      "icon": "alshanex_familiars:familiar_spellbook",
+      "x": 25.25,
+      "y": 1.5,
+      "deps": ["ring", "circle"],
+      "tasks": [
+        {"type": "advancement", "advancement": "alshanex_familiars:alshanex_familiars/upgrade_familiar"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "indigo", "amount": 300}
+      ]
+    },
+    {
+      "key": "cosmaw",
+      "title": "Star-Eater",
+      "desc": [
+        "In the End, a huge gentle beast drifts between the islands, eating starlight.",
+        "",
+        "Tame a &eCosmaw&r in the End (Alex's Mobs; it likes cosmic cod)."
+      ],
+      "icon": "alexsmobs:cosmic_cod",
+      "x": 26.75,
+      "y": 1.5,
+      "deps": ["familiar_upgrade"],
+      "tasks": [
+        {"type": "advancement", "advancement": "alexsmobs:alexsmobs/tame_cosmaw"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 600},
+        {"type": "skill_xp", "category": "indigo", "amount": 400}
+      ]
+    },
+    {
+      "key": "staff",
+      "title": "The Indigo Staff",
+      "desc": [
+        "The tribe of compassion carries staffs, not swords.",
+        "",
+        "Optional: obtain an &eIndigo Staff&r (Create: Lanterns, see JEI)."
+      ],
+      "icon": "createlanterns:indigo_staff",
+      "x": 28.25,
+      "y": 1.5,
+      "deps": ["cosmaw"],
+      "optional": true,
+      "tasks": [
+        {"type": "item", "item": "createlanterns:indigo_staff"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "indigo", "amount": 400}
+      ]
+    },
+    {
+      "key": "void_worm",
+      "title": "The Void Worm",
+      "desc": [
+        "Some beasts can't be tamed. Only stopped.",
+        "",
+        "Optional: summon and kill the &eVoid Worm&r (Alex's Mobs; a mysterious worm thrown into the void)."
+      ],
+      "icon": "alexsmobs:void_worm_eye",
+      "x": 28.25,
+      "y": 3,
+      "shape": "hexagon",
+      "size": 1.4,
+      "deps": ["cosmaw"],
+      "optional": true,
+      "tasks": [
+        {"type": "advancement", "advancement": "alexsmobs:alexsmobs/void_worm_kill"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 1000},
+        {"type": "skill_xp", "category": "indigo", "amount": 600}
+      ]
+    },
+    {
+      "key": "mythic",
+      "title": "Mythic Pack",
+      "subtitle": "Extreme gear",
+      "desc": [
+        "You and your beasts, perfected together.",
+        "",
+        "Unlock the &ePinnacle&r world tier (Apotheosis: a full Epic affix set and the Ender Dragon slain; CTRL+T switches tiers) and draw a &6Mythic&r bow with gems for your summons. Tick the checkmark when you do."
+      ],
+      "icon": "apotheosis:sigil_of_supremacy",
+      "x": 31.25,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 1.5,
+      "deps": ["colossus", "tidal_claws", "tide_armor"],
+      "tasks": [
+        {"type": "advancement", "advancement": "apotheosis:progression/pinnacle"},
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 15},
+        {"type": "xp", "xp": 1500},
+        {"type": "skill_xp", "category": "indigo", "amount": 1000}
+      ]
+    },
+    {
+      "key": "legend",
+      "title": "&9Legend of the Indigo Light",
+      "subtitle": "After the Last Light",
+      "desc": [
+        "When the Devourer fell, the Wildheart's pack held its adds at bay, and not one beast was left behind.",
+        "",
+        "Complete the Last Light and the Indigo path. No beast fights alone."
+      ],
+      "icon": "createlanterns:indigo_power_ring",
+      "x": 36.25,
+      "y": 0,
+      "shape": "gear",
+      "size": 2,
+      "deps": ["mythic", "finale:last_light"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 20},
+        {"type": "xp", "xp": 2000},
+        {"type": "skill_xp", "category": "indigo", "amount": 1500}
+      ]
+    }
+  ]
+}

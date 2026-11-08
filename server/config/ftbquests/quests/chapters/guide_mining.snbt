@@ -1,0 +1,315 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "guide_mining"
+	group: "4FA3695F5F82A1E1"
+	icon: {
+		id: "minecraft:iron_pickaxe"
+	}
+	id: "55B04943BD439AA9"
+	images: [ ]
+	order_index: 3
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["0C1EA8A1216376F7"]
+			icon: {
+				id: "minecraft:raw_iron"
+			}
+			id: "7A7DED421D1B8687"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					id: "78B94CDF323C7E5B"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "10D115655B313122"
+					type: "xp"
+					xp: 50
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				count: 32L
+				id: "39C0678798378439"
+				item: { count: 1, id: "minecraft:raw_iron" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "mekanism:raw_osmium"
+			}
+			id: "7B9FE9720DFFD852"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "1DC0A2E2ADCD230B"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [
+				{
+					count: 16L
+					id: "3893ABA9873078C6"
+					item: { count: 1, id: "mekanism:raw_osmium" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "475B304FD3F42364"
+					item: { count: 1, id: "mekanism:raw_tin" }
+					type: "item"
+				}
+			]
+			x: 2.5d
+			y: -2.0d
+		}
+		{
+			icon: {
+				id: "create:raw_zinc"
+			}
+			id: "69E0E6713E98203C"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "3BE9EC5FCD1E7450"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				count: 16L
+				id: "16F7212D16D44BD4"
+				item: { count: 1, id: "create:raw_zinc" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["69E0E6713E98203C"]
+			icon: {
+				id: "iceandfire:sapphire_gem"
+			}
+			id: "5E207ECA130FB1FD"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "2F813F15D5679AAF"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [
+				{
+					count: 2L
+					id: "6CA97548607D908E"
+					item: { count: 1, id: "iceandfire:sapphire_gem" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "4874EB572616E677"
+					item: { count: 1, id: "iceandfire:raw_silver" }
+					type: "item"
+				}
+			]
+			x: 6.5d
+			y: -2.0d
+		}
+		{
+			icon: {
+				id: "galosphere:allurite_cluster"
+			}
+			id: "7057F0541BBB9113"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "4AE6B38AAE7F64D0"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				biome: "galosphere:crystal_canyons"
+				id: "0E49917FD9FD874F"
+				type: "biome"
+			}]
+			x: 2.5d
+			y: 2.0d
+		}
+		{
+			icon: {
+				id: "galosphere:lumiere_shard"
+			}
+			id: "6B8A35A12A2236A9"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "25930236E93C5285"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [
+				{
+					count: 8L
+					id: "5042D1CB5E2E8279"
+					item: { count: 1, id: "galosphere:allurite_shard" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "48BF32BFC08D7EF9"
+					item: { count: 1, id: "galosphere:lumiere_shard" }
+					type: "item"
+				}
+			]
+			x: 4.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6B8A35A12A2236A9"]
+			icon: {
+				id: "galosphere:palladium_ingot"
+			}
+			id: "768C154ADBF507EC"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "2CF6C1B8D02A8F0A"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				count: 8L
+				id: "5827B6A9ECE7BC3C"
+				item: { count: 1, id: "galosphere:palladium_ingot" }
+				type: "item"
+			}]
+			x: 6.5d
+			y: 2.0d
+		}
+		{
+			icon: {
+				id: "irons_spellbooks:raw_mithril"
+			}
+			id: "5FF39B3DB1D14C17"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "01F38E6681011A3C"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				count: 4L
+				id: "51A5DB6FB5E84679"
+				item: { count: 1, id: "irons_spellbooks:raw_mithril" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5FF39B3DB1D14C17"]
+			icon: {
+				id: "draconicevolution:draconium_dust"
+			}
+			id: "79F1CAD28503EC44"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "257940172E1C6EA8"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				count: 8L
+				id: "094CF1DF41BE5AA2"
+				item: { count: 1, id: "draconicevolution:draconium_dust" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["79F1CAD28503EC44"]
+			icon: {
+				id: "minecraft:sculk_shrieker"
+			}
+			id: "189648A19ECEA720"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "51C5C29B70D9CCCA"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "36ACDF0A00988FEC"
+				structure: "minecraft:ancient_city"
+				type: "structure"
+			}]
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["79F1CAD28503EC44"]
+			icon: {
+				id: "minecraft:ancient_debris"
+			}
+			id: "5C8C64615BBE08D1"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "3086587AAED07B29"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				count: 4L
+				id: "0EAAD405B6E55EA3"
+				item: { count: 1, id: "minecraft:ancient_debris" }
+				type: "item"
+			}]
+			x: 9.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5C8C64615BBE08D1"]
+			icon: {
+				id: "minecraft:diamond_pickaxe"
+			}
+			id: "1F22E281EC2F05AB"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "0E29023E54F9D703"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 100"
+					id: "5BDA1A839BEC215F"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "octagon"
+			size: 1.25d
+			tasks: [{
+				id: "5F33C939A6AF7C1F"
+				type: "checkmark"
+			}]
+			x: 11.5d
+			y: 0.0d
+		}
+	]
+}

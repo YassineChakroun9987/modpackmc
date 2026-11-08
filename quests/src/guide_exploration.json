@@ -1,0 +1,281 @@
+{
+  "id": "guide_exploration",
+  "title": "&aThe Wide World",
+  "subtitle": "Maps, waystones, villages, dungeons and castles in the sky.",
+  "icon": "waystones:waystone",
+  "group": "mods",
+  "order": 2,
+  "quests": [
+    {
+      "key": "maps",
+      "title": "A World Worth Mapping",
+      "subtitle": "Xaero's Minimap and World Map",
+      "desc": [
+        "The minimap sits in the corner of your screen. Press &eM&r for the full &eWorld Map&r and &eB&r to drop a waypoint where you stand.",
+        "Your deaths are marked automatically, and OPAC party members can show up on the map. The land is &eTerralith&r: about a hundred biomes, and a title appears each time you enter a new one."
+      ],
+      "icon": "minecraft:map",
+      "x": 0, "y": 0,
+      "shape": "hexagon", "size": 1.5,
+      "deps": ["act1:choose_path"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 50}
+      ]
+    },
+    {
+      "key": "waystone",
+      "title": "A Waystone for Home",
+      "desc": [
+        "Waystones stand in villages and in the wild (about one every 25 chunks). Craft one for your base (see JEI) so you can always get home.",
+        "Teleporting costs XP: about one level per 100 blocks (27 at most), and 27 levels to change dimension. Warping to a global waystone is free. Each player activates a waystone for themselves."
+      ],
+      "icon": "waystones:waystone",
+      "x": 2, "y": 0,
+      "deps": ["maps"],
+      "tasks": [{"type": "item", "item": "waystones:waystone"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "sharestone",
+      "title": "The Party Network",
+      "desc": [
+        "A &eSharestone&r is a waystone that links to every other sharestone of the same colour. Everyone can use it, so it's the easiest network for a party.",
+        "Pick a colour for your group (green suits the Corps) and put one at each base, farm and dungeon you use. Warp Plates and scrolls also travel for free."
+      ],
+      "icon": "waystones:green_sharestone",
+      "x": 4, "y": 0,
+      "deps": ["waystone"],
+      "tasks": [{"type": "item", "item": "waystones:green_sharestone"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "village",
+      "title": "Villages of a Hundred Styles",
+      "desc": [
+        "Vanilla villages are gone. &eCTOV&r and &eTowns and Towers&r build villages that match their biome: desert oases, alpine towns, jungle treehouses, swamp stilts, fortified walls.",
+        "Visit one. Guards defend it, traders deal there, and many keep a waystone near the centre."
+      ],
+      "icon": "minecraft:bell",
+      "x": 3, "y": -2.5,
+      "deps": ["maps"],
+      "tasks": [{"type": "structure", "structure": "#minecraft:village"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "illager_manor",
+      "title": "The Illager Manor",
+      "subtitle": "Dungeons and Taverns",
+      "desc": [
+        "&eDungeons and Taverns&r scatters dangerous houses across the land: illager manors and hideouts, witch villas, toxic lairs and crypts. Wandering traders even sell maps to them.",
+        "An &eIllager Manor&r is a full mansion of evokers and vindicators. Go with friends."
+      ],
+      "icon": "minecraft:crossbow",
+      "x": 5, "y": -2.5,
+      "deps": ["village"],
+      "tasks": [{"type": "structure", "structure": "nova_structures:illager_manor"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "shrine_three",
+      "title": "The Third Trial",
+      "desc": [
+        "Shrine Towers hold combat trials in five tiers, and each tier is harder than the last. The loot grows with the danger.",
+        "Find a &eTier 3&r shrine and clear it. Bring the party and plenty of food."
+      ],
+      "icon": "minecraft:lodestone",
+      "x": 7, "y": -2.5,
+      "deps": ["illager_manor"],
+      "tasks": [{"type": "structure", "structure": "nova_structures:shrine_combat_tier_3"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 50}
+      ]
+    },
+    {
+      "key": "seven_seas",
+      "title": "Pirates on the Horizon",
+      "desc": [
+        "&eWDA: Seven Seas&r launches warships onto the oceans: the Victory Frigate, Unicorn Galleon, Corsair Corvette and Pirate Junk.",
+        "Board a Victory Frigate. Watch for cannons, and bring a boat in case you have to leave in a hurry."
+      ],
+      "icon": "minecraft:oak_boat",
+      "x": 9, "y": -2.5,
+      "deps": ["shrine_three"],
+      "optional": true,
+      "tasks": [{"type": "structure", "structure": "dungeons_arise_seven_seas:victory_frigate"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "desert_temple",
+      "title": "Puzzles in the Sand",
+      "subtitle": "YUNG's Better Desert Temples",
+      "desc": [
+        "&eYUNG's&r rebuilt the classic structures: temples, witch huts, ocean monuments, fortresses, mineshafts and the stronghold.",
+        "The new desert temples hide puzzles and traps, and the treasure room only opens when you solve them. Look around before you pull any lever."
+      ],
+      "icon": "minecraft:sandstone",
+      "x": 3, "y": 2.5,
+      "deps": ["maps"],
+      "tasks": [{"type": "structure", "structure": "betterdeserttemples:desert_temple"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "wda",
+      "title": "When Dungeons Arise",
+      "desc": [
+        "&eWhen Dungeons Arise&r builds huge dungeons: the Foundry, Mechanical Nest, Plague Asylum, Coliseum, Shiraz Palace, Thornborn Towers and more.",
+        "Start small: an &eIllager Campsite&r. The big ones take a full party and a full evening."
+      ],
+      "icon": "minecraft:campfire",
+      "x": 5, "y": 2.5,
+      "deps": ["desert_temple"],
+      "tasks": [{"type": "structure", "structure": "dungeons_arise:illager_campsite"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "fortress",
+      "title": "The Burning Keep",
+      "desc": [
+        "&eYUNG's Better Nether Fortresses&r turns the fortress into a real castle, with a keep, lava halls and blaze-filled towers.",
+        "Blazes drop the rods you need for Create's Blaze Burner and the Eye of Ender."
+      ],
+      "icon": "minecraft:nether_bricks",
+      "x": 7, "y": 2.5,
+      "deps": ["wda"],
+      "tasks": [{"type": "structure", "structure": "betterfortresses:fortress"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "stronghold",
+      "title": "The Great Stronghold",
+      "desc": [
+        "&eYUNG's Better Strongholds&r are vast: libraries, prisons, crypts and the End portal room deep inside. The nearest one is about 2,000 blocks from spawn.",
+        "Follow an Eye of Ender. Mark the portal room with a waystone: you'll be back."
+      ],
+      "icon": "minecraft:ender_eye",
+      "x": 9, "y": 2.5,
+      "deps": ["fortress"],
+      "tasks": [{"type": "structure", "structure": "betterstrongholds:stronghold"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 75}
+      ]
+    },
+    {
+      "key": "heavenly_rider",
+      "title": "Fortress in the Clouds",
+      "desc": [
+        "High above the land, WDA's &eHeavenly&r sky fortresses (Rider, Challenger, Conqueror) float at cloud height.",
+        "You'll need a way up: a balloon (Create Aeronautics), an elytra, or a very tall tower. Don't fall off."
+      ],
+      "icon": "minecraft:phantom_membrane",
+      "x": 11, "y": 2.5,
+      "deps": ["stronghold"],
+      "tasks": [{"type": "structure", "structure": "dungeons_arise:heavenly_rider"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "lost_castle",
+      "title": "The Lost Castle",
+      "desc": [
+        "Somewhere far out (about 9,500 blocks from spawn) stands &eThe Lost Castle&r, one huge, rare castle dungeon.",
+        "A long trip and a long fight. Optional, for the brave."
+      ],
+      "icon": "minecraft:cracked_stone_bricks",
+      "x": 13, "y": 2.5,
+      "deps": ["heavenly_rider"],
+      "optional": true,
+      "tasks": [{"type": "structure", "structure": "tlc:lost_castle"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "sky_village",
+      "title": "Villages Above the Clouds",
+      "desc": [
+        "&eSky Villages&r float high above the ground, on islands of their own.",
+        "Get up there with a balloon, an elytra or a long staircase, and visit one. A waystone up there saves the climb next time."
+      ],
+      "icon": "minecraft:white_wool",
+      "x": 5, "y": 5,
+      "deps": ["sharestone"],
+      "tasks": [{"type": "structure", "structure": "skyvillages:skyvillage"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "floating_island",
+      "title": "Islands in the Sky",
+      "desc": [
+        "&eEmber's Floating Islands&r adds seventeen sky islands: amethyst rocks, a cherry shrine, a cemetery, camps, a steampunk island and a hut with its own waystone.",
+        "Find the &eHut with a Waystone&r and activate it: a free landing spot in the sky."
+      ],
+      "icon": "minecraft:amethyst_block",
+      "x": 7, "y": 5,
+      "deps": ["sky_village"],
+      "tasks": [{"type": "structure", "structure": "floating_islands:hut_with_waystone"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "sky_whale",
+      "title": "The Sky Whale",
+      "desc": [
+        "Giant whales drift through the sky carrying ships on their backs, and one carries an arena.",
+        "Land on a &eSky Whale Ship&r. Whatever lives up there won't be glad to see you."
+      ],
+      "icon": "minecraft:prismarine_shard",
+      "x": 9, "y": 5,
+      "deps": ["floating_island"],
+      "tasks": [{"type": "structure", "structure": "sky_whale_ship:whaleship"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "levitation_stone",
+      "title": "The Levitation Stone",
+      "subtitle": "Castle in the Sky",
+      "desc": [
+        "One floating castle hides more than 10,000 blocks from spawn. The &eLevitation Stone&r leads you to it.",
+        "Craft it (an elytra ringed by netherite ingots and phantom membranes) or buy one from a master Cartographer. It needs the End and the Nether first, so it's a late trip."
+      ],
+      "icon": "castle_in_the_sky:levitation_stone",
+      "x": 11, "y": 5,
+      "deps": ["stronghold", "sky_whale"],
+      "tasks": [{"type": "item", "item": "castle_in_the_sky:levitation_stone"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "castle_in_the_sky",
+      "title": "Castle in the Sky",
+      "desc": [
+        "Inside the castle, &cred&r, &eyellow&r and &9blue&r keys open the doors of the same colour. Find each key before you try its door.",
+        "The Levitation Crystal waits at the castle's heart, and so do its guardians. Fly or float there with your party."
+      ],
+      "icon": "castle_in_the_sky:red_key",
+      "x": 13, "y": 5,
+      "deps": ["levitation_stone"],
+      "tasks": [{"type": "structure", "structure": "castle_in_the_sky:castle_in_the_sky"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 100}
+      ]
+    },
+    {
+      "key": "castle_conquered",
+      "title": "Laputa's Heart",
+      "desc": [
+        "Conquer the Castle in the Sky. Few find it, and fewer leave with its crystal.",
+        "The Lantern Corps took note."
+      ],
+      "icon": "castle_in_the_sky:laputa_core",
+      "x": 15, "y": 5,
+      "shape": "octagon", "size": 1.5,
+      "deps": ["castle_in_the_sky"],
+      "tasks": [{"type": "advancement", "advancement": "castle_in_the_sky:conquer_castle"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 200},
+        {"type": "xp", "xp": 500}
+      ]
+    }
+  ]
+}

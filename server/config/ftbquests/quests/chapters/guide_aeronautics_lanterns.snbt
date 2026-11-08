@@ -1,0 +1,446 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "guide_aeronautics_lanterns"
+	group: "4FA3695F5F82A1E1"
+	icon: {
+		id: "createlanterns:power_battery"
+	}
+	id: "57AFF1775D3E76C1"
+	images: [ ]
+	order_index: 12
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "simulated:physics_assembler"
+			}
+			id: "75C9C63F8FB2336B"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					id: "505D45B8FDAA45FB"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "6BD76E5B2B25CFBA"
+					type: "xp"
+					xp: 50
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				advancement: "simulated:applied_kinematics"
+				criterion: ""
+				id: "60CB526E533C90CA"
+				type: "advancement"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["75C9C63F8FB2336B"]
+			icon: {
+				id: "aeronautics:white_envelope"
+			}
+			id: "16E32447B3EAC75A"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "7B2A8DAE004B07E2"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "aeronautics:head_in_the_clouds"
+				criterion: ""
+				id: "5FCA367C946E3D38"
+				type: "advancement"
+			}]
+			x: 2.5d
+			y: -2.0d
+		}
+		{
+			icon: {
+				id: "aeronautics:wooden_propeller"
+			}
+			id: "32701A962C4B85C9"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "4C45D659E555E7F1"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "aeronautics:for_every_action"
+				criterion: ""
+				id: "24C8964372E00B3E"
+				type: "advancement"
+			}]
+			x: 5.0d
+			y: -2.0d
+		}
+		{
+			icon: {
+				id: "aeronautics:propeller_bearing"
+			}
+			id: "3E85A21DB4D9D66D"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "321F3B5AD0E62A5F"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "aeronautics:in_thrust_we_trust"
+				criterion: ""
+				id: "37700C2E5C472493"
+				type: "advancement"
+			}]
+			x: 7.5d
+			y: -2.0d
+		}
+		{
+			icon: {
+				id: "aeronautics:levitite"
+			}
+			id: "6433903AEB0E9371"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "0E407C8FDD64F75E"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "aeronautics:unidentified_floating_object"
+				criterion: ""
+				id: "286651A9DCE63616"
+				type: "advancement"
+			}]
+			x: 10.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["75C9C63F8FB2336B"]
+			icon: {
+				id: "simulated:white_portable_engine"
+			}
+			id: "331D70B63FEC281F"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "4BBA0D3FD12A1BEA"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "simulated:steamless_engine"
+				criterion: ""
+				id: "0CAE5ECBC2DA04C2"
+				type: "advancement"
+			}]
+			x: 2.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["331D70B63FEC281F"]
+			icon: {
+				id: "simulated:steering_wheel"
+			}
+			id: "3CF93E872F112D0B"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "775E283D1A00F6FE"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "simulated:unpowered_steering"
+				criterion: ""
+				id: "7EA3B7822B47F685"
+				type: "advancement"
+			}]
+			x: 5.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["3CF93E872F112D0B"]
+			icon: {
+				id: "simulated:navigation_table"
+			}
+			id: "067EB64BBD6F55CC"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "0C8B86D8E5351D27"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "simulated:thataway"
+				criterion: ""
+				id: "2CBED106A31F873B"
+				type: "advancement"
+			}]
+			x: 7.5d
+			y: -4.0d
+		}
+		{
+			icon: {
+				id: "aeronautics:aviators_goggles"
+			}
+			id: "26F5D51B0ACA9B09"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "0B8EA16ED9DA2212"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 150"
+					id: "252C23B6160D1293"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "octagon"
+			size: 1.25d
+			tasks: [{
+				advancement: "simulated:i_declare_thee"
+				criterion: ""
+				id: "2D8D04BAD081E217"
+				type: "advancement"
+			}]
+			x: 12.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["75C9C63F8FB2336B"]
+			icon: {
+				id: "createlanterns:lantern_frame"
+			}
+			id: "1DD2CBEC71A82CA6"
+			rewards: [{
+				id: "719FC9663C7992B7"
+				type: "xp"
+				xp: 100
+			}]
+			tasks: [{
+				id: "0B370995E6F152BB"
+				type: "checkmark"
+			}]
+			x: 2.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1DD2CBEC71A82CA6"]
+			icon: {
+				id: "createlanterns:power_ring"
+			}
+			id: "7ECE136659787D3C"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "26CF7BD458748126"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 200"
+					id: "03A2D9842A60199B"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.25d
+			tasks: [{
+				id: "252ADCDD32A5D235"
+				type: "custom"
+			}]
+			x: 5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7ECE136659787D3C"]
+			icon: {
+				id: "createlanterns:power_battery"
+			}
+			id: "369FD54132D4811F"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "3110813677CF3B37"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "704ABF5E24BE4E84"
+				type: "checkmark"
+			}]
+			x: 7.5d
+			y: 2.0d
+		}
+		{
+			icon: {
+				id: "createlanterns:indigo_staff"
+			}
+			id: "58818BC651C6CCBD"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "744E85B775A89CCF"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 100"
+					id: "38E6977A5673E6DE"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				id: "1E21808E2B300A5F"
+				type: "checkmark"
+			}]
+			x: 10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1DD2CBEC71A82CA6"]
+			icon: {
+				id: "createlanterns:power_core"
+			}
+			id: "6E81D13211AD6F77"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "123F5E2BBDC90A80"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "195C69A03A3B62B8"
+				item: { count: 1, id: "createlanterns:power_core" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["6E81D13211AD6F77"]
+			icon: {
+				id: "create:brass_casing"
+			}
+			id: "1EC3189E9E52BB52"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "48EC54BB34AF24DB"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "58678634A593E669"
+					type: "xp"
+					xp: 300
+				}
+			]
+			tasks: [{
+				id: "1E295F30A413F41C"
+				type: "checkmark"
+			}]
+			x: 7.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["26F5D51B0ACA9B09"]
+			icon: {
+				id: "createlanterns:oa_flower"
+			}
+			id: "432F743FA9F249CA"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "4DD96084B11BF350"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 300"
+					id: "3A2C1E857BA3E16E"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/gl lore {p} oa"
+					id: "29A22947823F4F58"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "octagon"
+			size: 1.75d
+			tasks: [{
+				id: "499F37AA4B8F5135"
+				type: "checkmark"
+			}]
+			x: 15.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"26F5D51B0ACA9B09"
+				"7ECE136659787D3C"
+			]
+			icon: {
+				id: "createlanterns:yellow_power_battery"
+			}
+			id: "2ED7BD0588C69B6C"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "75871318C4DEC992"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 250"
+					id: "559241C015F2568E"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "octagon"
+			size: 1.5d
+			tasks: [{
+				id: "298E3245967ED26E"
+				type: "checkmark"
+			}]
+			x: 15.0d
+			y: 3.0d
+		}
+	]
+}

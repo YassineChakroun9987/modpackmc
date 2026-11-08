@@ -1,0 +1,1003 @@
+{
+  "id": "class_yellow",
+  "title": "&eThe Yellow Light: Path of the Storm",
+  "subtitle": "Stormwright. Faster than thunder, brighter than lightning.",
+  "icon": "createlanterns:yellow_dust",
+  "group": "classes",
+  "order": 2,
+  "quests": [
+    {
+      "key": "join",
+      "title": "&eThe Stormwright",
+      "subtitle": "Join this light",
+      "desc": [
+        "&o\"Faster than thunder, brighter than lightning.\"&r",
+        "Yellow is the light of the storm and the machine: lightning magic, quick duelling blades, and &eCreate&r, &eAeronautics&r, Mekanism and Draconic tech. In co-op, Yellow builds the party's fleet.",
+        "",
+        "Claim the reward to join Yellow and unlock its talent tree. You can still join other lights later."
+      ],
+      "icon": "createlanterns:yellow_dust",
+      "x": 0,
+      "y": 0,
+      "shape": "pentagon",
+      "size": 2,
+      "deps": ["act1:choose_path"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "command", "command": "/gl class join {p} yellow"},
+        {"type": "item", "item": "create:wrench"},
+        {"type": "item", "item": "create:andesite_alloy", "count": 16},
+        {"type": "item", "item": "minecraft:copper_ingot", "count": 16},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "yellow", "amount": 50}
+      ]
+    },
+    {
+      "key": "cogs",
+      "title": "Cog and Copper",
+      "desc": [
+        "Turn one wheel and the whole world turns with it.",
+        "",
+        "Craft &e8 cogwheels&r and &e4 andesite casings&r (Create). Hover any Create item and hold &eW&r to Ponder how it works."
+      ],
+      "icon": "create:cogwheel",
+      "x": 1.5,
+      "y": 0,
+      "deps": ["join"],
+      "tasks": [
+        {"type": "item", "item": "create:cogwheel", "count": 8},
+        {"type": "item", "item": "create:andesite_casing", "count": 4}
+      ],
+      "rewards": [
+        {"type": "item", "item": "create:shaft", "count": 16},
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "yellow", "amount": 50}
+      ]
+    },
+    {
+      "key": "spark",
+      "title": "Spark Plug",
+      "desc": [
+        "Every storm starts as a breeze.",
+        "",
+        "Power your first machine: place a &eWater Wheel&r in flowing water or build a &eWindmill&r on a Windmill Bearing."
+      ],
+      "icon": "create:water_wheel",
+      "x": 3,
+      "y": 0,
+      "deps": ["cogs"],
+      "tasks": [
+        {"type": "advancement", "advancement": "create:water_wheel", "optional": true},
+        {"type": "advancement", "advancement": "create:windmill", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "yellow", "amount": 75}
+      ]
+    },
+    {
+      "key": "press",
+      "title": "Iron Under Pressure",
+      "desc": [
+        "Hammer, flatten, repeat. The machine never tires.",
+        "",
+        "Build a &eMechanical Press&r and press iron ingots into sheets."
+      ],
+      "icon": "create:mechanical_press",
+      "x": 4.5,
+      "y": 0,
+      "deps": ["spark"],
+      "tasks": [
+        {"type": "advancement", "advancement": "create:mechanical_press"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "create:large_cogwheel", "count": 4},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "yellow", "amount": 75}
+      ]
+    },
+    {
+      "key": "brass",
+      "title": "Brass and Brains",
+      "desc": [
+        "Copper and zinc, mixed hot, make the metal of clever machines.",
+        "",
+        "Mix &e8 brass ingots&r: Mechanical Mixer over a heated Basin (Blaze Burner)."
+      ],
+      "icon": "create:brass_ingot",
+      "x": 6,
+      "y": 0,
+      "deps": ["press"],
+      "tasks": [
+        {"type": "advancement", "advancement": "create:brass"},
+        {"type": "item", "item": "create:brass_ingot", "count": 8}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 120},
+        {"type": "skill_xp", "category": "yellow", "amount": 100}
+      ]
+    },
+    {
+      "key": "extendo",
+      "title": "Long Arm of the Law",
+      "desc": [
+        "A Stormwright reaches further than anyone else.",
+        "",
+        "Craft an &eExtendo Grip&r: it doubles your reach while held in the off-hand."
+      ],
+      "icon": "create:extendo_grip",
+      "x": 7.5,
+      "y": -1.5,
+      "deps": ["brass"],
+      "tasks": [
+        {"type": "item", "item": "create:extendo_grip"}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "yellow", "amount": 75}
+      ]
+    },
+    {
+      "key": "goggles",
+      "title": "Engineer's Eyes",
+      "desc": [
+        "See stress, speed and capacity at a glance.",
+        "",
+        "Craft &eEngineer's Goggles&r and wear them while building machines."
+      ],
+      "icon": "create:goggles",
+      "x": 1.5,
+      "y": -1.5,
+      "deps": ["join"],
+      "tasks": [
+        {"type": "item", "item": "create:goggles"}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 50},
+        {"type": "skill_xp", "category": "yellow", "amount": 50}
+      ]
+    },
+    {
+      "key": "rapier",
+      "title": "The Duelist",
+      "desc": [
+        "Lightning doesn't swing. Lightning strikes.",
+        "",
+        "Craft a quick duelling blade: a rapier, katana, estoc or the Amethyst Rapier. Fast weapons + Combat Roll suit a Stormwright."
+      ],
+      "icon": "simplyswords:iron_rapier",
+      "x": 1.5,
+      "y": 1.5,
+      "deps": ["join"],
+      "tasks": [
+        {"type": "item", "item": "simplyswords:iron_rapier", "optional": true},
+        {"type": "item", "item": "simplyswords:iron_katana", "optional": true},
+        {"type": "item", "item": "magistuarmory:steel_estoc", "optional": true},
+        {"type": "item", "item": "irons_spellbooks:amethyst_rapier", "optional": true},
+        {"type": "item", "item": "simplyswords:diamond_rapier", "optional": true}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "yellow", "amount": 50}
+      ]
+    },
+    {
+      "key": "static",
+      "title": "Static",
+      "desc": [
+        "Your hair stands up when you walk into a room. The light is charging you.",
+        "",
+        "Craft a &eLightning Rune&r (see JEI). Look for &eLightning Bolt&r, &eElectrocute&r and &eBall Lightning&r scrolls."
+      ],
+      "icon": "irons_spellbooks:lightning_rune",
+      "x": 3,
+      "y": 1.5,
+      "deps": ["rapier"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:lightning_rune"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "yellow", "amount": 75}
+      ]
+    },
+    {
+      "key": "rod",
+      "title": "Rod o' Lightning",
+      "desc": [
+        "A staff that remembers every storm it stood in.",
+        "",
+        "Craft the &eRod o' Lightning&r staff (Iron's Spells). Staffs add spell power to your casts."
+      ],
+      "icon": "irons_spellbooks:lightning_rod",
+      "x": 4.5,
+      "y": 1.5,
+      "deps": ["static"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:lightning_rod"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp", "xp": 120},
+        {"type": "skill_xp", "category": "yellow", "amount": 100}
+      ]
+    },
+    {
+      "key": "whisper",
+      "title": "The Light Whispers",
+      "subtitle": "Class level 10",
+      "desc": [
+        "Thunder rolls on a clear day, and in it you hear: &o\"Faster.\"&r",
+        "",
+        "Reach &eYellow level 10&r. Create milestones, machines and lightning kills all count."
+      ],
+      "icon": "createlanterns:yellow_dust",
+      "x": 9,
+      "y": 0,
+      "shape": "octagon",
+      "size": 1.5,
+      "deps": ["brass", "rod"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_whisper_yellow"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "skill_xp", "category": "yellow", "amount": 150}
+      ]
+    },
+    {
+      "key": "steam",
+      "title": "Full Steam",
+      "desc": [
+        "Fire, water, pressure. Real power at last.",
+        "",
+        "Build a &eSteam Engine&r on a heated Fluid Tank (Create)."
+      ],
+      "icon": "create:steam_engine",
+      "x": 10.5,
+      "y": 0,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "advancement", "advancement": "create:steam_engine"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "yellow", "amount": 150}
+      ]
+    },
+    {
+      "key": "electric",
+      "title": "Current Affairs",
+      "desc": [
+        "Rotation becomes current, current becomes rotation, anywhere you want it.",
+        "",
+        "Craft an &eAlternator&r and an &eElectric Motor&r (Create Crafts & Additions) and wire them with copper spools."
+      ],
+      "icon": "createaddition:electric_motor",
+      "x": 12,
+      "y": 0,
+      "deps": ["steam"],
+      "tasks": [
+        {"type": "item", "item": "createaddition:alternator"},
+        {"type": "item", "item": "createaddition:electric_motor"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "yellow", "amount": 150}
+      ]
+    },
+    {
+      "key": "mekanism",
+      "title": "Steel and Osmium",
+      "desc": [
+        "Mekanism turns raw ore into refined power, and power into anything.",
+        "",
+        "Build a &eMetallurgic Infuser&r (Mekanism) and infuse &e8 steel ingots&r."
+      ],
+      "icon": "mekanism:metallurgic_infuser",
+      "x": 13.5,
+      "y": 0,
+      "deps": ["electric"],
+      "tasks": [
+        {"type": "item", "item": "mekanism:metallurgic_infuser"},
+        {"type": "item", "item": "mekanism:ingot_steel", "count": 8}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "yellow", "amount": 200}
+      ]
+    },
+    {
+      "key": "factory",
+      "title": "The Ancient Factory",
+      "desc": [
+        "Under a mountain, an old factory still runs. Something inside is building itself.",
+        "",
+        "Find the &eAncient Factory&r (L_Ender's Cataclysm). An &eEye of Mech&r points the way."
+      ],
+      "icon": "cataclysm:mech_eye",
+      "x": 15,
+      "y": 0,
+      "deps": ["mekanism"],
+      "tasks": [
+        {"type": "structure", "structure": "cataclysm:ancient_factory"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "yellow", "amount": 200}
+      ]
+    },
+    {
+      "key": "electromancer",
+      "title": "The Electromancer's Coat",
+      "desc": [
+        "Copper thread and storm-silk: robes that hum.",
+        "",
+        "Craft the full &eElectromancer&r set (Iron's Spells). It boosts lightning spell power and mana."
+      ],
+      "icon": "irons_spellbooks:electromancer_chestplate",
+      "x": 10.5,
+      "y": -1.5,
+      "shape": "rsquare",
+      "size": 1.25,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:electromancer_helmet"},
+        {"type": "item", "item": "irons_spellbooks:electromancer_chestplate"},
+        {"type": "item", "item": "irons_spellbooks:electromancer_leggings"},
+        {"type": "item", "item": "irons_spellbooks:electromancer_boots"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "yellow", "amount": 200}
+      ]
+    },
+    {
+      "key": "e_tower",
+      "title": "The Storm Tower",
+      "desc": [
+        "A tower crowned with copper. On top, a mage who has bottled a thunderstorm.",
+        "",
+        "Find an &eElectromancer Tower&r (Discerning the Eldritch) and defeat the &eElectromancer&r."
+      ],
+      "icon": "discerning_the_eldritch:tempestuous_tome",
+      "x": 12,
+      "y": -1.5,
+      "shape": "hexagon",
+      "size": 1.5,
+      "deps": ["electromancer"],
+      "tasks": [
+        {"type": "structure", "structure": "discerning_the_eldritch:electromancer_tower"},
+        {"type": "kill", "entity": "discerning_the_eldritch:electromancer"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 350},
+        {"type": "skill_xp", "category": "yellow", "amount": 250}
+      ]
+    },
+    {
+      "key": "tempest",
+      "title": "Stormweaver's Tome",
+      "desc": [
+        "A spellbook that crackles when you open it.",
+        "",
+        "Get the &eStormweaver's Spell Tome&r, the lightning spellbook (Discerning the Eldritch, see JEI)."
+      ],
+      "icon": "discerning_the_eldritch:tempestuous_tome",
+      "x": 12,
+      "y": -3,
+      "deps": ["e_tower"],
+      "tasks": [
+        {"type": "item", "item": "discerning_the_eldritch:tempestuous_tome"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "yellow", "amount": 200}
+      ]
+    },
+    {
+      "key": "lightning_orb",
+      "title": "Overcharge",
+      "desc": [
+        "More voltage.",
+        "",
+        "Craft a &eLightning Upgrade Orb&r and apply it at the Arcane Anvil."
+      ],
+      "icon": "irons_spellbooks:lightning_upgrade_orb",
+      "x": 13.5,
+      "y": -3,
+      "deps": ["tempest"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:lightning_upgrade_orb"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "irons_spellbooks:arcane_essence", "count": 16},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "yellow", "amount": 150}
+      ]
+    },
+    {
+      "key": "speed",
+      "title": "Boots of Speed",
+      "desc": [
+        "The first rule of the duel: be somewhere else when the blade lands.",
+        "",
+        "Craft Iron's &eBoots of Speed&r."
+      ],
+      "icon": "irons_spellbooks:speed_boots",
+      "x": 13.5,
+      "y": -1.5,
+      "deps": ["electromancer"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:speed_boots"}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "yellow", "amount": 150}
+      ]
+    },
+    {
+      "key": "balloon",
+      "title": "Lift-Off",
+      "desc": [
+        "No dragon for you. You'll build your wings.",
+        "",
+        "Craft a &eHot Air Burner&r and &e8 hot air envelopes&r (Create Aeronautics). Build a balloon, assemble it with a &ePhysics Assembler&r (Simulated) and take off. Bring a friend as crew."
+      ],
+      "icon": "aeronautics:adjustable_burner",
+      "x": 10.5,
+      "y": 1.5,
+      "deps": ["whisper"],
+      "tasks": [
+        {"type": "item", "item": "aeronautics:adjustable_burner"},
+        {"type": "item", "item": "aeronautics:white_envelope", "count": 8},
+        {"type": "item", "item": "simulated:physics_assembler"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "yellow", "amount": 200}
+      ]
+    },
+    {
+      "key": "propeller",
+      "title": "Propeller",
+      "desc": [
+        "A balloon drifts. A plane goes where you point it.",
+        "",
+        "Craft a &ePropeller Bearing&r, a &eWooden Propeller&r and a &eSteering Wheel&r, and build a craft that flies under its own power."
+      ],
+      "icon": "aeronautics:wooden_propeller",
+      "x": 12,
+      "y": 1.5,
+      "deps": ["balloon"],
+      "tasks": [
+        {"type": "item", "item": "aeronautics:propeller_bearing"},
+        {"type": "item", "item": "aeronautics:wooden_propeller"},
+        {"type": "item", "item": "simulated:steering_wheel"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 250},
+        {"type": "skill_xp", "category": "yellow", "amount": 200}
+      ]
+    },
+    {
+      "key": "levitite",
+      "title": "Lighter Than Air",
+      "desc": [
+        "A stone that falls up. Build a hull from it and your ship needs no balloon.",
+        "",
+        "Make &e16 Levitite&r (Create Aeronautics, see JEI) and build an airship that can carry the whole party."
+      ],
+      "icon": "aeronautics:levitite",
+      "x": 13.5,
+      "y": 1.5,
+      "deps": ["propeller"],
+      "tasks": [
+        {"type": "item", "item": "aeronautics:levitite", "count": 16}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 300},
+        {"type": "skill_xp", "category": "yellow", "amount": 250}
+      ]
+    },
+    {
+      "key": "storm_blade",
+      "title": "Stormbringer",
+      "desc": [
+        "Some swords are forged in storms.",
+        "",
+        "Optional: find a storm-touched &eSimply Swords&r unique (dungeon and boss loot)."
+      ],
+      "icon": "simplyswords:stormbringer",
+      "x": 12,
+      "y": 3,
+      "deps": ["propeller"],
+      "optional": true,
+      "tasks": [
+        {"type": "item", "item": "simplyswords:stormbringer", "optional": true},
+        {"type": "item", "item": "simplyswords:storms_edge", "optional": true},
+        {"type": "item", "item": "simplyswords:thunderbrand", "optional": true},
+        {"type": "item", "item": "simplyswords:mjolnir", "optional": true},
+        {"type": "item", "item": "simplyswords:tempest", "optional": true},
+        {"type": "item", "item": "simplyswords:stormscale", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 200},
+        {"type": "skill_xp", "category": "yellow", "amount": 150}
+      ]
+    },
+    {
+      "key": "dream",
+      "title": "The Dream",
+      "subtitle": "Class level 25",
+      "desc": [
+        "You dream of a yellow world under a storm that never ends, and a spire struck by lightning a thousand times a night.",
+        "",
+        "Reach &eYellow level 25&r. Then the trial."
+      ],
+      "icon": "createlanterns:yellow_power_battery",
+      "x": 16.5,
+      "y": 0,
+      "shape": "octagon",
+      "size": 1.5,
+      "deps": ["factory", "electromancer"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_dream_yellow"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "skill_xp", "category": "yellow", "amount": 250}
+      ]
+    },
+    {
+      "key": "trial",
+      "title": "&eThe Iron Prophet",
+      "subtitle": "Ring trial: the boss",
+      "desc": [
+        "Deep in the factory, a war machine of the old empire boots up and speaks in a voice like grinding gears.",
+        "",
+        "Kill &eThe Harbinger&r in the Ancient Factory (Cataclysm). It fires lasers and missiles; use cover and close in. Party members within 64 blocks get the trial credit too."
+      ],
+      "icon": "cataclysm:mech_eye",
+      "x": 18.75,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 2.25,
+      "deps": ["dream", "factory"],
+      "tasks": [
+        {"type": "kill", "entity": "cataclysm:the_harbinger", "optional": true},
+        {"type": "stage", "stage": "gl_trial_yellow", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/class_yellow"},
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp_levels", "levels": 8},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "yellow", "amount": 500}
+      ]
+    },
+    {
+      "key": "choice",
+      "title": "The Ring Judges",
+      "subtitle": "The ring will judge you",
+      "desc": [
+        "The Harbinger's core sparks once, and a yellow light slides out of the wreck like a struck match.",
+        "Do you master fear, or does it master you?",
+        "",
+        "Claim this reward to begin the &ering trial&r: a conversation in chat. The ring will judge you. Your &eanswers&r decide whether you receive your own light, the &fWhite&r, or the &8Black&r. Answer as who you really are.",
+        "&7(Only works once you have the trial credit from the quest before.)"
+      ],
+      "icon": "createlanterns:ring_blank",
+      "x": 21,
+      "y": 0,
+      "shape": "diamond",
+      "size": 1.75,
+      "deps": ["trial"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "command", "command": "/gl trial begin {p} yellow"}
+      ]
+    },
+    {
+      "key": "ring",
+      "title": "&eRing-Bearer",
+      "subtitle": "Ring-bearer",
+      "desc": [
+        "A ring found you. Yellow, White or Black, you are a &eLantern&r now: you can fly, and your will takes shape as constructs.",
+        "",
+        "This completes when you have &eany&r ring from the trial. The Yellow path continues; the &6Last Light&r chapter has opened."
+      ],
+      "icon": "createlanterns:yellow_power_ring",
+      "x": 23.25,
+      "y": 0,
+      "shape": "octagon",
+      "size": 2.5,
+      "deps": ["choice"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_ringbearer"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 10},
+        {"type": "xp", "xp": 1000},
+        {"type": "skill_xp", "category": "yellow", "amount": 750}
+      ]
+    },
+    {
+      "key": "true_yellow",
+      "title": "The Yellow Answered",
+      "desc": [
+        "The yellow ring stayed. The air crackles where you walk.",
+        "",
+        "Optional, Yellow ring only: learn &eThunderclap&r and &eStorm Cage&r (Spectral Hub HUD)."
+      ],
+      "icon": "createlanterns:yellow_power_battery",
+      "x": 25.25,
+      "y": -1.5,
+      "deps": ["ring"],
+      "optional": true,
+      "tasks": [
+        {"type": "stage", "stage": "gl_ring_yellow"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "yellow", "amount": 300}
+      ]
+    },
+    {
+      "key": "witherite",
+      "title": "Witherite",
+      "desc": [
+        "The Harbinger's heart was a metal that eats light.",
+        "",
+        "Collect &e4 witherite ingots&r from the Harbinger and its factory."
+      ],
+      "icon": "cataclysm:witherite_ingot",
+      "x": 25.25,
+      "y": 0,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "item", "item": "cataclysm:witherite_ingot", "count": 4}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 400},
+        {"type": "skill_xp", "category": "yellow", "amount": 300}
+      ]
+    },
+    {
+      "key": "mekasuit",
+      "title": "MekaSuit",
+      "desc": [
+        "The best armor money, science and an unreasonable amount of power can build.",
+        "",
+        "Build the full &eMekaSuit&r (Mekanism): helmet, bodyarmor, pants and boots. Add modules at a Modification Station."
+      ],
+      "icon": "mekanism:mekasuit_bodyarmor",
+      "x": 26.75,
+      "y": 0,
+      "shape": "rsquare",
+      "size": 1.4,
+      "deps": ["witherite", "mekanism"],
+      "tasks": [
+        {"type": "item", "item": "mekanism:mekasuit_helmet"},
+        {"type": "item", "item": "mekanism:mekasuit_bodyarmor"},
+        {"type": "item", "item": "mekanism:mekasuit_pants"},
+        {"type": "item", "item": "mekanism:mekasuit_boots"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 900},
+        {"type": "skill_xp", "category": "yellow", "amount": 600}
+      ]
+    },
+    {
+      "key": "acropolis",
+      "title": "The Drowned Acropolis",
+      "desc": [
+        "Lightning strikes the same sea temple again and again. Something there calls it down.",
+        "",
+        "Find the &eAcropolis&r (L_Ender's Cataclysm) at sea. An &eEye of Storm&r points the way."
+      ],
+      "icon": "cataclysm:storm_eye",
+      "x": 25.25,
+      "y": -3,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "structure", "structure": "cataclysm:acropolis"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 400},
+        {"type": "skill_xp", "category": "yellow", "amount": 300}
+      ]
+    },
+    {
+      "key": "scylla",
+      "title": "The Storm Spire",
+      "desc": [
+        "Scylla guards the storm's heart. She is lightning given a spear.",
+        "",
+        "Kill &eScylla&r in the Acropolis. Stay off the water when she calls the storm; fight as a party."
+      ],
+      "icon": "cataclysm:essence_of_the_storm",
+      "x": 26.75,
+      "y": -3,
+      "shape": "hexagon",
+      "size": 1.4,
+      "deps": ["acropolis"],
+      "tasks": [
+        {"type": "kill", "entity": "cataclysm:scylla"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 900},
+        {"type": "skill_xp", "category": "yellow", "amount": 600}
+      ]
+    },
+    {
+      "key": "ceraunus",
+      "title": "Spear of the Storm",
+      "desc": [
+        "She dropped her thunder. Pick it up.",
+        "",
+        "Claim &eCeraunus&r or &eAstrape&r, Scylla's storm weapons."
+      ],
+      "icon": "cataclysm:ceraunus",
+      "x": 28.25,
+      "y": -3,
+      "deps": ["scylla"],
+      "tasks": [
+        {"type": "item", "item": "cataclysm:ceraunus", "optional": true},
+        {"type": "item", "item": "cataclysm:astrape", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "yellow", "amount": 300}
+      ]
+    },
+    {
+      "key": "lightning_dragon",
+      "title": "Storm Rival",
+      "desc": [
+        "A dragon made of storm. It thinks the sky is its alone. Correct it.",
+        "",
+        "Kill an adult &elightning dragon&r (Ice and Fire). They roost in jungles, savannas and badlands."
+      ],
+      "icon": "iceandfire:dragonscales_electric",
+      "x": 26.75,
+      "y": -1.5,
+      "shape": "hexagon",
+      "size": 1.4,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "structure", "structure": "iceandfire:lightning_dragon_roost", "optional": true},
+        {"type": "structure", "structure": "iceandfire:lightning_dragon_cave", "optional": true},
+        {"type": "kill", "entity": "iceandfire:lightning_dragon"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 800},
+        {"type": "skill_xp", "category": "yellow", "amount": 500}
+      ]
+    },
+    {
+      "key": "dragonsteel",
+      "title": "Lightning Dragonsteel",
+      "desc": [
+        "Steel quenched in a storm dragon's blood.",
+        "",
+        "Smelt &e4 lightning dragonsteel ingots&r in a Lightning Dragonforge (Ice and Fire, see JEI)."
+      ],
+      "icon": "iceandfire:dragonsteel_lightning_ingot",
+      "x": 28.25,
+      "y": -1.5,
+      "deps": ["lightning_dragon"],
+      "tasks": [
+        {"type": "item", "item": "iceandfire:dragonsteel_lightning_ingot", "count": 4}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 600},
+        {"type": "skill_xp", "category": "yellow", "amount": 400}
+      ]
+    },
+    {
+      "key": "starship",
+      "title": "Starship",
+      "desc": [
+        "Oa and Korugar hang among the stars. A Lantern can fly there, but a Stormwright brings the whole party.",
+        "",
+        "Build a ship that can reach another world (Create Aeronautics + Create: Lanterns). Craft &e16 Pearlescent Levitite&r for the hull, then tick the checkmark when your crew is aboard."
+      ],
+      "icon": "aeronautics:pearlescent_levitite",
+      "x": 25.25,
+      "y": 1.5,
+      "deps": ["ring", "levitite"],
+      "tasks": [
+        {"type": "item", "item": "aeronautics:pearlescent_levitite", "count": 16},
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 800},
+        {"type": "skill_xp", "category": "yellow", "amount": 500}
+      ]
+    },
+    {
+      "key": "draconium",
+      "title": "Draconium",
+      "desc": [
+        "A metal that drinks energy like a dragon drinks fire.",
+        "",
+        "Mine draconium ore (Draconic Evolution; richest in the End) and smelt &e16 draconium ingots&r."
+      ],
+      "icon": "draconicevolution:draconium_ingot",
+      "x": 26.75,
+      "y": 1.5,
+      "deps": ["ring"],
+      "tasks": [
+        {"type": "item", "item": "draconicevolution:draconium_ingot", "count": 16}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "yellow", "amount": 300}
+      ]
+    },
+    {
+      "key": "wyvern",
+      "title": "Wyvern",
+      "desc": [
+        "The first tier of draconic power.",
+        "",
+        "Craft a &eWyvern Core&r and the &eWyvern Chestpiece&r at the Fusion Crafting Core (Draconic Evolution, see its Information Tablet)."
+      ],
+      "icon": "draconicevolution:wyvern_chestpiece",
+      "x": 28.25,
+      "y": 1.5,
+      "shape": "rsquare",
+      "size": 1.25,
+      "deps": ["draconium"],
+      "tasks": [
+        {"type": "item", "item": "draconicevolution:wyvern_core"},
+        {"type": "item", "item": "draconicevolution:wyvern_chestpiece"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 700},
+        {"type": "skill_xp", "category": "yellow", "amount": 450}
+      ]
+    },
+    {
+      "key": "draconic",
+      "title": "Draconic",
+      "desc": [
+        "Awakened draconium: armor with a shield that regenerates.",
+        "",
+        "Craft a &eDraconic Core&r and the &eDraconic Chestpiece&r. You'll need an energy core and awakened draconium."
+      ],
+      "icon": "draconicevolution:draconic_chestpiece",
+      "x": 29.75,
+      "y": 1.5,
+      "shape": "rsquare",
+      "size": 1.4,
+      "deps": ["wyvern"],
+      "tasks": [
+        {"type": "item", "item": "draconicevolution:awakened_core"},
+        {"type": "item", "item": "draconicevolution:draconic_chestpiece"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 10},
+        {"type": "xp", "xp": 1200},
+        {"type": "skill_xp", "category": "yellow", "amount": 700}
+      ]
+    },
+    {
+      "key": "chaotic",
+      "title": "Chaotic",
+      "desc": [
+        "The Chaos Guardian's shards hold the most violent power in the pack. Wear it.",
+        "",
+        "After the &eChaos Guardian&r falls (Last Light chapter), craft a &eChaotic Core&r and the &eChaotic Chestpiece&r."
+      ],
+      "icon": "draconicevolution:chaotic_chestpiece",
+      "x": 31.25,
+      "y": 3,
+      "shape": "rsquare",
+      "size": 1.4,
+      "deps": ["draconic", "finale:chaos_guardian"],
+      "tasks": [
+        {"type": "item", "item": "draconicevolution:chaotic_core"},
+        {"type": "item", "item": "draconicevolution:chaotic_chestpiece"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 15},
+        {"type": "xp", "xp": 1500},
+        {"type": "skill_xp", "category": "yellow", "amount": 900}
+      ]
+    },
+    {
+      "key": "mythic",
+      "title": "Mythic Voltage",
+      "subtitle": "Extreme gear",
+      "desc": [
+        "Speed and power, perfected.",
+        "",
+        "Unlock the &ePinnacle&r world tier (Apotheosis: a full Epic affix set and the Ender Dragon slain; CTRL+T switches tiers) and wield a &6Mythic&r duelling blade with lightning gems. Tick the checkmark when you do."
+      ],
+      "icon": "apotheosis:sigil_of_supremacy",
+      "x": 32.75,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 1.5,
+      "deps": ["mekasuit", "ceraunus", "dragonsteel", "draconic", "starship"],
+      "tasks": [
+        {"type": "advancement", "advancement": "apotheosis:progression/pinnacle"},
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 15},
+        {"type": "xp", "xp": 1500},
+        {"type": "skill_xp", "category": "yellow", "amount": 1000}
+      ]
+    },
+    {
+      "key": "legend",
+      "title": "&eLegend of the Yellow Light",
+      "subtitle": "After the Last Light",
+      "desc": [
+        "When the Devourer fell, the fleet that carried the Lanterns home was yours.",
+        "",
+        "Complete the Last Light and the Yellow path. The storm bows to you."
+      ],
+      "icon": "createlanterns:yellow_power_ring",
+      "x": 36.25,
+      "y": 0,
+      "shape": "gear",
+      "size": 2,
+      "deps": ["mythic", "finale:last_light"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 20},
+        {"type": "xp", "xp": 2000},
+        {"type": "skill_xp", "category": "yellow", "amount": 1500}
+      ]
+    }
+  ]
+}

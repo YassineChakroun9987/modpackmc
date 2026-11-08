@@ -1,0 +1,362 @@
+{
+  "id": "guide_bosses",
+  "title": "&aThe Bestiary of Ruin",
+  "subtitle": "Every great monster in the pack, from first blood to the extreme.",
+  "icon": "cataclysm:the_incinerator",
+  "group": "mods",
+  "order": 10,
+  "quests": [
+    {
+      "key": "bestiary",
+      "title": "The Bestiary of Ruin",
+      "subtitle": "How to read this ladder",
+      "desc": [
+        "The corruption breeds monsters. This ladder runs left to right: &fI&r early, &aII&r mid, &9III&r late, &5IV&r extreme. Each row is one mod's line of bosses.",
+        "&eCo-op:&r boss kills count for everyone in your team; chests use Lootr, so each player gets their own loot. If you die, your corpse waits for you, and a friend can carry it out."
+      ],
+      "icon": "minecraft:writable_book",
+      "x": 0, "y": 0,
+      "shape": "hexagon", "size": 1.5,
+      "deps": ["act1:choose_path"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 50}
+      ]
+    },
+    {
+      "key": "ogre_captain",
+      "title": "I. The Grunt Captain",
+      "subtitle": "Kings & Monsters",
+      "desc": [
+        "&eOgre outposts&r dot the plains and swamps. The &eGrunt Captain&r leads each warband: big, slow, and it hits like a falling tree.",
+        "If you find the Kings & Monsters Compendium, read it: it's a field guide to ogre country."
+      ],
+      "icon": "kingsandmonsters:grunt_captain_banner",
+      "x": 3, "y": -4.5,
+      "shape": "diamond",
+      "deps": ["bestiary"],
+      "tasks": [{"type": "kill", "entity": "kingsandmonsters:ogre_grunt_captain", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 50}
+      ]
+    },
+    {
+      "key": "ogre_king",
+      "title": "II. The Ogre King",
+      "desc": [
+        "In the &eOgre King's Fort&r the King sits on his throne with his guard, mages and brutes. Break the guard first, then the King.",
+        "He is the Hoardwarden's trial. His crown and club are worth the trip."
+      ],
+      "icon": "kingsandmonsters:ogre_kings_crown",
+      "x": 6.5, "y": -4.5,
+      "shape": "diamond", "size": 1.25,
+      "deps": ["ogre_captain"],
+      "tasks": [{"type": "kill", "entity": "kingsandmonsters:ogre_lord", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 100}
+      ]
+    },
+    {
+      "key": "night_lich",
+      "title": "II. The Night Lich",
+      "subtitle": "Bosses of Mass Destruction",
+      "desc": [
+        "A tower in the snow hides the &eNight Lich&r. It hurls volleys of blue fire and calls down comets. Keep moving and use cover.",
+        "The Frostbinder's trial."
+      ],
+      "icon": "bosses_of_mass_destruction:soul_star",
+      "x": 6.5, "y": -3,
+      "shape": "diamond", "size": 1.25,
+      "deps": ["ogre_captain"],
+      "tasks": [{"type": "kill", "entity": "bosses_of_mass_destruction:lich", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 100}
+      ]
+    },
+    {
+      "key": "gauntlet",
+      "title": "II. The Nether Gauntlet",
+      "desc": [
+        "In the Nether, a giant stone fist sleeps in its arena. The &eGauntlet&r punches, fires lasers and blasts the ground. Hit its glowing eye when it opens.",
+        "The Bloodfire Berserker's trial. Its cousin the &eVoid Blossom&r grows in lush caves below the Overworld."
+      ],
+      "icon": "bosses_of_mass_destruction:blazing_eye",
+      "x": 8.5, "y": -3,
+      "shape": "diamond", "size": 1.25,
+      "deps": ["night_lich"],
+      "tasks": [{"type": "kill", "entity": "bosses_of_mass_destruction:gauntlet", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 125}
+      ]
+    },
+    {
+      "key": "obsidilith",
+      "title": "III. The Obsidilith",
+      "desc": [
+        "In the End stands a pillar of living obsidian. The &eObsidilith&r sends out shockwaves, raises spikes from the floor and drops anvils.",
+        "Keep moving, and don't fight it near the edge of an island."
+      ],
+      "icon": "bosses_of_mass_destruction:obsidian_heart",
+      "x": 11, "y": -3,
+      "shape": "diamond", "size": 1.25,
+      "deps": ["gauntlet"],
+      "tasks": [{"type": "kill", "entity": "bosses_of_mass_destruction:obsidilith", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 200}
+      ]
+    },
+    {
+      "key": "mother_spider",
+      "title": "I. The Mother Spider",
+      "subtitle": "Born in Chaos",
+      "desc": [
+        "&eBorn in Chaos&r fills the night with horrors: decaying zombies, bone imps, dread hounds, pumpkin-headed riders. Blood Moons bring more of them.",
+        "The swollen &eMother Spider&r never hunts alone: her spiderlings swarm you. Kill the brood fast."
+      ],
+      "icon": "minecraft:spider_eye",
+      "x": 3, "y": -1.5,
+      "shape": "diamond",
+      "deps": ["bestiary"],
+      "tasks": [{"type": "kill", "entity": "born_in_chaos_v1:mother_spider", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 50}
+      ]
+    },
+    {
+      "key": "lord_pumpkinhead",
+      "title": "III. Lord Pumpkinhead",
+      "desc": [
+        "The headless lord rides a hellish steed and throws burning pumpkin bombs. Knock him from the saddle and he fights on foot, angrier.",
+        "Born in Chaos's darkest knight."
+      ],
+      "icon": "minecraft:carved_pumpkin",
+      "x": 10, "y": -1.5,
+      "shape": "diamond", "size": 1.25,
+      "deps": ["mother_spider"],
+      "tasks": [{"type": "kill", "entity": "born_in_chaos_v1:lord_pumpkinhead", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 150}
+      ]
+    },
+    {
+      "key": "archevoker",
+      "title": "I. The Archevoker",
+      "subtitle": "Iron's Spells",
+      "desc": [
+        "At the head of an &eevoker fort&r stands the &eArchevoker&r, an illager mage with fangs, vexes and shields of its own.",
+        "Its robes are Archevoker school armour: Lightwardens take note."
+      ],
+      "icon": "irons_spellbooks:archevoker_helmet",
+      "x": 3, "y": 0,
+      "shape": "diamond",
+      "deps": ["bestiary"],
+      "tasks": [{"type": "kill", "entity": "irons_spellbooks:archevoker", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 50}
+      ]
+    },
+    {
+      "key": "dead_king",
+      "title": "III. The Dead King",
+      "desc": [
+        "Follow a &eWayward Compass&r to the Catacombs. The &eDead King&r rises from his throne with a blade of the grave and the spells of a dead age.",
+        "The Lightwarden's trial. He can be raised again: use a Dead King Phylactery on his soul."
+      ],
+      "icon": "irons_spellbooks:dead_king_phylactery",
+      "x": 10, "y": 0,
+      "shape": "diamond", "size": 1.25,
+      "deps": ["archevoker"],
+      "tasks": [{"type": "kill", "entity": "irons_spellbooks:dead_king", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_2"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 200}
+      ]
+    },
+    {
+      "key": "tyros",
+      "title": "IV. The Echo of Tyros",
+      "desc": [
+        "In Iron's &eCitadel&r, where the Ancient Knights still stand guard, burns the &eEcho of Tyros, First Flamebearer&r: a fire mage boss of the extreme tier.",
+        "Fire resistance, ice spells, and a full party."
+      ],
+      "icon": "irons_spellbooks:tyros_statue",
+      "x": 14, "y": 0,
+      "shape": "diamond", "size": 1.5,
+      "deps": ["dead_king"],
+      "tasks": [{"type": "kill", "entity": "irons_spellbooks:fire_boss", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 300}
+      ]
+    },
+    {
+      "key": "corrupted_champion",
+      "title": "II. The Corrupted Champion",
+      "subtitle": "The Graveyard",
+      "desc": [
+        "&eThe Graveyard&r spreads graveyards, crypts and haunted houses, and ghouls, revenants and wraiths with them. In a &eLich Prison&r, an altar can call up the &eCorrupted Champion&r.",
+        "The Voidblade's trial. Bring a full party and something holy."
+      ],
+      "icon": "graveyard:vial_of_blood",
+      "x": 6.5, "y": 1.5,
+      "shape": "diamond", "size": 1.25,
+      "deps": ["archevoker"],
+      "tasks": [{"type": "kill", "entity": "graveyard:lich", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 125}
+      ]
+    },
+    {
+      "key": "harbinger",
+      "title": "II. The Harbinger",
+      "subtitle": "L_Ender's Cataclysm",
+      "desc": [
+        "&eCataclysm&r's bosses live in huge dungeons. In the &eAncient Factory&r, the &eHarbinger&r, a wither-machine of missiles and lasers, waits to be switched on.",
+        "The Stormwright's trial. Strafe its lasers and shoot down its missiles."
+      ],
+      "icon": "cataclysm:mech_eye",
+      "x": 6.5, "y": 3,
+      "shape": "diamond", "size": 1.25,
+      "deps": ["frostbitten_golem"],
+      "tasks": [{"type": "kill", "entity": "cataclysm:the_harbinger", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 125}
+      ]
+    },
+    {
+      "key": "monstrosity",
+      "title": "III. The Netherite Monstrosity",
+      "desc": [
+        "In the Nether's &eSoul Black Smith&r forge sleeps the &eNetherite Monstrosity&r, a living siege engine that sprays lava and shakes the ground.",
+        "Fire resistance is not optional."
+      ],
+      "icon": "cataclysm:monstrous_horn",
+      "x": 8.5, "y": 3,
+      "shape": "diamond", "size": 1.25,
+      "deps": ["harbinger"],
+      "tasks": [{"type": "kill", "entity": "cataclysm:netherite_monstrosity", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 150}
+      ]
+    },
+    {
+      "key": "ignis",
+      "title": "III. Ignis",
+      "desc": [
+        "In the &eBurning Arena&r, the flame knight &eIgnis&r fights in three phases, each hotter than the last. In the end his sword and shield fall to the worthy.",
+        "His Ignitium makes some of the best armour in the game."
+      ],
+      "icon": "cataclysm:ignitium_ingot",
+      "x": 10.5, "y": 3,
+      "shape": "diamond", "size": 1.25,
+      "deps": ["monstrosity"],
+      "tasks": [{"type": "kill", "entity": "cataclysm:ignis", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 200}
+      ]
+    },
+    {
+      "key": "ancient_remnant",
+      "title": "III. The Ancient Remnant",
+      "desc": [
+        "Under the desert, the &eCursed Pyramid&r hides the &eAncient Remnant&r, a colossal sand-beast that charges through walls.",
+        "Cataclysm has more to hunt at this tier: the Ender Guardian in the Ruined Citadel, Maledictus in the Frosted Prison, Scylla in the Acropolis."
+      ],
+      "icon": "cataclysm:desert_eye",
+      "x": 12.5, "y": 3,
+      "shape": "diamond", "size": 1.25,
+      "deps": ["ignis"],
+      "tasks": [{"type": "kill", "entity": "cataclysm:ancient_remnant", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 200}
+      ]
+    },
+    {
+      "key": "leviathan",
+      "title": "III. The Leviathan",
+      "desc": [
+        "The &eSunken City&r lies at the bottom of the sea, and the &eLeviathan&r rules it. Fight underwater: Water Breathing, Respiration, and a Tide Guardian or Conduit if you have one.",
+        "Lantern rings keep you breathing while lit."
+      ],
+      "icon": "cataclysm:abyss_eye",
+      "x": 10.5, "y": 4.5,
+      "shape": "diamond", "size": 1.25,
+      "deps": ["ignis"],
+      "tasks": [{"type": "kill", "entity": "cataclysm:the_leviathan", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 200}
+      ]
+    },
+    {
+      "key": "frostbitten_golem",
+      "title": "I. The Frostbitten Golem",
+      "subtitle": "Legendary Monsters",
+      "desc": [
+        "&eLegendary Monsters&r hides a boss in each of its temples and ruins. In the &eFrostbitten Temple&r, an icy golem guards the treasure.",
+        "Its eyes (Eye of Frost, Eye of Moss...) belong to these bosses; look them up in JEI."
+      ],
+      "icon": "legendary_monsters:eye_of_frost",
+      "x": 3, "y": 6,
+      "shape": "diamond",
+      "deps": ["bestiary"],
+      "tasks": [{"type": "kill", "entity": "legendary_monsters:frostbitten_golem", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 50}
+      ]
+    },
+    {
+      "key": "overgrown_colossus",
+      "title": "II. The Overgrown Colossus",
+      "desc": [
+        "Moss and stone walk in the &eMossy Temple&r: the &eOvergrown Colossus&r. It's slow and it hits very hard.",
+        "Other Legendary bosses wait in the Cloudy Temple, the Ruined Pyramid, the Shulker Tower and the Skeletosaurus Nest."
+      ],
+      "icon": "legendary_monsters:eye_of_moss",
+      "x": 6.5, "y": 6,
+      "shape": "diamond", "size": 1.25,
+      "deps": ["frostbitten_golem"],
+      "tasks": [{"type": "kill", "entity": "legendary_monsters:overgrown_colossus", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 100}
+      ]
+    },
+    {
+      "key": "obliterator",
+      "title": "IV. The Obliterator",
+      "desc": [
+        "On a &eSpace Station&r in the End waits &eThe Obliterator&r. No hit on it does more than 20 damage, it adapts to your attacks, and it heals if you leave it alone.",
+        "It can't be hurt while you fly or hold high ground: fight it on its own level, rings off."
+      ],
+      "icon": "legendary_monsters:eye_of_annihilation",
+      "x": 14, "y": 6,
+      "shape": "diamond", "size": 1.75,
+      "deps": ["overgrown_colossus"],
+      "tasks": [{"type": "kill", "entity": "legendary_monsters:the_obliterator", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 400},
+        {"type": "xp", "xp": 1000}
+      ]
+    }
+  ]
+}

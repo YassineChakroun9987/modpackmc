@@ -1,0 +1,213 @@
+{
+  "id": "guide_gear",
+  "title": "&aArms and Armour",
+  "subtitle": "Weapons, shields, trinkets, backpacks, and what happens when you fall.",
+  "icon": "simplyswords:iron_longsword",
+  "group": "mods",
+  "order": 1,
+  "quests": [
+    {
+      "key": "movesets",
+      "title": "Every Weapon Has a Rhythm",
+      "subtitle": "Better Combat, in depth",
+      "desc": [
+        "With &eBetter Combat&r each weapon type has its own combo: keep attacking to chain it. Wide swings hit everything in the arc, thrusts reach further, and the last hit of a combo is often the strongest.",
+        "Two one-handers can be dual-wielded (one in each hand). Two-handers need an empty off-hand. Use &eCombat Roll&r to dodge out of a boss's swing (search 'roll' in Controls)."
+      ],
+      "icon": "minecraft:iron_sword",
+      "x": 0, "y": 0,
+      "shape": "hexagon", "size": 1.5,
+      "deps": ["prologue:tools"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 50}
+      ]
+    },
+    {
+      "key": "simply_swords",
+      "title": "Fifteen Ways to Fight",
+      "desc": [
+        "&eSimply Swords&r adds fifteen weapon types: longsword, katana, rapier, sai, cutlass, claymore, greataxe, greathammer, scythe, spear, glaive, halberd, chakram, twinblade and warglaive.",
+        "Each comes in iron, gold, diamond and netherite. Fast weapons suit hit-and-run fighters; heavy ones suit tanks and berserkers. Try a few."
+      ],
+      "icon": "simplyswords:iron_longsword",
+      "x": 2, "y": -1.5,
+      "deps": ["movesets"],
+      "tasks": [{"type": "item", "item": "simplyswords:iron_longsword"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "uniques",
+      "title": "Weapons With a Name",
+      "desc": [
+        "Simply Swords' &eunique weapons&r (Emberblade, Stormbringer, Soulrender, The Watcher and dozens more) can't be crafted. They come from dungeon chests and boss loot.",
+        "Each has its own power, on hit or on right-click: read the tooltip. Some take &eRunefused&r or &eNetherfused gems&r for a second power."
+      ],
+      "icon": "simplyswords:runefused_gem",
+      "x": 4, "y": -1.5,
+      "deps": ["simply_swords"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "dungeons_weapons",
+      "title": "Weapons From Another Game",
+      "desc": [
+        "&eDungeons Weapons&r brings gear from Minecraft Dungeons: claymores, daggers, double axes, maces, sickles, anchors and great hammers.",
+        "Gold-named versions (Firebrand, Stormlander, Sun's Grace, Nightmare's Bite) are rare finds with extra powers. Keep an eye on your loot."
+      ],
+      "icon": "minecraftdungeonsv1:great_hammer",
+      "x": 6, "y": -1.5,
+      "deps": ["uniques"],
+      "tasks": [{"type": "item", "item": "minecraftdungeonsv1:great_hammer"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "steel",
+      "title": "The Smith's Metal",
+      "subtitle": "Epic Knights",
+      "desc": [
+        "&eEpic Knights&r adds medieval armour, shields and weapons, and most of it starts with &eSteel&r. Look up the Steel Ingot in JEI (press &eR&r) to see how it's made.",
+        "Steel also makes plates and chain for the heavier armours."
+      ],
+      "icon": "magistuarmory:steel_ingot",
+      "x": 2, "y": 1.5,
+      "deps": ["movesets"],
+      "tasks": [{"type": "item", "item": "magistuarmory:steel_ingot", "count": 8}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "plate",
+      "title": "Full Plate",
+      "desc": [
+        "Pick a harness that suits you: Gothic, Maximilian, Crusader, Winged Hussar, Kastenbrust and more. Helmets (Armet, Bascinet, Greathelm, Sallet) mix with any set.",
+        "Heavy plate is the early wall for front-line players: the Orange Hoardwarden and Green Lightwarden live in it."
+      ],
+      "icon": "magistuarmory:gothic_chestplate",
+      "x": 4, "y": 1.5,
+      "deps": ["steel"],
+      "tasks": [{"type": "item", "item": "magistuarmory:gothic_chestplate"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "lance",
+      "title": "Lances and Two-Handers",
+      "desc": [
+        "An Epic Knights &elance&r hits much harder from horseback: a mounted charge can break a raider line. Zweihanders, flails, pikes and halberds are slow but brutal on foot.",
+        "Optional, but a knight on a horse is a fine sight."
+      ],
+      "icon": "magistuarmory:steel_chivalrylance",
+      "x": 6, "y": 1.5,
+      "deps": ["plate"],
+      "optional": true,
+      "tasks": [{"type": "item", "item": "magistuarmory:steel_chivalrylance"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "diamond_shield",
+      "title": "A Better Guard",
+      "subtitle": "Shield Expansion",
+      "desc": [
+        "Blocking with &eShield Expansion&r costs stamina, and a well-timed block &eparries&r. Better shields block more before they break your guard and give a wider parry window.",
+        "Shields go wood, iron, gold, diamond, netherite. Parry a boss's big swing and you get a free opening."
+      ],
+      "icon": "shieldexp:diamond_shield",
+      "x": 2, "y": 3.5,
+      "deps": ["movesets"],
+      "tasks": [{"type": "advancement", "advancement": "shieldexp:get_diamond_shield"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "netherite_shield",
+      "title": "Unbreakable Guard",
+      "desc": [
+        "The &eNetherite Shield&r is the strongest guard in the pack. It won't burn if you drop it in lava, and it shrugs off most things short of a boss.",
+        "Tanks: pair it with heavy plate and stand in front of your party."
+      ],
+      "icon": "shieldexp:netherite_shield",
+      "x": 4, "y": 3.5,
+      "deps": ["diamond_shield"],
+      "tasks": [{"type": "advancement", "advancement": "shieldexp:get_netherite_shield"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "artifacts",
+      "title": "Trinkets and Mimics",
+      "subtitle": "Artifacts",
+      "desc": [
+        "&eArtifacts&r are magic trinkets (Running Shoes, Cloud in a Bottle, Feral Claws, Lucky Scarf, Night Vision Goggles...) worn in your curio slots beside the inventory.",
+        "You find them in chests and underground camps, but some chests are &cMimics&r: if a chest bites, kill it. Mimics drop an artifact."
+      ],
+      "icon": "artifacts:cloud_in_a_bottle",
+      "x": 2, "y": -3.5,
+      "deps": ["movesets"],
+      "tasks": [{"type": "kill", "entity": "artifacts:mimic", "count": 1}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "backpack_upgrades",
+      "title": "A Bigger Pack",
+      "subtitle": "Sophisticated Backpacks",
+      "desc": [
+        "Upgrade your backpack in a crafting table to keep its contents: leather, then copper, iron, gold, diamond and netherite. Open it with &eB&r while you wear it.",
+        "Upgrades go in its side slots: &ePickup&r and &eMagnet&r grab loot, &eFeeding&r feeds you, and &eCrafting&r, &eSmelting&r and &eTool Swapper&r do what they say."
+      ],
+      "icon": "sophisticatedbackpacks:iron_backpack",
+      "x": 4, "y": -3.5,
+      "deps": ["artifacts"],
+      "tasks": [
+        {"type": "item", "item": "sophisticatedbackpacks:iron_backpack"},
+        {"type": "item", "item": "sophisticatedbackpacks:pickup_upgrade"}
+      ],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "diamond_backpack",
+      "title": "Deep Pockets",
+      "desc": [
+        "A &eDiamond Backpack&r holds a small storage room and more upgrade slots. Add a &eMagnet Upgrade&r and loot flies to you after a fight.",
+        "Stack Upgrades let each slot hold far more than 64. Great for miners."
+      ],
+      "icon": "sophisticatedbackpacks:diamond_backpack",
+      "x": 6, "y": -3.5,
+      "deps": ["backpack_upgrades"],
+      "tasks": [
+        {"type": "item", "item": "sophisticatedbackpacks:diamond_backpack"},
+        {"type": "item", "item": "sophisticatedbackpacks:magnet_upgrade"}
+      ],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "corpse",
+      "title": "When You Fall",
+      "subtitle": "Corpse",
+      "desc": [
+        "When you die, your items stay in a &eCorpse&r where you fell, marked on your map. Right-click it to take everything back.",
+        "A corpse with items in it never despawns, never falls into the void and never burns in lava. Friends can open it too, so a party member can carry your gear home."
+      ],
+      "icon": "minecraft:skeleton_skull",
+      "x": 6, "y": 0,
+      "deps": ["movesets"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [{"type": "xp", "xp": 50}]
+    },
+    {
+      "key": "master_at_arms",
+      "title": "Master-at-Arms",
+      "desc": [
+        "A named weapon, plate on your back, a shield that won't break, and a pack full of loot. You're armed for what's coming.",
+        "From here, Apotheosis affixes, Iron's school armour and boss gear take you further."
+      ],
+      "icon": "simplyswords:netherite_longsword",
+      "x": 8.5, "y": 0,
+      "shape": "octagon", "size": 1.25,
+      "deps": ["dungeons_weapons", "plate", "netherite_shield", "diamond_backpack"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 100}
+      ]
+    }
+  ]
+}

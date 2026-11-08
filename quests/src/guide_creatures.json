@@ -1,0 +1,258 @@
+{
+  "id": "guide_creatures",
+  "title": "&aBeasts and Companions",
+  "subtitle": "Alex's Mobs, Mowzie's Mobs, mutants, odd allies, pets and guards.",
+  "icon": "alexsmobs:animal_dictionary",
+  "group": "mods",
+  "order": 5,
+  "quests": [
+    {
+      "key": "dictionary",
+      "title": "The Animal Dictionary",
+      "subtitle": "Alex's Mobs",
+      "desc": [
+        "&eAlex's Mobs&r puts more than ninety creatures into the world, from roadrunners to cachalot whales. Some are friendly, some can be tamed, some will eat you.",
+        "Craft the &eAnimal Dictionary&r (see JEI). Each creature has a page: where it lives, what it drops, how to tame it."
+      ],
+      "icon": "alexsmobs:animal_dictionary",
+      "x": 0, "y": 0,
+      "shape": "hexagon", "size": 1.5,
+      "deps": ["act1:choose_path"],
+      "tasks": [{"type": "item", "item": "alexsmobs:animal_dictionary"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 50}
+      ]
+    },
+    {
+      "key": "elephant",
+      "title": "A Friend in the Savanna",
+      "desc": [
+        "The savanna around the first village is home to &eelephants&r. Tame one (its dictionary page tells you how) and it will carry you and a chest of cargo.",
+        "Wildheart players: this is where your beast-taming starts."
+      ],
+      "icon": "minecraft:acacia_leaves",
+      "x": 2, "y": -2.5,
+      "deps": ["dictionary"],
+      "tasks": [{"type": "advancement", "advancement": "alexsmobs:alexsmobs/tame_elephant"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 25}
+      ]
+    },
+    {
+      "key": "animal_gear",
+      "title": "Trophies of the Wild",
+      "desc": [
+        "Many Alex's creatures drop parts for gear: &eRoadrunner Boots&r (fast on sand), the Crocodile Chestplate, the Tarantula Hawk Elytra, the Squid Grapple and more.",
+        "Make the Roadrunner Boots from feathers of the quick desert birds."
+      ],
+      "icon": "alexsmobs:roadrunner_boots",
+      "x": 4, "y": -2.5,
+      "deps": ["elephant"],
+      "tasks": [{"type": "item", "item": "alexsmobs:roadrunner_boots"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "void_worm",
+      "title": "The Void Worm",
+      "desc": [
+        "Something enormous lives in the void under the End islands. The &eVoid Worm&r can be called up there (its dictionary page says how), and it splits into pieces when hurt.",
+        "Kill every piece. Its parts make the &eDimensional Carver&r, a portal you can carry."
+      ],
+      "icon": "alexsmobs:void_worm_eye",
+      "x": 8, "y": -2.5,
+      "shape": "diamond",
+      "deps": ["animal_gear", "frostmaw"],
+      "tasks": [{"type": "kill", "entity": "alexsmobs:void_worm", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 150}
+      ]
+    },
+    {
+      "key": "umvuthi",
+      "title": "Umvuthi, the Sunbird",
+      "subtitle": "Mowzie's Mobs",
+      "desc": [
+        "&eMowzie's Mobs&r adds handcrafted mini-bosses (you may already have met the Ferrous Wroughtnaut). In the savanna, masked Umvuthana guard their chief in a hidden &egrove&r.",
+        "Defeat &eUmvuthi&r. Kill the masked followers first; the chief calls the sun down on you."
+      ],
+      "icon": "mowziesmobs:sol_visage",
+      "x": 2.5, "y": 0,
+      "shape": "diamond",
+      "deps": ["dictionary"],
+      "tasks": [{"type": "kill", "entity": "mowziesmobs:umvuthi", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 75}
+      ]
+    },
+    {
+      "key": "sculptor",
+      "title": "Tongbi, the Sculptor",
+      "desc": [
+        "On high peaks, &eTongbi&r sets a challenge: climb the stone pillar it raises while it hurls rocks at you.",
+        "Reach the top to win the Geomancer's gear. Optional for climbers."
+      ],
+      "icon": "mowziesmobs:sculptor_staff",
+      "x": 5, "y": 0,
+      "shape": "diamond",
+      "deps": ["umvuthi"],
+      "optional": true,
+      "tasks": [{"type": "advancement", "advancement": "mowziesmobs:sculptor_challenge"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "frostmaw",
+      "title": "Frostmaw",
+      "desc": [
+        "In snowy lands a giant white ape sleeps, often clutching an &eIce Crystal&r. Wake it and it fights with ice breath and ground slams.",
+        "Keep moving to dodge the ice breath, and bring a ranged weapon. Frostbinders will want that crystal."
+      ],
+      "icon": "mowziesmobs:ice_crystal",
+      "x": 7.5, "y": 0,
+      "shape": "diamond",
+      "deps": ["umvuthi"],
+      "tasks": [{"type": "kill", "entity": "mowziesmobs:frostmaw", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 100}
+      ]
+    },
+    {
+      "key": "naga",
+      "title": "The Naga",
+      "desc": [
+        "Along ocean cliffs, the winged sea serpent &eNaga&r dives at anyone on the shore and spits poison.",
+        "Hit it while it's grounded after a dive. Its fangs make a poison dagger."
+      ],
+      "icon": "mowziesmobs:naga_fang",
+      "x": 10, "y": 1.5,
+      "shape": "diamond",
+      "deps": ["frostmaw"],
+      "optional": true,
+      "tasks": [{"type": "kill", "entity": "mowziesmobs:naga", "count": 1}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "mutant_zombie",
+      "title": "Mutant Monsters",
+      "desc": [
+        "Rarely, a zombie, skeleton, creeper or enderman comes back huge: a &eMutant&r. They're mini-bosses that roam the night.",
+        "The &eMutant Zombie&r gets back up after it falls unless you burn its body. Fight it with fire nearby."
+      ],
+      "icon": "mutantmonsters:hulk_hammer",
+      "x": 2, "y": 2.5,
+      "deps": ["dictionary"],
+      "tasks": [{"type": "kill", "entity": "mutantmonsters:mutant_zombie", "count": 1}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 50}
+      ]
+    },
+    {
+      "key": "mutant_skeleton",
+      "title": "Bones of a Giant",
+      "desc": [
+        "The &eMutant Skeleton&r fires volleys of arrows and leaves its bones behind.",
+        "Its ribs, skull and limbs craft into &eMutant Skeleton armour&r."
+      ],
+      "icon": "mutantmonsters:mutant_skeleton_skull",
+      "x": 4, "y": 2.5,
+      "deps": ["mutant_zombie"],
+      "tasks": [{"type": "kill", "entity": "mutantmonsters:mutant_skeleton", "count": 1}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "companions",
+      "title": "Strange Companions",
+      "subtitle": "Companions!",
+      "desc": [
+        "&eCompanions!&r adds odd allies and their homes: the Teddy Tower, the Monkey Temple, Baba Yaga's hut, a factory and a traveller's tent.",
+        "Hatch a &eCroissant Dragon&r from its egg, collect copper, Nether and End coins, and see what the Frog Bonanza does with them. Visit a Teddy Tower."
+      ],
+      "icon": "companions:croissant_egg_block",
+      "x": 6, "y": 2.5,
+      "deps": ["mutant_skeleton"],
+      "tasks": [{"type": "structure", "structure": "companions:companions_teddytower"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "shade_altar",
+      "title": "The Shade Altars",
+      "desc": [
+        "Three altars (Sword, Maw and Bat) summon &eShade&r bosses when you activate them with &eCrystallized Blood&r.",
+        "Defeat the &eShade Maw&r. Optional, and not a fight for one."
+      ],
+      "icon": "companions:shade_maw_altar",
+      "x": 8, "y": 2.5,
+      "shape": "diamond",
+      "deps": ["companions"],
+      "optional": true,
+      "tasks": [{"type": "kill", "entity": "companions:shade_maw", "count": 1}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "pet_bed",
+      "title": "Pets That Come Home",
+      "subtitle": "Redomesticate",
+      "desc": [
+        "&eRedomesticate&r makes pets sturdier. Give a pet a &epet bed&r: if it dies, it respawns there instead of being lost.",
+        "A &eCommand Drum&r orders your pets to follow, stay or wander. A &eDeed of Ownership&r hands a pet to a friend, and a lost pet finds its way to a &eWayward Lantern&r."
+      ],
+      "icon": "redomesticate:pet_bed_red",
+      "x": 2, "y": 5,
+      "deps": ["dictionary"],
+      "tasks": [{"type": "item", "item": "redomesticate:pet_bed_red"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "pet_enchants",
+      "title": "Enchanted Companions",
+      "desc": [
+        "Redomesticate adds &epet enchantments&r: Health Boost, Fireproof, Healing Aura, Chain Lightning, Ore Scenting and more. Their books turn up in chests.",
+        "Look for &eTethered Teleport&r: waystones don't carry pets in this pack, but a tethered pet follows you anywhere, even across dimensions."
+      ],
+      "icon": "minecraft:enchanted_book",
+      "x": 4, "y": 5,
+      "deps": ["pet_bed"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "guards",
+      "title": "Captain of the Guard",
+      "subtitle": "Guard Villagers",
+      "desc": [
+        "Village guards fight raids and monsters. Give them better swords, crossbows and armour once they trust you (open a guard's inventory by interacting with it); armourers and weaponsmiths repair their gear.",
+        "With Hero of the Village, ring the village &ebell&r to order every guard nearby to follow you, or set patrol points for them."
+      ],
+      "icon": "minecraft:iron_helmet",
+      "x": 6, "y": 5,
+      "deps": ["pet_enchants"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 100}
+      ]
+    },
+    {
+      "key": "beast_keeper",
+      "title": "Keeper of Beasts",
+      "desc": [
+        "You've faced the wild's worst and made friends with its best. The corruption twists creatures; you've seen what the untouched ones can be.",
+        "Next: dragons (see the Dragons chapter)."
+      ],
+      "icon": "minecraft:lead",
+      "x": 11, "y": -0.5,
+      "shape": "octagon", "size": 1.25,
+      "deps": ["void_worm", "frostmaw", "mutant_skeleton", "guards"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 100}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "id": "guide_mining",
+  "title": "&aStone and Ore",
+  "subtitle": "Vein mining, crystal caves and every ore the pack adds.",
+  "icon": "minecraft:iron_pickaxe",
+  "group": "mods",
+  "order": 3,
+  "quests": [
+    {
+      "key": "ultimine",
+      "title": "Vein Mining",
+      "subtitle": "FTB Ultimine",
+      "desc": [
+        "Hold &e`&r (the key left of 1) while you break a block: &eFTB Ultimine&r breaks up to &e64&r connected blocks of the same kind. Whole ore veins, whole trees.",
+        "Scroll the mouse wheel while holding the key to change the shape (a tunnel, a flat square...). Every block costs hunger, so bring food."
+      ],
+      "icon": "minecraft:raw_iron",
+      "x": 0, "y": 0,
+      "shape": "hexagon", "size": 1.5,
+      "deps": ["prologue:tools"],
+      "tasks": [{"type": "item", "item": "minecraft:raw_iron", "count": 32}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 50}
+      ]
+    },
+    {
+      "key": "mekanism_ores",
+      "title": "Ores of the Machine Age",
+      "desc": [
+        "&eMekanism&r adds osmium, tin, lead, uranium and fluorite ores. &eOsmium&r goes into nearly every Mekanism machine, tin and copper make bronze, and lead shields you from radiation.",
+        "The Mekanism chapter shows how to turn one ore into two, three, then five ingots."
+      ],
+      "icon": "mekanism:raw_osmium",
+      "x": 2.5, "y": -2,
+      "deps": ["ultimine"],
+      "tasks": [
+        {"type": "item", "item": "mekanism:raw_osmium", "count": 16},
+        {"type": "item", "item": "mekanism:raw_tin", "count": 8}
+      ],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "zinc",
+      "title": "Zinc for Create",
+      "desc": [
+        "&eZinc&r ore lies in stone and deepslate. Zinc and copper make &ebrass&r, Create's middle-tier metal, which you need for precision mechanisms and the Lantern Power Core.",
+        "Crush it with Create's crushing wheels for extra yield."
+      ],
+      "icon": "create:raw_zinc",
+      "x": 4.5, "y": -2,
+      "deps": ["mekanism_ores"],
+      "tasks": [{"type": "item", "item": "create:raw_zinc", "count": 16}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "gems",
+      "title": "Gems of the Wild",
+      "desc": [
+        "&eIce and Fire&r adds &esapphire&r in cold mountains and &esilver&r underground. Silver weapons hurt the undead more. &eKings & Monsters&r adds &eBog Iron&r in swamps.",
+        "Apotheosis gems aren't mined: they drop from monsters and chests (see the Apotheosis chapter)."
+      ],
+      "icon": "iceandfire:sapphire_gem",
+      "x": 6.5, "y": -2,
+      "deps": ["zinc"],
+      "tasks": [
+        {"type": "item", "item": "iceandfire:sapphire_gem", "count": 2},
+        {"type": "item", "item": "iceandfire:raw_silver", "count": 8}
+      ],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "crystal_canyons",
+      "title": "Crystal Canyons",
+      "subtitle": "Galosphere",
+      "desc": [
+        "&eGalosphere&r adds three cave biomes: &dCrystal Canyons&r (huge crystal clusters), &aLichen Caves&r and &dPink Salt Caves&r.",
+        "They lie deep underground. A title shows on screen when you walk into one."
+      ],
+      "icon": "galosphere:allurite_cluster",
+      "x": 2.5, "y": 2,
+      "deps": ["ultimine"],
+      "tasks": [{"type": "biome", "biome": "galosphere:crystal_canyons"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "allurite_lumiere",
+      "title": "Allurite and Lumiere",
+      "desc": [
+        "&9Allurite&r and &eLumiere&r crystals grow beside amethyst in the canyons. Mine the shards for lamps and building blocks.",
+        "Mages want them too: Galosphere Spellbooks uses them for the Allurite Pendant and Sterling gear."
+      ],
+      "icon": "galosphere:lumiere_shard",
+      "x": 4.5, "y": 2,
+      "deps": ["crystal_canyons"],
+      "tasks": [
+        {"type": "item", "item": "galosphere:allurite_shard", "count": 8},
+        {"type": "item", "item": "galosphere:lumiere_shard", "count": 8}
+      ],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "palladium",
+      "title": "Palladium and Sterling",
+      "desc": [
+        "Galosphere's &epalladium&r ore smelts into ingots for &eSterling&r armour and horse armour.",
+        "Pink salt caves are worth a visit too: salt preserves meat into jerky that lasts on long trips."
+      ],
+      "icon": "galosphere:palladium_ingot",
+      "x": 6.5, "y": 2,
+      "deps": ["allurite_lumiere"],
+      "tasks": [{"type": "item", "item": "galosphere:palladium_ingot", "count": 8}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "mithril",
+      "title": "Mithril, Deep Down",
+      "desc": [
+        "&eMithril&r (Iron's Spells) is rare and hides deep in the deepslate layer. Ultimine helps once you find a vein.",
+        "Mages need it: mithril goes into every Empty Upgrade Orb and into Mithril Weave for the best school armour."
+      ],
+      "icon": "irons_spellbooks:raw_mithril",
+      "x": 3, "y": 0,
+      "deps": ["ultimine"],
+      "tasks": [{"type": "item", "item": "irons_spellbooks:raw_mithril", "count": 4}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "draconium",
+      "title": "Draconium",
+      "desc": [
+        "&eDraconium&r ore appears deep in the Overworld, in the Nether and (richest of all) in the End. It drops dust that smelts into ingots.",
+        "It's the first step of Draconic Evolution, the pack's most powerful tech line."
+      ],
+      "icon": "draconicevolution:draconium_dust",
+      "x": 6, "y": 0,
+      "deps": ["mithril"],
+      "tasks": [{"type": "item", "item": "draconicevolution:draconium_dust", "count": 8}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "ancient_city",
+      "title": "Sculk and Silence",
+      "desc": [
+        "Far below the deepslate lie the &eAncient Cities&r, where the Warden listens for footsteps. Sneak, don't sprint, and avoid the shriekers.",
+        "Their chests hold rare books (mages look for Ruined Books here) and Echo Shards."
+      ],
+      "icon": "minecraft:sculk_shrieker",
+      "x": 9, "y": 1.5,
+      "deps": ["draconium"],
+      "tasks": [{"type": "structure", "structure": "minecraft:ancient_city"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "ancient_debris",
+      "title": "Ancient Debris",
+      "desc": [
+        "In the Nether, around height 15, &eAncient Debris&r hides in netherrack. It's slow to mine and only a diamond pickaxe or better breaks it, so bring fire resistance and watch for lava.",
+        "Netherite upgrades gear and appears in many late recipes: the Levitation Stone, battlemage robes, the best backpacks."
+      ],
+      "icon": "minecraft:ancient_debris",
+      "x": 9, "y": -1.5,
+      "deps": ["draconium"],
+      "tasks": [{"type": "item", "item": "minecraft:ancient_debris", "count": 4}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "deep_delver",
+      "title": "Master of the Deep",
+      "desc": [
+        "Every ore in the pack has passed through your hands. Not bad for someone who started with a wooden pickaxe.",
+        "Next: turn all that ore into machines (Create, Mekanism) or magic (Iron's Spells)."
+      ],
+      "icon": "minecraft:diamond_pickaxe",
+      "x": 11.5, "y": 0,
+      "shape": "octagon", "size": 1.25,
+      "deps": ["gems", "palladium", "ancient_city", "ancient_debris"],
+      "tasks": [{"type": "checkmark"}],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 100}
+      ]
+    }
+  ]
+}

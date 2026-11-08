@@ -1,0 +1,875 @@
+{
+  "id": "finale",
+  "title": "&6The Last Light",
+  "subtitle": "Every ring-bearer, every colour, against the god-eater.",
+  "icon": "dog:cosmic_worm",
+  "group": "story",
+  "order": 9,
+  "quests": [
+    {
+      "key": "gathering",
+      "title": "The Gathering",
+      "subtitle": "All lights answer",
+      "desc": [
+        "The stars go out one by one. Something vast is eating its way toward Earth, and the Guardians call every ring-bearer home.",
+        "",
+        "Opens for anyone with a ring from any class. This chapter is the endgame: prepare, cross the Twilight, break the Chaos Guardian, and face the Devourer &otogether&r."
+      ],
+      "icon": "createlanterns:lantern_frame",
+      "x": 0,
+      "y": 0,
+      "shape": "gear",
+      "size": 2.5,
+      "deps": ["class_red:ring", "class_orange:ring", "class_yellow:ring", "class_green:ring", "class_blue:ring", "class_indigo:ring", "class_violet:ring"],
+      "dep_mode": "one",
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "command", "command": "/gl lore {p} corruption"},
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 1000},
+        {"type": "skill_xp", "category": "adventurer", "amount": 500}
+      ]
+    },
+    {
+      "key": "white",
+      "title": "The White Lantern",
+      "desc": [
+        "Life itself chose you. Every light of the spectrum burns inside the White.",
+        "",
+        "Appears when the ring trial made you a &fWhite Lantern&r."
+      ],
+      "icon": "createlanterns:white_power_ring",
+      "x": -1.5,
+      "y": -2.5,
+      "shape": "octagon",
+      "size": 1.25,
+      "deps": ["gathering"],
+      "optional": true,
+      "invisible": true,
+      "tasks": [
+        {"type": "stage", "stage": "gl_ring_white"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 500}
+      ]
+    },
+    {
+      "key": "black",
+      "title": "The Black Lantern",
+      "desc": [
+        "Death itself chose you. The Black does not shine; it swallows.",
+        "",
+        "Appears when the ring trial made you a &8Black Lantern&r."
+      ],
+      "icon": "createlanterns:black_power_ring",
+      "x": -1.5,
+      "y": 2.5,
+      "shape": "octagon",
+      "size": 1.25,
+      "deps": ["gathering"],
+      "optional": true,
+      "invisible": true,
+      "tasks": [
+        {"type": "stage", "stage": "gl_ring_black"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "skill_xp", "category": "adventurer", "amount": 500}
+      ]
+    },
+    {
+      "key": "recharge",
+      "title": "Recharge",
+      "desc": [
+        "A ring is only as strong as its last charge.",
+        "",
+        "Optional: recharge your ring at a Lantern of its colour (or at the Central Power Battery on Oa, if your fleet can reach it)."
+      ],
+      "icon": "createlanterns:power_battery",
+      "x": 0,
+      "y": -2.75,
+      "deps": ["gathering"],
+      "optional": true,
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 300},
+        {"type": "skill_xp", "category": "adventurer", "amount": 100}
+      ]
+    },
+    {
+      "key": "wither",
+      "title": "The Withered King",
+      "desc": [
+        "Three skulls, soul sand, and a storm of black fire. An old test, and still a good one.",
+        "",
+        "Summon and kill the &eWither&r (3 wither skeleton skulls on soul sand). Fight it underground or far from your base."
+      ],
+      "icon": "minecraft:nether_star",
+      "x": 3,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 1.5,
+      "deps": ["gathering"],
+      "tasks": [
+        {"type": "kill", "entity": "minecraft:wither"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "item", "item": "minecraft:beacon"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 800},
+        {"type": "skill_xp", "category": "adventurer", "amount": 400}
+      ]
+    },
+    {
+      "key": "summit",
+      "title": "The Summit",
+      "desc": [
+        "The world is ready to give you its best, and its worst.",
+        "",
+        "Unlock the &eSummit&r world tier (Apotheosis): slay the Wither and wear a full set of &9Rare&r affix gear, then press &eCTRL+T&r."
+      ],
+      "icon": "apotheosis:sigil_of_enhancement",
+      "x": 4.5,
+      "y": 0,
+      "deps": ["wither"],
+      "tasks": [
+        {"type": "advancement", "advancement": "apotheosis:progression/summit"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 800},
+        {"type": "skill_xp", "category": "adventurer", "amount": 400}
+      ]
+    },
+    {
+      "key": "tf_portal",
+      "title": "Into the Twilight",
+      "desc": [
+        "A forest where it's always dusk, and where ancient things guard the way to their masters.",
+        "",
+        "Make a portal: a 2x2 pool of water ringed with flowers, then throw in a &ediamond&r. Enter the &eTwilight Forest&r."
+      ],
+      "icon": "minecraft:diamond",
+      "x": 3,
+      "y": -3,
+      "deps": ["gathering"],
+      "tasks": [
+        {"type": "dimension", "dimension": "twilightforest:twilight_forest"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "twilightforest:magic_map_focus"},
+        {"type": "xp", "xp": 400},
+        {"type": "skill_xp", "category": "adventurer", "amount": 200}
+      ]
+    },
+    {
+      "key": "naga",
+      "title": "The Naga",
+      "desc": [
+        "A great serpent coils in a courtyard of mossy stone.",
+        "",
+        "Kill the &eNaga&r in its courtyard. Its scales make good armor. The trophy counts too."
+      ],
+      "icon": "twilightforest:naga_trophy",
+      "x": 4.5,
+      "y": -3,
+      "shape": "hexagon",
+      "size": 1.25,
+      "deps": ["tf_portal"],
+      "tasks": [
+        {"type": "kill", "entity": "twilightforest:naga", "optional": true},
+        {"type": "item", "item": "twilightforest:naga_trophy", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 400},
+        {"type": "skill_xp", "category": "adventurer", "amount": 200}
+      ]
+    },
+    {
+      "key": "lich",
+      "title": "The Twilight Lich",
+      "desc": [
+        "A lich rules the tall tower at the forest's heart, behind a shield of spinning shields.",
+        "",
+        "Climb the &eLich Tower&r and kill the &eTwilight Lich&r. Break his shields first. The trophy counts too."
+      ],
+      "icon": "twilightforest:lich_trophy",
+      "x": 6.0,
+      "y": -3,
+      "shape": "hexagon",
+      "size": 1.25,
+      "deps": ["naga"],
+      "tasks": [
+        {"type": "kill", "entity": "twilightforest:lich", "optional": true},
+        {"type": "item", "item": "twilightforest:lich_trophy", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "adventurer", "amount": 250}
+      ]
+    },
+    {
+      "key": "minoshroom",
+      "title": "The Minoshroom",
+      "desc": [
+        "Under the swamp, a labyrinth. At its centre, a bull with a mushroom for a head.",
+        "",
+        "Find the &eLabyrinth&r and kill the &eMinoshroom&r. A Maze Map helps. The trophy counts too."
+      ],
+      "icon": "twilightforest:minoshroom_trophy",
+      "x": 7.5,
+      "y": -3,
+      "shape": "hexagon",
+      "size": 1.25,
+      "deps": ["lich"],
+      "tasks": [
+        {"type": "kill", "entity": "twilightforest:minoshroom", "optional": true},
+        {"type": "item", "item": "twilightforest:minoshroom_trophy", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 600},
+        {"type": "skill_xp", "category": "adventurer", "amount": 300}
+      ]
+    },
+    {
+      "key": "tf_hydra",
+      "title": "The Fire Swamp Hydra",
+      "desc": [
+        "Three heads breathing fire across a burning swamp.",
+        "",
+        "Kill the &eHydra&r in its lair in the Fire Swamp. Bring fire resistance. The trophy counts too."
+      ],
+      "icon": "twilightforest:hydra_trophy",
+      "x": 9.0,
+      "y": -3,
+      "shape": "hexagon",
+      "size": 1.25,
+      "deps": ["minoshroom"],
+      "tasks": [
+        {"type": "kill", "entity": "twilightforest:hydra", "optional": true},
+        {"type": "item", "item": "twilightforest:hydra_trophy", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_3"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 700},
+        {"type": "skill_xp", "category": "adventurer", "amount": 350}
+      ]
+    },
+    {
+      "key": "knights",
+      "title": "The Knight Phantoms",
+      "desc": [
+        "Six dead knights still guard their stronghold in the dark forest.",
+        "",
+        "Kill all &e6 Knight Phantoms&r in the &eKnight Stronghold&r. The trophy counts too."
+      ],
+      "icon": "twilightforest:knight_phantom_trophy",
+      "x": 10.5,
+      "y": -3,
+      "shape": "hexagon",
+      "size": 1.25,
+      "deps": ["tf_hydra"],
+      "tasks": [
+        {"type": "kill", "entity": "twilightforest:knight_phantom", "count": 6, "optional": true},
+        {"type": "item", "item": "twilightforest:knight_phantom_trophy", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 800},
+        {"type": "skill_xp", "category": "adventurer", "amount": 400}
+      ]
+    },
+    {
+      "key": "ur_ghast",
+      "title": "The Ur-Ghast",
+      "desc": [
+        "A ghast as old as the forest cries at the top of a dark tower.",
+        "",
+        "Climb the &eDark Tower&r and kill the &eUr-Ghast&r. Destroy its tears. The trophy counts too."
+      ],
+      "icon": "twilightforest:ur_ghast_trophy",
+      "x": 12.0,
+      "y": -3,
+      "shape": "hexagon",
+      "size": 1.25,
+      "deps": ["knights"],
+      "tasks": [
+        {"type": "kill", "entity": "twilightforest:ur_ghast", "optional": true},
+        {"type": "item", "item": "twilightforest:ur_ghast_trophy", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 900},
+        {"type": "skill_xp", "category": "adventurer", "amount": 450}
+      ]
+    },
+    {
+      "key": "yeti",
+      "title": "The Alpha Yeti",
+      "desc": [
+        "In the snowy forest, the lord of the yetis throws ice like boulders.",
+        "",
+        "Kill the &eAlpha Yeti&r in its cave. The trophy counts too."
+      ],
+      "icon": "twilightforest:alpha_yeti_trophy",
+      "x": 13.5,
+      "y": -3,
+      "shape": "hexagon",
+      "size": 1.25,
+      "deps": ["ur_ghast"],
+      "tasks": [
+        {"type": "kill", "entity": "twilightforest:alpha_yeti", "optional": true},
+        {"type": "item", "item": "twilightforest:alpha_yeti_trophy", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 1000},
+        {"type": "skill_xp", "category": "adventurer", "amount": 500}
+      ]
+    },
+    {
+      "key": "snow_queen",
+      "title": "The Snow Queen",
+      "desc": [
+        "On the glacier, a palace of aurora, and a queen who has never been warm.",
+        "",
+        "Kill the &eSnow Queen&r at the top of the &eAurora Palace&r. The trophy counts too."
+      ],
+      "icon": "twilightforest:snow_queen_trophy",
+      "x": 15.0,
+      "y": -3,
+      "shape": "hexagon",
+      "size": 1.25,
+      "deps": ["yeti"],
+      "tasks": [
+        {"type": "kill", "entity": "twilightforest:snow_queen", "optional": true},
+        {"type": "item", "item": "twilightforest:snow_queen_trophy", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 1100},
+        {"type": "skill_xp", "category": "adventurer", "amount": 550}
+      ]
+    },
+    {
+      "key": "final_castle",
+      "title": "The Final Plateau",
+      "desc": [
+        "Beyond the highlands, a castle at the edge of the Twilight. Its master is not home. Something else is.",
+        "",
+        "Reach the &eFinal Castle&r on the Final Plateau. The Twilight's road ends here."
+      ],
+      "icon": "twilightforest:mystic_crown",
+      "x": 16.5,
+      "y": -3,
+      "shape": "pentagon",
+      "size": 1.5,
+      "deps": ["snow_queen"],
+      "tasks": [
+        {"type": "structure", "structure": "twilightforest:final_castle"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 1200},
+        {"type": "skill_xp", "category": "adventurer", "amount": 600}
+      ]
+    },
+    {
+      "key": "cata_ignis",
+      "title": "Ignis Rekindled",
+      "desc": [
+        "The Devourer's shadow wakes the old Cataclysm bosses. Put them down before they join it.",
+        "",
+        "Optional: Kill &eIgnis&r in the Burning Arena (Nether). Another class's chapter may already have sent you there."
+      ],
+      "icon": "cataclysm:ignitium_ingot",
+      "x": 3.0,
+      "y": 3,
+      "shape": "hexagon",
+      "size": 1.25,
+      "deps": ["gathering"],
+      "optional": true,
+      "tasks": [
+        {"type": "kill", "entity": "cataclysm:ignis"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 800},
+        {"type": "skill_xp", "category": "adventurer", "amount": 400}
+      ]
+    },
+    {
+      "key": "cata_leviathan",
+      "title": "From the Abyss",
+      "desc": [
+        "The Devourer's shadow wakes the old Cataclysm bosses. Put them down before they join it.",
+        "",
+        "Optional: Kill &eThe Leviathan&r in the Sunken City (deep ocean). Another class's chapter may already have sent you there."
+      ],
+      "icon": "cataclysm:tidal_claws",
+      "x": 4.5,
+      "y": 3,
+      "shape": "hexagon",
+      "size": 1.25,
+      "deps": ["gathering"],
+      "optional": true,
+      "tasks": [
+        {"type": "kill", "entity": "cataclysm:the_leviathan"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 800},
+        {"type": "skill_xp", "category": "adventurer", "amount": 400}
+      ]
+    },
+    {
+      "key": "cata_scylla",
+      "title": "Storm Queen",
+      "desc": [
+        "The Devourer's shadow wakes the old Cataclysm bosses. Put them down before they join it.",
+        "",
+        "Optional: Kill &eScylla&r in the Acropolis (at sea). Another class's chapter may already have sent you there."
+      ],
+      "icon": "cataclysm:ceraunus",
+      "x": 6.0,
+      "y": 3,
+      "shape": "hexagon",
+      "size": 1.25,
+      "deps": ["gathering"],
+      "optional": true,
+      "tasks": [
+        {"type": "kill", "entity": "cataclysm:scylla"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 800},
+        {"type": "skill_xp", "category": "adventurer", "amount": 400}
+      ]
+    },
+    {
+      "key": "cata_maledictus",
+      "title": "The Cursed Warlord",
+      "desc": [
+        "The Devourer's shadow wakes the old Cataclysm bosses. Put them down before they join it.",
+        "",
+        "Optional: Kill &eMaledictus&r in the Frosted Prison. Another class's chapter may already have sent you there."
+      ],
+      "icon": "cataclysm:cursium_ingot",
+      "x": 7.5,
+      "y": 3,
+      "shape": "hexagon",
+      "size": 1.25,
+      "deps": ["gathering"],
+      "optional": true,
+      "tasks": [
+        {"type": "kill", "entity": "cataclysm:maledictus"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 800},
+        {"type": "skill_xp", "category": "adventurer", "amount": 400}
+      ]
+    },
+    {
+      "key": "cata_harbinger",
+      "title": "The War Machine",
+      "desc": [
+        "The Devourer's shadow wakes the old Cataclysm bosses. Put them down before they join it.",
+        "",
+        "Optional: Kill &eThe Harbinger&r in the Ancient Factory. Another class's chapter may already have sent you there."
+      ],
+      "icon": "cataclysm:witherite_ingot",
+      "x": 9.0,
+      "y": 3,
+      "shape": "hexagon",
+      "size": 1.25,
+      "deps": ["gathering"],
+      "optional": true,
+      "tasks": [
+        {"type": "kill", "entity": "cataclysm:the_harbinger"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "xp", "xp": 800},
+        {"type": "skill_xp", "category": "adventurer", "amount": 400}
+      ]
+    },
+    {
+      "key": "cata_all",
+      "title": "Cataclysm's End",
+      "desc": [
+        "Every titan of the Cataclysm, fallen to your party.",
+        "",
+        "Optional: earn the &eL_Ender's Cataclysm&r advancement for slaying every one of its bosses."
+      ],
+      "icon": "cataclysm:boss_respawner",
+      "x": 10.5,
+      "y": 3,
+      "shape": "hexagon",
+      "size": 1.5,
+      "deps": ["cata_ignis", "cata_leviathan", "cata_scylla", "cata_maledictus", "cata_harbinger"],
+      "optional": true,
+      "tasks": [
+        {"type": "advancement", "advancement": "cataclysm:kill_all_bosses"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 10},
+        {"type": "xp", "xp": 2000},
+        {"type": "skill_xp", "category": "adventurer", "amount": 800}
+      ]
+    },
+    {
+      "key": "ready",
+      "title": "The War Council",
+      "desc": [
+        "Lanterns of every colour gather around one fire. Nobody speaks for a long time. Then someone says: 'The End.'",
+        "",
+        "Gather your party. Next: the &eChaos Guardian&r in the End, then the Ender Dragon, then the summoning."
+      ],
+      "icon": "minecraft:lodestone",
+      "x": 18.25,
+      "y": 0,
+      "shape": "diamond",
+      "size": 1.75,
+      "deps": ["final_castle", "summit"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "adventurer", "amount": 250}
+      ]
+    },
+    {
+      "key": "end_return",
+      "title": "Return to the End",
+      "desc": [
+        "The End island hasn't changed. The void around it has: something has been feeding there.",
+        "",
+        "Travel to &ethe End&r again (stronghold portal or an End Gateway)."
+      ],
+      "icon": "minecraft:ender_eye",
+      "x": 20.0,
+      "y": 0,
+      "deps": ["ready"],
+      "tasks": [
+        {"type": "dimension", "dimension": "minecraft:the_end"}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 400},
+        {"type": "skill_xp", "category": "adventurer", "amount": 200}
+      ]
+    },
+    {
+      "key": "chaos_island",
+      "title": "The Chaos Island",
+      "desc": [
+        "Far out in the End void floats a shattered island, crackling with chaos energy. Something enormous circles it.",
+        "",
+        "Find &eDraconic Evolution's Chaos Island&r far out in the End. Fly (your ring or elytra) and mark the way home. Tick when you see it."
+      ],
+      "icon": "draconicevolution:infused_obsidian",
+      "x": 21.5,
+      "y": -1.5,
+      "deps": ["end_return"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 500},
+        {"type": "skill_xp", "category": "adventurer", "amount": 250}
+      ]
+    },
+    {
+      "key": "chaos_guardian",
+      "title": "The Chaos Guardian",
+      "subtitle": "The gate",
+      "desc": [
+        "A dragon of pure chaos, wrapped in crystal shields. Its fire ignores armor.",
+        "",
+        "Break the &eGuardian Crystals&r first, then kill the &eChaos Guardian&r. Its damage ignores armor and Resistance and it summons withers: bring the whole party, lots of healing, and a way home. Party members nearby get the credit too."
+      ],
+      "icon": "draconicevolution:chaos_shard",
+      "x": 23.25,
+      "y": -1.5,
+      "shape": "hexagon",
+      "size": 2.25,
+      "deps": ["chaos_island"],
+      "tasks": [
+        {"type": "kill", "entity": "draconicevolution:draconic_guardian", "optional": true},
+        {"type": "stage", "stage": "gl_chaos_slain", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 15},
+        {"type": "xp", "xp": 3000},
+        {"type": "skill_xp", "category": "adventurer", "amount": 1000}
+      ]
+    },
+    {
+      "key": "chaos_shard",
+      "title": "Chaos Shard",
+      "desc": [
+        "A shard of the Guardian's heart. It hums with violence.",
+        "",
+        "Claim a &eChaos Shard&r from the Guardian's drops. The summoning needs one."
+      ],
+      "icon": "draconicevolution:chaos_shard",
+      "x": 25.0,
+      "y": -1.5,
+      "deps": ["chaos_guardian"],
+      "tasks": [
+        {"type": "item", "item": "draconicevolution:chaos_shard"}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 800},
+        {"type": "skill_xp", "category": "adventurer", "amount": 300}
+      ]
+    },
+    {
+      "key": "ender_dragon",
+      "title": "The Devouring",
+      "desc": [
+        "When the old dragon falls, something tears through the sky to eat it.",
+        "",
+        "Kill the &eEnder Dragon&r (respawn it with 4 End Crystals on the exit portal if it's already dead). Watch what comes for its corpse."
+      ],
+      "icon": "minecraft:dragon_head",
+      "x": 21.5,
+      "y": 1.5,
+      "shape": "hexagon",
+      "size": 1.75,
+      "deps": ["end_return"],
+      "tasks": [
+        {"type": "kill", "entity": "minecraft:ender_dragon", "optional": true},
+        {"type": "advancement", "advancement": "minecraft:end/kill_dragon", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp_levels", "levels": 5},
+        {"type": "xp", "xp": 1000},
+        {"type": "skill_xp", "category": "adventurer", "amount": 500}
+      ]
+    },
+    {
+      "key": "soul_fragment",
+      "title": "Draconic Soul Fragment",
+      "desc": [
+        "God-energy, torn loose in the devouring.",
+        "",
+        "Collect a &eDraconic Soul Fragment&r: it drops when the Ender Dragon dies. If you missed it, respawn the dragon and kill it again."
+      ],
+      "icon": "dog:draconic_soul_fragment",
+      "x": 23.25,
+      "y": 1.5,
+      "deps": ["ender_dragon"],
+      "tasks": [
+        {"type": "item", "item": "dog:draconic_soul_fragment"}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 800},
+        {"type": "skill_xp", "category": "adventurer", "amount": 300}
+      ]
+    },
+    {
+      "key": "cosmic_worm",
+      "title": "The Cosmic Worm",
+      "desc": [
+        "A false Sentinel, spun from the energy of a slain god. It sings like the Storm Weaver.",
+        "",
+        "Craft the &eCosmic Worm&r (soul fragment + chaos shard, see JEI). Use it under an &eopen sky&r; if it wiggles and refuses, you are in the wrong dimension."
+      ],
+      "icon": "dog:cosmic_worm",
+      "x": 26.5,
+      "y": 0,
+      "shape": "diamond",
+      "size": 1.75,
+      "deps": ["chaos_shard", "soul_fragment"],
+      "tasks": [
+        {"type": "item", "item": "dog:cosmic_worm"}
+      ],
+      "rewards": [
+        {"type": "command", "command": "/gl lore {p} devourer"},
+        {"type": "xp", "xp": 1000},
+        {"type": "skill_xp", "category": "adventurer", "amount": 400}
+      ]
+    },
+    {
+      "key": "last_light",
+      "title": "The Last Light",
+      "subtitle": "The Devourer of Gods",
+      "desc": [
+        "&o\"Fall to your knees, worm!\"&r A serpent three hundred blocks long, a god-eater, a hunger with a voice.",
+        "Green shields. Blue protects. Indigo's beasts hold the adds. Yellow and Red burst. Orange holds the line. Violet finds the weak point.",
+        "",
+        "Summon the &eDevourer of Gods&r and kill it. It scales with every player present, and the party shares a small budget of deaths: when it runs out, it leaves. Fly. Everyone nearby gets the credit."
+      ],
+      "icon": "createlanterns:white_power_battery",
+      "x": 29.25,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 3.25,
+      "deps": ["cosmic_worm"],
+      "tasks": [
+        {"type": "kill", "entity": "dog:devourer_head", "optional": true},
+        {"type": "stage", "stage": "gl_devourer_slain", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 30},
+        {"type": "xp", "xp": 10000},
+        {"type": "skill_xp", "category": "adventurer", "amount": 3000}
+      ]
+    },
+    {
+      "key": "afterglow",
+      "title": "Afterglow",
+      "subtitle": "Epilogue",
+      "desc": [
+        "The stars come back, one by one. Somewhere on Oa, the Guardians write your names in light.",
+        "",
+        "You did it. The Epilogue's extreme bosses are optional: for those who want more."
+      ],
+      "icon": "minecraft:nether_star",
+      "x": 32.25,
+      "y": 0,
+      "shape": "gear",
+      "size": 2.25,
+      "deps": ["last_light"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 20},
+        {"type": "xp", "xp": 5000},
+        {"type": "skill_xp", "category": "adventurer", "amount": 2000}
+      ]
+    },
+    {
+      "key": "space_station",
+      "title": "The Place of the Beginning",
+      "desc": [
+        "A metal station hangs in the End's void. Something inside keeps count of every hit it takes.",
+        "",
+        "Optional: find the &eSpace Station&r (Legendary Monsters) in the End."
+      ],
+      "icon": "legendary_monsters:portal_shard",
+      "x": 34.25,
+      "y": -1.75,
+      "deps": ["afterglow"],
+      "optional": true,
+      "tasks": [
+        {"type": "structure", "structure": "legendary_monsters:space_station"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 1500},
+        {"type": "skill_xp", "category": "adventurer", "amount": 500}
+      ]
+    },
+    {
+      "key": "obliterator",
+      "title": "The Obliterator",
+      "desc": [
+        "&o\"Your doom approaches.\"&r It caps every hit, adapts to your damage, and heals if you leave it alone.",
+        "",
+        "Optional: kill &eThe Obliterator&r. It is &cinvulnerable while you fly or hold high ground&r: fight it on foot, as a party."
+      ],
+      "icon": "legendary_monsters:annihilation_lantern",
+      "x": 36.25,
+      "y": -1.75,
+      "shape": "hexagon",
+      "size": 2.25,
+      "deps": ["space_station"],
+      "optional": true,
+      "tasks": [
+        {"type": "kill", "entity": "legendary_monsters:the_obliterator"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 30},
+        {"type": "xp", "xp": 8000},
+        {"type": "skill_xp", "category": "adventurer", "amount": 2500}
+      ]
+    },
+    {
+      "key": "shadow_altar",
+      "title": "The Shadow Altar",
+      "desc": [
+        "An altar that only wakes in the End, and an orb that remembers whoever holds it.",
+        "",
+        "Optional: get a &eShadow Altar&r and a &eShadow Orb&r (Dark Doppelganger, see JEI)."
+      ],
+      "icon": "darkdoppelganger:shadow_altar",
+      "x": 34.25,
+      "y": 1.75,
+      "deps": ["afterglow"],
+      "optional": true,
+      "tasks": [
+        {"type": "item", "item": "darkdoppelganger:shadow_altar"},
+        {"type": "item", "item": "darkdoppelganger:shadow_orb"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 1500},
+        {"type": "skill_xp", "category": "adventurer", "amount": 500}
+      ]
+    },
+    {
+      "key": "doppelganger",
+      "title": "Your Own Shadow",
+      "desc": [
+        "It wears your armor, swings your weapon, casts your spells. It is you, without the light.",
+        "",
+        "Optional: in &ethe End&r, place the Shadow Orb on the Shadow Altar. Whoever offers it is copied. Kill the &eDark Doppelganger&r."
+      ],
+      "icon": "darkdoppelganger:doppelganger_ring",
+      "x": 36.25,
+      "y": 1.75,
+      "shape": "hexagon",
+      "size": 2.25,
+      "deps": ["shadow_altar"],
+      "optional": true,
+      "tasks": [
+        {"type": "kill", "entity": "darkdoppelganger:dark_doppelganger"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "loot", "table": "greenlanterns:rewards/tier_5"},
+        {"type": "xp_levels", "levels": 30},
+        {"type": "xp", "xp": 8000},
+        {"type": "skill_xp", "category": "adventurer", "amount": 2500}
+      ]
+    }
+  ]
+}

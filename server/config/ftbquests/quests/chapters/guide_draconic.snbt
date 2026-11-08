@@ -1,0 +1,452 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "guide_draconic"
+	group: "4FA3695F5F82A1E1"
+	icon: {
+		id: "draconicevolution:draconic_chestpiece"
+	}
+	id: "2D8B02FF0BE61111"
+	images: [ ]
+	order_index: 15
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "draconicevolution:draconium_ingot"
+			}
+			id: "7D7F5DCA07945469"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					id: "02CB2B25B45A6DEF"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "5E6E067B2574AD37"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				count: 16L
+				id: "004CDF99413629E7"
+				item: { count: 1, id: "draconicevolution:draconium_ingot" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7D7F5DCA07945469"]
+			icon: {
+				id: "draconicevolution:generator"
+			}
+			id: "3D31C5C74A0E85F2"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "55C6928977DBAE48"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "389C3EC691A82829"
+				item: { count: 1, id: "draconicevolution:generator" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["7D7F5DCA07945469"]
+			icon: {
+				id: "draconicevolution:draconium_core"
+			}
+			id: "6069DEB3DF84212D"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "1A9615F8A01EC1AC"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "0EEF34C47E42D873"
+				item: { count: 1, id: "draconicevolution:draconium_core" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6069DEB3DF84212D"]
+			icon: {
+				id: "draconicevolution:crafting_core"
+			}
+			id: "597AA55E2A685224"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "046F4F5C695F9A23"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [
+				{
+					id: "5FF734A91DC63867"
+					item: { count: 1, id: "draconicevolution:crafting_core" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "50B1C1415F660D27"
+					item: { count: 1, id: "draconicevolution:basic_crafting_injector" }
+					type: "item"
+				}
+			]
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "draconicevolution:energy_core"
+			}
+			id: "313D5F9A56CFE504"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "77910AF714261CA9"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [
+				{
+					id: "3303880745F2B2AE"
+					item: { count: 1, id: "draconicevolution:energy_core" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "1DA395AEE32159DE"
+					item: { count: 1, id: "draconicevolution:energy_core_stabilizer" }
+					type: "item"
+				}
+			]
+			x: 5.0d
+			y: -2.0d
+		}
+		{
+			icon: {
+				id: "draconicevolution:wyvern_core"
+			}
+			id: "529F08437E474690"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "4146390D966BCFF3"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "7B350119E0049FFA"
+				item: { count: 1, id: "draconicevolution:wyvern_core" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["529F08437E474690"]
+			icon: {
+				id: "draconicevolution:wyvern_pickaxe"
+			}
+			id: "62C4653AFB0F112D"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "3299EAED925BA8E8"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "29AD6BFC5D41DB5C"
+				item: { count: 1, id: "draconicevolution:wyvern_pickaxe" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["529F08437E474690"]
+			icon: {
+				id: "draconicevolution:wyvern_chestpiece"
+			}
+			id: "056E172D848CAC7B"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "43BE264BA5529B68"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "71DD43B64C9B75C8"
+				item: { count: 1, id: "draconicevolution:wyvern_chestpiece" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["529F08437E474690"]
+			icon: {
+				id: "draconicevolution:module_core"
+			}
+			id: "5DFAAD52D6C4724E"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "101C81B18A27D36F"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [
+				{
+					id: "33099F3D1F53CD73"
+					item: { count: 1, id: "draconicevolution:module_core" }
+					type: "item"
+				}
+				{
+					id: "5ABE0960A1302C66"
+					item: { count: 1, id: "draconicevolution:item_wyvern_shield_capacity" }
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["056E172D848CAC7B"]
+			icon: {
+				id: "draconicevolution:dragon_heart"
+			}
+			id: "6E775917E511EB89"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "22885041618DC8BB"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 150"
+					id: "6D77533A7221F7DD"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				id: "2D8763AB2DC6B087"
+				item: { count: 1, id: "draconicevolution:dragon_heart" }
+				type: "item"
+			}]
+			x: 12.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5DFAAD52D6C4724E"]
+			dependency_requirement: "one_completed"
+			icon: {
+				id: "draconicevolution:awakened_draconium_ingot"
+			}
+			id: "3F19BD4F10ED15EA"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "48B84F5D706641E4"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				count: 4L
+				id: "2C7D03619CA3C46B"
+				item: { count: 1, id: "draconicevolution:awakened_draconium_ingot" }
+				type: "item"
+			}]
+			x: 12.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3F19BD4F10ED15EA"]
+			icon: {
+				id: "draconicevolution:awakened_core"
+			}
+			id: "38951A087DFB8D92"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "00AAC73336C2E4DF"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "2B1802D153447E09"
+				item: { count: 1, id: "draconicevolution:awakened_core" }
+				type: "item"
+			}]
+			x: 15.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["38951A087DFB8D92"]
+			icon: {
+				id: "draconicevolution:draconic_chestpiece"
+			}
+			id: "5DAC5AF657FB62B0"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "5923448B949627D6"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 200"
+					id: "32E53FC0D280B7AF"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "octagon"
+			size: 1.25d
+			tasks: [{
+				id: "46B56F0205EA44F9"
+				item: { count: 1, id: "draconicevolution:draconic_chestpiece" }
+				type: "item"
+			}]
+			x: 17.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["38951A087DFB8D92"]
+			icon: {
+				id: "draconicevolution:reactor_core"
+			}
+			id: "47989AA8B17C9DE8"
+			optional: true
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "1EE6EA4F6192A252"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "68B1FB428F4DD975"
+				item: { count: 1, id: "draconicevolution:reactor_core" }
+				type: "item"
+			}]
+			x: 15.0d
+			y: 2.0d
+		}
+		{
+			icon: {
+				id: "draconicevolution:chaos_shard"
+			}
+			id: "739F78CBAB120968"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "44B4284FA6D4F73D"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 400"
+					id: "49B7711D4D65C719"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "45FE5192A69B8CBF"
+					type: "xp"
+					xp: 1000
+				}
+			]
+			shape: "diamond"
+			size: 1.75d
+			tasks: [{
+				entity: "draconicevolution:draconic_guardian"
+				id: "34E5F6245A86B095"
+				type: "kill"
+				value: 1L
+			}]
+			x: 17.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["739F78CBAB120968"]
+			icon: {
+				id: "draconicevolution:chaotic_core"
+			}
+			id: "54E41CE51EA46909"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+				id: "4DE4CA36A6399756"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "33E7588D67D035A0"
+				item: { count: 1, id: "draconicevolution:chaotic_core" }
+				type: "item"
+			}]
+			x: 20.0d
+			y: -2.5d
+		}
+		{
+			icon: {
+				id: "draconicevolution:chaotic_chestpiece"
+			}
+			id: "0965892683525B86"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "02411E75ABCAB119"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 400"
+					id: "36929648F65E00E3"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "octagon"
+			size: 1.75d
+			tasks: [{
+				id: "34C865D446321F14"
+				item: { count: 1, id: "draconicevolution:chaotic_chestpiece" }
+				type: "item"
+			}]
+			x: 22.5d
+			y: -1.0d
+		}
+	]
+}

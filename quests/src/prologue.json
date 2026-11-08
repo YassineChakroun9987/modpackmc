@@ -1,0 +1,404 @@
+{
+  "id": "prologue",
+  "title": "&6Prologue: The Seventh Dawn",
+  "subtitle": "A horn on the ridge. Seven days until the Warband comes.",
+  "icon": "minecraft:goat_horn",
+  "group": "story",
+  "order": 0,
+  "quests": [
+    {
+      "key": "wake",
+      "title": "The Seventh Dawn",
+      "subtitle": "Open your eyes",
+      "desc": [
+        "You wake in a sun-baked village. On the ridge, a horn sounds: a pillager &cWarband&r is camped there, and the bar at the top of your screen counts down the days.",
+        "",
+        "This is your quest book. Open it from the book button in your inventory (or its keybind). Tick the checkmark to begin."
+      ],
+      "icon": "ftbquests:book",
+      "x": 0,
+      "y": 0,
+      "shape": "diamond",
+      "size": 1.5,
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:bread", "count": 4},
+        {"type": "xp", "xp": 20}
+      ]
+    },
+    {
+      "key": "wood",
+      "title": "Timber",
+      "desc": [
+        "Every wall, bow and bed starts with a tree.",
+        "",
+        "Punch a tree until it drops logs. Any of the logs below counts: bring &e8&r of one kind."
+      ],
+      "icon": "minecraft:oak_log",
+      "x": 1.5,
+      "y": 0,
+      "deps": ["wake"],
+      "tasks": [
+        {"type": "item", "item": "minecraft:oak_log", "count": 8, "optional": true},
+        {"type": "item", "item": "minecraft:acacia_log", "count": 8, "optional": true},
+        {"type": "item", "item": "minecraft:birch_log", "count": 8, "optional": true},
+        {"type": "item", "item": "minecraft:spruce_log", "count": 8, "optional": true},
+        {"type": "item", "item": "minecraft:dark_oak_log", "count": 8, "optional": true},
+        {"type": "item", "item": "minecraft:jungle_log", "count": 8, "optional": true},
+        {"type": "item", "item": "minecraft:cherry_log", "count": 8, "optional": true},
+        {"type": "item", "item": "minecraft:mangrove_log", "count": 8, "optional": true}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:apple", "count": 3},
+        {"type": "xp", "xp": 20},
+        {"type": "skill_xp", "category": "adventurer", "amount": 10}
+      ]
+    },
+    {
+      "key": "table",
+      "title": "A Place to Work",
+      "desc": [
+        "Logs become planks, planks become a workbench, and the workbench becomes everything else.",
+        "",
+        "Turn logs into planks in your inventory grid, then craft a &eCrafting Table&r and a wooden pickaxe."
+      ],
+      "icon": "minecraft:crafting_table",
+      "x": 3,
+      "y": 0,
+      "deps": ["wood"],
+      "tasks": [
+        {"type": "item", "item": "minecraft:crafting_table"},
+        {"type": "item", "item": "minecraft:wooden_pickaxe"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:torch", "count": 8},
+        {"type": "xp", "xp": 25},
+        {"type": "skill_xp", "category": "adventurer", "amount": 10}
+      ]
+    },
+    {
+      "key": "first_spell",
+      "title": "Whispers on Paper",
+      "desc": [
+        "An old woman swears the ruins hold 'paper that burns without fire'. Magic is real here.",
+        "",
+        "Find any &eIron's Spells scroll&r in chests (village houses, ruins, dungeons). Right-click it to cast its spell once."
+      ],
+      "icon": "irons_spellbooks:scroll",
+      "x": 3,
+      "y": -1.5,
+      "deps": ["table"],
+      "tasks": [
+        {"type": "item", "item": "irons_spellbooks:scroll"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/scrolls_1"},
+        {"type": "xp", "xp": 40},
+        {"type": "skill_xp", "category": "adventurer", "amount": 20}
+      ]
+    },
+    {
+      "key": "food",
+      "title": "Something to Eat",
+      "desc": [
+        "A hungry guard is a dead guard. Stock the larder before the siege.",
+        "",
+        "Bring &e6&r of any one cooked food below. Smelt meat in a furnace, or craft bread from wheat. AppleSkin shows hunger and saturation on your HUD."
+      ],
+      "icon": "minecraft:bread",
+      "x": 4.5,
+      "y": -1.5,
+      "deps": ["table"],
+      "tasks": [
+        {"type": "item", "item": "minecraft:bread", "count": 6, "optional": true},
+        {"type": "item", "item": "minecraft:cooked_beef", "count": 6, "optional": true},
+        {"type": "item", "item": "minecraft:cooked_porkchop", "count": 6, "optional": true},
+        {"type": "item", "item": "minecraft:cooked_mutton", "count": 6, "optional": true},
+        {"type": "item", "item": "minecraft:cooked_chicken", "count": 6, "optional": true},
+        {"type": "item", "item": "minecraft:baked_potato", "count": 6, "optional": true}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:cooked_beef", "count": 4},
+        {"type": "xp", "xp": 25},
+        {"type": "skill_xp", "category": "adventurer", "amount": 10}
+      ]
+    },
+    {
+      "key": "bed",
+      "title": "Rest Before the Storm",
+      "desc": [
+        "Sleep sets your spawn here, in the village you will defend. The countdown doesn't stop while you dream.",
+        "",
+        "Craft a bed (3 wool + 3 planks) and sleep in it."
+      ],
+      "icon": "minecraft:red_bed",
+      "x": 4.5,
+      "y": 1.5,
+      "deps": ["table"],
+      "tasks": [
+        {"type": "advancement", "advancement": "minecraft:adventure/sleep_in_bed"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:white_wool", "count": 3},
+        {"type": "xp", "xp": 25},
+        {"type": "skill_xp", "category": "adventurer", "amount": 10}
+      ]
+    },
+    {
+      "key": "tools",
+      "title": "Make Ready",
+      "desc": [
+        "The smith hands you an apron. 'If you're staying, you're fighting.'",
+        "",
+        "Mine iron, smelt it, and craft an &eiron sword&r and a &eshield&r."
+      ],
+      "icon": "minecraft:shield",
+      "x": 4.5,
+      "y": 0,
+      "deps": ["table"],
+      "tasks": [
+        {"type": "item", "item": "minecraft:iron_sword"},
+        {"type": "item", "item": "minecraft:shield"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:iron_ingot", "count": 4},
+        {"type": "xp", "xp": 40},
+        {"type": "skill_xp", "category": "adventurer", "amount": 20}
+      ]
+    },
+    {
+      "key": "armor",
+      "title": "Iron Skin",
+      "desc": [
+        "Crossbow bolts bite. Iron bites back.",
+        "",
+        "Craft and wear any piece of iron armor. More is better: Day Seven is not forgiving."
+      ],
+      "icon": "minecraft:iron_chestplate",
+      "x": 6,
+      "y": 0,
+      "deps": ["tools"],
+      "tasks": [
+        {"type": "advancement", "advancement": "minecraft:story/obtain_armor"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:iron_ingot", "count": 6},
+        {"type": "xp", "xp": 50},
+        {"type": "skill_xp", "category": "adventurer", "amount": 20}
+      ]
+    },
+    {
+      "key": "light",
+      "title": "Walls and Watchfires",
+      "desc": [
+        "Raiders love the dark lanes between houses. Take them away.",
+        "",
+        "Gather &e32 torches&r and light the village streets and walls. Lit ground also stops monsters spawning inside."
+      ],
+      "icon": "minecraft:torch",
+      "x": 6,
+      "y": -1.5,
+      "deps": ["tools"],
+      "tasks": [
+        {"type": "item", "item": "minecraft:torch", "count": 32}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:lantern", "count": 4},
+        {"type": "xp", "xp": 40},
+        {"type": "skill_xp", "category": "adventurer", "amount": 15}
+      ]
+    },
+    {
+      "key": "guards",
+      "title": "Hire Spears",
+      "desc": [
+        "A raid is only a raid while villagers live. Give them spears and they will stand with you.",
+        "",
+        "Recruit a &eGuard&r (Guard Villagers): sneak and right-click an unemployed villager while holding a sword or crossbow. Keep the villagers alive!"
+      ],
+      "icon": "guardvillagers:guard_spawn_egg",
+      "x": 6,
+      "y": 1.5,
+      "deps": ["bed"],
+      "tasks": [
+        {"type": "advancement", "advancement": "guardvillagers:adventure/recruit_guard"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:iron_sword"},
+        {"type": "xp", "xp": 50},
+        {"type": "skill_xp", "category": "adventurer", "amount": 25}
+      ]
+    },
+    {
+      "key": "golem",
+      "title": "The Iron Warden",
+      "desc": [
+        "Villagers tell of a guardian of iron who never sleeps.",
+        "",
+        "Optional: build an Iron Golem (4 iron blocks in a T, carved pumpkin on top)."
+      ],
+      "icon": "minecraft:carved_pumpkin",
+      "x": 7.5,
+      "y": 3,
+      "deps": ["guards"],
+      "optional": true,
+      "tasks": [
+        {"type": "advancement", "advancement": "minecraft:adventure/summon_iron_golem"}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:poppy"},
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "adventurer", "amount": 25}
+      ]
+    },
+    {
+      "key": "scout",
+      "title": "Scout the Camp",
+      "desc": [
+        "Know your enemy. Their patrols already sniff along the ridge.",
+        "",
+        "Find the pillager camp on the ridge (150-250 blocks from the village) and thin out its patrols: kill &e5 pillagers&r. Bring a friend."
+      ],
+      "icon": "minecraft:spyglass",
+      "x": 7.5,
+      "y": -1.5,
+      "deps": ["armor"],
+      "tasks": [
+        {"type": "kill", "entity": "minecraft:pillager", "count": 5}
+      ],
+      "rewards": [
+        {"type": "item", "item": "minecraft:arrow", "count": 16},
+        {"type": "item", "item": "minecraft:spyglass"},
+        {"type": "xp", "xp": 60},
+        {"type": "skill_xp", "category": "adventurer", "amount": 30}
+      ]
+    },
+    {
+      "key": "raid",
+      "title": "Day Seven",
+      "subtitle": "The Warband marches",
+      "desc": [
+        "The horn sounds three times. Torches on the ridge. They are coming.",
+        "",
+        "When the countdown ends the raid hits the village. Survive every wave &oas a party&r and earn &eHero of the Village&r. Villagers must be alive for the raid to count."
+      ],
+      "icon": "minecraft:bell",
+      "x": 9,
+      "y": 0,
+      "shape": "hexagon",
+      "size": 1.75,
+      "deps": ["armor", "light", "guards"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_raid_won", "optional": true},
+        {"type": "advancement", "advancement": "minecraft:adventure/hero_of_the_village", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "item", "item": "minecraft:emerald", "count": 8},
+        {"type": "xp", "xp": 150},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "skill_xp", "category": "adventurer", "amount": 100}
+      ]
+    },
+    {
+      "key": "warlord",
+      "title": "Head of the Snake",
+      "subtitle": "Warlord Vex",
+      "desc": [
+        "The Warband answers to one man: &cWarlord Vex&r, a hulking pillager captain with a boss bar of his own.",
+        "",
+        "Storm the camp (or catch him in the raid) and kill him. Anyone in your party within 64 blocks gets the credit."
+      ],
+      "icon": "minecraft:crossbow",
+      "x": 10.75,
+      "y": -1.75,
+      "shape": "hexagon",
+      "size": 1.5,
+      "deps": ["scout"],
+      "tasks": [
+        {"type": "kill", "entity": "minecraft:pillager", "custom_name": "Warlord Vex", "optional": true},
+        {"type": "stage", "stage": "gl_warlord_slain", "optional": true}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "item", "item": "minecraft:golden_apple"},
+        {"type": "xp", "xp": 150},
+        {"type": "xp_levels", "levels": 3},
+        {"type": "skill_xp", "category": "adventurer", "amount": 100}
+      ]
+    },
+    {
+      "key": "crash",
+      "title": "Fire in the Sky",
+      "desc": [
+        "That night a green star falls screaming over the hills and the ground shakes.",
+        "",
+        "Follow the smoke to the crashed &aLantern ship&r and reach the wreck."
+      ],
+      "icon": "minecraft:fire_charge",
+      "x": 12.5,
+      "y": 0,
+      "shape": "diamond",
+      "size": 1.5,
+      "deps": ["raid", "warlord"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_crash_seen"}
+      ],
+      "rewards": [
+        {"type": "xp", "xp": 80},
+        {"type": "skill_xp", "category": "adventurer", "amount": 40}
+      ]
+    },
+    {
+      "key": "lantern",
+      "title": "The Last Words",
+      "desc": [
+        "In the wreck lies a dying man in green light. 'The dark between the stars... it is coming. Seven lights...'",
+        "",
+        "Kneel by the dying &aGreen Lantern&r and listen to him until he is done. His ring flies off to find someone worthy. &oNot you. Not yet.&r"
+      ],
+      "icon": "createlanterns:power_battery",
+      "x": 14.25,
+      "y": 0,
+      "shape": "diamond",
+      "size": 1.5,
+      "deps": ["crash"],
+      "tasks": [
+        {"type": "stage", "stage": "gl_lantern_heard"}
+      ],
+      "rewards": [
+        {"type": "command", "command": "/gl lore {p} crash"},
+        {"type": "xp", "xp": 100},
+        {"type": "skill_xp", "category": "adventurer", "amount": 50}
+      ]
+    },
+    {
+      "key": "finale",
+      "title": "The Book of Oa",
+      "subtitle": "Act I opens",
+      "desc": [
+        "The Lantern's words burn behind your eyes: Oa, the Guardians, the seven lights of the spectrum.",
+        "",
+        "Read the lore he left you, then turn to &6Act I: Proving Ground&r. The road to a ring starts there."
+      ],
+      "icon": "createlanterns:green_dust",
+      "x": 16.25,
+      "y": 0,
+      "shape": "gear",
+      "size": 2,
+      "deps": ["lantern"],
+      "tasks": [
+        {"type": "checkmark"}
+      ],
+      "rewards": [
+        {"type": "command", "command": "/gl lore {p} oa"},
+        {"type": "loot", "table": "greenlanterns:rewards/tier_1"},
+        {"type": "xp", "xp": 150},
+        {"type": "xp_levels", "levels": 2},
+        {"type": "skill_xp", "category": "adventurer", "amount": 75}
+      ]
+    }
+  ]
+}

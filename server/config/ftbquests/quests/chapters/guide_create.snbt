@@ -1,0 +1,485 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "guide_create"
+	group: "4FA3695F5F82A1E1"
+	icon: {
+		id: "create:cogwheel"
+	}
+	id: "3F4F394AF93D61A8"
+	images: [ ]
+	order_index: 11
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "create:goggles"
+			}
+			id: "033EE0A50F3431FD"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					id: "2D31C62FD6530669"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "361D74813ADEDA7F"
+					type: "xp"
+					xp: 50
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "27741CDA2FD28013"
+					item: { count: 1, id: "create:wrench" }
+					type: "item"
+				}
+				{
+					id: "45953A3A941FC14D"
+					item: { count: 1, id: "create:goggles" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "create:water_wheel"
+			}
+			id: "41308D6BDB42C63C"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "043D3159E14B806D"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "create:water_wheel"
+				criterion: ""
+				id: "77B620F51C98948A"
+				type: "advancement"
+			}]
+			x: 2.5d
+			y: -2.0d
+		}
+		{
+			icon: {
+				id: "create:millstone"
+			}
+			id: "15158BB27E3F711A"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "2A69BF16CD62F495"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "create:millstone"
+				criterion: ""
+				id: "305D2BEF5EC8BEEA"
+				type: "advancement"
+			}]
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "create:crushing_wheel"
+			}
+			id: "16285CFDC0D796D1"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "380807DDDBE5ADD1"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "create:crushing_wheel"
+				criterion: ""
+				id: "396546E934678CD0"
+				type: "advancement"
+			}]
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["16285CFDC0D796D1"]
+			icon: {
+				id: "create:encased_fan"
+			}
+			id: "606B0C04EF5CCA79"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "4FCDD10589276FD8"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "create:fan_processing"
+				criterion: ""
+				id: "6433C08A27950039"
+				type: "advancement"
+			}]
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "create:mechanical_press"
+			}
+			id: "50FAF5FED37370D5"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "0FFB7B254C9A8B0E"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "create:mechanical_press"
+				criterion: ""
+				id: "736F26E221C0CD71"
+				type: "advancement"
+			}]
+			x: 2.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["50FAF5FED37370D5"]
+			icon: {
+				id: "create:mechanical_mixer"
+			}
+			id: "6433E7CC1DF22252"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "6A9C578530F65B49"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "create:mechanical_mixer"
+				criterion: ""
+				id: "7C27D77E2F1D21D3"
+				type: "advancement"
+			}]
+			x: 5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6433E7CC1DF22252"]
+			icon: {
+				id: "create:empty_blaze_burner"
+			}
+			id: "35DCA83A9AAB7427"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "3AD98BEB7BC7EBF5"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "create:burner"
+				criterion: ""
+				id: "444C217322D76808"
+				type: "advancement"
+			}]
+			x: 7.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["35DCA83A9AAB7427"]
+			icon: {
+				id: "create:brass_ingot"
+			}
+			id: "0674181C1345655C"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "0847EEE7970BBC02"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "create:brass"
+				criterion: ""
+				id: "6CC0B48FF3095C81"
+				type: "advancement"
+			}]
+			x: 10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0674181C1345655C"
+				"52D9666D48DB1EA5"
+			]
+			dependency_requirement: "one_completed"
+			icon: {
+				id: "create:precision_mechanism"
+			}
+			id: "0702DBD55C4B097E"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "05ED5209E517516D"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "create:precision_mechanism"
+				criterion: ""
+				id: "4076A7F31D55EE3E"
+				type: "advancement"
+			}]
+			x: 12.5d
+			y: 2.0d
+		}
+		{
+			icon: {
+				id: "create:belt_connector"
+			}
+			id: "6AA788311BB5CFD6"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "02175F9FB530A222"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "create:belt"
+				criterion: ""
+				id: "05601FF0FD181F8D"
+				type: "advancement"
+			}]
+			x: 2.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["6AA788311BB5CFD6"]
+			icon: {
+				id: "create:mechanical_arm"
+			}
+			id: "52D9666D48DB1EA5"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "7D6F35C4C4276F96"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "create:mechanical_arm"
+				criterion: ""
+				id: "3D63C251D6956A48"
+				type: "advancement"
+			}]
+			x: 5.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"35DCA83A9AAB7427"
+				"41308D6BDB42C63C"
+			]
+			icon: {
+				id: "create:steam_engine"
+			}
+			id: "2CF2DFB8C99B8834"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "46B37E951E3F7B73"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "create:steam_engine"
+				criterion: ""
+				id: "58E0512BB6A9E361"
+				type: "advancement"
+			}]
+			x: 10.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"52D9666D48DB1EA5"
+				"0674181C1345655C"
+			]
+			icon: {
+				id: "create:track_station"
+			}
+			id: "323E7F57F56CDB32"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "324431F2AC4D3322"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 100"
+					id: "790A6E1E528248D8"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [{
+				advancement: "create:train"
+				criterion: ""
+				id: "6A2DBED16A5338C2"
+				type: "advancement"
+			}]
+			x: 10.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["50FAF5FED37370D5"]
+			icon: {
+				id: "createaddition:alternator"
+			}
+			id: "43C89A687C750D05"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "01C4303A9CD892A3"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "210A479FE82B4A09"
+				item: { count: 1, id: "createaddition:alternator" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 6.0d
+		}
+		{
+			icon: {
+				id: "createaddition:copper_spool"
+			}
+			id: "5412430C2EFAA7FF"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "21113AB109A77A8E"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [
+				{
+					id: "3CC31CE4D494E31D"
+					item: { count: 1, id: "createaddition:copper_spool" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "4A0CFCCB915482DD"
+					item: { count: 1, id: "createaddition:connector" }
+					type: "item"
+				}
+			]
+			x: 7.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5412430C2EFAA7FF"]
+			icon: {
+				id: "createaddition:modular_accumulator"
+			}
+			id: "3171F9F01152DBDE"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "0807DBF3AFC28F82"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "68BAA049D86FA413"
+				item: { count: 1, id: "createaddition:modular_accumulator" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"3171F9F01152DBDE"
+				"0674181C1345655C"
+			]
+			icon: {
+				id: "createaddition:electric_motor"
+			}
+			id: "2B05A2BCA2A19EF2"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "0B8F7A6735B5AE96"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "3418B4CFE5E82108"
+				item: { count: 1, id: "createaddition:electric_motor" }
+				type: "item"
+			}]
+			x: 12.5d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"323E7F57F56CDB32"
+				"2CF2DFB8C99B8834"
+			]
+			icon: {
+				id: "create:brass_casing"
+			}
+			id: "23C9A9ED8FFC18DC"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "28A403880CD5EC7D"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 150"
+					id: "6EFC67D7F08BA9BA"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "0AB82DEA71FC0A04"
+					type: "xp"
+					xp: 300
+				}
+			]
+			shape: "octagon"
+			size: 1.5d
+			tasks: [{
+				id: "6ED0FC03E84647B9"
+				type: "checkmark"
+			}]
+			x: 15.0d
+			y: 2.0d
+		}
+	]
+}
