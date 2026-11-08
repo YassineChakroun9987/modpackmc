@@ -35,6 +35,7 @@ sit directly in `mods/` (it ignores subfolders), so this file is where the categ
 | Just Enough Items (JEI) | 19.69.0.457 (**beta**; latest release is 19.64.0.455) | both | Looking up item IDs, tags and recipes while we edit other mods. Also the players' recipe browser | testing |
 | KubeJS | 2101.7.2-build.381 | both | The main editing tool: recipes, tags, custom items (the ring), event scripts (the willpower counter). Lives in `kubejs/` | testing |
 | LootJS | 1.21.1-3.7.0 | server | KubeJS addon for loot tables and mob/chest drops | testing |
+| Structurify | 2.0.43 | both | **The one tool that controls structure placement**: overlap prevention, global spacing ×1.5, per-structure flatness checks and biome lists. Config: `server/config/structurify.json` | tuned |
 
 ## 2. Main mods
 
@@ -60,6 +61,24 @@ sit directly in `mods/` (it ignores subfolders), so this file is where the categ
 | YUNG's Extras | 5.1.1 | server | Small Overworld structures and decorations | YUNG's API | — | testing |
 | YUNG's Bridges | 5.1.1 | server | Bridges over rivers | YUNG's API | — | testing |
 
+### Worldgen: dungeons, ruins and exploration (added 2026-11-09)
+Every structure here picks biomes by **tag** (D&T: 90 of 97), so they all reach Terralith, Nullscape and JNE biomes. `tools/structinfo.py` found **0 file conflicts** between any two mods.
+
+| Mod | Version | Side | Role in the pack | Depends on | Tweaks made | Status |
+|---|---|---|---|---|---|---|
+| Dungeons and Taverns | v4.4.4 | both | 97 structures: taverns, crypts, shrine towers (combat trials, tiers 1–5), illager manors, witch villas, Nether Keep, quest-trader maps | — | 2 orphaned advancements repaired | tuned |
+| When Dungeons Arise | 2.1.68 | server | 40 huge dungeons: Heavenly Rider sky fortresses, Mechanical Nest, Foundry, Coliseum, Plague Asylum, Shiraz Palace, Thornborn Towers | — | 2 orphaned advancements repaired; flatness check on 5 surface builds | tuned |
+| WDA: Seven Seas | 1.0.4 | server | Pirate and naval ships: Victory Frigate, Unicorn Galleon, Corsair Corvette, Pirate Junk, Small Yacht | — | — | testing |
+| The Lost Castle | 2.1.0 | server | One huge, rare castle dungeon (≈9,500 blocks from spawn on our seed) | — | — | testing |
+| Philips Ruins | 1.21.1-2.0 | both | 17 ruins with loot: ancient crypts, dungeons, towers | — | — (known harmless error, see notes) | testing |
+| Grim Kingdoms: Lost Structures & Ruins (Vanilla Ed.) | 2.0.0 | both | 65 lost-kingdom ruins, watchtowers, camps | — | — | testing |
+| Ember's Castles and Keeps | 1.0.9.1 | server | 8 towers and keeps, including an undead castle and pillager towers | — | — | testing |
+| Towns and Towers | 1.13.11 | both | Biome-specific villages and pillager outposts (24 outpost + 15 village variants) | Cristel Lib | Cristel's auto-config for *other* mods turned off | tuned |
+| Sky Villages | 1.0.6 | server | Floating villages high above the land | Architectury | — | testing |
+| Ember's Floating Islands | 1.5.3 | server | 17 sky islands (amethyst, cemetery, cherry shrine, camps) | — | — | testing |
+| Sky Whale Ship | 1.0.3 | both | Giant flying whale ships with an arena | — | — | testing |
+| Eternal Nether | v21.1.3 | both | Nether exploration: Citadel, Piglin Manor, Catacombs (+ mobs) | Puzzles Lib | — | testing |
+
 ## 3. Dependencies
 
 When a mod is dropped, check this table for libraries that become `orphaned`.
@@ -76,6 +95,12 @@ When a mod is dropped, check this table for libraries that become `orphaned`.
 | YUNG's API | 5.1.9 | both | All YUNG's mods, Traveler's Titles | No | needed |
 | Lodestone | 1.8.2 | both | Jaden's Nether Expansion | No | needed |
 | Elysium API | 2.0.1 | both | Jaden's Nether Expansion | No | needed |
+| YetAnotherConfigLib (YACL) | 3.8.2 | both | Structurify | No | needed |
+| Resourceful Config | 3.0.11 | server | Structure Layout Optimizer | No | needed |
+| Cristel Lib | 3.1.7 | both | Towns and Towers. **Auto-config disabled** (`config/cristellib/auto_config_settings.json5`) so it doesn't fight Structurify | No | needed |
+| Cloth Config API | 15.0.140 | both | Cristel Lib | No | needed |
+| Architectury API | 13.0.11 | server | Sky Villages | No | needed |
+| Puzzles Lib | v21.1.66 | both | Eternal Nether | No | needed |
 
 ## 4. Our own mods
 
@@ -96,6 +121,7 @@ When a mod is dropped, check this table for libraries that become `orphaned`.
 | Sodium | 0.8.13 | client | Replaces the renderer: much higher FPS | none | testing |
 | ImmediatelyFast | 1.6.15 | client | Faster HUD, text and entity rendering | none | testing |
 | Entity Culling | 1.11.3 | client | Skips drawing mobs and block entities you can't see | none | testing |
+| Structure Layout Optimizer | 1.0.12 | server | Faster generation of big jigsaw structures (WDA, D&T, T&T) | Resourceful Config | testing |
 
 ### Gameplay
 | Mod | Version | Side | What it improves | Depends on | Status |
@@ -106,6 +132,7 @@ When a mod is dropped, check this table for libraries that become `orphaned`.
 | Controlling | 19.0.5 | client | Searchable keybind menu that shows conflicts. Needed once dozens of mods add keys | Searchables | testing |
 | Mouse Tweaks | 2.26.1 | client | Drag and scroll-wheel item moving in inventories | none | testing |
 | Traveler's Titles | 5.1.3 | client | RPG-style title on screen when you enter a new biome or dimension | YUNG's API | testing |
+| Lootr | 1.11.38 | both | **Every player gets their own loot** from each structure chest, so friends don't loot-steal | none | testing |
 
 ---
 
@@ -115,8 +142,8 @@ When a mod is dropped, check this table for libraries that become `orphaned`.
 | AllTheLeaks | QoL · performance | CurseForge-only. We can't checksum-verify CurseForge files without an API key, so add it by hand once the pack is big |
 | Configured + Catalogue | QoL | CurseForge-only (same) |
 | ProbeJS | Editing (dev machine only) | When we start writing KubeJS scripts (autocompletion in VS Code) |
-| Structurify (+ YACL) | Editing | When structure mods beyond YUNG's arrive (density, overlap, biome lists, floating-dungeon fix) |
-| Structure Layout Optimizer | QoL · performance | With When Dungeons Arise or other big jigsaw structures |
+| Castle in the Sky · Ancient Remnants · Illager Structures | Main · structures | CurseForge-only (we have the chinatown jars, unverified). Castle in the Sky is in the story (Violet). Illager Structures uses vanilla biome IDs only, so it needs a Structurify biome list first |
+| *Considered and left out (2026-11-09)* | | Moog's Voyager Structures (130 mostly tiny decorations that clutter Terralith) · Trek (beta; overlaps D&T) · Repurposed Structures (vanilla variants that overlap YUNG's) · Awesome Dungeon ×3 (vanilla biome IDs only) · Explorify (vanilla-style) |
 | YUNG's Better Caves | Main · worldgen | **Held back on purpose.** It rewrites cave generation, which could limit cave mods we add later (e.g. Alex's Caves). Only via a test world |
 | Polymorph | QoL | When two mods' recipes start conflicting |
 | Lithium | QoL · performance | After the magic mods are chosen (needs the Iron's Spellbooks shield fix) |
@@ -140,7 +167,12 @@ When a mod is dropped, check this table for libraries that become `orphaned`.
 - `Redundant @Unique on injector method netherexp$…` and `Not all defined tags … present: netherexp:…`: Jaden's Nether Expansion dev notices and empty tag definitions.
 - `yungsapi: block minecraft:iron_ore added to BlockStateRandomizer exceeds max probabiltiy of 1`: a quirk in YUNG's own Better Strongholds data.
 - `Ignoring unknown attribute 'forge:entity_gravity'`: mobs saved inside structure files with old Forge attribute names; the game skips them.
-- Not whitelisted: `Block-attached entity at invalid position` (ERROR). It appeared once, on a random test seed: a structure's item frame had no wall. It's harmless, but ERRORs are never hidden. If it shows up on our seed, find the structure.
+- `Error loading class: com/simibubi/create/…`: Lootr's optional Create compatibility. It goes away once Create is installed.
+- `[spark] Timed out waiting for world statistics`: spark's stats timing out while the server is busy generating a world.
+- **Known ERROR, explained:** `Block-attached entity at invalid position`.
+  - **Cause:** a structure template hangs a painting or item frame where no wall survived, so the game drops it.
+  - **Source:** traced with `tools/whatstructure.py` + `/locate` to **`philipsruins:ancient_dungeon`** (12 blocks from the error spot, 6× at spawn generation on our seed). Seen once from YUNG's on another seed.
+  - **How it's reported:** `boottime.py` still **counts and shows** it as "known & explained". It's never hidden, and it doesn't fail a boot test.
 
 ### 1. Editing
 
@@ -201,6 +233,38 @@ When a mod is dropped, check this table for libraries that become `orphaned`.
 #### YUNG's structure mods
 - All are **server-only**. They aren't in the client instance and players don't need them.
 - Traveler's Titles is the only client-side YUNG's mod.
+
+#### Structure placement: Structurify (`server/config/structurify.json`)
+Structurify is the **only** thing that controls placement. Cristel Lib's auto-config is switched off.
+
+| Setting | Value | Why |
+|---|---|---|
+| `prevent_structure_overlap` | on | No structure may cut into another |
+| Global spacing ×1.5 | on | ~15 structure mods at their default density would crowd every hill |
+| `minecraft:villages` | exempt (default spacing) | The prologue needs a village at spawn; the Blue class lives in villages |
+| `betterstrongholds:stronghold` | exempt | ×1.5 pushed the stronghold ring from ~2,400 to ~4,450 blocks; exempt brings it back to ~2,100 |
+| Flatness check (AUTO) | `dungeons_arise:` illager_windmill, wishing_well, giant_mushroom, jungle_tree_house, shiraz_palace | Surface builds with no terrain adaptation. Instead of floating on Terralith slopes, they only spawn on flat ground |
+
+**Left alone on purpose:**
+- WDA's fixed-height structures (Heavenly sky fortresses at y200, Mechanical Nest, Thornborn and Bandit Towers) are meant to float.
+- WDA's deliberately sunk ones (Infested Temple, Kisegi Sanctuary at −32) have their own foundations.
+
+**Tuning:** fly around in spectator mode. If something still floats or the land feels crowded or empty, add an entry here. Structurify's in-game screen (Mods → Structurify) edits the same file.
+
+#### Dungeons and Taverns: repaired advancements
+- `minecraft:wander_add_map` and `minecraft:give_quest_trader_trade` name a parent `minecraft:root` that doesn't exist, so the game dropped them.
+- They're hidden triggers that make **wandering traders sell D&T structure maps** and enable **quest-trader trades**.
+- `server/kubejs/data/minecraft/advancement/` ships them without the bad parent. They have no `display`, so they stay invisible.
+
+#### When Dungeons Arise: repaired advancements
+- *Guns and Roses* (`find_thornborn_towers`) and *Fishing In The Dark* (`find_fishing_hut`) point at the removed `find_small_prairie_house`.
+- `server/kubejs/data/dungeons_arise/advancement/` re-attaches them to `dungeons_arise:wda_root`.
+
+#### Smaller notes
+- D&T adds *extra* versions of structures that YUNG's also redesigns (Nether Keep, Witch Villa, Trident Trial Monument). They're additions, not replacements, so both coexist.
+  - Its badlands miner outpost brings back the vanilla mesa mineshaft next to YUNG's. That's a minor duplicate; disable `minecraft:mineshaft_mesa` in Structurify if it bothers us.
+- Towns and Towers' `exclusives/*` (culture-styled villages and outposts) aren't placed by default. Its normal biome villages and outposts are.
+- The world was **regenerated 2026-11-09** with all structure mods. The terrain-only world (unplayed) is in `server/backups/`.
 
 ### 3. Dependencies
 *Only note a library here if it needs a config change or has a version conflict.*
@@ -268,3 +332,20 @@ When a mod is dropped, check this table for libraries that become `orphaned`.
 | 2026-11-08 | + Better End Island | 30 | 23.6s | 1 (random-seed item frame; gone on our seed) |
 | 2026-11-08 | + Extras, Bridges (fixed seed from here) | 32 | 20.9s | 0 |
 | 2026-11-08 | **New real world** (seed `greenlanterns`), all of the above | 32 | 19.9s | 0 |
+| 2026-11-09 | + Structurify, YACL | 34 | 19.9s | 0 |
+| 2026-11-09 | + Structure Layout Optimizer, Resourceful Config | 36 | 19.9s | 0 |
+| 2026-11-09 | + Lootr | 37 | 20.2s | 0 |
+| 2026-11-09 | + Dungeons and Taverns | 38 | 21.8s → 21.1s | 1 → 0 (advancements repaired) |
+| 2026-11-09 | + When Dungeons Arise | 39 | 25.3s → 25.9s | 1 → 0 (advancements repaired) |
+| 2026-11-09 | + WDA Seven Seas | 40 | 25.7s | 0 |
+| 2026-11-09 | + The Lost Castle | 41 | 26.4s | 0 |
+| 2026-11-09 | + Philips Ruins | 42 | 26.8s | 0 |
+| 2026-11-09 | + Grim Kingdoms | 43 | 25.8s | 0 |
+| 2026-11-09 | + Ember's Castles and Keeps | 44 | 26.4s | 0 |
+| 2026-11-09 | + Towns and Towers, Cristel Lib, Cloth Config | 47 | 27.8s | 0 |
+| 2026-11-09 | + Sky Villages, Architectury | 49 | 27.8s | 0 |
+| 2026-11-09 | + Ember's Floating Islands | 50 | 25.7s | 0 |
+| 2026-11-09 | + Sky Whale Ship | 51 | 26.6s | 0 |
+| 2026-11-09 | + Eternal Nether, Puzzles Lib | 53 | 27.5s | 0 |
+| 2026-11-09 | Structurify config applied (overlap, ×1.5, flatness, exemptions) | 53 | 22.3–23.5s | 0 (+6 known) |
+| 2026-11-09 | **New real world** with all structures | 53 | 58.9s (first generation) | 0 (+6 known), 20 TPS |

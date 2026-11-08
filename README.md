@@ -36,6 +36,8 @@ GREENLANTERS MODPACK/
     ├── boottest.py    boot the server headless → report → clean stop (exit 1 on errors)
     ├── boottime.py    report on the last boot: time, mods, errors, new warnings
     ├── checkdeps.py   missing or mismatched dependencies in a mods set
+    ├── structinfo.py  structures per jar: biome tags vs IDs, terrain adaptation, vanilla overrides, file conflicts
+    ├── whatstructure.py  which structures are at block x,z (reads saved region files)
     ├── ping.py        is the server up?
     └── rcon.py        send a console command, e.g. python -I tools/rcon.py "list"
 ```
@@ -80,6 +82,7 @@ Memory: `server\user_jvm_args.txt` sets 2G–6G. Raise `-Xmx` when the big conte
    - Run `python -I tools/boottest.py` (with the server stopped).
      - For worldgen mods use `--fresh`, so each test generates a brand-new throwaway world.
      - Add `--cmd "locate structure <id>"` to prove a structure actually generates.
+   - For structure mods, first run `python -I tools/structinfo.py server/mods <new jar>`. It shows whether the mod uses biome tags and whether it overrides files another mod also ships.
    - Join with the client.
 5. Tweak the configs in `server\config\` (and `server\world\serverconfig\` for per-world configs).
 6. Add or update the row in `MODLIST.md`.
