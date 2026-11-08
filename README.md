@@ -26,7 +26,9 @@ GREENLANTERS MODPACK/
 │   ├── mods/          mods that run on both sides (the client needs these too)
 │   ├── config/        per-mod server/common configs (generated on first run)
 │   ├── kubejs/        KubeJS scripts and data (startup_scripts must match the client's)
-│   ├── world/         the save
+│   │   └── data/      our datapack fixes (lowercase file names only!), e.g. the mineshaft tag patch
+│   ├── world/         the save (seed "greenlanterns"; still a dev world, see MODLIST › Main notes)
+│   ├── backups/       archived worlds (git-ignored)
 │   └── server.properties
 └── tools/
     ├── modrinth.py    info / get / identify mods on Modrinth (downloads are sha512-verified)
@@ -75,6 +77,8 @@ Memory: `server\user_jvm_args.txt` sets 2G–6G. Raise `-Xmx` when the big conte
 4. Test it:
    - Run `python -I tools/checkdeps.py` on both sets.
    - Run `python -I tools/boottest.py` (with the server stopped).
+     - For worldgen mods use `--fresh`, so each test generates a brand-new throwaway world.
+     - Add `--cmd "locate structure <id>"` to prove a structure actually generates.
    - Join with the client.
 5. Tweak the configs in `server\config\` (and `server\world\serverconfig\` for per-world configs).
 6. Add or update the row in `MODLIST.md`.
