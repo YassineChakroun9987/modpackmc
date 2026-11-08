@@ -329,7 +329,7 @@ A boss bar at the top of the screen reads: **"The Warband marches in 7 days"**.
 |---|---|
 | Early | *First Frost* · *Cold Hands* (10 spell kills in snow) · *Skyward* (reach a floating island) · *Ice Spider Den* (Iron's) |
 | Mid | *Cryomancer* · *The White Beast* (Frostmaw) · *The Lich of the North* (Night Lich) · *Skylands* (visit 3 sky islands) |
-| Late | *Prison of Curses* (Maledictus) · *Ice Brood* (raise an ice dragon) · *Whale Rider* (clear a Sky Whale Ship) |
+| Late | *Prison of Curses* (Maledictus) · *Ice Brood* (raise an ice dragon) · *Whale Rider* (clear a Sky Whale Ship) · *Laputa* (craft a levitation stone and conquer the **Castle in the Sky**) |
 | **Ring trial** | ***Heart of Winter***: fly your ice dragon to the End's **Crystal Peaks** and take the frozen heart from its guardians |
 
 **Ring powers:** Hope → **Frost Ward** (heals you and allies) · Sanctuary → **Glacial Sanctum** (allies inside take half damage). Lit passive: **charges nearby Green rings**, a Blue + Green synergy.

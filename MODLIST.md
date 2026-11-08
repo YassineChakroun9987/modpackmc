@@ -78,6 +78,7 @@ Every structure here picks biomes by **tag** (D&T: 90 of 97), so they all reach 
 | Sky Villages | 1.0.6 | server | Floating villages high above the land | Architectury | — | testing |
 | Ember's Floating Islands | 1.5.3 | server | 17 sky islands (amethyst, cemetery, cherry shrine, camps) | — | — | testing |
 | Sky Whale Ship | 1.0.3 | both | Giant flying whale ships with an arena | — | — | testing |
+| Castle in the Sky | 1.21.1.1 | both | One floating Laputa-style castle dungeon with coloured keys, doors and a Laputa core. Found with the **levitation stone** (craftable, or from a master Cartographer). ≥10k blocks from spawn (14,484 on our seed). CurseForge-only, **verified**: identical SHA-1 to CurseForge's CDN file 8200620 | — | levitation stone recipe fixed; exempt from the ×1.5 spacing | tuned |
 | Eternal Nether | v21.1.3 | both | Nether exploration: Citadel, Piglin Manor, Catacombs (+ mobs) | Puzzles Lib | — | testing |
 
 ## 3. Dependencies
@@ -143,7 +144,7 @@ When a mod is dropped, check this table for libraries that become `orphaned`.
 | AllTheLeaks | QoL · performance | CurseForge-only. We can't checksum-verify CurseForge files without an API key, so add it by hand once the pack is big |
 | Configured + Catalogue | QoL | CurseForge-only (same) |
 | ProbeJS | Editing (dev machine only) | When we start writing KubeJS scripts (autocompletion in VS Code) |
-| Castle in the Sky · Ancient Remnants · Illager Structures | Main · structures | CurseForge-only (we have the chinatown jars, unverified). Castle in the Sky is in the story (Violet). Illager Structures uses vanilla biome IDs only, so it needs a Structurify biome list first |
+| Ancient Remnants · Illager Structures | Main · structures | CurseForge-only (we have the chinatown jars; can be verified against CurseForge's CDN like Castle in the Sky). Illager Structures uses vanilla biome IDs only, so it needs a Structurify biome list first |
 | *Considered and left out (2026-11-09)* | | Moog's Voyager Structures (130 mostly tiny decorations that clutter Terralith) · Trek (beta; overlaps D&T) · Repurposed Structures (vanilla variants that overlap YUNG's) · Awesome Dungeon ×3 (vanilla biome IDs only) · Explorify (vanilla-style) |
 | YUNG's Better Caves | Main · worldgen | **Held back on purpose.** It rewrites cave generation, which could limit cave mods we add later (e.g. Alex's Caves). Only via a test world |
 | Polymorph | QoL | When two mods' recipes start conflicting |
@@ -244,6 +245,7 @@ Structurify is the **only** thing that controls placement. Cristel Lib's auto-co
 | Global spacing ×1.5 | on | ~15 structure mods at their default density would crowd every hill |
 | `minecraft:villages` | exempt (default spacing) | The prologue needs a village at spawn; the Blue class lives in villages |
 | `betterstrongholds:stronghold` | exempt | ×1.5 pushed the stronghold ring from ~2,400 to ~4,450 blocks; exempt brings it back to ~2,100 |
+| `castle_in_the_sky:castle_in_the_sky` | exempt | A unique landmark, already rare by design (500/300 chunks) |
 | Flatness check (AUTO) | `dungeons_arise:` illager_windmill, wishing_well, giant_mushroom, jungle_tree_house, shiraz_palace | Surface builds with no terrain adaptation. Instead of floating on Terralith slopes, they only spawn on flat ground |
 | **Disabled** | `minecraft:village_plains`, `_desert`, `_savanna`, `_snowy`, `_taiga` | Owner wants no classic villages. CTOV only *outweighs* them and has no "vanilla off" switch. `/locate` now answers "structure is currently disabled" |
 
@@ -272,6 +274,13 @@ Structurify is the **only** thing that controls placement. Cristel Lib's auto-co
   - They use `minecraft:set_nbt`, which was removed in 1.20.5, so each logged an ERROR. Nothing in CTOV references them.
   - Delete the folder if we ever add Wares and CTOV updates them.
 - D&T's extra pieces for vanilla taiga, jungle and swamp villages are unused now that vanilla villages are off. They're harmless.
+
+#### Castle in the Sky
+- **How we verified it** (CurseForge-only): the cfwidget API gave the official file ID (8200620). Downloading that from `mediafilez.forgecdn.net` gave the same SHA-1 as the chinatown jar (`5cb283e4…`). Use the same method for other CurseForge-only jars.
+- **Recipe fix:** the jar's 1.21.1 build ships the levitation stone recipe in the **1.21.2+ format** (plain-string ingredients), which 1.21.1 can't read.
+  - `server/kubejs/data/castle_in_the_sky/recipe/levitation_stone.json` is the same recipe in 1.21.1 format: elytra in the middle, netherite ingots and phantom membranes around it.
+  - The recipe count went from 1,624 to 1,625, confirming it loads.
+- **Story:** it's a late-game sky dungeon for the 🔵 Blue (ice battlemage, sky) path. The recipe needs an elytra and netherite, so it naturally comes after the End.
 
 #### Smaller notes
 - D&T adds *extra* versions of structures that YUNG's also redesigns (Nether Keep, Witch Villa, Trident Trial Monument). They're additions, not replacements, so both coexist.
@@ -365,3 +374,4 @@ Structurify is the **only** thing that controls placement. Cristel Lib's auto-co
 | 2026-11-09 | + CTOV | 54 | 23.3s | 7 → 0 (dead Wares loot disabled) (+6 known) |
 | 2026-11-09 | Vanilla villages disabled (Structurify) | 54 | 23.4s | 0 (+6 known) |
 | 2026-11-09 | **New real world** with CTOV villages (unplayed pre-CTOV world archived) | 54 | 23.5s | 0 (+6 known), 20 TPS |
+| 2026-11-09 | + Castle in the Sky | 55 | 22.8s → 22.9s | 1 → 0 (recipe fixed) (+6 known) |
