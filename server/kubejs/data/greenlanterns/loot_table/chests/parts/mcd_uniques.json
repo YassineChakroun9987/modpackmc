@@ -1,0 +1,74 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraftdungeonsv1:bone_cudgel_scythe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftdungeonsv1:broad_sword_claymore"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftdungeonsv1:cursed_axe_double_axe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftdungeonsv1:encrusted_anchor"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftdungeonsv1:fangs_of_frost_dagger"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftdungeonsv1:fighters_binding_fist"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftdungeonsv1:firebrand_axe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftdungeonsv1:great_hammer_of_gravity"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftdungeonsv1:nameless_blade_cutlass"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftdungeonsv1:nightmares_bite_sickle"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftdungeonsv1:spooky_sword"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftdungeonsv1:stormlander_great_hammer"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftdungeonsv1:suns_grace_mace"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftdungeonsv1:battlestaff_growing"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftdungeonsv1:reinforced_diamond_sword"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftdungeonsv1:reinforced_diamond_pickaxe"
+        }
+      ]
+    }
+  ]
+}

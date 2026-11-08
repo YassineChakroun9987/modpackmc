@@ -1,0 +1,190 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:snorkel"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:umbrella"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:villager_hat"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:plastic_drinking_hat"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:flippers"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:cowboy_hat"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:night_vision_goggles"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:digging_claws"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:snowshoes"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:steadfast_spikes"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:kitty_slippers"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:charm_of_sinking"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:onion_ring"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:everlasting_beef"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:golden_hook"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:superstitious_hat"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:lucky_scarf"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:pickaxe_heater"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:rooted_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:strider_shoes"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:obsidian_skull"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:antidote_vessel"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:charm_of_shrinking"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:anglers_hat"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:running_shoes"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:bunny_hoppers"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:aqua_dashers"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:cloud_in_a_bottle"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:feral_claws"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:power_glove"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:fire_gauntlet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:pocket_piston"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:vampiric_glove"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:thorn_pendant"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:flame_pendant"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:shock_pendant"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:panic_necklace"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:cross_necklace"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:scarf_of_invisibility"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:universal_attractor"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:withered_bracelet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:novelty_drinking_hat"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:helium_flamingo"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:warp_drive"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:eternal_steak"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:wandering_magician_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:wandering_magician_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:wandering_magician_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:wandering_magician_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:wizard_hat"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:wizard_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:wizard_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:wizard_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:wizard_boots"
+        }
+      ]
+    }
+  ]
+}

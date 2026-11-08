@@ -1,0 +1,220 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:iron_chakram",
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "type": "minecraft:uniform",
+                "min": 0.55,
+                "max": 0.95
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:iron_claymore",
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "type": "minecraft:uniform",
+                "min": 0.55,
+                "max": 0.95
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:iron_cutlass",
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "type": "minecraft:uniform",
+                "min": 0.55,
+                "max": 0.95
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:iron_glaive",
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "type": "minecraft:uniform",
+                "min": 0.55,
+                "max": 0.95
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:iron_greataxe",
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "type": "minecraft:uniform",
+                "min": 0.55,
+                "max": 0.95
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:iron_greathammer",
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "type": "minecraft:uniform",
+                "min": 0.55,
+                "max": 0.95
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:iron_halberd",
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "type": "minecraft:uniform",
+                "min": 0.55,
+                "max": 0.95
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:iron_katana",
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "type": "minecraft:uniform",
+                "min": 0.55,
+                "max": 0.95
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:iron_longsword",
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "type": "minecraft:uniform",
+                "min": 0.55,
+                "max": 0.95
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:iron_rapier",
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "type": "minecraft:uniform",
+                "min": 0.55,
+                "max": 0.95
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:iron_sai",
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "type": "minecraft:uniform",
+                "min": 0.55,
+                "max": 0.95
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:iron_scythe",
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "type": "minecraft:uniform",
+                "min": 0.55,
+                "max": 0.95
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:iron_spear",
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "type": "minecraft:uniform",
+                "min": 0.55,
+                "max": 0.95
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:iron_twinblade",
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "type": "minecraft:uniform",
+                "min": 0.55,
+                "max": 0.95
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:iron_warglaive",
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "type": "minecraft:uniform",
+                "min": 0.55,
+                "max": 0.95
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

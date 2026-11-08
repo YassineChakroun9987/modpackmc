@@ -1,0 +1,584 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:scroll",
+          "functions": [
+            {
+              "function": "irons_spellbooks:randomize_spell",
+              "quality": {
+                "min": 0.3,
+                "max": 0.7
+              },
+              "spell_filter": {
+                "school": "irons_spellbooks:fire"
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:scroll",
+          "functions": [
+            {
+              "function": "irons_spellbooks:randomize_spell",
+              "quality": {
+                "min": 0.3,
+                "max": 0.7
+              },
+              "spell_filter": {
+                "school": "irons_spellbooks:blood"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:fire_rune",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:blood_rune",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:fire_upgrade_orb"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:uncommon_ink",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:rare_ink"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "greenlanterns:chests/parts/irons_set_pyromancer"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:iron_greataxe",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "min": 10,
+                "max": 20
+              },
+              "options": [
+                "minecraft:protection",
+                "minecraft:fire_protection",
+                "minecraft:blast_protection",
+                "minecraft:projectile_protection",
+                "minecraft:feather_falling",
+                "minecraft:respiration",
+                "minecraft:aqua_affinity",
+                "minecraft:depth_strider",
+                "minecraft:thorns",
+                "minecraft:sharpness",
+                "minecraft:smite",
+                "minecraft:bane_of_arthropods",
+                "minecraft:knockback",
+                "minecraft:fire_aspect",
+                "minecraft:looting",
+                "minecraft:sweeping_edge",
+                "minecraft:efficiency",
+                "minecraft:silk_touch",
+                "minecraft:unbreaking",
+                "minecraft:fortune",
+                "minecraft:power",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:infinity",
+                "minecraft:luck_of_the_sea",
+                "minecraft:lure",
+                "minecraft:loyalty",
+                "minecraft:impaling",
+                "minecraft:riptide",
+                "minecraft:channeling",
+                "minecraft:multishot",
+                "minecraft:quick_charge",
+                "minecraft:piercing",
+                "minecraft:density",
+                "minecraft:breach",
+                "farmersdelight:backstabbing",
+                "combat_roll:acrobat",
+                "combat_roll:longfooted",
+                "combat_roll:multi_roll",
+                "galosphere:sifting",
+                "galosphere:sustain",
+                "create:capacity",
+                "create:potato_recovery",
+                "kingsandmonsters:barbed",
+                "kingsandmonsters:heavy_throw",
+                "netherexp:recoil",
+                "netherexp:volley",
+                "minecraft:mending",
+                "minecraft:frost_walker",
+                "minecraft:soul_speed",
+                "minecraft:swift_sneak",
+                "minecraft:wind_burst",
+                "galosphere:enfeeble",
+                "galosphere:rupture",
+                "kingsandmonsters:tyrant",
+                "netherexp:counterforce",
+                "netherexp:longshot",
+                "apothic_enchanting:boon_of_the_earth",
+                "apothic_enchanting:chainsaw",
+                "apothic_enchanting:chromatic",
+                "apothic_enchanting:crescendo_of_bolts",
+                "apothic_enchanting:growth_serum",
+                "apothic_enchanting:icy_thorns",
+                "apothic_enchanting:knowledge_of_the_ages",
+                "apothic_enchanting:miners_fervor",
+                "apothic_enchanting:natures_blessing",
+                "apothic_enchanting:rebounding",
+                "apothic_enchanting:reflective_defenses",
+                "apothic_enchanting:scavenger",
+                "apothic_enchanting:shield_bash",
+                "apothic_enchanting:stable_footing",
+                "apothic_enchanting:tempting",
+                "apothic_enchanting:worker_exploitation",
+                "apothic_enchanting:berserkers_fury"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:iron_claymore",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "min": 10,
+                "max": 20
+              },
+              "options": [
+                "minecraft:protection",
+                "minecraft:fire_protection",
+                "minecraft:blast_protection",
+                "minecraft:projectile_protection",
+                "minecraft:feather_falling",
+                "minecraft:respiration",
+                "minecraft:aqua_affinity",
+                "minecraft:depth_strider",
+                "minecraft:thorns",
+                "minecraft:sharpness",
+                "minecraft:smite",
+                "minecraft:bane_of_arthropods",
+                "minecraft:knockback",
+                "minecraft:fire_aspect",
+                "minecraft:looting",
+                "minecraft:sweeping_edge",
+                "minecraft:efficiency",
+                "minecraft:silk_touch",
+                "minecraft:unbreaking",
+                "minecraft:fortune",
+                "minecraft:power",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:infinity",
+                "minecraft:luck_of_the_sea",
+                "minecraft:lure",
+                "minecraft:loyalty",
+                "minecraft:impaling",
+                "minecraft:riptide",
+                "minecraft:channeling",
+                "minecraft:multishot",
+                "minecraft:quick_charge",
+                "minecraft:piercing",
+                "minecraft:density",
+                "minecraft:breach",
+                "farmersdelight:backstabbing",
+                "combat_roll:acrobat",
+                "combat_roll:longfooted",
+                "combat_roll:multi_roll",
+                "galosphere:sifting",
+                "galosphere:sustain",
+                "create:capacity",
+                "create:potato_recovery",
+                "kingsandmonsters:barbed",
+                "kingsandmonsters:heavy_throw",
+                "netherexp:recoil",
+                "netherexp:volley",
+                "minecraft:mending",
+                "minecraft:frost_walker",
+                "minecraft:soul_speed",
+                "minecraft:swift_sneak",
+                "minecraft:wind_burst",
+                "galosphere:enfeeble",
+                "galosphere:rupture",
+                "kingsandmonsters:tyrant",
+                "netherexp:counterforce",
+                "netherexp:longshot",
+                "apothic_enchanting:boon_of_the_earth",
+                "apothic_enchanting:chainsaw",
+                "apothic_enchanting:chromatic",
+                "apothic_enchanting:crescendo_of_bolts",
+                "apothic_enchanting:growth_serum",
+                "apothic_enchanting:icy_thorns",
+                "apothic_enchanting:knowledge_of_the_ages",
+                "apothic_enchanting:miners_fervor",
+                "apothic_enchanting:natures_blessing",
+                "apothic_enchanting:rebounding",
+                "apothic_enchanting:reflective_defenses",
+                "apothic_enchanting:scavenger",
+                "apothic_enchanting:shield_bash",
+                "apothic_enchanting:stable_footing",
+                "apothic_enchanting:tempting",
+                "apothic_enchanting:worker_exploitation",
+                "apothic_enchanting:berserkers_fury"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "magistuarmory:steel_zweihander",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "min": 10,
+                "max": 20
+              },
+              "options": [
+                "minecraft:protection",
+                "minecraft:fire_protection",
+                "minecraft:blast_protection",
+                "minecraft:projectile_protection",
+                "minecraft:feather_falling",
+                "minecraft:respiration",
+                "minecraft:aqua_affinity",
+                "minecraft:depth_strider",
+                "minecraft:thorns",
+                "minecraft:sharpness",
+                "minecraft:smite",
+                "minecraft:bane_of_arthropods",
+                "minecraft:knockback",
+                "minecraft:fire_aspect",
+                "minecraft:looting",
+                "minecraft:sweeping_edge",
+                "minecraft:efficiency",
+                "minecraft:silk_touch",
+                "minecraft:unbreaking",
+                "minecraft:fortune",
+                "minecraft:power",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:infinity",
+                "minecraft:luck_of_the_sea",
+                "minecraft:lure",
+                "minecraft:loyalty",
+                "minecraft:impaling",
+                "minecraft:riptide",
+                "minecraft:channeling",
+                "minecraft:multishot",
+                "minecraft:quick_charge",
+                "minecraft:piercing",
+                "minecraft:density",
+                "minecraft:breach",
+                "farmersdelight:backstabbing",
+                "combat_roll:acrobat",
+                "combat_roll:longfooted",
+                "combat_roll:multi_roll",
+                "galosphere:sifting",
+                "galosphere:sustain",
+                "create:capacity",
+                "create:potato_recovery",
+                "kingsandmonsters:barbed",
+                "kingsandmonsters:heavy_throw",
+                "netherexp:recoil",
+                "netherexp:volley",
+                "minecraft:mending",
+                "minecraft:frost_walker",
+                "minecraft:soul_speed",
+                "minecraft:swift_sneak",
+                "minecraft:wind_burst",
+                "galosphere:enfeeble",
+                "galosphere:rupture",
+                "kingsandmonsters:tyrant",
+                "netherexp:counterforce",
+                "netherexp:longshot",
+                "apothic_enchanting:boon_of_the_earth",
+                "apothic_enchanting:chainsaw",
+                "apothic_enchanting:chromatic",
+                "apothic_enchanting:crescendo_of_bolts",
+                "apothic_enchanting:growth_serum",
+                "apothic_enchanting:icy_thorns",
+                "apothic_enchanting:knowledge_of_the_ages",
+                "apothic_enchanting:miners_fervor",
+                "apothic_enchanting:natures_blessing",
+                "apothic_enchanting:rebounding",
+                "apothic_enchanting:reflective_defenses",
+                "apothic_enchanting:scavenger",
+                "apothic_enchanting:shield_bash",
+                "apothic_enchanting:stable_footing",
+                "apothic_enchanting:tempting",
+                "apothic_enchanting:worker_exploitation",
+                "apothic_enchanting:berserkers_fury"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "magistuarmory:steel_heavymace",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "min": 10,
+                "max": 20
+              },
+              "options": [
+                "minecraft:protection",
+                "minecraft:fire_protection",
+                "minecraft:blast_protection",
+                "minecraft:projectile_protection",
+                "minecraft:feather_falling",
+                "minecraft:respiration",
+                "minecraft:aqua_affinity",
+                "minecraft:depth_strider",
+                "minecraft:thorns",
+                "minecraft:sharpness",
+                "minecraft:smite",
+                "minecraft:bane_of_arthropods",
+                "minecraft:knockback",
+                "minecraft:fire_aspect",
+                "minecraft:looting",
+                "minecraft:sweeping_edge",
+                "minecraft:efficiency",
+                "minecraft:silk_touch",
+                "minecraft:unbreaking",
+                "minecraft:fortune",
+                "minecraft:power",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:infinity",
+                "minecraft:luck_of_the_sea",
+                "minecraft:lure",
+                "minecraft:loyalty",
+                "minecraft:impaling",
+                "minecraft:riptide",
+                "minecraft:channeling",
+                "minecraft:multishot",
+                "minecraft:quick_charge",
+                "minecraft:piercing",
+                "minecraft:density",
+                "minecraft:breach",
+                "farmersdelight:backstabbing",
+                "combat_roll:acrobat",
+                "combat_roll:longfooted",
+                "combat_roll:multi_roll",
+                "galosphere:sifting",
+                "galosphere:sustain",
+                "create:capacity",
+                "create:potato_recovery",
+                "kingsandmonsters:barbed",
+                "kingsandmonsters:heavy_throw",
+                "netherexp:recoil",
+                "netherexp:volley",
+                "minecraft:mending",
+                "minecraft:frost_walker",
+                "minecraft:soul_speed",
+                "minecraft:swift_sneak",
+                "minecraft:wind_burst",
+                "galosphere:enfeeble",
+                "galosphere:rupture",
+                "kingsandmonsters:tyrant",
+                "netherexp:counterforce",
+                "netherexp:longshot",
+                "apothic_enchanting:boon_of_the_earth",
+                "apothic_enchanting:chainsaw",
+                "apothic_enchanting:chromatic",
+                "apothic_enchanting:crescendo_of_bolts",
+                "apothic_enchanting:growth_serum",
+                "apothic_enchanting:icy_thorns",
+                "apothic_enchanting:knowledge_of_the_ages",
+                "apothic_enchanting:miners_fervor",
+                "apothic_enchanting:natures_blessing",
+                "apothic_enchanting:rebounding",
+                "apothic_enchanting:reflective_defenses",
+                "apothic_enchanting:scavenger",
+                "apothic_enchanting:shield_bash",
+                "apothic_enchanting:stable_footing",
+                "apothic_enchanting:tempting",
+                "apothic_enchanting:worker_exploitation",
+                "apothic_enchanting:berserkers_fury"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraftdungeonsv1:double_axe"
+        }
+      ]
+    },
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:strength"
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:long_fire_resistance"
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:fire_ale",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:blaze_rod",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:steak_and_potatoes",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "apotheosis:random_gem",
+          "purities": [
+            "chipped",
+            "flawed",
+            "normal"
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 6,
+                "max": 12
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:pyromancer_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:pyromancer_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:pyromancer_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:pyromancer_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:cryomancer_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:cryomancer_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:cryomancer_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:cryomancer_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:electromancer_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:electromancer_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:electromancer_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:electromancer_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:priest_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:priest_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:priest_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:priest_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:shadowwalker_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:shadowwalker_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:shadowwalker_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:shadowwalker_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:plagued_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:plagued_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:plagued_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:plagued_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:archevoker_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:archevoker_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:archevoker_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:archevoker_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:cultist_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:cultist_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:cultist_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:cultist_boots"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:cryomancer_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:cryomancer_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:cryomancer_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:cryomancer_boots"
+        }
+      ]
+    }
+  ]
+}

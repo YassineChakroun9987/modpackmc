@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:netherite_mage_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:netherite_mage_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:netherite_mage_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:netherite_mage_boots"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:pyromancer_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:pyromancer_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:pyromancer_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:pyromancer_boots"
+        }
+      ]
+    }
+  ]
+}

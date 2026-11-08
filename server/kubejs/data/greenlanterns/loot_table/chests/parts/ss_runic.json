@@ -1,0 +1,70 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:runic_chakram"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:runic_claymore"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:runic_cutlass"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:runic_glaive"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:runic_greataxe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:runic_greathammer"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:runic_halberd"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:runic_katana"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:runic_longsword"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:runic_rapier"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:runic_sai"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:runic_scythe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:runic_spear"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:runic_twinblade"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "simplyswords:runic_warglaive"
+        }
+      ]
+    }
+  ]
+}

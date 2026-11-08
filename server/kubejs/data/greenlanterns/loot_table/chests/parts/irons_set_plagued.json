@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:plagued_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:plagued_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:plagued_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:plagued_boots"
+        }
+      ]
+    }
+  ]
+}

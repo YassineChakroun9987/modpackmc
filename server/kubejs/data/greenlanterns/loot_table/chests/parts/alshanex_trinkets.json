@@ -1,0 +1,62 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "alshanex_familiars:forest_trinket"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "alshanex_familiars:frostling_trinket"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "alshanex_familiars:scorcher_trinket"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "alshanex_familiars:hunter_trinket"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "alshanex_familiars:mage_trinket"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "alshanex_familiars:cleric_trinket"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "alshanex_familiars:plague_trinket"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "alshanex_familiars:illusionist_trinket"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "alshanex_familiars:necromancer_trinket"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "alshanex_familiars:summoner_trinket"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "alshanex_familiars:archmage_trinket"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "alshanex_familiars:evasion_curio"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "alshanex_familiars:healing_curio"
+        }
+      ]
+    }
+  ]
+}

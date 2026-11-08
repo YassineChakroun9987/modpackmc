@@ -1,0 +1,54 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:fire_upgrade_orb"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:ice_upgrade_orb"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:lightning_upgrade_orb"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:holy_upgrade_orb"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:ender_upgrade_orb"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:blood_upgrade_orb"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:evocation_upgrade_orb"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:nature_upgrade_orb"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:mana_upgrade_orb"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:cooldown_upgrade_orb"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:protection_upgrade_orb"
+        }
+      ]
+    }
+  ]
+}

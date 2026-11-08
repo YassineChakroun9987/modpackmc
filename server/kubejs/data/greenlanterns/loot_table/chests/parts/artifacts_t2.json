@@ -1,0 +1,106 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:snorkel"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:umbrella"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:villager_hat"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:plastic_drinking_hat"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:flippers"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:cowboy_hat"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:night_vision_goggles"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:digging_claws"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:snowshoes"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:steadfast_spikes"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:kitty_slippers"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:charm_of_sinking"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:onion_ring"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:everlasting_beef"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:golden_hook"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:superstitious_hat"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:lucky_scarf"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:pickaxe_heater"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:rooted_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:strider_shoes"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:obsidian_skull"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:antidote_vessel"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:charm_of_shrinking"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:anglers_hat"
+        }
+      ]
+    }
+  ]
+}

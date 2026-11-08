@@ -1,0 +1,2229 @@
+{
+"apotheosis:chests/tome_tower": [
+"Apotheosis-1.21.1-8.9.0.jar"
+],
+"bosses_of_mass_destruction:chests/lich_tower": [
+"BOMD-NeoForge-1.21-1.3.3.jar"
+],
+"dungeons_arise:chests/abandoned_temple/abandoned_temple_entrance": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/abandoned_temple/abandoned_temple_map": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/abandoned_temple/abandoned_temple_top": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/aviary/aviary_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/aviary/aviary_barrels": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/aviary/aviary_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/bandit_towers/bandit_towers_supply": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/bandit_towers/bandit_towers_barrels": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/bandit_towers/bandit_towers_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/desert_city_small": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/bandit_towers/bandit_towers_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/desert_city_medium": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/bandit_towers/bandit_towers_gardens": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/desert_city_big": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/bandit_towers/bandit_towers_rooms": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/bandit_village/bandit_village_tents": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/bandit_village/bandit_village_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/bandit_village/bandit_village_barrels": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/bandit_village/bandit_village_supply": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/bathhouse/bathhouse_barrels": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/bathhouse/bathhouse_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/ceryneian_hind/ceryneian_hind_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:entities/gladiator_loot": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/fishing_hut/fishing_hut_barrels": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/foundry/foundry_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/foundry/foundry_chains": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/foundry/foundry_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/foundry/foundry_lava_pit": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/foundry/foundry_passage_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/foundry/foundry_passage_exterior": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/giant_mushroom/red_giant_mushroom": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/giant_mushroom/twin_giant_mushroom": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/greenwood_pub/greenwood_pub_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/greenwood_pub/greenwood_pub_barrels_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/greenwood_pub/greenwood_pub_barrels_hallways": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"orion_structures:chests/greenwood_towers/greenwood_towers_barrels": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"orion_structures:chests/greenwood_towers/greenwood_towers_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/heavenly_challenger/heavenly_challenger_supply": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/heavenly_challenger/heavenly_challenger_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/heavenly_challenger/heavenly_challenger_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/heavenly_challenger/heavenly_challenger_theater": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/heavenly_conqueror/heavenly_conqueror_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/heavenly_conqueror/heavenly_conqueror_barrels": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/heavenly_conqueror/heavenly_conqueror_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/heavenly_rider/heavenly_rider_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/heavenly_rider/heavenly_rider_barrels": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/heavenly_rider/heavenly_rider_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/illager_campsite/illager_campsite_supply": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/illager_campsite/illager_campsite_map": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/illager_campsite/illager_campsite_tent": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/illager_corsair/illager_corsair_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/illager_corsair/illager_corsair_barrels": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/illager_corsair/illager_corsair_supply": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/illager_fort/illager_fort_barrels": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/illager_fort/illager_fort_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/illager_fortress_small": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/illager_fort/illager_fort_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/illager_galley/illager_galley_supply": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/illager_galley/illager_galley_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/illager_galley/illager_galley_barrels": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/pillager_palace_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/house_tower_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/pillager_palace_supply": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"minecraft:chests/stronghold_library": [
+"DungeonsArise-1.21.1-2.1.68-release.jar",
+"YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"sky_whale_ship-neoforge-1.21.1.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"dungeons_arise:chests/illager_windmill/illager_windmill_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/illager_windmill/illager_windmill_barrels": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/infested_temple/infested_temple_room_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/infested_temple/infested_temple_room_garden": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/infested_temple/infested_temple_room_table": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/infested_temple/infested_temple_room_forge": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/infested_temple/infested_temple_room_supply": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/infested_temple/infested_temple_room_bookshelf": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/jungle_tree_house/jungle_tree_house_barrels": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/jungle_tree_house/jungle_tree_house_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/jungle_tree_house/jungle_tree_house_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/keep_kayra/keep_kayra_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/keep_kayra/keep_kayra_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/keep_kayra/keep_kayra_library_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/keep_kayra/keep_kayra_library_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/keep_kayra/keep_kayra_garden_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/keep_kayra/keep_kayra_garden_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/kisegi_sanctuary/kisegi_sanctuary_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/kisegi_sanctuary/kisegi_sanctuary_basement": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/kisegi_sanctuary/kisegi_sanctuary_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/kisegi_sanctuary/kisegi_sanctuary_top": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/lighthouse/lighthouse_top": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/mechanical_nest/mechanical_nest_supply": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/mechanical_nest/mechanical_nest_equipment": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/mechanical_nest/mechanical_nest_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/mechanical_nest/mechanical_nest_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/merchant_campsite/merchant_campsite_map": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/merchant_campsite/merchant_campsite_tent": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/merchant_campsite/merchant_campsite_supply": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/mining_complex/mining_complex_facility_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/mining_complex/mining_complex_barrel": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/mining_complex/mining_complex_dripstone_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/mining_complex/mining_complex_lush_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/mining_system/mining_system_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/mining_system/mining_system_barrels": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/monastery/monastery_bridges": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/monastery/monastery_barrels": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/monastery/monastery_map": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/mushroom_house/mushroom_house_barrels": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/mushroom_village/mushroom_village_weaponry": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/mushroom_house/mushroom_house_barrel": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/mushroom_house/mushroom_house_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/mushroom_house/mushroom_house_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/mines_treasure_small": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/mines_treasure_medium": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/mines_treasure_big": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/mushroom_village/mushroom_village_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/mushroom_village/mushroom_village_barrels": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/mushroom_village/mushroom_village_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/plague_asylum/plague_asylum_cells": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/plague_asylum/plague_asylum_barrels": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/plague_asylum/plague_asylum_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/plague_asylum/plague_asylum_storage": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/plague_asylum/plague_asylum_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/plague_asylum/plague_asylum_potions": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/scorched_mines/scorched_mines_barrels": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/scorched_mines/scorched_mines_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/scorched_mines/scorched_mines_housing": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/scorched_mines/scorched_mines_hub": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/scorched_mines/scorched_mines_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/shiraz_palace/shiraz_palace_gardens": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/shiraz_palace/shiraz_palace_library": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/shiraz_palace/shiraz_palace_supply": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/shiraz_palace/shiraz_palace_normal": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/shiraz_palace/shiraz_palace_towers": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/shiraz_palace/shiraz_palace_elite": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/shiraz_palace/shiraz_palace_rooms": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/shiraz_palace/shiraz_palace_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/small_blimp/small_blimp_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/small_blimp/small_blimp_coal_storage": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/small_blimp/small_blimp_redstone_chamber": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/thornborn_towers/thornborn_towers_barrels": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/thornborn_towers/thornborn_towers_top_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/thornborn_towers/thornborn_towers_top_rooms": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/thornborn_towers/thornborn_towers_rooms": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/typhon/typhon_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/undead_pirate_ship/undead_pirate_ship_barrels": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/undead_pirate_ship/undead_pirate_ship_treasure": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/undead_pirate_ship/undead_pirate_ship_enchants": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:chests/undead_pirate_ship/undead_pirate_ship_supply": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:pots/infested_temple/infested_temple_pots": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:pots/kisegi_sanctuary/kisegi_sanctuary_pots": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:archeology/kisegi_sanctuary/kisegi_sanctuary_archeology": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise:pots/mining_complex/mining_complex_pots": [
+"DungeonsArise-1.21.1-2.1.68-release.jar"
+],
+"dungeons_arise_seven_seas:chests/corsair_corvette/corsair_corvette_barrels": [
+"DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar"
+],
+"dungeons_arise_seven_seas:chests/corsair_corvette/corsair_corvette_treasure": [
+"DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar"
+],
+"dungeons_arise_seven_seas:chests/corsair_corvette/corsair_corvette_normal": [
+"DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar"
+],
+"dungeons_arise_seven_seas:chests/pirate_junk/pirate_junk_normal": [
+"DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar"
+],
+"dungeons_arise_seven_seas:chests/pirate_junk/pirate_junk_barrels": [
+"DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar"
+],
+"dungeons_arise_seven_seas:chests/pirate_junk/pirate_junk_supply": [
+"DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar"
+],
+"dungeons_arise_seven_seas:chests/pirate_junk/pirate_junk_treasure": [
+"DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar"
+],
+"dungeons_arise_seven_seas:chests/small_yacht/small_yacht_barrels": [
+"DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar"
+],
+"dungeons_arise_seven_seas:chests/small_yacht/small_yacht_normal": [
+"DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar"
+],
+"dungeons_arise_seven_seas:chests/small_yacht/small_yacht_treasure": [
+"DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar"
+],
+"dungeons_arise_seven_seas:chests/unicorn_galleon/unicorn_galleon_barrels": [
+"DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar"
+],
+"dungeons_arise_seven_seas:chests/unicorn_galleon/unicorn_galleon_supply": [
+"DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar"
+],
+"dungeons_arise_seven_seas:chests/unicorn_galleon/unicorn_galleon_treasure": [
+"DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar"
+],
+"dungeons_arise_seven_seas:chests/unicorn_galleon/unicorn_galleon_normal": [
+"DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar"
+],
+"dungeons_arise_seven_seas:chests/victory_frigate/victory_frigate_treasure": [
+"DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar"
+],
+"dungeons_arise_seven_seas:chests/victory_frigate/victory_frigate_barrels": [
+"DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar"
+],
+"dungeons_arise_seven_seas:chests/victory_frigate/victory_frigate_normal_lower": [
+"DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar"
+],
+"dungeons_arise_seven_seas:chests/victory_frigate/victory_frigate_supply": [
+"DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar"
+],
+"dungeons_arise_seven_seas:chests/victory_frigate/victory_frigate_normal_upper": [
+"DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar"
+],
+"eternalnether:chests/catacomb/treasure_rib": [
+"EternalNether-v21.1.3-1.21.1-NeoForge.jar"
+],
+"eternalnether:chests/citadel": [
+"EternalNether-v21.1.3-1.21.1-NeoForge.jar"
+],
+"minecraft:chests/bastion_hoglin_stable": [
+"EternalNether-v21.1.3-1.21.1-NeoForge.jar",
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"galosphere:chests/pink_salt_shrine": [
+"Galosphere-1.21.1-1.5.5-NeoForge.jar"
+],
+"galosphere:chests/pink_salt_shrine_library": [
+"Galosphere-1.21.1-1.5.5-NeoForge.jar"
+],
+"galosphere:archaeology/forgotten_ruins_common": [
+"Galosphere-1.21.1-1.5.5-NeoForge.jar"
+],
+"galosphere:archaeology/forgotten_ruins_rare": [
+"Galosphere-1.21.1-1.5.5-NeoForge.jar"
+],
+"netherexp:chests/chapel": [
+"Jadens-Nether-Expansion-2.4.1.jar"
+],
+"netherexp:chests/sanctum_food": [
+"Jadens-Nether-Expansion-2.4.1.jar"
+],
+"netherexp:chests/sanctum_supply": [
+"Jadens-Nether-Expansion-2.4.1.jar"
+],
+"netherexp:brazier_chest/exposed": [
+"Jadens-Nether-Expansion-2.4.1.jar"
+],
+"netherexp:brazier_chest/hidden": [
+"Jadens-Nether-Expansion-2.4.1.jar"
+],
+"netherexp:archaeology/beast_skull_common": [
+"Jadens-Nether-Expansion-2.4.1.jar"
+],
+"netherexp:archaeology/beast_skull_rare": [
+"Jadens-Nether-Expansion-2.4.1.jar"
+],
+"netherexp:archaeology/mega_fossil_common": [
+"Jadens-Nether-Expansion-2.4.1.jar"
+],
+"netherexp:archaeology/mega_fossil_rare": [
+"Jadens-Nether-Expansion-2.4.1.jar"
+],
+"cataclysm:chests/abandoned": [
+"L_Enders-Cataclysm-1.21.1-3.33.jar"
+],
+"cataclysm:chests/abandoned_treasure": [
+"L_Enders-Cataclysm-1.21.1-3.33.jar"
+],
+"cataclysm:chests/acropolis_treasure": [
+"L_Enders-Cataclysm-1.21.1-3.33.jar"
+],
+"cataclysm:chests/amethyst_nest_chest": [
+"L_Enders-Cataclysm-1.21.1-3.33.jar"
+],
+"minecraft:chests/desert_pyramid": [
+"L_Enders-Cataclysm-1.21.1-3.33.jar",
+"YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"legendary_monsters-2.2.4-1.21.1.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"minecraft:chests/village/village_butcher": [
+"L_Enders-Cataclysm-1.21.1-3.33.jar",
+"[neoforge]ctov-1.21.1-3.6.4.jar",
+"dungeons-and-taverns-v4.4.4.jar",
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"minecraft:chests/village/village_mason": [
+"L_Enders-Cataclysm-1.21.1-3.33.jar",
+"[neoforge]ctov-1.21.1-3.6.4.jar",
+"dungeons-and-taverns-v4.4.4.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"minecraft:chests/village/village_fisher": [
+"L_Enders-Cataclysm-1.21.1-3.33.jar",
+"[neoforge]ctov-1.21.1-3.6.4.jar",
+"dungeons-and-taverns-v4.4.4.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"minecraft:chests/village/village_fletcher": [
+"L_Enders-Cataclysm-1.21.1-3.33.jar",
+"[neoforge]ctov-1.21.1-3.6.4.jar",
+"dungeons-and-taverns-v4.4.4.jar",
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"minecraft:chests/village/village_desert_house": [
+"L_Enders-Cataclysm-1.21.1-3.33.jar",
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"cataclysm:chests/desert_treasure": [
+"L_Enders-Cataclysm-1.21.1-3.33.jar"
+],
+"minecraft:chests/village/village_toolsmith": [
+"L_Enders-Cataclysm-1.21.1-3.33.jar",
+"dungeons-and-taverns-v4.4.4.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"minecraft:chests/village/village_armorer": [
+"L_Enders-Cataclysm-1.21.1-3.33.jar",
+"castles_and_keeps-1.0.9.1-1.21.1-neoforge.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"minecraft:chests/village_desert_house": [
+"L_Enders-Cataclysm-1.21.1-3.33.jar"
+],
+"minecraft:chests/village/village_cartographer": [
+"L_Enders-Cataclysm-1.21.1-3.33.jar",
+"[neoforge]ctov-1.21.1-3.6.4.jar",
+"dungeons-and-taverns-v4.4.4.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"cataclysm:chests/frosted_prison_treasure": [
+"L_Enders-Cataclysm-1.21.1-3.33.jar"
+],
+"minecraft:chests/end_city_treasure": [
+"L_Enders-Cataclysm-1.21.1-3.33.jar",
+"dungeons-and-taverns-v4.4.4.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"legendary_monsters-2.2.4-1.21.1.jar"
+],
+"minecraft:chests/simple_dungeon": [
+"L_Enders-Cataclysm-1.21.1-3.33.jar",
+"Philips-Ruins1.21.1-2.0-NeoForge.jar",
+"Terralith_1.21.1_v2.6.2_Neoforge.jar",
+"YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar",
+"castles_and_keeps-1.0.9.1-1.21.1-neoforge.jar",
+"floating_islands-1.5.3-1.21.1-neoforge.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"legendary_monsters-2.2.4-1.21.1.jar",
+"sky_whale_ship-neoforge-1.21.1.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"minecraft:chests/shipwreck_map": [
+"L_Enders-Cataclysm-1.21.1-3.33.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"minecraft:chests/shipwreck_treasure": [
+"L_Enders-Cataclysm-1.21.1-3.33.jar",
+"castles_and_keeps-1.0.9.1-1.21.1-neoforge.jar",
+"floating_islands-1.5.3-1.21.1-neoforge.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"minecraft:chests/shipwreck_supply": [
+"L_Enders-Cataclysm-1.21.1-3.33.jar",
+"castles_and_keeps-1.0.9.1-1.21.1-neoforge.jar",
+"floating_islands-1.5.3-1.21.1-neoforge.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"philipsruins:chest/ancient_ruins_loot": [
+"Philips-Ruins1.21.1-2.0-NeoForge.jar"
+],
+"philipsruins:chest/badlands_dungeon_loot_low": [
+"Philips-Ruins1.21.1-2.0-NeoForge.jar"
+],
+"philipsruins:chest/badlands_dungeon_loot_high": [
+"Philips-Ruins1.21.1-2.0-NeoForge.jar"
+],
+"philipsruins:chest/ruin_loot": [
+"Philips-Ruins1.21.1-2.0-NeoForge.jar"
+],
+"philipsruins:chest/level_three_ruins_loot": [
+"Philips-Ruins1.21.1-2.0-NeoForge.jar"
+],
+"philipsruins:chest/ancient_ruins": [
+"Philips-Ruins1.21.1-2.0-NeoForge.jar"
+],
+"philipsruins:chest/bone_dungeon_loot": [
+"Philips-Ruins1.21.1-2.0-NeoForge.jar"
+],
+"philipsruins:chest/lost_soul_city_loot": [
+"Philips-Ruins1.21.1-2.0-NeoForge.jar"
+],
+"philipsruins:chest/desert_pyramid_loot": [
+"Philips-Ruins1.21.1-2.0-NeoForge.jar"
+],
+"philipsruins:chest/end_ruins_loot": [
+"Philips-Ruins1.21.1-2.0-NeoForge.jar"
+],
+"philipsruins:chest/level_one_ruins_loot": [
+"Philips-Ruins1.21.1-2.0-NeoForge.jar"
+],
+"philipsruins:chest/nether_ruins_low": [
+"Philips-Ruins1.21.1-2.0-NeoForge.jar"
+],
+"philipsruins:chest/nether_lava_ruins_loot": [
+"Philips-Ruins1.21.1-2.0-NeoForge.jar"
+],
+"philipsruins:chest/ocean_ruin_fortress": [
+"Philips-Ruins1.21.1-2.0-NeoForge.jar"
+],
+"philipsruins:chest/ocean_ruins_loot": [
+"Philips-Ruins1.21.1-2.0-NeoForge.jar"
+],
+"philipsruins:chest/ruin_loot_value": [
+"Philips-Ruins1.21.1-2.0-NeoForge.jar"
+],
+"philipsruins:chest/sculk_dungeon_loot": [
+"Philips-Ruins1.21.1-2.0-NeoForge.jar"
+],
+"skyvillages:chests/sky_village_weaponsmith": [
+"SkyVillages-1.0.6-1.21.x-neoforge-release.jar"
+],
+"skyvillages:chests/sky_village_cartographer": [
+"SkyVillages-1.0.6-1.21.x-neoforge-release.jar"
+],
+"skyvillages:chests/sky_village_fisher": [
+"SkyVillages-1.0.6-1.21.x-neoforge-release.jar"
+],
+"skyvillages:chests/sky_village_fletcher": [
+"SkyVillages-1.0.6-1.21.x-neoforge-release.jar"
+],
+"skyvillages:chests/sky_village_armorer": [
+"SkyVillages-1.0.6-1.21.x-neoforge-release.jar"
+],
+"skyvillages:chests/sky_village_normal_house": [
+"SkyVillages-1.0.6-1.21.x-neoforge-release.jar"
+],
+"skyvillages:chests/sky_village_butcher": [
+"SkyVillages-1.0.6-1.21.x-neoforge-release.jar"
+],
+"skyvillages:chests/sky_village_shepherd": [
+"SkyVillages-1.0.6-1.21.x-neoforge-release.jar"
+],
+"terralith:mage/treasure": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:mage/barracks": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:mage/extras": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"minecraft:archaeology/desert_well": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar",
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:archaeology/desert_pyramid": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar",
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"terralith:desert_outpost": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:ruin/glacial/main_cs": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:ruin/glacial/junk": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:igloo": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"minecraft:chests/village/village_taiga_house": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar",
+"[neoforge]ctov-1.21.1-3.6.4.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"terralith:lodge_drinkables": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:witch_hut": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"minecraft:archaeology/trail_ruins_common": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"minecraft:archaeology/trail_ruins_rare": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:spire/common": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:spire/rare": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:spire/junk": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:spire/treasure": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:underground/chest": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:underground/giant_bee_hive": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/desert/smith": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/desert/butcher": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/desert/cartographer": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/desert/food": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/desert/archer": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/desert/library": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/desert/treasure": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/desert/junk": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/desert/fisherman": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/desert/generic": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/desert/generic_low": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/desert/mason": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/desert/shepherd": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/desert/leatherworker": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/fortified/archer": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/fortified/food": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/fortified/attic": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/fortified/generic_low": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/fortified/tavern_downstairs": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/fortified/tavern_upstairs": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/fortified/cartographer": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/fortified/generic": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/fortified/fisherman": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/fortified/library": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/fortified/mason": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/fortified/smith": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"terralith:village/fortified/treasure": [
+"Terralith_1.21.1_v2.6.2_Neoforge.jar"
+],
+"betterdeserttemples:chests/pot": [
+"YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar"
+],
+"betterdeserttemples:chests/lab": [
+"YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar"
+],
+"betterdeserttemples:chests/statue": [
+"YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar"
+],
+"betterdeserttemples:chests/food_storage": [
+"YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar"
+],
+"betterdeserttemples:chests/storage": [
+"YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar"
+],
+"betterdeserttemples:chests/wardrobe": [
+"YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar"
+],
+"betterdeserttemples:chests/library": [
+"YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar"
+],
+"betterdeserttemples:chests/tomb_pharaoh": [
+"YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar"
+],
+"betterdeserttemples:chests/pharaoh_hidden": [
+"YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar"
+],
+"betterdeserttemples:chests/tomb": [
+"YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar"
+],
+"betterdungeons:skeleton_dungeon/chests/common": [
+"YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar"
+],
+"betterdungeons:skeleton_dungeon/chests/middle": [
+"YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar"
+],
+"betterdungeons:small_dungeon/chests/loot_piles": [
+"YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar"
+],
+"betterdungeons:small_nether_dungeon/chests/common": [
+"YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar"
+],
+"betterdungeons:zombie_dungeon/chests/common": [
+"YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar"
+],
+"betterdungeons:zombie_dungeon/chests/special": [
+"YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar"
+],
+"betterdungeons:zombie_dungeon/chests/tombstone": [
+"YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar"
+],
+"betterjungletemples:archaeology/emerald": [
+"YungsBetterJungleTemples-1.21.1-NeoForge-3.1.2.jar"
+],
+"minecraft:chests/jungle_temple": [
+"YungsBetterJungleTemples-1.21.1-NeoForge-3.1.2.jar",
+"dungeons-and-taverns-v4.4.4.jar",
+"floating_islands-1.5.3-1.21.1-neoforge.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar"
+],
+"betterjungletemples:chests/campsite": [
+"YungsBetterJungleTemples-1.21.1-NeoForge-3.1.2.jar"
+],
+"betterjungletemples:chests/treasure": [
+"YungsBetterJungleTemples-1.21.1-NeoForge-3.1.2.jar"
+],
+"minecraft:chests/nether_bridge": [
+"YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar",
+"dungeons-and-taverns-v4.4.4.jar",
+"floating_islands-1.5.3-1.21.1-neoforge.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"legendary_monsters-2.2.4-1.21.1.jar"
+],
+"betterfortresses:chests/beacon": [
+"YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar"
+],
+"betterfortresses:chests/hall": [
+"YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar"
+],
+"betterfortresses:chests/extra": [
+"YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar"
+],
+"betterfortresses:chests/obsidian": [
+"YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar"
+],
+"betterfortresses:chests/puzzle": [
+"YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar"
+],
+"betterfortresses:chests/quarters": [
+"YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar"
+],
+"betterfortresses:chests/storage": [
+"YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar"
+],
+"betterfortresses:chests/worship": [
+"YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar"
+],
+"betterfortresses:chests/keep": [
+"YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar"
+],
+"betteroceanmonuments:chests/upper_side_chamber": [
+"YungsBetterOceanMonuments-1.21.1-NeoForge-4.1.2.jar"
+],
+"betterstrongholds:chests/armoury": [
+"YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar"
+],
+"minecraft:chests/stronghold_corridor": [
+"YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar"
+],
+"minecraft:chests/stronghold_crossing": [
+"YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"betterstrongholds:chests/common": [
+"YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar"
+],
+"betterstrongholds:chests/cmd_yung": [
+"YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar"
+],
+"betterstrongholds:chests/crypt": [
+"YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar"
+],
+"betterstrongholds:chests/grand_library": [
+"YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar"
+],
+"betterstrongholds:chests/mess": [
+"YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar"
+],
+"betterstrongholds:chests/prison_lg": [
+"YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar"
+],
+"betterstrongholds:chests/trap": [
+"YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar"
+],
+"betterstrongholds:chests/treasure": [
+"YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar"
+],
+"betterwitchhuts:chests/hut_0": [
+"YungsBetterWitchHuts-1.21.1-NeoForge-4.1.1.jar"
+],
+"yungsextras:desert/chillzone": [
+"YungsExtras-1.21.1-NeoForge-5.1.1.jar"
+],
+"yungsextras:desert/ruins": [
+"YungsExtras-1.21.1-NeoForge-5.1.1.jar"
+],
+"all_bark_all_bite:chests/kennel/scavenger": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"minecraft:chests/pillager_outpost": [
+"[neoforge]ctov-1.21.1-3.6.4.jar",
+"castles_and_keeps-1.0.9.1-1.21.1-neoforge.jar",
+"floating_islands-1.5.3-1.21.1-neoforge.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"toughasnails:chests/village/village_climatologist": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"ctov:chests/village/village_beach_house": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"villagersplus:chests/village/village_alchemist": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"villagersplus:chests/village/village_oceanographer": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"archers:chests/archery_range": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"rogues:chests/barracks": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"minecraft:chests/village/village_temple": [
+"[neoforge]ctov-1.21.1-3.6.4.jar",
+"dungeons-and-taverns-v4.4.4.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"ctov:chests/village/village_forager": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"gazebo:chests/gazebo": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"scguns:chests/village_gunsmith": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"villagersplus:chests/village/village_horticulturist": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"morevillagers:chests/village/village_hunter": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"immersiveengineering:chests/engineers_house": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"irons_jewelry:chests/village/village_jeweler": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"jewelry:chests/jewelry_shop": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"ctov:chests/village/village_library": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"pneumaticcraft:chests/mechanic_house": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"morevillagers:chests/village/miner": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"morevillagers:chests/village/netherologist": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"villagersplus:chests/village/village_occultist": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"morevillagers:chests/village/village_oceanographer": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"ctov:chests/village/village_farm": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"domesticationinnovation:chests/petshop_chest": [
+"[neoforge]ctov-1.21.1-3.6.4.jar",
+"redomesticate-2.0.0+1.21.1-neoforge.jar"
+],
+"irons_spellbooks:chests/priest_house": [
+"[neoforge]ctov-1.21.1-3.6.4.jar",
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"chefsdelight:chests/cooker": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"paladins:chests/village_monk": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"iceandfire:chest/village_scribe": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"minecraft:chests/village/village_shepherd": [
+"[neoforge]ctov-1.21.1-3.6.4.jar",
+"castles_and_keeps-1.0.9.1-1.21.1-neoforge.jar",
+"dungeons-and-taverns-v4.4.4.jar",
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"ctov:chests/village/village_smith": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"village_taverns:chests/tavern": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"wares:chests/village/beach_warehouse": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"create_structures:chests/village/village_windmill": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"wizards:chests/village_wizard": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"respawnobelisks:chests/obelisk_shrine_chest": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"minecraft:chests/village/village_snowy_house": [
+"[neoforge]ctov-1.21.1-3.6.4.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"beautify:chests/botanist/botanist_chest_taiga": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"jellyfishing:chests/village_house": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"minecraft:chests/village/village_tannery": [
+"[neoforge]ctov-1.21.1-3.6.4.jar",
+"dungeons-and-taverns-v4.4.4.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"wares:chests/village/snowy_warehouse": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"wares:chests/village/desert_warehouse": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"ctov:chests/village/village_bakery": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"ctov:chests/village/village_dark_forest_house": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"wares:chests/village/dark_forest_warehouse": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"ctov:chests/village/village_jungle_house": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"wares:chests/village/jungle_warehouse": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"ctov:chests/village/village_badlands_house": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"wares:chests/village/badlands_warehouse": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"ctov:village/mesa/smith": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"ctov:chests/village/village_mountain_house": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"wares:chests/village/mountain_warehouse": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"ctov:chests/village/village_mushroom_house": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"wares:chests/village/mushroom_warehouse": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"minecraft:chests/village/village_plains_house": [
+"[neoforge]ctov-1.21.1-3.6.4.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"wares:chests/village/plains_warehouse": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"minecraft:chests/village/village_savanna_house": [
+"[neoforge]ctov-1.21.1-3.6.4.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"wares:chests/village/savanna_warehouse": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"ctov:chests/village/village_swamp_house": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"wares:chests/village/swamp_warehouse": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"wares:chests/village/taiga_warehouse": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"monobank:monobank/village/badlands": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"monobank:monobank/village/beach": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"monobank:monobank/village/dark_forest": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"monobank:monobank/village/jungle": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"monobank:monobank/village/mountain": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"monobank:monobank/village/mushroom": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"monobank:monobank/village/swamp": [
+"[neoforge]ctov-1.21.1-3.6.4.jar"
+],
+"alshanex_familiars:chests/end_laboratory/treasure": [
+"alshanex_familiars-1.21.1_v5.0.jar"
+],
+"alshanex_familiars:chests/graveyard/grave": [
+"alshanex_familiars-1.21.1_v5.0.jar"
+],
+"alshanex_familiars:chests/graveyard/treasure": [
+"alshanex_familiars-1.21.1_v5.0.jar"
+],
+"alshanex_familiars:chests/hunter_campsite/generic": [
+"alshanex_familiars-1.21.1_v5.0.jar"
+],
+"alshanex_familiars:chests/hunter_campsite/supplies": [
+"alshanex_familiars-1.21.1_v5.0.jar"
+],
+"alshanex_familiars:chests/origin_island/cartography": [
+"alshanex_familiars-1.21.1_v5.0.jar"
+],
+"alshanex_familiars:chests/origin_island/produce/random": [
+"alshanex_familiars-1.21.1_v5.0.jar"
+],
+"alshanex_familiars:chests/origin_island/produce/kelp": [
+"alshanex_familiars-1.21.1_v5.0.jar"
+],
+"alshanex_familiars:chests/origin_island/fishing": [
+"alshanex_familiars-1.21.1_v5.0.jar"
+],
+"alshanex_familiars:chests/origin_island/research": [
+"alshanex_familiars-1.21.1_v5.0.jar"
+],
+"alshanex_familiars:chests/origin_island/brewing": [
+"alshanex_familiars-1.21.1_v5.0.jar"
+],
+"alshanex_familiars:chests/origin_island/workshop/random": [
+"alshanex_familiars-1.21.1_v5.0.jar"
+],
+"alshanex_familiars:chests/summoner_lab/treasure": [
+"alshanex_familiars-1.21.1_v5.0.jar"
+],
+"alshanex_familiars:archaeology/origin_island": [
+"alshanex_familiars-1.21.1_v5.0.jar"
+],
+"minecraft:chests/shater": [
+"born_in_chaos_[Neoforge]_1.21.1_1.7.6.jar"
+],
+"minecraft:chests/basic_chest": [
+"born_in_chaos_[Neoforge]_1.21.1_1.7.6.jar"
+],
+"minecraft:chests/chest_level_1": [
+"born_in_chaos_[Neoforge]_1.21.1_1.7.6.jar"
+],
+"minecraft:chests/chest_level_2": [
+"born_in_chaos_[Neoforge]_1.21.1_1.7.6.jar"
+],
+"minecraft:chests/chest_level_3": [
+"born_in_chaos_[Neoforge]_1.21.1_1.7.6.jar"
+],
+"minecraft:chests/firewell_d": [
+"born_in_chaos_[Neoforge]_1.21.1_1.7.6.jar"
+],
+"minecraft:chests/farm_drop": [
+"born_in_chaos_[Neoforge]_1.21.1_1.7.6.jar"
+],
+"minecraft:chests/woodland_mansion": [
+"castles_and_keeps-1.0.9.1-1.21.1-neoforge.jar",
+"dungeons-and-taverns-v4.4.4.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar"
+],
+"minecraft:chests/village/village_weaponsmith": [
+"castles_and_keeps-1.0.9.1-1.21.1-neoforge.jar",
+"dungeons-and-taverns-v4.4.4.jar",
+"floating_islands-1.5.3-1.21.1-neoforge.jar",
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"discerning_the_eldritch:chests/blood_cultist_hut/generic_blood_loot": [
+"discerning_the_eldritch-1.4.5-1.21.jar"
+],
+"discerning_the_eldritch:chests/blood_cultist_hut/bloody_chest": [
+"discerning_the_eldritch-1.4.5-1.21.jar"
+],
+"discerning_the_eldritch:chests/cultist_base/hallway_loot": [
+"discerning_the_eldritch-1.4.5-1.21.jar"
+],
+"discerning_the_eldritch:chests/cultist_base/treasure_loot": [
+"discerning_the_eldritch-1.4.5-1.21.jar"
+],
+"discerning_the_eldritch:chests/cultist_base/catacomb_loot": [
+"discerning_the_eldritch-1.4.5-1.21.jar"
+],
+"discerning_the_eldritch:chests/cultist_base/garden_loot": [
+"discerning_the_eldritch-1.4.5-1.21.jar"
+],
+"discerning_the_eldritch:chests/cultist_base/quality_treasure_loot": [
+"discerning_the_eldritch-1.4.5-1.21.jar"
+],
+"discerning_the_eldritch:chests/cultist_base/kitchen_loot": [
+"discerning_the_eldritch-1.4.5-1.21.jar"
+],
+"discerning_the_eldritch:chests/cultist_base/lab_chest": [
+"discerning_the_eldritch-1.4.5-1.21.jar"
+],
+"discerning_the_eldritch:chests/cultist_base/lab_barrel": [
+"discerning_the_eldritch-1.4.5-1.21.jar"
+],
+"discerning_the_eldritch:chests/cultist_base/library_loot": [
+"discerning_the_eldritch-1.4.5-1.21.jar"
+],
+"discerning_the_eldritch:chests/electromancer_tower/electromancer_chest": [
+"discerning_the_eldritch-1.4.5-1.21.jar"
+],
+"minecraft:chests/illager_mansion/generic": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/dungeon_6": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/dungeon_7": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:chests/illager_mansion/smithing_room": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:chests/illager_mansion/vindicator_chest": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/undead_crypts_grave": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:chests/illager_mansion/evoker_chest": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:pots/pot_illager_manor": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:chests/illager_mansion/witch_chest": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:chests/illager_mansion/pillager_chest": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:chests/illager_mansion/kitchen": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:chests/illager_mansion/map_chest": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:chests/illager_mansion/wool": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/pillager_outpost_treasure": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:chests/illager_mansion/secret_room": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:chests/illager_mansion/library_chest": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:chests/illager_mansion/ancient_city_raid_chest": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:chests/illager_mansion/ravager_chest": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/illager_hideout_fishing": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:pots/pot_nether_skeleton": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:chests/nether_fortress/fort_inside_generic": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:chests/village/village_jungle_house": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:chests/village/village_swamp_house": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/illager_hideout_heart_loot": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:pots/pot_badland_miner_outpost": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/badland_miner_outpost_towers": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/witch_villa/potion_brewing": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/dungeon_2": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/illager_hideout_meat": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/badland_miner_outpost_forge": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:pots/pot_illager_hideout": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/water_supply": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/food_supply": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/mining_supply": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/illager_hideout_raw_ores": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/illager_hideout_utility": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/dungeon_4": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/badland_miner_outpost": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:pots/pot_bunker": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/ruin_loot_master": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/dungeon_3": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/bunker_altar": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/mangrove_witchhud": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:archaelogy/conduit_ruin": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/conduit_ruin/conduit_ruin_small": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:pots/pot_conduit_ruin": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/conduit_ruin/conduit_ruin_big": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/conduit_ruin/conduit_ruin_main": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:archaelogy/crypt": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:pots/pot_creeping_crypt": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/creeping_crypt/crypt_grave": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/creeping_crypt/crypt_hallway": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:pots/pot_generic_ruin": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:archaelogy/desert_ruin_ruins": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/desert_ruins/desert_ruin_house": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:pots/pot_desert_ruin": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/desert_ruins/desert_ruin_grave": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/desert_ruins/desert_ruin_main_temple": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:archaelogy/desert_ruin_inside_temple": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/desert_ruins/desert_ruin_lesser_treasure": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/hamlet/hamlet": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:chests/bastion_other": [
+"dungeons-and-taverns-v4.4.4.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar"
+],
+"nova_structures:pots/pot_piglins": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:chests/bastion_bridge": [
+"dungeons-and-taverns-v4.4.4.jar",
+"legendary_monsters-2.2.4-1.21.1.jar"
+],
+"nova_structures:pots/pot_piglin": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:mob/piglin_brute_donjon": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:chests/bastion_treasure": [
+"dungeons-and-taverns-v4.4.4.jar",
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"legendary_monsters-2.2.4-1.21.1.jar"
+],
+"nova_structures:chests/end_castle/lesser_loot": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/end_castle/supply": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/end_castle/castle_bar": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/end_castle/rocket_barrel": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/end_castle/castle_brewing": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:pots/end_castle/pot_end_castle": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/end_lighthouse/supply_lighthouse": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/firewatch_tower": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:mob/piglin_brute_outstation": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:pots/pot_illager_camp": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/illager_camp": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/illager_hideout_random": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/illager_hideout_library": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/illager_hideout_raw_vegitarian": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/illager_hideout_vegitarian": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/illager_hideout_trash": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/illager_hideout_raw_trash": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/illager_hideout_lesser_meat": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/illager_hideout_brewing": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/illager_hideout_raw_weaponry": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/illager_hideout_weaponry": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:pots/pot_jungle_ruin": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:archaelogy/jungle_ruins": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/dungeon_5": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/dungeon_1": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/jungle_ruins/jungle_ruins_main_temple": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/lone_citadel/c_supply": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:pots/lone_citadel/c_pot": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/lone_citadel/c_grave": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/lone_citadel/c_library": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/lone_citadel/c_forge": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/lone_citadel/c_cold_barrel": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/lone_citadel/c_banner": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/lone_citadel/c_forge_chest": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/lone_citadel/c_dispenser": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/nether_port/nether_port_supplies": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/nether_port/nether_port_chest": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/nether_skeleton_tower/skeleton_tower_supply": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/nether_skeleton_tower/skeleton_tower_camp": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/nether_skeleton_tower/skeleton_tower_chest": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/piglin_camp/chest": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/piglin_outstation/outstation_generic": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/piglin_outstation/outstation_treasure": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:pots/pot_wild_ruin": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:archaelogy/ruins": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/ruin_loot_1": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/ruin_loot_2": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/ruin_loot_3": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/ruin_loot_4": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/ruin_loot_5": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/ruin_loot_6": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/ruin_loot_7": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/shrine/combat_pot": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:mob/empty": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/stray_fort_loot_generic": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:pots/pot_stray_fort": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/stray_fort_tresure": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/stray_fort_archer": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:pots/pot_tavern": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:archaelogy/archeology_toxic": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:pots/pot_toxic": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/toxic_lair/generic": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/toxic_lair/brewing": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/toxic_lair/kitchen": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:mob/spider_boss": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:mob/elder_guardian_big": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:pots/pot_undead_crypt": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/village/village_birch_house": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/witch_villa/gardening": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:pots/pot_witch_villa": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/witch_villa/music_room": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/witch_villa/slime_room": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/witch_villa/dirty_clothes": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/witch_villa/kitchen": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/witch_villa/general_storage": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/witch_villa/lab": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/witch_villa/library": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/witch_villa/pumpkin_room": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/witch_villa/bedroom": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/piglin_donjon/donjon_generic": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:keys/piglin_donjon_key": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/jungle_ruins/jungle_ruins_house": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"nova_structures:chests/jungle_ruins/jungle_ruins_main_temple_wild": [
+"dungeons-and-taverns-v4.4.4.jar"
+],
+"minecraft:chests/jungle_temple_dispenser": [
+"floating_islands-1.5.3-1.21.1-neoforge.jar"
+],
+"graveyard:chests/small_loot": [
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar"
+],
+"graveyard:chests/brewing_loot": [
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar"
+],
+"graveyard:chests/crypt_loot": [
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar"
+],
+"graveyard:chests/crypt_urn_loot": [
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar"
+],
+"graveyard:chests/misc_loot": [
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar"
+],
+"graveyard:chests/great_crypt_loot": [
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar"
+],
+"graveyard:chests/ore_loot": [
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar"
+],
+"graveyard:chests/medium_loot": [
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar"
+],
+"graveyard:chests/large_loot": [
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar"
+],
+"graveyard:chests/bone_loot": [
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar"
+],
+"graveyard:chests/flesh_loot": [
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar"
+],
+"graveyard:chests/flower_loot": [
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar"
+],
+"graveyard:chests/creeper_loot": [
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar"
+],
+"graveyard:chests/large_graveyard_loot": [
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar"
+],
+"graveyard:chests/candle_loot": [
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar"
+],
+"graveyard:chests/medium_graveyard_loot": [
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar"
+],
+"graveyard:chests/totem_loot": [
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar"
+],
+"graveyard:chests/desert_graveyard_loot": [
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar"
+],
+"graveyard:chests/small_graveyard_loot": [
+"graveyard-NEOFORGE-4.0.1+mc1.21.1.jar"
+],
+"minecraft:chests/abandoned_mineshaft": [
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"sky_whale_ship-neoforge-1.21.1.jar"
+],
+"minecraft:chests/trial_chambers/reward": [
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar"
+],
+"minecraft:chests/underwater_ruin_big": [
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"sky_whale_ship-neoforge-1.21.1.jar"
+],
+"minecraft:chests/trial_chambers/reward_rare": [
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar"
+],
+"minecraft:chests/ancient_city": [
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar",
+"sky_whale_ship-neoforge-1.21.1.jar"
+],
+"minecraft:chests/buried_treasure": [
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar"
+],
+"minecraft:chests/ancient_city_ice_box": [
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar"
+],
+"minecraft:chests/ruined_portal": [
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar"
+],
+"minecraft:chests/wood": [
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar"
+],
+"minecraft:chests/random": [
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar"
+],
+"minecraft:chests/mineral": [
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar"
+],
+"minecraft:chests/dye": [
+"grim-kingdoms-lost-structures-ruins-vanilla-edition-2.0.0.jar"
+],
+"iceandfire:chest/graveyard": [
+"iceandfire-2.0.jar"
+],
+"iceandfire:chest/mausoleum_chest": [
+"iceandfire-2.0.jar"
+],
+"irons_spellbooks:chests/battleground/burial_loot": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/battleground/piglin_camp": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/catacombs/wall_loot": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/generic_magic_treasure": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/magic_bookshelf_loot": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/component_storage": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/filler_storage_loot": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/catacombs/coffin_loot": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/catacombs/pot": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/bookshelf_loot": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/catacombs/hidden_trough_treasure": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/wheat": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/citadel/citadel_bookshelf": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/citadel/rampart_supplies": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/citadel/rampart_chest": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/evoker_fort/guard_tower": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/evoker_fort": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"minecraft:empty": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/ice_spider_den/pot": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/ice_spider_den/basement": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/ice_spider_den/dungeon": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/ice_spider_den/cask": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/ice_spider_den/tower": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/impaled_icebreaker/captain_quarters": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/impaled_icebreaker/food_barrel": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/mountain_tower/ice_barrel": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/mangrove_hut/potion_ingredient_storage": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/mangrove_hut": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/mangrove_hut/hidden_potion_storage": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/mountain_tower/mountain_tower": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/pyromancer_tower/fire_ale_trove": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/pyromancer_tower/pyromancer_supplies": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/pyromancer_tower/fire_ale_cask": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/pyromancer_tower/pyromancer_basic_storage": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/pyromancer_tower/old_cask": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/pyromancer_tower/pot": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"irons_spellbooks:chests/pyromancer_tower/burnt_chest": [
+"irons_spellbooks-1.21.1-3.16.3.jar"
+],
+"kingsandmonsters:chests/ogre_outpost_brute": [
+"kingsandmonsters1.2.2.jar"
+],
+"kingsandmonsters:chests/ogre_outpost_tribute": [
+"kingsandmonsters1.2.2.jar"
+],
+"kingsandmonsters:chests/ogre_outpost_grunt": [
+"kingsandmonsters1.2.2.jar"
+],
+"kingsandmonsters:chests/ogre_outpost_common": [
+"kingsandmonsters1.2.2.jar"
+],
+"kingsandmonsters:chests/ogre_kings_fort_tribute": [
+"kingsandmonsters1.2.2.jar"
+],
+"legendary_monsters:chests/ancient_stronghold_loot_table": [
+"legendary_monsters-2.2.4-1.21.1.jar"
+],
+"legendary_monsters:chests/ancient_stronghold_luxury_loot_table": [
+"legendary_monsters-2.2.4-1.21.1.jar"
+],
+"legendary_monsters:chests/cloudy_temple_loot_table": [
+"legendary_monsters-2.2.4-1.21.1.jar"
+],
+"legendary_monsters:chests/collapsed_kingdom_basic_loot_table": [
+"legendary_monsters-2.2.4-1.21.1.jar"
+],
+"legendary_monsters:chests/collapsed_kingdom_luxury_loot_table": [
+"legendary_monsters-2.2.4-1.21.1.jar"
+],
+"minecraft:chests/igloo_chest": [
+"legendary_monsters-2.2.4-1.21.1.jar"
+],
+"legendary_monsters:chests/space_station_loot_table_luxury": [
+"legendary_monsters-2.2.4-1.21.1.jar"
+],
+"legendary_monsters:chests/space_station_loot_table_basic": [
+"legendary_monsters-2.2.4-1.21.1.jar"
+],
+"mowziesmobs:chests/monastery_chest": [
+"mowziesmobs-1.21.1-1.8.2.jar"
+],
+"pet_home:chests/petshop_chest": [
+"redomesticate-2.0.0+1.21.1-neoforge.jar"
+],
+"kaisyn:outpost/exclusives/outpost_beach_barrel": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"kaisyn:outpost/common/food": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"kaisyn:outpost/common/armory": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"kaisyn:outpost/exclusives/outpost_mediterranean_barrel": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"kaisyn:outpost/exclusives/outpost_rustic_barrel": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"kaisyn:village/village_badlands_house": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"kaisyn:village/village_birch_forest_house": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"kaisyn:village/exclusives/village_classic_blacksmith": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"minecraft:chests/village/village_leatherworker": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"kaisyn:village/exclusives/village_mediterranean_house": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"kaisyn:village/exclusives/village_piglin_barrel": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"kaisyn:village/exclusives/village_piglin_house": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"kaisyn:village/exclusives/village_wandering_trader_hut": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"wythers:chests/village/forest_ruins_big_house": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"kaisyn:village/village_forest_ruins/forest_ruins_butcher": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"kaisyn:village/village_forest_ruins/forest_ruins_library": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"kaisyn:village/village_forest_ruins/forest_ruins_temple": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"kaisyn:village/village_jungle_house": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"kaisyn:village/village_mushroom_house": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"kaisyn:village/village_swamp_house": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"kaisyn:archeology/forest_ruins_common": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"kaisyn:archeology/forest_ruins_rare": [
+"t_and_t-fabric-neoforge-1.13.11.jar"
+],
+"tlc:chests/food": [
+"tlc-neoforge-1.21.1-2.1.0.jar"
+],
+"lostcastle:chests/food": [
+"tlc-neoforge-1.21.1-2.1.0.jar"
+],
+"tlc:chests/hided": [
+"tlc-neoforge-1.21.1-2.1.0.jar"
+],
+"tlc:chests/house": [
+"tlc-neoforge-1.21.1-2.1.0.jar"
+],
+"lostcastle:chests/house": [
+"tlc-neoforge-1.21.1-2.1.0.jar"
+],
+"tlc:chests/biblio": [
+"tlc-neoforge-1.21.1-2.1.0.jar"
+],
+"tlc:chests/throne": [
+"tlc-neoforge-1.21.1-2.1.0.jar"
+],
+"tlc:chests/treasure": [
+"tlc-neoforge-1.21.1-2.1.0.jar"
+],
+"tlc:chests/lab": [
+"tlc-neoforge-1.21.1-2.1.0.jar"
+],
+"twilightforest:foundation_basement": [
+"twilightforest-1.21.1-4.8.3345-universal.jar"
+],
+"twilightforest:blocks/ominous_spawner_drops": [
+"twilightforest-1.21.1-4.8.3345-universal.jar"
+],
+"twilightforest:chests/tower_room": [
+"twilightforest-1.21.1-4.8.3345-universal.jar"
+],
+"twilightforest:chests/tower_library": [
+"twilightforest-1.21.1-4.8.3345-universal.jar"
+],
+"twilightforest:chests/tower_enchanting": [
+"twilightforest-1.21.1-4.8.3345-universal.jar"
+],
+"twilightforest:chests/tower_potion": [
+"twilightforest-1.21.1-4.8.3345-universal.jar"
+],
+"twilightforest:chests/casket_loot": [
+"twilightforest-1.21.1-4.8.3345-universal.jar"
+],
+"twilightforest:chests/tower_grave_upper": [
+"twilightforest-1.21.1-4.8.3345-universal.jar"
+],
+"twilightforest:chests/basement": [
+"twilightforest-1.21.1-4.8.3345-universal.jar"
+],
+"twilightforest:chests/hut_junk": [
+"twilightforest-1.21.1-4.8.3345-universal.jar"
+],
+"twilightforest:camp_tent": [
+"twilightforest-1.21.1-4.8.3345-universal.jar"
+]
+}

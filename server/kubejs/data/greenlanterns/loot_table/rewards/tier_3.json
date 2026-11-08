@@ -1,0 +1,1807 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 3,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "min": 15,
+                "max": 30
+              },
+              "options": [
+                "minecraft:protection",
+                "minecraft:fire_protection",
+                "minecraft:blast_protection",
+                "minecraft:projectile_protection",
+                "minecraft:feather_falling",
+                "minecraft:respiration",
+                "minecraft:aqua_affinity",
+                "minecraft:depth_strider",
+                "minecraft:thorns",
+                "minecraft:sharpness",
+                "minecraft:smite",
+                "minecraft:bane_of_arthropods",
+                "minecraft:knockback",
+                "minecraft:fire_aspect",
+                "minecraft:looting",
+                "minecraft:sweeping_edge",
+                "minecraft:efficiency",
+                "minecraft:silk_touch",
+                "minecraft:unbreaking",
+                "minecraft:fortune",
+                "minecraft:power",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:infinity",
+                "minecraft:luck_of_the_sea",
+                "minecraft:lure",
+                "minecraft:loyalty",
+                "minecraft:impaling",
+                "minecraft:riptide",
+                "minecraft:channeling",
+                "minecraft:multishot",
+                "minecraft:quick_charge",
+                "minecraft:piercing",
+                "minecraft:density",
+                "minecraft:breach",
+                "farmersdelight:backstabbing",
+                "combat_roll:acrobat",
+                "combat_roll:longfooted",
+                "combat_roll:multi_roll",
+                "galosphere:sifting",
+                "galosphere:sustain",
+                "create:capacity",
+                "create:potato_recovery",
+                "kingsandmonsters:barbed",
+                "kingsandmonsters:heavy_throw",
+                "netherexp:recoil",
+                "netherexp:volley",
+                "minecraft:mending",
+                "minecraft:frost_walker",
+                "minecraft:soul_speed",
+                "minecraft:swift_sneak",
+                "minecraft:wind_burst",
+                "galosphere:enfeeble",
+                "galosphere:rupture",
+                "kingsandmonsters:tyrant",
+                "netherexp:counterforce",
+                "netherexp:longshot",
+                "apothic_enchanting:boon_of_the_earth",
+                "apothic_enchanting:chainsaw",
+                "apothic_enchanting:chromatic",
+                "apothic_enchanting:crescendo_of_bolts",
+                "apothic_enchanting:growth_serum",
+                "apothic_enchanting:icy_thorns",
+                "apothic_enchanting:knowledge_of_the_ages",
+                "apothic_enchanting:miners_fervor",
+                "apothic_enchanting:natures_blessing",
+                "apothic_enchanting:rebounding",
+                "apothic_enchanting:reflective_defenses",
+                "apothic_enchanting:scavenger",
+                "apothic_enchanting:shield_bash",
+                "apothic_enchanting:stable_footing",
+                "apothic_enchanting:tempting",
+                "apothic_enchanting:worker_exploitation",
+                "apothic_enchanting:berserkers_fury"
+              ]
+            }
+          ],
+          "weight": 10,
+          "quality": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book",
+          "functions": [
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:protection",
+                "minecraft:fire_protection",
+                "minecraft:blast_protection",
+                "minecraft:projectile_protection",
+                "minecraft:feather_falling",
+                "minecraft:respiration",
+                "minecraft:aqua_affinity",
+                "minecraft:depth_strider",
+                "minecraft:thorns",
+                "minecraft:sharpness",
+                "minecraft:smite",
+                "minecraft:bane_of_arthropods",
+                "minecraft:knockback",
+                "minecraft:fire_aspect",
+                "minecraft:looting",
+                "minecraft:sweeping_edge",
+                "minecraft:efficiency",
+                "minecraft:silk_touch",
+                "minecraft:unbreaking",
+                "minecraft:fortune",
+                "minecraft:power",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:infinity",
+                "minecraft:luck_of_the_sea",
+                "minecraft:lure",
+                "minecraft:loyalty",
+                "minecraft:impaling",
+                "minecraft:riptide",
+                "minecraft:channeling",
+                "minecraft:multishot",
+                "minecraft:quick_charge",
+                "minecraft:piercing",
+                "minecraft:density",
+                "minecraft:breach",
+                "farmersdelight:backstabbing",
+                "combat_roll:acrobat",
+                "combat_roll:longfooted",
+                "combat_roll:multi_roll",
+                "galosphere:sifting",
+                "galosphere:sustain",
+                "create:capacity",
+                "create:potato_recovery",
+                "kingsandmonsters:barbed",
+                "kingsandmonsters:heavy_throw",
+                "netherexp:recoil",
+                "netherexp:volley",
+                "minecraft:mending",
+                "minecraft:frost_walker",
+                "minecraft:soul_speed",
+                "minecraft:swift_sneak",
+                "minecraft:wind_burst",
+                "galosphere:enfeeble",
+                "galosphere:rupture",
+                "kingsandmonsters:tyrant",
+                "netherexp:counterforce",
+                "netherexp:longshot",
+                "apothic_enchanting:boon_of_the_earth",
+                "apothic_enchanting:chainsaw",
+                "apothic_enchanting:chromatic",
+                "apothic_enchanting:crescendo_of_bolts",
+                "apothic_enchanting:growth_serum",
+                "apothic_enchanting:icy_thorns",
+                "apothic_enchanting:knowledge_of_the_ages",
+                "apothic_enchanting:miners_fervor",
+                "apothic_enchanting:natures_blessing",
+                "apothic_enchanting:rebounding",
+                "apothic_enchanting:reflective_defenses",
+                "apothic_enchanting:scavenger",
+                "apothic_enchanting:shield_bash",
+                "apothic_enchanting:stable_footing",
+                "apothic_enchanting:tempting",
+                "apothic_enchanting:worker_exploitation",
+                "apothic_enchanting:berserkers_fury"
+              ]
+            }
+          ],
+          "weight": 6,
+          "quality": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:scroll",
+          "functions": [
+            {
+              "function": "irons_spellbooks:randomize_spell",
+              "quality": {
+                "min": 0.2,
+                "max": 0.65
+              }
+            }
+          ],
+          "weight": 12,
+          "quality": 2
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "greenlanterns:chests/parts/irons_runes",
+          "weight": 8,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:blank_rune",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:upgrade_orb",
+          "weight": 2,
+          "quality": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:arcane_ingot",
+          "weight": 2,
+          "quality": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:mithril_scrap",
+          "quality": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:magic_cloth",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "irons_spellbooks:magic_items/basic_curios",
+          "weight": 3,
+          "quality": 2
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "irons_spellbooks:magic_items/all_focuses",
+          "weight": 2,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:iron_spell_book",
+          "quality": 2
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "greenlanterns:chests/parts/irons_mage_armor_light",
+          "weight": 3,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "greenlanterns:chests/parts/irons_magic_weapons",
+          "weight": 2,
+          "quality": 2
+        },
+        {
+          "type": "apotheosis:random_gem",
+          "purities": [
+            "chipped",
+            "flawed",
+            "normal"
+          ],
+          "weight": 6,
+          "quality": 2
+        },
+        {
+          "type": "apotheosis:random_affix_item",
+          "rarities": [
+            "apotheosis:uncommon",
+            "apotheosis:rare",
+            "apotheosis:epic"
+          ],
+          "weight": 5,
+          "quality": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "apotheosis:sigil_of_socketing",
+          "weight": 2,
+          "quality": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "apotheosis:gem_dust",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "greenlanterns:chests/parts/artifacts_t3",
+          "weight": 10,
+          "quality": 2
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "greenlanterns:chests/parts/alshanex_trinkets",
+          "weight": 2,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "alshanex_familiars:magic_power_tier_1",
+          "quality": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "alshanex_familiars:magic_resist_tier_1",
+          "quality": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "alshanex_familiars:life_fruit_tier_1",
+          "quality": 2
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "greenlanterns:chests/parts/ss_diamond",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "greenlanterns:chests/parts/ss_runic",
+          "weight": 2,
+          "quality": 2
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "greenlanterns:chests/parts/ek_steel",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "greenlanterns:chests/parts/ek_diamond",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "greenlanterns:chests/parts/ek_plate_armor",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "greenlanterns:chests/parts/mcd_basic",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cataclysm:black_steel_sword",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "min": 10,
+                "max": 20
+              },
+              "options": [
+                "minecraft:protection",
+                "minecraft:fire_protection",
+                "minecraft:blast_protection",
+                "minecraft:projectile_protection",
+                "minecraft:feather_falling",
+                "minecraft:respiration",
+                "minecraft:aqua_affinity",
+                "minecraft:depth_strider",
+                "minecraft:thorns",
+                "minecraft:sharpness",
+                "minecraft:smite",
+                "minecraft:bane_of_arthropods",
+                "minecraft:knockback",
+                "minecraft:fire_aspect",
+                "minecraft:looting",
+                "minecraft:sweeping_edge",
+                "minecraft:efficiency",
+                "minecraft:silk_touch",
+                "minecraft:unbreaking",
+                "minecraft:fortune",
+                "minecraft:power",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:infinity",
+                "minecraft:luck_of_the_sea",
+                "minecraft:lure",
+                "minecraft:loyalty",
+                "minecraft:impaling",
+                "minecraft:riptide",
+                "minecraft:channeling",
+                "minecraft:multishot",
+                "minecraft:quick_charge",
+                "minecraft:piercing",
+                "minecraft:density",
+                "minecraft:breach",
+                "farmersdelight:backstabbing",
+                "combat_roll:acrobat",
+                "combat_roll:longfooted",
+                "combat_roll:multi_roll",
+                "galosphere:sifting",
+                "galosphere:sustain",
+                "create:capacity",
+                "create:potato_recovery",
+                "kingsandmonsters:barbed",
+                "kingsandmonsters:heavy_throw",
+                "netherexp:recoil",
+                "netherexp:volley",
+                "minecraft:mending",
+                "minecraft:frost_walker",
+                "minecraft:soul_speed",
+                "minecraft:swift_sneak",
+                "minecraft:wind_burst",
+                "galosphere:enfeeble",
+                "galosphere:rupture",
+                "kingsandmonsters:tyrant",
+                "netherexp:counterforce",
+                "netherexp:longshot",
+                "apothic_enchanting:boon_of_the_earth",
+                "apothic_enchanting:chainsaw",
+                "apothic_enchanting:chromatic",
+                "apothic_enchanting:crescendo_of_bolts",
+                "apothic_enchanting:growth_serum",
+                "apothic_enchanting:icy_thorns",
+                "apothic_enchanting:knowledge_of_the_ages",
+                "apothic_enchanting:miners_fervor",
+                "apothic_enchanting:natures_blessing",
+                "apothic_enchanting:rebounding",
+                "apothic_enchanting:reflective_defenses",
+                "apothic_enchanting:scavenger",
+                "apothic_enchanting:shield_bash",
+                "apothic_enchanting:stable_footing",
+                "apothic_enchanting:tempting",
+                "apothic_enchanting:worker_exploitation",
+                "apothic_enchanting:berserkers_fury"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "iceandfire:silver_sword",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "min": 10,
+                "max": 20
+              },
+              "options": [
+                "minecraft:protection",
+                "minecraft:fire_protection",
+                "minecraft:blast_protection",
+                "minecraft:projectile_protection",
+                "minecraft:feather_falling",
+                "minecraft:respiration",
+                "minecraft:aqua_affinity",
+                "minecraft:depth_strider",
+                "minecraft:thorns",
+                "minecraft:sharpness",
+                "minecraft:smite",
+                "minecraft:bane_of_arthropods",
+                "minecraft:knockback",
+                "minecraft:fire_aspect",
+                "minecraft:looting",
+                "minecraft:sweeping_edge",
+                "minecraft:efficiency",
+                "minecraft:silk_touch",
+                "minecraft:unbreaking",
+                "minecraft:fortune",
+                "minecraft:power",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:infinity",
+                "minecraft:luck_of_the_sea",
+                "minecraft:lure",
+                "minecraft:loyalty",
+                "minecraft:impaling",
+                "minecraft:riptide",
+                "minecraft:channeling",
+                "minecraft:multishot",
+                "minecraft:quick_charge",
+                "minecraft:piercing",
+                "minecraft:density",
+                "minecraft:breach",
+                "farmersdelight:backstabbing",
+                "combat_roll:acrobat",
+                "combat_roll:longfooted",
+                "combat_roll:multi_roll",
+                "galosphere:sifting",
+                "galosphere:sustain",
+                "create:capacity",
+                "create:potato_recovery",
+                "kingsandmonsters:barbed",
+                "kingsandmonsters:heavy_throw",
+                "netherexp:recoil",
+                "netherexp:volley",
+                "minecraft:mending",
+                "minecraft:frost_walker",
+                "minecraft:soul_speed",
+                "minecraft:swift_sneak",
+                "minecraft:wind_burst",
+                "galosphere:enfeeble",
+                "galosphere:rupture",
+                "kingsandmonsters:tyrant",
+                "netherexp:counterforce",
+                "netherexp:longshot",
+                "apothic_enchanting:boon_of_the_earth",
+                "apothic_enchanting:chainsaw",
+                "apothic_enchanting:chromatic",
+                "apothic_enchanting:crescendo_of_bolts",
+                "apothic_enchanting:growth_serum",
+                "apothic_enchanting:icy_thorns",
+                "apothic_enchanting:knowledge_of_the_ages",
+                "apothic_enchanting:miners_fervor",
+                "apothic_enchanting:natures_blessing",
+                "apothic_enchanting:rebounding",
+                "apothic_enchanting:reflective_defenses",
+                "apothic_enchanting:scavenger",
+                "apothic_enchanting:shield_bash",
+                "apothic_enchanting:stable_footing",
+                "apothic_enchanting:tempting",
+                "apothic_enchanting:worker_exploitation",
+                "apothic_enchanting:berserkers_fury"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "twilightforest:steeleaf_sword",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "min": 10,
+                "max": 20
+              },
+              "options": [
+                "minecraft:protection",
+                "minecraft:fire_protection",
+                "minecraft:blast_protection",
+                "minecraft:projectile_protection",
+                "minecraft:feather_falling",
+                "minecraft:respiration",
+                "minecraft:aqua_affinity",
+                "minecraft:depth_strider",
+                "minecraft:thorns",
+                "minecraft:sharpness",
+                "minecraft:smite",
+                "minecraft:bane_of_arthropods",
+                "minecraft:knockback",
+                "minecraft:fire_aspect",
+                "minecraft:looting",
+                "minecraft:sweeping_edge",
+                "minecraft:efficiency",
+                "minecraft:silk_touch",
+                "minecraft:unbreaking",
+                "minecraft:fortune",
+                "minecraft:power",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:infinity",
+                "minecraft:luck_of_the_sea",
+                "minecraft:lure",
+                "minecraft:loyalty",
+                "minecraft:impaling",
+                "minecraft:riptide",
+                "minecraft:channeling",
+                "minecraft:multishot",
+                "minecraft:quick_charge",
+                "minecraft:piercing",
+                "minecraft:density",
+                "minecraft:breach",
+                "farmersdelight:backstabbing",
+                "combat_roll:acrobat",
+                "combat_roll:longfooted",
+                "combat_roll:multi_roll",
+                "galosphere:sifting",
+                "galosphere:sustain",
+                "create:capacity",
+                "create:potato_recovery",
+                "kingsandmonsters:barbed",
+                "kingsandmonsters:heavy_throw",
+                "netherexp:recoil",
+                "netherexp:volley",
+                "minecraft:mending",
+                "minecraft:frost_walker",
+                "minecraft:soul_speed",
+                "minecraft:swift_sneak",
+                "minecraft:wind_burst",
+                "galosphere:enfeeble",
+                "galosphere:rupture",
+                "kingsandmonsters:tyrant",
+                "netherexp:counterforce",
+                "netherexp:longshot",
+                "apothic_enchanting:boon_of_the_earth",
+                "apothic_enchanting:chainsaw",
+                "apothic_enchanting:chromatic",
+                "apothic_enchanting:crescendo_of_bolts",
+                "apothic_enchanting:growth_serum",
+                "apothic_enchanting:icy_thorns",
+                "apothic_enchanting:knowledge_of_the_ages",
+                "apothic_enchanting:miners_fervor",
+                "apothic_enchanting:natures_blessing",
+                "apothic_enchanting:rebounding",
+                "apothic_enchanting:reflective_defenses",
+                "apothic_enchanting:scavenger",
+                "apothic_enchanting:shield_bash",
+                "apothic_enchanting:stable_footing",
+                "apothic_enchanting:tempting",
+                "apothic_enchanting:worker_exploitation",
+                "apothic_enchanting:berserkers_fury"
+              ]
+            }
+          ],
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "galosphere:sterling_helmet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "galosphere:sterling_chestplate"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "galosphere:sterling_leggings"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "galosphere:sterling_boots"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "iceandfire:dragonbone",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ],
+          "weight": 2,
+          "quality": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "iceandfire:shiny_scales",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "iceandfire:siren_tear"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "iceandfire:iron_hippogryph_armor"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "bookofdragons:gronckle_scales",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "bookofdragons:deadlynadder_scales",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sophisticatedbackpacks:copper_backpack",
+          "quality": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sophisticatedbackpacks:stack_upgrade_tier_1",
+          "weight": 2,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sophisticatedbackpacks:magnet_upgrade"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sophisticatedbackpacks:feeding_upgrade"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sophisticatedbackpacks:crafting_upgrade"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sophisticatedbackpacks:refill_upgrade"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "waystones:warp_stone",
+          "quality": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "waystones:attuned_shard"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_apple",
+          "weight": 4,
+          "quality": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 3
+              }
+            }
+          ],
+          "weight": 3,
+          "quality": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:experience_bottle",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 4,
+                "max": 8
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_horse_armor"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "twilightforest:charm_of_keeping_1",
+          "quality": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "twilightforest:ore_magnet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "twilightforest:transformation_powder",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 3,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:roast_chicken",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:honey_glazed_ham",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:shepherds_pie",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:steak_and_potatoes",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:pasta_with_mutton_chop",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:ratatouille",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:squid_ink_pasta",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:glow_berry_custard",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_carrot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ],
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "netherexp:cooked_hogham",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "twilightforest:venison_jerky",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "alexsmobs:kangaroo_burger",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:builders_tea",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:honeyed_apple",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 6
+              }
+            }
+          ],
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ],
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "weight": 5,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ],
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:brass_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ],
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:zinc_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ],
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:precision_mechanism",
+          "weight": 3,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:electron_tube",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ],
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:sturdy_sheet",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "weight": 2,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:polished_rose_quartz",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "mekanism:ingot_osmium",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ],
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "mekanism:ingot_steel",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ],
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "mekanism:alloy_infused",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ],
+          "weight": 4,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "mekanism:basic_control_circuit",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "weight": 3,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "mekanism:ingot_bronze",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "iceandfire:silver_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ],
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "iceandfire:sapphire_gem",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "weight": 3,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "galosphere:palladium_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ],
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cataclysm:black_steel_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "weight": 3,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cataclysm:ancient_metal_nugget",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "graveyard:dark_iron_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "born_in_chaos_v1:dark_metal_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "kingsandmonsters:golden_ogre_tooth",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "twilightforest:steeleaf_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "twilightforest:ironwood_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ae2:fluix_crystal",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ae2:charged_certus_quartz_crystal",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "createaddition:electrum_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "discerning_the_eldritch:starmetal_nugget",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "netherexp:phasmo_shard",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "bookofdragons:gronckle_iron",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "iceandfire:amphithere_feather",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ],
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "iceandfire:troll_tusk"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:obsidian",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:blaze_rod",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ],
+          "weight": 4,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ender_pearl",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ],
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ghast_tear",
+          "weight": 2,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:long_strength"
+            }
+          ],
+          "weight": 3,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:long_swiftness"
+            }
+          ],
+          "weight": 3,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:strong_healing"
+            }
+          ],
+          "weight": 3,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:long_fire_resistance"
+            }
+          ],
+          "weight": 3,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:long_regeneration"
+            }
+          ],
+          "weight": 2,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:long_night_vision"
+            }
+          ],
+          "weight": 2,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:long_invisibility"
+            }
+          ],
+          "weight": 2,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:long_water_breathing"
+            }
+          ],
+          "weight": 2,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:strong_leaping"
+            }
+          ],
+          "weight": 2,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:long_slow_falling"
+            }
+          ],
+          "weight": 2,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "apothic_attributes:knowledge"
+            }
+          ],
+          "weight": 2,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "apothic_attributes:resistance"
+            }
+          ],
+          "weight": 2,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "apothic_attributes:vitality"
+            }
+          ],
+          "weight": 2,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "apothic_attributes:haste"
+            }
+          ],
+          "weight": 2,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "apothic_attributes:absorption"
+            }
+          ],
+          "weight": 2,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "galosphere:long_astral"
+            }
+          ],
+          "weight": 2,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "greenlanterns:chests/parts/irons_elixirs",
+          "weight": 6,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:arcane_essence",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 4
+              }
+            }
+          ],
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:uncommon_ink",
+          "weight": 4,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:rare_ink",
+          "weight": 2,
+          "quality": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:cinder_essence",
+          "weight": 2,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "waystones:warp_scroll",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "waystones:bound_scroll",
+          "weight": 2,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "waystones:warp_dust",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 3,
+                "max": 6
+              }
+            }
+          ],
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:experience_bottle",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ],
+          "weight": 6,
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "companions:nether_coin",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ],
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 5,
+                "max": 12
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:experience_bottle",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 3,
+                "max": 8
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
