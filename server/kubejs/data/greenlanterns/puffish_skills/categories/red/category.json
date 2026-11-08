@@ -1,0 +1,46 @@
+{
+	"title": {
+		"text": "Red Lantern · Bloodfire Berserker",
+		"color": "#e8452c"
+	},
+	"description": "Rage. Fire and Blood magic, two-handed fury, the Nether.",
+	"icon": {
+		"type": "item",
+		"data": {
+			"item": "createlanterns:red_power_ring"
+		}
+	},
+	"background": "minecraft:textures/gui/advancements/backgrounds/nether.png",
+	"unlocked_by_default": false,
+	"starting_points": 1,
+	"colors": {
+		"connections": {
+			"locked": {
+				"fill": "#4b4b4b",
+				"stroke": "#1c1c1c"
+			},
+			"available": {
+				"fill": "#f2988a",
+				"stroke": "#1c1c1c"
+			},
+			"affordable": {
+				"fill": "#ec6a56",
+				"stroke": "#1c1c1c"
+			},
+			"unlocked": {
+				"fill": "#e8452c",
+				"stroke": "#1c1c1c"
+			},
+			"excluded": {
+				"fill": "#7a1f1f",
+				"stroke": "#2a0b0b"
+			}
+		},
+		"points": {
+			"fill": "#e8452c",
+			"stroke": "#1c1c1c"
+		}
+	},
+	"spent_points_limit": 45,
+	"extra_description": "Unlocked by your class quest. Capstones need 25 points spent in this tree. You can spend at most 45 points here, so choose."
+}

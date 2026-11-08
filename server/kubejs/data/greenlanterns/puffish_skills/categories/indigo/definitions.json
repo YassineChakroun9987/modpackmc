@@ -1,0 +1,1052 @@
+{
+	"indigo_root": {
+		"title": {
+			"text": "Call of the Wild",
+			"color": "#5b5bd6"
+		},
+		"description": "+3% Pet Damage",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "createlanterns:indigo_power_ring"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "goal"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:tamed_damage",
+					"value": 0.03,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b1_a1": {
+		"title": "Conjurer I",
+		"description": "+4% Summon Damage",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "irons_spellbooks:conjurers_talisman"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:summon_damage",
+					"value": 0.04,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b1_a2": {
+		"title": "Spirit Reserve",
+		"description": "+15 Max Mana",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "irons_spellbooks:mana_upgrade_orb"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:max_mana",
+					"value": 15,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b1_b1": {
+		"title": "Conjurer II",
+		"description": "+4% Summon Damage",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "irons_spellbooks:conjurers_talisman"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:summon_damage",
+					"value": 0.04,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b1_b2": {
+		"title": "Familiar Bond I",
+		"description": "+5% Familiar Damage",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "alshanex_familiars:summoner_trinket"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "familiarslib:familiar_damage",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b1_b3": {
+		"title": "Quick Call",
+		"description": "+3% Spell Cooldown Reduction",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "irons_spellbooks:cooldown_upgrade_orb"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:cooldown_reduction",
+					"value": 0.03,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b1_b4": {
+		"title": "Familiar Bond II",
+		"description": "+5% Familiar Damage",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "alshanex_familiars:familiar_tome"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "familiarslib:familiar_damage",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b1_a3": {
+		"title": {
+			"text": "Pack Call",
+			"color": "#5b5bd6"
+		},
+		"description": "+6% Summon Damage\n+15 Max Mana",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "irons_spellbooks:greater_conjurers_talisman"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "goal"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:summon_damage",
+					"value": 0.06,
+					"operation": "multiply_base"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:max_mana",
+					"value": 15,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 2
+	},
+	"indigo_b1_c1": {
+		"title": "Swift Summons",
+		"description": "+3% Cast Time Reduction",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "irons_spellbooks:cast_time_ring"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:cast_time_reduction",
+					"value": 0.03,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b1_c2": {
+		"title": "Wild Spring",
+		"description": "+5% Mana Regeneration",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "irons_spellbooks:mana_ring"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:mana_regen",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b1_a4": {
+		"title": {
+			"text": "Kindred Spirits",
+			"color": "#5b5bd6"
+		},
+		"description": "+6% Summon Damage\n+5% Familiar Damage",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "alshanex_familiars:summoner_shard"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "goal"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:summon_damage",
+					"value": 0.06,
+					"operation": "multiply_base"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "familiarslib:familiar_damage",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 2
+	},
+	"indigo_b1_cap": {
+		"title": {
+			"text": "Lord of the Wild",
+			"color": "gold"
+		},
+		"description": "+12% Summon Damage\n+5% Spell Cooldown Reduction\n+25 Max Mana",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "irons_spellbooks:necronomicon_spell_book"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "challenge"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:summon_damage",
+					"value": 0.12,
+					"operation": "multiply_base"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:cooldown_reduction",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:max_mana",
+					"value": 25,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 5,
+		"required_spent_points": 25,
+		"extra_description": "Requires 25 points spent in this tree."
+	},
+	"indigo_b2_a1": {
+		"title": "Keen Eye",
+		"description": "+3% Ranged Damage",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:bow"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:ranged_damage",
+					"value": 0.03,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b2_a2": {
+		"title": "Quick Draw",
+		"description": "+5% Bow Draw Speed",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:string"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "apothic_attributes:draw_speed",
+					"value": 0.05,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b2_b1": {
+		"title": "Broadheads",
+		"description": "+5% Arrow Damage",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:arrow"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "apothic_attributes:arrow_damage",
+					"value": 0.05,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b2_b2": {
+		"title": "Bolt Thrower",
+		"description": "+5% Crossbow Bolt Speed",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:crossbow"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:crossbow_projectile_speed",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b2_b3": {
+		"title": "Flight Feathers",
+		"description": "+5% Arrow Velocity",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:spectral_arrow"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "apothic_attributes:arrow_velocity",
+					"value": 0.05,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b2_b4": {
+		"title": "Steady Aim",
+		"description": "+3% Ranged Damage",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:bow"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:ranged_damage",
+					"value": 0.03,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b2_a3": {
+		"title": {
+			"text": "Hunter's Mark",
+			"color": "#5b5bd6"
+		},
+		"description": "+2% Critical Strike Chance\n+3% Ranged Damage",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:target"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "goal"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "apothic_attributes:crit_chance",
+					"value": 0.02,
+					"operation": "addition"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:ranged_damage",
+					"value": 0.03,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 2
+	},
+	"indigo_b2_c1": {
+		"title": "Light Step",
+		"description": "+2% Movement Speed",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:sugar"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.movement_speed",
+					"value": 0.02,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b2_c2": {
+		"title": "Evasive Hunter",
+		"description": "+1% Dodge Chance",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:phantom_membrane"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "apothic_attributes:dodge_chance",
+					"value": 0.01,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b2_a4": {
+		"title": {
+			"text": "Deadeye",
+			"color": "#5b5bd6"
+		},
+		"description": "+5% Arrow Damage\n+5% Bow Draw Speed",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "irons_spellbooks:autoloader_crossbow"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "goal"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "apothic_attributes:arrow_damage",
+					"value": 0.05,
+					"operation": "addition"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "apothic_attributes:draw_speed",
+					"value": 0.05,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 2
+	},
+	"indigo_b2_cap": {
+		"title": {
+			"text": "Alpha Predator",
+			"color": "gold"
+		},
+		"description": "+6% Ranged Damage\n+10% Critical Strike Damage\n+3% Movement Speed",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:spyglass"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "challenge"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:ranged_damage",
+					"value": 0.06,
+					"operation": "multiply_base"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "apothic_attributes:crit_damage",
+					"value": 0.1,
+					"operation": "addition"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.movement_speed",
+					"value": 0.03,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 5,
+		"required_spent_points": 25,
+		"extra_description": "Requires 25 points spent in this tree."
+	},
+	"indigo_b3_a1": {
+		"title": "Pack Leader",
+		"description": "+4% Pet Damage",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:bone"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:tamed_damage",
+					"value": 0.04,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b3_a2": {
+		"title": "Guardian Bond",
+		"description": "+4% Pet Damage Reduction",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:wolf_armor"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:tamed_resistance",
+					"value": 0.04,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b3_b1": {
+		"title": "Trail Rider",
+		"description": "+5% Mount Speed",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:saddle"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:mount_speed",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b3_b2": {
+		"title": "Fangs",
+		"description": "+4% Pet Damage",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:bone"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:tamed_damage",
+					"value": 0.04,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b3_b3": {
+		"title": "Long Ride",
+		"description": "+5% Mount Speed",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:golden_carrot"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:mount_speed",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b3_b4": {
+		"title": "Thick Fur",
+		"description": "+4% Pet Damage Reduction",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:wolf_armor"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:tamed_resistance",
+					"value": 0.04,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b3_a3": {
+		"title": {
+			"text": "Bond of Trust",
+			"color": "#5b5bd6"
+		},
+		"description": "+5% Pet Damage\n+5% Pet Damage Reduction",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:lead"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "goal"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:tamed_damage",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:tamed_resistance",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 2
+	},
+	"indigo_b3_c1": {
+		"title": "Farmhand",
+		"description": "+5% Natural Regeneration",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:wheat"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:natural_regeneration",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b3_c2": {
+		"title": "Green Thumb",
+		"description": "+0.5 Luck",
+		"icon": {
+			"type": "effect",
+			"data": {
+				"effect": "minecraft:luck"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.luck",
+					"value": 0.5,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"indigo_b3_a4": {
+		"title": {
+			"text": "Harvest Moon",
+			"color": "#5b5bd6"
+		},
+		"description": "+10% Stamina (slower hunger)\n+5% Pet Damage",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:hay_block"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "goal"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:stamina",
+					"value": 0.1,
+					"operation": "multiply_base"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:tamed_damage",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 2
+	},
+	"indigo_b3_cap": {
+		"title": {
+			"text": "Heart of the Pack",
+			"color": "gold"
+		},
+		"description": "+10% Pet Damage\n+10% Pet Damage Reduction\n+5% Mount Speed",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:sniffer_egg"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "challenge"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:tamed_damage",
+					"value": 0.1,
+					"operation": "multiply_base"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:tamed_resistance",
+					"value": 0.1,
+					"operation": "multiply_base"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:mount_speed",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 5,
+		"required_spent_points": 25,
+		"extra_description": "Requires 25 points spent in this tree."
+	}
+}

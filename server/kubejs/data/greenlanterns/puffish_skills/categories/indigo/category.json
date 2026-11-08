@@ -1,0 +1,46 @@
+{
+	"title": {
+		"text": "Indigo Lantern · Wildheart",
+		"color": "#5b5bd6"
+	},
+	"description": "Compassion. Summoning, the ranger, beasts, breeding and farms.",
+	"icon": {
+		"type": "item",
+		"data": {
+			"item": "createlanterns:indigo_power_ring"
+		}
+	},
+	"background": "minecraft:textures/gui/advancements/backgrounds/husbandry.png",
+	"unlocked_by_default": false,
+	"starting_points": 1,
+	"colors": {
+		"connections": {
+			"locked": {
+				"fill": "#4b4b4b",
+				"stroke": "#1c1c1c"
+			},
+			"available": {
+				"fill": "#a4a4e8",
+				"stroke": "#1c1c1c"
+			},
+			"affordable": {
+				"fill": "#7b7bde",
+				"stroke": "#1c1c1c"
+			},
+			"unlocked": {
+				"fill": "#5b5bd6",
+				"stroke": "#1c1c1c"
+			},
+			"excluded": {
+				"fill": "#7a1f1f",
+				"stroke": "#2a0b0b"
+			}
+		},
+		"points": {
+			"fill": "#5b5bd6",
+			"stroke": "#1c1c1c"
+		}
+	},
+	"spent_points_limit": 45,
+	"extra_description": "Unlocked by your class quest. Capstones need 25 points spent in this tree. You can spend at most 45 points here, so choose."
+}

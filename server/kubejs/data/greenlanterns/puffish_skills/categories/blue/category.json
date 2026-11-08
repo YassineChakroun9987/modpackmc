@@ -1,0 +1,46 @@
+{
+	"title": {
+		"text": "Blue Lantern · Frostbinder",
+		"color": "#4aa3ff"
+	},
+	"description": "Hope. Ice magic, the battlemage, frozen lands and the sky.",
+	"icon": {
+		"type": "item",
+		"data": {
+			"item": "createlanterns:blue_power_ring"
+		}
+	},
+	"background": "minecraft:textures/block/packed_ice.png",
+	"unlocked_by_default": false,
+	"starting_points": 1,
+	"colors": {
+		"connections": {
+			"locked": {
+				"fill": "#4b4b4b",
+				"stroke": "#1c1c1c"
+			},
+			"available": {
+				"fill": "#9bccff",
+				"stroke": "#1c1c1c"
+			},
+			"affordable": {
+				"fill": "#6eb5ff",
+				"stroke": "#1c1c1c"
+			},
+			"unlocked": {
+				"fill": "#4aa3ff",
+				"stroke": "#1c1c1c"
+			},
+			"excluded": {
+				"fill": "#7a1f1f",
+				"stroke": "#2a0b0b"
+			}
+		},
+		"points": {
+			"fill": "#4aa3ff",
+			"stroke": "#1c1c1c"
+		}
+	},
+	"spent_points_limit": 45,
+	"extra_description": "Unlocked by your class quest. Capstones need 25 points spent in this tree. You can spend at most 45 points here, so choose."
+}

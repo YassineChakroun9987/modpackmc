@@ -1,0 +1,46 @@
+{
+	"title": {
+		"text": "Green Lantern · Lightwarden",
+		"color": "#3ec24a"
+	},
+	"description": "Will. Evocation and Holy magic, the paladin, villages and raids.",
+	"icon": {
+		"type": "item",
+		"data": {
+			"item": "createlanterns:power_ring"
+		}
+	},
+	"background": "minecraft:textures/block/mossy_stone_bricks.png",
+	"unlocked_by_default": false,
+	"starting_points": 1,
+	"colors": {
+		"connections": {
+			"locked": {
+				"fill": "#4b4b4b",
+				"stroke": "#1c1c1c"
+			},
+			"available": {
+				"fill": "#94dd9b",
+				"stroke": "#1c1c1c"
+			},
+			"affordable": {
+				"fill": "#64ce6e",
+				"stroke": "#1c1c1c"
+			},
+			"unlocked": {
+				"fill": "#3ec24a",
+				"stroke": "#1c1c1c"
+			},
+			"excluded": {
+				"fill": "#7a1f1f",
+				"stroke": "#2a0b0b"
+			}
+		},
+		"points": {
+			"fill": "#3ec24a",
+			"stroke": "#1c1c1c"
+		}
+	},
+	"spent_points_limit": 45,
+	"extra_description": "Unlocked by your class quest. Capstones need 25 points spent in this tree. You can spend at most 45 points here, so choose."
+}

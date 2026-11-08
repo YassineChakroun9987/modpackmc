@@ -1,0 +1,46 @@
+{
+	"title": {
+		"text": "Orange Lantern · Hoardwarden",
+		"color": "#f39c34"
+	},
+	"description": "Avarice. Earth magic, the heavy knight, mines and treasure.",
+	"icon": {
+		"type": "item",
+		"data": {
+			"item": "createlanterns:orange_power_ring"
+		}
+	},
+	"background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+	"unlocked_by_default": false,
+	"starting_points": 1,
+	"colors": {
+		"connections": {
+			"locked": {
+				"fill": "#4b4b4b",
+				"stroke": "#1c1c1c"
+			},
+			"available": {
+				"fill": "#f8c88f",
+				"stroke": "#1c1c1c"
+			},
+			"affordable": {
+				"fill": "#f5af5c",
+				"stroke": "#1c1c1c"
+			},
+			"unlocked": {
+				"fill": "#f39c34",
+				"stroke": "#1c1c1c"
+			},
+			"excluded": {
+				"fill": "#7a1f1f",
+				"stroke": "#2a0b0b"
+			}
+		},
+		"points": {
+			"fill": "#f39c34",
+			"stroke": "#1c1c1c"
+		}
+	},
+	"spent_points_limit": 45,
+	"extra_description": "Unlocked by your class quest. Capstones need 25 points spent in this tree. You can spend at most 45 points here, so choose."
+}

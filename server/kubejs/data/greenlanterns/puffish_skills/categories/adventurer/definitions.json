@@ -1,0 +1,687 @@
+{
+	"adventurer_root": {
+		"title": {
+			"text": "Wanderer's Resolve",
+			"color": "#d8c27a"
+		},
+		"description": "+1 Heart (Max Health 2 HP)",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:compass"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "goal"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.max_health",
+					"value": 2,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"adventurer_b1_a1": {
+		"title": "Tough Skin",
+		"description": "+1 Heart (Max Health 2 HP)",
+		"icon": {
+			"type": "effect",
+			"data": {
+				"effect": "minecraft:health_boost"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.max_health",
+					"value": 2,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"adventurer_b1_b1": {
+		"title": "Padded Gear",
+		"description": "+1 Armor",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:leather_chestplate"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.armor",
+					"value": 1,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"adventurer_b1_b2": {
+		"title": "Quick Recovery",
+		"description": "+5% Natural Regeneration",
+		"icon": {
+			"type": "effect",
+			"data": {
+				"effect": "minecraft:regeneration"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:natural_regeneration",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"adventurer_b1_a2": {
+		"title": {
+			"text": "Hardened",
+			"color": "#d8c27a"
+		},
+		"description": "+1 Heart (Max Health 2 HP)\n+0.5 Armor Toughness",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:iron_chestplate"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "goal"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.max_health",
+					"value": 2,
+					"operation": "addition"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.armor_toughness",
+					"value": 0.5,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 2
+	},
+	"adventurer_b1_c1": {
+		"title": "Sure Footing",
+		"description": "+5% Knockback Resistance",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:anvil"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.knockback_resistance",
+					"value": 0.05,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"adventurer_b1_c2": {
+		"title": "Second Breath",
+		"description": "+5% Natural Regeneration",
+		"icon": {
+			"type": "effect",
+			"data": {
+				"effect": "minecraft:regeneration"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:natural_regeneration",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"adventurer_b1_cap": {
+		"title": {
+			"text": "Seasoned Survivor",
+			"color": "gold"
+		},
+		"description": "+1 Heart (Max Health 2 HP)\n+1 Armor\n+0.5 Armor Toughness",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:golden_apple"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "challenge"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.max_health",
+					"value": 2,
+					"operation": "addition"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.armor",
+					"value": 1,
+					"operation": "addition"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.armor_toughness",
+					"value": 0.5,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 4,
+		"required_spent_points": 12,
+		"extra_description": "Requires 12 points spent in this tree."
+	},
+	"adventurer_b2_a1": {
+		"title": "Brisk Pace",
+		"description": "+2% Movement Speed",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:sugar"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.movement_speed",
+					"value": 0.02,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"adventurer_b2_b1": {
+		"title": "Spring Step",
+		"description": "+5% Jump Height",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:slime_ball"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:jump",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"adventurer_b2_b2": {
+		"title": "Light Landing",
+		"description": "+1 Safe Fall Distance (blocks)",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:feather"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.safe_fall_distance",
+					"value": 1,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"adventurer_b2_a2": {
+		"title": {
+			"text": "Roadwise",
+			"color": "#d8c27a"
+		},
+		"description": "+2% Movement Speed\n+3% Sprinting Speed",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:leather_boots"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "goal"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.movement_speed",
+					"value": 0.02,
+					"operation": "multiply_base"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:sprinting_speed",
+					"value": 0.03,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 2
+	},
+	"adventurer_b2_c1": {
+		"title": "Strong Swimmer",
+		"description": "+15% Water Movement Efficiency",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:prismarine_shard"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.water_movement_efficiency",
+					"value": 0.15,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"adventurer_b2_c2": {
+		"title": "Rider",
+		"description": "+5% Mount Speed",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:saddle"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:mount_speed",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"adventurer_b2_cap": {
+		"title": {
+			"text": "Pathfinder",
+			"color": "gold"
+		},
+		"description": "+3% Movement Speed\n+2 Safe Fall Distance (blocks)\n+1 Oxygen Bonus",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:filled_map"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "challenge"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.movement_speed",
+					"value": 0.03,
+					"operation": "multiply_base"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.safe_fall_distance",
+					"value": 2,
+					"operation": "addition"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.oxygen_bonus",
+					"value": 1,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 4,
+		"required_spent_points": 12,
+		"extra_description": "Requires 12 points spent in this tree."
+	},
+	"adventurer_b3_a1": {
+		"title": "Lucky Find",
+		"description": "+0.25 Luck",
+		"icon": {
+			"type": "effect",
+			"data": {
+				"effect": "minecraft:luck"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.luck",
+					"value": 0.25,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"adventurer_b3_b1": {
+		"title": "Quick Study",
+		"description": "+5% Experience from Orbs",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:experience_bottle"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:experience",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"adventurer_b3_b2": {
+		"title": "Four-Leaf",
+		"description": "+0.25 Luck",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:rabbit_foot"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.luck",
+					"value": 0.25,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"adventurer_b3_a2": {
+		"title": {
+			"text": "Fortune Smiles",
+			"color": "#d8c27a"
+		},
+		"description": "+0.5 Luck\n+5% Block Breaking Speed",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:emerald"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "goal"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.luck",
+					"value": 0.5,
+					"operation": "addition"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:player.block_break_speed",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 2
+	},
+	"adventurer_b3_c1": {
+		"title": "Practiced Hands",
+		"description": "+5% Mining Speed",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:iron_pickaxe"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:mining_speed",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"adventurer_b3_c2": {
+		"title": "Charmed",
+		"description": "+0.25 Luck",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:gold_nugget"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.luck",
+					"value": 0.25,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"adventurer_b3_cap": {
+		"title": {
+			"text": "Fortune's Favourite",
+			"color": "gold"
+		},
+		"description": "+0.75 Luck\n+10% Experience from Orbs",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:emerald_block"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "challenge"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.luck",
+					"value": 0.75,
+					"operation": "addition"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:experience",
+					"value": 0.1,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 4,
+		"required_spent_points": 12,
+		"extra_description": "Requires 12 points spent in this tree."
+	}
+}

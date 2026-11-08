@@ -1,0 +1,3651 @@
+{
+	"level_limit": 50,
+	"experience_per_level": {
+		"type": "expression",
+		"data": {
+			"expression": "60 + 22 * level + 1.0 * level ^ 2"
+		}
+	},
+	"sources": [
+		{
+			"type": "puffish_skills:craft_item",
+			"data": {
+				"variables": {
+					"c0": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "ae2:charger"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c1": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "ae2:controller"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c2": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "ae2:crafting_terminal"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c3": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "ae2:crafting_unit"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c4": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "ae2:drive"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c5": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "ae2:energy_acceptor"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c6": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "ae2:inscriber"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c7": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "ae2:molecular_assembler"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c8": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "ae2:pattern_encoding_terminal"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c9": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "ae2:quantum_ring"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c10": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "ae2:spatial_io_port"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c11": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "ae2:vibration_chamber"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c12": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "ae2:wireless_access_point"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c13": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "ae2:wireless_terminal"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c14": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "aeronautics:adjustable_burner"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c15": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "aeronautics:andesite_propeller"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c16": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "aeronautics:aviators_goggles"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c17": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "aeronautics:gyroscopic_propeller_bearing"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c18": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "aeronautics:mounted_potato_cannon"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c19": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "aeronautics:propeller_bearing"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c20": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "aeronautics:smart_propeller"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c21": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "aeronautics:steam_vent"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c22": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "aeronautics:wooden_propeller"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c23": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:cart_assembler"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c24": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:chain_conveyor"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c25": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:clockwork_bearing"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c26": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:contraption_controls"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c27": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:controls"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c28": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:copper_backtank"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c29": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:deployer"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c30": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:display_link"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c31": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:elevator_pulley"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c32": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:empty_blaze_burner"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c33": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:encased_fan"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c34": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:extendo_grip"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c35": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:gantry_carriage"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c36": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:goggles"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c37": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:item_drain"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c38": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:large_water_wheel"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c39": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:mechanical_arm"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c40": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:mechanical_bearing"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c41": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:mechanical_crafter"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c42": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:mechanical_drill"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c43": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:mechanical_harvester"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c44": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:mechanical_mixer"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c45": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:mechanical_piston"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c46": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:mechanical_plough"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c47": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:mechanical_press"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c48": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:mechanical_pump"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c49": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:mechanical_roller"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c50": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:mechanical_saw"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c51": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:millstone"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c52": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:netherite_backtank"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c53": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:package_frogport"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c54": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:packager"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c55": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:portable_storage_interface"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c56": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:potato_cannon"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c57": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:rope_pulley"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c58": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:rotation_speed_controller"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c59": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:schematicannon"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c60": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:sequenced_gearshift"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c61": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:speedometer"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c62": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:spout"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c63": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:steam_engine"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c64": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:steam_whistle"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c65": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:stock_ticker"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c66": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:stressometer"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c67": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:track_station"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c68": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:wand_of_symmetry"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c69": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:water_wheel"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c70": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:windmill_bearing"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c71": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "create:wrench"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c72": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "createaddition:alternator"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c73": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "createaddition:digital_adapter"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c74": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "createaddition:electric_motor"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c75": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "createaddition:modular_accumulator"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c76": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "createaddition:portable_energy_interface"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c77": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "createaddition:rolling_mill"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c78": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "createaddition:tesla_coil"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c79": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:awakened_core"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c80": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:awakened_crafting_injector"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c81": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:basic_crafting_injector"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c82": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:chaotic_chestpiece"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c83": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:chaotic_core"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c84": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:chaotic_crafting_injector"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c85": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:chaotic_pickaxe"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c86": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:chaotic_sword"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c87": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:crafting_core"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c88": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:draconic_capacitor"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c89": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:draconic_chestpiece"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c90": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:draconic_pickaxe"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c91": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:draconic_sword"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c92": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:draconium_core"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c93": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:energy_core"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c94": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:energy_core_stabilizer"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c95": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:module_core"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c96": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:reactor_core"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c97": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:reactor_injector"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c98": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:wyvern_capacitor"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c99": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:wyvern_chestpiece"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c100": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:wyvern_core"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c101": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:wyvern_crafting_injector"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c102": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:wyvern_pickaxe"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c103": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "draconicevolution:wyvern_sword"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c104": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:advanced_energy_cube"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c105": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:antiprotonic_nucleosynthesizer"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c106": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:atomic_disassembler"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c107": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:basic_energy_cube"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c108": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:chemical_crystallizer"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c109": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:chemical_dissolution_chamber"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c110": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:chemical_infuser"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c111": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:chemical_injection_chamber"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c112": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:chemical_oxidizer"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c113": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:chemical_washer"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c114": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:combiner"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c115": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:crusher"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c116": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:digital_miner"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c117": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:dimensional_stabilizer"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c118": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:electric_bow"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c119": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:electric_pump"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c120": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:electrolytic_separator"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c121": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:elite_energy_cube"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c122": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:energized_smelter"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c123": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:enrichment_chamber"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c124": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:flamethrower"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c125": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:formulaic_assemblicator"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c126": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:free_runners"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c127": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:isotopic_centrifuge"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c128": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:jetpack"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c129": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:meka_tool"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c130": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:mekasuit_bodyarmor"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c131": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:mekasuit_boots"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c132": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:mekasuit_helmet"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c133": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:mekasuit_pants"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c134": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:metallurgic_infuser"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c135": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:modification_station"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c136": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:osmium_compressor"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c137": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:portable_teleporter"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c138": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:precision_sawmill"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c139": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:pressurized_reaction_chamber"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c140": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:purification_chamber"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c141": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:qio_dashboard"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c142": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:qio_drive_array"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c143": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:quantum_entangloporter"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c144": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:robit"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c145": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:rotary_condensentrator"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c146": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:scuba_tank"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c147": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:seismic_vibrator"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c148": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:solar_neutron_activator"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c149": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:sps_casing"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c150": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:steel_casing"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c151": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:supercharged_coil"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c152": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:teleporter"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c153": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanism:ultimate_energy_cube"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c154": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanismgenerators:advanced_solar_generator"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c155": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanismgenerators:bio_generator"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c156": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanismgenerators:electromagnetic_coil"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c157": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanismgenerators:fusion_reactor_controller"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c158": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanismgenerators:gas_burning_generator"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c159": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanismgenerators:heat_generator"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c160": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanismgenerators:rotational_complex"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c161": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanismgenerators:saturating_condenser"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c162": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanismgenerators:solar_generator"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c163": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanismgenerators:turbine_rotor"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c164": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "mekanismgenerators:wind_generator"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c165": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simulated:altitude_sensor"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c166": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simulated:analog_transmission"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c167": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simulated:docking_connector"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c168": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simulated:gimbal_sensor"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c169": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simulated:laser_sensor"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c170": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simulated:navigation_table"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c171": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simulated:physics_assembler"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c172": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simulated:redstone_magnet"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c173": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simulated:rope_winch"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c174": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simulated:steering_wheel"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c175": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simulated:swivel_bearing"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c176": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simulated:throttle_lever"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"c177": {
+						"operations": [
+							{
+								"type": "get_crafted_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simulated:velocity_sensor"
+								}
+							}
+						],
+						"fallback": 0
+					}
+				},
+				"experience": [
+					{
+						"expression": "3 * c0 + 10 * c1 + 5 * c2 + 4 * c3 + 8 * c4 + 3 * c5 + 8 * c6 + 8 * c7 + 5 * c8 + 15 * c9 + 8 * c10 + 3 * c11 + 6 * c12 + 10 * c13 + 5 * c14 + 4 * c15 + 4 * c16 + 12 * c17 + 6 * c18 + 6 * c19 + 10 * c20 + 5 * c21 + 3 * c22 + 4 * c23 + 3 * c24 + 6 * c25 + 3 * c26 + 6 * c27 + 6 * c28 + 6 * c29 + 3 * c30 + 5 * c31 + 4 * c32 + 4 * c33 + 6 * c34 + 3 * c35 + 3 * c36 + 3 * c37 + 6 * c38 + 8 * c39 + 4 * c40 + 4 * c41 + 4 * c42 + 3 * c43 + 5 * c44 + 3 * c45 + 3 * c46 + 5 * c47 + 3 * c48 + 4 * c49 + 4 * c50 + 3 * c51 + 20 * c52 + 4 * c53 + 3 * c54 + 4 * c55 + 6 * c56 + 3 * c57 + 6 * c58 + 10 * c59 + 4 * c60 + 2 * c61 + 4 * c62 + 8 * c63 + 2 * c64 + 6 * c65 + 2 * c66 + 6 * c67 + 6 * c68 + 3 * c69 + 4 * c70 + 2 * c71 + 8 * c72 + 4 * c73 + 8 * c74 + 6 * c75 + 4 * c76 + 5 * c77 + 8 * c78 + 40 * c79 + 20 * c80 + 6 * c81 + 80 * c82 + 80 * c83 + 40 * c84 + 60 * c85 + 60 * c86 + 15 * c87 + 30 * c88 + 50 * c89 + 30 * c90 + 30 * c91 + 8 * c92 + 20 * c93 + 10 * c94 + 5 * c95 + 60 * c96 + 20 * c97 + 15 * c98 + 30 * c99 + 20 * c100 + 12 * c101 + 15 * c102 + 15 * c103 + 10 * c104 + 40 * c105 + 15 * c106 + 5 * c107 + 10 * c108 + 10 * c109 + 8 * c110 + 10 * c111 + 8 * c112 + 8 * c113 + 6 * c114 + 6 * c115 + 30 * c116 + 15 * c117 + 8 * c118 + 6 * c119 + 8 * c120 + 15 * c121 + 6 * c122 + 6 * c123 + 8 * c124 + 8 * c125 + 8 * c126 + 15 * c127 + 15 * c128 + 40 * c129 + 40 * c130 + 40 * c131 + 40 * c132 + 40 * c133 + 6 * c134 + 15 * c135 + 6 * c136 + 15 * c137 + 6 * c138 + 10 * c139 + 8 * c140 + 10 * c141 + 15 * c142 + 20 * c143 + 15 * c144 + 8 * c145 + 5 * c146 + 8 * c147 + 15 * c148 + 10 * c149 + 4 * c150 + 15 * c151 + 20 * c152 + 20 * c153 + 12 * c154 + 6 * c155 + 8 * c156 + 40 * c157 + 15 * c158 + 4 * c159 + 15 * c160 + 8 * c161 + 5 * c162 + 4 * c163 + 8 * c164 + 3 * c165 + 4 * c166 + 5 * c167 + 3 * c168 + 3 * c169 + 8 * c170 + 10 * c171 + 3 * c172 + 4 * c173 + 6 * c174 + 5 * c175 + 4 * c176 + 3 * c177"
+					}
+				]
+			}
+		},
+		{
+			"type": "pufferfish_unofficial_additions:spell_casting",
+			"data": {
+				"variables": {
+					"t": {
+						"operations": [
+							{
+								"type": "player"
+							},
+							{
+								"type": "get_world"
+							},
+							{
+								"type": "get_time_of_day"
+							}
+						],
+						"fallback": 0
+					},
+					"mana": {
+						"operations": [
+							{
+								"type": "mana_cost"
+							}
+						],
+						"fallback": 0
+					},
+					"mps": {
+						"operations": [
+							{
+								"type": "mana_cost_per_second"
+							}
+						],
+						"fallback": 0
+					},
+					"dur": {
+						"operations": [
+							{
+								"type": "cast_duration"
+							}
+						],
+						"fallback": 0
+					},
+					"ticks": {
+						"operations": [
+							{
+								"type": "expected_ticks"
+							}
+						],
+						"fallback": 1
+					},
+					"school_0": {
+						"operations": [
+							{
+								"type": "school"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"school": "irons_spellbooks:lightning"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"school_1": {
+						"operations": [
+							{
+								"type": "school"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"school": "cataclysm_spellbooks:technomancy"
+								}
+							}
+						],
+						"fallback": 0
+					}
+				},
+				"experience": [
+					{
+						"condition": "(school_0 | school_1)",
+						"expression": "floor(1.0 * (0.5 + max(mana, mps * dur) / 30) / max(ticks, 1)) + (fract(1.0 * (0.5 + max(mana, mps * dur) / 30) / max(ticks, 1)) > mod(t, 100) / 100)"
+					}
+				]
+			}
+		},
+		{
+			"type": "puffish_skills:kill_entity",
+			"data": {
+				"variables": {
+					"mh": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_max_health"
+							}
+						],
+						"fallback": 0
+					},
+					"t": {
+						"operations": [
+							{
+								"type": "get_player"
+							},
+							{
+								"type": "get_world"
+							},
+							{
+								"type": "get_time_of_day"
+							}
+						],
+						"fallback": 0
+					},
+					"melee": {
+						"operations": [
+							{
+								"type": "get_damage_source"
+							},
+							{
+								"type": "puffish_skills:is_melee"
+							}
+						],
+						"fallback": 0
+					},
+					"sword": {
+						"operations": [
+							{
+								"type": "get_weapon_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "#minecraft:swords"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"light_0": {
+						"operations": [
+							{
+								"type": "get_weapon_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simplyswords:iron_rapier"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"light_1": {
+						"operations": [
+							{
+								"type": "get_weapon_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simplyswords:iron_katana"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"light_2": {
+						"operations": [
+							{
+								"type": "get_weapon_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simplyswords:iron_twinblade"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"light_3": {
+						"operations": [
+							{
+								"type": "get_weapon_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simplyswords:gold_rapier"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"light_4": {
+						"operations": [
+							{
+								"type": "get_weapon_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simplyswords:gold_katana"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"light_5": {
+						"operations": [
+							{
+								"type": "get_weapon_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simplyswords:gold_twinblade"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"light_6": {
+						"operations": [
+							{
+								"type": "get_weapon_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simplyswords:diamond_rapier"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"light_7": {
+						"operations": [
+							{
+								"type": "get_weapon_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simplyswords:diamond_katana"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"light_8": {
+						"operations": [
+							{
+								"type": "get_weapon_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simplyswords:diamond_twinblade"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"light_9": {
+						"operations": [
+							{
+								"type": "get_weapon_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simplyswords:netherite_rapier"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"light_10": {
+						"operations": [
+							{
+								"type": "get_weapon_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simplyswords:netherite_katana"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"light_11": {
+						"operations": [
+							{
+								"type": "get_weapon_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simplyswords:netherite_twinblade"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"light_12": {
+						"operations": [
+							{
+								"type": "get_weapon_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simplyswords:runic_rapier"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"light_13": {
+						"operations": [
+							{
+								"type": "get_weapon_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simplyswords:runic_katana"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"light_14": {
+						"operations": [
+							{
+								"type": "get_weapon_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "simplyswords:runic_twinblade"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"light_15": {
+						"operations": [
+							{
+								"type": "get_weapon_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "irons_spellbooks:amethyst_rapier"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"light_16": {
+						"operations": [
+							{
+								"type": "get_weapon_item_stack"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"item": "discerning_the_eldritch:forlorn_rapier"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bolt_0": {
+						"operations": [
+							{
+								"type": "get_damage_source"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"damage_type": "#irons_spellbooks:lightning_magic"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bolt_1": {
+						"operations": [
+							{
+								"type": "get_damage_source"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"damage_type": "#minecraft:is_lightning"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"speed": {
+						"operations": [
+							{
+								"type": "get_player"
+							},
+							{
+								"type": "as_living_entity"
+							},
+							{
+								"type": "puffish_skills:get_effect",
+								"data": {
+									"effect": "minecraft:speed"
+								}
+							},
+							{
+								"type": "get_level"
+							}
+						],
+						"fallback": 0
+					},
+					"ex_0": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "minecraft:villager"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"ex_1": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "minecraft:iron_golem"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"ex_2": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "minecraft:snow_golem"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"ex_3": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "minecraft:wandering_trader"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"ex_4": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "minecraft:player"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"ex_5": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "minecraft:armor_stand"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"ex_6": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "guardvillagers:guard"
+								}
+							}
+						],
+						"fallback": 0
+					}
+				},
+				"experience": [
+					{
+						"condition": "!(ex_0 | ex_1 | ex_2 | ex_3 | ex_4 | ex_5 | ex_6)",
+						"expression": "floor(min(mh, 200) / 10 * max(0.6 * melee * sword, 1.0 * melee * (light_0 | light_1 | light_2 | light_3 | light_4 | light_5 | light_6 | light_7 | light_8 | light_9 | light_10 | light_11 | light_12 | light_13 | light_14 | light_15 | light_16), 1.2 * (bolt_0 | bolt_1)) * (1 + 0.5 * (speed > 0))) + (fract(min(mh, 200) / 10 * max(0.6 * melee * sword, 1.0 * melee * (light_0 | light_1 | light_2 | light_3 | light_4 | light_5 | light_6 | light_7 | light_8 | light_9 | light_10 | light_11 | light_12 | light_13 | light_14 | light_15 | light_16), 1.2 * (bolt_0 | bolt_1)) * (1 + 0.5 * (speed > 0))) > mod(t, 100) / 100)"
+					}
+				],
+				"anti_farming_per_chunk": {
+					"limit_per_chunk": 24,
+					"reset_after_seconds": 300
+				}
+			},
+			"team_sharing": {
+				"distance_limit": 32.0
+			}
+		},
+		{
+			"type": "puffish_skills:kill_entity",
+			"data": {
+				"variables": {
+					"bosst_0": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "#c:bosses"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_0": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "minecraft:warden"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_1": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "minecraft:elder_guardian"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_2": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "kingsandmonsters:ogre_lord"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_3": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "graveyard:lich"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_4": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "dog:devourer_head"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_5": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "darkdoppelganger:dark_doppelganger"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_6": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "draconicevolution:draconic_guardian"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_7": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:hydra"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_8": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:sea_serpent"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_9": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:cyclops"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_10": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:gorgon"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_11": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:dread_lich"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_12": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:fire_dragon"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_13": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:ice_dragon"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_14": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:lightning_dragon"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_15": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "born_in_chaos_v1:lord_pumpkinhead"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_16": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "born_in_chaos_v1:supreme_bonescaller"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_17": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "born_in_chaos_v1:krampus"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_18": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "born_in_chaos_v1:nightmare_stalker"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_19": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:ancient_guardian"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_20": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:overgrown_colossus"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_21": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:withered_abomination"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_22": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:frostbitten_golem"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_23": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:endersent"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_24": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:lava_eater"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_25": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:skeletosaurus"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_26": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:warped_fungussus"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_27": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:dune_sentinel"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"nem_0": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "cataclysm:the_harbinger"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"nem_1": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "cataclysm:scylla"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"nem_2": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:lightning_dragon"
+								}
+							}
+						],
+						"fallback": 0
+					}
+				},
+				"experience": [
+					{
+						"condition": "(nem_0 | nem_1 | nem_2)",
+						"expression": "150"
+					},
+					{
+						"condition": "((bosst_0) | (bossx_0 | bossx_1 | bossx_2 | bossx_3 | bossx_4 | bossx_5 | bossx_6 | bossx_7 | bossx_8 | bossx_9 | bossx_10 | bossx_11 | bossx_12 | bossx_13 | bossx_14 | bossx_15 | bossx_16 | bossx_17 | bossx_18 | bossx_19 | bossx_20 | bossx_21 | bossx_22 | bossx_23 | bossx_24 | bossx_25 | bossx_26 | bossx_27)) & !(nem_0 | nem_1 | nem_2)",
+						"expression": "40"
+					}
+				],
+				"anti_farming_per_chunk": {
+					"limit_per_chunk": 40,
+					"reset_after_seconds": 600
+				}
+			},
+			"team_sharing": {
+				"distance_limit": 64.0
+			}
+		}
+	]
+}

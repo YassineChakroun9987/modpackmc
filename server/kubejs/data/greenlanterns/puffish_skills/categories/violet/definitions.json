@@ -1,0 +1,1052 @@
+{
+	"violet_root": {
+		"title": {
+			"text": "Touch of the Void",
+			"color": "#a64ad8"
+		},
+		"description": "+1% Critical Strike Chance",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "createlanterns:violet_power_ring"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "goal"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "apothic_attributes:crit_chance",
+					"value": 0.01,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b1_a1": {
+		"title": "Umbral I",
+		"description": "+3% Ender Spell Power",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "irons_spellbooks:ender_rune"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:ender_spell_power",
+					"value": 0.03,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b1_a2": {
+		"title": "Hollow Reserve",
+		"description": "+15 Max Mana",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "irons_spellbooks:mana_upgrade_orb"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:max_mana",
+					"value": 15,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b1_b1": {
+		"title": "Umbral II",
+		"description": "+3% Ender Spell Power",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "irons_spellbooks:ender_rune"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:ender_spell_power",
+					"value": 0.03,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b1_b2": {
+		"title": "Whispers I",
+		"description": "+4% Eldritch Spell Power",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "irons_spellbooks:eldritch_manuscript"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:eldritch_spell_power",
+					"value": 0.04,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b1_b3": {
+		"title": "Blink Cadence",
+		"description": "+3% Cast Time Reduction",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "irons_spellbooks:cast_time_ring"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:cast_time_reduction",
+					"value": 0.03,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b1_b4": {
+		"title": "Whispers II",
+		"description": "+4% Eldritch Spell Power",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:echo_shard"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:eldritch_spell_power",
+					"value": 0.04,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b1_a3": {
+		"title": {
+			"text": "Void Touched",
+			"color": "#a64ad8"
+		},
+		"description": "+5% Ender Spell Power\n+15 Max Mana",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "irons_spellbooks:ender_upgrade_orb"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "goal"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:ender_spell_power",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:max_mana",
+					"value": 15,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 2
+	},
+	"violet_b1_c1": {
+		"title": "Patient Shadow",
+		"description": "+3% Spell Cooldown Reduction",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "irons_spellbooks:cooldown_upgrade_orb"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:cooldown_reduction",
+					"value": 0.03,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b1_c2": {
+		"title": "Night Tide",
+		"description": "+5% Mana Regeneration",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "irons_spellbooks:mana_ring"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:mana_regen",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b1_a4": {
+		"title": {
+			"text": "Abyssal Gaze",
+			"color": "#a64ad8"
+		},
+		"description": "+5% Ender Spell Power\n+5% Eldritch Spell Power",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:ender_eye"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "goal"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:ender_spell_power",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:eldritch_spell_power",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 2
+	},
+	"violet_b1_cap": {
+		"title": {
+			"text": "Event Horizon",
+			"color": "gold"
+		},
+		"description": "+10% Ender Spell Power\n+5% Eldritch Spell Power\n+5% Spell Cooldown Reduction",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:dragon_egg"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "challenge"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:ender_spell_power",
+					"value": 0.1,
+					"operation": "multiply_base"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:eldritch_spell_power",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:cooldown_reduction",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 5,
+		"required_spent_points": 25,
+		"extra_description": "Requires 25 points spent in this tree."
+	},
+	"violet_b2_a1": {
+		"title": "Find the Gap",
+		"description": "+2% Critical Strike Chance",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:target"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "apothic_attributes:crit_chance",
+					"value": 0.02,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b2_a2": {
+		"title": "Quick Knives",
+		"description": "+2% Attack Speed",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraftdungeonsv1:dagger"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.attack_speed",
+					"value": 0.02,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b2_b1": {
+		"title": "Cruel Edge",
+		"description": "+6% Critical Strike Damage",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:netherite_sword"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "apothic_attributes:crit_damage",
+					"value": 0.06,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b2_b2": {
+		"title": "Slip Away",
+		"description": "+1% Dodge Chance",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:phantom_membrane"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "apothic_attributes:dodge_chance",
+					"value": 0.01,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b2_b3": {
+		"title": "Through the Seams",
+		"description": "+1 Armor Pierce",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:arrow"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "apothic_attributes:armor_pierce",
+					"value": 1,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b2_b4": {
+		"title": "Light Feet",
+		"description": "+2% Movement Speed",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:sugar"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.movement_speed",
+					"value": 0.02,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b2_a3": {
+		"title": {
+			"text": "Backstab",
+			"color": "#a64ad8"
+		},
+		"description": "+8% Critical Strike Damage\n+2% Critical Strike Chance",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "graveyard:bone_dagger"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "goal"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "apothic_attributes:crit_damage",
+					"value": 0.08,
+					"operation": "addition"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "apothic_attributes:crit_chance",
+					"value": 0.02,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 2
+	},
+	"violet_b2_c1": {
+		"title": "Blood Price",
+		"description": "+1% Life Steal",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "irons_spellbooks:blood_vial"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "apothic_attributes:life_steal",
+					"value": 0.01,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b2_c2": {
+		"title": "Phantom Step",
+		"description": "+1% Dodge Chance",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:phantom_membrane"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "apothic_attributes:dodge_chance",
+					"value": 0.01,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b2_a4": {
+		"title": {
+			"text": "Shadowstep",
+			"color": "#a64ad8"
+		},
+		"description": "+0.5 Combat Roll Distance (blocks)\n+2% Movement Speed",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "irons_spellbooks:shadowwalker_boots"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "goal"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "combat_roll:distance",
+					"value": 0.5,
+					"operation": "addition"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.movement_speed",
+					"value": 0.02,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 2
+	},
+	"violet_b2_cap": {
+		"title": {
+			"text": "Death from Nowhere",
+			"color": "gold"
+		},
+		"description": "+3% Critical Strike Chance\n+15% Critical Strike Damage\n+1 Combat Roll Charge",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:wither_skeleton_skull"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "challenge"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "apothic_attributes:crit_chance",
+					"value": 0.03,
+					"operation": "addition"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "apothic_attributes:crit_damage",
+					"value": 0.15,
+					"operation": "addition"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "combat_roll:count",
+					"value": 1,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 5,
+		"required_spent_points": 25,
+		"extra_description": "Requires 25 points spent in this tree."
+	},
+	"violet_b3_a1": {
+		"title": "Hush",
+		"description": "+5% Detection Range Reduction",
+		"icon": {
+			"type": "effect",
+			"data": {
+				"effect": "minecraft:invisibility"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:stealth",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b3_a2": {
+		"title": "Soft Steps",
+		"description": "+5% Sneaking Speed",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:leather_boots"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:player.sneaking_speed",
+					"value": 0.05,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b3_b1": {
+		"title": "Void Ward",
+		"description": "+5% Ender Magic Resistance",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "irons_spellbooks:protection_upgrade_orb"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:ender_magic_resist",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b3_b2": {
+		"title": "Shadow Blend",
+		"description": "+5% Detection Range Reduction",
+		"icon": {
+			"type": "effect",
+			"data": {
+				"effect": "minecraft:invisibility"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:stealth",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b3_b3": {
+		"title": "Eldritch Ward",
+		"description": "+5% Eldritch Magic Resistance",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "irons_spellbooks:protection_upgrade_orb"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "irons_spellbooks:eldritch_magic_resist",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b3_b4": {
+		"title": "Cat's Landing",
+		"description": "+1 Fall Damage Reduction (blocks)",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:hay_block"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:fall_reduction",
+					"value": 1,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b3_a3": {
+		"title": {
+			"text": "Nightwalker",
+			"color": "#a64ad8"
+		},
+		"description": "+5% Detection Range Reduction\n+5% Sneaking Speed",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:black_candle"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "goal"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:stealth",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:player.sneaking_speed",
+					"value": 0.05,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 2
+	},
+	"violet_b3_c1": {
+		"title": "Grave Grit",
+		"description": "+1 Heart (Max Health 2 HP)",
+		"icon": {
+			"type": "effect",
+			"data": {
+				"effect": "minecraft:health_boost"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.max_health",
+					"value": 2,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b3_c2": {
+		"title": "Grave Robber",
+		"description": "+0.5 Luck",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:skeleton_skull"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "task"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.luck",
+					"value": 0.5,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 1
+	},
+	"violet_b3_a4": {
+		"title": {
+			"text": "Undying Shade",
+			"color": "#a64ad8"
+		},
+		"description": "+5% Detection Range Reduction\n+1 Heart (Max Health 2 HP)",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:crying_obsidian"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "goal"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:stealth",
+					"value": 0.05,
+					"operation": "multiply_base"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:generic.max_health",
+					"value": 2,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 2
+	},
+	"violet_b3_cap": {
+		"title": {
+			"text": "One with the Void",
+			"color": "gold"
+		},
+		"description": "+10% Detection Range Reduction\n+10% Sneaking Speed\n+2% Dodge Chance",
+		"icon": {
+			"type": "item",
+			"data": {
+				"item": "minecraft:ender_pearl"
+			}
+		},
+		"frame": {
+			"type": "advancement",
+			"data": {
+				"frame": "challenge"
+			}
+		},
+		"rewards": [
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "puffish_attributes:stealth",
+					"value": 0.1,
+					"operation": "multiply_base"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "minecraft:player.sneaking_speed",
+					"value": 0.1,
+					"operation": "addition"
+				}
+			},
+			{
+				"type": "puffish_skills:attribute",
+				"data": {
+					"attribute": "apothic_attributes:dodge_chance",
+					"value": 0.02,
+					"operation": "addition"
+				}
+			}
+		],
+		"cost": 5,
+		"required_spent_points": 25,
+		"extra_description": "Requires 25 points spent in this tree."
+	}
+}

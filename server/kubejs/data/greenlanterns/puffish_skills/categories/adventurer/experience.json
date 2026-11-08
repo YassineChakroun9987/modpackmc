@@ -1,0 +1,1352 @@
+{
+	"level_limit": 40,
+	"experience_per_level": {
+		"type": "expression",
+		"data": {
+			"expression": "50 + 20 * level + 0.9 * level ^ 2"
+		}
+	},
+	"sources": [
+		{
+			"type": "puffish_skills:kill_entity",
+			"data": {
+				"variables": {
+					"mh": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_max_health"
+							}
+						],
+						"fallback": 0
+					},
+					"t": {
+						"operations": [
+							{
+								"type": "get_player"
+							},
+							{
+								"type": "get_world"
+							},
+							{
+								"type": "get_time_of_day"
+							}
+						],
+						"fallback": 0
+					},
+					"bosst_0": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "#c:bosses"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_0": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "minecraft:warden"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_1": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "minecraft:elder_guardian"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_2": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "kingsandmonsters:ogre_lord"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_3": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "graveyard:lich"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_4": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "dog:devourer_head"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_5": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "darkdoppelganger:dark_doppelganger"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_6": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "draconicevolution:draconic_guardian"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_7": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:hydra"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_8": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:sea_serpent"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_9": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:cyclops"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_10": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:gorgon"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_11": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:dread_lich"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_12": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:fire_dragon"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_13": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:ice_dragon"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_14": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:lightning_dragon"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_15": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "born_in_chaos_v1:lord_pumpkinhead"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_16": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "born_in_chaos_v1:supreme_bonescaller"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_17": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "born_in_chaos_v1:krampus"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_18": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "born_in_chaos_v1:nightmare_stalker"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_19": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:ancient_guardian"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_20": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:overgrown_colossus"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_21": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:withered_abomination"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_22": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:frostbitten_golem"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_23": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:endersent"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_24": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:lava_eater"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_25": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:skeletosaurus"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_26": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:warped_fungussus"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_27": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:dune_sentinel"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"ex_0": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "minecraft:villager"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"ex_1": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "minecraft:iron_golem"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"ex_2": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "minecraft:snow_golem"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"ex_3": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "minecraft:wandering_trader"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"ex_4": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "minecraft:player"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"ex_5": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "minecraft:armor_stand"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"ex_6": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "guardvillagers:guard"
+								}
+							}
+						],
+						"fallback": 0
+					}
+				},
+				"experience": [
+					{
+						"condition": "!((bosst_0) | (bossx_0 | bossx_1 | bossx_2 | bossx_3 | bossx_4 | bossx_5 | bossx_6 | bossx_7 | bossx_8 | bossx_9 | bossx_10 | bossx_11 | bossx_12 | bossx_13 | bossx_14 | bossx_15 | bossx_16 | bossx_17 | bossx_18 | bossx_19 | bossx_20 | bossx_21 | bossx_22 | bossx_23 | bossx_24 | bossx_25 | bossx_26 | bossx_27)) & !(ex_0 | ex_1 | ex_2 | ex_3 | ex_4 | ex_5 | ex_6)",
+						"expression": "floor(min(mh, 200) / 8) + (fract(min(mh, 200) / 8) > mod(t, 100) / 100)"
+					}
+				],
+				"anti_farming_per_chunk": {
+					"limit_per_chunk": 24,
+					"reset_after_seconds": 300
+				}
+			},
+			"team_sharing": {
+				"distance_limit": 32.0
+			}
+		},
+		{
+			"type": "puffish_skills:kill_entity",
+			"data": {
+				"variables": {
+					"mh": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_max_health"
+							}
+						],
+						"fallback": 0
+					},
+					"bosst_0": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "#c:bosses"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_0": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "minecraft:warden"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_1": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "minecraft:elder_guardian"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_2": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "kingsandmonsters:ogre_lord"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_3": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "graveyard:lich"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_4": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "dog:devourer_head"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_5": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "darkdoppelganger:dark_doppelganger"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_6": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "draconicevolution:draconic_guardian"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_7": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:hydra"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_8": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:sea_serpent"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_9": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:cyclops"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_10": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:gorgon"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_11": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:dread_lich"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_12": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:fire_dragon"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_13": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:ice_dragon"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_14": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "iceandfire:lightning_dragon"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_15": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "born_in_chaos_v1:lord_pumpkinhead"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_16": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "born_in_chaos_v1:supreme_bonescaller"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_17": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "born_in_chaos_v1:krampus"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_18": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "born_in_chaos_v1:nightmare_stalker"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_19": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:ancient_guardian"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_20": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:overgrown_colossus"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_21": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:withered_abomination"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_22": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:frostbitten_golem"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_23": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:endersent"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_24": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:lava_eater"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_25": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:skeletosaurus"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_26": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:warped_fungussus"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"bossx_27": {
+						"operations": [
+							{
+								"type": "get_killed_living_entity"
+							},
+							{
+								"type": "get_type"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"entity_type": "legendary_monsters:dune_sentinel"
+								}
+							}
+						],
+						"fallback": 0
+					}
+				},
+				"experience": [
+					{
+						"condition": "((bosst_0) | (bossx_0 | bossx_1 | bossx_2 | bossx_3 | bossx_4 | bossx_5 | bossx_6 | bossx_7 | bossx_8 | bossx_9 | bossx_10 | bossx_11 | bossx_12 | bossx_13 | bossx_14 | bossx_15 | bossx_16 | bossx_17 | bossx_18 | bossx_19 | bossx_20 | bossx_21 | bossx_22 | bossx_23 | bossx_24 | bossx_25 | bossx_26 | bossx_27))",
+						"expression": "60 + min(mh, 3000) / 4"
+					}
+				],
+				"anti_farming_per_chunk": {
+					"limit_per_chunk": 40,
+					"reset_after_seconds": 600
+				}
+			},
+			"team_sharing": {
+				"distance_limit": 64.0
+			}
+		},
+		{
+			"type": "puffish_skills:increase_stat",
+			"data": {
+				"variables": {
+					"is0": {
+						"operations": [
+							{
+								"type": "get_stat"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"stat": "minecraft.custom:minecraft.sprint_one_cm"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"is1": {
+						"operations": [
+							{
+								"type": "get_stat"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"stat": "minecraft.custom:minecraft.swim_one_cm"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"is2": {
+						"operations": [
+							{
+								"type": "get_stat"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"stat": "minecraft.custom:minecraft.horse_one_cm"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"is3": {
+						"operations": [
+							{
+								"type": "get_stat"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"stat": "minecraft.custom:minecraft.aviate_one_cm"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"tot0": {
+						"operations": [
+							{
+								"type": "get_player"
+							},
+							{
+								"type": "puffish_skills:get_stat_value",
+								"data": {
+									"stat": "minecraft.custom:minecraft.sprint_one_cm"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"tot1": {
+						"operations": [
+							{
+								"type": "get_player"
+							},
+							{
+								"type": "puffish_skills:get_stat_value",
+								"data": {
+									"stat": "minecraft.custom:minecraft.swim_one_cm"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"tot2": {
+						"operations": [
+							{
+								"type": "get_player"
+							},
+							{
+								"type": "puffish_skills:get_stat_value",
+								"data": {
+									"stat": "minecraft.custom:minecraft.horse_one_cm"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"tot3": {
+						"operations": [
+							{
+								"type": "get_player"
+							},
+							{
+								"type": "puffish_skills:get_stat_value",
+								"data": {
+									"stat": "minecraft.custom:minecraft.aviate_one_cm"
+								}
+							}
+						],
+						"fallback": 0
+					},
+					"amount": {
+						"operations": [
+							{
+								"type": "get_increase_amount"
+							}
+						],
+						"fallback": 0
+					}
+				},
+				"experience": [
+					{
+						"condition": "(is0 | is1 | is2 | is3)",
+						"expression": "3 * (floor(((tot0 + tot1 + tot2 + tot3) + amount) / 30000) - floor((tot0 + tot1 + tot2 + tot3) / 30000))"
+					}
+				]
+			}
+		},
+		{
+			"type": "puffish_skills:increase_stat",
+			"data": {
+				"variables": {
+					"s0": {
+						"operations": [
+							{
+								"type": "get_stat"
+							},
+							{
+								"type": "puffish_skills:test",
+								"data": {
+									"stat": "minecraft.custom:minecraft.raid_win"
+								}
+							}
+						],
+						"fallback": 0
+					}
+				},
+				"experience": [
+					{
+						"condition": "s0",
+						"expression": "40"
+					}
+				]
+			}
+		}
+	]
+}

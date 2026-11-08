@@ -1,0 +1,45 @@
+{
+	"title": {
+		"text": "Adventurer",
+		"color": "#d8c27a"
+	},
+	"description": "Every hero walks this road. Grows from every fight, every boss and every mile travelled.",
+	"icon": {
+		"type": "item",
+		"data": {
+			"item": "minecraft:compass"
+		}
+	},
+	"background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+	"unlocked_by_default": true,
+	"starting_points": 1,
+	"colors": {
+		"connections": {
+			"locked": {
+				"fill": "#4b4b4b",
+				"stroke": "#1c1c1c"
+			},
+			"available": {
+				"fill": "#e9ddb5",
+				"stroke": "#1c1c1c"
+			},
+			"affordable": {
+				"fill": "#dfce94",
+				"stroke": "#1c1c1c"
+			},
+			"unlocked": {
+				"fill": "#d8c27a",
+				"stroke": "#1c1c1c"
+			},
+			"excluded": {
+				"fill": "#7a1f1f",
+				"stroke": "#2a0b0b"
+			}
+		},
+		"points": {
+			"fill": "#d8c27a",
+			"stroke": "#1c1c1c"
+		}
+	},
+	"extra_description": "Capstones need 12 points spent in this tree."
+}
