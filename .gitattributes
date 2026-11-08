@@ -1,0 +1,8 @@
+# Normalise text files to LF everywhere; keep Windows batch files as CRLF (cmd.exe misbehaves on LF-only .bat files).
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.sh  text eol=lf
+*.jar binary
+*.png binary
+*.gz  binary

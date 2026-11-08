@@ -1,0 +1,22 @@
+# --- Mod jars: never committed. They're large, and most mod licences forbid redistributing them.
+#     mods-manifest.txt (written by tools/manifest.py) records every jar + SHA-1 instead.
+*.jar
+
+# --- Server runtime / generated: re-created by the NeoForge installer or on boot
+server/libraries/
+server/world/
+server/logs/
+server/crash-reports/
+server/local/
+server/usercache.json
+server/usernamecache.json
+server/.mixin.out/
+server/config/spark/tmp*/
+
+# --- Python
+__pycache__/
+*.pyc
+
+# --- Windows
+Thumbs.db
+desktop.ini
