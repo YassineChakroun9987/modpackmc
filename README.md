@@ -19,7 +19,8 @@ GREENLANTERS MODPACK/
 ├── README.md          this file
 ├── MODLIST.md         every mod, grouped into 5 categories: Editing / Main / Dependencies / Our own / QoL
 ├── mods-manifest.txt  every jar + side + SHA-1, generated (git tracks this instead of the jars)
-├── docs/              research and design notes (start with RESEARCH-foundations.md)
+├── docs/              design + research: STORY-design.md (the story and classes),
+│                      RESEARCH-terrain.md, RESEARCH-foundations.md
 ├── client-only/       mods that go ONLY in the client (minimaps, shaders, sound, HUD)
 ├── server/            the NeoForge dedicated server
 │   ├── start.bat      ← double-click to run (uses Java 21)
