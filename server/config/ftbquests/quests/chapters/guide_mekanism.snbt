@@ -7,14 +7,13 @@
 		id: "mekanism:steel_casing"
 	}
 	id: "2396F1933449B02E"
+	images: [ ]
 	order_index: 13
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: [
-				"CD1332807D3C7E60"
-			]
+			dependencies: ["4D1332807D3C7E60"]
 			icon: {
 				id: "mekanism:ingot_osmium"
 			}
@@ -22,8 +21,8 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-					elevate_perms: true
-					id: "F54A45CB14C5032A"
+					id: "754A45CB14C5032A"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
@@ -35,420 +34,334 @@
 			]
 			shape: "hexagon"
 			size: 1.5d
-			tasks: [
-				{
-					id: "D261028A4896F5D9"
-					count: 16L
-					item: {
-						count: 16
-						id: "mekanism:ingot_osmium"
-					}
-					type: "item"
-				}
-			]
+			tasks: [{
+				count: 16L
+				id: "5261028A4896F5D9"
+				item: { count: 1, id: "mekanism:ingot_osmium" }
+				type: "item"
+			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"2CFA23BB96D7B48C"
-			]
+			dependencies: ["2CFA23BB96D7B48C"]
 			icon: {
 				id: "mekanism:metallurgic_infuser"
 			}
 			id: "269607E68DC71B58"
-			rewards: [
-				{
-					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-					elevate_perms: true
-					id: "FCE0E4854EBA37ED"
-					silent: true
-					type: "command"
-				}
-			]
-			tasks: [
-				{
-					id: "281DB1C442037B3C"
-					advancement: "mekanism:metallurgic_infuser"
-					criterion: ""
-					type: "advancement"
-				}
-			]
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "7CE0E4854EBA37ED"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:metallurgic_infuser"
+				criterion: ""
+				id: "281DB1C442037B3C"
+				type: "advancement"
+			}]
 			x: 2.5d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"269607E68DC71B58"
-			]
+			dependencies: ["269607E68DC71B58"]
 			icon: {
 				id: "mekanism:steel_casing"
 			}
-			id: "D5BF0D96A77A5676"
-			rewards: [
-				{
-					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-					elevate_perms: true
-					id: "1DC54A47391DCE09"
-					silent: true
-					type: "command"
-				}
-			]
-			tasks: [
-				{
-					id: "A17165332226D22F"
-					advancement: "mekanism:steel_casing"
-					criterion: ""
-					type: "advancement"
-				}
-			]
+			id: "55BF0D96A77A5676"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "1DC54A47391DCE09"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:steel_casing"
+				criterion: ""
+				id: "217165332226D22F"
+				type: "advancement"
+			}]
 			x: 5.0d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"2CFA23BB96D7B48C"
-			]
+			dependencies: ["2CFA23BB96D7B48C"]
 			icon: {
 				id: "mekanismgenerators:heat_generator"
 			}
 			id: "1F1FE50908BB6FCA"
-			rewards: [
-				{
-					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-					elevate_perms: true
-					id: "AEEF66DBFCA27B8F"
-					silent: true
-					type: "command"
-				}
-			]
-			tasks: [
-				{
-					id: "60DE176C35BE742C"
-					advancement: "mekanismgenerators:heat_generator"
-					criterion: ""
-					type: "advancement"
-				}
-			]
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "2EEF66DBFCA27B8F"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanismgenerators:heat_generator"
+				criterion: ""
+				id: "60DE176C35BE742C"
+				type: "advancement"
+			}]
 			x: 2.5d
 			y: -2.0d
 		}
 		{
 			dependencies: [
 				"1F1FE50908BB6FCA"
-				"D5BF0D96A77A5676"
+				"55BF0D96A77A5676"
 			]
 			icon: {
 				id: "mekanism:basic_energy_cube"
 			}
-			id: "EC9E9A0A988971E9"
-			rewards: [
-				{
-					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-					elevate_perms: true
-					id: "F8923E6D899B8129"
-					silent: true
-					type: "command"
-				}
-			]
-			tasks: [
-				{
-					id: "25A1131856628B74"
-					advancement: "mekanism:energy_cube"
-					criterion: ""
-					type: "advancement"
-				}
-			]
+			id: "6C9E9A0A988971E9"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "78923E6D899B8129"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:energy_cube"
+				criterion: ""
+				id: "25A1131856628B74"
+				type: "advancement"
+			}]
 			x: 5.0d
 			y: -2.0d
 		}
 		{
-			dependencies: [
-				"D5BF0D96A77A5676"
-			]
+			dependencies: ["55BF0D96A77A5676"]
 			icon: {
 				id: "mekanism:enrichment_chamber"
 			}
 			id: "25DDBB1E29BA8F0B"
-			rewards: [
-				{
-					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-					elevate_perms: true
-					id: "F490BF64D608E4D8"
-					silent: true
-					type: "command"
-				}
-			]
-			tasks: [
-				{
-					id: "AC77EE929288FADE"
-					advancement: "mekanism:enricher"
-					criterion: ""
-					type: "advancement"
-				}
-			]
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "7490BF64D608E4D8"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:enricher"
+				criterion: ""
+				id: "2C77EE929288FADE"
+				type: "advancement"
+			}]
 			x: 2.5d
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"25DDBB1E29BA8F0B"
-			]
+			dependencies: ["25DDBB1E29BA8F0B"]
 			icon: {
 				id: "mekanism:purification_chamber"
 			}
-			id: "E27AAC39159EC39C"
-			rewards: [
-				{
-					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-					elevate_perms: true
-					id: "B452D96A478D4963"
-					silent: true
-					type: "command"
-				}
-			]
-			tasks: [
-				{
-					id: "D65691B3D20AA7C6"
-					advancement: "mekanism:purification_chamber"
-					criterion: ""
-					type: "advancement"
-				}
-			]
+			id: "627AAC39159EC39C"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "3452D96A478D4963"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:purification_chamber"
+				criterion: ""
+				id: "565691B3D20AA7C6"
+				type: "advancement"
+			}]
 			x: 5.0d
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"E27AAC39159EC39C"
-			]
+			dependencies: ["627AAC39159EC39C"]
 			icon: {
 				id: "mekanism:chemical_injection_chamber"
 			}
 			id: "172A3C1A7C98214B"
-			rewards: [
-				{
-					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-					elevate_perms: true
-					id: "57994661607261E5"
-					silent: true
-					type: "command"
-				}
-			]
-			tasks: [
-				{
-					id: "7D6CC1073BF8A4B1"
-					advancement: "mekanism:injection_chamber"
-					criterion: ""
-					type: "advancement"
-				}
-			]
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "57994661607261E5"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:injection_chamber"
+				criterion: ""
+				id: "7D6CC1073BF8A4B1"
+				type: "advancement"
+			}]
 			x: 7.5d
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"172A3C1A7C98214B"
-			]
+			dependencies: ["172A3C1A7C98214B"]
 			icon: {
 				id: "mekanism:chemical_crystallizer"
 			}
-			id: "EDC282D3042F9DE1"
+			id: "6DC282D3042F9DE1"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-					elevate_perms: true
 					id: "45ECEFA86E8936C0"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 100"
-					elevate_perms: true
-					id: "F3C2C1C6509180CD"
+					id: "73C2C1C6509180CD"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [
-				{
-					id: "CEF29245D5AD7C88"
-					advancement: "mekanism:chemical_crystallizer"
-					criterion: ""
-					type: "advancement"
-				}
-			]
+			tasks: [{
+				advancement: "mekanism:chemical_crystallizer"
+				criterion: ""
+				id: "4EF29245D5AD7C88"
+				type: "advancement"
+			}]
 			x: 10.0d
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"D5BF0D96A77A5676"
-			]
+			dependencies: ["55BF0D96A77A5676"]
 			icon: {
 				id: "mekanism:basic_tier_installer"
 			}
 			id: "79EC1B9BADFDD48C"
-			rewards: [
-				{
-					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-					elevate_perms: true
-					id: "7DA9983C4063C582"
-					silent: true
-					type: "command"
-				}
-			]
-			tasks: [
-				{
-					id: "5CB0DC68E73C5A37"
-					advancement: "mekanism:factory"
-					criterion: ""
-					type: "advancement"
-				}
-			]
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "7DA9983C4063C582"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:factory"
+				criterion: ""
+				id: "5CB0DC68E73C5A37"
+				type: "advancement"
+			}]
 			x: 7.5d
 			y: 0.0d
 		}
 		{
 			dependencies: [
 				"79EC1B9BADFDD48C"
-				"EC9E9A0A988971E9"
+				"6C9E9A0A988971E9"
 			]
 			icon: {
 				id: "mekanism:digital_miner"
 			}
 			id: "6090D03341E0CE8D"
-			rewards: [
-				{
-					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-					elevate_perms: true
-					id: "D013F40DACBCDCBA"
-					silent: true
-					type: "command"
-				}
-			]
-			tasks: [
-				{
-					id: "BBCD32EE1970F0E4"
-					advancement: "mekanism:digital_miner"
-					criterion: ""
-					type: "advancement"
-				}
-			]
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "5013F40DACBCDCBA"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:digital_miner"
+				criterion: ""
+				id: "3BCD32EE1970F0E4"
+				type: "advancement"
+			}]
 			x: 10.0d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"EC9E9A0A988971E9"
-			]
+			dependencies: ["6C9E9A0A988971E9"]
 			icon: {
 				id: "mekanism:jetpack"
 			}
-			id: "F45C6346FD93A55C"
-			rewards: [
-				{
-					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-					elevate_perms: true
-					id: "34075B921F01FA03"
-					silent: true
-					type: "command"
-				}
-			]
-			tasks: [
-				{
-					id: "36760D439F08B35A"
-					item: {
-						count: 1
-						id: "mekanism:jetpack"
-					}
-					type: "item"
-				}
-			]
+			id: "745C6346FD93A55C"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "34075B921F01FA03"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "36760D439F08B35A"
+				item: { count: 1, id: "mekanism:jetpack" }
+				type: "item"
+			}]
 			x: 7.5d
 			y: -2.0d
 		}
 		{
-			dependencies: [
-				"EC9E9A0A988971E9"
-			]
+			dependencies: ["6C9E9A0A988971E9"]
 			icon: {
 				id: "mekanism:alloy_atomic"
 			}
 			id: "270A24D0F4DA18E6"
-			rewards: [
-				{
-					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-					elevate_perms: true
-					id: "FAF1FB8725238EE7"
-					silent: true
-					type: "command"
-				}
-			]
-			tasks: [
-				{
-					id: "79102AD4D1B9638B"
-					advancement: "mekanism:atomic_alloy"
-					criterion: ""
-					type: "advancement"
-				}
-			]
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "7AF1FB8725238EE7"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:atomic_alloy"
+				criterion: ""
+				id: "79102AD4D1B9638B"
+				type: "advancement"
+			}]
 			x: 5.0d
 			y: -4.0d
 		}
 		{
-			dependencies: [
-				"270A24D0F4DA18E6"
-			]
+			dependencies: ["270A24D0F4DA18E6"]
 			icon: {
 				id: "mekanism:ultimate_control_circuit"
 			}
 			id: "0DA006622CB27A6F"
-			rewards: [
-				{
-					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-					elevate_perms: true
-					id: "68D7554E76CFD1AE"
-					silent: true
-					type: "command"
-				}
-			]
-			tasks: [
-				{
-					id: "0616F199B6E4B236"
-					advancement: "mekanism:ultimate_control_circuit"
-					criterion: ""
-					type: "advancement"
-				}
-			]
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "68D7554E76CFD1AE"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:ultimate_control_circuit"
+				criterion: ""
+				id: "0616F199B6E4B236"
+				type: "advancement"
+			}]
 			x: 7.5d
 			y: -4.0d
 		}
 		{
-			dependencies: [
-				"0DA006622CB27A6F"
-			]
+			dependencies: ["0DA006622CB27A6F"]
 			icon: {
 				id: "mekanism:pellet_polonium"
 			}
 			id: "6C7054CF22C2CC9B"
-			rewards: [
-				{
-					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-					elevate_perms: true
-					id: "2225145522CFF0D4"
-					silent: true
-					type: "command"
-				}
-			]
-			tasks: [
-				{
-					id: "41FF147AEC0A63CD"
-					advancement: "mekanism:polonium"
-					criterion: ""
-					type: "advancement"
-				}
-			]
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "2225145522CFF0D4"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:polonium"
+				criterion: ""
+				id: "41FF147AEC0A63CD"
+				type: "advancement"
+			}]
 			x: 10.0d
 			y: -4.0d
 		}
@@ -461,23 +374,19 @@
 				id: "mekanism:modification_station"
 			}
 			id: "4CA6E68CDAEFD0CD"
-			rewards: [
-				{
-					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-					elevate_perms: true
-					id: "AEF5521500F9C19D"
-					silent: true
-					type: "command"
-				}
-			]
-			tasks: [
-				{
-					id: "9EF535110B3E3D2A"
-					advancement: "mekanism:modification_station"
-					criterion: ""
-					type: "advancement"
-				}
-			]
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "2EF5521500F9C19D"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:modification_station"
+				criterion: ""
+				id: "1EF535110B3E3D2A"
+				type: "advancement"
+			}]
 			x: 12.5d
 			y: -2.0d
 		}
@@ -485,24 +394,24 @@
 			dependencies: [
 				"6C7054CF22C2CC9B"
 				"4CA6E68CDAEFD0CD"
-				"EDC282D3042F9DE1"
+				"6DC282D3042F9DE1"
 			]
 			icon: {
 				id: "mekanism:mekasuit_helmet"
 			}
-			id: "F440B96914F2E7F2"
+			id: "7440B96914F2E7F2"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
-					elevate_perms: true
-					id: "CB83381080FAFD86"
+					id: "4B83381080FAFD86"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 250"
-					elevate_perms: true
 					id: "59B4124B52069C11"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
@@ -514,43 +423,35 @@
 			]
 			shape: "octagon"
 			size: 1.75d
-			tasks: [
-				{
-					id: "0B198CCE2870523A"
-					advancement: "mekanism:mekasuit"
-					criterion: ""
-					type: "advancement"
-				}
-			]
+			tasks: [{
+				advancement: "mekanism:mekasuit"
+				criterion: ""
+				id: "0B198CCE2870523A"
+				type: "advancement"
+			}]
 			x: 12.5d
 			y: 0.5d
 		}
 		{
-			dependencies: [
-				"F440B96914F2E7F2"
-			]
+			dependencies: ["7440B96914F2E7F2"]
 			icon: {
 				id: "mekanism:mekasuit_bodyarmor"
 			}
 			id: "125C30974C3A6BC4"
 			optional: true
-			rewards: [
-				{
-					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
-					elevate_perms: true
-					id: "89B5E590CF5B4287"
-					silent: true
-					type: "command"
-				}
-			]
-			tasks: [
-				{
-					id: "5601D8A61FD519A4"
-					advancement: "mekanism:upgraded_mekasuit"
-					criterion: ""
-					type: "advancement"
-				}
-			]
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+				id: "09B5E590CF5B4287"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "mekanism:upgraded_mekasuit"
+				criterion: ""
+				id: "5601D8A61FD519A4"
+				type: "advancement"
+			}]
 			x: 15.0d
 			y: 0.5d
 		}

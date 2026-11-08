@@ -7,23 +7,22 @@
 		id: "ftbquests:book"
 	}
 	id: "76E59FB57D0DEF7F"
+	images: [ ]
 	order_index: 0
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: [
-				"79F159C80410A9FF"
-			]
+			dependencies: ["79F159C80410A9FF"]
 			icon: {
 				id: "ftbquests:book"
 			}
-			id: "FC92A749C0D1E699"
+			id: "7C92A749C0D1E699"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-					elevate_perms: true
 					id: "46F7FDABD550DE43"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
@@ -35,349 +34,274 @@
 			]
 			shape: "hexagon"
 			size: 1.5d
-			tasks: [
-				{
-					id: "8381DACCF8A9D2BA"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "0381DACCF8A9D2BA"
+				type: "checkmark"
+			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"FC92A749C0D1E699"
-			]
+			dependencies: ["7C92A749C0D1E699"]
 			icon: {
 				id: "minecraft:knowledge_book"
 			}
-			id: "B93E219782FBBE11"
-			rewards: [
-				{
-					id: "7EA5C6A2C477303C"
-					type: "xp"
-					xp: 50
-				}
-			]
-			tasks: [
-				{
-					id: "1143FB08BC781D45"
-					type: "checkmark"
-				}
-			]
+			id: "393E219782FBBE11"
+			rewards: [{
+				id: "7EA5C6A2C477303C"
+				type: "xp"
+				xp: 50
+			}]
+			tasks: [{
+				id: "1143FB08BC781D45"
+				type: "checkmark"
+			}]
 			x: 2.0d
 			y: -2.0d
 		}
 		{
-			dependencies: [
-				"B93E219782FBBE11"
-			]
+			dependencies: ["393E219782FBBE11"]
 			icon: {
 				id: "minecraft:spyglass"
 			}
-			id: "F848E4B720F4CFD0"
-			rewards: [
-				{
-					id: "ACBBC1CDD5FE78A2"
-					type: "xp"
-					xp: 50
-				}
-			]
-			tasks: [
-				{
-					id: "06775C0280BA1ECB"
-					type: "checkmark"
-				}
-			]
+			id: "7848E4B720F4CFD0"
+			rewards: [{
+				id: "2CBBC1CDD5FE78A2"
+				type: "xp"
+				xp: 50
+			}]
+			tasks: [{
+				id: "06775C0280BA1ECB"
+				type: "checkmark"
+			}]
 			x: 4.0d
 			y: -2.0d
 		}
 		{
-			dependencies: [
-				"F848E4B720F4CFD0"
-			]
+			dependencies: ["7848E4B720F4CFD0"]
 			icon: {
 				id: "minecraft:golden_apple"
 			}
 			id: "43AB103215A8C63F"
-			rewards: [
-				{
-					id: "7DCF5C4B881E2009"
-					count: 8
-					item: {
-						count: 1
-						id: "minecraft:cooked_beef"
-					}
-					type: "item"
+			rewards: [{
+				count: 8
+				id: "7DCF5C4B881E2009"
+				item: {
+					count: 1
+					id: "minecraft:cooked_beef"
 				}
-			]
-			tasks: [
-				{
-					id: "E0EB77B437DE9982"
-					count: 8L
-					item: {
-						count: 8
-						id: "minecraft:bread"
-					}
-					type: "item"
-				}
-			]
+				type: "item"
+			}]
+			tasks: [{
+				count: 8L
+				id: "60EB77B437DE9982"
+				item: { count: 1, id: "minecraft:bread" }
+				type: "item"
+			}]
 			x: 6.0d
 			y: -2.0d
 		}
 		{
-			dependencies: [
-				"43AB103215A8C63F"
-			]
+			dependencies: ["43AB103215A8C63F"]
 			icon: {
 				id: "minecraft:chest"
 			}
 			id: "3114135D9FF5FD48"
-			rewards: [
-				{
-					id: "4638C03BF71869F5"
-					type: "xp"
-					xp: 50
-				}
-			]
-			tasks: [
-				{
-					id: "16F24A242DFA14B9"
-					type: "checkmark"
-				}
-			]
+			rewards: [{
+				id: "4638C03BF71869F5"
+				type: "xp"
+				xp: 50
+			}]
+			tasks: [{
+				id: "16F24A242DFA14B9"
+				type: "checkmark"
+			}]
 			x: 8.0d
 			y: -2.0d
 		}
 		{
-			dependencies: [
-				"3114135D9FF5FD48"
-			]
+			dependencies: ["3114135D9FF5FD48"]
 			icon: {
 				id: "minecraft:lever"
 			}
 			id: "7F3FA4F7F33B000A"
-			rewards: [
-				{
-					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-					elevate_perms: true
-					id: "EAB25E67BD788B56"
-					silent: true
-					type: "command"
-				}
-			]
-			tasks: [
-				{
-					id: "9921FEDD5CAC4380"
-					type: "checkmark"
-				}
-			]
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "6AB25E67BD788B56"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "1921FEDD5CAC4380"
+				type: "checkmark"
+			}]
 			x: 10.0d
 			y: -2.0d
 		}
 		{
-			dependencies: [
-				"FC92A749C0D1E699"
-			]
+			dependencies: ["7C92A749C0D1E699"]
 			icon: {
 				id: "minecraft:white_banner"
 			}
-			id: "BABEA8EF80C1F8D9"
-			rewards: [
-				{
-					id: "379239D0365C1801"
-					type: "xp"
-					xp: 50
-				}
-			]
-			tasks: [
-				{
-					id: "3BEE431C9B0B9FAE"
-					type: "checkmark"
-				}
-			]
+			id: "3ABEA8EF80C1F8D9"
+			rewards: [{
+				id: "379239D0365C1801"
+				type: "xp"
+				xp: 50
+			}]
+			tasks: [{
+				id: "3BEE431C9B0B9FAE"
+				type: "checkmark"
+			}]
 			x: 2.5d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"BABEA8EF80C1F8D9"
-			]
+			dependencies: ["3ABEA8EF80C1F8D9"]
 			icon: {
 				id: "minecraft:shield"
 			}
 			id: "6DE912ABD3F2D382"
-			rewards: [
-				{
-					id: "DC2CF93F0B7941DF"
-					type: "xp"
-					xp: 75
-				}
-			]
-			tasks: [
-				{
-					id: "4C44D89E0101046D"
-					type: "checkmark"
-				}
-			]
+			rewards: [{
+				id: "5C2CF93F0B7941DF"
+				type: "xp"
+				xp: 75
+			}]
+			tasks: [{
+				id: "4C44D89E0101046D"
+				type: "checkmark"
+			}]
 			x: 5.0d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"6DE912ABD3F2D382"
-			]
+			dependencies: ["6DE912ABD3F2D382"]
 			icon: {
 				id: "minecraft:filled_map"
 			}
-			id: "E9B7B5EDDAC4FD51"
+			id: "69B7B5EDDAC4FD51"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-					elevate_perms: true
-					id: "F5D25E8640E3E09C"
+					id: "75D25E8640E3E09C"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
-					id: "89E18EB07E2BF94A"
+					id: "09E18EB07E2BF94A"
 					type: "xp"
 					xp: 75
 				}
 			]
-			tasks: [
-				{
-					id: "18EAAD5D7688B54F"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "18EAAD5D7688B54F"
+				type: "checkmark"
+			}]
 			x: 7.5d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"E9B7B5EDDAC4FD51"
-			]
+			dependencies: ["69B7B5EDDAC4FD51"]
 			icon: {
 				id: "lootr:lootr_chest"
 			}
-			id: "F98C7EC882531A15"
-			rewards: [
-				{
-					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-					elevate_perms: true
-					id: "195C849783B4B85D"
-					silent: true
-					type: "command"
-				}
-			]
-			tasks: [
-				{
-					id: "110F68002C549E5D"
-					advancement: "lootr:10loot"
-					criterion: ""
-					type: "advancement"
-				}
-			]
+			id: "798C7EC882531A15"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "195C849783B4B85D"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				advancement: "lootr:10loot"
+				criterion: ""
+				id: "110F68002C549E5D"
+				type: "advancement"
+			}]
 			x: 10.0d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"FC92A749C0D1E699"
-			]
+			dependencies: ["7C92A749C0D1E699"]
 			icon: {
 				id: "minecraft:experience_bottle"
 			}
-			id: "BA1F365762BC75BE"
-			rewards: [
-				{
-					command: "/puffish_skills experience add {p} greenlanterns:adventurer 50"
-					elevate_perms: true
-					id: "2F7651C0484849FE"
-					silent: true
-					type: "command"
-				}
-			]
-			tasks: [
-				{
-					id: "9E0BA6239AC3205B"
-					type: "checkmark"
-				}
-			]
+			id: "3A1F365762BC75BE"
+			rewards: [{
+				command: "/puffish_skills experience add {p} greenlanterns:adventurer 50"
+				id: "2F7651C0484849FE"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "1E0BA6239AC3205B"
+				type: "checkmark"
+			}]
 			x: 2.5d
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"BA1F365762BC75BE"
-			]
+			dependencies: ["3A1F365762BC75BE"]
 			icon: {
 				id: "minecraft:clock"
 			}
-			id: "CDBFAFA10F3F5496"
-			rewards: [
-				{
-					id: "3FD849DFAF7E4290"
-					type: "xp"
-					xp: 50
-				}
-			]
-			tasks: [
-				{
-					id: "B1EA917DEFB37122"
-					type: "checkmark"
-				}
-			]
+			id: "4DBFAFA10F3F5496"
+			rewards: [{
+				id: "3FD849DFAF7E4290"
+				type: "xp"
+				xp: 50
+			}]
+			tasks: [{
+				id: "31EA917DEFB37122"
+				type: "checkmark"
+			}]
 			x: 5.0d
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"CDBFAFA10F3F5496"
-			]
+			dependencies: ["4DBFAFA10F3F5496"]
 			icon: {
 				id: "minecraft:crafting_table"
 			}
-			id: "EA238832899BBAE4"
-			rewards: [
-				{
-					id: "FF449A1B015E7428"
-					type: "xp"
-					xp: 50
-				}
-			]
-			tasks: [
-				{
-					id: "2F95E8388F789098"
-					type: "checkmark"
-				}
-			]
+			id: "6A238832899BBAE4"
+			rewards: [{
+				id: "7F449A1B015E7428"
+				type: "xp"
+				xp: 50
+			}]
+			tasks: [{
+				id: "2F95E8388F789098"
+				type: "checkmark"
+			}]
 			x: 7.5d
 			y: 2.0d
 		}
 		{
 			dependencies: [
 				"7F3FA4F7F33B000A"
-				"F98C7EC882531A15"
-				"EA238832899BBAE4"
+				"798C7EC882531A15"
+				"6A238832899BBAE4"
 			]
 			icon: {
 				id: "minecraft:compass"
 			}
-			id: "BA1E0FB18B8E1004"
+			id: "3A1E0FB18B8E1004"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-					elevate_perms: true
-					id: "FC446DE1FC4EF441"
+					id: "7C446DE1FC4EF441"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 75"
-					elevate_perms: true
 					id: "636D0E1B40E0956D"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
@@ -389,12 +313,10 @@
 			]
 			shape: "octagon"
 			size: 1.25d
-			tasks: [
-				{
-					id: "AD5AA921F78DA269"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "2D5AA921F78DA269"
+				type: "checkmark"
+			}]
 			x: 12.5d
 			y: 0.0d
 		}

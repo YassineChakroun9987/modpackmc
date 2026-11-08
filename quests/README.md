@@ -32,7 +32,7 @@ validates every item, mob, structure, biome, dimension and advancement ID agains
         {"type": "structure", "structure": "minecraft:village_plains"},
         {"type": "dimension", "dimension": "minecraft:the_nether"},
         {"type": "biome", "biome": "terralith:moonlight_grove"},
-        {"type": "stage", "stage": "gl_warlord_slain", "team": true},
+        {"type": "stage", "stage": "gl_warlord_slain"},
         {"type": "checkmark"}
       ],
       "rewards": [
@@ -49,3 +49,9 @@ validates every item, mob, structure, biome, dimension and advancement ID agains
 }
 ```
 Names to use for stages, commands, skill categories, reward tables and anchor quests are in `docs/CONTRACT.md`.
+
+Notes:
+- `"stage"` tasks/rewards are written as FTB's `gamestage` type. Don't add `"team": true`: that checks FTB
+  Teams' own team stages, not the KubeJS player stages our scripts give, so the task would never complete.
+- "Any one of these" = mark **every** task `"optional": true` (FTB then completes the quest on the first one).
+- Never run the generator while the server is up; after generating, boot once and commit FTB's rewritten files.

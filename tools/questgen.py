@@ -6,6 +6,17 @@ Usage:  python -I tools/questgen.py            (reads quests/src/*.json, writes 
 Spec format: see quests/README.md. IDs are derived from "<chapter>:<key>", so they stay the same between
 runs (player progress survives regenerating the book). Titles and descriptions go to lang/en_us.snbt,
 like FTB Quests 2101 does itself.
+
+Rules learned the hard way (FTB Quests 2101.1.38 does these SILENTLY, no log line):
+- An id >= 8000000000000000 doesn't parse (signed Long.parseLong) and gets a new random id on load,
+  which orphans its lang title and dependencies. hid() keeps the top bit clear.
+- A task/reward whose type isn't registered is dropped on load. The stage task and reward are
+  "gamestage", not "stage". --check rejects any type outside FTB_TASK_TYPES / FTB_REWARD_TYPES.
+
+Workflow:
+- NEVER regenerate while the server runs: FTB saves its in-memory book over the files on shutdown.
+- After generating, boot once (python -I tools/boottest.py --fresh). FTB rewrites the files in its
+  own format (CRLF, extra defaults); that version is stable, so commit it.
 """
 import hashlib
 import json
@@ -20,11 +31,21 @@ OUT = ROOT / "server" / "config" / "ftbquests" / "quests"
 EXPORTED = ROOT / "server" / "kubejs" / "exported"
 
 GROUPS = [("story", "&6The Story"), ("classes", "&bThe Seven Lights"), ("mods", "&aGuides & Adventures")]
+# Spec type -> FTB Quests 2101.1.38 registered type (TaskTypes / RewardTypes). Checked in the jar.
+FTB_TASK_TYPE = {"stage": "gamestage"}
+FTB_TASK_TYPES = {"advancement", "biome", "checkmark", "custom", "dimension", "fluid", "gamestage", "interaction",
+                  "item", "kill", "location", "observation", "stat", "structure", "xp"}
+FTB_REWARD_TYPES = {"advancement", "all_table", "choice", "command", "currency", "custom", "gamestage", "item",
+                    "loot", "random", "toast", "xp", "xp_levels"}
 SHAPES = {"circle", "square", "rsquare", "diamond", "pentagon", "hexagon", "octagon", "heart", "gear"}
 
 
 def hid(*parts):
-    return hashlib.sha1("|".join(parts).encode()).hexdigest()[:16].upper()
+    # FTB Quests parses ids with Java's signed Long.parseLong(id, 16): an id of 8000000000000000
+    # or more fails to parse, and FTB silently gives the object a new random id on load (so the
+    # lang titles and dependencies no longer match it). Keep the top bit clear, and never 0.
+    v = int(hashlib.sha1("|".join(parts).encode()).hexdigest()[:16], 16) & 0x7FFFFFFFFFFFFFFF
+    return f"{v or 1:016X}"
 
 
 def snbt(v, ind=0):
@@ -109,7 +130,8 @@ def task_snbt(t, tid, problems, where, ids):
         pass
     else:
         problems.append(f"{where}: unknown task type '{ty}'")
-    out["type"] = ty
+    # FTB Quests 2101 registers the stage task as "gamestage"; an unknown type is dropped silently on load.
+    out["type"] = FTB_TASK_TYPE.get(ty, ty)
     if t.get("optional"):
         out["optional_task"] = True
     return out
@@ -131,7 +153,7 @@ def reward_snbt(r, rid, problems, where, ids):
     if ty == "xp_levels":
         return {"id": rid, "type": "xp_levels", "xp_levels": int(r["levels"])}
     if ty == "stage":
-        return {"id": rid, "stage": r["stage"], "type": "stage"}
+        return {"id": rid, "stage": r["stage"], "type": "gamestage"}  # FTB's id for the stage reward
     if ty in ("command", "skill_xp", "loot"):
         if ty == "skill_xp":
             cmd = f"/puffish_skills experience add {{p}} greenlanterns:{r['category']} {int(r['amount'])}"
@@ -139,7 +161,7 @@ def reward_snbt(r, rid, problems, where, ids):
             cmd = f"/loot give {{p}} loot {r['table']}"
         else:
             cmd = r["command"]
-        return {"command": cmd, "elevate_perms": True, "id": rid, "silent": bool(r.get("silent", True)), "type": "command"}
+        return {"command": cmd, "id": rid, "permission_level": 2, "silent": bool(r.get("silent", True)), "type": "command"}
     problems.append(f"{where}: unknown reward type '{ty}'")
     return {"id": rid, "type": "xp", "xp": 0}
 
@@ -226,6 +248,34 @@ def main():
             "order_index": int(spec.get("order", 0)), "progression_mode": "flexible", "quest_links": [],
             "quests": quests}))
 
+    # Every id must be unique and parse as a signed long (see hid), or FTB re-ids it on load.
+    seen = {}
+    def walk_ids(o, where):
+        if isinstance(o, dict):
+            if isinstance(o.get("id"), str) and re.fullmatch(r"[0-9A-F]{16}", o["id"]):
+                if int(o["id"], 16) >= 1 << 63:
+                    problems.append(f"{where}: id {o['id']} is out of FTB's range")
+                if o["id"] in seen:
+                    problems.append(f"{where}: id {o['id']} also used in {seen[o['id']]}")
+                seen[o["id"]] = where
+            for v in o.values():
+                walk_ids(v, where)
+        elif isinstance(o, list):
+            for v in o:
+                walk_ids(v, where)
+    for spec, c in chapters:
+        walk_ids(c, spec["id"])
+        # FTB drops tasks/rewards of a type it doesn't register, without an error: catch it here.
+        for qd in c["quests"]:
+            for tk in qd.get("tasks", []):
+                if tk["type"] not in FTB_TASK_TYPES:
+                    problems.append(f"{spec['id']}: task type '{tk['type']}' isn't registered in FTB Quests")
+            for rw in qd.get("rewards", []):
+                if rw["type"] not in FTB_REWARD_TYPES:
+                    problems.append(f"{spec['id']}: reward type '{rw['type']}' isn't registered in FTB Quests")
+    for g, _ in GROUPS:
+        walk_ids({"id": group_ids[g]}, "group " + g)
+
     n_quests = sum(len(c[1]["quests"]) for c in chapters)
     print(f"{len(chapters)} chapters, {n_quests} quests, {len(problems)} problem(s)")
     for p in problems[:80]:
@@ -246,6 +296,7 @@ def main():
             "icon": {"id": "createlanterns:power_ring"}, "lock_message": "", "pause_game": False,
             "progression_mode": "flexible", "show_lock_icons": True, "title": "The Book of Oa", "version": 13}
     (OUT / "data.snbt").write_text(snbt(data) + "\n", encoding="utf-8", newline="\n")
+    lang["file.0000000000000001.title"] = "The Book of Oa"  # FTB 2101 reads the book's title from lang (the file's id is 1)
     lines = ["{"] + [f"\t{k}: {snbt(v, 1)}" for k, v in sorted(lang.items())] + ["}"]
     (OUT / "lang" / "en_us.snbt").write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
     print(f"wrote {OUT}")

@@ -7,14 +7,13 @@
 		id: "cataclysm:the_incinerator"
 	}
 	id: "775D58DA24E4D109"
+	images: [ ]
 	order_index: 10
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: [
-				"CD1332807D3C7E60"
-			]
+			dependencies: ["4D1332807D3C7E60"]
 			icon: {
 				id: "minecraft:writable_book"
 			}
@@ -22,8 +21,8 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-					elevate_perms: true
 					id: "626AF41231237ED7"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
@@ -35,55 +34,47 @@
 			]
 			shape: "hexagon"
 			size: 1.5d
-			tasks: [
-				{
-					id: "E38064CAEA2FD209"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "638064CAEA2FD209"
+				type: "checkmark"
+			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"449CD85FB94FBE59"
-			]
+			dependencies: ["449CD85FB94FBE59"]
 			icon: {
 				id: "kingsandmonsters:grunt_captain_banner"
 			}
-			id: "E31999F78D616C16"
+			id: "631999F78D616C16"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-					elevate_perms: true
 					id: "71EF2F05127E7FAB"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 50"
-					elevate_perms: true
-					id: "FC383B9F30CD93AA"
+					id: "7C383B9F30CD93AA"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
-			tasks: [
-				{
-					id: "4B103DB54D86E360"
-					entity: "kingsandmonsters:ogre_grunt_captain"
-					value: 1L
-					type: "kill"
-				}
-			]
+			tasks: [{
+				entity: "kingsandmonsters:ogre_grunt_captain"
+				id: "4B103DB54D86E360"
+				type: "kill"
+				value: 1L
+			}]
 			x: 3.0d
 			y: -4.5d
 		}
 		{
-			dependencies: [
-				"E31999F78D616C16"
-			]
+			dependencies: ["631999F78D616C16"]
 			icon: {
 				id: "kingsandmonsters:ogre_kings_crown"
 			}
@@ -91,36 +82,32 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-					elevate_perms: true
-					id: "F71CA5F02E907A21"
+					id: "771CA5F02E907A21"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 100"
-					elevate_perms: true
-					id: "D4CD348560A357FA"
+					id: "54CD348560A357FA"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
 			size: 1.25d
-			tasks: [
-				{
-					id: "E749770654D2DD88"
-					entity: "kingsandmonsters:ogre_lord"
-					value: 1L
-					type: "kill"
-				}
-			]
+			tasks: [{
+				entity: "kingsandmonsters:ogre_lord"
+				id: "6749770654D2DD88"
+				type: "kill"
+				value: 1L
+			}]
 			x: 6.5d
 			y: -4.5d
 		}
 		{
-			dependencies: [
-				"E31999F78D616C16"
-			]
+			dependencies: ["631999F78D616C16"]
 			icon: {
 				id: "bosses_of_mass_destruction:soul_star"
 			}
@@ -128,36 +115,32 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-					elevate_perms: true
-					id: "B85C1778A8E0CE03"
+					id: "385C1778A8E0CE03"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 100"
-					elevate_perms: true
-					id: "A1A49D0E8C9AF03A"
+					id: "21A49D0E8C9AF03A"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
 			size: 1.25d
-			tasks: [
-				{
-					id: "2411C4EB8E1DF187"
-					entity: "bosses_of_mass_destruction:lich"
-					value: 1L
-					type: "kill"
-				}
-			]
+			tasks: [{
+				entity: "bosses_of_mass_destruction:lich"
+				id: "2411C4EB8E1DF187"
+				type: "kill"
+				value: 1L
+			}]
 			x: 6.5d
 			y: -3.0d
 		}
 		{
-			dependencies: [
-				"61ECA44BBA92455E"
-			]
+			dependencies: ["61ECA44BBA92455E"]
 			icon: {
 				id: "bosses_of_mass_destruction:blazing_eye"
 			}
@@ -165,73 +148,65 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-					elevate_perms: true
-					id: "AD5C3A5DCC44F14A"
+					id: "2D5C3A5DCC44F14A"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 125"
-					elevate_perms: true
 					id: "45C803B4ADE12076"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
 			size: 1.25d
-			tasks: [
-				{
-					id: "253B66C9E673E8A8"
-					entity: "bosses_of_mass_destruction:gauntlet"
-					value: 1L
-					type: "kill"
-				}
-			]
+			tasks: [{
+				entity: "bosses_of_mass_destruction:gauntlet"
+				id: "253B66C9E673E8A8"
+				type: "kill"
+				value: 1L
+			}]
 			x: 8.5d
 			y: -3.0d
 		}
 		{
-			dependencies: [
-				"1A65CBBEF6215580"
-			]
+			dependencies: ["1A65CBBEF6215580"]
 			icon: {
 				id: "bosses_of_mass_destruction:obsidian_heart"
 			}
-			id: "8A18BBAFF3F2E674"
+			id: "0A18BBAFF3F2E674"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-					elevate_perms: true
-					id: "966BD630F8429E90"
+					id: "166BD630F8429E90"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 200"
-					elevate_perms: true
 					id: "17F0A1FE01D0A9B3"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
 			size: 1.25d
-			tasks: [
-				{
-					id: "28E2243F79FD350D"
-					entity: "bosses_of_mass_destruction:obsidilith"
-					value: 1L
-					type: "kill"
-				}
-			]
+			tasks: [{
+				entity: "bosses_of_mass_destruction:obsidilith"
+				id: "28E2243F79FD350D"
+				type: "kill"
+				value: 1L
+			}]
 			x: 11.0d
 			y: -3.0d
 		}
 		{
-			dependencies: [
-				"449CD85FB94FBE59"
-			]
+			dependencies: ["449CD85FB94FBE59"]
 			icon: {
 				id: "minecraft:spider_eye"
 			}
@@ -239,72 +214,64 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-					elevate_perms: true
 					id: "3AA10F40A0C1151B"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 50"
-					elevate_perms: true
 					id: "440C3F1AB9ED1DB2"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
-			tasks: [
-				{
-					id: "986CA723756A7D92"
-					entity: "born_in_chaos_v1:mother_spider"
-					value: 1L
-					type: "kill"
-				}
-			]
+			tasks: [{
+				entity: "born_in_chaos_v1:mother_spider"
+				id: "186CA723756A7D92"
+				type: "kill"
+				value: 1L
+			}]
 			x: 3.0d
 			y: -1.5d
 		}
 		{
-			dependencies: [
-				"161BBFD2D2735C41"
-			]
+			dependencies: ["161BBFD2D2735C41"]
 			icon: {
 				id: "minecraft:carved_pumpkin"
 			}
-			id: "E9793773ECA52D20"
+			id: "69793773ECA52D20"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-					elevate_perms: true
 					id: "02147D38446E8C3E"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 150"
-					elevate_perms: true
 					id: "1A581E096C36D500"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
 			size: 1.25d
-			tasks: [
-				{
-					id: "AB531700C30CF4DA"
-					entity: "born_in_chaos_v1:lord_pumpkinhead"
-					value: 1L
-					type: "kill"
-				}
-			]
+			tasks: [{
+				entity: "born_in_chaos_v1:lord_pumpkinhead"
+				id: "2B531700C30CF4DA"
+				type: "kill"
+				value: 1L
+			}]
 			x: 10.0d
 			y: -1.5d
 		}
 		{
-			dependencies: [
-				"449CD85FB94FBE59"
-			]
+			dependencies: ["449CD85FB94FBE59"]
 			icon: {
 				id: "irons_spellbooks:archevoker_helmet"
 			}
@@ -312,86 +279,78 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-					elevate_perms: true
 					id: "0584570AB9A7DD36"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/scrolls_1"
-					elevate_perms: true
 					id: "453F7C9267F607EE"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 50"
-					elevate_perms: true
-					id: "F4E2AE140547D6ED"
+					id: "74E2AE140547D6ED"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
-			tasks: [
-				{
-					id: "9A9008FEC62FA54F"
-					entity: "irons_spellbooks:archevoker"
-					value: 1L
-					type: "kill"
-				}
-			]
+			tasks: [{
+				entity: "irons_spellbooks:archevoker"
+				id: "1A9008FEC62FA54F"
+				type: "kill"
+				value: 1L
+			}]
 			x: 3.0d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"1DAE5DAC9D6F6EF0"
-			]
+			dependencies: ["1DAE5DAC9D6F6EF0"]
 			icon: {
 				id: "irons_spellbooks:dead_king_phylactery"
 			}
-			id: "AB3D7803A016166B"
+			id: "2B3D7803A016166B"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-					elevate_perms: true
-					id: "973556D0451B08DF"
+					id: "173556D0451B08DF"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/scrolls_2"
-					elevate_perms: true
 					id: "3152C7BB3D77221B"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 200"
-					elevate_perms: true
-					id: "C9F60C4C4438A73C"
+					id: "49F60C4C4438A73C"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
 			size: 1.25d
-			tasks: [
-				{
-					id: "F5ABB6DC0B8C320F"
-					entity: "irons_spellbooks:dead_king"
-					value: 1L
-					type: "kill"
-				}
-			]
+			tasks: [{
+				entity: "irons_spellbooks:dead_king"
+				id: "75ABB6DC0B8C320F"
+				type: "kill"
+				value: 1L
+			}]
 			x: 10.0d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"AB3D7803A016166B"
-			]
+			dependencies: ["2B3D7803A016166B"]
 			icon: {
 				id: "irons_spellbooks:tyros_statue"
 			}
@@ -399,43 +358,39 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
-					elevate_perms: true
-					id: "AB5669E25207E4D0"
+					id: "2B5669E25207E4D0"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/scrolls_3"
-					elevate_perms: true
-					id: "FA8EED88C61BDACE"
+					id: "7A8EED88C61BDACE"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 300"
-					elevate_perms: true
 					id: "19DE43781B3893DC"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
 			size: 1.5d
-			tasks: [
-				{
-					id: "86639639353DFB06"
-					entity: "irons_spellbooks:fire_boss"
-					value: 1L
-					type: "kill"
-				}
-			]
+			tasks: [{
+				entity: "irons_spellbooks:fire_boss"
+				id: "06639639353DFB06"
+				type: "kill"
+				value: 1L
+			}]
 			x: 14.0d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"1DAE5DAC9D6F6EF0"
-			]
+			dependencies: ["1DAE5DAC9D6F6EF0"]
 			icon: {
 				id: "graveyard:vial_of_blood"
 			}
@@ -443,110 +398,98 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-					elevate_perms: true
 					id: "60E9C71ED2083114"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 125"
-					elevate_perms: true
-					id: "B1196D1EDD23E992"
+					id: "31196D1EDD23E992"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
 			size: 1.25d
-			tasks: [
-				{
-					id: "E974C811958F8C96"
-					entity: "graveyard:lich"
-					value: 1L
-					type: "kill"
-				}
-			]
+			tasks: [{
+				entity: "graveyard:lich"
+				id: "6974C811958F8C96"
+				type: "kill"
+				value: 1L
+			}]
 			x: 6.5d
 			y: 1.5d
 		}
 		{
-			dependencies: [
-				"1AC7BF77F1623A7A"
-			]
+			dependencies: ["1AC7BF77F1623A7A"]
 			icon: {
 				id: "cataclysm:mech_eye"
 			}
-			id: "FEC8E525A8B9CFE7"
+			id: "7EC8E525A8B9CFE7"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-					elevate_perms: true
 					id: "5EFDC3DE31A33DF7"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 125"
-					elevate_perms: true
-					id: "F5FAE0832307E79A"
+					id: "75FAE0832307E79A"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
 			size: 1.25d
-			tasks: [
-				{
-					id: "A77B7420AB89F533"
-					entity: "cataclysm:the_harbinger"
-					value: 1L
-					type: "kill"
-				}
-			]
+			tasks: [{
+				entity: "cataclysm:the_harbinger"
+				id: "277B7420AB89F533"
+				type: "kill"
+				value: 1L
+			}]
 			x: 6.5d
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"FEC8E525A8B9CFE7"
-			]
+			dependencies: ["7EC8E525A8B9CFE7"]
 			icon: {
 				id: "cataclysm:monstrous_horn"
 			}
-			id: "9951EF18DDFE386F"
+			id: "1951EF18DDFE386F"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-					elevate_perms: true
-					id: "A9DA8B4A17CACC3B"
+					id: "29DA8B4A17CACC3B"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 150"
-					elevate_perms: true
-					id: "B79A7A42D4D58850"
+					id: "379A7A42D4D58850"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
 			size: 1.25d
-			tasks: [
-				{
-					id: "17E7937E82D115D9"
-					entity: "cataclysm:netherite_monstrosity"
-					value: 1L
-					type: "kill"
-				}
-			]
+			tasks: [{
+				entity: "cataclysm:netherite_monstrosity"
+				id: "17E7937E82D115D9"
+				type: "kill"
+				value: 1L
+			}]
 			x: 8.5d
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"9951EF18DDFE386F"
-			]
+			dependencies: ["1951EF18DDFE386F"]
 			icon: {
 				id: "cataclysm:ignitium_ingot"
 			}
@@ -554,36 +497,32 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-					elevate_perms: true
-					id: "F0E672B544C7C68D"
+					id: "70E672B544C7C68D"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 200"
-					elevate_perms: true
-					id: "A8DF54E5C08704A7"
+					id: "28DF54E5C08704A7"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
 			size: 1.25d
-			tasks: [
-				{
-					id: "69C94BFDDE1CD2E8"
-					entity: "cataclysm:ignis"
-					value: 1L
-					type: "kill"
-				}
-			]
+			tasks: [{
+				entity: "cataclysm:ignis"
+				id: "69C94BFDDE1CD2E8"
+				type: "kill"
+				value: 1L
+			}]
 			x: 10.5d
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"11E9E3CDB830BBC9"
-			]
+			dependencies: ["11E9E3CDB830BBC9"]
 			icon: {
 				id: "cataclysm:desert_eye"
 			}
@@ -591,36 +530,32 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-					elevate_perms: true
-					id: "F7C123C457AFE591"
+					id: "77C123C457AFE591"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 200"
-					elevate_perms: true
 					id: "14762C612508E1F3"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
 			size: 1.25d
-			tasks: [
-				{
-					id: "6283444493B1B75E"
-					entity: "cataclysm:ancient_remnant"
-					value: 1L
-					type: "kill"
-				}
-			]
+			tasks: [{
+				entity: "cataclysm:ancient_remnant"
+				id: "6283444493B1B75E"
+				type: "kill"
+				value: 1L
+			}]
 			x: 12.5d
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"11E9E3CDB830BBC9"
-			]
+			dependencies: ["11E9E3CDB830BBC9"]
 			icon: {
 				id: "cataclysm:abyss_eye"
 			}
@@ -628,36 +563,32 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-					elevate_perms: true
-					id: "D19854AEB21BC9AC"
+					id: "519854AEB21BC9AC"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 200"
-					elevate_perms: true
 					id: "5E0C2FA4448653C4"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
 			size: 1.25d
-			tasks: [
-				{
-					id: "E3CB86E7D9E4BAB1"
-					entity: "cataclysm:the_leviathan"
-					value: 1L
-					type: "kill"
-				}
-			]
+			tasks: [{
+				entity: "cataclysm:the_leviathan"
+				id: "63CB86E7D9E4BAB1"
+				type: "kill"
+				value: 1L
+			}]
 			x: 10.5d
 			y: 4.5d
 		}
 		{
-			dependencies: [
-				"449CD85FB94FBE59"
-			]
+			dependencies: ["449CD85FB94FBE59"]
 			icon: {
 				id: "legendary_monsters:eye_of_frost"
 			}
@@ -665,35 +596,31 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-					elevate_perms: true
 					id: "7A757728B7D3646C"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 50"
-					elevate_perms: true
 					id: "0CF413218554EBD5"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
-			tasks: [
-				{
-					id: "5285B426EE77A6A3"
-					entity: "legendary_monsters:frostbitten_golem"
-					value: 1L
-					type: "kill"
-				}
-			]
+			tasks: [{
+				entity: "legendary_monsters:frostbitten_golem"
+				id: "5285B426EE77A6A3"
+				type: "kill"
+				value: 1L
+			}]
 			x: 3.0d
 			y: 6.0d
 		}
 		{
-			dependencies: [
-				"1AC7BF77F1623A7A"
-			]
+			dependencies: ["1AC7BF77F1623A7A"]
 			icon: {
 				id: "legendary_monsters:eye_of_moss"
 			}
@@ -701,52 +628,48 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-					elevate_perms: true
-					id: "910FA863C00D3C86"
+					id: "110FA863C00D3C86"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 100"
-					elevate_perms: true
 					id: "5D6B235CF35C74BB"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
 			size: 1.25d
-			tasks: [
-				{
-					id: "CFAEF45117014EDE"
-					entity: "legendary_monsters:overgrown_colossus"
-					value: 1L
-					type: "kill"
-				}
-			]
+			tasks: [{
+				entity: "legendary_monsters:overgrown_colossus"
+				id: "4FAEF45117014EDE"
+				type: "kill"
+				value: 1L
+			}]
 			x: 6.5d
 			y: 6.0d
 		}
 		{
-			dependencies: [
-				"35962FDF975D78EB"
-			]
+			dependencies: ["35962FDF975D78EB"]
 			icon: {
 				id: "legendary_monsters:eye_of_annihilation"
 			}
-			id: "AFB5CC52F4BE55B9"
+			id: "2FB5CC52F4BE55B9"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
-					elevate_perms: true
-					id: "E06466682D44DAD8"
+					id: "606466682D44DAD8"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 400"
-					elevate_perms: true
-					id: "B6EEBFBE9BA55307"
+					id: "36EEBFBE9BA55307"
+					permission_level: 2
 					silent: true
 					type: "command"
 				}
@@ -758,14 +681,12 @@
 			]
 			shape: "diamond"
 			size: 1.75d
-			tasks: [
-				{
-					id: "C1C8809DDDD7A3D4"
-					entity: "legendary_monsters:the_obliterator"
-					value: 1L
-					type: "kill"
-				}
-			]
+			tasks: [{
+				entity: "legendary_monsters:the_obliterator"
+				id: "41C8809DDDD7A3D4"
+				type: "kill"
+				value: 1L
+			}]
 			x: 14.0d
 			y: 6.0d
 		}

@@ -85,6 +85,10 @@ The chapter id is the file name, so cross-chapter keys are `<file>:<key>`, e.g. 
   stage granted before its quest unlocked still completes it once the quest opens.
 - Quest progress belongs to the **FTB team**: friends in one team share it; solo players each
   have their own. Rewards are claimed per player.
+- **Silent drops:** an object id ≥ `8000000000000000` is re-id'd on load (signed parse), and a task
+  or reward of an unregistered type is deleted. The stage task/reward type is **`gamestage`**.
+  `tools/questgen.py --check` guards both.
+- Never regenerate the book while the server runs (FTB writes its in-memory copy back on stop).
 
 ## KubeJS / Rhino gotchas (from testing)
 - Inside functions, use `var` (Rhino throws "redeclaration of var" for `const`/`let` in some blocks).
