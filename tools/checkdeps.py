@@ -25,11 +25,16 @@ ACCEPTED = {
     ("jei", "minecraft"): "JEI 19.69 beta declares [1.21,1.21.1) - a typo; NeoForge loads it fine on 1.21.1",
     ("lodestone", "minecraft"): "Lodestone 1.8.2 declares [1.21,1.21.1) - same typo; loads fine in every boot test",
     ("dungeons_arise", "minecraft"): "WDA 2.1.68 declares [1.21,1.21.1) - same typo; loads fine in every boot test",
+    ("puffish_skills", "minecraft"): "Pufferfish's Skills 0.19.2 declares [1.21,1.21.1) - same typo; loads fine (boot 2026-11-09)",
+    ("puffish_attributes", "minecraft"): "Pufferfish's Attributes 0.8.3 declares [1.21,1.21.1) - same typo; loads fine",
+    ("shieldexp", "minecraft"): "Shield Expansion 1.4.3 declares [1.21, 1.21.1) - same typo; loads fine",
 }
 
 
 def nums(v):
-    return tuple(int(x) for x in re.findall(r"\d+", str(v).split("+")[0].split("-")[0])) or (0,)
+    # All numeric parts before any "+build" metadata. Don't cut at "-": ranges like
+    # [1.21.1-2,1.21.1-3) (Iron's Lib) depend on the part after the dash.
+    return tuple(int(x) for x in re.findall(r"\d+", str(v).split("+")[0])) or (0,)
 
 
 def in_range(version, rng):

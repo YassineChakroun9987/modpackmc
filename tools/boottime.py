@@ -32,6 +32,13 @@ KNOWN_HARMLESS = [
     r"AttributeMap/\]: Ignoring unknown attribute 'forge:",       # old Forge attributes saved in structure mobs
     r"mixin/\]: Error loading class: com/simibubi/create/",       # Lootr's optional Create compat (gone once Create is in)
     r"spark/\]: Timed out waiting for world statistics",          # spark stats while the server is busy generating
+    r"JarSelector/\]: Attempted to select a dependency jar for JarJar which was passed in as source",  # lib shipped twice; real file wins
+    r"azurelib/IO\]: Correcting config value",                    # AzureLib fixes its own default
+    r"Jupiter/\]: Notice: Jupiter cannot resolve",                # Jupiter info notice
+    r"mixin/\]: Error loading class: org/jetbrains/annotations/",  # compile-time annotation, absent at runtime
+    r"mixin/\]: (Error loading class: |@Mixin target .* was not found)",  # optional compat mixins for mods we don't run
+    r"draconicevolution/\]: (Reactor detonation initiated|Calculating explosion ETA|\*\*Explosion Imminent)",  # DE startup log noise
+    r"ReloadableServerRegistries/\]: Found loot table element validation problem",  # entries for missing items are skipped
 ]
 
 
@@ -41,6 +48,10 @@ KNOWN_ERRORS = [
     (r"BlockAttachedEntity/\]: Block-attached entity at invalid position",
      "a structure template hangs a painting/item frame where no wall survived; the game drops it "
      "(traced to philipsruins:ancient_dungeon on our seed; also seen from YUNG's on another seed)"),
+    (r"Jupiter/\]: Failed to load config: \./config/",
+     "Jupiter (Ice and Fire's config lib) reads its config before creating it; only on the very first boot"),
+    (r"RuntimeDistCleaner/DISTXFORM\]: Attempted to load class net/minecraft/client/",
+     "a mod's client-only mixin (FamiliarsLib ItemRenderer) is tried on the dedicated server and skipped; clients are unaffected"),
 ]
 
 
