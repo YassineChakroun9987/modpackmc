@@ -31,6 +31,7 @@ both    t_and_t-fabric-neoforge-1.13.11.jar                            8f00e36a1
 both    Terralith_1.21.1_v2.6.2_Neoforge.jar                           d4a9fe71b841f70edfb4b280f9bf5c58e4a28224
 both    yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar            fe270c9f6e0a8142cf316944087f5109cef08bbb
 both    YungsApi-1.21.1-NeoForge-5.1.9.jar                             2c4b740c8ad27bbcb2a21b85b64f011b809aed91
+server  [neoforge]ctov-1.21.1-3.6.4.jar                                753b631f6cb258a448ac12b858e9a1cacbfefb6b
 server  architectury-13.0.11-neoforge.jar                              008656a0702801174b8ec245ed7aad1921d6e9f1
 server  castles_and_keeps-1.0.9.1-1.21.1-neoforge.jar                  484d881cdc0d6653479221509be0f53bdf48743b
 server  Chunky-NeoForge-1.4.23.jar                                     ab0c74743a653020fe2dfc4986b43e893947f3e9
