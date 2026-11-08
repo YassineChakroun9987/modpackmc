@@ -1,0 +1,5 @@
+#Which ways of making things the recipes offer. It's read when the recipes load (at /reload and when a world loads).
+#You can also change or remove each recipe in config/createlanterns/recipes (see its README.md).
+[recipes]
+	#If true, you can craft each light's Lantern at a crafting table.
+	craftingTableLanterns = true

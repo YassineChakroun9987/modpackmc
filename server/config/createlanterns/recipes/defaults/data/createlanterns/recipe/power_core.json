@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BMB",
+    "MNM",
+    "BMB"
+  ],
+  "key": {
+    "B": {
+      "item": "create:brass_block"
+    },
+    "M": {
+      "item": "create:precision_mechanism"
+    },
+    "N": {
+      "item": "minecraft:beacon"
+    }
+  },
+  "result": {
+    "id": "createlanterns:power_core",
+    "count": 1
+  }
+}

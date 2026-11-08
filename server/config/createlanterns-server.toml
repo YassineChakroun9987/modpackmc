@@ -1,0 +1,1146 @@
+[ring]
+	#How much energy a full ring holds. The UI shows it as a percentage.
+	# Default: 1000.0
+	# Range: 10.0 ~ 1000000.0
+	capacity = 1000.0
+	#Energy it costs every time the ring's activated. A stronger bearer pays less.
+	# Default: 5.0
+	# Range: 0.0 ~ 1000000.0
+	activationCost = 5.0
+	#Energy an active ring burns each second just to stay on.
+	# Default: 0.2
+	# Range: 0.0 ~ 1000000.0
+	activeDrainPerSecond = 0.2
+	#The fraction of capacity an inactive ring slowly gets back from its bearer's emotion alone (willpower, fear, rage and so on).
+	# Default: 0.15
+	# Range: 0.0 ~ 1.0
+	willReserve = 0.15
+	#The fraction of capacity it gets back each second while it's below that reserve.
+	# Default: 0.001
+	# Range: 0.0 ~ 1.0
+	willTricklePerSecond = 0.001
+	#The fraction of the worn ring's charge that's lost when its bearer dies.
+	# Default: 0.25
+	# Range: 0.0 ~ 1.0
+	deathChargeLoss = 0.25
+	#If true, a bonded ring refuses anyone who isn't its bearer.
+	enforceBond = true
+	#How strong (0-100) a new bearer's emotion starts out. Willpower for a green ring, fear for a yellow one, and so on.
+	# Default: 25.0
+	# Range: 0.0 ~ 100.0
+	startingWillpower = 25.0
+	#How many seconds a ring needs to be lit before its constructs can hold one more block. It's half that
+	#while the bearer has hard light out. 0 turns growth off.
+	# Default: 60.0
+	# Range: 0.0 ~ 86400.0
+	blockGrowthSeconds = 60.0
+	#The most blocks time can add to a construct's limit, on top of what willpower gives.
+	# Default: 1000
+	# Range: 0 ~ 4096
+	blockGrowthMax = 1000
+	#If true, a bearer can wear a second ring on their other hand (the ring slot above the first). The two
+	#rings share their charge, both lights work while lit, and the power key uses the power of whichever one's
+	#selected. If false, the other hand can't take a ring, and one worn there comes off.
+	twoRings = true
+	#The most rings a bearer can wear at once, one per hand (two's the limit for now.
+	#1 is the same as twoRings off).
+	# Default: 2
+	# Range: 1 ~ 2
+	mostRings = 2
+	#If true, a lit ring keeps its bearer breathing underwater, whether they're flying, riding or walking the
+	#bottom (their air never runs out while it's lit, suit or no suit). If false, they hold their breath like anyone else.
+	waterBreathing = true
+	#Energy the ring burns each second keeping its bearer breathing underwater. A stronger bearer pays
+	#less.
+	# Default: 0.2
+	# Range: 0.0 ~ 1000.0
+	waterBreathingPerSecond = 0.2
+	#If true, a bound ring left lying in the world (tossed, dropped on death, spilled from a broken chest,
+	#thrown out by a dispenser) lifts off and flies back to its bearer. If they're away it waits for them. Nobody
+	#else can pick it up. If false, it lies there like any other item.
+	returnsToBearer = true
+	#If true, an unbound ring left lying in the world lifts off and goes looking for the most worthy player
+	#for its light, and offers itself to them. If nobody's worthy it waits where it is and looks again every
+	#minute. If false, it lies there like any other item.
+	seeksNewBearer = true
+
+[battery]
+	#How much energy a lantern stores. A lantern only refills at a Central Power Battery (see centralBattery).
+	# Default: 10000.0
+	# Range: 100.0 ~ 1.0E7
+	capacity = 10000.0
+	#How many ticks a charging ritual takes to fill an empty ring, not counting the link phase.
+	# Default: 70
+	# Range: 1 ~ 12000
+	fullChargeTicks = 70
+	#How many blocks a bearer can move from the battery before the link breaks.
+	# Default: 6.0
+	# Range: 2.0 ~ 32.0
+	linkRange = 6.0
+
+[calling]
+	#If true, rings choose their bearers. The emotional spectrum watches what every player does.
+	#A light's ring comes to whoever shows its emotion strongly enough. Put an unbound ring on in survival
+	#without that and it rejects you and flies off your hand. In creative any ring goes on and works until
+	#it comes off. If false, any ring goes on any hand and none comes looking.
+	ringsChoose = true
+	#If true, a red ring never comes off once it's on. It's taken the place of the bearer's heart.
+	redRingStays = true
+	#How many deed points of a light's emotion a player needs before it notices them (a whisper). Deed points
+	#are how strongly the emotion shows in what they do. It was 40 before rings asked for more.
+	# Default: 60.0
+	# Range: 0.0 ~ 100000.0
+	whisperAt = 60.0
+	#How many they need before they dream of it when they sleep through a night. It was 120 before rings asked for more.
+	# Default: 180.0
+	# Range: 0.0 ~ 100000.0
+	dreamAt = 180.0
+	#How many they need before an unbound ring of that light (or one passed on to them) accepts them.
+	#It's also where its own moment can bring its ring. It was 150 before rings asked for more.
+	# Default: 225.0
+	# Range: 0.0 ~ 100000.0
+	worthyAt = 225.0
+	#How many they need before that light's ring comes looking for them. It was 300 before rings asked for more.
+	# Default: 450.0
+	# Range: 0.0 ~ 100000.0
+	ringAt = 450.0
+	#In-game days between each step of a light's story with a player. Whisper to dream, then dream to ring.
+	#Someone who never dreams waits three times as long from the whisper.
+	# Default: 7
+	# Range: 0 ~ 1000
+	storyDays = 7
+	#In-game days before a light whose ring got turned away tries again. Each refusal raises the bar
+	#by half too.
+	# Default: 7
+	# Range: 0 ~ 1000
+	turnedAwayDays = 7
+	#The chance a light's own moment brings its ring, once the player's shown enough of its emotion.
+	# Default: 0.01
+	# Range: 0.0 ~ 1.0
+	momentChance = 0.01
+	#How much a light's bar (ringAt) goes up each time its ring gets turned away. 0.5 adds half again for
+	#each refusal. 0 never raises it.
+	# Default: 0.5
+	# Range: 0.0 ~ 100.0
+	refusalRaise = 0.5
+	#How many times more deed points a player needs for each ring of a light they have already had. 4 means a
+	#second ring of the same light needs four times as much at every step (whisperAt, dreamAt, worthyAt and ringAt),
+	#and a third needs sixteen times as much. 1 makes every ring cost the same.
+	# Default: 4.0
+	# Range: 1.0 ~ 100.0
+	anotherRingTimes = 4.0
+	#How many seconds a ring that came for someone (or was passed to them) waits for an answer before it leaves.
+	# Default: 60
+	# Range: 5 ~ 3600
+	offerSeconds = 60
+	#If true, each player's deed points slowly decay over time. Deed points are how much of each light's emotion the
+	#spectrum has seen in what they do (/createlanterns spectrum shows them). Every light's points drop 3% each in-game day,
+	#so what they do now counts for more than what they did ages ago. If false, only deeds change them.
+	#Either way, doing the same deed over and over still counts for less while it's fresh (the spectrum gets sick of
+	#it, and that's separate from decay). A light's gain still costs its opposite a quarter as much, and a bearer's
+	#willpower (which only grows) never decays.
+	emotionDecay = true
+	#How much each deed is worth compared to what the mod first gave it. 0.5 is half, so every light needs twice
+	#the deeds it used to before it stirs (and the bars from whisperAt to ringAt are higher too). 1 counts
+	#deeds the way they were counted before they were lowered.
+	# Default: 0.5
+	# Range: 0.0 ~ 10.0
+	deedWorth = 0.5
+	#Deeds worth what you set here instead of the mod's value, as deed=points (plunder=0 makes a dungeon
+	#chest count for nothing). deedWorth still scales them. Every deed, its id and its worth are listed in the mod's
+	#docs/ARCHITECTURE.md (the calling's deeds). Set each deed added with them to 0, and deedWorth to 1, and deeds
+	#count the way they used to.
+	deedWorths = []
+	#If true, a red ring that never comes off (redRingStays) can be taken off while its bearer's also wearing a blue ring.
+	#Only the blue light can restore a Red Lantern's heart. If false, only an operator can free it.
+	blueFreesRed = true
+
+[flight]
+	#If true, a bearer crashing at speed digs a crater and wrecks whatever it hits. It's a small dent at
+	#20 blocks a second and a village wide at 1000. If false, crashes are still shielded and still hurt but don't break anything.
+	craters = true
+	#The most blocks a crater clears in one server tick. A big one gets dug out over a few seconds.
+	# Default: 16000
+	# Range: 500 ~ 500000
+	craterBlocksPerTick = 16000
+	#If true, a bearer landing hard throws back any living thing near them. It
+	#doesn't hurt or break anything. If false, the landing's just seen and heard.
+	landingShockwave = true
+	#If true, a lit ring lets its bearer fly (double jump to take off). If false, nobody flies, and
+	#anyone who's flying now drops.
+	enabled = true
+	#The fastest the ring flies anyone, in blocks a second (1000 max). No gear goes faster, and if gearStep
+	#carries the gears up to it, it's the last gear. On a server, players already in the world get a change to this when they next join.
+	# Default: 1000
+	# Range: 5 ~ 1000
+	topSpeed = 1000
+	#The speed of a flier's first gears, in blocks a second (each from 5 to 1000), slowest first. Every flight
+	#starts in first gear. Double tap forward to shift up one, tap back to shift down one. Past the last one listed
+	#they keep going up by gearStep until topSpeed. A gear listed faster than topSpeed flies at topSpeed. On a server, players already in the world get a change to this when they next join.
+	gears = [25, 50, 75, 100, 150, 200, 300]
+	#How much faster each gear past the listed gears is than the one before, in blocks a second, up to topSpeed
+	#(by default: 25, 50, 75, 100, 150, 200, 300, then up by a hundred to 1000). 0 means no gears past the listed ones.
+	#You never get more than 64 gears. On a server, players already in the world get a change to this when they next join.
+	# Default: 100
+	# Range: 0 ~ 1000
+	gearStep = 100
+	#How fast flying forward builds speed, compared to the default (1). On a server, players already in the world get a change to this when they next join.
+	# Default: 1.0
+	# Range: 0.1 ~ 10.0
+	acceleration = 1.0
+	#Energy each second of flight costs. A stronger bearer pays less.
+	# Default: 0.6
+	# Range: 0.0 ~ 1000.0
+	energyPerSecond = 0.6
+	#If true, a flier can barrel-roll to either side. On a server, players already in the world get a change to this when they next join.
+	barrelRolls = true
+	#If true, a flier breaking the speed of sound gets wrapped in vapour, sends out shock waves and booms.
+	#(Each player's game draws it with the copy of this config the server sent when they joined.)
+	sonicBoom = true
+	#The speed of sound, in blocks a second. Fly faster than this and you boom.
+	#On a server, players already in the world get a change to this when they next join.
+	# Default: 350
+	# Range: 50 ~ 1000
+	sonicBoomSpeed = 350
+	#How strong a sonic boom is, compared to the default (1). That's how loud it is
+	#and how far away you hear it, how hard and how far away it shakes people's view, and how wide its shock
+	#rings and vapour cone are. On a server, players already in the world get a change to this when they next join.
+	# Default: 1.0
+	# Range: 0.1 ~ 4.0
+	sonicBoomStrength = 1.0
+	#If true, a bearer crashing at 20 blocks a second or faster explodes where they
+	#hit. A steep crash into the ground below 75 is a hero landing instead. You get a flash and a boom, everything nearby hurt and thrown back (see explosionSize), and a crater dug (see craters).
+	#If false, a crash at any speed is only shielded, with a dull knock. The bearer takes whatever their ring can't pay for.
+	crashExplosions = true
+	#How big a crash's blast is, compared to the default (1 throws and hurts living things within
+	#its crater's reach plus a quarter and two more blocks, 122 blocks at 1000 blocks a second). It sets how far
+	#it throws and hurts, how big the flash and fireball are, and how far away it's seen and heard. The crater comes
+	#from craterSize. A Great Foundry started wrong has its own (foundry.failureExplosionSize).
+	# Default: 1.0
+	# Range: 0.1 ~ 3.0
+	explosionSize = 1.0
+	#How hard a crash at speed hits, compared to the default (1). It sets what the bearer takes past
+	#their ring's shield (and what the shield costs the ring), and what the blast does to everything nearby.
+	# Default: 1.0
+	# Range: 0.0 ~ 100.0
+	crashDamage = 1.0
+	#How wide a crash's crater is, compared to the default (1 is a small dent at 20 blocks a second, the
+	#width of a village at 1000). 0 doesn't dig one.
+	# Default: 1.0
+	# Range: 0.0 ~ 3.0
+	craterSize = 1.0
+	#If true, a bearer coming down hard does a hero landing, down on one knee with the ground shaking under
+	#them (see landingShockwave). If false, every landing's a softer one, and the ring still takes the fall. On a server, players already in the world get a change to this when they next join.
+	heroLandings = true
+
+[ride]
+	#How many blocks a light construct slowly bobs up and down while you ride it at a hover. Heavier ones bob less.
+	#0 keeps it dead still.
+	# Default: 0.05
+	# Range: 0.0 ~ 0.5
+	hoverBob = 0.05
+	#If true, a bearer standing on a construct they made can lift it with the grip key and fly it. If
+	#false, constructs can't be ridden (and one being ridden now gets set down).
+	enabled = true
+	#How fast a ridden construct flies, compared to the default (1 is 10 blocks a second cruising, 18
+	#sprinting, 5 up or down). It applies to every gear and to climbing.
+	# Default: 1.0
+	# Range: 0.1 ~ 5.0
+	speed = 1.0
+	#The fastest a ridden construct flies, in blocks a second, whatever speed says (200 at most. Past that a body
+	#Sable moves goes too far each step to hit the ground properly). No gear goes faster, and if gearStep carries the
+	#gears up to it, it's the last gear. On a server, players already in the world get a change to this when they next join.
+	# Default: 100
+	# Range: 10 ~ 200
+	topSpeed = 100
+	#The speed of a rider's first gears, in blocks a second (each from 1 to 200), slowest first. Every
+	#ride starts in first gear. Double tap forward to shift up one, tap back to shift down one, and sprinting rides one
+	#gear up (10 and 18, like cruising and sprinting always were). Past the last one listed they keep going up by gearStep to
+	#topSpeed. On a server, players already in the world get a change to this when they next join.
+	gears = [10, 18, 25, 35, 50, 75]
+	#How much faster each gear past the listed gears is than the one before, in blocks a second, up to topSpeed (by
+	#default: 10, 18, 25, 35, 50, 75 and 100). 0 means no gears past the listed ones. You never get more than 64 gears. On a server, players already in the world get a change to this when they next join.
+	# Default: 25
+	# Range: 0 ~ 200
+	gearStep = 25
+
+#The Central Power Battery. It's a frame of brass casing, glass and one light's key block round a Power Core, and the only thing that refills a
+#Lantern (only on Oa, if the Lantern worlds are there). It charges the Lanterns and bearers' rings in its reach,
+#keeps the Blaze Burners there lit, and turns a drive under its core. All of that runs off the charge it holds.
+[centralBattery]
+	#How far (blocks) a small battery reaches from its core. A medium one reaches twice as far and the
+	#biggest (and the Guardians' on Oa) four times as far. That's the Lanterns it charges, the bearers whose rings it charges and
+	#the Blaze Burners it keeps lit.
+	# Default: 64.0
+	# Range: 2.0 ~ 256.0
+	radius = 64.0
+	#How much charge it holds (100000 is ten Lanterns' worth at the default battery.capacity). A Power Core
+	#comes full, and keeps its charge when you break it and place it again.
+	# Default: 100000.0
+	# Range: 1000.0 ~ 1.0E7
+	capacity = 100000.0
+	#How much charge it gets back by itself each second (25 is a Lantern's worth in under seven
+	#minutes, and a full refill in just over an hour).
+	# Default: 25.0
+	# Range: 0.0 ~ 1000000.0
+	regenPerSecond = 25.0
+	#How much charge it gets back each second on Oa, the Guardians' world (with Create Cosmonautics).
+	#250 is ten times as fast, since every Lantern gets recharged there.
+	# Default: 250.0
+	# Range: 0.0 ~ 1000000.0
+	oaRegenPerSecond = 250.0
+	#How much charge it gives each Lantern in reach each second while it's
+	#recharging Lanterns (100 fills an empty Lantern in just under two minutes).
+	# Default: 100.0
+	# Range: 0.0 ~ 1000000.0
+	lanternChargePerSecond = 100.0
+	#How much charge it gives each bearer's ring in reach each second (20 fills an empty
+	#ring in under a minute).
+	# Default: 20.0
+	# Range: 0.0 ~ 1000000.0
+	ringChargePerSecond = 20.0
+	#How fast (RPM) it turns the drive under its core while it's whole and has charge. 0 means it doesn't turn.
+	# Default: 64
+	# Range: 0 ~ 256
+	rpm = 64
+	#The stress (su) its drive can take at that speed. That's how much Create's machines on it can use.
+	# Default: 2048.0
+	# Range: 0.0 ~ 1000000.0
+	stressCapacity = 2048.0
+	#How much charge its drive costs each second at full load (less at a lighter load, nothing when
+	#nothing's running on it). If it runs dry, the drive stops until it's back to a twentieth of its capacity.
+	# Default: 8.0
+	# Range: 0.0 ~ 1000000.0
+	driveCostPerSecond = 8.0
+	#If true, it keeps every Blaze Burner in reach lit. Kindled, or superheated where a Blaze Cake set it
+	#seething, using Create's heat levels (a burner burning its own fuel gets left alone). If false, it doesn't heat any.
+	heatsBurners = true
+	#How much charge each burner it keeps kindled costs it each second.
+	# Default: 1.0
+	# Range: 0.0 ~ 1000000.0
+	kindleCostPerSecond = 1.0
+	#How much charge each burner it keeps superheated costs it each second.
+	# Default: 4.0
+	# Range: 0.0 ~ 1000000.0
+	superheatCostPerSecond = 4.0
+
+#Hard light constructs. You design, copy and summon them with the construct wheel.
+[constructs]
+	#If true, rings make constructs of hard light. If false, none can be designed, copied or summoned, and
+	#any that are out now disappear.
+	enabled = true
+	#How many blocks one construct can hold for a new bearer.
+	# Default: 32
+	# Range: 1 ~ 16384
+	baseParts = 32
+	#How many more blocks it can hold for each point of the bearer's emotional strength (0 to 100). 32
+	#plus 10 a point makes 1032 for a master, before what time with the ring adds (ring.blockGrowthMax).
+	# Default: 10.0
+	# Range: 0.0 ~ 1000.0
+	partsPerWill = 10.0
+	#The most blocks any construct can hold, however strong its bearer is (16384 is the most a design can record). A bigger construct takes longer to form and costs more to save, send and move.
+	# Default: 4096
+	# Range: 1 ~ 16384
+	mostParts = 4096
+	#The widest a construct can be along any axis, in blocks (64 is the most a design can record).
+	# Default: 64
+	# Range: 1 ~ 64
+	maxSpan = 64
+	#How many constructs a new bearer can keep out at once.
+	# Default: 1
+	# Range: 1 ~ 64
+	baseOut = 1
+	#How many points of emotional strength a bearer needs for each extra construct they can keep out at once (40 means one more
+	#at 40, two more at 80). 0 gives no extras.
+	# Default: 40.0
+	# Range: 0.0 ~ 100.0
+	willPerMoreOut = 40.0
+	#What a construct costs to form, compared to the default (1 is half an energy for each block,
+	#before a stronger bearer pays less).
+	# Default: 1.0
+	# Range: 0.0 ~ 100.0
+	formCost = 1.0
+	#What a construct costs to keep out, compared to the default (1 is 0.005 a second for each
+	#block).
+	# Default: 1.0
+	# Range: 0.0 ~ 100.0
+	upkeepCost = 1.0
+	#How many pages of constructs a bearer gets. Each page is a wheel of slotsPerPage. Constructs on pages
+	#past these are kept, but you can't reach them until the world has those pages again.
+	# Default: 4
+	# Range: 1 ~ 16
+	pages = 4
+	#How many constructs fit on a page (the slices of the wheel). Change it and a bearer's constructs keep their
+	#order, page by page, starting from the first page.
+	# Default: 8
+	# Range: 2 ~ 12
+	slotsPerPage = 8
+
+#What hard light can be made of, and what it does.
+[hardLight]
+	#Blocks hard light can never form, on top of the ones the mod already keeps out (unbreakable blocks,
+	#spawners, operator blocks and the tag createlanterns:not_in_constructs). Each entry's an id (create:mechanical_drill), a
+	#tag (#minecraft:beds), or every block of a mod (aeronautics:*).
+	forbiddenBlocks = []
+	#If true, engines, blaze burners and boilers on a construct run off the bearer's ring instead of fuel,
+	#and its water wheels turn without water. The ring pays machineFuelCost a second for each one. If false, they only burn
+	#what's put in them, and wheels only turn in water.
+	ringFuelsMachines = true
+	#Energy a second for each engine, burner, boiler or water wheel the ring keeps going. A stronger bearer pays
+	#less.
+	# Default: 0.2
+	# Range: 0.0 ~ 1000.0
+	machineFuelCost = 0.2
+	#If true, a construct's fires (campfires, magma, fire, lava, hot-air burners) set fire to whatever
+	#touches them, burning in the light of the ring that made it. If false, they just burn what's in them.
+	fireSetsAlight = true
+	#How much damage a second a construct's fire does to whatever it set alight.
+	# Default: 1.0
+	# Range: 0.0 ~ 100.0
+	fireDamage = 1.0
+	#If true, an empty slot of the wheel copies a dropped item the bearer looks at. Summoned, the copy
+	#comes into their hotbar in the ring's light. If false, items can't be copied, and copies that are out now disappear.
+	copyItems = true
+	#Energy for each point of wear a copied item takes. A copy never wears out. The ring pays this instead.
+	#If the ring can't pay, the copy fades.
+	# Default: 0.05
+	# Range: 0.0 ~ 1000.0
+	itemWearCost = 0.05
+	#Items hard light can never copy, on top of the ones the mod already keeps out (rings, and anything that is
+	#already hard light). Each entry's an id (minecraft:elytra), a tag (#minecraft:swords), or every item of a mod (create:*).
+	forbiddenItems = []
+
+#The ring's grip. Grabbing things with its light, then holding, hurling and pinning them.
+[grip]
+	#If true, a ring can grab things with its light: contraptions, constructs, living things and
+	#loose stuff. If false, it can't hold anything (so it can't fly a construct its bearer rides), and drops whatever it's holding now.
+	enabled = true
+	#How far away the ring can grab something, compared to the default (1 is 24 blocks for a
+	#new bearer, 64 for a master). On a server, players already in the world get a change to this when they next join.
+	# Default: 1.0
+	# Range: 0.1 ~ 10.0
+	reach = 1.0
+	#How much the ring lifts easily, compared to the default (1 is liftUntried for a new
+	#bearer, liftMaster for a master). Anything heavier lags and sags, and the ring can't grab anything over two and a
+	#half times this at all. A construct its bearer's riding can weigh twice this.
+	# Default: 1.0
+	# Range: 0.1 ~ 100.0
+	strength = 1.0
+	#The mass the ring lifts easily for a new bearer (emotional strength 0), before
+	#strength. A stone block weighs 2 and a planks block weighs a half.
+	# Default: 10.0
+	# Range: 0.1 ~ 1.0E7
+	liftUntried = 10.0
+	#The mass it lifts easily for a master (100), before strength. In between it grows by the same
+	#share for each point of the bearer's emotional strength. By default that's a thousand times overall, roughly double
+	#every ten points.
+	# Default: 10000.0
+	# Range: 0.1 ~ 1.0E7
+	liftMaster = 10000.0
+	#How fast the ring hurls what it lifts easily, compared to the default (1 is 16 blocks a
+	#second for a new bearer, 36 for a master). Heavier things fly slower.
+	# Default: 1.0
+	# Range: 0.1 ~ 10.0
+	hurlSpeed = 1.0
+	#What grabbing, holding, hurling and pinning things cost in energy, compared to the default (1).
+	# Default: 1.0
+	# Range: 0.0 ~ 100.0
+	cost = 1.0
+	#How hard things the ring moves hit whatever they slam into, compared to the default (1).
+	# Default: 1.0
+	# Range: 0.0 ~ 100.0
+	impactDamage = 1.0
+	#If true, the ring can pin what it's holding in place in mid-air. If false, it can't pin anything (and
+	#drops whatever it's pinning now).
+	pinning = true
+	#If true, the ring can catch arrows, fireballs and other projectiles in the air. If
+	#false, it can't catch any (and drops any it's holding or pinning now).
+	catchProjectiles = true
+	#Entity types no ring can grab (a ring drops one it's holding or pinning now), on top of the tag
+	#createlanterns:ring_cannot_hold (the ender dragon and the wither). Each entry's an id (minecraft:warden), a tag
+	#(#minecraft:raiders), or every one from a mod (alexsmobs:*).
+	blockedEntities = []
+
+	#What a ring can do with hostile mobs. That's monsters, slimes, ghasts and every other mob the game counts as
+	#an enemy, by type, whatever mood it's in (an enderman's hostile, a wolf's passive). Each one only applies where the switches
+	#above allow it at all.
+	[grip.hostileMobs]
+		#If true, a ring can grab hostile mobs, and whatever's carrying one (a boat, a cart). If false,
+		#it can't, and sets down any it's holding or pinning now where they are.
+		hold = true
+		#If true, a ring can hurl hostile mobs it's holding, and they keep flying when it lets go. If false,
+		#it can't. One it's holding stays held, and when it lets go it gets set down where it is.
+		hurl = true
+		#If true, a ring can pin hostile mobs in mid-air (if pinning's on at all). If false, it can't,
+		#and drops any it's pinning now.
+		pin = true
+
+	#What a ring can do with passive mobs. That's animals, villagers, golems, fish and every other mob that
+	#isn't hostile. Each one only applies where the switches above allow it at all.
+	[grip.passiveMobs]
+		#If true, a ring can grab passive mobs, and whatever's carrying one (a boat, a cart). If false,
+		#it can't, and sets down any it's holding or pinning now where they are.
+		hold = true
+		#If true, a ring can hurl passive mobs it's holding, and they keep flying when it lets go. If false,
+		#it can't. One it's holding stays held, and when it lets go it gets set down where it is.
+		hurl = true
+		#If true, a ring can pin passive mobs in mid-air (if pinning's on at all). If false, it can't,
+		#and drops any it's pinning now.
+		pin = true
+
+	#What a ring can do with other players. Only ever where the server lets players hurt each other and
+	#pvp.grip lets a ring grab them. Each one only applies where the switches above allow it at all.
+	[grip.players]
+		#If true, a ring can grab other players, and whatever's carrying one (a boat, a cart). If false,
+		#it can't, and sets down any it's holding or pinning now where they are.
+		hold = true
+		#If true, a ring can hurl other players it's holding, and they keep flying when it lets go. If false,
+		#it can't. One it's holding stays held, and when it lets go it gets set down where it is.
+		hurl = true
+		#If true, a ring can pin other players in mid-air (if pinning's on at all). If false, it can't,
+		#and drops any it's pinning now.
+		pin = true
+
+#The suit a ring makes on its bearer. It soaks up a share of every hit, and the ring pays for it.
+[suit]
+	#If true, a ring makes its suit on its bearer when they ask for it. If false, it won't (and one on now disappears).
+	enabled = true
+	#The share of each hit the suit takes for a new bearer.
+	# Default: 0.5
+	# Range: 0.0 ~ 1.0
+	protectionUntried = 0.5
+	#The share of each hit it takes for a master (in between, it scales with their emotional strength).
+	# Default: 0.8
+	# Range: 0.0 ~ 1.0
+	protectionMaster = 0.8
+	#Energy to form the suit. A stronger bearer pays less.
+	# Default: 12.0
+	# Range: 0.0 ~ 100000.0
+	formCost = 12.0
+	#Energy a second to keep the suit on.
+	# Default: 0.15
+	# Range: 0.0 ~ 100000.0
+	upkeepPerSecond = 0.15
+	#Energy for each point of damage the suit takes instead of its bearer.
+	# Default: 2.5
+	# Range: 0.0 ~ 100000.0
+	costPerDamage = 2.5
+	#How much it steadies its bearer against knockback from hits and blasts (0 none,
+	#1 all). It kicks in when a suit forms.
+	# Default: 0.6
+	# Range: 0.0 ~ 1.0
+	steadiness = 0.6
+
+#How a hit knocks back a ring's bearer. It doesn't unless the hit does more than the threshold. Then it's away from
+#where it came from, harder the bigger the hit.
+[knockback]
+	#Who gets this knockback instead of the normal kind. BEARERS (players wearing a ring, on either hand), EVERYONE
+	#(every player, ring or not) or NO_ONE (vanilla knockback for all). Other living things always get vanilla knockback.
+	#Allowed Values: BEARERS, EVERYONE, NO_ONE
+	scope = "BEARERS"
+	#How much damage a hit has to do, more than this (10 is five hearts), to knock
+	#them back at all. It's counted after armour, enchantments and effects, before the suit's share. Damage with no direction
+	#(a fall, fire, poison, hunger, the void, magic, drowning) doesn't knock anyone back.
+	# Default: 10.0
+	# Range: 0.0 ~ 10000.0
+	threshold = 10.0
+	#How hard a hit past the threshold throws them, compared to the default (1 is 9 blocks a
+	#second just past it, one and a half times that at 5 past it, about two and a half times at 20 past it).
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	strength = 1.0
+	#The fastest any hit throws them, in blocks a second.
+	# Default: 40.0
+	# Range: 0.0 ~ 1000.0
+	topSpeed = 40.0
+
+#The lights' own powers, and what each light does while lit.
+[powers]
+	#If true, each light's own powers work on the power key (see each light's section). If false, none of them do.
+	enabled = true
+	#If true, each light's passive effect works the whole time it's lit. The closer to death a red bearer is, the
+	#harder they hit. A blue one heals slowly. A green one's constructs cost less. And so on. If false, none of them do.
+	passives = true
+	#If true, the lights' ultimates (the last and strongest of a light's powers) work on the power key,
+	#each one as its own settings say. If false, none of them do, and none show up on the power menu.
+	ultimates = true
+
+#Each light of the spectrum on its own.
+[lights]
+
+	#The red light: rage.
+	[lights.red]
+		#If true, this light exists in the world. If false, its ring never comes to anyone and won't go on a hand
+		#(one that's already on comes off), its Lanterns don't charge anything, and neither its ring nor its Lantern can be made.
+		enabled = true
+		#How much charge a ring of this light holds, compared to ring.capacity (1 is the same).
+		# Default: 1.0
+		# Range: 0.1 ~ 100.0
+		capacity = 1.0
+		#What constructs cost while a ring of this light is lit, compared to their normal cost (constructs.formCost and
+		#upkeepCost). It's one of the things the light does while lit. Will's the most versatile light and makes them a quarter cheaper.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		constructCost = 1.0
+		#How many deed points of this light's emotion a player needs
+		#before its ring comes looking, compared to calling.ringAt (1 is the same). Life's the rarest light and needs half as much again.
+		# Default: 1.0
+		# Range: 0.1 ~ 100.0
+		callBar = 1.0
+		#If true, this light's passive effect works the whole time it's lit (see powers.passives).
+		passive = true
+
+		#Its first power on the power key, Blood Plasma.
+		#(It keeps the name from back when the light only had one power.)
+		[lights.red.power]
+			#If true, the power works on its key.
+			enabled = true
+			#Energy it costs. A stronger bearer pays less.
+			# Default: 12.0
+			# Range: 0.0 ~ 100000.0
+			cost = 12.0
+			#How many ticks before it can be used again (20 a second).
+			# Default: 20
+			# Range: 0 ~ 72000
+			cooldown = 20
+			#How many ticks its light builds up in the bearer's hand before it's let go. On a
+			#server, players already in the world see a change to this when they next join.
+			# Default: 3
+			# Range: 0 ~ 200
+			windUp = 3
+			#How strong it is, compared to the default (1). Blood Plasma: how hard a bolt hits, and how fast it burns whatever it hit after that (1 is 6 damage, then 1.5 a second).
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			strength = 1.0
+
+		#Its second power on the power key, Eruption.
+		[lights.red.eruption]
+			#If true, the power works on its key.
+			enabled = true
+			#Energy it costs. A stronger bearer pays less.
+			# Default: 30.0
+			# Range: 0.0 ~ 100000.0
+			cost = 30.0
+			#How many ticks before it can be used again (20 a second).
+			# Default: 300
+			# Range: 0 ~ 72000
+			cooldown = 300
+			#How many ticks its light builds up in the bearer's hand before it's let go. On a
+			#server, players already in the world see a change to this when they next join.
+			# Default: 5
+			# Range: 0 ~ 200
+			windUp = 5
+			#How strong it is, compared to the default (1). Eruption: how hard it scalds anything nearby, and how fast it burns it after that (1 is 7 damage, then 1.5 a second).
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			strength = 1.0
+
+	#The orange light: avarice.
+	[lights.orange]
+		#If true, this light exists in the world. If false, its ring never comes to anyone and won't go on a hand
+		#(one that's already on comes off), its Lanterns don't charge anything, and neither its ring nor its Lantern can be made.
+		enabled = true
+		#How much charge a ring of this light holds, compared to ring.capacity (1 is the same).
+		# Default: 1.0
+		# Range: 0.1 ~ 100.0
+		capacity = 1.0
+		#What constructs cost while a ring of this light is lit, compared to their normal cost (constructs.formCost and
+		#upkeepCost). It's one of the things the light does while lit. Will's the most versatile light and makes them a quarter cheaper.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		constructCost = 1.0
+		#How many deed points of this light's emotion a player needs
+		#before its ring comes looking, compared to calling.ringAt (1 is the same). Life's the rarest light and needs half as much again.
+		# Default: 1.0
+		# Range: 0.1 ~ 100.0
+		callBar = 1.0
+		#If true, this light's passive effect works the whole time it's lit (see powers.passives).
+		passive = true
+
+		#Its first power on the power key, Covet.
+		#(It keeps the name from back when the light only had one power.)
+		[lights.orange.power]
+			#If true, the power works on its key.
+			enabled = true
+			#Energy it costs. A stronger bearer pays less.
+			# Default: 15.0
+			# Range: 0.0 ~ 100000.0
+			cost = 15.0
+			#How many ticks before it can be used again (20 a second).
+			# Default: 160
+			# Range: 0 ~ 72000
+			cooldown = 160
+			#How many ticks its light builds up in the bearer's hand before it's let go. On a
+			#server, players already in the world see a change to this when they next join.
+			# Default: 6
+			# Range: 0 ~ 200
+			windUp = 6
+			#How strong it is, compared to the default (1). Covet: how far it reaches for loose things (1 is 24 blocks).
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			strength = 1.0
+
+		#Its second power on the power key, Plunder.
+		[lights.orange.plunder]
+			#If true, the power works on its key.
+			enabled = true
+			#Energy it costs. A stronger bearer pays less.
+			# Default: 30.0
+			# Range: 0.0 ~ 100000.0
+			cost = 30.0
+			#How many ticks before it can be used again (20 a second).
+			# Default: 400
+			# Range: 0 ~ 72000
+			cooldown = 400
+			#How many ticks its light builds up in the bearer's hand before it's let go. On a
+			#server, players already in the world see a change to this when they next join.
+			# Default: 4
+			# Range: 0 ~ 200
+			windUp = 4
+			#How strong it is, compared to the default (1). Plunder: how much of the target's worth comes away with what it grabs, and how much the tearing hurts (1 is all of it, and 4 damage).
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			strength = 1.0
+
+	#The yellow light: fear.
+	[lights.yellow]
+		#If true, this light exists in the world. If false, its ring never comes to anyone and won't go on a hand
+		#(one that's already on comes off), its Lanterns don't charge anything, and neither its ring nor its Lantern can be made.
+		enabled = true
+		#How much charge a ring of this light holds, compared to ring.capacity (1 is the same).
+		# Default: 1.0
+		# Range: 0.1 ~ 100.0
+		capacity = 1.0
+		#What constructs cost while a ring of this light is lit, compared to their normal cost (constructs.formCost and
+		#upkeepCost). It's one of the things the light does while lit. Will's the most versatile light and makes them a quarter cheaper.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		constructCost = 1.0
+		#How many deed points of this light's emotion a player needs
+		#before its ring comes looking, compared to calling.ringAt (1 is the same). Life's the rarest light and needs half as much again.
+		# Default: 1.0
+		# Range: 0.1 ~ 100.0
+		callBar = 1.0
+		#If true, this light's passive effect works the whole time it's lit (see powers.passives).
+		passive = true
+
+		#Its first power on the power key, Terror.
+		#(It keeps the name from back when the light only had one power.)
+		[lights.yellow.power]
+			#If true, the power works on its key.
+			enabled = true
+			#Energy it costs. A stronger bearer pays less.
+			# Default: 50.0
+			# Range: 0.0 ~ 100000.0
+			cost = 50.0
+			#How many ticks before it can be used again (20 a second).
+			# Default: 600
+			# Range: 0 ~ 72000
+			cooldown = 600
+			#How many ticks its light builds up in the bearer's hand before it's let go. On a
+			#server, players already in the world see a change to this when they next join.
+			# Default: 7
+			# Range: 0 ~ 200
+			windUp = 7
+			#How strong it is, compared to the default (1). Terror: how far it reaches (1 is 12 blocks).
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			strength = 1.0
+
+		#Its second power on the power key, Cage.
+		[lights.yellow.cage]
+			#If true, the power works on its key.
+			enabled = true
+			#Energy it costs. A stronger bearer pays less.
+			# Default: 35.0
+			# Range: 0.0 ~ 100000.0
+			cost = 35.0
+			#How many ticks before it can be used again (20 a second).
+			# Default: 400
+			# Range: 0 ~ 72000
+			cooldown = 400
+			#How many ticks its light builds up in the bearer's hand before it's let go. On a
+			#server, players already in the world see a change to this when they next join.
+			# Default: 5
+			# Range: 0 ~ 200
+			windUp = 5
+			#How strong it is, compared to the default (1). Cage: how long it holds whatever it caged (1 is 6 seconds).
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			strength = 1.0
+
+	#The green light: will.
+	[lights.green]
+		#If true, this light exists in the world. If false, its ring never comes to anyone and won't go on a hand
+		#(one that's already on comes off), its Lanterns don't charge anything, and neither its ring nor its Lantern can be made.
+		enabled = true
+		#How much charge a ring of this light holds, compared to ring.capacity (1 is the same).
+		# Default: 1.0
+		# Range: 0.1 ~ 100.0
+		capacity = 1.0
+		#What constructs cost while a ring of this light is lit, compared to their normal cost (constructs.formCost and
+		#upkeepCost). It's one of the things the light does while lit. Will's the most versatile light and makes them a quarter cheaper.
+		# Default: 0.75
+		# Range: 0.0 ~ 10.0
+		constructCost = 0.75
+		#How many deed points of this light's emotion a player needs
+		#before its ring comes looking, compared to calling.ringAt (1 is the same). Life's the rarest light and needs half as much again.
+		# Default: 1.0
+		# Range: 0.1 ~ 100.0
+		callBar = 1.0
+		#If true, this light's passive effect works the whole time it's lit (see powers.passives).
+		passive = true
+
+		#Its first power on the power key, Resolve.
+		#(It keeps the name from back when the light only had one power.)
+		[lights.green.power]
+			#If true, the power works on its key.
+			enabled = true
+			#Energy it costs. A stronger bearer pays less.
+			# Default: 40.0
+			# Range: 0.0 ~ 100000.0
+			cost = 40.0
+			#How many ticks before it can be used again (20 a second).
+			# Default: 1200
+			# Range: 0 ~ 72000
+			cooldown = 1200
+			#How many ticks its light builds up in the bearer's hand before it's let go. On a
+			#server, players already in the world see a change to this when they next join.
+			# Default: 6
+			# Range: 0 ~ 200
+			windUp = 6
+			#How strong it is, compared to the default (1). Resolve: how much damage will's shield takes before it shatters (1 is 8).
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			strength = 1.0
+
+		#Its second power on the power key, Fist.
+		[lights.green.fist]
+			#If true, the power works on its key.
+			enabled = true
+			#Energy it costs. A stronger bearer pays less.
+			# Default: 25.0
+			# Range: 0.0 ~ 100000.0
+			cost = 25.0
+			#How many ticks before it can be used again (20 a second).
+			# Default: 100
+			# Range: 0 ~ 72000
+			cooldown = 100
+			#How many ticks its light builds up in the bearer's hand before it's let go. On a
+			#server, players already in the world see a change to this when they next join.
+			# Default: 4
+			# Range: 0 ~ 200
+			windUp = 4
+			#How strong it is, compared to the default (1). Fist: how hard it hits whatever it meets (1 is 12 damage).
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			strength = 1.0
+
+	#The blue light: hope.
+	[lights.blue]
+		#If true, this light exists in the world. If false, its ring never comes to anyone and won't go on a hand
+		#(one that's already on comes off), its Lanterns don't charge anything, and neither its ring nor its Lantern can be made.
+		enabled = true
+		#How much charge a ring of this light holds, compared to ring.capacity (1 is the same).
+		# Default: 1.0
+		# Range: 0.1 ~ 100.0
+		capacity = 1.0
+		#What constructs cost while a ring of this light is lit, compared to their normal cost (constructs.formCost and
+		#upkeepCost). It's one of the things the light does while lit. Will's the most versatile light and makes them a quarter cheaper.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		constructCost = 1.0
+		#How many deed points of this light's emotion a player needs
+		#before its ring comes looking, compared to calling.ringAt (1 is the same). Life's the rarest light and needs half as much again.
+		# Default: 1.0
+		# Range: 0.1 ~ 100.0
+		callBar = 1.0
+		#If true, this light's passive effect works the whole time it's lit (see powers.passives).
+		passive = true
+
+		#Its first power on the power key, Hope.
+		#(It keeps the name from back when the light only had one power.)
+		[lights.blue.power]
+			#If true, the power works on its key.
+			enabled = true
+			#Energy it costs. A stronger bearer pays less.
+			# Default: 45.0
+			# Range: 0.0 ~ 100000.0
+			cost = 45.0
+			#How many ticks before it can be used again (20 a second).
+			# Default: 600
+			# Range: 0 ~ 72000
+			cooldown = 600
+			#How many ticks its light builds up in the bearer's hand before it's let go. On a
+			#server, players already in the world see a change to this when they next join.
+			# Default: 6
+			# Range: 0 ~ 200
+			windUp = 6
+			#How strong it is, compared to the default (1). Hope: how much it heals (1 is 6 health straight away, then 0.75 a second).
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			strength = 1.0
+
+		#Its second power on the power key, Sanctuary.
+		[lights.blue.sanctuary]
+			#If true, the power works on its key.
+			enabled = true
+			#Energy it costs. A stronger bearer pays less.
+			# Default: 40.0
+			# Range: 0.0 ~ 100000.0
+			cost = 40.0
+			#How many ticks before it can be used again (20 a second).
+			# Default: 900
+			# Range: 0 ~ 72000
+			cooldown = 900
+			#How many ticks its light builds up in the bearer's hand before it's let go. On a
+			#server, players already in the world see a change to this when they next join.
+			# Default: 6
+			# Range: 0 ~ 200
+			windUp = 6
+			#How strong it is, compared to the default (1). Sanctuary: how long it lasts (1 is 12 seconds).
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			strength = 1.0
+
+	#The indigo light: compassion.
+	[lights.indigo]
+		#If true, this light exists in the world. If false, its ring never comes to anyone and won't go on a hand
+		#(one that's already on comes off), its Lanterns don't charge anything, and neither its ring nor its Lantern can be made.
+		enabled = true
+		#How much charge a ring of this light holds, compared to ring.capacity (1 is the same).
+		# Default: 1.0
+		# Range: 0.1 ~ 100.0
+		capacity = 1.0
+		#What constructs cost while a ring of this light is lit, compared to their normal cost (constructs.formCost and
+		#upkeepCost). It's one of the things the light does while lit. Will's the most versatile light and makes them a quarter cheaper.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		constructCost = 1.0
+		#How many deed points of this light's emotion a player needs
+		#before its ring comes looking, compared to calling.ringAt (1 is the same). Life's the rarest light and needs half as much again.
+		# Default: 1.0
+		# Range: 0.1 ~ 100.0
+		callBar = 1.0
+		#If true, this light's passive effect works the whole time it's lit (see powers.passives).
+		passive = true
+
+		#Its first power on the power key, Blink.
+		#(It keeps the name from back when the light only had one power.)
+		[lights.indigo.power]
+			#If true, the power works on its key.
+			enabled = true
+			#Energy it costs. A stronger bearer pays less.
+			# Default: 20.0
+			# Range: 0.0 ~ 100000.0
+			cost = 20.0
+			#How many ticks before it can be used again (20 a second).
+			# Default: 80
+			# Range: 0 ~ 72000
+			cooldown = 80
+			#How many ticks its light builds up in the bearer's hand before it's let go. On a
+			#server, players already in the world see a change to this when they next join.
+			# Default: 2
+			# Range: 0 ~ 200
+			windUp = 2
+			#How strong it is, compared to the default (1). Blink: how far it takes you (1 is 32 blocks).
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			strength = 1.0
+
+		#Its second power on the power key, Exchange.
+		[lights.indigo.exchange]
+			#If true, the power works on its key.
+			enabled = true
+			#Energy it costs. A stronger bearer pays less.
+			# Default: 25.0
+			# Range: 0.0 ~ 100000.0
+			cost = 25.0
+			#How many ticks before it can be used again (20 a second).
+			# Default: 200
+			# Range: 0 ~ 72000
+			cooldown = 200
+			#How many ticks its light builds up in the bearer's hand before it's let go. On a
+			#server, players already in the world see a change to this when they next join.
+			# Default: 3
+			# Range: 0 ~ 200
+			windUp = 3
+			#How strong it is, compared to the default (1). Exchange: how far it reaches (1 is 32 blocks).
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			strength = 1.0
+
+	#The violet light: love.
+	[lights.violet]
+		#If true, this light exists in the world. If false, its ring never comes to anyone and won't go on a hand
+		#(one that's already on comes off), its Lanterns don't charge anything, and neither its ring nor its Lantern can be made.
+		enabled = true
+		#How much charge a ring of this light holds, compared to ring.capacity (1 is the same).
+		# Default: 1.0
+		# Range: 0.1 ~ 100.0
+		capacity = 1.0
+		#What constructs cost while a ring of this light is lit, compared to their normal cost (constructs.formCost and
+		#upkeepCost). It's one of the things the light does while lit. Will's the most versatile light and makes them a quarter cheaper.
+		# Default: 1.0
+		# Range: 0.0 ~ 10.0
+		constructCost = 1.0
+		#How many deed points of this light's emotion a player needs
+		#before its ring comes looking, compared to calling.ringAt (1 is the same). Life's the rarest light and needs half as much again.
+		# Default: 1.0
+		# Range: 0.1 ~ 100.0
+		callBar = 1.0
+		#If true, this light's passive effect works the whole time it's lit (see powers.passives).
+		passive = true
+
+		#Its first power on the power key, Crystal.
+		#(It keeps the name from back when the light only had one power.)
+		[lights.violet.power]
+			#If true, the power works on its key.
+			enabled = true
+			#Energy it costs. A stronger bearer pays less.
+			# Default: 30.0
+			# Range: 0.0 ~ 100000.0
+			cost = 30.0
+			#How many ticks before it can be used again (20 a second).
+			# Default: 300
+			# Range: 0 ~ 72000
+			cooldown = 300
+			#How many ticks its light builds up in the bearer's hand before it's let go. On a
+			#server, players already in the world see a change to this when they next join.
+			# Default: 4
+			# Range: 0 ~ 200
+			windUp = 4
+			#How strong it is, compared to the default (1). Crystal: how long it holds its target (1 is 8 seconds).
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			strength = 1.0
+
+		#Its second power on the power key, Enthrall.
+		[lights.violet.enthrall]
+			#If true, the power works on its key.
+			enabled = true
+			#Energy it costs. A stronger bearer pays less.
+			# Default: 40.0
+			# Range: 0.0 ~ 100000.0
+			cost = 40.0
+			#How many ticks before it can be used again (20 a second).
+			# Default: 900
+			# Range: 0 ~ 72000
+			cooldown = 900
+			#How many ticks its light builds up in the bearer's hand before it's let go. On a
+			#server, players already in the world see a change to this when they next join.
+			# Default: 5
+			# Range: 0 ~ 200
+			windUp = 5
+			#How strong it is, compared to the default (1). Enthrall: how long whatever it enthralls fights for its bearer (1 is 20 seconds).
+			# Default: 1.0
+			# Range: 0.0 ~ 100.0
+			strength = 1.0
+
+#How the lights affect each other. Two rings worn together, and the lit rings of bearers near each other,
+#strengthen or weaken each other's light (hope feeds will, hope calms rage, opposites dim each other, death and life
+#most of all). A weakened ring's abilities, grip and constructs get weaker, and its charge drains faster.
+#A strengthened one's the other way round.
+[potency]
+	#If true, two rings worn together affect each other. Blue and green strengthen each
+	#other, and opposites clash and both get weaker. If false, they don't.
+	wornTogether = true
+	#How strongly two rings worn together affect each other,
+	#compared to the default (1 makes blue and green each a quarter stronger, opposites each a quarter weaker, black and white
+	#each by half).
+	# Default: 1.0
+	# Range: 0.0 ~ 4.0
+	wornTogetherStrength = 1.0
+	#If true, the lit rings of bearers near each other affect each other. A blue ring nearby weakens
+	#a red or yellow one and strengthens a green one. Opposites weaken each other, black and white the most.
+	#If false, they don't.
+	nearby = true
+	#How strongly another bearer's lit ring nearby affects a bearer's,
+	#compared to the default (1 is as much as worn together, while they're within a quarter of the radius).
+	# Default: 1.0
+	# Range: 0.0 ~ 4.0
+	nearbyStrength = 1.0
+	#How close (blocks) another bearer's lit ring has to be to affect a bearer's. It's full strength within a
+	#quarter of that, then it fades out to nothing at the edge.
+	# Default: 16.0
+	# Range: 0.0 ~ 128.0
+	radius = 16.0
+
+#What a ring can do to other players. Each switch only applies where the server lets players hurt each other at all (its pvp setting, and teams).
+[pvp]
+	#If true, the lights' powers can hurt and hinder other players: a plasma bolt, drain, fear
+	#shaking their hard light. If false, powers don't affect players.
+	powers = true
+	#If true, a ring can grab another player, and what it holds or throws can hurt them. If false,
+	#it can't do either (and drops any player it's holding now).
+	grip = true
+	#If true, a bearer's constructs can hurt other players by running into them and burning them in
+	#their fires. If false, someone else's hard light never hurts a player.
+	constructs = true
+	#If true, a crash's blast hurts other players nearby, and a hero landing throws them back. If
+	#false, neither one affects other players.
+	flight = true
+
+#What the mod can do to the world's blocks.
+[griefing]
+	#If true, the mod changes the world's blocks where its story needs to. That's crash craters and
+	#(in an edition with them) the wrecks of ships that come down. If false, it doesn't change anything. No crater gets dug and no
+	#ship comes down.
+	worldChanges = true
+	#If true, the mod only changes the world's blocks (craters, wrecks) while the game rule
+	#mobGriefing is on. If false, it ignores the rule, same as it always has.
+	followMobGriefing = false
+
+#Dimensions where rings, flight and constructs don't work. Each entry's an id
+#(minecraft:the_nether), or every dimension of a mod (twilightforest:*).
+[dimensions]
+	#Dimensions where rings can't light up. A lit one goes dark there (so nothing else about it works there either).
+	noRings = []
+	#Dimensions where rings can't fly. Anyone flying there drops.
+	noFlight = []
+	#Dimensions where constructs can't be designed, copied or summoned. Any that are out there disappear.
+	noConstructs = []
+
+#The land ahead of a fast flier, flying on the ring or riding a construct. It gets made and loaded before they
+#reach it, so it's there when they arrive.
+[landAhead]
+	#If true, the land in the path of a bearer flying fast, or riding a construct fast, gets made and loaded
+	#before they reach it, as far ahead as seconds says, nearest first (with Distant Horizons on the server, its far terrain gets
+	#built ahead of them first). If false, the land loads like it does for anyone, around them as they go, a
+	#few chunks at a time.
+	enabled = true
+	#How far ahead the land gets made, in seconds of flight at the fastest they went over the last that many
+	#seconds (so someone held back at the edge of the land still gets land made as fast as they flew). At 300 blocks a
+	#second, 4 is 1200 blocks ahead. At 18 (a construct ridden flat out, by default) it's 72.
+	# Default: 4.0
+	# Range: 0.5 ~ 30.0
+	seconds = 4.0
+	#The most chunks requested ahead in one server tick, for all fliers together.
+	# Default: 8
+	# Range: 1 ~ 256
+	chunksPerTick = 8
+	#The most chunks kept loaded along one flier's path at once (each with the
+	#chunks around it fully made). At 1000 blocks a second, 128 is about two seconds of flight.
+	# Default: 128
+	# Range: 1 ~ 4096
+	chunksPerFlier = 128
+	#The most chunks kept loaded along the paths of all fliers together.
+	# Default: 512
+	# Range: 1 ~ 65536
+	mostChunks = 512
+
+#A light's dust. Cooking a bucket of its liquid light in a furnace or a smoker makes it (Willpower Dust, Fear Dust
+#and so on). Taking it heightens that light for a while.
+[dust]
+	#If true, the dust is snorted instead of eaten. It's held up to the face and sniffed, with no crunching.
+	#It does the same either way.
+	snortIt = false
+	#How many seconds a dust's light stays heightened (180 is 3 minutes).
+	# Default: 180
+	# Range: 1 ~ 3600
+	seconds = 180
+	#How many times as much its light's deed points count while it's heightened (2 is twice). Willpower
+	#grows that much faster too, while a ring of that light is worn.
+	# Default: 2.0
+	# Range: 1.0 ~ 10.0
+	times = 2.0

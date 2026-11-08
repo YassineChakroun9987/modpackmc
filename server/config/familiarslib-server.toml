@@ -1,0 +1,4 @@
+#Maximum number of familiars a player can carry (familiars stored in houses don't count).
+# Default: 10
+# Range: 1 ~ 50
+maxFamiliars = 10

@@ -1,0 +1,36 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "createlanterns:config",
+      "key": "craftingTableLanterns"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GgG",
+    "gEg",
+    "GOG"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "g": {
+      "item": "minecraft:magenta_stained_glass"
+    },
+    "E": {
+      "item": "minecraft:ender_eye"
+    },
+    "O": {
+      "item": "minecraft:amethyst_block"
+    }
+  },
+  "result": {
+    "id": "createlanterns:violet_power_battery",
+    "count": 1,
+    "components": {
+      "createlanterns:battery_charge": 0.0
+    }
+  }
+}
