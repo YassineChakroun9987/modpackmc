@@ -1,8 +1,11 @@
 # Green Lanterns Modpack
 
-Fantasy RPG modpack: dungeons, dragons, schools of magic, plus a Green Lantern
-storyline where what you do on the server builds an attribute, and crossing a
-threshold earns your ring.
+Fantasy RPG modpack for a server with friends: dungeons, dragons, schools of magic,
+seven class paths (one per light of the emotional spectrum), and a Green Lantern
+storyline. Each class's road ends with a mid-game boss and a ring trial that gives
+you your class ring, or the White or Black ring, depending on your choices.
+
+**Start here:** `docs/FINAL-REPORT.md` (what's in the pack, every design decision, what to test).
 
 ## Stack
 
@@ -19,16 +22,20 @@ GREENLANTERS MODPACK/
 ├── README.md          this file
 ├── MODLIST.md         every mod, grouped into 5 categories: Editing / Main / Dependencies / Our own / QoL
 ├── mods-manifest.txt  every jar + side + SHA-1, generated (git tracks this instead of the jars)
-├── docs/              design + research: STORY-design.md (the story and classes),
-│                      RESEARCH-terrain.md, RESEARCH-foundations.md
+├── docs/              FINAL-REPORT.md (start here), CONTRACT.md (names/stages/commands every
+│                      script and quest uses), STORY-design.md, broken-data.md, research notes
+├── quests/src/        the quest book's source (one JSON per chapter) → tools/questgen.py
 ├── client-only/       mods that go ONLY in the client (minimaps, shaders, sound, HUD)
 ├── server/            the NeoForge dedicated server
 │   ├── start.bat      ← double-click to run (uses Java 21)
 │   ├── mods/          mods that run on both sides (the client needs these too)
 │   ├── config/        per-mod server/common configs (generated on first run)
 │   ├── kubejs/        KubeJS scripts and data (startup_scripts must match the client's)
-│   │   └── data/      our datapack fixes (lowercase file names only!), e.g. the mineshaft tag patch
-│   ├── world/         the save (seed "greenlanterns"; still a dev world, see MODLIST › Main notes)
+│   │   ├── server_scripts/  story/ (the story engine), glue/ (parties, skill tags), loot/,
+│   │   │                    tweaks/, fixes/, dev/ (selftest, registry export)
+│   │   └── data/      datapacks (lowercase file names only!): greenlanterns/ (skill trees,
+│   │                  loot tables) + fixes for other mods' broken data
+│   ├── world/         the save (seed "greenlanterns"), pre-generated 1,200 blocks around spawn
 │   ├── backups/       archived worlds (git-ignored)
 │   └── server.properties
 └── tools/
@@ -38,6 +45,11 @@ GREENLANTERS MODPACK/
     ├── checkdeps.py   missing or mismatched dependencies in a mods set
     ├── structinfo.py  structures per jar: biome tags vs IDs, terrain adaptation, vanilla overrides, file conflicts
     ├── whatstructure.py  which structures are at block x,z (reads saved region files)
+    ├── questgen.py    quests/src → FTB Quests files (--check validates every id first)
+    ├── pregen.py      pre-generate the world with Chunky, headless
+    ├── disable_broken.py  switch off recipes/loot tables that point at missing items
+    ├── loot/          gen_loot.py (tiered loot tables) + check_loot.py
+    ├── skills/        gen_skills.py (Pufferfish trees) + check_skills.py
     ├── ping.py        is the server up?
     └── rcon.py        send a console command, e.g. python -I tools/rcon.py "list"
 ```
@@ -56,14 +68,18 @@ Minecraft rewrites this file on start and strips comments, so the reasons are li
 | `server-ip` | `127.0.0.1` | Only this PC can connect, nothing on the LAN or internet. Clear it to allow LAN friends. |
 | `online-mode` | `false` | TLauncher "free" accounts can't authenticate with Mojang. Safe only because of the line above. |
 | `allow-flight` | `true` | Otherwise dragons and flying mounts get you kicked for "flying". |
+| `view-distance` | `12` | The final boss is ~335 blocks long; entities are only sent to clients inside the view distance. |
 | `max-tick-time` | `-1` | Heavy modded worldgen can stall a tick for more than 60s; stops the watchdog from killing the server. |
-| `spawn-protection` | `0` | Dev server, so we build and test at spawn. |
-| `enable-command-block` | `true` | For prototyping the storyline and quests. |
+| `spawn-protection` | `0` | Spawn is the story village: players need to build and defend there. |
+| `enable-command-block` | `true` | Handy for admins; the story itself runs on KubeJS, not command blocks. |
 | `enable-rcon` | `true`, port 25575 | Lets `tools/rcon.py` (and Claude) run console commands. Bound to 127.0.0.1. |
 
 `kayachin` is pre-opped at level 4 (the offline-mode UUID is in `ops.json`).
 
-Memory: `server\user_jvm_args.txt` sets 2G–6G. Raise `-Xmx` when the big content mods go in.
+Memory: `server\user_jvm_args.txt` sets 4G–10G. If you play on the same PC, give TLauncher 8–10 GB
+(it was set to 21 GB, and both together won't fit in 32 GB).
+
+**Friends:** see `docs/FINAL-REPORT.md` §2 (VPN + whitelist; offline mode means names can be faked).
 
 ## Workflow: adding a mod
 

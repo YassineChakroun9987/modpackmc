@@ -35,6 +35,7 @@ sit directly in `mods/` (it ignores subfolders), so this file is where the categ
 | Just Enough Items (JEI) | 19.69.0.457 (**beta**; latest release is 19.64.0.455) | both | Looking up item IDs, tags and recipes while we edit other mods. Also the players' recipe browser | testing |
 | KubeJS | 2101.7.2-build.381 | both | The main editing tool: recipes, tags, custom items (the ring), event scripts (the willpower counter). Lives in `kubejs/` | testing |
 | LootJS | 1.21.1-3.7.0 | server | KubeJS addon for loot tables and mob/chest drops | testing |
+| Almost Unified | 1.4.2 | both | **No duplicate items:** one copper, tin, silver, steel… for every mod. Picks a preferred mod per material (`config/almostunified/`), swaps the rest in recipes, loot and drops | testing |
 | Structurify | 2.0.43 | both | **The one tool that controls structure placement**: overlap prevention, global spacing ×1.5, per-structure flatness checks and biome lists. Config: `server/config/structurify.json` | tuned |
 
 ## 2. Main mods
@@ -81,6 +82,84 @@ Every structure here picks biomes by **tag** (D&T: 90 of 97), so they all reach 
 | Castle in the Sky | 1.21.1.1 | both | One floating Laputa-style castle dungeon with coloured keys, doors and a Laputa core. Found with the **levitation stone** (craftable, or from a master Cartographer). ≥10k blocks from spawn (14,484 on our seed). CurseForge-only, **verified**: identical SHA-1 to CurseForge's CDN file 8200620 | — | levitation stone recipe fixed; exempt from the ×1.5 spacing | tuned |
 | Eternal Nether | v21.1.3 | both | Nether exploration: Citadel, Piglin Manor, Catacombs (+ mobs) | Puzzles Lib | — | testing |
 
+### Magic (added 2026-11-09)
+Each class draws its spells from one or two Iron's Spells schools (see `docs/CONTRACT.md` and each class chapter of the quest book).
+
+| Mod | Version | Side | Role in the pack | Depends on | Tweaks made | Status |
+|---|---|---|---|---|---|---|
+| Iron's Spells 'n Spellbooks | 3.16.3 | both | **The magic system:** spellbooks, scrolls, mana, inscription table, mage armour sets, wizard towers and boss mages (Dead King, Echo of Tyros, Archevoker). Schools per class: Fire (Red), Nature (Orange), Lightning (Yellow), Holy + Evocation (Green), Ice (Blue), Nature + familiars (Indigo), Ender + Eldritch (Violet) | Iron's Lib, Curios, GeckoLib, Player Animator | — | testing |
+| Cataclysm: Spellbooks | 1.1.11 | both | Iron's spells, spellbooks and an armour set made from Cataclysm boss materials (e.g. Bloom Stone, Cursium) | Ace's Spell Utils, AzureLib | — | testing |
+| Discerning the Eldritch | 1.4.5 | both | Deepens the Eldritch school: Violet's late-game spells and gear | Iron's Spells, Ace's Spell Utils, AzureLib | Echo Greatsword taken out of `minecraft:swords` (its tag entry broke the whole tag) | tuned |
+| Alshanex's Familiars | 5.0 | both | Summonable familiars that fight beside you and level up: the core of Indigo's beast-master kit | Iron's Spells, FamiliarsLib | — | testing |
+| DarkDoppelganger | 4.0.0 | both | An Iron's boss that copies you and casts your own spells back | Iron's Spells, GeckoLib, Player Animator | — | testing |
+| Galosphere | 1.5.5 | both | Crystal Canyons, Lichen Caves and Pink Salt caves, silver ore, allurite / lumiere crystals | — | — | testing |
+| Galosphere Spellbooks | 1.1.5 | both | Iron's spellbooks and gear from Galosphere materials | Galosphere, Iron's Spells | — | testing |
+
+### Classes, quests and levelling (added 2026-11-09)
+| Mod | Version | Side | Role in the pack | Depends on | Tweaks made | Status |
+|---|---|---|---|---|---|---|
+| FTB Quests | 2101.1.38 | both | **The quest book ("The Book of Oa")**: the story, 7 class paths, the finale and the mod guides. Written as JSON in `quests/src/`, built by `tools/questgen.py` into `server/config/ftbquests/quests/` | FTB Library, FTB Teams, Architectury | all chapters are ours | tuned |
+| FTB Teams | 2101.1.12 | both | **Parties.** A team shares quest progress; Open Parties and Claims uses the same teams | FTB Library | — | tuned |
+| FTB XMod Compat | 21.1.14 | both | Lets FTB Quests see KubeJS stages (`gl_*`), which is how the story drives the quest book | — | — | tuned |
+| Pufferfish's Skills | 0.19.2 | both | **Class skill trees:** an Adventurer tree for everyone + one tree per class, levelled by class XP. Datapack: `server/kubejs/data/greenlanterns/puffish_skills/` | — | all trees are ours | tuned |
+| Pufferfish's Unofficial Additions | 2.2.8 | both | Extra XP sources and reward types for the skill trees | Pufferfish's Skills | — | testing |
+| Pufferfish's Attributes | 0.8.3 | both | Extra attributes that skill nodes give (e.g. sprint speed, mining speed, healing) | — | — | testing |
+| Village Spawn Point | 6.0 | server | New worlds spawn in the centre of a village: the Prologue's village | Collective | — | tuned |
+
+### Combat and gear (added 2026-11-09)
+| Mod | Version | Side | Role in the pack | Depends on | Tweaks made | Status |
+|---|---|---|---|---|---|---|
+| Better Combat | 2.4.0 | both | Weapon movesets: combos, sweeping swings, two-handers, dual wielding | Player Animator, Cloth Config | — | testing |
+| Combat Roll | 2.0.6 | both | Dodge roll (with cooldown; enchantable) | Player Animator | — | testing |
+| Simply Swords | 1.70.2 | both | 15 weapon types in every material plus ~40 unique legendary weapons in loot | Architectury, Fzzy Config, Simply Tooltips | — | testing |
+| Dungeons Weapons | 9.0.1 | both | Minecraft Dungeons-style weapons (Stormlander, Soul Scythe, …) | — | Stormlander moveset parent fixed; Bone Cudgel / Scythe repair tag rebuilt (it named blocks with no item) | tuned |
+| Epic Knights | 10.17 | both | Medieval armour (plate, chainmail, light), shields, lances, flails; armour can be dyed and decorated | Architectury, Cloth Config | — | testing |
+| Shield Expansion | 1.4.3 | both | Shields parry, have stamina, and come in tiers | — | — | testing |
+| Apotheosis | 8.9.0 | both | **Gear progression:** affix loot with rarities, gems and sockets, Apotheotic bosses, **world tiers** (Haven → Frontier → Ascent → Summit → Pinnacle) | Placebo, Apothic Attributes | — | testing |
+| Apothic Attributes | 2.11.0 | both | The attribute system behind Apotheosis (crit, life steal, armour pierce…) and a full attribute screen | Placebo | — | testing |
+| Apothic Enchanting | 1.6.4 | both | Reworked enchanting: bookshelves with stats (Eterna, Quanta, Arcana), higher enchant levels | Placebo, Apothic Attributes | — | testing |
+| Apothic Spawners | 1.4.0 | both | Spawners can be mined and upgraded with modifiers | Placebo | — | testing |
+| Artifacts | 13.2.5 | both | ~40 rare trinkets (Curios slots) found in chests, and Mimics | — | — | testing |
+
+### Creatures, dragons, pets and bosses (added 2026-11-09)
+| Mod | Version | Side | Role in the pack | Depends on | Tweaks made | Status |
+|---|---|---|---|---|---|---|
+| L_Ender's Cataclysm | 3.33 | both | Big structure bosses: Netherite Monstrosity, Ignis, the Harbinger (**Yellow trial**), the Leviathan, Ender Guardian, Maledictus, Scylla, Ancient Remnant | Lionfish API, Curios | 2 missing tool tags added empty | testing |
+| Bosses of Mass Destruction | 1.3.3 | both | Night Lich (**Blue trial**), Nether Gauntlet (**Red trial**), Obsidilith, Void Blossom | GeckoLib, Cerbons API, Cloth Config | — | testing |
+| Mowzie's Mobs | 1.8.2 | both | Frostmaw, Ferrous Wroughtnaut, Umvuthi, Sculptor, Naga, foliaaths and more | GeckoLib | — | testing |
+| Born in Chaos | 1.7.6 | both | Dark-fantasy mobs and bosses (Lord Pumpkinhead, Supreme Bonescaller) | — | — | testing |
+| Alex's Mobs Continued | 2.3.0 | both | ~90 animals and creatures; many tameable | CodxLib | — | testing |
+| Ice and Fire: Community Edition | 2.0 | both | Fire, ice and lightning dragons (tameable, rideable), the Hydra (**Indigo trial**), sea serpents, deathworms, hippogryphs, dragonsteel | Jupiter, Uranus | — | testing |
+| Book of Dragons | 1.4.1 | both | Tameable dragons from the How-to-Train-Your-Dragon world (Night Fury, Gronckle, …) | FAUNA Engine | — | testing |
+| Mutant Monsters | 21.1.1 | both | Mutant zombie, skeleton, creeper and enderman mini-bosses | Puzzles Lib | — | testing |
+| The Graveyard | 4.0.1 | both | Graveyards, crypts, undead; its Lich is called **the Corrupted Champion** here (**Violet trial**) | GeckoLib, VillagersTradingPlus | — | testing |
+| Legendary Monsters | 2.2.4 | both | A set of legendary bosses with their own arenas; its Guide Book says where | — | 1 missing tool tag added empty | testing |
+| Kings & Monsters | 1.2.2 | both | Ogre country and the Ogre King (**Orange trial**) | GeckoLib, Curios, Patchouli | — | testing |
+| Devourer of Gods (DoG) | 1.2.0 | both | **The final boss**: a cosmic worm about 335 blocks long, summoned with a Cosmic Worm | GeckoLib | tuned for the endgame (`dog-common.toml`); the Cosmic Worm also needs a Chaos Shard | tuned |
+| The Twilight Forest | 4.8.3345 | both | The Twilight dimension and its boss chain (Naga → Lich → Minoshroom → Hydra → Ur-Ghast → Snow Queen …) | — | — | testing |
+| Companions! | 1.3.7 | both | New tameable companion creatures | Knight Lib | — | testing |
+| Redomesticate | 2.0.0 | both | Better pets: pet beds, pet enchantments, pet commands (a fork of Domestication Innovation) | — | — | testing |
+| Guard Villagers | 2.4.12 | both | Give a villager a sword or crossbow and it becomes a guard: the Prologue's raid defence | — | — | testing |
+| Enhanced Celestials | 6.0.2.6 | both | Blood moons, harvest moons and blue moons | CorgiLib, Data Anchor | — | testing |
+
+### Create, airships and tech (added 2026-11-09)
+| Mod | Version | Side | Role in the pack | Depends on | Tweaks made | Status |
+|---|---|---|---|---|---|---|
+| Create | 6.0.10 | both | Machines, conveyors, trains; Yellow's home mod | Flywheel, Ponder (bundled) | — | testing |
+| Sable | 2.0.6 | both | Physics "sub-levels" that ships, and Create: Lanterns' planets (Oa, Korugar), are built on | — | — | testing |
+| Create Aeronautics (bundled) | 1.3.2 | both | **Airships**: propellers, balloons, levitite. Includes Create: Simulated | Create, Sable | — | testing |
+| Create Crafts & Additions | 1.7.2 | both | Electricity for Create (alternators, motors, wires) | Create | — | testing |
+| **Create: Lanterns** | 20.11-alpha | both | **The heart of the story:** the power rings of every light, lanterns, power batteries, constructs, the crashed Lantern ship, Oa and Korugar. Private build, personal use | Create, Sable, Simulated, Aeronautics | server config tuned (rings don't choose on their own, deeds off); 24 items of unused lights hidden; 3 recipe categories fixed | tuned |
+| Spectral Hub | 4 | both | Create: Lanterns add-on: press **J** for the spectrum screen. With our settings it says "Rings do not choose in this world" (the ring trial hands out rings) | Create: Lanterns | — | testing |
+| Mekanism + Generators | 10.7.19 | both | Ore processing (up to ×5), power, the MekaSuit | — | — | testing |
+| Applied Energistics 2 | 19.2.18 | both | Digital storage networks | GuideME | — | testing |
+| Draconic Evolution | 3.1.4 | both | Endgame tech and armour; the **Chaos Guardian** on Chaos Island, whose shards unlock the final boss | Brandon's Core, CodeChicken Lib | — | testing |
+
+### Farming (added 2026-11-09)
+| Mod | Version | Side | Role in the pack | Depends on | Tweaks made | Status |
+|---|---|---|---|---|---|---|
+| Farmer's Delight | 1.3.4 | both | Cooking, new crops, the cooking pot and skillet, feasts | — | — | testing |
+
 ## 3. Dependencies
 
 When a mod is dropped, check this table for libraries that become `orphaned`.
@@ -90,8 +169,8 @@ When a mod is dropped, check this table for libraries that become `orphaned`.
 | mezz_config | 0.6.6 | both | JEI | Yes, inside the JEI jar | needed |
 | Rhino | 2101.2.7-build.85 | both | KubeJS (needs ≥ 2101.2.7-build.81) | No | needed |
 | Better Advanced Tooltips | 2101.1.0-build.5 | client | KubeJS (optional, client side) | No | needed |
-| Bookshelf | 21.1.81 | both | AttributeFix | No | needed |
-| Prickle | 21.1.11 | both | AttributeFix | No | needed |
+| Bookshelf | 21.1.81 | both | AttributeFix, Enchantment Descriptions | No | needed |
+| Prickle | 21.1.11 | both | AttributeFix, Enchantment Descriptions | No | needed |
 | Searchables | 1.0.2 | client | Controlling | No | needed |
 | Lithostitched | 1.8.1 | both | Terralith (needed on the client too, despite Modrinth's "server-only" label) | No | needed |
 | YUNG's API | 5.1.9 | both | All YUNG's mods, Traveler's Titles | No | needed |
@@ -100,15 +179,45 @@ When a mod is dropped, check this table for libraries that become `orphaned`.
 | YetAnotherConfigLib (YACL) | 3.8.2 | both | Structurify | No | needed |
 | Resourceful Config | 3.0.11 | server | Structure Layout Optimizer | No | needed |
 | Cristel Lib | 3.1.7 | both | Towns and Towers. **Auto-config disabled** (`config/cristellib/auto_config_settings.json5`) so it doesn't fight Structurify | No | needed |
-| Cloth Config API | 15.0.140 | both | Cristel Lib | No | needed |
-| Architectury API | 13.0.11 | server | Sky Villages | No | needed |
-| Puzzles Lib | v21.1.66 | both | Eternal Nether | No | needed |
+| Cloth Config API | 15.0.140 | both | Cristel Lib, Better Combat, BOMD, Epic Knights | No | needed |
+| Architectury API | 13.0.11 | both | Sky Villages, FTB mods, Simply Swords, Epic Knights, Uranus | No | needed |
+| Puzzles Lib | v21.1.66 | both | Eternal Nether, Mutant Monsters | No | needed |
+| Curios API | 9.5.1 | both | Iron's Spells, Cataclysm, Kings & Monsters (ring, necklace, charm slots; Artifacts and the Lantern rings use them too) | No | needed |
+| GeckoLib | 4.9.3 | both | Iron's Spells, Iron's Lib, BOMD, Mowzie's Mobs, The Graveyard, Kings & Monsters, DoG, DarkDoppelganger | No | needed |
+| Player Animator | 2.0.4 | both | Better Combat, Combat Roll, Iron's Spells, DarkDoppelganger | No | needed |
+| AzureLib | 3.2.7 | both | Cataclysm: Spellbooks, Discerning the Eldritch | No | needed |
+| Iron's Lib | 2.3.0 | both | Iron's Spells | No | needed |
+| Ace's Spell Utils | 1.2.7.5 | both | Cataclysm: Spellbooks, Discerning the Eldritch | No | needed |
+| FamiliarsLib | 2.0 | both | Alshanex's Familiars | No | needed |
+| Lionfish API | 3.1 | both | L_Ender's Cataclysm | No | needed |
+| Cerbons API | 1.3.0 | both | Bosses of Mass Destruction | No | needed |
+| CodxLib | 1.6.1 | both | Alex's Mobs Continued (needed on the client too) | No | needed |
+| Jupiter · Uranus | 2.3.7 · 2.4.1 | both | Ice and Fire CE | No | needed |
+| FAUNA Engine | 1.1 | both | Book of Dragons | No | needed |
+| Knight Lib | 2.0.5 | both | Companions! | No | needed |
+| VillagersTradingPlus | 1.1.1 | both | The Graveyard | No | needed |
+| Patchouli | 93 | both | Kings & Monsters (its guide book) | No | needed |
+| Placebo | 9.9.4 | both | Apotheosis and the Apothic mods | No | needed |
+| Fzzy Config | 0.7.7 | both | Simply Swords, Simply Tooltips | No | needed |
+| Kotlin for Forge | 5.12.0 | both | Fzzy Config | No | needed |
+| Collective | 8.84 | both | Village Spawn Point | No | needed |
+| CorgiLib · Data Anchor | 5.0.0.10 · 2.0.0.18 | both | Enhanced Celestials | No | needed |
+| GuideME | 21.1.22 | both | Applied Energistics 2 (its in-game guide) | No | needed |
+| Brandon's Core · CodeChicken Lib | 3.2.1 · 4.6.1 | both | Draconic Evolution | No | needed |
+| Sophisticated Core | 1.5.31 | both | Sophisticated Backpacks | No | needed |
+| Balm | 21.0.67 | both | Waystones | No | needed |
+| FTB Library | 2101.1.39 | both | FTB Quests, FTB Teams, FTB Ultimine, FTB XMod Compat | No | needed |
+| Simply Tooltips | 0.1.5 | client | Simply Swords (tooltips) | No | needed |
 
 ## 4. Our own mods
 
 | Mod | Mod ID | Version | Side | What it stitches together | Source | Status |
 |---|---|---|---|---|---|---|
-| *none yet* | | | | | | |
+| **Green Lanterns story engine** | (KubeJS scripts) | — | server | The Prologue (7-day raid, Warlord Vex, the crash), story NPCs (Elder Maren, Kaelen), class joining, the ring whispers and dreams, the **ring trial** (class / White / Black ring), boss hooks, `/gl` commands. `server/kubejs/server_scripts/story/` | ours | testing |
+| **Class skill trees** | (datapack) | — | server | Pufferfish's Skills trees: Adventurer + 7 classes. `server/kubejs/data/greenlanterns/puffish_skills/` | ours | testing |
+| **Tiered loot** | (datapack + KubeJS) | — | server | Five loot tiers injected into structure chests by difficulty, with items from every gear and magic mod, scaled by Luck; quest reward tables. `server/kubejs/data/greenlanterns/loot_table/`, `server/kubejs/server_scripts/loot/` | ours | testing |
+| **The Book of Oa** | (FTB Quests) | — | both | The quest book: 10 story/class chapters + 16 mod guides. Source `quests/src/*.json`, built with `python -I tools/questgen.py` | ours | testing |
+| **Pack glue** | (KubeJS) | — | server | Tag fixes, hidden items, the Cosmic Worm recipe, dead-data overrides (`docs/broken-data.md`) | ours | tuned |
 
 ## 5. Quality of life
 
@@ -135,6 +244,15 @@ When a mod is dropped, check this table for libraries that become `orphaned`.
 | Mouse Tweaks | 2.26.1 | client | Drag and scroll-wheel item moving in inventories | none | testing |
 | Traveler's Titles | 5.1.3 | client | RPG-style title on screen when you enter a new biome or dimension | YUNG's API | testing |
 | Lootr | 1.11.38 | both | **Every player gets their own loot** from each structure chest, so friends don't loot-steal | none | testing |
+| Waystones | 21.1.46 | both | Teleport network between waystones you've found (costs XP); waystones spawn in villages | Balm | testing |
+| Xaero's Minimap + World Map | 26.6.0 · 1.47.0 | both | Minimap with waypoints and a full-screen world map (M) | — | testing |
+| Open Parties and Claims | 0.33.0 | both | Claim land so friends and mobs can't grief it; **uses FTB Teams as its party system** | — | tuned |
+| Sophisticated Backpacks | 3.26.20 | both | Upgradable backpacks (pickup, magnet, feeding, crafting…) | Sophisticated Core | testing |
+| Corpse | 1.1.22 | both | When you die, your items stay in a corpse you can loot back (no despawn) | — | testing |
+| FTB Ultimine | 2101.1.15 | both | Hold the key (default `` ` ``) to mine a whole vein or tree at once (64 blocks) | FTB Library | testing |
+| Polymorph | 1.1.0 | both | Pick which output you get when two mods' recipes overlap | — | testing |
+| Enchantment Descriptions | 21.1.11 | both | Every enchantment explains itself in its tooltip | Bookshelf, Prickle | testing |
+| Clumps | 19.0.0.1 | both | Merges XP orbs (less lag after big fights) | — | testing |
 
 ---
 
@@ -147,13 +265,11 @@ When a mod is dropped, check this table for libraries that become `orphaned`.
 | Ancient Remnants · Illager Structures | Main · structures | CurseForge-only (we have the chinatown jars; can be verified against CurseForge's CDN like Castle in the Sky). Illager Structures uses vanilla biome IDs only, so it needs a Structurify biome list first |
 | *Considered and left out (2026-11-09)* | | Moog's Voyager Structures (130 mostly tiny decorations that clutter Terralith) · Trek (beta; overlaps D&T) · Repurposed Structures (vanilla variants that overlap YUNG's) · Awesome Dungeon ×3 (vanilla biome IDs only) · Explorify (vanilla-style) |
 | YUNG's Better Caves | Main · worldgen | **Held back on purpose.** It rewrites cave generation, which could limit cave mods we add later (e.g. Alex's Caves). Only via a test world |
-| Polymorph | QoL | When two mods' recipes start conflicting |
 | Lithium | QoL · performance | After the magic mods are chosen (needs the Iron's Spellbooks shield fix) |
 | Default Options | QoL | When we package the pack for other players |
-| Enchantment Descriptions | QoL | When enchantment mods arrive |
 | More Culling · BadOptimizations · Dynamic FPS | QoL · performance | Nice-to-have client extras |
 
-**Design choices waiting for you:** map (Xaero's?) · backpacks · gravestone · waystones · shaders (Iris) · EMI on top of JEI?
+**Design choices made 2026-11-09** (see `docs/FINAL-REPORT.md`): map = Xaero's · backpacks = Sophisticated Backpacks · gravestone = Corpse · waystones = Waystones · claims = Open Parties and Claims on FTB Teams. **Still yours to decide:** shaders (Iris) · EMI on top of JEI.
 
 ---
 
@@ -169,12 +285,21 @@ When a mod is dropped, check this table for libraries that become `orphaned`.
 - `Redundant @Unique on injector method netherexp$…` and `Not all defined tags … present: netherexp:…`: Jaden's Nether Expansion dev notices and empty tag definitions.
 - `yungsapi: block minecraft:iron_ore added to BlockStateRandomizer exceeds max probabiltiy of 1`: a quirk in YUNG's own Better Strongholds data.
 - `Ignoring unknown attribute 'forge:entity_gravity'`: mobs saved inside structure files with old Forge attribute names; the game skips them.
-- `Error loading class: com/simibubi/create/…`: Lootr's optional Create compatibility. It goes away once Create is installed.
+- `Error loading class: …` / `@Mixin target … was not found`: optional compatibility mixins for mods we don't run (Lootr ↔ Create before Create arrived, many others). Also `org/jetbrains/annotations` (compile-time only).
+- `JarSelector: Attempted to select a dependency jar for JarJar which was passed in as source`: a library is both bundled and installed; the installed file wins.
+- `azurelib: Correcting config value` · `Jupiter: Notice: Jupiter cannot resolve`: libraries tidying their own configs.
+- `draconicevolution: Reactor detonation initiated / Calculating explosion ETA / Explosion Imminent`: Draconic Evolution's startup self-test noise, not a real reactor.
+- `Found loot table element validation problem`: loot entries naming items that aren't installed are skipped.
+- `KubeJS: Failed to parse recipe … Falling back to vanilla`: KubeJS doesn't model some recipe formats (Dungeons Weapons' smithing); the game still loads them normally.
+- `RecipeManager: Skipping recipe …, not a json object`: our own `neoforge:false` overrides that switch dead recipes off (`docs/broken-data.md`).
 - `[spark] Timed out waiting for world statistics`: spark's stats timing out while the server is busy generating a world.
 - **Known ERROR, explained:** `Block-attached entity at invalid position`.
   - **Cause:** a structure template hangs a painting or item frame where no wall survived, so the game drops it.
   - **Source:** traced with `tools/whatstructure.py` + `/locate` to **`philipsruins:ancient_dungeon`** (12 blocks from the error spot, 6× at spawn generation on our seed). Seen once from YUNG's on another seed.
   - **How it's reported:** `boottime.py` still **counts and shows** it as "known & explained". It's never hidden, and it doesn't fail a boot test.
+- **Known ERROR, explained:** `Jupiter: Failed to load config: ./config/…`: Ice and Fire's config library reads its config before creating it. Only on the very first boot of a server.
+- **Known ERROR, explained:** `RuntimeDistCleaner: Attempted to load class net/minecraft/client/…`: FamiliarsLib's client-only mixin is tried on the dedicated server and skipped (×2 every boot). Clients are unaffected.
+- **Fixed, no longer shown:** Create: Lanterns display cases used an invalid recipe category; Cataclysm / Legendary Monsters reference 3 tool tags they never ship (we add them empty); DoG's view-distance notice (view distance is 12 now).
 
 ### 1. Editing
 
@@ -375,3 +500,5 @@ Structurify is the **only** thing that controls placement. Cristel Lib's auto-co
 | 2026-11-09 | Vanilla villages disabled (Structurify) | 54 | 23.4s | 0 (+6 known) |
 | 2026-11-09 | **New real world** with CTOV villages (unplayed pre-CTOV world archived) | 54 | 23.5s | 0 (+6 known), 20 TPS |
 | 2026-11-09 | + Castle in the Sky | 55 | 22.8s → 22.9s | 1 → 0 (recipe fixed) (+6 known) |
+| 2026-11-09 | **The big build** (+92 jars: magic, combat, creatures, bosses, tech, quests, skills, QoL) | 147 | 43.9s | tag cascade (DtE), 2 broken Dungeons Weapons files, 35 dead recipes/loot tables → 0 (+2 known) |
+| 2026-11-09 | + story engine, quest book (26 chapters, 645 quests), skill trees (8), tiered loot (747 tables), party glue | 147 | 44.5s | 0 (+2 known), 0 unreviewed warnings; selftest 32/32 |

@@ -2,6 +2,17 @@
 
 *Working design for the Green Lanterns modpack. Revision 2, 2026-11-09.*
 
+> **Revision 3 (built, 2026-11-09): what was actually built differs from this design in a few places.**
+> `docs/FINAL-REPORT.md` describes the pack as it is; `docs/CONTRACT.md` holds the exact names.
+> - **White / Black rings:** there's no separate Crossroads boss. Following the owner's later
+>   instruction, they come from **each class's ring trial**: after the class's mid-game trial
+>   boss, four role-play questions decide whether you get your class ring, the White ring (3+
+>   "life" answers) or the Black ring (3+ "death" answers).
+> - **Deeds:** Create: Lanterns' deed points are switched off, not mirrored from class XP. The
+>   whisper (class level 10) and dream (level 25) are driven by our own script.
+> - **Final boss:** the Devourer of Gods (DoG), gated by the Chaos Guardian's shard (§10's research).
+> - **Class names and trial bosses:** see the table in FINAL-REPORT §3.
+
 **What changed in revision 2** (owner's decisions):
 - New colour map for the classes.
 - White and Black rings now come from **one key boss**, depending on how you kill it.
