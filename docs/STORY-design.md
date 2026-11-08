@@ -469,8 +469,9 @@ Ultraviolet (*The Unseen*) and Gold (*The Bard*, Tunes n' Tomes) stay possible a
 | **Mid** | **Ogre King** · **Night Lich**, Nether Gauntlet, Void Blossom (BOMD) · **Frostmaw** · **Corrupted Champion** · **The Harbinger** · Archevoker · stage-3 dragons | Orange, Blue, Red, Violet, Yellow, Green |
 | **Late** | Netherite Monstrosity, **Ignis**, **Ancient Remnant**, **Maledictus**, **Ender Guardian**, **Leviathan**, **Scylla** (Cataclysm) · **Dead King** · Lord Pumpkinhead · **Obsidilith** · Hydra · stage-4/5 dragons | each class (§5) |
 | **Extreme** | **Echo of Tyros** · Discerning the Eldritch's Ascended One · Dark Doppelganger · Ender Dragon (Better End Island) | ring trials, post-game |
-| **Key boss** | **The Crossroads** boss (§10) | everyone with a ring |
-| **Final** | **The final boss** (§10) | everyone |
+| **Key boss** | **The Crossroads**: your **Dark Doppelganger** (proposed, §10) | everyone with a ring, alone |
+| **Gate** | **Chaos Guardian** (Draconic Evolution) | everyone |
+| **Final** | **Devourer of Gods** (proposed, §10); backup: **The Obliterator** | everyone |
 
 **Optional extra dimensions with their own boss ladders** (decision 6): Twilight Forest, The Aether, Eternal Starlight, Deeper and Darker.
 
@@ -506,14 +507,45 @@ Once a player has their ring, one **key boss** awaits. **How you kill it** decid
 - It then runs `/createlanterns call <player> white|black` or applies the power-up.
 - In the mod, White and Black are switched to "commands only", so deeds never trigger them.
 
-**Key-boss candidates** (to pick together with the final boss):
-- Iron's **Dead King**: undead lord, respawnable with a phylactery, so each player can face him.
-- The runner-ups from the final-boss research (being researched now).
+**Key-boss candidates.** Research done 2026-11-09; numbers read from the jars:
+
+| Candidate | Why | Notes |
+|---|---|---|
+| **Dark Doppelganger** (Dark Doppelganger 4.0.0, Iron's addon) · **recommended** | It **copies the summoner's own armor, weapon and spell power**: you fight *your own corrupted shadow*. It's a solo fight that every player faces individually, which suits a "who will you become?" moment. How you defeat yourself decides White / Black / power-up | 4 phases, adapts to repeated attacks, steals buffs, makes clones; `hard_mode`; HP 1–100,000 in config. ⚠ Copying Draconic armor is untested: put it on `banned_armor` until tested |
+| Iron's **Dead King** | Undead lord, respawnable with a phylactery | 500 HP, too weak for ring-bearers unless buffed |
+| Goety **Apostle** | Necromancer; caps hits at 20; immune at half HP and heals back to full | Big mod; its 1.21.1 port is from July 2026 |
+
+### The gate before the finale: the Chaos Guardian
+**Draconic Evolution's Chaos Guardian** is already planned, since Draconic is Yellow's tech line, and the research confirmed Chaos Island exists in the 1.21.1 build.
+- **Stats:** 1000 HP plus a **16,000-point shield**. Crystal shields must be broken first, its damage **ignores armor and Resistance**, and it summons Guardian Withers.
+- **What it drops:** Chaos Shards (Chaotic-tier gear), and in our design a **key ingredient for summoning the final boss**.
+- It has no multiplayer scaling (KubeJS can add it). Draconic is beta.
 
 ### Act V: The Last Light (the finale)
 All ring-bearers (powered-up, White and Black alike) unite for the last fight.
 
-**Final boss: an existing, very OP boss from a mod.** Candidates are being researched (HP, phases, immunities, healing, summons, theme fit, NeoForge 1.21.1 availability). The shortlist will be added here.
+**Final boss: an existing, very OP mod boss.**
+
+Each candidate was compared on HP and armor from the jars, damage caps, healing, phases, immunities and theme. The bar is Cataclysm's 333–600 HP bosses, plus endgame Draconic and Mythic gear.
+
+| Rank | Boss | Mod (version) | Stats (from the jar) | Signature mechanics | Theme | Risk |
+|---|---|---|---|---|---|---|
+| 🥇 **recommended** | **Devourer of Gods** | Devourer of Gods 1.2.0 | 2000 base HP; configurable to 30 armor and 20 toughness | **340-block worm**, 2 phases (phase 2: ×1.5 damage, ×1.3 speed), lasers, Cosmic Flame. Config can **ignore armor and Protection, stop your regeneration, eat enchant levels off your gear to heal itself**, and reduce your damage to it. **Built-in co-op scaling** (+50% HP and +15% damage per extra player). An aerial fight, perfect for ring flight | **Cosmic god-eater**; its summon fragment drops when it *devours the Ender Dragon* | Small new mod (All Rights Reserved; fine for personal use). 102 body segments, so it's heavy, and Entity Culling must exclude it. **No drops by default** (we add a loot table). Defaults are tuned for vanilla gear, so it must be tuned up |
+| 🥈 | **The Obliterator** | Legendary Monsters 2.2.4 | 550 HP / 14 armor, 4 toughness | **Max 20 damage per hit**, adapts to your damage, heals and resets its phase if left alone, immune to projectiles in phase 1, attacks that deal a percentage of your HP. Health and damage multipliers up to 1000× | Space Station in the End | Low (8.3M downloads, no dependencies). ⚠ **Invulnerable while you fly or hold high ground**, which cancels the Lantern rings' flight |
+| 🥉 | Dark Doppelganger | 4.0.0 | 600 by default (up to 100,000) | Copies your gear (best used as the **Crossroads** boss above) | The hero's shadow | Needs Iron's ≥ 3.15 |
+| — | Not strong enough or not suitable | | Bosses'Rise (200–500), Eternal Starlight Solar Creeper (250), Herobrine (500), Remnants' Hollow Sovereign (720), Wither Reincarnated (600), Luxtructosaurus (600). DivineRPG's Lady Luna is fought with a separate inventory, so your endgame gear doesn't count. AoA's 1.21.1 build only has early and mid bosses. Twilight Forest has no final boss. Wither Storm has no 1.21.1 build | | | |
+
+**Proposed end-game chain** (decision 2):
+1. **The Crossroads**: face your **Dark Doppelganger**. How you defeat your own shadow makes you **White**, **Black**, or keeps your ring and powers it up.
+2. **The Gate**: the **Chaos Guardian** in the End drops Chaos Shards and the *Chaos Core* (our recipe change) needed for the summon.
+3. **The Devouring**: the **Devourer of Gods** devours the Ender Dragon, and its fragment + the Chaos Core summon it.
+4. **The Last Light**: every ring-bearer flies against the Devourer.
+
+**Starting tune for the Devourer** (to test):
+- `maxHealth` 6000+ · player damage multiplier ≈ 0.2 · armor pierce ≈ 20 · enchantment pierce ≈ 10 · regen halt on.
+- Keep its co-op scaling.
+- Add our own loot table.
+- Summon recipe: also requires the Chaos Core.
 
 | Step | Quest | What happens |
 |---|---|---|
@@ -564,7 +596,9 @@ All versions are NeoForge 1.21.1, checked 2026-11-08/09. **β** = beta/alpha. �
 | Kings & Monsters (CurseForge) | 1.2.2 | ⚠ plains/swamp only: needs a biome list |
 | The Graveyard · Mutant Monsters · Illager Invasion | 4.0.1 · 21.1.1 · 21.1.6 | |
 | FIW Bosses | 1.3.1 | Warlord Vex |
-| **Final-boss mod** | being researched | §10 |
+| **Devourer of Gods** | 1.2.0-hotfix1 | proposed final boss. ⚠ heavy (102 segments), so exclude it from Entity Culling; add a loot table |
+| Dark Doppelganger | 4.0.0 | proposed Crossroads boss. Needs Iron's ≥ 3.15, GeckoLib, playerAnimator |
+| *Backup final:* Legendary Monsters | 2.2.4 | The Obliterator (+ 15 other bosses) |
 
 ### Phase D: Dragons and mounts
 | Mod | Version | Notes |
@@ -594,7 +628,7 @@ Terralith · Jaden's Nether Expansion · Nullscape + YUNG's Better End Island ·
 | # | Decision | Status |
 |---|---|---|
 | 1 | Create: Lanterns permission | ✅ **Resolved:** personal use, modify freely |
-| 2 | Final boss | ⏳ Must be an existing OP boss; shortlist coming (§10) |
+| 2 | Final boss | ⏳ Proposed: **Devourer of Gods** (final) · **Dark Doppelganger** (Crossroads) · Chaos Guardian (gate). Pick or swap (§10) |
 | 3 | How White works solo vs party | ✅ **Resolved:** White and Black come from the Crossroads boss |
 | 4 | Black ring for players | ✅ **Resolved:** from the Crossroads boss; conditions later |
 | 5 | Secret classes (Ultraviolet, Gold) | open |
@@ -627,7 +661,8 @@ Terralith · Jaden's Nether Expansion · Nullscape + YUNG's Better End Island ·
 | Loot by tier | Apotheosis + LootJS (+ Lootr) |
 | Corruption | Champions affix, Enhanced Celestials, KubeJS world events |
 | **The Crossroads outcome** | KubeJS `EntityEvents.death` → power-up / `call … white` / `call … black` |
-| Final boss | the chosen mod's boss + KubeJS phases / buffs if needed |
+| Final boss | Devourer of Gods config (HP, pierce, regen halt) + our loot table + KubeJS recipe change (Chaos Core) |
+| Crossroads boss | Dark Doppelganger (`hard_mode`, HP raised) + KubeJS death check → outcome |
 | Our own mods (later) | **lantern-bridge**, only if commands can't do something (e.g. read deed points) |
 
 **Suggested next step:** Phase A, the backbone. Install Create → Sable → Simulated → Aeronautics → **Create: Lanterns**, one at a time. Read its full config, test `spectrum set`, `call` and `crash`, and switch off the lights we don't use.
