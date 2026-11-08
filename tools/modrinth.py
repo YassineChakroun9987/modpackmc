@@ -3,7 +3,7 @@
 Usage:
   python -I tools/modrinth.py info <slug> [<slug> ...]      latest version, sides, dependencies
   python -I tools/modrinth.py get  <slug> <dest_dir> [--beta]  download the primary file + verify sha512
-  python -I tools/modrinth.py identify <file.jar> [...]        which Modrinth version is this exact jar?
+  python -I tools/modrinth.py identify <file.jar|folder> [...]  which Modrinth project/version is each jar?
 
 Release builds are preferred. A beta/alpha is only picked if no release exists (or with --beta),
 and it is always flagged.
@@ -95,15 +95,28 @@ def cmd_get(slug, dest, allow_beta):
 
 
 def cmd_identify(files):
-    for path in files:
-        sha1 = hashlib.sha1(Path(path).read_bytes()).hexdigest()
-        try:
-            v = api(f"/version_file/{sha1}", algorithm="sha1")
-        except urllib.error.HTTPError:
-            print(f"{Path(path).name}: not a known Modrinth file (CurseForge-only or modified)")
+    """Batch-identify jars by SHA-1 (one request for all files, one for their projects)."""
+    paths = []
+    for f in map(Path, files):  # accepts jars and/or folders of jars
+        paths += sorted(f.glob("*.jar")) if f.is_dir() else [f]
+    hashes = {hashlib.sha1(p.read_bytes()).hexdigest(): p for p in paths}
+    body = json.dumps({"hashes": list(hashes), "algorithm": "sha1"}).encode()
+    req = urllib.request.Request(API + "/version_files", data=body, method="POST",
+                                 headers={**HEADERS, "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        found = json.load(r)  # {sha1: version}
+    projects = {}
+    ids = sorted({v["project_id"] for v in found.values()})
+    for i in range(0, len(ids), 100):
+        projects.update({p["id"]: p for p in api("/projects", ids=ids[i:i + 100])})
+    for sha1, p in sorted(hashes.items(), key=lambda kv: kv[1].name.lower()):
+        v = found.get(sha1)
+        if not v:
+            print(f"{p.name}\n    not a Modrinth file (CurseForge-only, renamed or modified)")
             continue
-        p = api(f'/project/{v["project_id"]}')
-        print(f'{Path(path).name}: {p["title"]} ({p["slug"]}) {v["version_number"]} [{v["version_type"]}], genuine')
+        pr = projects[v["project_id"]]
+        print(f'{p.name}\n    {pr["title"]} ({pr["slug"]}) {v["version_number"]} [{v["version_type"]}]  '
+              f'categories: {", ".join(pr["categories"] + pr.get("additional_categories", []))}')
 
 
 if __name__ == "__main__":
