@@ -30,6 +30,17 @@ KNOWN_HARMLESS = [
     r"ModConfigSpec/CORE\]: .*heatDistortionLavaMinDistance",                                # JNE config default quirk
     r"yungsapi/\]: WARNING: block .* added to BlockStateRandomizer exceeds max probabiltiy",  # YUNG's data quirk
     r"AttributeMap/\]: Ignoring unknown attribute 'forge:",       # old Forge attributes saved in structure mobs
+    r"mixin/\]: Error loading class: com/simibubi/create/",       # Lootr's optional Create compat (gone once Create is in)
+    r"spark/\]: Timed out waiting for world statistics",          # spark stats while the server is busy generating
+]
+
+
+# ERROR lines we've traced to a cause and judged harmless. They're still COUNTED and shown as "known",
+# never hidden, and they don't fail a boot test. Every entry needs its reason.
+KNOWN_ERRORS = [
+    (r"BlockAttachedEntity/\]: Block-attached entity at invalid position",
+     "a structure template hangs a painting/item frame where no wall survived; the game drops it "
+     "(traced to philipsruins:ancient_dungeon on our seed; also seen from YUNG's on another seed)"),
 ]
 
 
@@ -44,7 +55,9 @@ def report(log=LOG):
     done = next((l for l in lines if "]: Done (" in l), None)
     nf = next((re.search(r"--fml\.neoForgeVersion, ([\d.]+)", l) for l in lines if "fml.neoForgeVersion" in l), None)
     mods = [l.strip() for l in lines if l.startswith("\t\t") and not l.strip().startswith("Name Version")]
-    errors = [l for l in lines if "/ERROR]" in l]
+    all_errors = [l for l in lines if "/ERROR]" in l]
+    known = [l for l in all_errors if any(re.search(p, l) for p, _ in KNOWN_ERRORS)]
+    errors = [l for l in all_errors if l not in known]
     warns = [l for l in lines if "/WARN]" in l and not any(re.search(p, l) for p in KNOWN_HARMLESS)]
 
     print("NeoForge:  ", nf.group(1) if nf else "?")
@@ -54,9 +67,13 @@ def report(log=LOG):
         print(f"Boot time:  {(ts(done) - start).total_seconds():.1f}s total  (world load: {world})")
     else:
         print("Boot time:  server did not finish starting (no 'Done' line)")
-    print(f"ERROR lines: {len(errors)}")
+    print(f"ERROR lines: {len(errors)}" + (f"   (+{len(known)} known & explained, see KNOWN_ERRORS)" if known else ""))
     for l in errors[:15]:
         print("   ", l[:240])
+    for pattern, reason in KNOWN_ERRORS:
+        n = sum(1 for l in known if re.search(pattern, l))
+        if n:
+            print(f"    known x{n}: {reason}")
     print(f"Unreviewed WARN lines: {len(warns)}")
     for l in warns[:15]:
         print("   ", l[:240])

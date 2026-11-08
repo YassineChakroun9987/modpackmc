@@ -24,6 +24,7 @@ BUILTIN = {"minecraft", "neoforge", "forge", "fml", "javafml", "java"}
 ACCEPTED = {
     ("jei", "minecraft"): "JEI 19.69 beta declares [1.21,1.21.1) - a typo; NeoForge loads it fine on 1.21.1",
     ("lodestone", "minecraft"): "Lodestone 1.8.2 declares [1.21,1.21.1) - same typo; loads fine in every boot test",
+    ("dungeons_arise", "minecraft"): "WDA 2.1.68 declares [1.21,1.21.1) - same typo; loads fine in every boot test",
 }
 
 
