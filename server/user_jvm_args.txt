@@ -1,8 +1,8 @@
 # JVM arguments for the Green Lanterns dev server (read by start.bat).
 # Xms = starting heap, Xmx = max heap. 6G is plenty while the pack is small;
 # raise to 8G+ once the big content mods (Cataclysm, dungeons, dragons) are in.
--Xms2G
--Xmx6G
+-Xms4G
+-Xmx10G
 -XX:+UseG1GC
 -XX:+ParallelRefProcEnabled
 -XX:MaxGCPauseMillis=200

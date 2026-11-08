@@ -24,7 +24,8 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 WG = re.compile(r"^data/([^/]+)/worldgen/(structure|structure_set|template_pool|processor_list)/(.+)\.json$")
 BIOME_TAG = re.compile(r"^data/([^/]+)/tags/worldgen/biome/(.+)\.json$")
 TAGS = re.compile(r"^data/[^/]+/tags/|^data/[^/]+/data_maps/")  # tags and data maps merge across mods: never conflicts
-SHARED_OK = {"data/c/worldgen/biome_colors.json", "data/c/worldgen/structure_icons.json"}  # Stardust Labs shared files
+SHARED_OK = {"data/c/worldgen/biome_colors.json", "data/c/worldgen/structure_icons.json",  # Stardust Labs shared files
+             "data/neoforge/loot_modifiers/global_loot_modifiers.json"}  # NeoForge merges this list across mods
 
 
 def biome_kind(value):
