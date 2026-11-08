@@ -62,7 +62,7 @@
 	#If true, an unbound ring left lying in the world lifts off and goes looking for the most worthy player
 	#for its light, and offers itself to them. If nobody's worthy it waits where it is and looks again every
 	#minute. If false, it lies there like any other item.
-	seeksNewBearer = true
+	seeksNewBearer = false
 
 [battery]
 	#How much energy a lantern stores. A lantern only refills at a Central Power Battery (see centralBattery).
@@ -83,7 +83,7 @@
 	#A light's ring comes to whoever shows its emotion strongly enough. Put an unbound ring on in survival
 	#without that and it rejects you and flies off your hand. In creative any ring goes on and works until
 	#it comes off. If false, any ring goes on any hand and none comes looking.
-	ringsChoose = true
+	ringsChoose = false
 	#If true, a red ring never comes off once it's on. It's taken the place of the bearer's heart.
 	redRingStays = true
 	#How many deed points of a light's emotion a player needs before it notices them (a whisper). Deed points
@@ -139,13 +139,13 @@
 	#Either way, doing the same deed over and over still counts for less while it's fresh (the spectrum gets sick of
 	#it, and that's separate from decay). A light's gain still costs its opposite a quarter as much, and a bearer's
 	#willpower (which only grows) never decays.
-	emotionDecay = true
+	emotionDecay = false
 	#How much each deed is worth compared to what the mod first gave it. 0.5 is half, so every light needs twice
 	#the deeds it used to before it stirs (and the bars from whisperAt to ringAt are higher too). 1 counts
 	#deeds the way they were counted before they were lowered.
 	# Default: 0.5
 	# Range: 0.0 ~ 10.0
-	deedWorth = 0.5
+	deedWorth = 0.0
 	#Deeds worth what you set here instead of the mod's value, as deed=points (plunder=0 makes a dungeon
 	#chest count for nothing). deedWorth still scales them. Every deed, its id and its worth are listed in the mod's
 	#docs/ARCHITECTURE.md (the calling's deeds). Set each deed added with them to 0, and deedWorth to 1, and deeds

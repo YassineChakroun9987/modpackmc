@@ -22,3 +22,6 @@ Thumbs.db
 desktop.ini
 server/.boottest/
 server/backups/
+server/kubejs/exported/
+server/.sable/
+server/data/
