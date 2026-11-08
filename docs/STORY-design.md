@@ -1,15 +1,21 @@
 # Story & Systems Design: *Blackest Night*
 
-*Working design for the Green Lanterns modpack. Written 2026-11-08 from the owner's story pitch, with the mods researched for NeoForge 1.21.1. It's a living document: change anything.*
+*Working design for the Green Lanterns modpack. Revision 2, 2026-11-09.*
+
+**What changed in revision 2** (owner's decisions):
+- New colour map for the classes.
+- White and Black rings now come from **one key boss**, depending on how you kill it.
+- The final boss is an **existing OP boss from a mod**, not Nekron.
+- Create: Lanterns may be **modified freely**: the pack is for personal use only and won't be published.
 
 > **How to read this:**
-> - Every mod named here was checked for a NeoForge 1.21.1 build (version in §11).
-> - **(verify)** means the idea depends on a detail we haven't tested in-game yet.
-> - **Decision** marks a choice that's yours to make (all collected in §12).
+> - Every mod named here was checked for a NeoForge 1.21.1 build (versions in §11).
+> - **(verify)** means the idea depends on a detail not tested in-game yet.
+> - **Decision** marks choices still open (§12).
 
 ## Contents
 1. [The story in one page](#1-the-story-in-one-page)
-2. [The backbone: Create: Lanterns](#2-the-backbone-create-lanterns)
+2. [The backbone: Create: Lanterns, and how we change it](#2-the-backbone-create-lanterns-and-how-we-change-it)
 3. [The journey: acts and chapters](#3-the-journey-acts-and-chapters)
 4. [Prologue: The Seventh Dawn](#4-prologue-the-seventh-dawn)
 5. [The classes (the seven lights)](#5-the-classes-the-seven-lights)
@@ -17,7 +23,7 @@
 7. [Gear ladder](#7-gear-ladder)
 8. [Boss ladder](#8-boss-ladder)
 9. [The corruption (the enemy grows)](#9-the-corruption-the-enemy-grows)
-10. [Finale: Blackest Night](#10-finale-blackest-night)
+10. [The Crossroads (White / Black) and the finale](#10-the-crossroads-white--black-and-the-finale)
 11. [Mods needed, by build phase](#11-mods-needed-by-build-phase)
 12. [Decisions for you](#12-decisions-for-you)
 13. [Implementation map (what builds what)](#13-implementation-map-what-builds-what)
@@ -26,68 +32,54 @@
 
 ## 1. The story in one page
 
-**The threat.** Death is spreading across the universe. Nekron, Lord of the Unliving, has woken. His **Black Lanterns** raise the dead, and the monsters they command are wiping out whole worlds. The corruption has reached Earth: undead hordes, blighted beasts, bosses that should have stayed dead.
+**The threat.** Something is corrupting the universe. Undead, monsters and twisted creatures pour out of the dark between the stars, killing innocents and swallowing whole worlds. Now the corruption has reached Earth. *(The force behind it is the final boss, chosen in §10.)*
 
-**The order.** On the planet **Oa**, the Guardians lead an alliance of the **seven Lantern Corps**. Each Corps draws on one emotion of the *emotional spectrum*. No single Corps can stop the dead. Only all seven lights together, the **White Light of Life**, can. So the Guardians are searching every world for people worthy of a ring.
+**The order.** On the planet **Oa**, the Guardians lead an alliance of seven Lantern Corps, each wielding one light of the spectrum. Earth needs warriors worthy of a ring, so the Guardians are watching.
 
-**You.** You and your friends are young adventurers who wake up in a small village. A **pillager warband** is camped on the ridge, and their war-horns say they march in **seven days**. Saving the village is the first test. On the night you win, a Lantern ship crashes in the hills, and its dying pilot tells you what's coming.
+**You.** You and your friends are young adventurers who wake up in a small village. A **pillager warband** camps on the ridge, and in **seven days** they'll attack. On the night you save the village, a Lantern ship crashes in the hills, and its dying pilot tells you what's coming.
 
-**The road.** Every deed you do is seen by the spectrum: the fights you pick, the ores you hoard, the animals you save, the friends you stand beside. You grow in a **talent tree** and can follow one class or mix several. Each class is one **light**, with its own:
-- element (a school of magic)
-- combat style
-- aspect: the mods it focuses on, such as tech, dragons, mining or villages
-- questline, gear, enemies and mount
+**The road.** You grow in a **talent tree** and can follow one class or mix several. Each class is one **light**: an element, a fighting style, an aspect (the mods it focuses on), its own questline, gear, enemies and mount. As your class grows, its light **whispers** to you, then you **dream** of it. At the end of your class's road comes the **ring trial**, and the ring chooses you.
 
-Near the end of the road, your light's **ring** chooses you.
+**The Crossroads.** One key boss stands between the ring-bearers and the end. *How* you kill it changes you forever:
+- you keep your ring and it grows stronger, or
+- the **White Light** claims you, or
+- the **Black** does.
 
-**The end.** With rings on their hands, the players reunite. Nekron raises the bosses you killed as Black Lanterns. Your seven lights must become one, and a single champion wears the **White Light**. Then you face Nekron in the void at the edge of the End.
-
-> *Lore note:* names like Oa, Korugar, Nekron and Sinestro come from DC Comics, and Create: Lanterns already uses them. That's fine on a private server. If the pack is ever published, check what's allowed (or rename).
+**The end.** All the paths join. Every ring-bearer, of every colour, stands together against the corruption's master: one of the most brutal bosses in the modded game.
 
 ---
 
-## 2. The backbone: Create: Lanterns
+## 2. The backbone: Create: Lanterns, and how we change it
 
-The chinatown instance contains **Create: Lanterns** (`createlanterns`, *alpha 20.11*, by "The Team": Xeon, Phazeau, Lycoris, Clara eclipse, Neves) and its HUD add-on **Spectral Hub**. It already *is* the system from the original pitch: **what you do on the server builds an attribute, and a threshold brings your ring.** The whole design builds on it rather than re-inventing it.
+**Create: Lanterns** (`createlanterns` alpha 20.11, by "The Team") and its HUD add-on **Spectral Hub** are in the chinatown instance. It gives us:
+- **Rings:** a ring for each light, with 2 powers each plus an ultimate, flight, a hard-light suit, grip, and constructs you can ride.
+- **Lanterns and power batteries.**
+- **The calling:** whisper → dream → worthy → the ring comes.
+- **Planets:** **Oa** (Citadel, Guardian Outpost, Lantern Spire, Central Power Battery) and **Korugar** (Dread Plains, Fear Bogs, Fear Spire, Sinestro's Watchtower), reached by **Create Aeronautics ships**.
+- **Commands:**
 
-What it contains (read from its jar and config):
-
-| Feature | What it does |
+| Command | What it does |
 |---|---|
-| **The full spectrum** | Red (Rage), Orange (Avarice), Yellow (Fear / Sinestro Corps), Green (Will), Blue (Hope), Indigo (Compassion / Indigo Tribe), Violet (Love / Star Sapphires), plus Ultraviolet (Shame), Gold (Joy), **Black (Death)**, **White (Life)**. Also 4 joke lights (Xbox, PlayStation, Steam, WhatsApp) that we'll switch off |
-| **Deeds** | ~80 tracked deeds, grouped by light (table below). Every player has deed points per light |
-| **The calling** | As points grow, the light **whispers** (60 pts) → you **dream** of it (180) → you're **worthy** (225) → the **ring comes looking** (450). Steps are 7 in-game days apart. All of it is configurable: per-deed worth, decay, extra rings cost ×4 |
-| **Special lights** | **White** picks only someone carrying rings of all seven lights. **Black** takes only someone who died in the Deep Dark, and needs ×N deeds |
-| **Ring powers** | Two per light, plus an ultimate. Red: Blood Plasma, Eruption. Orange: Covet, Plunder. Yellow: Terror, Cage. Green: Resolve, Fist. Blue: Hope, Sanctuary. Indigo: Blink, Exchange. Violet: Enthrall. Each light also has a "lit" passive |
-| **Ring abilities** | Flight · a hard-light suit · grip (grab mobs, items, contraptions) · **constructs you can design, summon and ride** |
-| **Planets** | **Oa** (Verdant Plains, Guardian Highlands, Spire Fields, Emerald Sea, Willpower River; Citadel, Guardian Outpost, Lantern Spire, **Central Power Battery**, crashed Lantern ship). **Korugar** (Dread Plains, Blackstone Crags, Fear Bogs, The Murk, River of Fear; Fear Spire, Sinestro's Watchtower) |
-| **Travel** | Ships built with **Create Aeronautics** (it requires Create, Sable, Simulated and Aeronautics) |
-| **Crafting** | Liquid light and dust for each emotion, Lantern frames, ring bands, and a **Great Foundry** where rings are forged ("Forged in Light") |
-| **Commands** | Show or set a player's deed points per light |
+| `/createlanterns spectrum …` | show or **set** a player's deed points per light |
+| `/createlanterns call …` | send a ring to a player |
+| `/createlanterns crash …` | bring a Lantern ship down nearby |
+| `/createlanterns battery small\|medium\|biggest` | build a Central Power Battery |
+| `/createlanterns config` | list non-default settings |
 
-**Deeds by light.** We read this from the mod's code; the grouping follows the code's order, so treat it as (verify):
+**Because the pack is personal, we reshape the mod to fit our classes:**
 
-| Light | Deeds |
+| Change | How (verify exact syntax in-game) |
 |---|---|
-| Red, Rage | berserk · rampage · slaughter · vengeance · avenge a companion / villager · burning fury · bare-handed · fight through the pain · punish raiders · slay a captain |
-| Orange, Avarice | treasure · plunder · strike it rich (ores) · hoard · profit · ransack a village · dig up treasure · fish up treasure |
-| Yellow, Fear | terrorise · slay the fleeing / young / trapped · strike from shadow · crush eggs |
-| Green, Will | slay the mighty · slay while desperate · slay a terror · hold the line · outnumbered · endure the night · face the dark · brave the deep dark |
-| Blue, Hope | hero of the village · cure · rescue · rally · plant · light the dark · build a guardian · keep watch · tend · mend a golem |
-| Indigo, Compassion | give · set free · kindness · nurture · tame · breed · name · defend a companion |
-| Violet, Love | company · grief · befriend an allay · give a flower · armour a companion · together |
-| Ultraviolet, Shame | unseen · skulk · unseen kill · hide away · hide one's face · flee the fight · pilfer |
-| Gold, Joy | music · dance · celebrate · feast · soar · victory · play a note · sound a horn · swim with dolphins |
-| Black, Death | die · die in the dark · toll · slay / raise the Wither · brush with death · eat the dead · return to the grave · cheat death |
-| White, Life | grow · sow · compost · keep bees · root |
-
-**How we use it:**
-- **The spectrum is the story's narrator.** Whispers and dreams become quest beats: "A green light notices you" can open a quest that explains it.
-- **The ring arrives at the end of your class questline, not before.** We raise `ringAt` so rings never show up early on their own. The class's **ring trial** (§5) is the moment the ring comes. The mod's own worthiness check stays: a ring still rejects anyone whose deeds don't show its emotion.
-- **Pufferfish's Skills XP (§6) mirrors the same deeds.** A Red player's actions fill both their Red talent tree and their Red deed points, so the two systems agree.
-- **White and Black are the finale** (§10).
-
-> ⚠ **Before anything else:** Create: Lanterns is *alpha*, licensed **All Rights Reserved**, and its GitHub repo is private. The whole story leans on it, so we need to know how you got it, whether we may use and tune it, and whether "The Team" can expose deed points to scripts (§12, decision 1).
+| **Natural deeds off**, because the mod's emotions (Yellow = fear, …) no longer match our classes | server config `deedWorth = 0` |
+| **Class progress drives the light** | KubeJS mirrors each class's Pufferfish XP into that light's deed points with `/createlanterns spectrum set <player> <light> <points>`, so the mod's own story beats fire at our milestones |
+| Whisper at **class level 10**, dream at **level 25** | map levels to `whisperAt` / `dreamAt` |
+| **The ring never arrives on its own**; the ring trial delivers it | `ringAt` set very high; trial reward runs `/createlanterns call <player> <light>` |
+| The ring still **rejects the unworthy** (e.g. someone else's class ring) | keep `ringsChoose = true` |
+| **White and Black** only from the Crossroads boss (§10) | not called by deeds; given by script, and `whiteNeedsTheSeven` off |
+| Joke lights (Xbox / PlayStation / Steam / WhatsApp) **off**. Ultraviolet / Gold off unless we keep secret classes | `lights.<colour>.enabled = false` |
+| **Prologue crash** at the village | `/createlanterns crash green` after the Warlord falls |
+| **Re-theme each light** to its class (names, Corps titles, power names, whispers) | language override in `kubejs/assets/createlanterns/lang/en_us.json`. For example, Yellow *Terror* → **Thunderclap**, *Cage* → **Storm Cage** |
+| Later, if needed: a tiny **bridge mod** of ours for anything commands can't do (e.g. reading deed points) | "Our own mods" category |
 
 ---
 
@@ -96,57 +88,52 @@ What it contains (read from its jar and config):
 | Act | Name | Gear tier (Apotheosis world tier, verify) | What happens | Ring status |
 |---|---|---|---|---|
 | Prologue | **The Seventh Dawn** | Haven | Village, 7-day raid countdown, the Warlord, the crashed Lantern | none |
-| I | **Proving Ground** | Haven → Frontier | Learn the world, first dungeons and bosses, first spells. The spectrum starts whispering. **Choose your class(es)** | whispers |
-| II | **The Seven Paths** | Frontier → Ascent | Each class's own chapter: aspect mods, class gear, mount, mid bosses. Corruption gets worse | dreams |
-| III | **Worthy** | Summit | Late bosses, space travel to Oa / Korugar, **the ring trial**, *the ring chooses you* | **ring** |
-| IV | **Blackest Night** | Pinnacle | All paths join. The dead rise as Black Lanterns, the seven lights unite, **Nekron** | White Light |
-| Epilogue | **Afterglow** | Pinnacle+ | Extreme optional bosses, secret lights (Ultraviolet, Gold), building | — |
+| I | **Proving Ground** | Haven → Frontier | First dungeons and bosses, first spells. **Choose your class(es)** | whispers (class level 10) |
+| II | **The Seven Paths** | Frontier → Ascent | Each class's own chapter: aspect mods, class gear, mount, mid bosses. Corruption gets worse | dreams (class level 25) |
+| III | **Worthy** | Summit | Late bosses, space travel to Oa / Korugar, the **ring trial** | **ring** |
+| IV | **The Crossroads** | Summit → Pinnacle | The key boss. Your ring powers up, or turns **White**, or **Black** | ring+ / White / Black |
+| V | **The Last Light** | Pinnacle | All paths join against the **final boss** | — |
+| Epilogue | **Afterglow** | Pinnacle+ | Extreme optional bosses, secrets, building | — |
 
 **Quest-book layout (FTB Quests):**
 - Prologue
 - Act I: shared by everyone
-- **one chapter per class** (7 + 2 secret)
-- Act III ring trials: inside each class chapter
-- Act IV: shared
+- **one chapter per class** (7), with Act III ring trials inside them
+- Act IV and Act V: shared
 - Epilogue
-- A **Lore** tab that links to Modonomicon entries
+- A **Lore** tab linked to Modonomicon
 
-Rough size: ~15 prologue + ~40 Act I + ~45 per class + ~35 Act IV = about 400 quests at full build. We'll build it chapter by chapter.
+Target: about 400 quests, built chapter by chapter.
 
 ---
 
 ## 4. Prologue: The Seventh Dawn
 
-**Setting.** Players spawn in a village (*Village Spawn Point*). Over the ridge, about 150–250 blocks away, sits a **pillager outpost**. Vanilla never places outposts within 10 chunks of a village, so a script places one there the first time the world loads.
+**Setting.** Players spawn in a **CTOV village** (*Village Spawn Point*). Vanilla villages are disabled pack-wide. On our seed, the village nearest spawn is a medium CTOV savanna village. About 150–250 blocks away stands a **pillager outpost**. Vanilla never places one near a village, so a script places it on first load; a CTOV or Towns and Towers fortified outpost suits the Warlord.
 
-A boss bar at the top of the screen reads: **"The Warband marches in 7 days"**, and it counts down in-game days.
+A boss bar at the top of the screen reads: **"The Warband marches in 7 days"**.
 
 | # | Quest | Goal | Teaches |
 |---|---|---|---|
 | P1 | *A Horn on the Ridge* | Talk to the village elder (Easy NPC) | The threat, the countdown |
 | P2 | *Make Ready* | Craft a sword, shield and armor; build a bed | Basics |
-| P3 | *Walls and Watchfires* | Light the village at night (Blue "light the dark" deed) | Defense, the spectrum |
+| P3 | *Walls and Watchfires* | Light the village at night | Defense |
 | P4 | *Hire Spears* | Recruit 2 villagers (Villager Recruits) or wake the guards (Guard Villagers) | Allies |
-| P5 | *Scout the Camp* | Spot the outpost; kill a patrol (Red "punish raiders") | Combat |
-| P6 | *First Spell* | Find a scroll / Iron's Spells starter book | Magic exists |
+| P5 | *Scout the Camp* | Spot the outpost; kill a patrol | Combat |
+| P6 | *First Spell* | Find a scroll / an Iron's Spells starter book | Magic exists |
 | P7 | *Day Seven* | **The raid**: survive every wave | Teamwork |
-| P8 | *Head of the Snake* | Storm the outpost and kill **Warlord Vex**, the pillager leader boss | First boss |
+| P8 | *Head of the Snake* | Storm the outpost and kill **Warlord Vex**, the pillager leader | First boss |
 | P9 | *Hero of the Village* | Get the vanilla Hero effect | Reward |
-| P10 | *Fire in the Sky* | That night a **Lantern ship crashes** in the hills. Reach the wreck | The hook |
-| P11 | *The Last Words* | The dying Lantern (Easy NPC) tells you about the Black Lanterns, Oa, and the seven lights. His ring flies off to look for someone worthy. *Not you. Not yet.* | Main quest |
+| P10 | *Fire in the Sky* | That night a **Lantern ship crashes** (`/createlanterns crash green`). Reach the wreck | The hook |
+| P11 | *The Last Words* | The dying Green Lantern (Easy NPC) warns of the corruption and the seven lights. His ring flies off to look for someone worthy. *Not you. Not yet.* | Main quest |
 | P12 | *The Book of Oa* | Get the lore book (Modonomicon). Act I opens | Lore |
 
 **How it's built:**
-- **Countdown:** KubeJS keeps the start tick in the server's saved data and updates a `/bossbar` every second.
-- **Day 7:** the script calls the vanilla 1.21.1 method `setRaidOmenPosition(village)` and gives Raid Omen, so the raid hits *that* village even if players are elsewhere. Vanilla has no usable `/raid` command; we checked the 1.21.1 server code.
-  - **Warning:** a raid needs living villagers. If every villager dies there's no raid, so P4 matters.
-- **Raid flavour:** Illager Invasion (new illagers that join raids) and Raids:Enhanced (raid mini-bosses at higher omen levels). We use them again in Act II.
-- **Warlord Vex:**
-  - **Easy:** a scripted, named, buffed pillager captain (300 HP) with a boss bar.
-  - **Better:** a FIW Bosses JSON boss shaped like a vindicator, with phases, horn summons and dialogue.
-- **The crash:**
-  - Create: Lanterns ships a `crashed_lantern_ship` structure and has its own "wreck" mechanic (a ring waits in a crashed ship for someone worthy) (verify how to trigger it).
-  - Fallback: `/place template createlanterns:oa/crashed_lantern_ship` at a scripted spot.
+- **Countdown:** KubeJS keeps the start tick and updates a `/bossbar`.
+- **Day 7:** the vanilla 1.21.1 method `setRaidOmenPosition(village)` + Raid Omen, so the raid hits *that* village. Vanilla has no usable `/raid` command.
+  - **Warning:** a raid needs living villagers (P4 matters).
+- **Raid flavour:** Illager Invasion and Raids:Enhanced.
+- **Warlord Vex:** a scripted, named, buffed pillager captain (300 HP) with a boss bar, or a FIW Bosses JSON boss (phases, horn summons, dialogue).
 
 ---
 
@@ -154,23 +141,28 @@ A boss bar at the top of the screen reads: **"The Warband marches in 7 days"**, 
 
 **Rules:**
 - Each class = **one light** = element + combat style + aspect.
-- You **choose** a class at a Lantern shrine in Act I (an Easy NPC Guardian Envoy). You can pick **more than one**. Each class has its own XP bar and talent tree, so mixing two or three works, but focusing gets you to your ring faster.
-- Classes **share bosses**. A boss can be one class's *nemesis* and another class's optional fight.
-- The **mount** is the class's way to travel *before* the ring. **After the ring, every Lantern flies** and can ride their constructs.
+- You **choose** at a Lantern shrine in Act I (an Easy NPC Guardian Envoy). You can pick **more than one**; each has its own XP bar and talent tree.
+- Classes share bosses. A boss can be one class's *nemesis* and another's optional fight.
+- The **mount** is how a class travels *before* the ring. **After the ring, every Lantern flies** and can ride their constructs.
 
 **Overview:**
 
-| Light | Class | Element (magic) | Combat style | Aspect (focus mods) | Mount |
-|---|---|---|---|---|---|
-| 🔴 Red | **Bloodfire Berserker** | Fire + Blood | Two-handed berserker | Nether, fire dragons, forges | Ice and Fire **fire dragon** |
-| 🟠 Orange | **Hoardwarden** | Earth | Heavy knight / tank | Mining, treasure, gems, dungeon loot | Wyrmroost Overworld Drake → **Gronckle** (Book of Dragons) |
-| 🟡 Yellow | **Nightblade** | Ender / Shadow | Assassin | Night, undead hunting, Korugar | **Night Fury** (Book of Dragons) |
-| 🟢 Green | **Stormwright** | Lightning | Speed duelist | **Technology**: Create, Aeronautics, Mekanism, Draconic | **Its own aircraft** (balloon → plane → starship) |
-| 🔵 Blue | **Dawnwarden** | Holy + Water | Paladin / support | Villages, trading, raid defense, healing | Ice and Fire **hippocampus** + white **hippogryph** |
-| 🟣 Indigo | **Wildheart** | Nature | Ranger / beast master | Taming, breeding, farming, familiars | **Bonded dragons** (Book of Dragons) + Wyrmroost |
-| 💜 Violet | **Starheart** | Ice / Crystal | Battlemage | Co-op bonds, sky islands, exploration | Ice and Fire **ice dragon** (raised from an egg) |
-| ⚫ Ultraviolet | *The Unseen* (secret) | Ender / Eldritch | Stealth | Hidden lore, secrets | — |
-| 🟡 Gold | *The Bard* (secret) | Melodic (sound) | Support | Music, feasts, celebration | — |
+| Light | Class | Element (magic) | Combat style | Aspect (focus mods) | Mount | Ring trial world |
+|---|---|---|---|---|---|---|
+| 🔴 Red | **Bloodfire Berserker** | **Fire** (+ Blood) | Two-handed berserker | Nether, fire dragons, forges | Ice and Fire **fire dragon** | Nether / Lost Citadel |
+| 🟠 Orange | **Hoardwarden** | **Earth** | Heavy knight / tank | Mining, treasure, gems, dungeon loot | Overworld Drake → **Gronckle** | Cursed Pyramid |
+| 🟡 Yellow | **Stormwright** | **Lightning** | Speed duelist | **Technology**: Create, Aeronautics, Mekanism, Draconic | **Its own aircraft** (balloon → plane → starship) | **Korugar** |
+| 🟢 Green | **Lightwarden** | **Evocation** (+ Holy support) | **Paladin** | **Villages**, raids, trading, defense | Armored warhorse → white **hippogryph** | **Oa** |
+| 🔵 Blue | **Frostbinder** | **Ice** / crystal | **Battlemage** | Frozen lands, sky islands, exploration | Ice and Fire **ice dragon** (raised from an egg) | End: Crystal Peaks |
+| 🟣 Indigo | **Wildheart** | **Summoning** | Ranger / beast master | Taming, breeding, farming, familiars | **Bonded Book of Dragons dragons** + Wyrmroost | wherever the beasts are |
+| 💜 Violet | **Voidblade** | **Void** (Ender + Eldritch) | **Assassin** | Night, undead hunting, stealth, the End | Book of Dragons **Night Fury** | End: Shadowlands |
+
+**Magic schools by class.** Iron's Spells' per-spell config lets us **reassign spells to schools**, and isskjs can create new schools:
+- **Earth** (Orange): a new school made from Iron's Earthquake, Stomp, Oakskin and Touch Dig, or GTBC's Geomancy Plus.
+- **Summoning** (Indigo): a new school made from Iron's summon spells (Summon Vex, Raise Dead, Summon Polar Bear, …) plus Alshanex's Familiars.
+- **Evocation** (Green): keeps Fang Strike, Fang Ward, Shield, Gust and **Summon Horse** (the paladin's steed). It loses Summon Vex to Summoning.
+- **Void** (Violet): Iron's Ender + Eldritch, plus Fire's Ender Expansion and Discerning the Eldritch.
+- **Holy** has no class of its own. It's Green's support branch (heals), and anyone can dabble.
 
 ---
 
@@ -179,34 +171,32 @@ A boss bar at the top of the screen reads: **"The Warband marches in 7 days"**, 
 
 | | |
 |---|---|
-| **Corps · emotion** | Red Lantern Corps · Rage |
-| **Magic** | Iron's **Fire** (Fireball, Raise Hell, Flaming Barrage, Burning Dash) and **Blood** (Blood Slash, Devour, Sacrifice). Later: Cataclysm: Spellbooks fire spells |
+| **Magic** | Iron's **Fire** (Fireball, Raise Hell, Flaming Barrage, Burning Dash) + **Blood** (Blood Slash, Devour, Sacrifice); later Cataclysm: Spellbooks fire spells |
 | **Combat** | Better Combat greatweapons: Simply Swords greatswords; Dungeons Weapons claymore, great hammer, double axe |
-| **Aspect mods** | The Nether (Jaden's Nether Expansion, YUNG's Better Nether Fortresses) · L_Ender's Cataclysm fire bosses · Ice and Fire fire dragons |
-| **Talent XP** | Kills with two-handers, damage dealt while below 40% health, Nether kills, boss kills, raid captains |
-| **Spectrum deeds** | berserk, rampage, slaughter, vengeance, burning fury, bare-handed, punish raiders, slay a captain |
-| **Mount** | A fire dragon you hatch from an egg won from a stage-4 cave dragon |
-| **Nemeses** | Ignis · Netherite Monstrosity · Nether Gauntlet (BOMD) · Lord Pumpkinhead · **Echo of Tyros** (ring trial) |
+| **Aspect mods** | The Nether (Jaden's Nether Expansion, YUNG's Better Nether Fortresses, Eternal Nether) · Cataclysm fire bosses · Ice and Fire fire dragons |
+| **Talent XP** | Kills with two-handers · damage dealt below 40% health · Nether kills · boss kills · raid captains |
+| **Mount** | A fire dragon hatched from an egg won from a stage-4 cave dragon |
+| **Nemeses** | Ignis · Netherite Monstrosity · Nether Gauntlet (BOMD) · Lord Pumpkinhead · **Echo of Tyros** |
 
 **Gear ladder:**
 
 | Tier | Gear |
 |---|---|
-| Early | Iron/bone greatweapon, leather + Wandering Magician robes, first fire scroll |
-| Mid | **Pyromancer** armor, Blaze Instruction Manual, Simply Swords greatsword |
-| Late | **Ignitium** armor (Ignis), **Infernal Forge** (Netherite Monstrosity), fire **dragonsteel** |
+| Early | Bone or iron greatweapon, Wandering Magician robes |
+| Mid | **Pyromancer** armor, Blaze Instruction Manual |
+| Late | **Ignitium** armor (Ignis), **Infernal Forge**, fire dragonsteel |
 | Extreme | Mythic Apotheosis gear with fire gems, **Decrepit Scythe** (Tyros), the Red ring |
 
 **Questline: Path of Rage**
 
 | Tier | Quests |
 |---|---|
-| Early | *First Blood* (50 kills with a two-hander) · *Kindling* (learn Fireball) · *Burn Them Out* (clear a YUNG's dungeon) · *Bonecaller* (kill the Supreme Bonescaller, Born in Chaos) |
-| Mid | *Into the Inferno* (find a JNE Sanctum) · *The Pyromancer's Mantle* · *Fortress Breaker* (YUNG's Keep) · *The Gauntlet* (BOMD Nether Gauntlet) · *Ash and Embers* (slay a stage-3 fire dragon) |
-| Late | *The Blacksmith's Wrath* (Netherite Monstrosity) · *Burning Arena* (Ignis) · *Firebrood* (egg → hatch → ride) · *Pumpkin King* (Lord Pumpkinhead) |
-| **Ring trial** | ***The Crucible of Rage***: at "worthy", descend to the Lost Citadel and slay the **Echo of Tyros** (1000 HP) below 50% health. Then forge your ring in the Great Foundry with **Liquid Rage** |
+| Early | *First Blood* (50 kills with a two-hander) · *Kindling* (Fireball) · *Burn Them Out* (a YUNG's dungeon) · *Bonecaller* (Supreme Bonescaller) |
+| Mid | *Into the Inferno* (a JNE Sanctum) · *The Pyromancer's Mantle* · *Fortress Breaker* · *The Gauntlet* · *Ash and Embers* (stage-3 fire dragon) |
+| Late | *The Blacksmith's Wrath* (Netherite Monstrosity) · *Burning Arena* (Ignis) · *Firebrood* (egg → hatch → ride) · *Pumpkin King* |
+| **Ring trial** | ***The Crucible of Rage***: slay the **Echo of Tyros** (1000 HP) while below half health |
 
-**Ring powers:** Blood Plasma (a burning bolt that hits harder the closer you are to death) · Eruption (a blast of blood plasma around you).
+**Ring powers:** Blood Plasma → **Hellbolt** · Eruption → **Inferno** (renamed).
 
 ---
 
@@ -215,86 +205,46 @@ A boss bar at the top of the screen reads: **"The Warband marches in 7 days"**, 
 
 | | |
 |---|---|
-| **Corps · emotion** | Orange Lantern Corps · Avarice |
-| **Magic** | **Earth.** Iron's has no Earth school, so: **(a)** move Iron's earth-flavoured Nature spells (Earthquake, Stomp, Oakskin, Touch Dig) into a custom KubeJS "Earth" school with Iron's per-spell config, or **(b)** GTBC's Geomancy Plus (13 Geo spells; old build, needs testing) |
+| **Magic** | **Earth** (custom school, see above) |
 | **Combat** | Heavy knight: Shield Expansion (parry, shield tiers), Epic Knights and Knight Quest armor, hammers and maces |
-| **Aspect mods** | Mining (YUNG's Better Mineshafts + our Terralith patch, a veinminer, Create Ore Excavation) · treasure (Lootr, archaeology) · **Apotheosis gems** · Kings & Monsters (the Ogre King locks Bog Iron) |
-| **Talent XP** | Ores mined (high), stone (tiny), loot chests opened, archaeology finds, emeralds earned from trades, gems socketed |
-| **Spectrum deeds** | treasure, plunder, strike it rich, hoard, profit, dig up / fish up treasure, ransack a village |
-| **Mount** | Wyrmroost **Overworld Drake** (an armored ground mount) → Book of Dragons **Gronckle** (the rock-eating dragon) |
+| **Aspect mods** | Mining (YUNG's Better Mineshafts + our Terralith patch, a veinminer, Create Ore Excavation) · treasure (Lootr, archaeology, D&T and WDA loot) · **Apotheosis gems** · Kings & Monsters (the Ogre King locks Bog Iron) |
+| **Talent XP** | Ores mined (high), stone (tiny) · loot chests opened · archaeology finds · emeralds from trades · gems socketed |
+| **Mount** | Wyrmroost **Overworld Drake** (armored ground mount) → Book of Dragons **Gronckle** (the rock-eating dragon) |
 | **Nemeses** | Ferrous Wroughtnaut · Tongbi the Sculptor · **Ogre King** · Void Blossom · **Ancient Remnant** |
 
 **Gear ladder:**
 
 | Tier | Gear |
 |---|---|
-| Early | Epic Knights plate + kite shield, **Axe of a Thousand Metals** (Wroughtnaut) |
-| Mid | Knight Quest sets, **King's Club + Crown** (Ogre King), **Earthrend Gauntlet** (Tongbi), Iron's Paladin chestplate |
-| Late | **Gauntlet of Guard** (Ender Guardian), Netherite Battlemage, Remnant gear |
+| Early | Epic Knights plate + kite shield, **Axe of a Thousand Metals** |
+| Mid | Knight Quest sets, **King's Club + Crown**, **Earthrend Gauntlet**, Iron's Paladin chestplate |
+| Late | **Gauntlet of Guard**, Netherite Battlemage |
 | Extreme | Mythic gear socketed with perfect gems, the Orange ring |
 
-**Questline: Path of Avarice**
+**Questline: Path of the Mountain**
 
 | Tier | Quests |
 |---|---|
-| Early | *Shiny* (veinmine 64 iron) · *Grave Goods* (archaeology finds) · *Shaft Raider* (loot 5 Better Mineshafts) · *The Iron Ghost* (Ferrous Wroughtnaut) |
-| Mid | *Ogre Country* (Kings & Monsters outposts) · *Crown of the Ogre King* · *Earthrend* (Tongbi) · *Gem Cutter* (5 gem types) · *The Deep Bloom* (Void Blossom) |
-| Late | *Pyramid of Greed* (Ancient Remnant) · *The Hoard* (vault 9 gold + 9 diamond + 9 emerald blocks) · *The Guardian's Fist* (Ender Guardian) |
-| **Ring trial** | ***Mine, All Mine***: bring the Hoard to the Ogre King's vault. Survive a **treasure gateway** (Gateways to Eternity waves). Then defeat the corrupted **Ancient Remnant** reborn in its pyramid. The orange light can't resist you |
+| Early | *Shiny* (veinmine 64 iron) · *Grave Goods* (archaeology) · *Shaft Raider* (5 Better Mineshafts) · *The Iron Ghost* (Wroughtnaut) |
+| Mid | *Ogre Country* · *Crown of the Ogre King* · *Earthrend* (Tongbi) · *Gem Cutter* · *The Deep Bloom* (Void Blossom) |
+| Late | *Pyramid of Greed* (Ancient Remnant) · *The Hoard* (9 gold + 9 diamond + 9 emerald blocks) · *The Guardian's Fist* (Ender Guardian) |
+| **Ring trial** | ***Mine, All Mine***: survive a treasure gateway (Gateways to Eternity), then defeat the reborn **Ancient Remnant** in its pyramid |
 
-**Ring powers:** Covet (pull in loot and XP) · Plunder (rip off everything a target holds and wears). Lit passive: kills drop more.
-
----
-
-### 🟡 Yellow: The Nightblade
-*"Fear, mastered, is a blade the dead can't parry."*
-
-| | |
-|---|---|
-| **Corps · emotion** | Sinestro Corps · Fear. The Guardians distrust them, but the dead fear them, so the alliance needs them |
-| **Magic** | Iron's **Ender** (Shadow Slash, Teleport, Echoing Strikes, Black Hole) + Fire's Ender Expansion. Late game: Eldritch (Signet of the Betrayer) |
-| **Combat** | Assassin: daggers (Dungeons Weapons), Combat Roll, **Attract to Sound** (mobs hear you, so stealth matters), sneak-attack bonuses |
-| **Aspect mods** | Night and undead hunting: Born in Chaos, The Graveyard, BOMD Night Lich, Mutant Monsters · **Korugar** (Fear Spire, Sinestro's Watchtower) |
-| **Talent XP** | Kills at night, kills while sneaking, undead kills, kills of fleeing mobs |
-| **Spectrum deeds** | terrorise, slay the fleeing / trapped, strike from shadow |
-| **Mount** | Book of Dragons **Night Fury**, the stealth dragon |
-| **Nemeses** | Nightmare Stalker · **Night Lich** · **Corrupted Champion** (Graveyard) · **Maledictus** · Sinestro's Watcher (custom) |
-
-**Gear ladder:**
-
-| Tier | Gear |
-|---|---|
-| Early | Leather + daggers, a Born in Chaos charm |
-| Mid | **Shadowwalker** armor, Dragonskin Spell Book |
-| Late | **Cursium** armor (Maledictus), Warden battlemage gear (Deeper & Darker: Spellbooks, optional) |
-| Extreme | **Signet of the Betrayer**, Mythic daggers, the Yellow ring |
-
-**Questline: Path of Fear**
-
-| Tier | Quests |
-|---|---|
-| Early | *Strike from Shadow* (20 sneak kills) · *Nightwalker* (survive 3 nights in the wild) · *Silent Steel* (daggers) · *The Stalker* (Nightmare Stalker) |
-| Mid | *Shadowwalker* · *The Lich of the North* (Night Lich) · *Grave Robber* (Corrupted Champion) · *Blink* (learn Teleport) |
-| Late | *Prison of Curses* (Maledictus) · *Night Fury* (bond with a Night Fury) · *Into the Deep Dark* (outlast a Warden) |
-| **Ring trial** | ***The Fear Spire***: get a ship to **Korugar**, climb the Fear Spire through Dread Plains and Fear Bogs, and **cage** the Watcher at Sinestro's Watchtower |
-
-**Ring powers:** Terror (nearby mobs flee, weakened) · Cage (lock a target in yellow light).
+**Ring powers:** Covet → **Lodestone Pull** · Plunder → **Shatterplunder**. Lit passive: kills drop more.
 
 ---
 
-### 🟢 Green: The Stormwright
-*"You were chosen to overcome fear."* (from Create: Lanterns)
+### 🟡 Yellow: The Stormwright
+*"Faster than thunder, brighter than lightning."*
 
 | | |
 |---|---|
-| **Corps · emotion** | Green Lantern Corps · Will. The Guardians' own Corps, and the heart of the alliance |
-| **Magic** | Iron's **Lightning** (Thunderstorm, Ball Lightning, Volt Strike) + Cataclysm: Spellbooks *Technomancy* + Create: Wizardry |
+| **Magic** | Iron's **Lightning** (Lightning Bolt, Thunderstorm, Ball Lightning, Volt Strike) + Cataclysm: Spellbooks *Technomancy* + Create: Wizardry |
 | **Combat** | Speed duelist: rapiers and katanas (Simply Swords, Spartan Weaponry Unofficial), Combat Roll, Iron's Boots of Speed |
-| **Aspect mods** | **Technology**: Create (+ New Age electricity, Crafts & Additions) · **Create Aeronautics** (balloons, planes, airships, **ships to Oa**) · Mekanism (MekaSuit) · **Draconic Evolution** (extreme tier, beta) · AE2 (optional) |
-| **Talent XP** | Create/Mekanism milestone advancements, crafting machines, first flights, kills while outnumbered, wave defense |
-| **Spectrum deeds** | slay the mighty, hold the line, outnumbered, endure the night, face the dark |
-| **Mount** | **No dragon. They build their own:** hot-air balloon → propeller plane → Levitite airship → Lantern starship. *In co-op, Green builds the team's fleet* |
-| **Nemeses** | **The Harbinger** (Cataclysm war machine) · Scylla (storm) · rival **lightning dragons** (Ice and Fire) · Chaos Guardian (Draconic, extreme) |
+| **Aspect mods** | **Technology**: Create (+ New Age electricity, Crafts & Additions) · **Create Aeronautics** (balloons, planes, airships, **the ships that reach Oa and Korugar**) · Mekanism (MekaSuit) · **Draconic Evolution** (extreme tier, beta) |
+| **Talent XP** | Create / Mekanism / Aeronautics milestones · crafting machines · first flights · kills with lightning · kills while outnumbered |
+| **Mount** | **No dragon: they build their own.** Hot-air balloon → propeller plane → Levitite airship → Lantern starship. *In co-op, Yellow builds the team's fleet* |
+| **Nemeses** | **The Harbinger** (Cataclysm war machine) · **Scylla** (storm) · rival **lightning dragons** (Ice and Fire) |
 
 **Gear ladder:**
 
@@ -303,106 +253,66 @@ A boss bar at the top of the screen reads: **"The Warband marches in 7 days"**, 
 | Early | Create goggles + Extendo Grip, copper/iron rapier |
 | Mid | **Electromancer** armor, New Age power, first plane |
 | Late | **MekaSuit**, lightning dragonsteel, Witherite (Harbinger) |
-| Extreme | **Draconic** (Wyvern → Draconic → Chaotic) armor, the Green ring |
+| Extreme | **Draconic** (Wyvern → Draconic → Chaotic) armor, the Yellow ring |
 
-**Questline: Path of Will**
+**Questline: Path of the Storm**
 
 | Tier | Quests |
 |---|---|
-| Early | *Cog and Copper* (first Create machines) · *Static* (Lightning Bolt) · *The Duelist* (a rapier) · *Hold the Line* (survive a Gateway wave) |
-| Mid | *Lift-Off* (balloon) · *New Age* (generate electricity) · *Electromancer* · *Iron Prophet* (the Harbinger) |
-| Late | *Propeller* (a plane) · *MekaSuit* · *Storm Rival* (stage-4 lightning dragon) · *Starship* (a ship that reaches Oa) |
-| **Ring trial** | ***The Central Power Battery***: fly to **Oa**, restore the Guardian Outpost, and recharge the **Central Power Battery** while holding the line against the Trial of Will (waves on Oa) |
+| Early | *Cog and Copper* · *Static* (Lightning Bolt) · *The Duelist* (rapier) · *Spark Plug* (first powered machine) |
+| Mid | *Lift-Off* (balloon) · *New Age* (electricity) · *Electromancer* · *Iron Prophet* (the Harbinger) |
+| Late | *Propeller* (plane) · *MekaSuit* · *Storm Rival* (stage-4 lightning dragon) · *Starship* (a ship that reaches another planet) |
+| **Ring trial** | ***The Storm Spire***: fly your own ship to **Korugar** (re-themed as the storm world), climb the spire through the Dread Plains and Fear Bogs, and defeat the **Scylla** that guards the yellow lantern |
 
-**Ring powers:** Resolve (shrug off all harm, steady, shield) · Fist (a giant hard-light fist). Lit passive: constructs cost a quarter less.
+**Ring powers:** Terror → **Thunderclap** (nearby enemies flee, weakened) · Cage → **Storm Cage** (lock a target in yellow lightning).
 
 ---
 
-### 🔵 Blue: The Dawnwarden
-*"All will be well."*
+### 🟢 Green: The Lightwarden
+*"In brightest day, in blackest night…"*
 
 | | |
 |---|---|
-| **Corps · emotion** | Blue Lantern Corps · Hope |
-| **Magic** | Iron's **Holy** (Greater Heal, Healing Circle, Divine Smite, Fortify) + Paladin Spells. **Water**: Cataclysm: Spellbooks *Abyssal*, or Somake Spells' *Aqua* school (heavy dependencies) |
-| **Combat** | Paladin: sword and shield, healing allies, holy damage against undead |
-| **Aspect mods** | **Villages**: Guard Villagers, Villager Recruits, Illager Invasion, Raids:Enhanced, Easy NPC villagers · trading · healing |
-| **Talent XP** | **Raids won (big)**, villager trades, zombie villagers cured, healing done, iron golems built |
-| **Spectrum deeds** | hero of the village, cure, rescue, rally, light the dark, build a guardian, keep watch, mend a golem |
-| **Mount** | Ice and Fire **hippocampus** (sea) + a white **hippogryph** (the holy flier) |
-| **Nemeses** | Raid bosses (Golem of Last Resort, Zapper, **Raider Blimp**) · the Invoker · **the Dead King** · Leviathan |
+| **Magic** | Iron's **Evocation** (Fang Strike, Fang Ward, Shield, Gust, Summon Horse) + **Paladin Spells** (tank spells that scale with armor) · Holy as a support branch (Heal, Fortify) |
+| **Combat** | Paladin: sword and shield, heavy armor, protecting allies |
+| **Aspect mods** | **Villages**: Guard Villagers, Villager Recruits, Towns and Towers, Easy NPC villagers · **raids**: Illager Invasion, Raids:Enhanced · trading |
+| **Talent XP** | **Raids won (big)** · villager trades · zombie villagers cured · allies healed · iron golems built · illagers slain |
+| **Mount** | Armored **warhorse** (Summon Horse spell + horse armor) → a white Ice and Fire **hippogryph** |
+| **Nemeses** | Raid bosses (Golem of Last Resort, Zapper, **Raider Blimp**) · **the Invoker** (Illager Invasion) · **the Archevoker** (Iron's) · **the Dead King** |
 
 **Gear ladder:**
 
 | Tier | Gear |
 |---|---|
-| Early | Kite shield + Iron's Priest's robes, Villager Bible |
-| Mid | **Priest** armor, Paladin chestplate, Hallowed Gem (Invoker) |
-| Late | **Tidal Claws** (Leviathan), Blood Staff / Necronomicon taken from the Dead King |
-| Extreme | Mythic holy gear, the Blue ring |
+| Early | Kite shield + chainmail, first Evocation scroll |
+| Mid | **Archevoker** armor, **Grimoire of Evokation**, Paladin chestplate, Hallowed Gem (Invoker) |
+| Late | Netherite Battlemage, the Dead King's spoils |
+| Extreme | Mythic holy gear, the Green ring |
 
-**Questline: Path of Hope**
-
-| Tier | Quests |
-|---|---|
-| Early | *Recruits* (hire 3 soldiers) · *Mercy* (cure a zombie villager) · *Light the Dark* · *Holy Light* (Heal) |
-| Mid | *Iron Guardians* (build 2 golems) · *Vestments* (Priest armor) · *The Invoker* · *Rally* (win an Omen III raid) |
-| Late | *The Dead King* (Iron's Catacombs) · *Sanctuary of the Deep* (Leviathan) · *Hippocampus* |
-| **Ring trial** | ***The Long Night***: defend your **first village** through a Blood Moon horde and an **Omen V raid** (Raider Blimp) without losing a single villager. At dawn, the blue light rises |
-
-**Ring powers:** Hope (heal you and allies) · Sanctuary (allies inside take half damage, hostiles are pushed out). Lit passive: slow heal, and **charges nearby Green rings**.
-
----
-
-### 🟣 Indigo: The Wildheart
-*"Nok."*
-
-| | |
-|---|---|
-| **Corps · emotion** | Indigo Tribe · Compassion |
-| **Magic** | Iron's **Nature** + **Alshanex's Familiars** (13 spell-casting familiars) |
-| **Combat** | Ranger: bows and crossbows (Iron's Autoloader Crossbow); pets and familiars fight beside you |
-| **Aspect mods** | **Taming and breeding**: Book of Dragons (bonding levels), Wyrmroost (breeding), Alex's Mobs, Redomesticate (pet beds, pet respawn), Companions! · **Farming**: Farmer's Delight + addons |
-| **Talent XP** | Animals bred, mobs tamed, crops harvested, pets fed and healed, familiars bonded |
-| **Spectrum deeds** | tame, breed, nurture, name, give, set free, kindness, defend a companion |
-| **Mount** | **Bonded Book of Dragons dragons** (any species) + Wyrmroost drakes |
-| **Nemeses** | Poachers and binders (Hollowmarch Reavers, Black Lantern beast-binders) · Frostmaw · Void Blossom |
-
-**Gear ladder:**
-
-| Tier | Gear |
-|---|---|
-| Early | Leather + bow, Druidic Tome |
-| Mid | **Plagued** armor + Conjurer's Talisman, familiars |
-| Late | Drake armor (Wyrmroost), dragon bonding gear (Book of Dragons) |
-| Extreme | Mythic bow, **the Indigo Staff** (Create: Lanterns), the Indigo ring |
-
-**Questline: Path of Compassion**
+**Questline: Path of the Shield**
 
 | Tier | Quests |
 |---|---|
-| Early | *Friend of the Wild* (tame a wolf, cat and horse) · *New Life* (breed 10 animals) · *Harvest Feast* (Farmer's Delight) · *Nature's Voice* (first Nature spell) |
-| Mid | *Familiar* · *Plagued Robes* · *Drake Breeder* (Wyrmroost) · *Free the Beast* (calm Frostmaw) |
-| Late | *Dragon Whisperer* (max bond) · *Set Them Free* (free a chained dragon from a Black Lantern camp) |
-| **Ring trial** | ***The Staff of Compassion***: tend wounded creatures across five biomes. Then, when a corrupted beast-boss is beaten, **spare it** and set it free |
+| Early | *Recruits* (hire 3 soldiers) · *Mercy* (cure a zombie villager) · *Fang and Ward* (first Evocation spells) · *Watchman* (keep a village lit) |
+| Mid | *Iron Guardians* (build 2 golems) · *The Archevoker* (Iron's Evoker Fort) · *The Invoker* · *Rally* (win an Omen III raid) |
+| Late | *The Dead King* (Iron's Catacombs) · *Bastion* (win an Omen V raid with the Raider Blimp) · *Hippogryph* |
+| **Ring trial** | ***The Central Power Battery***: reach **Oa**, the Green Lantern Corps' homeworld. Defend the Guardian Outpost through the Trial of Will (waves) and recharge the **Central Power Battery** |
 
-**Ring powers:** Blink (teleport where you look) · Exchange (swap places with a target). Lit passive: **can charge from a Lantern of any colour**, so Indigo supports mixed teams.
+**Ring powers:** Resolve → **Aegis** (shrug off harm, shield) · Fist → **Hammer of Light**. Lit passive: constructs cost a quarter less.
 
 ---
 
-### 💜 Violet: The Starheart
-*"You have been chosen for love."* (from Create: Lanterns)
+### 🔵 Blue: The Frostbinder
+*"Winter keeps what it loves."*
 
 | | |
 |---|---|
-| **Corps · emotion** | Star Sapphire Corps · Love |
-| **Magic** | Iron's **Ice** (Ice Tomb, Blizzard, Ray of Frost) + **Galosphere: Spellbooks** (crystal) |
+| **Magic** | Iron's **Ice** (Ice Tomb, Blizzard, Ray of Frost, Frostwave) + **Galosphere: Spellbooks** (crystal) |
 | **Combat** | Battlemage: sword + spell (Iron's imbued weapons), Netherite Battlemage armor |
-| **Aspect mods** | **Bonds**: party play, protecting a companion · **The sky**: Terralith Skylands, Sky Villages, Floating Islands, Castle in the Sky, Nullscape **Crystal Peaks** |
-| **Talent XP** | **Kills shared with party members (×2)**, distance flown, sky structures explored, allays befriended |
-| **Spectrum deeds** | together, company, grief, give a flower, befriend an allay, armour a companion |
+| **Aspect mods** | Frozen lands and the **sky**: Terralith Skylands and frozen biomes, Sky Villages, Floating Islands, Sky Whale Ship · Nullscape **Crystal Peaks** · co-op exploration |
+| **Talent XP** | Spell kills in cold biomes · kills shared with party members · distance flown · sky structures explored |
 | **Mount** | Ice and Fire **ice dragon**, raised from an egg (a bond, not a conquest) |
-| **Nemeses** | Frostmaw · Night Lich · wild ice dragons · the Castle in the Sky's guardians |
+| **Nemeses** | **Frostmaw** · **Night Lich** (frost undead) · **Maledictus** (Frosted Prison) · wild ice dragons |
 
 **Gear ladder:**
 
@@ -410,75 +320,143 @@ A boss bar at the top of the screen reads: **"The Warband marches in 7 days"**, 
 |---|---|
 | Early | Cryomancer robes, Frostbranded Book |
 | Mid | **Cryomancer** armor, Galosphere crystal gear |
-| Late | Netherite Battlemage, **ice dragonsteel** |
-| Extreme | Mythic crystal gear, the Violet ring |
+| Late | **Cursium** (Maledictus), Netherite Battlemage, **ice dragonsteel** |
+| Extreme | Mythic crystal gear, the Blue ring |
 
-**Questline: Path of Love**
+**Questline: Path of Winter**
 
 | Tier | Quests |
 |---|---|
-| Early | *Together* (5 quests with a partner nearby) · *A Flower for You* · *Allay* · *First Frost* |
-| Mid | *Cryomancer* · *The White Beast* (Frostmaw) · *Skylands* (visit 3 sky islands) |
-| Late | *Castle in the Sky* · *Ice Brood* (raise an ice dragon) |
-| **Ring trial** | ***Heart of the Sapphire***: fly your bonded dragon (or travel with a partner) to the End's **Crystal Peaks**, protect them through the climb, and take the violet crystal heart |
+| Early | *First Frost* · *Cold Hands* (10 spell kills in snow) · *Skyward* (reach a floating island) · *Ice Spider Den* (Iron's) |
+| Mid | *Cryomancer* · *The White Beast* (Frostmaw) · *The Lich of the North* (Night Lich) · *Skylands* (visit 3 sky islands) |
+| Late | *Prison of Curses* (Maledictus) · *Ice Brood* (raise an ice dragon) · *Whale Rider* (clear a Sky Whale Ship) |
+| **Ring trial** | ***Heart of Winter***: fly your ice dragon to the End's **Crystal Peaks** and take the frozen heart from its guardians |
 
-**Ring powers:** Enthrall (from the config; details to read once installed).
+**Ring powers:** Hope → **Frost Ward** (heals you and allies) · Sanctuary → **Glacial Sanctum** (allies inside take half damage). Lit passive: **charges nearby Green rings**, a Blue + Green synergy.
 
 ---
 
-### Secret lights (Epilogue, optional)
-- **Ultraviolet, *The Unseen* (Shame):** unlocks *only* when the spectrum whispers ultraviolet: unseen kills, skulking, hiding, fleeing. It's a hidden chapter of secrets, told in Modonomicon lore.
-- **Gold, *The Bard* (Joy):** a support class built on Tunes n' Tomes (Melodic school, Bard armor) and joy deeds: music, dance, feasts, celebrations.
+### 🟣 Indigo: The Wildheart
+*"No beast fights alone."*
+
+| | |
+|---|---|
+| **Magic** | **Summoning** (custom school, see above) + **Alshanex's Familiars** (13 spell-casting familiars) + Conjurer's Talisman |
+| **Combat** | Ranger: bows and crossbows (Iron's Autoloader Crossbow); summons, pets and familiars fight beside you |
+| **Aspect mods** | **Taming and breeding**: Book of Dragons (bonding levels), Wyrmroost (breeding), Alex's Mobs, Redomesticate (pet beds, pet respawn), Companions! · **farming**: Farmer's Delight + addons |
+| **Talent XP** | Animals bred · mobs tamed · crops harvested · damage dealt by your summons and pets · familiars bonded |
+| **Mount** | **Bonded Book of Dragons dragons** (any species) + Wyrmroost drakes |
+| **Nemeses** | **Umvuthi** (Mowzie's sun-tribe beast-caller) · Ice and Fire **Hydra** and **Sea Serpent** · **Leviathan** (Cataclysm) · corrupted beast-binders |
+
+**Gear ladder:**
+
+| Tier | Gear |
+|---|---|
+| Early | Leather + bow, Druidic Tome |
+| Mid | **Plagued** armor + Conjurer's Talisman, familiars |
+| Late | Drake armor (Wyrmroost), dragon bonding gear, **Tidal Claws** (Leviathan) |
+| Extreme | Mythic bow, **the Indigo Staff** (Create: Lanterns), the Indigo ring |
+
+**Questline: Path of the Pack**
+
+| Tier | Quests |
+|---|---|
+| Early | *Friend of the Wild* (tame a wolf, cat and horse) · *New Life* (breed 10 animals) · *Harvest Feast* · *First Summon* |
+| Mid | *Familiar* · *Plagued Robes* · *Drake Breeder* · *Sun and Mask* (Umvuthi) |
+| Late | *Dragon Whisperer* (max bond) · *The Many Heads* (Hydra) · *Leviathan* · *Set Them Free* (free a chained dragon from a corrupted camp) |
+| **Ring trial** | ***The Staff of Compassion***: tend wounded creatures across five biomes. When the corrupted beast-boss falls, **spare it** and set it free |
+
+**Ring powers:** Blink → **Pack Leap** (teleport) · Exchange → **Swap with your beast**. Lit passive: can charge from a Lantern of any colour.
+
+---
+
+### 💜 Violet: The Voidblade
+*"The void doesn't see you coming. Neither will they."*
+
+| | |
+|---|---|
+| **Magic** | **Void**: Iron's Ender (Shadow Slash, Teleport, Echoing Strikes, Black Hole) + Eldritch late (Sonic Boom, Sculk Tentacles, Pocket Dimension) + Fire's Ender Expansion + Discerning the Eldritch |
+| **Combat** | Assassin: daggers (Dungeons Weapons), Combat Roll, **Attract to Sound** (mobs hear you, so stealth matters), sneak-attack bonuses |
+| **Aspect mods** | Night and undead hunting: Born in Chaos, The Graveyard, Mutant Monsters · **the End**: Nullscape Shadowlands and Void Barrens, YUNG's Better End Island |
+| **Talent XP** | Kills at night · kills while sneaking (×2) · undead kills · kills in the End |
+| **Mount** | Book of Dragons **Night Fury**, the stealth dragon |
+| **Nemeses** | Nightmare Stalker · **Corrupted Champion** (Graveyard) · **Ender Guardian** · **Obsidilith** · the **Warden** |
+
+**Gear ladder:**
+
+| Tier | Gear |
+|---|---|
+| Early | Leather + daggers, a Born in Chaos charm |
+| Mid | **Shadowwalker** armor, Dragonskin Spell Book |
+| Late | Warden battlemage gear (Deeper & Darker: Spellbooks, optional), Gauntlet of Guard |
+| Extreme | **Signet of the Betrayer** (Eldritch), Mythic daggers, the Violet ring |
+
+**Questline: Path of the Void**
+
+| Tier | Quests |
+|---|---|
+| Early | *Strike from Shadow* (20 sneak kills) · *Nightwalker* (survive 3 nights in the wild) · *Silent Steel* · *The Stalker* |
+| Mid | *Shadowwalker* · *Grave Robber* (Corrupted Champion) · *Blink* (Teleport) · *Into the Deep Dark* (outlast a Warden) |
+| Late | *Night Fury* (bond) · *The Black Monolith* (Obsidilith) · *Void Touched* (learn an Eldritch spell) |
+| **Ring trial** | ***The Void Walk***: cross Nullscape's **Shadowlands** unseen, infiltrate the Ruined Citadel, and assassinate the **Ender Guardian** |
+
+**Ring powers:** Enthrall → **Void Lure** (details when installed).
+
+---
+
+### Secret lights (optional, decision 5)
+Ultraviolet (*The Unseen*) and Gold (*The Bard*, Tunes n' Tomes) stay possible as hidden extras. If we drop them, their lights get switched off.
 
 ---
 
 ## 6. Leveling and the talent tree
 
-**Engine: Pufferfish's Skills** (0.19.2). It's tagged beta, as every 0.x build is. Add-ons:
-- **Unofficial Additions:** XP sources `harvest_crops`, `fishing` and `spell_casting`.
+**Engine: Pufferfish's Skills** 0.19.2 (all 0.x builds are tagged beta). Add-ons:
+- **Unofficial Additions:** `harvest_crops`, `fishing` and `spell_casting` sources.
 - **Pufferfish's Attributes:** extra stats to use as rewards.
 
 **Categories:**
-- **Adventurer**: always open. Generic XP: mobs, bosses, raids, exploration. Gives general stats.
-- **Seven class categories**, locked until chosen. Choosing one is a quest whose reward runs `/puffish_skills category unlock <player> gl:<class>`.
-- Two **secret** categories, unlocked by their own hidden quests.
+- **Adventurer**: always open. Generic XP: mobs, bosses, raids, exploration.
+- **Seven class categories**, locked until chosen. The class quest unlocks one with `/puffish_skills category unlock <player> gl:<class>`.
 
 **Each class tree has three branches and a capstone:**
-1. **Element:** spell power for that school, mana, cooldowns.
-2. **Style:** weapon stats such as attack speed, crit, armor, dodge.
-3. **Aspect:** utility (mining speed, taming, flight fuel, …). It also **unlocks recipes early** through KubeJS stages.
+1. **Element:** spell power for its school, mana, cooldowns.
+2. **Style:** weapon stats.
+3. **Aspect:** utility. It also unlocks recipes early through KubeJS stages.
 4. **Capstone:** needs the ring.
 
-**XP per class.** Each category only counts its own actions. Numbers are starting values for tuning:
+**XP per class.** Starting values for tuning:
 
 | Class | Main XP sources (Pufferfish) |
 |---|---|
-| Red | `kill_entity` with a two-hander (×1.5 in the Nether) · `deal_damage` while health < 40% · boss kills |
-| Orange | `mine_block`: ores 8, stone 0.2 · `increase_stat` traded emeralds · loot chests opened |
-| Yellow | `kill_entity` at night ×1.5, undead ×1.5, while sneaking ×2 |
-| Green | `criterion` on Create/Mekanism/Aeronautics advancements · `craft_item` on machine tags |
-| Blue | `increase_stat` raid won (200) · trades (6) · `heal` |
-| Indigo | `increase_stat` animals bred (5) · tamed · `harvest_crops` |
-| Violet | `shared_kill_entity` ×2 · distance flown · sky structures |
+| 🔴 Red | `kill_entity` with a two-hander (×1.5 in the Nether) · `deal_damage` while health < 40% · boss kills |
+| 🟠 Orange | `mine_block`: ores 8, stone 0.2 · traded emeralds · loot chests |
+| 🟡 Yellow | `criterion` on Create/Mekanism/Aeronautics advancements · `craft_item` on machine tags · lightning kills |
+| 🟢 Green | `increase_stat` raid won (200) · trades (6) · `heal` on allies · illager kills |
+| 🔵 Blue | `spell_casting` ice spells · kills in cold biomes · `shared_kill_entity` · distance flown |
+| 🟣 Indigo | `increase_stat` animals bred (5) · tamed · `harvest_crops` · summon kills |
+| 💜 Violet | `kill_entity` at night ×1.5, sneaking ×2, undead ×1.5, in the End ×1.5 |
 
-- **Anti-farming** (per-chunk / per-entity limits) is built in, so mob grinders and trading halls can't level you.
-- **Multipliers:** every expression gets `* (1 + mult/100)`, where `mult` is a scoreboard value. Quests raise it ("the spectrum has noticed you"). Once your ring is on, its Curios modifier raises it further.
+**How the levels feed the rest:**
+- **Anti-farming** limits are built in.
+- **Bridge to the rings:** a KubeJS script copies each class level into that light's deed points (`/createlanterns spectrum set`). Class **level 10 brings the whisper**, **level 25 the dream**, and finishing the ring trial brings the ring.
 
 ---
 
 ## 7. Gear ladder
 
-| Tier | Act | Source of gear |
+| Tier | Act | Source |
 |---|---|---|
-| **Early** | Prologue–I | Crafted class kits (Epic Knights, Dungeons Weapons), Iron's Wandering Magician robes, first spellbooks |
-| **Mid** | II | **Iron's school armor** (Pyromancer, Cryomancer, Electromancer, Priest, Shadowwalker, Plagued), Knight Quest sets, mid-boss uniques |
-| **Late** | III | **Cataclysm boss gear** (Ignitium, Cursium, Infernal Forge, Gauntlet of Guard, Tidal Claws), **dragonsteel**, MekaSuit, Netherite Battlemage |
-| **Extreme** | IV | **Apotheosis Mythic** affixed items + perfect gems, Tyros' Scythe, Draconic, the **rings** |
+| **Early** | Prologue–I | Crafted class kits (Epic Knights, Dungeons Weapons), Wandering Magician robes, first spellbooks |
+| **Mid** | II | **Iron's school armor** (Pyromancer, Cryomancer, Electromancer, Archevoker, Shadowwalker, Plagued), Knight Quest, mid-boss uniques |
+| **Late** | III | **Cataclysm boss gear**, **dragonsteel**, MekaSuit, Netherite Battlemage |
+| **Extreme** | IV–V | **Apotheosis Mythic** affixed items + perfect gems, Tyros' Scythe, Draconic, the **rings** |
 
 **How it's controlled:**
-- **Apotheosis** (affixes, rarities, gems) is the global "loot quality" dial. Its world tiers line up with the acts (verify how tiers unlock).
+- **Apotheosis** is the global loot-quality dial; its world tiers line up with the acts (verify).
 - **LootJS** injects class gear into boss and dungeon loot.
-- **Iron's Spellbooks Tweaks** caps spell rarity until the matching act.
+- **Iron's Spellbooks Tweaks** caps spell rarity per act.
+- **Lootr** gives every player their own structure loot.
 
 ---
 
@@ -487,141 +465,145 @@ A boss bar at the top of the screen reads: **"The Warband marches in 7 days"**, 
 | Tier | Bosses (mod) | Class nemesis |
 |---|---|---|
 | **Prologue** | **Warlord Vex** (custom) | all |
-| **Early** | Ferrous Wroughtnaut, Umvuthi, Tongbi (Mowzie's) · Supreme Bonescaller, Nightmare Stalker, Lifestealer (Born in Chaos) · Iron's school mages, Ancient Knight · Cataclysm dungeon minis · Mutant Zombie/Skeleton · Invoker | Orange, Red, Yellow, Blue |
-| **Mid** | **Ogre King** (Kings & Monsters) · **Night Lich**, Nether Gauntlet, Void Blossom (BOMD) · Frostmaw · **Corrupted Champion** (Graveyard) · **The Harbinger** · Sir Pumpkinhead · stage-3 dragons | Orange, Yellow, Red, Indigo, Violet, Green |
-| **Late** | Netherite Monstrosity, **Ignis**, **Ancient Remnant**, **Maledictus**, Ender Guardian, **Leviathan**, Scylla (Cataclysm) · **Dead King** (Iron's) · **Lord Pumpkinhead** · Obsidilith · stage-4/5 dragons | each class (see §5) |
-| **Extreme** | **Echo of Tyros** (Iron's, 1000 HP) · Chaos Guardian (Draconic, verify) · Dark Doppelganger · The Ascended One (Discerning the Eldritch) · Ender Dragon (Better End Island) | ring trials, post-game |
-| **Final** | **Nekron** + the Black Lantern Revenants (custom, §10) | everyone |
+| **Early** | Ferrous Wroughtnaut, Umvuthi, Tongbi (Mowzie's) · Supreme Bonescaller, Nightmare Stalker (Born in Chaos) · Iron's school mages, Ancient Knight · Cataclysm dungeon minis · Invoker | Orange, Indigo, Red, Violet, Green |
+| **Mid** | **Ogre King** · **Night Lich**, Nether Gauntlet, Void Blossom (BOMD) · **Frostmaw** · **Corrupted Champion** · **The Harbinger** · Archevoker · stage-3 dragons | Orange, Blue, Red, Violet, Yellow, Green |
+| **Late** | Netherite Monstrosity, **Ignis**, **Ancient Remnant**, **Maledictus**, **Ender Guardian**, **Leviathan**, **Scylla** (Cataclysm) · **Dead King** · Lord Pumpkinhead · **Obsidilith** · Hydra · stage-4/5 dragons | each class (§5) |
+| **Extreme** | **Echo of Tyros** · Discerning the Eldritch's Ascended One · Dark Doppelganger · Ender Dragon (Better End Island) | ring trials, post-game |
+| **Key boss** | **The Crossroads** boss (§10) | everyone with a ring |
+| **Final** | **The final boss** (§10) | everyone |
 
-**Optional extra dimensions with their own boss ladders** (decision 6):
-- Twilight Forest (Naga → Lich → Minoshroom → Hydra → Ur-Ghast → Snow Queen)
-- The Aether (Slider → Valkyrie Queen → Sun Spirit)
-- Eternal Starlight
-- Deeper and Darker (the Otherside)
+**Optional extra dimensions with their own boss ladders** (decision 6): Twilight Forest, The Aether, Eternal Starlight, Deeper and Darker.
 
 ---
 
 ## 9. The corruption (the enemy grows)
 
-The Black Lanterns' plague escalates with the acts, so the world feels like it's losing:
-
 | Act | Pressure | Mods / how |
 |---|---|---|
 | Prologue | Pillager warband | the raid |
-| I | Rare **Blackened elites**: mobs with a black-light affix | Champions-Unofficial + a KubeJS-registered "Blackened" affix |
-| II | **Blood Moons** every ~10 nights with undead hordes · difficulty grows with distance from spawn | Enhanced Celestials (pick v1 or v2; their add-ons aren't cross-compatible) · Scaling Difficulty · Born in Chaos undead |
-| III | **Corruption rifts** near ring-trial sites that slowly blight the land · Black Lantern patrols | a KubeJS "corruption node" (spreading `/fillbiome` + block swaps) · The Hordes (datapack horde nights) |
-| IV | **The Black Moon**: every night until Nekron falls; fallen bosses rise | KubeJS world event + Revenant bosses |
-
-**The Deep Dark temptation (decision 4).** In Create: Lanterns, the **Black ring** only takes someone who **died in the Deep Dark**. We can turn that into a story beat: a player who dies there hears Nekron's whisper. Either they resist, or (optionally) they take a *Fallen* path. Or we simply switch Black off for players.
+| I | Rare **Blackened elites**: mobs with a corruption affix | Champions-Unofficial + a KubeJS "Blackened" affix |
+| II | **Blood Moons** every ~10 nights with undead hordes · difficulty grows with distance | Enhanced Celestials (v1 or v2; their add-ons aren't cross-compatible) · Scaling Difficulty · Born in Chaos |
+| III | **Corruption rifts** near ring-trial sites that slowly blight the land · corrupted patrols | KubeJS "corruption nodes" (spreading `/fillbiome` + block swaps) · The Hordes |
+| IV–V | **The final boss's shadow**: every night is a Blood Moon until it falls | KubeJS world event |
 
 ---
 
-## 10. Finale: Blackest Night
+## 10. The Crossroads (White / Black) and the finale
 
-**Trigger:** the first player (or party) to hold a ring and finish Act III's last quest, *The Guardians' Summons*.
+### The Crossroads: the key boss
+Once a player has their ring, one **key boss** awaits. **How you kill it** decides what you become:
+
+| Outcome | You become | Idea (to design later) |
+|---|---|---|
+| **Power-up** | You keep your ring and it **grows stronger**: an upgraded ring, a permanent *Heightened* effect, or extra talent points | the "normal" kill |
+| **White** | The **White Lantern** (Life) | e.g. a merciful or protective kill: nobody in your party falls, healing or holy finishing blow, … |
+| **Black** | The **Black Lantern** (Death) | e.g. a ruthless kill: in the Deep Dark, with blood or void, while sacrificing allies or summons, … |
+
+*We'll design the exact conditions later.*
+
+**How it's built:**
+- A KubeJS `EntityEvents.death` check reads how the boss died (killer, location, weapon or spell, party state).
+- It then runs `/createlanterns call <player> white|black` or applies the power-up.
+- In the mod, White and Black are switched to "commands only", so deeds never trigger them.
+
+**Key-boss candidates** (to pick together with the final boss):
+- Iron's **Dead King**: undead lord, respawnable with a phylactery, so each player can face him.
+- The runner-ups from the final-boss research (being researched now).
+
+### Act V: The Last Light (the finale)
+All ring-bearers (powered-up, White and Black alike) unite for the last fight.
+
+**Final boss: an existing, very OP boss from a mod.** Candidates are being researched (HP, phases, immunities, healing, summons, theme fit, NeoForge 1.21.1 availability). The shortlist will be added here.
 
 | Step | Quest | What happens |
 |---|---|---|
-| IV-1 | *The Dead Walk* | The Black Moon rises. Nekron's rings reanimate **seven Revenants**: Black Lantern versions of each class's nemesis (Black Ignis, Black Ancient Remnant, Black Maledictus, Black Harbinger, Black Dead King, Black Frostmaw, Black Night Lich). Each class hunts its own Revenant |
-| IV-2 | *Recharge* | Fly to **Oa** and recharge at the Central Power Battery |
-| IV-3 | *The Seven* | All seven lights must be carried by **one champion**. In co-op, players hand their rings to one bearer; the mod's `whiteNeedsTheSeven` rule does the rest, and the **White ring** chooses them |
-| IV-4 | *The Void Throne* | In the End, Nekron's gate opens at YUNG's dragon bell tower. A **Black Lantern Ender Dragon** guards it |
-| IV-5 | ***Nekron*** | Phase 1: Nekron + Black Lantern guard. Phase 2: he absorbs the Revenants' power. Phase 3: **only White Light can hurt him**, while the others keep the champion alive with Blue Sanctuary, Green Resolve, Indigo Blink and so on |
-| IV-6 | *Life* | Nekron falls, the dead rest, and the White Lantern restores the land. Credits, then the Epilogue |
-
-**How Nekron gets built** (decision 2: the "big guy"):
-- **Now:** FIW Bosses (JSON phases, minions, dialogue, disguise as any mob) or a reskinned, buffed existing boss: Dead King, Apostle (Goety) or Maledictus, with phases scripted in KubeJS.
-- **Later, in "Our own mods":** a proper Nekron entity (GeckoLib, scripted attacks, `ServerBossEvent`).
-- **"Only White can hurt him":** a KubeJS `beforeHurt` check cancels damage unless the attacker wears the White ring.
+| V-1 | *The Shadow Falls* | Every night is a Blood Moon; corrupted versions of fallen bosses roam |
+| V-2 | *Recharge* | Fly to **Oa** and recharge every ring at the Central Power Battery |
+| V-3 | *The Gathering* | All seven colours (and any White or Black) answer the call |
+| V-4 | *The Last Light* | The final boss. Each colour has a job: Green shields, Blue protects, Indigo's beasts tank adds, Yellow and Red burst damage, Orange holds the line, Violet strikes weak points |
+| V-5 | *Afterglow* | Credits; the Epilogue opens |
 
 ---
 
 ## 11. Mods needed, by build phase
 
-All versions are NeoForge 1.21.1, checked 2026-11-08. **R** = release, **β** = beta/alpha. ⚠ = risk noted.
+All versions are NeoForge 1.21.1, checked 2026-11-08/09. **β** = beta/alpha. ⚠ = risk noted.
 
 ### Phase A: Story backbone (first)
 | Mod | Version | Notes |
 |---|---|---|
-| **Create: Lanterns** + Spectral Hub | alpha 20.11 / v4 | ⚠ ARR, private, alpha. Needs Create, Sable, Simulated, Aeronautics |
-| Create · Sable · Simulated · Create Aeronautics | 6.0.10 · 2.0.6 · 1.3.2 · 1.3.2 | Simulated and Aeronautics are CurseForge-only |
+| **Create: Lanterns** + Spectral Hub | alpha 20.11 / v4 | Personal use, so we modify it freely. Needs Create, Sable, Simulated, Aeronautics |
+| Create · Sable · Simulated · Create Aeronautics | 6.0.10 · 2.0.6 · 1.3.2 · 1.3.2 | Simulated and Aeronautics are CurseForge-only (we have the jars) |
 | Curios | 9.5.1 | ring slot |
-| FTB Quests + FTB Library + FTB Teams | 2101.1.38 · .39 · .12 | quest book |
-| FTB XMod Compat | 21.1.14 | KubeJS ↔ FTB Quests |
+| FTB Quests + FTB Library + FTB Teams · FTB XMod Compat | 2101.1.38 · .39 · .12 · 21.1.14 | quest book + KubeJS hooks |
 | Easy NPC (+ FTB Quests compat) | 7.18.0 (+1.0.2) | NPCs, dialogue |
-| Modonomicon | 1.123.0 | lore book that unlocks with the story |
+| Modonomicon | 1.123.0 | lore book |
 | Pufferfish's Skills + Unofficial Additions + Attributes | 0.19.2 β · 2.2.8 · 0.8.3 | talent trees |
 | Village Spawn Point (+ Collective) | 6.0 | spawn in a village |
 
 ### Phase B: Magic and combat
 | Mod | Version | Notes |
 |---|---|---|
-| **Iron's Spells 'n Spellbooks** (+ Iron's Lib, GeckoLib, playerAnimator) | 3.16.3 | Its toml requires these even though Modrinth lists none. ⚠ raycast and teleport bugs on Aeronautics ships (#1142) |
-| Iron's Spellbooks Tweaks | 1.5.0 | gate spells by act or boss |
-| Cataclysm: Spellbooks | 1.1.11 | Abyssal (water) + Technomancy |
-| Discerning the Eldritch | 1.4.5 | endgame Eldritch + boss |
-| Paladin Spells · Fire's Ender Expansion · Galosphere: Spellbooks | 1.1.4 · 2.5.1 · 1.1.5 | Blue/Orange · Yellow · Violet |
+| **Iron's Spells 'n Spellbooks** (+ Iron's Lib, GeckoLib, playerAnimator) | 3.16.3 | ⚠ raycast and teleport bugs on Aeronautics ships (#1142) |
+| Iron's Spellbooks Tweaks | 1.5.0 | gate spells by act |
+| KubeJS Iron's Spells (isskjs) | 4.0.3 | **Earth** and **Summoning** schools. ⚠ test with ISS 3.16 |
+| Cataclysm: Spellbooks | 1.1.11 | Technomancy (Yellow), fire |
+| Discerning the Eldritch · Fire's Ender Expansion | 1.4.5 · 2.5.1 | Violet's void |
+| Paladin Spells | 1.1.4 | Green |
+| Galosphere: Spellbooks | 1.1.5 | Blue crystal |
 | Alshanex's Familiars (+ FamiliarsLib) | v5.0 | Indigo. ⚠ past versions broke saves |
-| KubeJS Iron's Spells (isskjs) | 4.0.3 | custom Earth school. ⚠ built before ISS 3.16; test |
-| *Earth:* Geomancy Plus | 1.1.0 | ⚠ old, CurseForge-only, test. Or the KubeJS Earth school instead |
-| Better Combat + Combat Roll | 2.4.0 · 2.0.6 | Use **instead of** Epic Fight, not with it |
-| Simply Swords · Dungeons Weapons · Shield Expansion · Epic Knights · Knight Quest · Attract to Sound | 1.70.2 · 9.0.1 · 1.4.3 · 10.17 · 1.9.4 · 7.0.2 | weapons and styles |
-| Apotheosis (+ Apothic Attributes / Enchanting / Spawners) | 8.9.0 | gear quality dial |
-| Artifacts · Relics · Iron's Gems 'n Jewelry | 13.2.5 · 0.10.7.8 · 2.0.2 | trinkets |
+| *Earth alternative:* Geomancy Plus | 1.1.0 | ⚠ old, CurseForge-only |
+| Better Combat + Combat Roll | 2.4.0 · 2.0.6 | not together with Epic Fight |
+| Simply Swords · Dungeons Weapons · Shield Expansion · Epic Knights · Knight Quest · Attract to Sound | 1.70.2 · 9.0.1 · 1.4.3 · 10.17 · 1.9.4 · 7.0.2 | styles |
+| Apotheosis (+ Apothic Attributes / Enchanting / Spawners) · Artifacts · Relics · Iron's Gems 'n Jewelry | 8.9.0 · 13.2.5 · 0.10.7.8 · 2.0.2 | gear |
 
-### Phase C: Bosses and dungeons
+### Phase C: Bosses
 | Mod | Version | Notes |
 |---|---|---|
-| L_Ender's Cataclysm | 3.33 | ⚠ vanilla biome IDs only, so it needs a Structurify/tag patch for Terralith |
-| Bosses of Mass Destruction · Mowzie's Mobs · Born in Chaos | 1.3.3 · 1.8.2 · 1.7.6 | |
-| Kings & Monsters (CurseForge) | 1.2.2 | ⚠ plains/swamp only: needs a biome patch |
-| The Graveyard · Mutant Monsters · Illager Invasion · Goety | 4.0.1 · 21.1.1 · 21.1.6 · 3.2.2 | |
-| FIW Bosses | 1.3.1 | Warlord Vex + Nekron (new mod) |
-| Structurify (+ YACL) · Structure Layout Optimizer | 2.0.43 · 1.0.12 | density, overlap, Terralith biome fixes |
-| When Dungeons Arise · Dungeons and Taverns · Castle in the Sky · Sky Villages · Floating Islands · Hollowmarch | (chinatown) | add one by one |
+| L_Ender's Cataclysm · Bosses of Mass Destruction · Mowzie's Mobs · Born in Chaos | 3.33 · 1.3.3 · 1.8.2 · 1.7.6 | ⚠ Cataclysm uses vanilla biome IDs only, so it needs a Structurify biome list |
+| Kings & Monsters (CurseForge) | 1.2.2 | ⚠ plains/swamp only: needs a biome list |
+| The Graveyard · Mutant Monsters · Illager Invasion | 4.0.1 · 21.1.1 · 21.1.6 | |
+| FIW Bosses | 1.3.1 | Warlord Vex |
+| **Final-boss mod** | being researched | §10 |
 
 ### Phase D: Dragons and mounts
 | Mod | Version | Notes |
 |---|---|---|
-| **Ice and Fire CE** (+ Uranus, Jupiter) | 2.0 | fire, ice and lightning dragons, hippogryph, hippocampus, dragonsteel |
-| **Book of Dragons** | 1.4.1 | HTTYD-style bonding (Night Fury, Gronckle, …). ⚠ CurseForge lists Fauna Engine as a dependency |
-| Wyrmroost | 1.4.1 | drakes, breeding |
-| Alex's Mobs Continued (+ CodxLib) · Redomesticate · Companions! | 2.3.0 · 2.0.0 · 1.3.7 | animals, pets |
-| *Berk's Dragon Academy* | V0.5 beta | ⚠ overlaps Book of Dragons (pick one), thin docs. Its draw is the **Red Death** boss |
+| **Ice and Fire CE** (+ Uranus, Jupiter) | 2.0 | fire (Red), ice (Blue), lightning (Yellow's rival) dragons, hippogryph (Green), hydra |
+| **Book of Dragons** | 1.4.1 | Night Fury (Violet), Gronckle (Orange), bonding (Indigo). ⚠ check the Fauna Engine dependency |
+| Wyrmroost | 1.4.1 | drakes (Orange, Indigo) |
+| Alex's Mobs Continued · Redomesticate · Companions! | 2.3.0 · 2.0.0 · 1.3.7 | animals, pets |
 
 ### Phase E: Aspect mods
 | Mod | Version | Class |
 |---|---|---|
-| Create: New Age · Create Crafts & Additions · Mekanism · **Draconic Evolution** (β) · AE2 | 1.2.0 · 1.7.2 · 10.7.19 · 3.1.4 · 19.2.18 | Green |
-| VeinMiner or FTB Ultimine · Create Ore Excavation · Lootr | 2.11.2 · 1.6.8 | Orange |
-| Guard Villagers · Villager Recruits · Raids:Enhanced · Raided · Gateways to Eternity | 2.4.12 · 1.15.2 · 1.0.2 · 0.1.6 · 5.1.0 | Blue (+ the Prologue) |
-| Farmer's Delight + addons | 1.3.4 | Indigo |
-| Tunes n' Tomes | 1.1.0 | Gold (secret) |
+| Create: New Age · Create Crafts & Additions · Mekanism · **Draconic Evolution** (β) | 1.2.0 · 1.7.2 · 10.7.19 · 3.1.4 | 🟡 Yellow |
+| VeinMiner or FTB Ultimine · Create Ore Excavation | 2.11.2 · 1.6.8 | 🟠 Orange |
+| Guard Villagers · Villager Recruits · Raids:Enhanced · Raided · Gateways to Eternity | 2.4.12 · 1.15.2 · 1.0.2 · 0.1.6 · 5.1.0 | 🟢 Green (+ the Prologue) |
+| Farmer's Delight + addons | 1.3.4 | 🟣 Indigo |
 
 ### Phase F: Corruption
-Enhanced Celestials (v1 + Horde/Destructive Moon, **or** v2 + Chaos Moon 2) · Champions-Unofficial 21.1.1.7 · Scaling Difficulty 1.1.0 · The Hordes 1.6.3f.
+Enhanced Celestials (v1 + add-ons **or** v2 + Chaos Moon 2) · Champions-Unofficial 21.1.1.7 · Scaling Difficulty 1.1.0 · The Hordes 1.6.3f.
 
-### Not available, or avoid
-- **Not on NeoForge 1.21.1:** MCDW · T.O Magic 'n Extras · Ice and Fire: Spellbooks · Botania · Passive Skill Tree · Soulslike Weaponry · Cracker's Wither Storm · Illager Revolution.
-- **Avoid:**
-  - Epic Fight together with Better Combat.
-  - Spell Engine / RPG Series: a second magic system next to Iron's (decision 7).
-  - More than one HTTYD dragon mod.
-  - MCA Reborn: its latest version isn't backwards compatible.
+### Already installed (worldgen, structures)
+Terralith · Jaden's Nether Expansion · Nullscape + YUNG's Better End Island · all YUNG's · Dungeons and Taverns · When Dungeons Arise + Seven Seas · The Lost Castle · Philips Ruins · Grim Kingdoms · Castles and Keeps · Towns and Towers · Sky Villages · Floating Islands · Sky Whale Ship · Eternal Nether · Structurify · Lootr (see MODLIST.md).
 
 ---
 
 ## 12. Decisions for you
-1. **Create: Lanterns.** Where does it come from, and do we have permission to use and tune it? Can "The Team" give us a way to read deed points from scripts (KubeJS or a command)? That's the one missing link between quests and deeds.
-2. **The big guy.** **Nekron** (recommended: it matches "the universe corrupted by the undead", and the mod already has the Black and White lights). Alternatives: **Parallax** (fear), **Krona**, or an original villain.
-3. **Solo vs party for the White Light.** The rule "carry all seven rings" suits a party. For solo play, either let a solo player collect all seven (very long), or switch `whiteNeedsTheSeven` off and gate White behind a quest.
-4. **The Black ring for players.** Off (enemies only), or an optional *Fallen* path for players who die in the Deep Dark.
-5. **Secret classes** (Ultraviolet, Gold): in or out?
-6. **Extra dimensions:** Twilight Forest / Aether / Eternal Starlight / Deeper and Darker?
-7. **Spell Engine (RPG Series)** for extra class skills: keep it out, so Iron's stays the only magic?
-8. **Dragons:** Book of Dragons (recommended) or Berk's Dragon Academy (for its Red Death)?
-9. **Earth magic:** a KubeJS-made Earth school (more control) or Geomancy Plus (more spells, but old)?
+| # | Decision | Status |
+|---|---|---|
+| 1 | Create: Lanterns permission | ✅ **Resolved:** personal use, modify freely |
+| 2 | Final boss | ⏳ Must be an existing OP boss; shortlist coming (§10) |
+| 3 | How White works solo vs party | ✅ **Resolved:** White and Black come from the Crossroads boss |
+| 4 | Black ring for players | ✅ **Resolved:** from the Crossroads boss; conditions later |
+| 5 | Secret classes (Ultraviolet, Gold) | open |
+| 6 | Extra dimensions (Twilight Forest / Aether / Eternal Starlight / Deeper and Darker) | open |
+| 7 | Spell Engine (RPG Series) for extra class skills | open (recommend keeping it out) |
+| 8 | Book of Dragons or Berk's Dragon Academy | open (recommend Book of Dragons) |
+| 9 | Earth school: KubeJS-made or Geomancy Plus | open |
+| 10 | Rename lights and powers to match the classes (Yellow "Sinestro Corps" → a storm Corps, …) | open (recommended) |
+| 11 | Key-boss conditions for White / Black / power-up | later, as you said |
 
 ---
 
@@ -629,24 +611,23 @@ Enhanced Celestials (v1 + Horde/Destructive Moon, **or** v2 + Chaos Moon 2) · C
 
 | Mechanic | Built with |
 |---|---|
-| Spawn in a village | Village Spawn Point |
-| Outpost next to the village | KubeJS on first load: `forceload add` → `place structure minecraft:pillager_outpost` → `forceload remove` |
-| 7-day countdown + raid | KubeJS: saved start tick, `/bossbar`, `setRaidOmenPosition` + Raid Omen on day 7 |
-| Warlord Vex, Nekron, Revenants | FIW Bosses (later our own mod) + KubeJS phases |
-| Crashed Lantern | Create: Lanterns wreck / `place template createlanterns:oa/crashed_lantern_ship` + Easy NPC |
-| Quest book | FTB Quests (+ FTB XMod Compat for KubeJS hooks) |
+| Spawn in a village · outpost nearby | Village Spawn Point · KubeJS `place structure` on first load |
+| 7-day countdown + raid | KubeJS: `/bossbar` + `setRaidOmenPosition` + Raid Omen |
+| Warlord Vex | FIW Bosses, or a scripted buffed captain |
+| Crashed Lantern | `/createlanterns crash green` + Easy NPC |
+| Quest book | FTB Quests (+ FTB XMod Compat) |
 | Choosing a class | FTB Quests command reward → `/puffish_skills category unlock` |
-| Talent trees and per-class XP | Pufferfish's Skills datapack (`kubejs/data/…`) |
-| Recipe gating | KubeJS stages, set by skill nodes and quests |
-| Spell gating | Iron's Spellbooks Tweaks + Iron's per-spell datapack config |
-| Earth school | isskjs custom school + Iron's per-spell "school" reassignment |
-| Rings, deeds, powers, planets | Create: Lanterns (config: `ringAt` raised, joke lights off) |
-| Reading deeds in quests | **Missing.** Needs an API from the mod team, or a small bridge mod of ours |
-| Lore | Modonomicon entries unlocked by quests and advancements |
-| Loot by tier | Apotheosis + LootJS |
-| Blackened elites | Champions-Unofficial + KubeJS affix |
-| Black Moon, corruption rifts | Enhanced Celestials + KubeJS world events |
-| "Only White can hurt Nekron" | KubeJS `beforeHurt` |
-| Our own mods (later) | **lantern-bridge** (deed points ↔ quests/skills) · **nekron** (final boss) · **blackened** (corruption mobs and rifts) |
+| Talent trees, per-class XP | Pufferfish's Skills datapack (`kubejs/data/…`) |
+| **Class level → the light's whisper/dream** | KubeJS → `/createlanterns spectrum set` |
+| **Ring trial → the ring** | FTB Quests reward → `/createlanterns call <player> <light>` |
+| Earth and Summoning schools | isskjs custom schools + Iron's per-spell school reassignment |
+| Re-themed lights and powers | `kubejs/assets/createlanterns/lang/en_us.json` |
+| Recipe / spell gating | KubeJS stages · Iron's Spellbooks Tweaks |
+| Lore | Modonomicon |
+| Loot by tier | Apotheosis + LootJS (+ Lootr) |
+| Corruption | Champions affix, Enhanced Celestials, KubeJS world events |
+| **The Crossroads outcome** | KubeJS `EntityEvents.death` → power-up / `call … white` / `call … black` |
+| Final boss | the chosen mod's boss + KubeJS phases / buffs if needed |
+| Our own mods (later) | **lantern-bridge**, only if commands can't do something (e.g. read deed points) |
 
-**Suggested next step:** Phase A, the backbone. Install Create → Sable → Simulated → Aeronautics → **Create: Lanterns**, one at a time as usual. Read its full config and test the calling in-game. Everything else in this document depends on how that mod behaves.
+**Suggested next step:** Phase A, the backbone. Install Create → Sable → Simulated → Aeronautics → **Create: Lanterns**, one at a time. Read its full config, test `spectrum set`, `call` and `crash`, and switch off the lights we don't use.

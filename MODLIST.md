@@ -73,7 +73,8 @@ Every structure here picks biomes by **tag** (D&T: 90 of 97), so they all reach 
 | Philips Ruins | 1.21.1-2.0 | both | 17 ruins with loot: ancient crypts, dungeons, towers | — | — (known harmless error, see notes) | testing |
 | Grim Kingdoms: Lost Structures & Ruins (Vanilla Ed.) | 2.0.0 | both | 65 lost-kingdom ruins, watchtowers, camps | — | — | testing |
 | Ember's Castles and Keeps | 1.0.9.1 | server | 8 towers and keeps, including an undead castle and pillager towers | — | — | testing |
-| Towns and Towers | 1.13.11 | both | Biome-specific villages and pillager outposts (24 outpost + 15 village variants) | Cristel Lib | Cristel's auto-config for *other* mods turned off | tuned |
+| **ChoiceTheorem's Overhauled Village (CTOV)** | 3.6.4 | server | **Replaces the vanilla villages** (owner: "no classic vanilla villages"): 21 biome variants in small, medium and large sizes, fortified versions, + pillager outposts | Lithostitched | vanilla villages disabled in Structurify; 7 dead *Wares*-compat loot tables disabled | tuned |
+| Towns and Towers | 1.13.11 | both | Extra village styles and biome pillager outposts (24 outpost + 15 village variants), alongside CTOV | Cristel Lib | Cristel's auto-config for *other* mods turned off | tuned |
 | Sky Villages | 1.0.6 | server | Floating villages high above the land | Architectury | — | testing |
 | Ember's Floating Islands | 1.5.3 | server | 17 sky islands (amethyst, cemetery, cherry shrine, camps) | — | — | testing |
 | Sky Whale Ship | 1.0.3 | both | Giant flying whale ships with an arena | — | — | testing |
@@ -244,6 +245,7 @@ Structurify is the **only** thing that controls placement. Cristel Lib's auto-co
 | `minecraft:villages` | exempt (default spacing) | The prologue needs a village at spawn; the Blue class lives in villages |
 | `betterstrongholds:stronghold` | exempt | ×1.5 pushed the stronghold ring from ~2,400 to ~4,450 blocks; exempt brings it back to ~2,100 |
 | Flatness check (AUTO) | `dungeons_arise:` illager_windmill, wishing_well, giant_mushroom, jungle_tree_house, shiraz_palace | Surface builds with no terrain adaptation. Instead of floating on Terralith slopes, they only spawn on flat ground |
+| **Disabled** | `minecraft:village_plains`, `_desert`, `_savanna`, `_snowy`, `_taiga` | Owner wants no classic villages. CTOV only *outweighs* them and has no "vanilla off" switch. `/locate` now answers "structure is currently disabled" |
 
 **Left alone on purpose:**
 - WDA's fixed-height structures (Heavenly sky fortresses at y200, Mechanical Nest, Thornborn and Bandit Towers) are meant to float.
@@ -259,6 +261,17 @@ Structurify is the **only** thing that controls placement. Cristel Lib's auto-co
 #### When Dungeons Arise: repaired advancements
 - *Guns and Roses* (`find_thornborn_towers`) and *Fishing In The Dark* (`find_fishing_hut`) point at the removed `find_small_prairie_house`.
 - `server/kubejs/data/dungeons_arise/advancement/` re-attaches them to `dungeons_arise:wda_root`.
+
+#### CTOV: villages
+- **How it works:**
+  - CTOV registers its villages in code and adds them to the `#minecraft:village` tag, so Village Spawn Point, village maps and raids treat them as villages.
+  - Weights live in `config/ctov-common.toml`: small 10, medium 4, large 1, outposts 1, plus a list of enabled variants.
+  - Its 1,040 Lithostitched modifiers are all *conditional* add-ons that put other mods' workstations into its villages when those mods are installed.
+- **On our seed:** the nearest village to spawn is `ctov:medium/village_savanna_na` (226 blocks).
+- **Dead data:** `server/kubejs/data/wares/loot_table/chests/village/*_warehouse.json` disables 7 loot tables CTOV ships for the *Wares* mod.
+  - They use `minecraft:set_nbt`, which was removed in 1.20.5, so each logged an ERROR. Nothing in CTOV references them.
+  - Delete the folder if we ever add Wares and CTOV updates them.
+- D&T's extra pieces for vanilla taiga, jungle and swamp villages are unused now that vanilla villages are off. They're harmless.
 
 #### Smaller notes
 - D&T adds *extra* versions of structures that YUNG's also redesigns (Nether Keep, Witch Villa, Trident Trial Monument). They're additions, not replacements, so both coexist.
@@ -349,3 +362,6 @@ Structurify is the **only** thing that controls placement. Cristel Lib's auto-co
 | 2026-11-09 | + Eternal Nether, Puzzles Lib | 53 | 27.5s | 0 |
 | 2026-11-09 | Structurify config applied (overlap, ×1.5, flatness, exemptions) | 53 | 22.3–23.5s | 0 (+6 known) |
 | 2026-11-09 | **New real world** with all structures | 53 | 58.9s (first generation) | 0 (+6 known), 20 TPS |
+| 2026-11-09 | + CTOV | 54 | 23.3s | 7 → 0 (dead Wares loot disabled) (+6 known) |
+| 2026-11-09 | Vanilla villages disabled (Structurify) | 54 | 23.4s | 0 (+6 known) |
+| 2026-11-09 | **New real world** with CTOV villages (unplayed pre-CTOV world archived) | 54 | 23.5s | 0 (+6 known), 20 TPS |
