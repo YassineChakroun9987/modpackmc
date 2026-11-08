@@ -25,6 +25,11 @@ KNOWN_HARMLESS = [
     r"mixin/\]: Static binding violation: PRIVATE @Overwrite method .* from mod modernfix",  # mixin widens visibility itself
     r"KubeJS/\]: Plugin .*BuiltinKubeJSClientPlugin does not load on server side",          # client part, expected
     r"KubeJS/\]: Plugin .* does not have required mod '\w+' loaded, skipping",              # optional integration
+    r"mixin/\]: Redundant @Unique on injector method netherexp\$",                           # JNE dev-only notice
+    r"Not all defined tags for registry .* are present in data pack: netherexp:",            # JNE empty tag defs
+    r"ModConfigSpec/CORE\]: .*heatDistortionLavaMinDistance",                                # JNE config default quirk
+    r"yungsapi/\]: WARNING: block .* added to BlockStateRandomizer exceeds max probabiltiy",  # YUNG's data quirk
+    r"AttributeMap/\]: Ignoring unknown attribute 'forge:",       # old Forge attributes saved in structure mobs
 ]
 
 

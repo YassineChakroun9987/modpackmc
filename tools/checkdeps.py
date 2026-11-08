@@ -23,6 +23,7 @@ BUILTIN = {"minecraft", "neoforge", "forge", "fml", "javafml", "java"}
 # (mod, dependency) version complaints we've checked and accepted. Keep the reason!
 ACCEPTED = {
     ("jei", "minecraft"): "JEI 19.69 beta declares [1.21,1.21.1) - a typo; NeoForge loads it fine on 1.21.1",
+    ("lodestone", "minecraft"): "Lodestone 1.8.2 declares [1.21,1.21.1) - same typo; loads fine in every boot test",
 }
 
 
