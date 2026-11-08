@@ -1,55 +1,107 @@
 {
-	chapter.1DC86E2DE0D0A961.chapter_subtitle: ["Frostbinder. Winter keeps what it loves."]
+	chapter.1DC86E2DE0D0A961.chapter_subtitle: [
+		"Frostbinder. Winter keeps what it loves."
+	]
 	chapter.1DC86E2DE0D0A961.title: "&bThe Blue Light: Path of Winter"
-	chapter.2396F1933449B02E.chapter_subtitle: ["Mekanism: power, steel, ore that multiplies, and the MekaSuit."]
+	chapter.2396F1933449B02E.chapter_subtitle: [
+		"Mekanism: power, steel, ore that multiplies, and the MekaSuit."
+	]
 	chapter.2396F1933449B02E.title: "&aThe Machine Age"
-	chapter.25C9E1DA124149D9.chapter_subtitle: ["Maps, waystones, villages, dungeons and castles in the sky."]
+	chapter.25C9E1DA124149D9.chapter_subtitle: [
+		"Maps, waystones, villages, dungeons and castles in the sky."
+	]
 	chapter.25C9E1DA124149D9.title: "&aThe Wide World"
-	chapter.285A2D542A50A78A.chapter_subtitle: ["Weapons, shields, trinkets, backpacks, and what happens when you fall."]
+	chapter.285A2D542A50A78A.chapter_subtitle: [
+		"Weapons, shields, trinkets, backpacks, and what happens when you fall."
+	]
 	chapter.285A2D542A50A78A.title: "&aArms and Armour"
-	chapter.31A35132B0A83FDA.chapter_subtitle: ["Wildheart. No beast fights alone."]
+	chapter.31A35132B0A83FDA.chapter_subtitle: [
+		"Wildheart. No beast fights alone."
+	]
 	chapter.31A35132B0A83FDA.title: "&9The Indigo Light: Path of the Pack"
-	chapter.333D40E0C1E96C4C.chapter_subtitle: ["Bloodfire Berserker. The closer to death, the harder you hit."]
+	chapter.333D40E0C1E96C4C.chapter_subtitle: [
+		"Bloodfire Berserker. The closer to death, the harder you hit."
+	]
 	chapter.333D40E0C1E96C4C.title: "&cThe Red Light: Path of Rage"
-	chapter.3596142607514ADB.chapter_subtitle: ["Every ring-bearer, every colour, against the god-eater."]
+	chapter.3596142607514ADB.chapter_subtitle: [
+		"Every ring-bearer, every colour, against the god-eater."
+	]
 	chapter.3596142607514ADB.title: "&6The Last Light"
-	chapter.3F4F394AF93D61A8.chapter_subtitle: ["Create from the first water wheel to trains, plus electric power from Crafts & Additions."]
+	chapter.3F4F394AF93D61A8.chapter_subtitle: [
+		"Create from the first water wheel to trains, plus electric power from Crafts & Additions."
+	]
 	chapter.3F4F394AF93D61A8.title: "&aGears of Progress"
-	chapter.5804C1EAB3718207.chapter_subtitle: ["Lightwarden. In brightest day, in blackest night."]
+	chapter.5804C1EAB3718207.chapter_subtitle: [
+		"Lightwarden. In brightest day, in blackest night."
+	]
 	chapter.5804C1EAB3718207.title: "&aThe Green Light: Path of the Shield"
-	chapter.5D38886831F6A98D.chapter_subtitle: ["Stormwright. Faster than thunder, brighter than lightning."]
+	chapter.5D38886831F6A98D.chapter_subtitle: [
+		"Stormwright. Faster than thunder, brighter than lightning."
+	]
 	chapter.5D38886831F6A98D.title: "&eThe Yellow Light: Path of the Storm"
-	chapter.76E59FB57D0DEF7F.chapter_subtitle: ["Keys, tools and friends: what makes the long road easier."]
+	chapter.76E59FB57D0DEF7F.chapter_subtitle: [
+		"Keys, tools and friends: what makes the long road easier."
+	]
 	chapter.76E59FB57D0DEF7F.title: "&aHow to Play This Pack"
-	chapter.775D58DA24E4D109.chapter_subtitle: ["Every great monster in the pack, from first blood to the extreme."]
+	chapter.775D58DA24E4D109.chapter_subtitle: [
+		"Every great monster in the pack, from first blood to the extreme."
+	]
 	chapter.775D58DA24E4D109.title: "&aThe Bestiary of Ruin"
-	chapter.7A48A5C74985F285.chapter_subtitle: ["A horn on the ridge. Seven days until the Warband comes."]
+	chapter.7A48A5C74985F285.chapter_subtitle: [
+		"A horn on the ridge. Seven days until the Warband comes."
+	]
 	chapter.7A48A5C74985F285.title: "&6Prologue: The Seventh Dawn"
-	chapter.8BE88C7C7C3B7C37.chapter_subtitle: ["Vein mining, crystal caves and every ore the pack adds."]
+	chapter.8BE88C7C7C3B7C37.chapter_subtitle: [
+		"Vein mining, crystal caves and every ore the pack adds."
+	]
 	chapter.8BE88C7C7C3B7C37.title: "&aStone and Ore"
-	chapter.8C55F0E22C6E1DF6.chapter_subtitle: ["First dungeons, first spells, and the seven lights."]
+	chapter.8C55F0E22C6E1DF6.chapter_subtitle: [
+		"First dungeons, first spells, and the seven lights."
+	]
 	chapter.8C55F0E22C6E1DF6.title: "&6Act I: Proving Ground"
-	chapter.A15A4BF6B499A425.chapter_subtitle: ["Applied Energistics 2: from a fallen meteorite to your first ME network and autocrafting."]
+	chapter.A15A4BF6B499A425.chapter_subtitle: [
+		"Applied Energistics 2: from a fallen meteorite to your first ME network and autocrafting."
+	]
 	chapter.A15A4BF6B499A425.title: "&aThe Storage Network"
-	chapter.A385F05A67BDB086.chapter_subtitle: ["Iron's Spells 'n Spellbooks: books, ink, scrolls, orbs, schools and addons."]
+	chapter.A385F05A67BDB086.chapter_subtitle: [
+		"Iron's Spells 'n Spellbooks: books, ink, scrolls, orbs, schools and addons."
+	]
 	chapter.A385F05A67BDB086.title: "&aThe Arcane Path"
-	chapter.A8A59981325A1CB2.chapter_subtitle: ["Voidblade. The void doesn't see you coming. Neither will they."]
+	chapter.A8A59981325A1CB2.chapter_subtitle: [
+		"Voidblade. The void doesn't see you coming. Neither will they."
+	]
 	chapter.A8A59981325A1CB2.title: "&5The Violet Light: Path of the Void"
-	chapter.C527C4BD528936CB.chapter_subtitle: ["Alex's Mobs, Mowzie's Mobs, mutants, odd allies, pets and guards."]
+	chapter.C527C4BD528936CB.chapter_subtitle: [
+		"Alex's Mobs, Mowzie's Mobs, mutants, odd allies, pets and guards."
+	]
 	chapter.C527C4BD528936CB.title: "&aBeasts and Companions"
-	chapter.CBEDFE198D70D928.chapter_subtitle: ["Hoardwarden. Mine."]
+	chapter.CBEDFE198D70D928.chapter_subtitle: [
+		"Hoardwarden. Mine."
+	]
 	chapter.CBEDFE198D70D928.title: "&6The Orange Light: Path of the Mountain"
-	chapter.E4793592AA5F9802.chapter_subtitle: ["Apotheosis: rarity, gems, reforging, world tiers, enchanting and spawners."]
+	chapter.E4793592AA5F9802.chapter_subtitle: [
+		"Apotheosis: rarity, gems, reforging, world tiers, enchanting and spawners."
+	]
 	chapter.E4793592AA5F9802.title: "&aAffixes and Arcana"
-	chapter.E6EE8501CF4A1211.chapter_subtitle: ["Draconium to Wyvern to Draconic to Chaotic: the strongest tech in the pack."]
+	chapter.E6EE8501CF4A1211.chapter_subtitle: [
+		"Draconium to Wyvern to Draconic to Chaotic: the strongest tech in the pack."
+	]
 	chapter.E6EE8501CF4A1211.title: "&aDraconic Evolution"
-	chapter.F0D6C90341B78CDE.chapter_subtitle: ["Ice and Fire's dragons and myths, and the dragons of Berk you can bond with."]
+	chapter.F0D6C90341B78CDE.chapter_subtitle: [
+		"Ice and Fire's dragons and myths, and the dragons of Berk you can bond with."
+	]
 	chapter.F0D6C90341B78CDE.title: "&aHere Be Dragons"
-	chapter.F33867A136D8EB69.chapter_subtitle: ["Create Aeronautics airships, and the rings, lanterns and worlds of the Lantern Corps."]
+	chapter.F33867A136D8EB69.chapter_subtitle: [
+		"Create Aeronautics airships, and the rings, lanterns and worlds of the Lantern Corps."
+	]
 	chapter.F33867A136D8EB69.title: "&aSky, Ships and Lanterns"
-	chapter.F4E5CFD46C340A23.chapter_subtitle: ["A realm of endless dusk, and the boss order that unlocks it."]
+	chapter.F4E5CFD46C340A23.chapter_subtitle: [
+		"A realm of endless dusk, and the boss order that unlocks it."
+	]
 	chapter.F4E5CFD46C340A23.title: "&aThe Twilight Forest"
-	chapter.FB21E6A07E57D285.chapter_subtitle: ["Farmer's Delight: crops, the cooking pot and feasts for the party."]
+	chapter.FB21E6A07E57D285.chapter_subtitle: [
+		"Farmer's Delight: crops, the cooking pot and feasts for the party."
+	]
 	chapter.FB21E6A07E57D285.title: "&aHearth and Harvest"
 	chapter_group.4FA3695F5F82A1E1.title: "&aGuides & Adventures"
 	chapter_group.91FA4EDFEFF5B78D.title: "&bThe Seven Lights"
@@ -92,7 +144,7 @@
 	quest.026303C6D76AC6B0.quest_desc: [
 		"A ring found you. Violet, White or Black, you are a &eLantern&r now: you can fly, and your will takes shape as constructs."
 		""
-		"This completes when you have &eany&r ring from the trial. The Violet path continues; the &6Last Light&r chapter has opened."
+		"This completes when this light's trial gives you your ring: its own colour, White or Black. The Violet path continues; the &6Last Light&r chapter has opened."
 	]
 	quest.026303C6D76AC6B0.quest_subtitle: "Ring-bearer"
 	quest.026303C6D76AC6B0.title: "&5Ring-Bearer"
@@ -654,7 +706,7 @@
 	quest.2614B042F2A60027.quest_desc: [
 		"A ring found you. Red, White or Black, you are a &eLantern&r now: you can fly, and your will takes shape as constructs."
 		""
-		"This completes when you have &eany&r ring from the trial. The Red path continues to the right; the &6Last Light&r chapter has opened."
+		"This completes when this light's trial gives you your ring: its own colour, White or Black. The Red path continues to the right; the &6Last Light&r chapter has opened."
 	]
 	quest.2614B042F2A60027.quest_subtitle: "Ring-bearer"
 	quest.2614B042F2A60027.title: "&cRing-Bearer"
@@ -957,7 +1009,7 @@
 	quest.3B551359B6C3D18C.quest_desc: [
 		"A ring found you. Orange, White or Black, you are a &eLantern&r now: you can fly, and your will takes shape as constructs."
 		""
-		"This completes when you have &eany&r ring from the trial. The Orange path continues; the &6Last Light&r chapter has opened."
+		"This completes when this light's trial gives you your ring: its own colour, White or Black. The Orange path continues; the &6Last Light&r chapter has opened."
 	]
 	quest.3B551359B6C3D18C.quest_subtitle: "Ring-bearer"
 	quest.3B551359B6C3D18C.title: "&6Ring-Bearer"
@@ -1799,7 +1851,7 @@
 	quest.78D7034446F1BEB5.quest_desc: [
 		"A ring found you. Green, White or Black, you are a &eLantern&r now: you can fly, and your will takes shape as constructs."
 		""
-		"This completes when you have &eany&r ring from the trial. The Green path continues; the &6Last Light&r chapter has opened."
+		"This completes when this light's trial gives you your ring: its own colour, White or Black. The Green path continues; the &6Last Light&r chapter has opened."
 	]
 	quest.78D7034446F1BEB5.quest_subtitle: "Ring-bearer"
 	quest.78D7034446F1BEB5.title: "&aRing-Bearer"
@@ -2971,7 +3023,7 @@
 	quest.C884995A80241E83.quest_desc: [
 		"A ring found you. Indigo, White or Black, you are a &eLantern&r now: you can fly, and your will takes shape as constructs."
 		""
-		"This completes when you have &eany&r ring from the trial. The Indigo path continues; the &6Last Light&r chapter has opened."
+		"This completes when this light's trial gives you your ring: its own colour, White or Black. The Indigo path continues; the &6Last Light&r chapter has opened."
 	]
 	quest.C884995A80241E83.quest_subtitle: "Ring-bearer"
 	quest.C884995A80241E83.title: "&9Ring-Bearer"
@@ -3330,7 +3382,7 @@
 	quest.E27C0710874D123D.quest_desc: [
 		"A ring found you. Yellow, White or Black, you are a &eLantern&r now: you can fly, and your will takes shape as constructs."
 		""
-		"This completes when you have &eany&r ring from the trial. The Yellow path continues; the &6Last Light&r chapter has opened."
+		"This completes when this light's trial gives you your ring: its own colour, White or Black. The Yellow path continues; the &6Last Light&r chapter has opened."
 	]
 	quest.E27C0710874D123D.quest_subtitle: "Ring-bearer"
 	quest.E27C0710874D123D.title: "&eRing-Bearer"
@@ -3771,7 +3823,7 @@
 	quest.FE9953BD626315B9.quest_desc: [
 		"A ring found you. Blue, White or Black, you are a &eLantern&r now: you can fly, and your will takes shape as constructs."
 		""
-		"This completes when you have &eany&r ring from the trial. The Blue path continues; the &6Last Light&r chapter has opened."
+		"This completes when this light's trial gives you your ring: its own colour, White or Black. The Blue path continues; the &6Last Light&r chapter has opened."
 	]
 	quest.FE9953BD626315B9.quest_subtitle: "Ring-bearer"
 	quest.FE9953BD626315B9.title: "&bRing-Bearer"
@@ -3798,48 +3850,4 @@
 	]
 	quest.FFEDAD19B0F2B46F.quest_subtitle: "Ice and Fire"
 	quest.FFEDAD19B0F2B46F.title: "The Bestiary"
-	task.057168504671A84D.title: "Unknown type: stage"
-	task.070391049416730D.title: "Unknown type: stage"
-	task.07E86D9617FE613F.title: "Unknown type: stage"
-	task.0F55ACF0CB3F3BA6.title: "Unknown type: stage"
-	task.0F7EF6042C6D5FDF.title: "Unknown type: stage"
-	task.144D27AF8C12034E.title: "Unknown type: stage"
-	task.1A8393D3343EB203.title: "Unknown type: stage"
-	task.1B387428BAA290BA.title: "Unknown type: stage"
-	task.1C0A55A0909AFF4A.title: "Unknown type: stage"
-	task.252ADCDD32A5D235.title: "Unknown type: stage"
-	task.26BE422AE3711705.title: "Unknown type: stage"
-	task.289896D3A0000B83.title: "Unknown type: stage"
-	task.293FDBC1A4D8B970.title: "Unknown type: stage"
-	task.2D2A6A3177108851.title: "Unknown type: stage"
-	task.2F075A3E1E9320E4.title: "Unknown type: stage"
-	task.30218EAEBDA04298.title: "Unknown type: stage"
-	task.36614307B2F9ED3D.title: "Unknown type: stage"
-	task.3B60ED4D41709ADF.title: "Unknown type: stage"
-	task.454F93ABC3E64F22.title: "Unknown type: stage"
-	task.458E79953AE3D7D7.title: "Unknown type: stage"
-	task.4601175780C996FC.title: "Unknown type: stage"
-	task.4A789C8CE624DE02.title: "Unknown type: stage"
-	task.4B26316C8172E62B.title: "Unknown type: stage"
-	task.514FE472AF28044A.title: "Unknown type: stage"
-	task.5286D3E314F46536.title: "Unknown type: stage"
-	task.533FFDA656123F73.title: "Unknown type: stage"
-	task.5403FFA9ED0FEF0A.title: "Unknown type: stage"
-	task.540D05BB1BAA4994.title: "Unknown type: stage"
-	task.564DB5758248FEE6.title: "Unknown type: stage"
-	task.578BCE8911A300A3.title: "Unknown type: stage"
-	task.580557DC51CAFCC9.title: "Unknown type: stage"
-	task.5B464B13BEF24B69.title: "Unknown type: stage"
-	task.5C2EA03E3445649A.title: "Unknown type: stage"
-	task.5C3B307AE70CE7E7.title: "Unknown type: stage"
-	task.5E15FECBD5E97D38.title: "Unknown type: stage"
-	task.6747BD6BE7C48DA2.title: "Unknown type: stage"
-	task.68F12AFD0CD896D7.title: "Unknown type: stage"
-	task.6985C019CB3609D4.title: "Unknown type: stage"
-	task.6B9330222B61930C.title: "Unknown type: stage"
-	task.6DABF8CE46794891.title: "Unknown type: stage"
-	task.6DB84E57FF598FED.title: "Unknown type: stage"
-	task.6E9586B23ABDDB4C.title: "Unknown type: stage"
-	task.77931546A3C5DA5B.title: "Unknown type: stage"
-	task.7CB6601FE5B9C4DD.title: "Unknown type: stage"
 }

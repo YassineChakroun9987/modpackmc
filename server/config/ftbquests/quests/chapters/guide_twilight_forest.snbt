@@ -6,13 +6,15 @@
 	icon: {
 		id: "twilightforest:naga_trophy"
 	}
-	id: "3C99BA07AEC07429"
-	images: [ ]
+	id: "F4E5CFD46C340A23"
 	order_index: 9
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: [
+				"CD1332807D3C7E60"
+			]
 			icon: {
 				id: "minecraft:diamond"
 			}
@@ -20,108 +22,132 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
 					id: "5108819398E60523"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 50"
+					elevate_perms: true
 					id: "65972B35ADD115FA"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "hexagon"
 			size: 1.5d
-			tasks: [{
-				dimension: "twilightforest:twilight_forest"
-				id: "28C3CC6CCC4B9D34"
-				type: "dimension"
-			}]
+			tasks: [
+				{
+					id: "28C3CC6CCC4B9D34"
+					dimension: "twilightforest:twilight_forest"
+					type: "dimension"
+				}
+			]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["57E11CCA254859FD"]
+			dependencies: [
+				"57E11CCA254859FD"
+			]
 			icon: {
 				id: "twilightforest:magic_map_focus"
 			}
-			id: "4111E05EBDD68E2E"
+			id: "C470410443BFCE80"
 			optional: true
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "0A8E4BBC69416521"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "twilightforest:magic_map"
-				criterion: ""
-				id: "33E6ECF382674788"
-				type: "advancement"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "0A8E4BBC69416521"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "B9E17EECC145A130"
+					advancement: "twilightforest:magic_map"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 2.0d
 			y: -2.5d
 		}
 		{
-			dependencies: ["57E11CCA254859FD"]
+			dependencies: [
+				"57E11CCA254859FD"
+			]
 			icon: {
 				id: "twilightforest:ironwood_ingot"
 			}
-			id: "31059CA4BFA8D702"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "46A2E81848DB3F73"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				count: 4L
-				id: "3A8F0BC8B554E6A9"
-				item: { count: 1, id: "twilightforest:ironwood_ingot" }
-				type: "item"
-			}]
+			id: "C01D599376786D79"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "B7B632C0096C82C7"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "9427671D8CE95360"
+					count: 4L
+					item: {
+						count: 4
+						id: "twilightforest:ironwood_ingot"
+					}
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: 2.5d
 		}
 		{
-			dependencies: ["57E11CCA254859FD"]
+			dependencies: [
+				"57E11CCA254859FD"
+			]
 			icon: {
 				id: "twilightforest:naga_scale"
 			}
-			id: "468B41FEA1D4E017"
+			id: "E8D95F7C8504CE4F"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
 					id: "59298213A76E9CEA"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 75"
-					id: "64B1DD2B0B1AA45A"
-					permission_level: 2
+					elevate_perms: true
+					id: "B8592042A9A5BFD5"
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
 			size: 1.25d
-			tasks: [{
-				entity: "twilightforest:naga"
-				id: "3FE295B366A7EF04"
-				type: "kill"
-				value: 1L
-			}]
+			tasks: [
+				{
+					id: "3FE295B366A7EF04"
+					entity: "twilightforest:naga"
+					value: 1L
+					type: "kill"
+				}
+			]
 			x: 3.5d
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"E8D95F7C8504CE4F"
+			]
 			icon: {
 				id: "twilightforest:lich_trophy"
 			}
@@ -129,54 +155,65 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
 					id: "6149B0A94C89188F"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 100"
+					elevate_perms: true
 					id: "536441AF242604C2"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
 			size: 1.25d
-			tasks: [{
-				entity: "twilightforest:lich"
-				id: "381432B70AC52038"
-				type: "kill"
-				value: 1L
-			}]
+			tasks: [
+				{
+					id: "381432B70AC52038"
+					entity: "twilightforest:lich"
+					value: 1L
+					type: "kill"
+				}
+			]
 			x: 6.5d
 			y: 0.0d
 		}
 		{
-			dependencies: ["63A69A337F7F728F"]
+			dependencies: [
+				"63A69A337F7F728F"
+			]
 			icon: {
 				id: "twilightforest:minoshroom_trophy"
 			}
-			id: "677FC27ED0F47DE2"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "5881ED87BC2E0EFA"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
+			id: "C85CA0D160F4CB53"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "5881ED87BC2E0EFA"
+					silent: true
+					type: "command"
+				}
+			]
 			shape: "diamond"
-			tasks: [{
-				entity: "twilightforest:minoshroom"
-				id: "19BE68536C469DC3"
-				type: "kill"
-				value: 1L
-			}]
+			tasks: [
+				{
+					id: "19BE68536C469DC3"
+					entity: "twilightforest:minoshroom"
+					value: 1L
+					type: "kill"
+				}
+			]
 			x: 9.5d
 			y: -2.5d
 		}
 		{
+			dependencies: [
+				"C85CA0D160F4CB53"
+			]
 			icon: {
 				id: "twilightforest:hydra_trophy"
 			}
@@ -184,187 +221,227 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					elevate_perms: true
 					id: "27430BF94DE1B62F"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 150"
+					elevate_perms: true
 					id: "08030104FB601CB4"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
 			size: 1.25d
-			tasks: [{
-				entity: "twilightforest:hydra"
-				id: "2111427FFD5C85DC"
-				type: "kill"
-				value: 1L
-			}]
+			tasks: [
+				{
+					id: "2111427FFD5C85DC"
+					entity: "twilightforest:hydra"
+					value: 1L
+					type: "kill"
+				}
+			]
 			x: 12.5d
 			y: -2.5d
 		}
 		{
-			dependencies: ["63A69A337F7F728F"]
+			dependencies: [
+				"63A69A337F7F728F"
+			]
 			icon: {
 				id: "twilightforest:knight_phantom_trophy"
 			}
 			id: "632EBCF165E45D3C"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "555149127D28B8AA"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "555149127D28B8AA"
+					silent: true
+					type: "command"
+				}
+			]
 			shape: "diamond"
-			tasks: [{
-				advancement: "twilightforest:progress_knights"
-				criterion: ""
-				id: "5C6E965AED8D8FE4"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "5C6E965AED8D8FE4"
+					advancement: "twilightforest:progress_knights"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 9.5d
 			y: 0.0d
 		}
 		{
-			dependencies: ["632EBCF165E45D3C"]
+			dependencies: [
+				"632EBCF165E45D3C"
+			]
 			icon: {
 				id: "twilightforest:ur_ghast_trophy"
 			}
-			id: "58A92F7902F7423F"
+			id: "B41E17319D8504C7"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					elevate_perms: true
 					id: "199C0BD686315CA2"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 150"
+					elevate_perms: true
 					id: "419FD022DACD474E"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
 			size: 1.25d
-			tasks: [{
-				entity: "twilightforest:ur_ghast"
-				id: "63AEBD9DC24C98F8"
-				type: "kill"
-				value: 1L
-			}]
+			tasks: [
+				{
+					id: "BC5C40FCE65CA372"
+					entity: "twilightforest:ur_ghast"
+					value: 1L
+					type: "kill"
+				}
+			]
 			x: 12.5d
 			y: 0.0d
 		}
 		{
-			dependencies: ["63A69A337F7F728F"]
+			dependencies: [
+				"63A69A337F7F728F"
+			]
 			icon: {
 				id: "twilightforest:alpha_yeti_trophy"
 			}
 			id: "3918EB5A28D9957C"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "797318A6EF7023DD"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "A44D76B69442AB6A"
+					silent: true
+					type: "command"
+				}
+			]
 			shape: "diamond"
-			tasks: [{
-				entity: "twilightforest:alpha_yeti"
-				id: "0C73ADA07A5C9296"
-				type: "kill"
-				value: 1L
-			}]
+			tasks: [
+				{
+					id: "DDEA819B72440C5F"
+					entity: "twilightforest:alpha_yeti"
+					value: 1L
+					type: "kill"
+				}
+			]
 			x: 9.5d
 			y: 2.5d
 		}
 		{
-			dependencies: ["3918EB5A28D9957C"]
+			dependencies: [
+				"3918EB5A28D9957C"
+			]
 			icon: {
 				id: "twilightforest:snow_queen_trophy"
 			}
-			id: "46C1AF11356A0EE0"
+			id: "82374E2D16A15D80"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					elevate_perms: true
 					id: "782A36C915497EE1"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 150"
-					id: "26219DE197C5C235"
-					permission_level: 2
+					elevate_perms: true
+					id: "A55B90FD8AF4E83A"
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
 			size: 1.25d
-			tasks: [{
-				entity: "twilightforest:snow_queen"
-				id: "1DE1CB8330542340"
-				type: "kill"
-				value: 1L
-			}]
+			tasks: [
+				{
+					id: "1DE1CB8330542340"
+					entity: "twilightforest:snow_queen"
+					value: 1L
+					type: "kill"
+				}
+			]
 			x: 12.5d
 			y: 2.5d
 		}
 		{
-			dependencies: ["56F29CB5B97E013D"]
+			dependencies: [
+				"56F29CB5B97E013D"
+				"B41E17319D8504C7"
+				"82374E2D16A15D80"
+			]
 			icon: {
 				id: "twilightforest:giant_pickaxe"
 			}
-			id: "6E4BE33FA5FDC2CA"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-				id: "4DDA28310A7DD2C3"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
+			id: "B98BA86B092F2DE7"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					elevate_perms: true
+					id: "4DDA28310A7DD2C3"
+					silent: true
+					type: "command"
+				}
+			]
 			shape: "octagon"
-			tasks: [{
-				advancement: "twilightforest:progress_merge"
-				criterion: ""
-				id: "49B5FAE0A637DFED"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "49B5FAE0A637DFED"
+					advancement: "twilightforest:progress_merge"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 15.5d
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"B98BA86B092F2DE7"
+			]
 			icon: {
 				id: "twilightforest:lamp_of_cinders"
 			}
-			id: "2764745AC07AC380"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-				id: "0CF3855204BEC08C"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "twilightforest:progress_troll"
-				criterion: ""
-				id: "768E414B0BBE03AB"
-				type: "advancement"
-			}]
+			id: "B22031015C27349E"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					elevate_perms: true
+					id: "0CF3855204BEC08C"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "768E414B0BBE03AB"
+					advancement: "twilightforest:progress_troll"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 18.0d
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"B22031015C27349E"
+			]
 			icon: {
 				id: "twilightforest:lich_tower_miniature_structure"
 			}
@@ -372,15 +449,15 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
-					id: "74A225E01AC1668B"
-					permission_level: 2
+					elevate_perms: true
+					id: "9E5F7B3E4CBF2652"
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 300"
+					elevate_perms: true
 					id: "5619541846069DF5"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
@@ -392,57 +469,76 @@
 			]
 			shape: "octagon"
 			size: 1.75d
-			tasks: [{
-				advancement: "twilightforest:progression_end"
-				criterion: ""
-				id: "2D50D1C131D5647D"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "98531CA9A172AE7A"
+					advancement: "twilightforest:progression_end"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 20.5d
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"C01D599376786D79"
+			]
 			icon: {
 				id: "twilightforest:uncrafting_table"
 			}
-			id: "15FB194A8C818117"
+			id: "8083F013DAAC06E2"
 			optional: true
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "6176B502CC5BF9BB"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "39A7702F7643467C"
-				item: { count: 1, id: "twilightforest:uncrafting_table" }
-				type: "item"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "6176B502CC5BF9BB"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "39A7702F7643467C"
+					item: {
+						count: 1
+						id: "twilightforest:uncrafting_table"
+					}
+					type: "item"
+				}
+			]
 			x: 5.0d
 			y: 2.5d
 		}
 		{
-			dependencies: ["57E11CCA254859FD"]
+			dependencies: [
+				"C470410443BFCE80"
+				"57E11CCA254859FD"
+			]
 			dependency_requirement: "one_completed"
 			icon: {
 				id: "twilightforest:quest_ram_trophy"
 			}
 			id: "798B250CF318A486"
 			optional: true
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "0EF0CB356698D7FD"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "twilightforest:quest_ram"
-				criterion: ""
-				id: "10E525165CBD81B8"
-				type: "advancement"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "88FEF5D4BEA2B27B"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "10E525165CBD81B8"
+					advancement: "twilightforest:quest_ram"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 5.0d
 			y: -2.5d
 		}

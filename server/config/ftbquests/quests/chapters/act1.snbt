@@ -2,25 +2,27 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "act1"
-	group: ""
+	group: "951E3065A6314194"
 	icon: {
 		id: "minecraft:iron_sword"
 	}
-	id: "33607B2F534C859E"
-	images: [ ]
-	order_index: 2
+	id: "8C55F0E22C6E1DF6"
+	order_index: 1
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: [
+				"943A4195ACBAAE04"
+			]
 			icon: {
 				id: "minecraft:compass"
 			}
-			id: "4A30454E5E45A104"
+			id: "BD602CC37C25D64A"
 			rewards: [
 				{
+					id: "8A350563CDE64723"
 					count: 8
-					id: "2A597D30EF36CD23"
 					item: {
 						count: 1
 						id: "minecraft:bread"
@@ -34,30 +36,35 @@
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 25"
+					elevate_perms: true
 					id: "0A4E7AC4F86C44BA"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
 			size: 1.5d
-			tasks: [{
-				id: "4C0B77BB188F4886"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "4C0B77BB188F4886"
+					type: "checkmark"
+				}
+			]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"BD602CC37C25D64A"
+			]
 			icon: {
 				id: "minecraft:spyglass"
 			}
 			id: "7A667AA0939251B3"
 			rewards: [
 				{
+					id: "839B45A58656E709"
 					count: 6
-					id: "1389556E7A4C1BAF"
 					item: {
 						count: 1
 						id: "minecraft:cooked_beef"
@@ -71,20 +78,25 @@
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 15"
+					elevate_perms: true
 					id: "379B6AD17CA1D538"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				id: "514E1CD000EE9846"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "514E1CD000EE9846"
+					type: "checkmark"
+				}
+			]
 			x: 1.5d
 			y: -1.5d
 		}
 		{
+			dependencies: [
+				"BD602CC37C25D64A"
+			]
 			icon: {
 				id: "simplyswords:iron_longsword"
 			}
@@ -105,29 +117,33 @@
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 20"
-					id: "4F50D1B9F88822E4"
-					permission_level: 2
+					elevate_perms: true
+					id: "AA753788C323832D"
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				id: "1798A64039689205"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "C6CCDA0B6EBB6FBE"
+					type: "checkmark"
+				}
+			]
 			x: 1.5d
 			y: 0.0d
 		}
 		{
-			dependencies: ["5A19DE2B0C131BB2"]
+			dependencies: [
+				"5A19DE2B0C131BB2"
+			]
 			icon: {
 				id: "simplyswords:iron_claymore"
 			}
-			id: "3CB73F98AD75070F"
+			id: "ED7DB039636DD04B"
 			rewards: [
 				{
+					id: "9524FCB6D3345DC9"
 					count: 8
-					id: "4480103DA5874A3C"
 					item: {
 						count: 1
 						id: "minecraft:iron_ingot"
@@ -141,8 +157,8 @@
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 30"
+					elevate_perms: true
 					id: "05208DF451BC4BCE"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
@@ -150,72 +166,101 @@
 			tasks: [
 				{
 					id: "19A5F6C57519A742"
-					item: { count: 1, id: "simplyswords:iron_claymore" }
-					optional_task: true
+					item: {
+						count: 1
+						id: "simplyswords:iron_claymore"
+					}
 					type: "item"
+					optional_task: true
 				}
 				{
-					id: "775A48969C4140E7"
-					item: { count: 1, id: "simplyswords:iron_katana" }
-					optional_task: true
+					id: "D4FFFAC0406FF37B"
+					item: {
+						count: 1
+						id: "simplyswords:iron_katana"
+					}
 					type: "item"
+					optional_task: true
 				}
 				{
-					id: "342C52DEFE6CF1FD"
-					item: { count: 1, id: "simplyswords:iron_rapier" }
-					optional_task: true
+					id: "87A1AFDDCB593911"
+					item: {
+						count: 1
+						id: "simplyswords:iron_rapier"
+					}
 					type: "item"
+					optional_task: true
 				}
 				{
-					id: "3B04C3C56E4B42F8"
-					item: { count: 1, id: "simplyswords:iron_greataxe" }
-					optional_task: true
+					id: "8E9734FFE439A779"
+					item: {
+						count: 1
+						id: "simplyswords:iron_greataxe"
+					}
 					type: "item"
+					optional_task: true
 				}
 				{
 					id: "3F9F6C08EAF7F9FC"
-					item: { count: 1, id: "magistuarmory:steel_zweihander" }
-					optional_task: true
+					item: {
+						count: 1
+						id: "magistuarmory:steel_zweihander"
+					}
 					type: "item"
+					optional_task: true
 				}
 				{
 					id: "56AC6E9D250F720F"
-					item: { count: 1, id: "magistuarmory:steel_bastardsword" }
-					optional_task: true
+					item: {
+						count: 1
+						id: "magistuarmory:steel_bastardsword"
+					}
 					type: "item"
+					optional_task: true
 				}
 				{
-					id: "339B6075E3B53CDD"
-					item: { count: 1, id: "minecraftdungeonsv1:claymore" }
-					optional_task: true
+					id: "E1B3B4044093A76A"
+					item: {
+						count: 1
+						id: "minecraftdungeonsv1:claymore"
+					}
 					type: "item"
+					optional_task: true
 				}
 				{
 					id: "63041FAB271A8887"
-					item: { count: 1, id: "minecraftdungeonsv1:dagger" }
-					optional_task: true
+					item: {
+						count: 1
+						id: "minecraftdungeonsv1:dagger"
+					}
 					type: "item"
+					optional_task: true
 				}
 				{
 					id: "2A6B7D7B33385911"
-					item: { count: 1, id: "minecraftdungeonsv1:mace" }
-					optional_task: true
+					item: {
+						count: 1
+						id: "minecraftdungeonsv1:mace"
+					}
 					type: "item"
+					optional_task: true
 				}
 			]
 			x: 3.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["5A19DE2B0C131BB2"]
+			dependencies: [
+				"5A19DE2B0C131BB2"
+			]
 			icon: {
 				id: "shieldexp:iron_shield"
 			}
-			id: "290DDB6DBA758468"
+			id: "B507146111222F17"
 			rewards: [
 				{
+					id: "872106ED13D9DC1F"
 					count: 4
-					id: "10C01C75999D3C7E"
 					item: {
 						count: 1
 						id: "minecraft:iron_ingot"
@@ -223,36 +268,44 @@
 					type: "item"
 				}
 				{
-					id: "2FD85856C538330E"
+					id: "E805A031425390CB"
 					type: "xp"
 					xp: 50
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 25"
+					elevate_perms: true
 					id: "14143209DB5DC481"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				id: "1A93F38FA6295719"
-				item: { count: 1, id: "shieldexp:iron_shield" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "8AC5498EF86D3E19"
+					item: {
+						count: 1
+						id: "shieldexp:iron_shield"
+					}
+					type: "item"
+				}
+			]
 			x: 3.0d
 			y: 1.5d
 		}
 		{
+			dependencies: [
+				"ED7DB039636DD04B"
+			]
 			icon: {
 				id: "magistuarmory:brigandine_chestplate"
 			}
-			id: "02F81F3BA58BD0A8"
+			id: "82361E7320E1F9FC"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
 					id: "3CF859F32B833320"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
@@ -263,63 +316,83 @@
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 40"
-					id: "75CCCB35E06F6356"
-					permission_level: 2
+					elevate_perms: true
+					id: "DDC7E0B18E475F71"
 					silent: true
 					type: "command"
 				}
 			]
 			tasks: [
 				{
-					id: "6284AA489B25C9AA"
-					item: { count: 1, id: "magistuarmory:chainmail_chestplate" }
-					optional_task: true
+					id: "87B3D634FD999098"
+					item: {
+						count: 1
+						id: "magistuarmory:chainmail_chestplate"
+					}
 					type: "item"
+					optional_task: true
 				}
 				{
 					id: "133D2EDE9E08D86E"
-					item: { count: 1, id: "magistuarmory:gambeson_chestplate" }
-					optional_task: true
+					item: {
+						count: 1
+						id: "magistuarmory:gambeson_chestplate"
+					}
 					type: "item"
+					optional_task: true
 				}
 				{
 					id: "502A8B4892CDE244"
-					item: { count: 1, id: "magistuarmory:brigandine_chestplate" }
-					optional_task: true
+					item: {
+						count: 1
+						id: "magistuarmory:brigandine_chestplate"
+					}
 					type: "item"
+					optional_task: true
 				}
 				{
 					id: "0EEB9178CAEF2CFB"
-					item: { count: 1, id: "magistuarmory:lamellar_chestplate" }
-					optional_task: true
+					item: {
+						count: 1
+						id: "magistuarmory:lamellar_chestplate"
+					}
 					type: "item"
+					optional_task: true
 				}
 				{
 					id: "41C07D278E1156C7"
-					item: { count: 1, id: "magistuarmory:platemail_chestplate" }
-					optional_task: true
+					item: {
+						count: 1
+						id: "magistuarmory:platemail_chestplate"
+					}
 					type: "item"
+					optional_task: true
 				}
 				{
-					id: "61E493419729F9E1"
-					item: { count: 1, id: "magistuarmory:knight_chestplate" }
-					optional_task: true
+					id: "E8B143AD0DAEC0B2"
+					item: {
+						count: 1
+						id: "magistuarmory:knight_chestplate"
+					}
 					type: "item"
+					optional_task: true
 				}
 			]
 			x: 4.5d
 			y: 0.0d
 		}
 		{
-			dependencies: ["7A667AA0939251B3"]
+			dependencies: [
+				"7A667AA0939251B3"
+			]
 			icon: {
 				id: "farmersdelight:cooking_pot"
 			}
 			id: "6241B524D7B3B8EB"
 			rewards: [
 				{
+					id: "C3AB463AB7865C27"
 					count: 3
-					id: "680E1B1F9F30A08B"
 					item: {
 						count: 1
 						id: "farmersdelight:beef_stew"
@@ -327,8 +400,8 @@
 					type: "item"
 				}
 				{
+					id: "D091B2840C4A43BA"
 					count: 4
-					id: "147A52EDFC3FC004"
 					item: {
 						count: 1
 						id: "farmersdelight:tomato"
@@ -342,30 +415,37 @@
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 20"
-					id: "781FF7F8F99BB008"
-					permission_level: 2
+					elevate_perms: true
+					id: "AC2C5A37DA82659B"
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				id: "2001617017E6AD01"
-				item: { count: 1, id: "farmersdelight:cooking_pot" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "2001617017E6AD01"
+					item: {
+						count: 1
+						id: "farmersdelight:cooking_pot"
+					}
+					type: "item"
+				}
+			]
 			x: 1.5d
 			y: -3.0d
 		}
 		{
-			dependencies: ["7A667AA0939251B3"]
+			dependencies: [
+				"7A667AA0939251B3"
+			]
 			icon: {
 				id: "waystones:waystone"
 			}
-			id: "54AE195999BC0D1D"
+			id: "B03B6152FB3715C9"
 			rewards: [
 				{
-					count: 2
 					id: "0BE70E638531E29A"
+					count: 2
 					item: {
 						count: 1
 						id: "waystones:return_scroll"
@@ -373,8 +453,8 @@
 					type: "item"
 				}
 				{
-					count: 2
 					id: "3354254F3E7B8A59"
+					count: 2
 					item: {
 						count: 1
 						id: "waystones:warp_scroll"
@@ -388,28 +468,36 @@
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 30"
-					id: "0ACAC65919F2CE2C"
-					permission_level: 2
+					elevate_perms: true
+					id: "939035B0B0F109BD"
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				id: "476CA2D96E40B259"
-				item: { count: 1, id: "waystones:warp_stone" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "D60B5EE10CDB39D7"
+					item: {
+						count: 1
+						id: "waystones:warp_stone"
+					}
+					type: "item"
+				}
+			]
 			x: 3.0d
 			y: -1.5d
 		}
 		{
+			dependencies: [
+				"B03B6152FB3715C9"
+			]
 			icon: {
 				id: "sophisticatedbackpacks:backpack"
 			}
 			id: "275477230EA58D78"
 			rewards: [
 				{
-					id: "543B035ABEA1244C"
+					id: "F5AEE888ADF9E786"
 					item: {
 						count: 1
 						id: "sophisticatedbackpacks:pickup_upgrade"
@@ -417,27 +505,35 @@
 					type: "item"
 				}
 				{
-					id: "17BED25D28D90ADE"
+					id: "ACC5A5BF4E1334EA"
 					type: "xp"
 					xp: 50
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 25"
+					elevate_perms: true
 					id: "2A1C93FC23336461"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				id: "17702980AAA9829A"
-				item: { count: 1, id: "sophisticatedbackpacks:backpack" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "F3D98B3B14BCB29D"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:backpack"
+					}
+					type: "item"
+				}
+			]
 			x: 4.5d
 			y: -1.5d
 		}
 		{
+			dependencies: [
+				"82361E7320E1F9FC"
+			]
 			icon: {
 				id: "minecraft:spawner"
 			}
@@ -445,20 +541,20 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
 					id: "529C8AC1AD40E5D5"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
-					id: "30912A48F81241DD"
+					id: "A5F47A17615FC40E"
 					type: "xp"
 					xp: 100
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 50"
-					id: "0833BCCBE0FBABAF"
-					permission_level: 2
+					elevate_perms: true
+					id: "A9B683EEAF7944E6"
 					silent: true
 					type: "command"
 				}
@@ -467,42 +563,44 @@
 			tasks: [
 				{
 					id: "1C964B1958010E7A"
-					optional_task: true
 					structure: "betterdungeons:zombie_dungeon"
 					type: "structure"
+					optional_task: true
 				}
 				{
-					id: "65D3AAC0315DA051"
-					optional_task: true
+					id: "CF57169958A6E180"
 					structure: "betterdungeons:skeleton_dungeon"
 					type: "structure"
+					optional_task: true
 				}
 				{
-					id: "716718072F98219C"
-					optional_task: true
+					id: "DB84EBA58146A5CB"
 					structure: "betterdungeons:spider_dungeon"
 					type: "structure"
+					optional_task: true
 				}
 				{
-					id: "6843EF120B017447"
-					optional_task: true
+					id: "A03977E862C3CC81"
 					structure: "betterdungeons:small_dungeon"
 					type: "structure"
+					optional_task: true
 				}
 			]
 			x: 6.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["22D587B91368DFE4"]
+			dependencies: [
+				"22D587B91368DFE4"
+			]
 			icon: {
 				id: "minecraft:chest"
 			}
 			id: "4B182067015DB71B"
 			rewards: [
 				{
-					count: 4
 					id: "0BDA7B58DBDAF935"
+					count: 4
 					item: {
 						count: 1
 						id: "minecraft:gold_ingot"
@@ -510,37 +608,41 @@
 					type: "item"
 				}
 				{
-					id: "0CF2D8619B2F86A6"
+					id: "99D79920772838CD"
 					type: "xp"
 					xp: 40
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 20"
+					elevate_perms: true
 					id: "1157DF8C8A0C946F"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				advancement: "lootr:1chest"
-				criterion: ""
-				id: "50BDF754A950F7E0"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "F0C1B49CF47CBAE9"
+					advancement: "lootr:1chest"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 6.0d
 			y: -1.5d
 		}
 		{
-			dependencies: ["4B182067015DB71B"]
+			dependencies: [
+				"4B182067015DB71B"
+			]
 			icon: {
 				id: "minecraft:barrel"
 			}
 			id: "380E4D081B8C3972"
 			rewards: [
 				{
-					count: 6
 					id: "5B21EC5F8FCCB766"
+					count: 6
 					item: {
 						count: 1
 						id: "minecraft:emerald"
@@ -548,100 +650,102 @@
 					type: "item"
 				}
 				{
-					id: "56B4D3AA3A02FC3D"
+					id: "C991B9B5A2F87DE5"
 					type: "xp"
 					xp: 60
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 30"
-					id: "7B0759F9D10B269B"
-					permission_level: 2
+					elevate_perms: true
+					id: "F7CAACE300444B28"
 					silent: true
 					type: "command"
 				}
 			]
 			tasks: [
 				{
-					id: "613BD592D821DF63"
-					optional_task: true
+					id: "C59551189043B2FF"
 					structure: "nova_structures:tavern_oak"
 					type: "structure"
+					optional_task: true
 				}
 				{
-					id: "07CE50DC710B7CCE"
-					optional_task: true
+					id: "C8CF9FEDFF276D65"
 					structure: "nova_structures:tavern_acacia"
 					type: "structure"
+					optional_task: true
 				}
 				{
 					id: "3A7871F24CF13136"
-					optional_task: true
 					structure: "nova_structures:tavern_birch"
 					type: "structure"
+					optional_task: true
 				}
 				{
-					id: "7EBED5C07FDFB1A9"
-					optional_task: true
+					id: "FDB7F871545D8B02"
 					structure: "nova_structures:tavern_spruce"
 					type: "structure"
+					optional_task: true
 				}
 				{
-					id: "142549DD840A25BD"
-					optional_task: true
+					id: "AF2B6105D3E0DBB6"
 					structure: "nova_structures:tavern_dark_oak"
 					type: "structure"
+					optional_task: true
 				}
 				{
 					id: "3BDD373D4D0B7096"
-					optional_task: true
 					structure: "nova_structures:tavern_desert"
 					type: "structure"
+					optional_task: true
 				}
 				{
-					id: "53FF0E37FFB1A91C"
-					optional_task: true
+					id: "C35267114D61EF02"
 					structure: "nova_structures:tavern_snowy"
 					type: "structure"
+					optional_task: true
 				}
 				{
-					id: "0DAB99D972D0FAAB"
-					optional_task: true
+					id: "8D66B610BAC0ABF1"
 					structure: "nova_structures:tavern_jungle"
 					type: "structure"
+					optional_task: true
 				}
 				{
-					id: "03F15F2CE520A104"
-					optional_task: true
+					id: "EAB60770A9CEFD85"
 					structure: "nova_structures:tavern_swamp"
 					type: "structure"
+					optional_task: true
 				}
 				{
-					id: "1A070BC79EE860D6"
-					optional_task: true
+					id: "CE22B20B0A1C485B"
 					structure: "nova_structures:tavern_cherry"
 					type: "structure"
+					optional_task: true
 				}
 				{
 					id: "79447F5F6DB9C7CF"
-					optional_task: true
 					structure: "nova_structures:tavern_mangrove"
 					type: "structure"
+					optional_task: true
 				}
 			]
 			x: 7.5d
 			y: -1.5d
 		}
 		{
-			dependencies: ["380E4D081B8C3972"]
+			dependencies: [
+				"380E4D081B8C3972"
+			]
 			icon: {
 				id: "minecraft:lodestone"
 			}
-			id: "55068ED48EB3C32A"
+			id: "A14D41F2772E9FD8"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
 					id: "7F2D83007D68A53A"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
@@ -652,23 +756,27 @@
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 50"
+					elevate_perms: true
 					id: "121757DB2E7C5A42"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "hexagon"
-			tasks: [{
-				id: "3DBA61C5C655C2E0"
-				structure: "nova_structures:shrine_combat_tier_1"
-				type: "structure"
-			}]
+			tasks: [
+				{
+					id: "B261ADA4C762F3B2"
+					structure: "nova_structures:shrine_combat_tier_1"
+					type: "structure"
+				}
+			]
 			x: 7.5d
 			y: -3.0d
 		}
 		{
-			dependencies: ["22D587B91368DFE4"]
+			dependencies: [
+				"22D587B91368DFE4"
+			]
 			icon: {
 				id: "irons_spellbooks:scroll"
 			}
@@ -676,58 +784,57 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/scrolls_1"
+					elevate_perms: true
 					id: "7AA1E5A8E2C470BE"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
-					id: "0E587EF81CAFD571"
+					id: "C6D9255E772078A0"
 					type: "xp"
 					xp: 60
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 30"
+					elevate_perms: true
 					id: "3B1FFFA5168BA152"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				count: 3L
-				id: "03B0C973ADC92CE9"
-				item: { count: 1, id: "irons_spellbooks:scroll" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "F0993597EAF2476F"
+					count: 3L
+					item: {
+						count: 3
+						id: "irons_spellbooks:scroll"
+					}
+					type: "item"
+				}
+			]
 			x: 6.0d
 			y: 1.5d
 		}
 		{
-			dependencies: ["57115979D5A6C0FE"]
+			dependencies: [
+				"57115979D5A6C0FE"
+			]
 			icon: {
-				components: {
-					"irons_spellbooks:spell_container": {
-						data: [ ]
-						maxSpells: 5
-						mustEquip: 1b
-						spellWheel: 1b
-					}
-				}
 				id: "irons_spellbooks:copper_spell_book"
 			}
 			id: "30FB9673AE4FF52F"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/scrolls_1"
+					elevate_perms: true
 					id: "18ACFCEB9FC2078C"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
+					id: "A90452366A7961C2"
 					count: 8
-					id: "501C5A8D3D213959"
 					item: {
 						count: 1
 						id: "irons_spellbooks:arcane_essence"
@@ -741,31 +848,35 @@
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 40"
+					elevate_perms: true
 					id: "34BDF6E5AB7B9F14"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				advancement: "irons_spellbooks:irons_spellbooks/spell_book_equip"
-				criterion: ""
-				id: "0B525C4EF6F1F839"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "FC537A98AFB39651"
+					advancement: "irons_spellbooks:irons_spellbooks/spell_book_equip"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 7.5d
 			y: 1.5d
 		}
 		{
-			dependencies: ["30FB9673AE4FF52F"]
+			dependencies: [
+				"30FB9673AE4FF52F"
+			]
 			icon: {
 				id: "irons_spellbooks:inscription_table"
 			}
 			id: "102BADC4951F1256"
 			rewards: [
 				{
+					id: "C0D23A3F1CD95DC7"
 					count: 4
-					id: "000130DE9C3B4B0A"
 					item: {
 						count: 1
 						id: "irons_spellbooks:common_ink"
@@ -779,29 +890,34 @@
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 30"
+					elevate_perms: true
 					id: "64C40403BC5DD056"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				advancement: "irons_spellbooks:irons_spellbooks/make_inscription_table"
-				criterion: ""
-				id: "4453BFAB7DBF9CD4"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "4453BFAB7DBF9CD4"
+					advancement: "irons_spellbooks:irons_spellbooks/make_inscription_table"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 9.0d
 			y: 1.5d
 		}
 		{
+			dependencies: [
+				"B507146111222F17"
+			]
 			icon: {
 				id: "minecraft:diamond"
 			}
-			id: "3985DADFF4EFAB3E"
+			id: "EE4E3A1A790CB409"
 			rewards: [
 				{
-					id: "1B60C19787CB218D"
+					id: "F4E26A008F79515D"
 					item: {
 						count: 1
 						id: "minecraft:diamond"
@@ -815,30 +931,35 @@
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 40"
-					id: "17BB033C0E294991"
-					permission_level: 2
+					elevate_perms: true
+					id: "EF7C7BB273951728"
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				advancement: "minecraft:story/mine_diamond"
-				criterion: ""
-				id: "5938AAFE148E5483"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "C910BEFAD60CA5DF"
+					advancement: "minecraft:story/mine_diamond"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 4.5d
 			y: 3.0d
 		}
 		{
+			dependencies: [
+				"EE4E3A1A790CB409"
+			]
 			icon: {
 				id: "minecraft:enchanting_table"
 			}
 			id: "05DAF5E0885C122A"
 			rewards: [
 				{
-					count: 16
 					id: "3390731B05ACFFE1"
+					count: 16
 					item: {
 						count: 1
 						id: "minecraft:lapis_lazuli"
@@ -846,8 +967,8 @@
 					type: "item"
 				}
 				{
-					count: 8
 					id: "0A5AE339CAF145B0"
+					count: 8
 					item: {
 						count: 1
 						id: "minecraft:experience_bottle"
@@ -861,32 +982,36 @@
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 40"
+					elevate_perms: true
 					id: "350D4805B3C83FBE"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				advancement: "minecraft:story/enchant_item"
-				criterion: ""
-				id: "606751857D2B52E7"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "606751857D2B52E7"
+					advancement: "minecraft:story/enchant_item"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 6.0d
 			y: 3.0d
 		}
 		{
-			dependencies: ["102BADC4951F1256"]
+			dependencies: [
+				"102BADC4951F1256"
+			]
 			icon: {
 				id: "irons_spellbooks:wizard_hat"
 			}
-			id: "7B5A22C27B3DB7F2"
+			id: "D928D38F7250B143"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/scrolls_1"
+					elevate_perms: true
 					id: "24BE9E1CCACAA17E"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
@@ -897,70 +1022,72 @@
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 50"
-					id: "1E6A78CA272A3B71"
-					permission_level: 2
+					elevate_perms: true
+					id: "EA46A6858BAEE8DB"
 					silent: true
 					type: "command"
 				}
 			]
 			tasks: [
 				{
-					id: "11E4E935A0589DA1"
-					optional_task: true
+					id: "91B54589D247F8E3"
 					structure: "terralith:mage_tower"
 					type: "structure"
+					optional_task: true
 				}
 				{
 					id: "0247C529D7224219"
-					optional_task: true
 					structure: "terralith:mage_tower_spring"
 					type: "structure"
+					optional_task: true
 				}
 				{
-					id: "26BFA7308B05F889"
-					optional_task: true
+					id: "D3BA3662511423C9"
 					structure: "terralith:mage_tower_summer"
 					type: "structure"
+					optional_task: true
 				}
 				{
 					id: "18817B615C029569"
-					optional_task: true
 					structure: "terralith:mage_tower_autumn"
 					type: "structure"
+					optional_task: true
 				}
 				{
-					id: "3438AF7103124E12"
-					optional_task: true
+					id: "EDF7B8A3A47E5638"
 					structure: "terralith:mage_tower_winter"
 					type: "structure"
+					optional_task: true
 				}
 				{
 					id: "2C46727EB9D03D0E"
-					optional_task: true
 					structure: "terralith:mage_complex"
 					type: "structure"
+					optional_task: true
 				}
 				{
 					id: "5DCBD4057F988999"
-					optional_task: true
 					structure: "irons_spellbooks:mountain_tower"
 					type: "structure"
+					optional_task: true
 				}
 			]
 			x: 9.0d
 			y: 3.0d
 		}
 		{
-			dependencies: ["05DAF5E0885C122A"]
+			dependencies: [
+				"05DAF5E0885C122A"
+			]
 			icon: {
 				id: "mowziesmobs:wrought_axe"
 			}
-			id: "3CC06E5046C25276"
+			id: "E2AE0482EA7D0527"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
 					id: "662BF2E54542B337"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
@@ -976,8 +1103,8 @@
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 100"
+					elevate_perms: true
 					id: "0FBE91913FF411FE"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
@@ -986,38 +1113,41 @@
 			size: 1.5d
 			tasks: [
 				{
-					entity: "mowziesmobs:ferrous_wroughtnaut"
 					id: "1EACB4D69665D821"
-					optional_task: true
-					type: "kill"
+					entity: "mowziesmobs:ferrous_wroughtnaut"
 					value: 1L
+					type: "kill"
+					optional_task: true
 				}
 				{
+					id: "FDC4F518A705FE7B"
 					entity: "born_in_chaos_v1:supreme_bonescaller"
-					id: "79F93856CF5DC49D"
-					optional_task: true
-					type: "kill"
 					value: 1L
+					type: "kill"
+					optional_task: true
 				}
 				{
+					id: "A2C5F4086D0BF464"
 					entity: "born_in_chaos_v1:nightmare_stalker"
-					id: "76075A3EEF4A4A2D"
-					optional_task: true
-					type: "kill"
 					value: 1L
+					type: "kill"
+					optional_task: true
 				}
 				{
+					id: "BC132EFFA5108689"
 					entity: "irons_spellbooks:citadel_keeper"
-					id: "29A54F438B1B1E04"
-					optional_task: true
-					type: "kill"
 					value: 1L
+					type: "kill"
+					optional_task: true
 				}
 			]
 			x: 7.5d
 			y: 4.5d
 		}
 		{
+			dependencies: [
+				"E2AE0482EA7D0527"
+			]
 			icon: {
 				id: "apotheosis:gem"
 			}
@@ -1025,8 +1155,8 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-					id: "0502762EFB7CD287"
-					permission_level: 2
+					elevate_perms: true
+					id: "9E011F71747FB029"
 					silent: true
 					type: "command"
 				}
@@ -1037,42 +1167,45 @@
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 75"
+					elevate_perms: true
 					id: "7BB7E139361DC05B"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				advancement: "apotheosis:progression/frontier"
-				criterion: ""
-				id: "53AE56A06378DE40"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "80A2B57A5D3861FB"
+					advancement: "apotheosis:progression/frontier"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 9.0d
 			y: 4.5d
 		}
 		{
 			dependencies: [
+				"82361E7320E1F9FC"
 				"22D587B91368DFE4"
 				"30FB9673AE4FF52F"
 			]
 			icon: {
 				id: "createlanterns:lantern_frame"
 			}
-			id: "12DE2C5273353757"
+			id: "CD1332807D3C7E60"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-					id: "451535E5409F1740"
-					permission_level: 2
+					elevate_perms: true
+					id: "FDB196CD6A698CDF"
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/scrolls_1"
-					id: "55DD4AF74623C0D4"
-					permission_level: 2
+					elevate_perms: true
+					id: "9251C93714B29138"
 					silent: true
 					type: "command"
 				}
@@ -1088,50 +1221,60 @@
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 100"
-					id: "7928125D18B3C43E"
-					permission_level: 2
+					elevate_perms: true
+					id: "A7993D5444658682"
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "gear"
 			size: 2.25d
-			tasks: [{
-				id: "59205565EB0D97E4"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "59205565EB0D97E4"
+					type: "checkmark"
+				}
+			]
 			x: 11.0d
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"CD1332807D3C7E60"
+			]
 			icon: {
 				id: "minecraft:blaze_powder"
 			}
-			id: "43975A44EDC1EE7A"
+			id: "945016B237F34441"
 			optional: true
 			rewards: [
 				{
-					id: "59D3DD9CC378F01F"
+					id: "EBBC6EF5511474D5"
 					type: "xp"
 					xp: 60
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 30"
+					elevate_perms: true
 					id: "46931F863F3E19E0"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				dimension: "minecraft:the_nether"
-				id: "0FF4F4816C6D1E13"
-				type: "dimension"
-			}]
+			tasks: [
+				{
+					id: "C66D0E91529F735E"
+					dimension: "minecraft:the_nether"
+					type: "dimension"
+				}
+			]
 			x: 14.0d
 			y: -4.5d
 		}
 		{
+			dependencies: [
+				"CD1332807D3C7E60"
+			]
 			icon: {
 				id: "minecraft:raw_gold"
 			}
@@ -1139,78 +1282,81 @@
 			optional: true
 			rewards: [
 				{
-					id: "363A9E19B6D66906"
+					id: "C6A77ADDA8142399"
 					type: "xp"
 					xp: 60
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 30"
+					elevate_perms: true
 					id: "1DCE94D3C2D8CECF"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			tasks: [
 				{
-					id: "5ABC639B6524AA4B"
-					optional_task: true
+					id: "DC6F572F1CB03EDF"
 					structure: "bettermineshafts:mineshaft_oak"
 					type: "structure"
+					optional_task: true
 				}
 				{
-					id: "319C5DBEF9F65BCA"
-					optional_task: true
+					id: "E656B4A184C49AA5"
 					structure: "bettermineshafts:mineshaft_spruce"
 					type: "structure"
+					optional_task: true
 				}
 				{
 					id: "41A35A8E0F76BC1B"
-					optional_task: true
 					structure: "bettermineshafts:mineshaft_acacia"
 					type: "structure"
+					optional_task: true
 				}
 				{
-					id: "72C8EB9275E57F3C"
-					optional_task: true
+					id: "B4539927737BCB9C"
 					structure: "bettermineshafts:mineshaft_desert"
 					type: "structure"
+					optional_task: true
 				}
 				{
-					id: "06E1D84BD1D6180E"
-					optional_task: true
+					id: "F1C61A13B85C3C49"
 					structure: "bettermineshafts:mineshaft_mesa"
 					type: "structure"
+					optional_task: true
 				}
 				{
 					id: "46796AC7DDC1495D"
-					optional_task: true
 					structure: "bettermineshafts:mineshaft_dripstone"
 					type: "structure"
+					optional_task: true
 				}
 				{
 					id: "12991E11342FBA42"
-					optional_task: true
 					structure: "bettermineshafts:mineshaft_lush"
 					type: "structure"
+					optional_task: true
 				}
 				{
 					id: "597D3A15875A84F6"
-					optional_task: true
 					structure: "bettermineshafts:mineshaft_jungle"
 					type: "structure"
+					optional_task: true
 				}
 				{
 					id: "0E2E057EAC6B1CD6"
-					optional_task: true
 					structure: "bettermineshafts:mineshaft_ice"
 					type: "structure"
+					optional_task: true
 				}
 			]
 			x: 14.0d
 			y: -3.0d
 		}
 		{
+			dependencies: [
+				"CD1332807D3C7E60"
+			]
 			icon: {
 				id: "create:andesite_alloy"
 			}
@@ -1218,28 +1364,33 @@
 			optional: true
 			rewards: [
 				{
-					id: "6A1404B79C2F43CE"
+					id: "859DD5AC64DCC629"
 					type: "xp"
 					xp: 60
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 30"
-					id: "009F92689B28A3F1"
-					permission_level: 2
+					elevate_perms: true
+					id: "F7DC5D3CD179C074"
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				advancement: "create:andesite_alloy"
-				criterion: ""
-				id: "0051D8686492C709"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "AE53BA46F35316AC"
+					advancement: "create:andesite_alloy"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 14.0d
 			y: -1.5d
 		}
 		{
+			dependencies: [
+				"CD1332807D3C7E60"
+			]
 			icon: {
 				id: "minecraft:emerald"
 			}
@@ -1247,28 +1398,33 @@
 			optional: true
 			rewards: [
 				{
-					id: "481E143F6053EAB9"
+					id: "FAEB1073AE9F688E"
 					type: "xp"
 					xp: 60
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 30"
-					id: "286A4BEF3F7371AE"
-					permission_level: 2
+					elevate_perms: true
+					id: "F7B7D5589B8C2DB3"
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				advancement: "minecraft:adventure/trade"
-				criterion: ""
-				id: "21BC1B15544B07F1"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "21BC1B15544B07F1"
+					advancement: "minecraft:adventure/trade"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 14.0d
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"CD1332807D3C7E60"
+			]
 			icon: {
 				id: "minecraft:blue_ice"
 			}
@@ -1276,94 +1432,97 @@
 			optional: true
 			rewards: [
 				{
-					id: "598057EE3367ECEB"
+					id: "98684F171BC073B1"
 					type: "xp"
 					xp: 60
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 30"
-					id: "4A451CEF7027BF43"
-					permission_level: 2
+					elevate_perms: true
+					id: "E66034273DD744BE"
 					silent: true
 					type: "command"
 				}
 			]
 			tasks: [
 				{
+					id: "A3B320D6C25E00EA"
 					biome: "minecraft:snowy_plains"
-					id: "3475CCCD3DD4184F"
-					optional_task: true
 					type: "biome"
+					optional_task: true
 				}
 				{
+					id: "84B43F74A3DF7664"
 					biome: "minecraft:ice_spikes"
-					id: "2A0C86E4C4DBFDA3"
-					optional_task: true
 					type: "biome"
+					optional_task: true
 				}
 				{
-					biome: "minecraft:frozen_peaks"
 					id: "0B753D21730E29C3"
-					optional_task: true
+					biome: "minecraft:frozen_peaks"
 					type: "biome"
+					optional_task: true
 				}
 				{
-					biome: "minecraft:snowy_slopes"
 					id: "3200D833695E203A"
-					optional_task: true
+					biome: "minecraft:snowy_slopes"
 					type: "biome"
+					optional_task: true
 				}
 				{
+					id: "ECF479890FB0E1B1"
 					biome: "minecraft:grove"
-					id: "04C3E4B4757DFFB5"
-					optional_task: true
 					type: "biome"
+					optional_task: true
 				}
 				{
-					biome: "terralith:glacial_chasm"
 					id: "6E3A6C28272EDE17"
-					optional_task: true
+					biome: "terralith:glacial_chasm"
 					type: "biome"
+					optional_task: true
 				}
 				{
+					id: "F31FAFF6DE18FE02"
 					biome: "terralith:frozen_cliffs"
-					id: "5C589682C82A9965"
-					optional_task: true
 					type: "biome"
+					optional_task: true
 				}
 				{
-					biome: "terralith:wintry_forest"
 					id: "7AEB293900C30E36"
-					optional_task: true
+					biome: "terralith:wintry_forest"
 					type: "biome"
+					optional_task: true
 				}
 				{
-					biome: "terralith:siberian_taiga"
 					id: "25633DF2F5D9DA5F"
-					optional_task: true
+					biome: "terralith:siberian_taiga"
 					type: "biome"
+					optional_task: true
 				}
 				{
-					biome: "terralith:snowy_shield"
 					id: "55D0969E67F35EAF"
-					optional_task: true
+					biome: "terralith:snowy_shield"
 					type: "biome"
+					optional_task: true
 				}
 				{
+					id: "A7BAB47C58A1380C"
 					biome: "terralith:ice_marsh"
-					id: "21E2846AF7BB6021"
-					optional_task: true
 					type: "biome"
+					optional_task: true
 				}
 			]
 			x: 14.0d
 			y: 1.5d
 		}
 		{
+			dependencies: [
+				"CD1332807D3C7E60"
+			]
 			icon: {
 				id: "minecraft:lead"
 			}
-			id: "6B1A80A55A17B575"
+			id: "FE17017BC2A6E2EF"
 			optional: true
 			rewards: [
 				{
@@ -1373,22 +1532,27 @@
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 30"
+					elevate_perms: true
 					id: "7A67B7D55898B7DA"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				advancement: "minecraft:husbandry/tame_an_animal"
-				criterion: ""
-				id: "5DAAC068DC0A722D"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "8D5A6C9145427E68"
+					advancement: "minecraft:husbandry/tame_an_animal"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 14.0d
 			y: 3.0d
 		}
 		{
+			dependencies: [
+				"CD1332807D3C7E60"
+			]
 			icon: {
 				id: "minecraft:ender_pearl"
 			}
@@ -1396,54 +1560,54 @@
 			optional: true
 			rewards: [
 				{
-					id: "613A532FCC9A02B3"
+					id: "AE192DF1F1CE9BC8"
 					type: "xp"
 					xp: 60
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 30"
-					id: "3C4165A50E1AA6C7"
-					permission_level: 2
+					elevate_perms: true
+					id: "F04A3F985C58C6E8"
 					silent: true
 					type: "command"
 				}
 			]
 			tasks: [
 				{
-					id: "1E765FB790A02CBC"
-					optional_task: true
+					id: "BE47EFA32AB3F778"
 					structure: "graveyard:small_graveyard"
 					type: "structure"
+					optional_task: true
 				}
 				{
 					id: "534F1D8954078F89"
-					optional_task: true
 					structure: "graveyard:medium_graveyard"
 					type: "structure"
+					optional_task: true
 				}
 				{
-					id: "25E54779817A8BCC"
-					optional_task: true
+					id: "B22F0F9BF3A961E1"
 					structure: "graveyard:large_graveyard"
 					type: "structure"
+					optional_task: true
 				}
 				{
 					id: "3D4AA8E37FED0007"
-					optional_task: true
 					structure: "graveyard:small_grave"
 					type: "structure"
+					optional_task: true
 				}
 				{
 					id: "53D6D7677F72BC61"
-					optional_task: true
 					structure: "graveyard:crypt"
 					type: "structure"
+					optional_task: true
 				}
 				{
 					id: "2195997BF560209D"
-					optional_task: true
 					structure: "graveyard:small_desert_graveyard"
 					type: "structure"
+					optional_task: true
 				}
 			]
 			x: 14.0d

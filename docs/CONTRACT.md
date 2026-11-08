@@ -40,6 +40,7 @@ Optional extreme bosses: `darkdoppelganger:dark_doppelganger`, `legendary_monste
 | `gl_ring_<id>` | the ring-trial choice gave the player their class ring |
 | `gl_ring_white` / `gl_ring_black` | the ring-trial choice gave the player the White / Black ring instead |
 | `gl_ringbearer` | any of the above ring outcomes (use this when "a ring" is enough) |
+| `gl_ringed_<id>` | that class's ring trial has finished and given its ring (the class chapter's `ring` quest) |
 | `gl_chaos_slain` | Chaos Guardian killed nearby |
 | `gl_devourer_slain` | Devourer of Gods killed nearby |
 
@@ -66,11 +67,24 @@ Optional extreme bosses: `darkdoppelganger:dark_doppelganger`, `legendary_monste
 ## Quest anchors (cross-chapter dependency keys)
 - `prologue:finale`: the last prologue quest. Act I depends on it.
 - `act1:choose_path`: unlocks every class chapter.
-- `<id>:join`: first quest of each class chapter (reward `/gl class join {p} <id>`).
-- `<id>:trial`: kill-the-trial-boss quest.
-- `<id>:choice`: reward `/gl trial begin {p} <id>`.
-- `<id>:ring`: task: stage `gl_ringbearer`.
-- `finale:last_light`: the final boss quest.
+- `class_<id>:join`: first quest of each class chapter (reward `/gl class join {p} <id>`).
+- `class_<id>:trial`: the trial boss: kill task **or** stage `gl_trial_<id>`, both optional.
+- `class_<id>:choice`: reward `/gl trial begin {p} <id>` (the four-question ring trial).
+- `class_<id>:ring`: stage task `gl_ringed_<id>` (set with the ring this class's trial gives: own colour, White or Black).
+- `class_<id>:legend`: post-ring content; depends on `finale:last_light`.
+- `finale:chaos_guardian`: kill or stage `gl_chaos_slain`.
+- `finale:last_light`: the final boss quest (kill `dog:devourer_head` or stage `gl_devourer_slain`).
+
+The chapter id is the file name, so cross-chapter keys are `<file>:<key>`, e.g. `class_red:ring`
+(not `red:ring`).
+
+## FTB Quests rules we rely on (checked in 2101.1.38's bytecode)
+- **"Pick one" quests:** if *every* task is optional, the quest completes when any one is done
+  (`QuestObject.isCompletedRaw`). In a mixed quest only the required tasks count.
+- **Stage tasks** are re-checked every 20 ticks (`StageTask.autoSubmitOnPlayerTick`), so a
+  stage granted before its quest unlocked still completes it once the quest opens.
+- Quest progress belongs to the **FTB team**: friends in one team share it; solo players each
+  have their own. Rewards are claimed per player.
 
 ## KubeJS / Rhino gotchas (from testing)
 - Inside functions, use `var` (Rhino throws "redeclaration of var" for `const`/`let` in some blocks).

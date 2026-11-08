@@ -7,13 +7,14 @@
 		id: "simplyswords:iron_longsword"
 	}
 	id: "285A2D542A50A78A"
-	images: [ ]
 	order_index: 1
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["0C1EA8A1216376F7"]
+			dependencies: [
+				"0C1EA8A1216376F7"
+			]
 			icon: {
 				id: "minecraft:iron_sword"
 			}
@@ -21,8 +22,8 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
 					id: "7B8687AF5F934896"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
@@ -34,226 +35,309 @@
 			]
 			shape: "hexagon"
 			size: 1.5d
-			tasks: [{
-				id: "01884A52DB0B9C17"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "01884A52DB0B9C17"
+					type: "checkmark"
+				}
+			]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["0968C69FFEDECD8E"]
+			dependencies: [
+				"0968C69FFEDECD8E"
+			]
 			icon: {
 				id: "simplyswords:iron_longsword"
 			}
 			id: "12C92D5DA7EECF40"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "05058CE229ABA9F9"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "57917180D8D4A624"
-				item: { count: 1, id: "simplyswords:iron_longsword" }
-				type: "item"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "05058CE229ABA9F9"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "BDC6AC1918DF7ED4"
+					item: {
+						count: 1
+						id: "simplyswords:iron_longsword"
+					}
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: -1.5d
 		}
 		{
-			dependencies: ["12C92D5DA7EECF40"]
+			dependencies: [
+				"12C92D5DA7EECF40"
+			]
 			icon: {
 				id: "simplyswords:runefused_gem"
 			}
-			id: "7C3903CD18A137B1"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "10F8AA07324473D8"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "25786F1EDADE5FD9"
-				type: "checkmark"
-			}]
+			id: "E2579101766313DA"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "10F8AA07324473D8"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "EF132FEF0AC96188"
+					type: "checkmark"
+				}
+			]
 			x: 4.0d
 			y: -1.5d
 		}
 		{
+			dependencies: [
+				"E2579101766313DA"
+			]
 			icon: {
 				id: "minecraftdungeonsv1:great_hammer"
 			}
 			id: "4697BC3064184895"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "2AB484AB5EE5F4A5"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "715D11B8E544D3E5"
-				item: { count: 1, id: "minecraftdungeonsv1:great_hammer" }
-				type: "item"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "2AB484AB5EE5F4A5"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "715D11B8E544D3E5"
+					item: {
+						count: 1
+						id: "minecraftdungeonsv1:great_hammer"
+					}
+					type: "item"
+				}
+			]
 			x: 6.0d
 			y: -1.5d
 		}
 		{
-			dependencies: ["0968C69FFEDECD8E"]
+			dependencies: [
+				"0968C69FFEDECD8E"
+			]
 			icon: {
 				id: "magistuarmory:steel_ingot"
 			}
-			id: "64CDCAE7674EBDE1"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "664AD5E987EBC54B"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				count: 8L
-				id: "31295A4CFABE0558"
-				item: { count: 1, id: "magistuarmory:steel_ingot" }
-				type: "item"
-			}]
+			id: "B740EFEE1B14B1C6"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "CC587E2A95E54324"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "31295A4CFABE0558"
+					count: 8L
+					item: {
+						count: 8
+						id: "magistuarmory:steel_ingot"
+					}
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: 1.5d
 		}
 		{
+			dependencies: [
+				"B740EFEE1B14B1C6"
+			]
 			icon: {
 				id: "magistuarmory:gothic_chestplate"
 			}
 			id: "4EA5762E16679C64"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "55E780256B5AD555"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "6110E77EBDD33726"
-				item: { count: 1, id: "magistuarmory:gothic_chestplate" }
-				type: "item"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "55E780256B5AD555"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "C9BF0C19F27448C1"
+					item: {
+						count: 1
+						id: "magistuarmory:gothic_chestplate"
+					}
+					type: "item"
+				}
+			]
 			x: 4.0d
 			y: 1.5d
 		}
 		{
-			dependencies: ["4EA5762E16679C64"]
+			dependencies: [
+				"4EA5762E16679C64"
+			]
 			icon: {
 				id: "magistuarmory:steel_chivalrylance"
 			}
 			id: "4831BBC7DBAE7D59"
 			optional: true
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "4AB22B06279BB6B6"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "28E7438D4B361915"
-				item: { count: 1, id: "magistuarmory:steel_chivalrylance" }
-				type: "item"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "B92CBDA2AA8D641E"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "28E7438D4B361915"
+					item: {
+						count: 1
+						id: "magistuarmory:steel_chivalrylance"
+					}
+					type: "item"
+				}
+			]
 			x: 6.0d
 			y: 1.5d
 		}
 		{
-			dependencies: ["0968C69FFEDECD8E"]
+			dependencies: [
+				"0968C69FFEDECD8E"
+			]
 			icon: {
 				id: "shieldexp:diamond_shield"
 			}
 			id: "32321ADFCBBCD09E"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "7F5D670C93488F20"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "shieldexp:get_diamond_shield"
-				criterion: ""
-				id: "36808071C019F1E1"
-				type: "advancement"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "E523D7385060D0FC"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "AB39740110A6FD03"
+					advancement: "shieldexp:get_diamond_shield"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 2.0d
 			y: 3.5d
 		}
 		{
-			dependencies: ["32321ADFCBBCD09E"]
+			dependencies: [
+				"32321ADFCBBCD09E"
+			]
 			icon: {
 				id: "shieldexp:netherite_shield"
 			}
-			id: "31671FA1625D9603"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-				id: "11817DE66A9CC646"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "shieldexp:get_netherite_shield"
-				criterion: ""
-				id: "63E99A8D81EEDEB0"
-				type: "advancement"
-			}]
+			id: "BB53A6D07EA4A87A"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					elevate_perms: true
+					id: "8E9551D2C4B6CFE7"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "63E99A8D81EEDEB0"
+					advancement: "shieldexp:get_netherite_shield"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 4.0d
 			y: 3.5d
 		}
 		{
-			dependencies: ["0968C69FFEDECD8E"]
+			dependencies: [
+				"0968C69FFEDECD8E"
+			]
 			icon: {
 				id: "artifacts:cloud_in_a_bottle"
 			}
 			id: "2B19DDF6F27B4986"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "325FB7AFBCE3C59B"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				entity: "artifacts:mimic"
-				id: "1202C27FF03D332F"
-				type: "kill"
-				value: 1L
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "D1B6113A738CF28A"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "8A0AF0499CCE1691"
+					entity: "artifacts:mimic"
+					value: 1L
+					type: "kill"
+				}
+			]
 			x: 2.0d
 			y: -3.5d
 		}
 		{
-			dependencies: ["2B19DDF6F27B4986"]
+			dependencies: [
+				"2B19DDF6F27B4986"
+			]
 			icon: {
 				id: "sophisticatedbackpacks:iron_backpack"
 			}
-			id: "06AAEF4CE79D01A6"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "4C4F6F5CD222BBA0"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
+			id: "B8C17D771861FB28"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "4C4F6F5CD222BBA0"
+					silent: true
+					type: "command"
+				}
+			]
 			tasks: [
 				{
 					id: "79C0547FCB1E1BB7"
-					item: { count: 1, id: "sophisticatedbackpacks:iron_backpack" }
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:iron_backpack"
+					}
 					type: "item"
 				}
 				{
 					id: "57868C2CD6E400F9"
-					item: { count: 1, id: "sophisticatedbackpacks:pickup_upgrade" }
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:pickup_upgrade"
+					}
 					type: "item"
 				}
 			]
@@ -261,26 +345,37 @@
 			y: -3.5d
 		}
 		{
+			dependencies: [
+				"B8C17D771861FB28"
+			]
 			icon: {
 				id: "sophisticatedbackpacks:diamond_backpack"
 			}
 			id: "0836CA1FEF5713ED"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "15176BB9017018F4"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "A0047D5DC76E8499"
+					silent: true
+					type: "command"
+				}
+			]
 			tasks: [
 				{
-					id: "4298448EB3863EEF"
-					item: { count: 1, id: "sophisticatedbackpacks:diamond_backpack" }
+					id: "BE3F79ADA5E6FF19"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:diamond_backpack"
+					}
 					type: "item"
 				}
 				{
 					id: "73D93DC183808467"
-					item: { count: 1, id: "sophisticatedbackpacks:magnet_upgrade" }
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:magnet_upgrade"
+					}
 					type: "item"
 				}
 			]
@@ -288,20 +383,26 @@
 			y: -3.5d
 		}
 		{
-			dependencies: ["0968C69FFEDECD8E"]
+			dependencies: [
+				"0968C69FFEDECD8E"
+			]
 			icon: {
 				id: "minecraft:skeleton_skull"
 			}
-			id: "035789D1B5719C9E"
-			rewards: [{
-				id: "289439F82EB70EE1"
-				type: "xp"
-				xp: 50
-			}]
-			tasks: [{
-				id: "7648E2720DA3E387"
-				type: "checkmark"
-			}]
+			id: "92D791B7479EC993"
+			rewards: [
+				{
+					id: "289439F82EB70EE1"
+					type: "xp"
+					xp: 50
+				}
+			]
+			tasks: [
+				{
+					id: "7648E2720DA3E387"
+					type: "checkmark"
+				}
+			]
 			x: 6.0d
 			y: 0.0d
 		}
@@ -309,34 +410,37 @@
 			dependencies: [
 				"4697BC3064184895"
 				"4EA5762E16679C64"
+				"BB53A6D07EA4A87A"
 				"0836CA1FEF5713ED"
 			]
 			icon: {
 				id: "simplyswords:netherite_longsword"
 			}
-			id: "2178E4D139AB0950"
+			id: "AB718B18C041149D"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-					id: "14F0F6CDB3D08CC3"
-					permission_level: 2
+					elevate_perms: true
+					id: "EF6CA03193CFE939"
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 100"
+					elevate_perms: true
 					id: "7246ABDD2B28F08D"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "octagon"
 			size: 1.25d
-			tasks: [{
-				id: "0E1DABE80EA58A0B"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "0E1DABE80EA58A0B"
+					type: "checkmark"
+				}
+			]
 			x: 8.5d
 			y: 0.0d
 		}

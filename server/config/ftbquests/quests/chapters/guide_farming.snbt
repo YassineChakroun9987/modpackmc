@@ -6,23 +6,24 @@
 	icon: {
 		id: "farmersdelight:cooking_pot"
 	}
-	id: "67126B5DFF457464"
-	images: [ ]
+	id: "FB21E6A07E57D285"
 	order_index: 4
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["0C1EA8A1216376F7"]
+			dependencies: [
+				"0C1EA8A1216376F7"
+			]
 			icon: {
 				id: "farmersdelight:cabbage"
 			}
-			id: "3332F8787C2C1353"
+			id: "C10920EFEE631C53"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-					id: "53D37C1E1BE8186E"
-					permission_level: 2
+					elevate_perms: true
+					id: "F36D843FD8D1AB06"
 					silent: true
 					type: "command"
 				}
@@ -34,138 +35,195 @@
 			]
 			shape: "hexagon"
 			size: 1.5d
-			tasks: [{
-				advancement: "farmersdelight:main/get_fd_seed"
-				criterion: ""
-				id: "15CDFA09FA0C552D"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "E2929021D4CA2F11"
+					advancement: "farmersdelight:main/get_fd_seed"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"C10920EFEE631C53"
+			]
 			icon: {
 				id: "farmersdelight:flint_knife"
 			}
 			id: "34BC81A57C996B15"
-			rewards: [{
-				count: 16
-				id: "0F0F3D36398A3F82"
-				item: {
-					count: 1
-					id: "farmersdelight:rope"
+			rewards: [
+				{
+					id: "CCD27AA729483BB8"
+					count: 16
+					item: {
+						count: 1
+						id: "farmersdelight:rope"
+					}
+					type: "item"
 				}
-				type: "item"
-			}]
-			tasks: [{
-				id: "0C53F73F52FBAD97"
-				item: { count: 1, id: "farmersdelight:flint_knife" }
-				type: "item"
-			}]
+			]
+			tasks: [
+				{
+					id: "0C53F73F52FBAD97"
+					item: {
+						count: 1
+						id: "farmersdelight:flint_knife"
+					}
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: -2.0d
 		}
 		{
-			dependencies: ["34BC81A57C996B15"]
+			dependencies: [
+				"34BC81A57C996B15"
+			]
 			icon: {
 				id: "farmersdelight:cutting_board"
 			}
-			id: "2F1F6AEDCF07040B"
-			rewards: [{
-				id: "410FDB29B502AA51"
-				type: "xp"
-				xp: 75
-			}]
-			tasks: [{
-				advancement: "farmersdelight:main/use_cutting_board"
-				criterion: ""
-				id: "3D10A868150A000D"
-				type: "advancement"
-			}]
+			id: "ECC37C7242FED208"
+			rewards: [
+				{
+					id: "410FDB29B502AA51"
+					type: "xp"
+					xp: 75
+				}
+			]
+			tasks: [
+				{
+					id: "3D10A868150A000D"
+					advancement: "farmersdelight:main/use_cutting_board"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 4.0d
 			y: -2.0d
 		}
 		{
+			dependencies: [
+				"ECC37C7242FED208"
+			]
 			icon: {
 				id: "farmersdelight:skillet"
 			}
-			id: "29FDCEBA6A14FA7A"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "7ED5341964D8699B"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "701A9E8FB146D31D"
-				item: { count: 1, id: "farmersdelight:skillet" }
-				type: "item"
-			}]
+			id: "D8A9636561642D33"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "DB7FE47CDE77CC81"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "84E2108CEAAE6561"
+					item: {
+						count: 1
+						id: "farmersdelight:skillet"
+					}
+					type: "item"
+				}
+			]
 			x: 6.0d
 			y: -2.0d
 		}
 		{
+			dependencies: [
+				"C10920EFEE631C53"
+			]
 			icon: {
 				id: "farmersdelight:beef_stew"
 			}
 			id: "2786786758B27169"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "58162408C4186624"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "1B9D8503370CAEBA"
-				item: { count: 1, id: "farmersdelight:beef_stew" }
-				type: "item"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "C985EA1854131EB4"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1B9D8503370CAEBA"
+					item: {
+						count: 1
+						id: "farmersdelight:beef_stew"
+					}
+					type: "item"
+				}
+			]
 			x: 2.5d
 			y: 0.0d
 		}
 		{
-			dependencies: ["2786786758B27169"]
+			dependencies: [
+				"2786786758B27169"
+			]
 			icon: {
 				id: "farmersdelight:stove"
 			}
-			id: "2D80094D9287A6C7"
-			rewards: [{
-				id: "27E77CF18BF97380"
-				type: "xp"
-				xp: 75
-			}]
-			tasks: [{
-				id: "52A3A8609942134A"
-				item: { count: 1, id: "farmersdelight:stove" }
-				type: "item"
-			}]
+			id: "9422D752FF3E810E"
+			rewards: [
+				{
+					id: "27E77CF18BF97380"
+					type: "xp"
+					xp: 75
+				}
+			]
+			tasks: [
+				{
+					id: "EEE86A51250B5191"
+					item: {
+						count: 1
+						id: "farmersdelight:stove"
+					}
+					type: "item"
+				}
+			]
 			x: 5.0d
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"9422D752FF3E810E"
+			]
 			icon: {
 				id: "farmersdelight:steak_and_potatoes"
 			}
-			id: "46D5651B1C938101"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "04EB9B4AE0900114"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "farmersdelight:main/eat_nourishing_food"
-				criterion: ""
-				id: "54D2BA15254E6483"
-				type: "advancement"
-			}]
+			id: "C5E7FE276D6092BF"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "04EB9B4AE0900114"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "A5C978F6056B6FB0"
+					advancement: "farmersdelight:main/eat_nourishing_food"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 7.5d
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"C5E7FE276D6092BF"
+			]
 			icon: {
 				id: "farmersdelight:roast_chicken_block"
 			}
@@ -173,145 +231,183 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
 					id: "0B5D5B4E374FAA1D"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
-					id: "0C0E577AF47771EF"
+					id: "E12FA52A83255A92"
 					type: "xp"
 					xp: 150
 				}
 			]
-			tasks: [{
-				advancement: "farmersdelight:main/place_feast"
-				criterion: ""
-				id: "32070F54A967F759"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "32070F54A967F759"
+					advancement: "farmersdelight:main/place_feast"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 10.0d
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"C10920EFEE631C53"
+			]
 			icon: {
 				id: "farmersdelight:rice"
 			}
 			id: "0BBF041069F58C98"
-			rewards: [{
-				id: "45752824824617BF"
-				type: "xp"
-				xp: 75
-			}]
-			tasks: [{
-				advancement: "farmersdelight:main/plant_rice"
-				criterion: ""
-				id: "5E88FA21AAF15313"
-				type: "advancement"
-			}]
+			rewards: [
+				{
+					id: "45752824824617BF"
+					type: "xp"
+					xp: 75
+				}
+			]
+			tasks: [
+				{
+					id: "5E88FA21AAF15313"
+					advancement: "farmersdelight:main/plant_rice"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 2.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["0BBF041069F58C98"]
+			dependencies: [
+				"0BBF041069F58C98"
+			]
 			icon: {
 				id: "farmersdelight:rich_soil"
 			}
-			id: "7C0C97442F5F4E03"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "055416CCC66BF46F"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "farmersdelight:main/get_rich_soil"
-				criterion: ""
-				id: "327C584C7DDE4F67"
-				type: "advancement"
-			}]
+			id: "8BDC1E4E8CDEE4F8"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "D75FF367EAC8A5F9"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "E58BE786CE58965B"
+					advancement: "farmersdelight:main/get_rich_soil"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 4.0d
 			y: 2.0d
 		}
 		{
+			dependencies: [
+				"8BDC1E4E8CDEE4F8"
+			]
 			icon: {
 				id: "farmersdelight:tomato"
 			}
 			id: "6C1B0FB04C98AB08"
 			optional: true
-			rewards: [{
-				id: "2AF7FCD368B1A241"
-				type: "xp"
-				xp: 75
-			}]
-			tasks: [{
-				advancement: "farmersdelight:main/harvest_ropelogged_tomato"
-				criterion: ""
-				id: "372BD37F2BF02EC5"
-				type: "advancement"
-			}]
+			rewards: [
+				{
+					id: "2AF7FCD368B1A241"
+					type: "xp"
+					xp: 75
+				}
+			]
+			tasks: [
+				{
+					id: "372BD37F2BF02EC5"
+					advancement: "farmersdelight:main/harvest_ropelogged_tomato"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 6.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["6C1B0FB04C98AB08"]
+			dependencies: [
+				"8BDC1E4E8CDEE4F8"
+				"6C1B0FB04C98AB08"
+			]
 			dependency_requirement: "one_completed"
 			icon: {
 				id: "create:mechanical_harvester"
 			}
-			id: "4483A9988EA733AE"
+			id: "915F6F1FF8805672"
 			optional: true
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "7E053D959FB0118B"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "4C3CE29F022547AB"
-				item: { count: 1, id: "create:mechanical_harvester" }
-				type: "item"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "7E053D959FB0118B"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "AEBA276029CC3224"
+					item: {
+						count: 1
+						id: "create:mechanical_harvester"
+					}
+					type: "item"
+				}
+			]
 			x: 8.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["033F5D992E0D6C86"]
+			dependencies: [
+				"033F5D992E0D6C86"
+				"D8A9636561642D33"
+				"8BDC1E4E8CDEE4F8"
+			]
 			icon: {
 				id: "farmersdelight:honey_glazed_ham_block"
 			}
-			id: "052101BFD61CC1A2"
+			id: "BE02F4A3535A33E8"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-					id: "7FD67CD7806B42C0"
-					permission_level: 2
+					elevate_perms: true
+					id: "CE276F8BB7467BE9"
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 150"
-					id: "68BAD1EC7B781203"
-					permission_level: 2
+					elevate_perms: true
+					id: "A8A51745D93E3AC6"
 					silent: true
 					type: "command"
 				}
 				{
-					id: "5EF149C3102434EC"
+					id: "A4DC1CE4D3CBB3B9"
 					type: "xp"
 					xp: 300
 				}
 			]
 			shape: "octagon"
 			size: 1.5d
-			tasks: [{
-				advancement: "farmersdelight:main/master_chef"
-				criterion: ""
-				id: "1838C50360D273D6"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "1838C50360D273D6"
+					advancement: "farmersdelight:main/master_chef"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 12.5d
 			y: 0.0d
 		}

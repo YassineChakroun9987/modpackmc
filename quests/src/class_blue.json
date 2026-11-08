@@ -681,7 +681,7 @@
       "desc": [
         "A ring found you. Blue, White or Black, you are a &eLantern&r now: you can fly, and your will takes shape as constructs.",
         "",
-        "This completes when you have &eany&r ring from the trial. The Blue path continues; the &6Last Light&r chapter has opened."
+        "This completes when this light's trial gives you your ring: its own colour, White or Black. The Blue path continues; the &6Last Light&r chapter has opened."
       ],
       "icon": "createlanterns:blue_power_ring",
       "x": 23.25,
@@ -690,7 +690,7 @@
       "size": 2.5,
       "deps": ["choice"],
       "tasks": [
-        {"type": "stage", "stage": "gl_ringbearer"}
+        {"type": "stage", "stage": "gl_ringed_blue"}
       ],
       "rewards": [
         {"type": "loot", "table": "greenlanterns:rewards/tier_4"},

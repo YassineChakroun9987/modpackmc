@@ -6,13 +6,15 @@
 	icon: {
 		id: "apotheosis:reforging_table"
 	}
-	id: "562F05D5FA1B4F9D"
-	images: [ ]
+	id: "E4793592AA5F9802"
 	order_index: 6
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: [
+				"CD1332807D3C7E60"
+			]
 			icon: {
 				id: "minecraft:book"
 			}
@@ -20,378 +22,490 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
 					id: "459F5EA680B28F1F"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
-					id: "2716B0DBF3E4760D"
+					id: "DED30D6D8D51B57B"
 					type: "xp"
 					xp: 50
 				}
 			]
 			shape: "hexagon"
 			size: 1.5d
-			tasks: [{
-				id: "0E0F0D0CEF5B0121"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "0E0F0D0CEF5B0121"
+					type: "checkmark"
+				}
+			]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["31745A40CBF5328D"]
+			dependencies: [
+				"31745A40CBF5328D"
+			]
 			icon: {
 				id: "minecraft:iron_chestplate"
 			}
-			id: "1F8C0C58318C7EA6"
+			id: "E35047C30EFD8DDA"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
 					id: "0E2A14C44CB16EC0"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 75"
+					elevate_perms: true
 					id: "6F5E85926914551F"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				advancement: "apotheosis:progression/ascent"
-				criterion: ""
-				id: "7128289781B70100"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "7128289781B70100"
+					advancement: "apotheosis:progression/ascent"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 3.0d
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"E35047C30EFD8DDA"
+			]
 			icon: {
 				id: "minecraft:diamond_chestplate"
 			}
-			id: "61A5C9C9D9F0EC72"
+			id: "D868E0324D1F7072"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-					id: "6FFA1AF201E55A85"
-					permission_level: 2
+					elevate_perms: true
+					id: "E1758849420FF00E"
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 150"
-					id: "5C22A80CF65E79DD"
-					permission_level: 2
+					elevate_perms: true
+					id: "AF6514B59DC35808"
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				advancement: "apotheosis:progression/summit"
-				criterion: ""
-				id: "2B5C45428A538F33"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "2B5C45428A538F33"
+					advancement: "apotheosis:progression/summit"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 6.0d
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"D868E0324D1F7072"
+			]
 			icon: {
 				id: "minecraft:netherite_chestplate"
 			}
-			id: "4C138D7C3FAB151B"
+			id: "CC8DACDF094EB089"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
-					id: "0586BE817648AEFA"
-					permission_level: 2
+					elevate_perms: true
+					id: "AEB37C1E6E15787F"
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 300"
-					id: "4D98F21568E95156"
-					permission_level: 2
+					elevate_perms: true
+					id: "B89E67E1EDAE78D1"
 					silent: true
 					type: "command"
 				}
 				{
-					id: "360F4791E2FE61B1"
+					id: "F62F1F7D6A353F1A"
 					type: "xp"
 					xp: 500
 				}
 			]
 			shape: "octagon"
 			size: 1.5d
-			tasks: [{
-				advancement: "apotheosis:progression/pinnacle"
-				criterion: ""
-				id: "2541531A73BCB986"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "E9D7D03D2015C007"
+					advancement: "apotheosis:progression/pinnacle"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 9.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["31745A40CBF5328D"]
+			dependencies: [
+				"31745A40CBF5328D"
+			]
 			icon: {
 				id: "apotheosis:salvaging_table"
 			}
 			id: "1962471694C78C7F"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "6302478A505662D3"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "7FB58F8C70E09C43"
-				item: { count: 1, id: "apotheosis:salvaging_table" }
-				type: "item"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "6302478A505662D3"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "A5AB7F1A814C85C2"
+					item: {
+						count: 1
+						id: "apotheosis:salvaging_table"
+					}
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: -2.0d
 		}
 		{
-			dependencies: ["1962471694C78C7F"]
+			dependencies: [
+				"1962471694C78C7F"
+			]
 			icon: {
 				id: "apotheosis:simple_reforging_table"
 			}
 			id: "25D2F0AFBE5A5904"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "055A48E230ABCAC2"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "01B4F409AC47535E"
-				item: { count: 1, id: "apotheosis:simple_reforging_table" }
-				type: "item"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "B02D879CCF621F1A"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "9E2FC8A4EE06350A"
+					item: {
+						count: 1
+						id: "apotheosis:simple_reforging_table"
+					}
+					type: "item"
+				}
+			]
 			x: 4.0d
 			y: -2.0d
 		}
 		{
-			dependencies: ["25D2F0AFBE5A5904"]
+			dependencies: [
+				"25D2F0AFBE5A5904"
+			]
 			icon: {
 				id: "apotheosis:reforging_table"
 			}
-			id: "4A03BF807A70E7F6"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "2F5A8C347E6A1ABF"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "68DE659AA7BE8FA5"
-				item: { count: 1, id: "apotheosis:reforging_table" }
-				type: "item"
-			}]
+			id: "C623BD0C3EC08ED7"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "2F5A8C347E6A1ABF"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "C0862EC16249B349"
+					item: {
+						count: 1
+						id: "apotheosis:reforging_table"
+					}
+					type: "item"
+				}
+			]
 			x: 6.0d
 			y: -2.0d
 		}
 		{
+			dependencies: [
+				"C623BD0C3EC08ED7"
+			]
 			icon: {
 				id: "apotheosis:augmenting_table"
 			}
-			id: "4E65CCF8CE19EB70"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-				id: "62D57BF06C53CD48"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "1C27143D8335A802"
-				item: { count: 1, id: "apotheosis:augmenting_table" }
-				type: "item"
-			}]
+			id: "D9F28861F4828FB3"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					elevate_perms: true
+					id: "62D57BF06C53CD48"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "FE20A699731DBA28"
+					item: {
+						count: 1
+						id: "apotheosis:augmenting_table"
+					}
+					type: "item"
+				}
+			]
 			x: 8.0d
 			y: -2.0d
 		}
 		{
-			dependencies: ["31745A40CBF5328D"]
+			dependencies: [
+				"31745A40CBF5328D"
+			]
 			icon: {
 				id: "apotheosis:sigil_of_socketing"
 			}
-			id: "6E0FDC29BC014BC3"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "28CEA64603412CE6"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "487EBEE111B8D289"
-				type: "checkmark"
-			}]
+			id: "9A4F58C83D0C4D15"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "28CEA64603412CE6"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "FB2EAB6CE3570497"
+					type: "checkmark"
+				}
+			]
 			x: 2.0d
 			y: -4.0d
 		}
 		{
+			dependencies: [
+				"9A4F58C83D0C4D15"
+			]
 			icon: {
 				id: "apotheosis:gem_cutting_table"
 			}
-			id: "70FCFB58FBB95F54"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "379667EA1F186CFC"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "2073CCF7C8FEBEC4"
-				item: { count: 1, id: "apotheosis:gem_cutting_table" }
-				type: "item"
-			}]
+			id: "CDB73C2CD0B29845"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "A04A93D0B3DC1599"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2073CCF7C8FEBEC4"
+					item: {
+						count: 1
+						id: "apotheosis:gem_cutting_table"
+					}
+					type: "item"
+				}
+			]
 			x: 4.0d
 			y: -4.0d
 		}
 		{
-			dependencies: ["31745A40CBF5328D"]
+			dependencies: [
+				"31745A40CBF5328D"
+			]
 			icon: {
 				id: "minecraft:enchanting_table"
 			}
 			id: "751C49660BC52CEE"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "3A7F561209AE7143"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "apothic_enchanting:30ench"
-				criterion: ""
-				id: "340066856081E4DA"
-				type: "advancement"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "9A96A48534D69051"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "340066856081E4DA"
+					advancement: "apothic_enchanting:30ench"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 2.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["751C49660BC52CEE"]
+			dependencies: [
+				"751C49660BC52CEE"
+			]
 			icon: {
 				id: "apothic_enchanting:hellshelf"
 			}
-			id: "0B3F9CF9D729787E"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "6AB12D7326A11F5E"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "apothic_enchanting:hellshelf"
-				criterion: ""
-				id: "6412F057C2D3F24C"
-				type: "advancement"
-			}]
+			id: "C18812DFB57AF3F8"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "6AB12D7326A11F5E"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "F5801767D078BC69"
+					advancement: "apothic_enchanting:hellshelf"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 4.0d
 			y: 2.0d
 		}
 		{
+			dependencies: [
+				"C18812DFB57AF3F8"
+			]
 			icon: {
 				id: "apothic_enchanting:seashelf"
 			}
 			id: "004968C103D394F1"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "38D45406DD0A38F7"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "apothic_enchanting:seashelf"
-				criterion: ""
-				id: "5E61F0F34D272E41"
-				type: "advancement"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "38D45406DD0A38F7"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "B6B8D85168C86353"
+					advancement: "apothic_enchanting:seashelf"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 6.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["004968C103D394F1"]
+			dependencies: [
+				"004968C103D394F1"
+			]
 			icon: {
 				id: "minecraft:bookshelf"
 			}
 			id: "5F11A884A33324F2"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "59B5F1133D8F2B52"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "apothic_enchanting:enchanting_stats"
-				criterion: ""
-				id: "6ECA0E26DED07DD7"
-				type: "advancement"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "C0B383784D307C90"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "CFAF16C1054C75CE"
+					advancement: "apothic_enchanting:enchanting_stats"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 8.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["004968C103D394F1"]
+			dependencies: [
+				"004968C103D394F1"
+			]
 			icon: {
 				id: "apothic_enchanting:library"
 			}
-			id: "7DA895BDDAEC47E8"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "166D9552CC6CB133"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "11D949575A0B6F67"
-				item: { count: 1, id: "apothic_enchanting:library" }
-				type: "item"
-			}]
+			id: "F1EA7130CD5F4489"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "FAC8EEB206285B39"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "E6A9050415F4A767"
+					item: {
+						count: 1
+						id: "apothic_enchanting:library"
+					}
+					type: "item"
+				}
+			]
 			x: 8.0d
 			y: 3.5d
 		}
 		{
-			dependencies: ["5F11A884A33324F2"]
+			dependencies: [
+				"5F11A884A33324F2"
+			]
 			icon: {
 				id: "apothic_enchanting:endshelf"
 			}
-			id: "1883EEE769332E64"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-				id: "753A2ECA0D8C4A44"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "apothic_enchanting:endshelf"
-				criterion: ""
-				id: "3EB582DF5AC6608A"
-				type: "advancement"
-			}]
+			id: "98A40BBFDEDB5230"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					elevate_perms: true
+					id: "85158E91020DCD5C"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3EB582DF5AC6608A"
+					advancement: "apothic_enchanting:endshelf"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 10.0d
 			y: 2.0d
 		}
 		{
+			dependencies: [
+				"98A40BBFDEDB5230"
+			]
 			icon: {
 				id: "minecraft:enchanted_book"
 			}
@@ -399,92 +513,114 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
-					id: "65C0CEAEFB4A9257"
-					permission_level: 2
+					elevate_perms: true
+					id: "82DFED20940DEF76"
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 150"
+					elevate_perms: true
 					id: "066C711566931684"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "octagon"
 			size: 1.25d
-			tasks: [{
-				advancement: "apothic_enchanting:100ench"
-				criterion: ""
-				id: "6EEE3AF8EA75019C"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "B2EE40DBF53BB2B3"
+					advancement: "apothic_enchanting:100ench"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 12.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["31745A40CBF5328D"]
+			dependencies: [
+				"31745A40CBF5328D"
+			]
 			icon: {
 				id: "minecraft:spawner"
 			}
-			id: "49CC48C1743E3E51"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "6ECBE0F0251B760B"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "apothic_spawners:root"
-				criterion: ""
-				id: "6547E26A44F6D041"
-				type: "advancement"
-			}]
+			id: "CC1DFCE0B7367D4B"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "6ECBE0F0251B760B"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6547E26A44F6D041"
+					advancement: "apothic_spawners:root"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 2.0d
 			y: 5.0d
 		}
 		{
+			dependencies: [
+				"CC1DFCE0B7367D4B"
+			]
 			icon: {
 				id: "apotheosis:spawner_rune"
 			}
-			id: "3CEC71F0379C2FF1"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "459A98767C47A6F6"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "apothic_spawners:modifier"
-				criterion: ""
-				id: "6E62C4AE9132003B"
-				type: "advancement"
-			}]
+			id: "EC873575F9BC1413"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "459A98767C47A6F6"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6E62C4AE9132003B"
+					advancement: "apothic_spawners:modifier"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 4.0d
 			y: 5.0d
 		}
 		{
+			dependencies: [
+				"EC873575F9BC1413"
+			]
 			icon: {
 				id: "apotheosis:infused_spawner_rune"
 			}
-			id: "418D6066020EADDE"
+			id: "892F6FDB87644B0C"
 			optional: true
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-				id: "65865C17D7909EF8"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "apothic_spawners:ultimate_spawner"
-				criterion: ""
-				id: "0F684C72C227E27C"
-				type: "advancement"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					elevate_perms: true
+					id: "65865C17D7909EF8"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0F684C72C227E27C"
+					advancement: "apothic_spawners:ultimate_spawner"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 6.5d
 			y: 5.0d
 		}

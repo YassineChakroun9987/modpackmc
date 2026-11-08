@@ -6,22 +6,24 @@
 	icon: {
 		id: "iceandfire:dragonegg_red"
 	}
-	id: "020BE47AFAFA84BF"
-	images: [ ]
+	id: "F0D6C90341B78CDE"
 	order_index: 8
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: [
+				"CD1332807D3C7E60"
+			]
 			icon: {
 				id: "iceandfire:bestiary"
 			}
-			id: "742EDFCD0227237F"
+			id: "FFEDAD19B0F2B46F"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-					id: "1BF7B5973B209C9D"
-					permission_level: 2
+					elevate_perms: true
+					id: "9B3FFB653E61E583"
 					silent: true
 					type: "command"
 				}
@@ -33,35 +35,50 @@
 			]
 			shape: "hexagon"
 			size: 1.5d
-			tasks: [{
-				id: "3A22222CF5288EDF"
-				item: { count: 1, id: "iceandfire:bestiary" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "3A22222CF5288EDF"
+					item: {
+						count: 1
+						id: "iceandfire:bestiary"
+					}
+					type: "item"
+				}
+			]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"FFEDAD19B0F2B46F"
+			]
 			icon: {
 				id: "minecraft:gold_block"
 			}
-			id: "418F8B85D636A777"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "4DE9C16B96E41C1B"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "7ADD81DF12DD51DC"
-				structure: "iceandfire:fire_dragon_roost"
-				type: "structure"
-			}]
+			id: "E3B682A21FF45F93"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "9CEB430FEBA1BC3A"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7ADD81DF12DD51DC"
+					structure: "iceandfire:fire_dragon_roost"
+					type: "structure"
+				}
+			]
 			x: 2.5d
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"E3B682A21FF45F93"
+			]
 			icon: {
 				id: "iceandfire:dragon_skull_fire"
 			}
@@ -69,386 +86,484 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
 					id: "65D9DF35C520DA61"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 150"
-					id: "34A22DC5A91296E2"
-					permission_level: 2
+					elevate_perms: true
+					id: "9072EE77EAD1088B"
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "diamond"
 			size: 1.25d
-			tasks: [{
-				advancement: "iceandfire:iceandfire/kill_if_dragon"
-				criterion: ""
-				id: "20812DE871906882"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "20812DE871906882"
+					advancement: "iceandfire:iceandfire/kill_if_dragon"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 5.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["248F1BFE83A2CB3E"]
+			dependencies: [
+				"248F1BFE83A2CB3E"
+			]
 			icon: {
 				id: "iceandfire:dragonbone"
 			}
-			id: "2F69034E4DB5BA5C"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "6C1326CA53814913"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "iceandfire:iceandfire/dragonbone_tool"
-				criterion: ""
-				id: "0EC26870116F9106"
-				type: "advancement"
-			}]
+			id: "E99F1A9D5C701BF2"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "CF0CAE94B45E2B97"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "D69D358EC9CFF9A9"
+					advancement: "iceandfire:iceandfire/dragonbone_tool"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 7.5d
 			y: 0.0d
 		}
 		{
-			dependencies: ["561F7CA7B55CC07A"]
+			dependencies: [
+				"E99F1A9D5C701BF2"
+				"561F7CA7B55CC07A"
+			]
 			dependency_requirement: "one_completed"
 			icon: {
 				id: "iceandfire:dragonforge_fire_core"
 			}
 			id: "23E87BF2241821DC"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-				id: "281080D8B8D9550E"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "iceandfire:iceandfire/dragon_forge_core"
-				criterion: ""
-				id: "0DD6B6A43FE16217"
-				type: "advancement"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					elevate_perms: true
+					id: "281080D8B8D9550E"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "C974660C464EFC4D"
+					advancement: "iceandfire:iceandfire/dragon_forge_core"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 10.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["23E87BF2241821DC"]
+			dependencies: [
+				"23E87BF2241821DC"
+			]
 			icon: {
 				id: "iceandfire:dragonsteel_fire_ingot"
 			}
-			id: "7E4C84B494039F2D"
+			id: "AA2C1FC0B37A5FA5"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
-					id: "67DFD346AEE3D67B"
-					permission_level: 2
+					elevate_perms: true
+					id: "C5488939347EF8DB"
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 200"
-					id: "41F7D8EDB0C97581"
-					permission_level: 2
+					elevate_perms: true
+					id: "D0286A193BA0B699"
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "octagon"
 			size: 1.5d
-			tasks: [{
-				advancement: "iceandfire:iceandfire/dragonsteel"
-				criterion: ""
-				id: "3C7DE92492551C59"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "3C7DE92492551C59"
+					advancement: "iceandfire:iceandfire/dragonsteel"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 12.5d
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"E3B682A21FF45F93"
+			]
 			icon: {
 				id: "iceandfire:dragonegg_red"
 			}
 			id: "2BDE79183100B325"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "1F6B44072571E6F4"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "iceandfire:iceandfire/dragon_egg"
-				criterion: ""
-				id: "42B6280AD2FA0843"
-				type: "advancement"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "B66A857718A09DCA"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "42B6280AD2FA0843"
+					advancement: "iceandfire:iceandfire/dragon_egg"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 5.0d
 			y: -2.0d
 		}
 		{
-			dependencies: ["2BDE79183100B325"]
+			dependencies: [
+				"2BDE79183100B325"
+			]
 			icon: {
 				id: "iceandfire:dragon_stick"
 			}
 			id: "561F7CA7B55CC07A"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "445A48ED09841A01"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "iceandfire:iceandfire/dragon_staff"
-				criterion: ""
-				id: "344F33AAF77C3494"
-				type: "advancement"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "445A48ED09841A01"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "344F33AAF77C3494"
+					advancement: "iceandfire:iceandfire/dragon_staff"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 7.5d
 			y: -2.0d
 		}
 		{
-			dependencies: ["561F7CA7B55CC07A"]
+			dependencies: [
+				"561F7CA7B55CC07A"
+			]
 			icon: {
 				id: "iceandfire:dragonarmor_iron_head"
 			}
 			id: "479E7C43116EAF6B"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "113322B87364D619"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "iceandfire:iceandfire/dragonarmor"
-				criterion: ""
-				id: "734F0FA99EAE3E55"
-				type: "advancement"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "113322B87364D619"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "734F0FA99EAE3E55"
+					advancement: "iceandfire:iceandfire/dragonarmor"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 10.0d
 			y: -2.0d
 		}
 		{
+			dependencies: [
+				"FFEDAD19B0F2B46F"
+			]
 			icon: {
 				id: "iceandfire:hippogryph_talon"
 			}
-			id: "536E3F8AE4855DB7"
+			id: "D54A77F418CFDBBC"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
 					id: "5DB3F1BEB886D70A"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 50"
+					elevate_perms: true
 					id: "5F2897FE15960930"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				advancement: "iceandfire:iceandfire/tame_hippogryph"
-				criterion: ""
-				id: "522034059000CB68"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "522034059000CB68"
+					advancement: "iceandfire:iceandfire/tame_hippogryph"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 2.5d
 			y: 2.0d
 		}
 		{
+			dependencies: [
+				"D54A77F418CFDBBC"
+			]
 			icon: {
 				id: "iceandfire:troll_tusk"
 			}
 			id: "37E07018C0D1AFEA"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "39A5B83541B0D355"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "39A5B83541B0D355"
+					silent: true
+					type: "command"
+				}
+			]
 			shape: "diamond"
-			tasks: [{
-				advancement: "iceandfire:iceandfire/kill_troll"
-				criterion: ""
-				id: "5850761EB88A9879"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "F38927FE1A112508"
+					advancement: "iceandfire:iceandfire/kill_troll"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 5.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["37E07018C0D1AFEA"]
+			dependencies: [
+				"37E07018C0D1AFEA"
+			]
 			icon: {
 				id: "iceandfire:cyclops_eye"
 			}
-			id: "0438D309A1290246"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "671722D596C58363"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
+			id: "F9163EC47E17A1A5"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "A82BFCD1F1CAFD9B"
+					silent: true
+					type: "command"
+				}
+			]
 			shape: "diamond"
-			tasks: [{
-				advancement: "iceandfire:iceandfire/kill_cyclops"
-				criterion: ""
-				id: "7C760C90BC805A3D"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "EB0458AA0BF0070A"
+					advancement: "iceandfire:iceandfire/kill_cyclops"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 7.5d
 			y: 2.0d
 		}
 		{
+			dependencies: [
+				"F9163EC47E17A1A5"
+			]
 			icon: {
 				id: "iceandfire:gorgon_head"
 			}
-			id: "6C6178A313BF534D"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-				id: "22F4191723846B62"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
+			id: "A8CFC2D2F0AA2CD9"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					elevate_perms: true
+					id: "22F4191723846B62"
+					silent: true
+					type: "command"
+				}
+			]
 			shape: "diamond"
-			tasks: [{
-				advancement: "iceandfire:iceandfire/gorgon_head"
-				criterion: ""
-				id: "4B94792821973CC6"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "4B94792821973CC6"
+					advancement: "iceandfire:iceandfire/gorgon_head"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 10.0d
 			y: 2.0d
 		}
 		{
+			dependencies: [
+				"A8CFC2D2F0AA2CD9"
+			]
 			icon: {
 				id: "iceandfire:sea_serpent_fang"
 			}
 			id: "0A326122AA9487F0"
 			optional: true
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-				id: "3A73777CE2AFE01E"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					elevate_perms: true
+					id: "F6C9262A90EDC922"
+					silent: true
+					type: "command"
+				}
+			]
 			shape: "diamond"
-			tasks: [{
-				advancement: "iceandfire:iceandfire/kill_sea_serpent"
-				criterion: ""
-				id: "2D324C8894EA8AFA"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "2D324C8894EA8AFA"
+					advancement: "iceandfire:iceandfire/kill_sea_serpent"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 12.5d
 			y: 2.0d
 		}
 		{
+			dependencies: [
+				"FFEDAD19B0F2B46F"
+			]
 			icon: {
 				id: "bookofdragons:book_of_dragons"
 			}
 			id: "0965445B21EB0247"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "659B20D456C0EADD"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "bookofdragons:root"
-				criterion: ""
-				id: "77ABC30E6F1AB67B"
-				type: "advancement"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "659B20D456C0EADD"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "77ABC30E6F1AB67B"
+					advancement: "bookofdragons:root"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 2.5d
 			y: 4.5d
 		}
 		{
-			dependencies: ["0965445B21EB0247"]
+			dependencies: [
+				"0965445B21EB0247"
+			]
 			icon: {
 				id: "bookofdragons:glade_roost_map"
 			}
-			id: "4E7BEFF579F71431"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "73AD9455D42B0630"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				advancement: "bookofdragons:roost_discoverer"
-				criterion: ""
-				id: "702C2AF097DE0EE3"
-				type: "advancement"
-			}]
+			id: "B0F4F56965DCD9FB"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "D9172C3BB218D0CB"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "857C465D54A2E088"
+					advancement: "bookofdragons:roost_discoverer"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 5.0d
 			y: 4.5d
 		}
 		{
+			dependencies: [
+				"B0F4F56965DCD9FB"
+			]
 			icon: {
 				id: "minecraft:cod"
 			}
-			id: "33EBFA4143496B60"
-			rewards: [{
-				id: "76D8FE162C9A0505"
-				type: "xp"
-				xp: 150
-			}]
-			tasks: [{
-				advancement: "bookofdragons:sworn_you_had_teeth"
-				criterion: ""
-				id: "394AB556A10C190F"
-				type: "advancement"
-			}]
+			id: "F65D588386DA3907"
+			rewards: [
+				{
+					id: "C9293D7BDAD2172B"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "394AB556A10C190F"
+					advancement: "bookofdragons:sworn_you_had_teeth"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 7.5d
 			y: 4.5d
 		}
 		{
+			dependencies: [
+				"F65D588386DA3907"
+			]
 			icon: {
 				id: "bookofdragons:dragon_whistle"
 			}
-			id: "61CDEAB6F3DC4497"
+			id: "C73E9DBF0FC2870F"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-					id: "0C37E4A3B27A7508"
-					permission_level: 2
+					elevate_perms: true
+					id: "E9952CA7F3412769"
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 100"
-					id: "5A5EFDF083FC2DBC"
-					permission_level: 2
+					elevate_perms: true
+					id: "FACB2EBB3C8FDAE5"
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				advancement: "bookofdragons:dragon_tamer"
-				criterion: ""
-				id: "40BB0A3943BE25BA"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "9AC5CC5D9C2BBF71"
+					advancement: "bookofdragons:dragon_tamer"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 10.0d
 			y: 4.5d
 		}
 		{
+			dependencies: [
+				"C73E9DBF0FC2870F"
+			]
 			icon: {
 				id: "bookofdragons:nightfury_scales"
 			}
@@ -456,59 +571,65 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-					id: "53C7AB976D3C8490"
-					permission_level: 2
+					elevate_perms: true
+					id: "9D7F7A6EB37C29B0"
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 150"
+					elevate_perms: true
 					id: "56619C5724B772EC"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				advancement: "bookofdragons:true_bond"
-				criterion: ""
-				id: "3FEB773C033D890B"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "3FEB773C033D890B"
+					advancement: "bookofdragons:true_bond"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 12.5d
 			y: 4.5d
 		}
 		{
-			dependencies: ["4AA50782E9120B3B"]
+			dependencies: [
+				"4AA50782E9120B3B"
+			]
 			icon: {
 				id: "bookofdragons:fury_plush"
 			}
-			id: "7E1729B92DAE6626"
+			id: "BB1C74E3DC0DC181"
 			optional: true
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					elevate_perms: true
 					id: "19498B4CCD7781F7"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 200"
-					id: "563F1BD2DB72200F"
-					permission_level: 2
+					elevate_perms: true
+					id: "920A7AB9DDC99C97"
 					silent: true
 					type: "command"
 				}
 			]
 			shape: "octagon"
 			size: 1.25d
-			tasks: [{
-				advancement: "bookofdragons:lightning_and_death"
-				criterion: ""
-				id: "548E01A641E207F5"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "548E01A641E207F5"
+					advancement: "bookofdragons:lightning_and_death"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 15.0d
 			y: 4.5d
 		}

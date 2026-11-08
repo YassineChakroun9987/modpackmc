@@ -7,12 +7,14 @@
 		id: "waystones:waystone"
 	}
 	id: "25C9E1DA124149D9"
-	images: [ ]
 	order_index: 2
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: [
+				"CD1332807D3C7E60"
+			]
 			icon: {
 				id: "minecraft:map"
 			}
@@ -20,109 +22,146 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-					id: "40C7853912B5F3E3"
-					permission_level: 2
+					elevate_perms: true
+					id: "F866CCF54027B25C"
 					silent: true
 					type: "command"
 				}
 				{
-					id: "5EBC465E4C8F84B2"
+					id: "8ABC75B1C3EABC9D"
 					type: "xp"
 					xp: 50
 				}
 			]
 			shape: "hexagon"
 			size: 1.5d
-			tasks: [{
-				id: "5468FD024AFEDBF9"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "5468FD024AFEDBF9"
+					type: "checkmark"
+				}
+			]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["267E1565AC13AA98"]
+			dependencies: [
+				"267E1565AC13AA98"
+			]
 			icon: {
 				id: "waystones:waystone"
 			}
-			id: "0B4B63D532D12E15"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "7CEAF148C6E85B82"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "57C83596E1EF38A0"
-				item: { count: 1, id: "waystones:waystone" }
-				type: "item"
-			}]
+			id: "9C65139AC587CC51"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "7CEAF148C6E85B82"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "57C83596E1EF38A0"
+					item: {
+						count: 1
+						id: "waystones:waystone"
+					}
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"9C65139AC587CC51"
+			]
 			icon: {
 				id: "waystones:green_sharestone"
 			}
-			id: "3AD0BAFC33D08D34"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "396695E392BC3BD8"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "3DAEA7466AEBC0A3"
-				item: { count: 1, id: "waystones:green_sharestone" }
-				type: "item"
-			}]
+			id: "B6FB59925FCF8B9B"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "C92610B7BC99851B"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3DAEA7466AEBC0A3"
+					item: {
+						count: 1
+						id: "waystones:green_sharestone"
+					}
+					type: "item"
+				}
+			]
 			x: 4.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["267E1565AC13AA98"]
+			dependencies: [
+				"267E1565AC13AA98"
+			]
 			icon: {
 				id: "minecraft:bell"
 			}
-			id: "4A347016A4727DAD"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "21ECF74CC7FEF4AA"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "3F9BC109D5AFAD29"
-				structure: "#minecraft:village"
-				type: "structure"
-			}]
+			id: "F052ADBC6D6313B0"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "C48D853B4EFD29ED"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3F9BC109D5AFAD29"
+					structure: "#minecraft:village"
+					type: "structure"
+				}
+			]
 			x: 3.0d
 			y: -2.5d
 		}
 		{
+			dependencies: [
+				"F052ADBC6D6313B0"
+			]
 			icon: {
 				id: "minecraft:crossbow"
 			}
-			id: "20865D8752530164"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "3B1662FA1A02BAB7"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "15E68EFDB861DE2F"
-				structure: "nova_structures:illager_manor"
-				type: "structure"
-			}]
+			id: "D1E71A5275A81540"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "959D406627911FAA"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "99B3421961604FCA"
+					structure: "nova_structures:illager_manor"
+					type: "structure"
+				}
+			]
 			x: 5.0d
 			y: -2.5d
 		}
 		{
+			dependencies: [
+				"D1E71A5275A81540"
+			]
 			icon: {
 				id: "minecraft:lodestone"
 			}
@@ -130,113 +169,142 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-					id: "44F5D882DE3A2AC8"
-					permission_level: 2
+					elevate_perms: true
+					id: "AC56EA9D4493260B"
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 50"
+					elevate_perms: true
 					id: "785AF3FBA44BF7E8"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				id: "4AE60D8977344C00"
-				structure: "nova_structures:shrine_combat_tier_3"
-				type: "structure"
-			}]
+			tasks: [
+				{
+					id: "C96B2347E841520B"
+					structure: "nova_structures:shrine_combat_tier_3"
+					type: "structure"
+				}
+			]
 			x: 7.0d
 			y: -2.5d
 		}
 		{
-			dependencies: ["5F5FCB8D88F2C953"]
+			dependencies: [
+				"5F5FCB8D88F2C953"
+			]
 			icon: {
 				id: "minecraft:oak_boat"
 			}
-			id: "183353853133F571"
+			id: "C8EA6271CE4DF52E"
 			optional: true
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "112D48BEFADA43FA"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "51228B9D776C3A2A"
-				structure: "dungeons_arise_seven_seas:victory_frigate"
-				type: "structure"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "EABB9B7C4869AC29"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "DFE02687DF35905B"
+					structure: "dungeons_arise_seven_seas:victory_frigate"
+					type: "structure"
+				}
+			]
 			x: 9.0d
 			y: -2.5d
 		}
 		{
-			dependencies: ["267E1565AC13AA98"]
+			dependencies: [
+				"267E1565AC13AA98"
+			]
 			icon: {
 				id: "minecraft:sandstone"
 			}
 			id: "6DF84EA75C5562EA"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "10E4A0D8D27D7033"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "033DB55A0A58B1A5"
-				structure: "betterdeserttemples:desert_temple"
-				type: "structure"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "E76B04AFFD2DAA10"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "033DB55A0A58B1A5"
+					structure: "betterdeserttemples:desert_temple"
+					type: "structure"
+				}
+			]
 			x: 3.0d
 			y: 2.5d
 		}
 		{
-			dependencies: ["6DF84EA75C5562EA"]
+			dependencies: [
+				"6DF84EA75C5562EA"
+			]
 			icon: {
 				id: "minecraft:campfire"
 			}
-			id: "390EFA2779D3FA79"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
-				id: "5D3DE8858D7EDB98"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "690A1D4B2B896FA3"
-				structure: "dungeons_arise:illager_campsite"
-				type: "structure"
-			}]
+			id: "B94C31B5D56BD25E"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					elevate_perms: true
+					id: "9EF187EDF68F9A9F"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "690A1D4B2B896FA3"
+					structure: "dungeons_arise:illager_campsite"
+					type: "structure"
+				}
+			]
 			x: 5.0d
 			y: 2.5d
 		}
 		{
+			dependencies: [
+				"B94C31B5D56BD25E"
+			]
 			icon: {
 				id: "minecraft:nether_bricks"
 			}
 			id: "24D71A6EF8F0B097"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "009C5790317EC539"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "5F713425A013AA76"
-				structure: "betterfortresses:fortress"
-				type: "structure"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "009C5790317EC539"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "F05FBFD56661E826"
+					structure: "betterfortresses:fortress"
+					type: "structure"
+				}
+			]
 			x: 7.0d
 			y: 2.5d
 		}
 		{
-			dependencies: ["24D71A6EF8F0B097"]
+			dependencies: [
+				"24D71A6EF8F0B097"
+			]
 			icon: {
 				id: "minecraft:ender_eye"
 			}
@@ -244,128 +312,162 @@
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
 					id: "08EFE7A41817FA31"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 75"
-					id: "444FD1B55A885DD0"
-					permission_level: 2
+					elevate_perms: true
+					id: "9F23043131182FAB"
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				id: "2EAE953009CF2559"
-				structure: "betterstrongholds:stronghold"
-				type: "structure"
-			}]
+			tasks: [
+				{
+					id: "C7F103A39F0D1F42"
+					structure: "betterstrongholds:stronghold"
+					type: "structure"
+				}
+			]
 			x: 9.0d
 			y: 2.5d
 		}
 		{
-			dependencies: ["28F3DECC2D51E759"]
+			dependencies: [
+				"28F3DECC2D51E759"
+			]
 			icon: {
 				id: "minecraft:phantom_membrane"
 			}
-			id: "171892AB746249EA"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-				id: "2616309F3C752027"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "364981C3728F476F"
-				structure: "dungeons_arise:heavenly_rider"
-				type: "structure"
-			}]
+			id: "BC4ED23396BF4CA9"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					elevate_perms: true
+					id: "2616309F3C752027"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "9FBF962EAD47DAE5"
+					structure: "dungeons_arise:heavenly_rider"
+					type: "structure"
+				}
+			]
 			x: 11.0d
 			y: 2.5d
 		}
 		{
+			dependencies: [
+				"BC4ED23396BF4CA9"
+			]
 			icon: {
 				id: "minecraft:cracked_stone_bricks"
 			}
 			id: "530EE98DC7417659"
 			optional: true
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-				id: "27E18B986377D309"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "19423988ED2EAECF"
-				structure: "tlc:lost_castle"
-				type: "structure"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					elevate_perms: true
+					id: "B539B1C69BD82015"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "BE952310AE1A3AE8"
+					structure: "tlc:lost_castle"
+					type: "structure"
+				}
+			]
 			x: 13.0d
 			y: 2.5d
 		}
 		{
+			dependencies: [
+				"B6FB59925FCF8B9B"
+			]
 			icon: {
 				id: "minecraft:white_wool"
 			}
 			id: "24AEEB8F30D8B54E"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "5D2C7226A8D48228"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "366E95C9776F0696"
-				structure: "skyvillages:skyvillage"
-				type: "structure"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "5D2C7226A8D48228"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "366E95C9776F0696"
+					structure: "skyvillages:skyvillage"
+					type: "structure"
+				}
+			]
 			x: 5.0d
 			y: 5.0d
 		}
 		{
-			dependencies: ["24AEEB8F30D8B54E"]
+			dependencies: [
+				"24AEEB8F30D8B54E"
+			]
 			icon: {
 				id: "minecraft:amethyst_block"
 			}
 			id: "2ED47A2E25D727E7"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
-				id: "1717ED892802BA83"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "211B7A7255B50F3D"
-				structure: "floating_islands:hut_with_waystone"
-				type: "structure"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					elevate_perms: true
+					id: "1717ED892802BA83"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "211B7A7255B50F3D"
+					structure: "floating_islands:hut_with_waystone"
+					type: "structure"
+				}
+			]
 			x: 7.0d
 			y: 5.0d
 		}
 		{
-			dependencies: ["2ED47A2E25D727E7"]
+			dependencies: [
+				"2ED47A2E25D727E7"
+			]
 			icon: {
 				id: "minecraft:prismarine_shard"
 			}
 			id: "1B88950EAC0BB55D"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-				id: "319CC9558DD246CF"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "0B14D48CB1FCF648"
-				structure: "sky_whale_ship:whaleship"
-				type: "structure"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					elevate_perms: true
+					id: "C2DF712CF1F6F67B"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "9B7B7150C32AB767"
+					structure: "sky_whale_ship:whaleship"
+					type: "structure"
+				}
+			]
 			x: 9.0d
 			y: 5.0d
 		}
@@ -378,68 +480,82 @@
 				id: "castle_in_the_sky:levitation_stone"
 			}
 			id: "6EE0B72AFB308E69"
-			rewards: [{
-				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
-				id: "1674DE8163CAB684"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			tasks: [{
-				id: "6F10DD3834A3A43F"
-				item: { count: 1, id: "castle_in_the_sky:levitation_stone" }
-				type: "item"
-			}]
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					elevate_perms: true
+					id: "86C4FB4650E1E20C"
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6F10DD3834A3A43F"
+					item: {
+						count: 1
+						id: "castle_in_the_sky:levitation_stone"
+					}
+					type: "item"
+				}
+			]
 			x: 11.0d
 			y: 5.0d
 		}
 		{
-			dependencies: ["6EE0B72AFB308E69"]
+			dependencies: [
+				"6EE0B72AFB308E69"
+			]
 			icon: {
 				id: "castle_in_the_sky:red_key"
 			}
-			id: "449F16928347357D"
+			id: "9163E26FCD0558A6"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					elevate_perms: true
 					id: "6C3EFAE9A27B51F6"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 100"
+					elevate_perms: true
 					id: "48344ECA65A15217"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 			]
-			tasks: [{
-				id: "579A93612B18E804"
-				structure: "castle_in_the_sky:castle_in_the_sky"
-				type: "structure"
-			}]
+			tasks: [
+				{
+					id: "971A3FE04C2F8E88"
+					structure: "castle_in_the_sky:castle_in_the_sky"
+					type: "structure"
+				}
+			]
 			x: 13.0d
 			y: 5.0d
 		}
 		{
+			dependencies: [
+				"9163E26FCD0558A6"
+			]
 			icon: {
 				id: "castle_in_the_sky:laputa_core"
 			}
-			id: "610D1367906DD9CF"
+			id: "E0408AB88EDF0604"
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					elevate_perms: true
 					id: "00C0137BABC8F54D"
-					permission_level: 2
 					silent: true
 					type: "command"
 				}
 				{
 					command: "/puffish_skills experience add {p} greenlanterns:adventurer 200"
-					id: "5F736997671E8D57"
-					permission_level: 2
+					elevate_perms: true
+					id: "E8F55E691FF0FA69"
 					silent: true
 					type: "command"
 				}
@@ -451,12 +567,14 @@
 			]
 			shape: "octagon"
 			size: 1.5d
-			tasks: [{
-				advancement: "castle_in_the_sky:conquer_castle"
-				criterion: ""
-				id: "08CFE9142B153A4B"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					id: "B130F800807F4CF7"
+					advancement: "castle_in_the_sky:conquer_castle"
+					criterion: ""
+					type: "advancement"
+				}
+			]
 			x: 15.0d
 			y: 5.0d
 		}

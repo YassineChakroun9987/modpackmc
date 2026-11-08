@@ -109,7 +109,8 @@ function glTrialFinish(server, player, st) {
   server.scheduleInTicks(wait + 10, function () {
     glRun(server, 'give ' + player.username + ' ' + ring)
     glGiveStage(player, stage)
-    glGiveStage(player, 'gl_ringbearer')
+    glGiveStage(player, 'gl_ringed_' + id)   // this class's trial is over (its ring quest)
+    glGiveStage(player, 'gl_ringbearer')     // any ring at all (finale, guides)
     glRun(server, 'title ' + player.username + ' title {"text":"' + title.replace(/§./g, '') + '"}')
     glRun(server, 'puffish_skills experience add ' + player.username + ' greenlanterns:' + id + ' 500')
     glSayAll(server, '§6✦ §f' + player.username + '§6 has been chosen. ' + title + '§r§6 ✦')
