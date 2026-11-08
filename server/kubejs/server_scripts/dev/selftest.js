@@ -20,6 +20,10 @@ ServerEvents.commandRegistry(function (event) {
       check('white ring', items.containsKey($ResourceLocation.parse('createlanterns:white_power_ring')))
       check('black ring', items.containsKey($ResourceLocation.parse('createlanterns:black_power_ring')))
       check('adventurer category', $SkillsAPI && $SkillsAPI.getCategory($ResourceLocation.parse('greenlanterns:adventurer')).isPresent())
+      check('FTB Teams API for party teams', $FTBTeamsAPI !== null && $FTBTeamsAPI.api().getManager() !== null)
+      check('cold-biome test works', (function () {
+        try { return server.overworld().getBiome(new $BlockPos(0, 64, 0)).value().getBaseTemperature() > -10 } catch (e) { console.error('[selftest] ' + e); return false }
+      })())
       // Ring-trial scoring: every 4-answer combination
       var counts = { white: 0, black: 0, own: 0 }
       for (var a = 0; a < 81; a++) {
@@ -35,6 +39,7 @@ ServerEvents.commandRegistry(function (event) {
       glPrologueInit(server)
       var d = glData(server)
       check('prologue init', d.getBoolean('init'))
+      check('raid countdown starts at 7 days', glRaidLeft(d) === GL_RAID_DAYS * GL_DAY)
       var ox = d.getInt('ox'), oz = d.getInt('oz')
       glRun(server, 'execute in minecraft:overworld run forceload add ' + (ox - 8) + ' ' + (oz - 8) + ' ' + (ox + 8) + ' ' + (oz + 8))
       check('outpost ground height found', d.getInt('oy') > 0)

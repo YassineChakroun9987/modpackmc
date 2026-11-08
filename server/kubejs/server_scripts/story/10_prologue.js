@@ -33,6 +33,7 @@ function glPrologueInit(server) {
     'HandItems:[{id:"minecraft:crossbow",count:1},{}],ArmorItems:[{id:"minecraft:iron_boots",count:1},{id:"minecraft:iron_leggings",count:1},{id:"minecraft:iron_chestplate",count:1},{id:"minecraft:iron_helmet",count:1}]}')
   glRun(server, 'execute in minecraft:overworld run forceload remove ' + (ox - 32) + ' ' + (oz - 32) + ' ' + (ox + 32) + ' ' + (oz + 32))
   d.putLong('raidStart', glGameTime(level))
+  d.putLong('raidElapsed', 0)
   d.putBoolean('init', true)
   glRun(server, 'bossbar add gl:warband {"text":"The Warband marches in 7 days","color":"red"}')
   glRun(server, 'bossbar set gl:warband color red')
@@ -42,6 +43,10 @@ function glPrologueInit(server) {
   glRun(server, 'bossbar set gl:warlord max 300')
   console.info('[gl] prologue initialised: village ' + vx + ',' + vz + ' outpost ' + ox + ',' + oy + ',' + oz + ' crash ' + cx + ',' + cz)
 }
+
+// Ticks left before the raid. The countdown only runs while someone is online, so an
+// empty server left running overnight doesn't spend the players' seven days for them.
+function glRaidLeft(d) { return GL_RAID_DAYS * GL_DAY - d.getLong('raidElapsed') }
 
 function glDirection(fromX, fromZ, toX, toZ) {
   var dx = toX - fromX, dz = toZ - fromZ
@@ -79,10 +84,12 @@ ServerEvents.tick(function (event) {
   var d = glData(server)
   if (!d.getBoolean('init')) return
   var level = server.overworld()
-  var now = glGameTime(level)
+  var online = 0
+  server.players.forEach(function (p) { online++ })
 
   if (!d.getBoolean('raidTriggered')) {
-    var left = d.getLong('raidStart') + GL_RAID_DAYS * GL_DAY - now
+    if (online > 0) d.putLong('raidElapsed', d.getLong('raidElapsed') + 20)
+    var left = glRaidLeft(d)
     if (left > 0) {
       var days = Math.ceil(left / GL_DAY)
       glRun(server, 'bossbar set gl:warband value ' + Math.max(0, Math.floor(left)))

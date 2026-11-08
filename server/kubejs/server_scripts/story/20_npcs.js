@@ -47,7 +47,7 @@ ItemEvents.entityInteracted(function (event) {
   var lines
   if (t.getTags().contains('gl_npc_elder')) {
     if (!d.getBoolean('raidTriggered')) {
-      var left = Math.max(0, Math.ceil((d.getLong('raidStart') + GL_RAID_DAYS * GL_DAY - glGameTime(server.overworld())) / GL_DAY))
+      var left = Math.max(0, Math.ceil(glRaidLeft(d) / GL_DAY))
       lines = [
         '§6Elder Maren:§f "' + left + ' day' + (left === 1 ? '' : 's') + ' until they come. Every hour counts."',
         '§6"Light the village at night. Give our folk §fswords§6. Guards defend their homes, and a §fhired spear§6 is worth two farmers."',
