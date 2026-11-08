@@ -67,6 +67,10 @@
     {
       "name": "betterstrongholds:stronghold",
       "override_global_spacing_and_separation_modifier": true
+    },
+    {
+      "name": "castle_in_the_sky:castle_in_the_sky",
+      "override_global_spacing_and_separation_modifier": true
     }
   ],
   "structure_template_pools": []
