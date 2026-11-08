@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "terralith:cave/andesite_caves",
+      "required": false
+    },
+    {
+      "id": "terralith:cave/diorite_caves",
+      "required": false
+    },
+    {
+      "id": "terralith:cave/granite_caves",
+      "required": false
+    },
+    {
+      "id": "terralith:cave/tuff_caves",
+      "required": false
+    }
+  ]
+}
