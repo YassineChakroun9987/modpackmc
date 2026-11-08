@@ -39,6 +39,8 @@ KNOWN_HARMLESS = [
     r"mixin/\]: (Error loading class: |@Mixin target .* was not found)",  # optional compat mixins for mods we don't run
     r"draconicevolution/\]: (Reactor detonation initiated|Calculating explosion ETA|\*\*Explosion Imminent)",  # DE startup log noise
     r"ReloadableServerRegistries/\]: Found loot table element validation problem",  # entries for missing items are skipped
+    r"KubeRecipe\.java#\d+: Failed to parse recipe .* Falling back to vanilla",  # KubeJS hands unknown recipe formats back to vanilla; they still work
+    r"RecipeManager/\]: Skipping recipe .*, not a json object",  # our neoforge:false overrides (docs/broken-data.md), seen by KubeJS
 ]
 
 

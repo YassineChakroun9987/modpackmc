@@ -3,7 +3,13 @@
     "minecraft",
     "kubejs",
     "create",
-    "mekanism"
+    "mekanism",
+    "createaddition",
+    "iceandfire",
+    "galosphere",
+    "magistuarmory",
+    "draconicevolution",
+    "twilightforest"
   ],
   "priority_overrides": {},
   "stone_variants": [

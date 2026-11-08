@@ -107,18 +107,18 @@
 	#maximum until it is respawned.
 	# Default: 2000.0
 	# Range: 1.0 ~ 1000000.0
-	maxHealth = 2000.0
+	maxHealth = 6000.0
 	#Armor points. 30 is Minecraft's own ceiling for the attribute, not a limit here.
 	#Armor is weak against big hits by design, so for a boss that survives endgame
 	#gear use playerDamageMultiplier below instead.
 	# Default: 0.0
 	# Range: 0.0 ~ 30.0
-	armor = 0.0
+	armor = 15.0
 	#Armor toughness, capped at 20 by the attribute. Resists armor being eaten
 	#through by heavy hits. Does nothing while armor is 0.
 	# Default: 0.0
 	# Range: 0.0 ~ 20.0
-	armorToughness = 0.0
+	armorToughness = 8.0
 	#Body segments behind the head. Applies to a newly summoned boss only.
 	#Every segment is a ticked, tracked entity, so this is the most expensive number
 	#in the file.
@@ -140,7 +140,7 @@
 	#and Cosmic Flame. Stacks with the phase 2 and co-op multipliers.
 	# Default: 1.0
 	# Range: 0.0 ~ 100.0
-	attackDamageMultiplier = 1.0
+	attackDamageMultiplier = 1.6
 	#Most beams one Doombeam volley may contain. Extra beams are dropped and logged.
 	#Every beam is sent to every nearby client, so this is bandwidth as well as work.
 	# Default: 2048
@@ -150,7 +150,7 @@
 	#Paused during the entrance, the phase 2 transition, the death and the departure.
 	# Default: 0.0
 	# Range: 0.0 ~ 100000.0
-	regenAmount = 0.0
+	regenAmount = 6.0
 	#Ticks between regeneration attempts. 20 is once a second.
 	# Default: 20
 	# Range: 1 ~ 12000
@@ -164,7 +164,7 @@
 	#what survives it; this removes the reduction instead.
 	# Default: 0.0
 	# Range: 0.0 ~ 30.0
-	armorPierce = 0.0
+	armorPierce = 12.0
 	#Armor toughness of yours he ignores. -1 tracks half of armorPierce.
 	# Default: -1.0
 	# Range: -1.0 ~ 20.0
@@ -173,11 +173,11 @@
 	#Separate from armorPierce, because Protection is a separate reduction step.
 	# Default: 0.0
 	# Range: 0.0 ~ 20.0
-	enchantmentPierce = 0.0
+	enchantmentPierce = 6.0
 	#Seconds his attacks seal your healing for, shown as Devoured Vitality. 0 is off.
 	# Default: 0
 	# Range: 0 ~ 600
-	regenHaltSeconds = 0
+	regenHaltSeconds = 4
 	#How deeply Devoured Vitality bites, 1 to 5.
 	#1 stops natural regeneration only, so potions and golden apples still work.
 	#2 to 5 also cut every other source a quarter at a time; 5 stops healing entirely.
@@ -191,7 +191,7 @@
 	regenHaltCooldownSeconds = 30
 	#Whether he eats levels off your enchanted gear, healing on what he takes.
 	#Curses are left alone. What he takes comes back when he is dead or gone.
-	enchantDevourEnabled = false
+	enchantDevourEnabled = true
 	#Seconds between one player having gear eaten and the next time it can happen to
 	#them.
 	# Default: 30
@@ -220,7 +220,7 @@
 	#Damage from anything with no player behind it is unaffected.
 	# Default: 1.0
 	# Range: 0.0 ~ 100.0
-	playerDamageMultiplier = 1.0
+	playerDamageMultiplier = 0.4
 	#Multiplies his outgoing damage in phase 2, covering the bite, body
 	#contact, fireballs and lasers. 1.0 means phase 2 deals the same
 	#damage as phase 1.
