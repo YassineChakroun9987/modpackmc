@@ -1,0 +1,53 @@
+{
+  "config_version": "2.0.43",
+  "config_datetime": "2026-11-09_00-26-33",
+  "general": {
+    "prevent_structure_overlap": true,
+    "enable_global_spacing_and_separation_modifier": true,
+    "global_spacing_and_separation_modifier": 1.5
+  },
+  "structure_namespaces": [],
+  "structures": [
+    {
+      "name": "dungeons_arise:illager_windmill",
+      "override_global_flatness_check": true,
+      "enable_flatness_check": true,
+      "flatness_check_mode": "AUTO"
+    },
+    {
+      "name": "dungeons_arise:wishing_well",
+      "override_global_flatness_check": true,
+      "enable_flatness_check": true,
+      "flatness_check_mode": "AUTO"
+    },
+    {
+      "name": "dungeons_arise:giant_mushroom",
+      "override_global_flatness_check": true,
+      "enable_flatness_check": true,
+      "flatness_check_mode": "AUTO"
+    },
+    {
+      "name": "dungeons_arise:jungle_tree_house",
+      "override_global_flatness_check": true,
+      "enable_flatness_check": true,
+      "flatness_check_mode": "AUTO"
+    },
+    {
+      "name": "dungeons_arise:shiraz_palace",
+      "override_global_flatness_check": true,
+      "enable_flatness_check": true,
+      "flatness_check_mode": "AUTO"
+    }
+  ],
+  "structure_sets": [
+    {
+      "name": "minecraft:villages",
+      "override_global_spacing_and_separation_modifier": true
+    },
+    {
+      "name": "betterstrongholds:stronghold",
+      "override_global_spacing_and_separation_modifier": true
+    }
+  ],
+  "structure_template_pools": []
+}
