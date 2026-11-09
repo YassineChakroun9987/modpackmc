@@ -35,12 +35,16 @@ PlayerEvents.loggedIn(function (event) {
 
 var GL_TALKING = {}
 
+// event.cancel() THROWS in KubeJS 7 (it ends the handler on the spot), so it must be the last line:
+// do the talking first, then cancel so the villager's trade screen doesn't open.
 ItemEvents.entityInteracted(function (event) {
   var t = event.target
   if (!t || !t.getTags || !t.getTags().contains('gl_npc')) return
+  if (String(event.hand) === 'MAIN_HAND') glNpcTalk(event.server, event.player, t)
   event.cancel()
-  if (String(event.hand) !== 'MAIN_HAND') return
-  var player = event.player, server = event.server
+})
+
+function glNpcTalk(server, player, t) {
   var key = player.username
   if (GL_TALKING[key] && GL_TALKING[key] > server.tickCount) return
   var d = glData(server)
@@ -86,4 +90,4 @@ ItemEvents.entityInteracted(function (event) {
     }
   }
   GL_TALKING[key] = server.tickCount + glSpeak(server, player, lines, 60)
-})
+}
