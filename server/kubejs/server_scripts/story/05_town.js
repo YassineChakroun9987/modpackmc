@@ -4,7 +4,8 @@
 //  Villages (CTOV keeps its own villages next to them). On a brand-new world,
 //  before the prologue starts, the world spawn moves to the nearest such town,
 //  so the prologue (Elder Maren, the 7-day raid) always happens in one.
-//  Village Spawn Point has already put spawn in *a* village; this picks a town.
+//  Village Spawn Point has already put spawn in *a* village; this picks a town. Only plains and desert
+//  towns count (flat ground: no mountain starts), see the story_town tag.
 //  Runs once per world (flag gl.townPicked). Logs "[gl] story town: ...",
 //  which tools/pregen.py waits for before it pre-generates around spawn.
 // ============================================================================

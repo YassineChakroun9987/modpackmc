@@ -107,6 +107,15 @@ ServerEvents.commandRegistry(function (event) {
         check('chest tier: a village chest is tier 1, a Nether chest at least 3',
           glChestTier('minecraft:chests/village/village_plains_house', 'minecraft:overworld') === 1 && glChestTier('minecraft:chests/village/village_plains_house', 'minecraft:the_nether') >= 3)
       } catch (err) { bad++; console.error('[selftest] chest cap threw: ' + err) }
+      try {
+        var lvl = server.overworld(), VT = Java.loadClass('net.minecraft.world.entity.EntityType').VILLAGER
+        var npc = VT.create(lvl), plain = VT.create(lvl)
+        npc.addTag('gl_npc'); npc.setPos(0, 200, 0); plain.setPos(2, 200, 0)
+        lvl.addFreshEntity(npc); lvl.addFreshEntity(plain)
+        npc.attack(lvl.damageSources().generic(), 10); plain.attack(lvl.damageSources().generic(), 10)
+        check('story NPCs take no damage (npc ' + npc.getHealth() + ', plain villager ' + plain.getHealth() + ')', npc.getHealth() === npc.getMaxHealth() && plain.getHealth() < plain.getMaxHealth())
+        npc.discard(); plain.discard()
+      } catch (err) { bad++; console.error('[selftest] npc damage threw: ' + err) }
       try { glCorpseSelftest(server, check) } catch (err) { bad++; console.error('[selftest] corpse quick-loot threw: ' + err); if (err.javaException) console.error('[selftest]   ' + err.javaException) }
       console.info('[selftest] DONE: ' + ok + ' passed, ' + bad + ' failed')
       return bad === 0 ? 1 : 0

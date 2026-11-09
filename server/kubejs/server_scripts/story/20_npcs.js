@@ -94,3 +94,11 @@ function glNpcTalk(server, player, t) {
   }
   GL_TALKING[key] = server.tickCount + glSpeak(server, player, lines, 60)
 }
+
+// Story NPCs (Kaelen, Elder Maren) can't be hurt by anything: the Invulnerable flag alone still lets
+// creative-mode players, lava, the void and some mods' attacks through. (cancel() throws: last line.)
+EntityEvents.beforeHurt(function (event) {
+  var e = event.entity
+  if (!e || !e.getTags || !e.getTags().contains('gl_npc')) return
+  event.cancel()
+})

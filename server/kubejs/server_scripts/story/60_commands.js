@@ -5,6 +5,8 @@
 //    /gl lore <player> <entry>        op/quest
 //    /gl choose <n>                   any player (answers the ring trial)
 //    /gl status                       any player (your classes, levels, ring, story)
+//    /gl raid now                     op: end the 7-day countdown (the raid starts when someone is in the village)
+//    /gl raid days <n>                op: set the countdown to n days
 // ============================================================================
 
 ServerEvents.commandRegistry(function (event) {
@@ -48,7 +50,25 @@ ServerEvents.commandRegistry(function (event) {
     if (p.stages.has('gl_ring_black')) glSay(p, '§8§lYou bear the Black Light.')
     return 1
   })
+  // Debug: skip or shorten the Warband countdown. The normal prologue tick still starts the raid
+  // (when a player is within 96 blocks of the village), so this tests the real trigger.
+  var raidSet = function (ctx, daysLeft) {
+    var server = ctx.source.getServer(), d = glData(server)
+    var say = function (t) { ctx.source.sendSystemMessage(Text.of(t)) }
+    if (!d.getBoolean('init')) { say("§cThe prologue hasn't started yet: someone has to log in first."); return 0 }
+    if (d.getBoolean('raidTriggered')) { say('§eThe raid has already started.'); return 0 }
+    d.putLong('raidElapsed', Math.max(0, GL_RAID_DAYS * GL_DAY - daysLeft * GL_DAY))
+    say(daysLeft > 0 ? '§aWarband countdown set to §f' + daysLeft + '§a day(s).'
+                     : '§aCountdown ended. §7The raid starts as soon as someone is within 96 blocks of the village (' + d.getInt('vx') + ', ' + d.getInt('vz') + ').')
+    return 1
+  }
+  var raid = Commands.literal('raid').requires(op)
+    .then(Commands.literal('now').executes(function (ctx) { return raidSet(ctx, 0) }))
+    .then(Commands.literal('days').then(Commands.argument('n', Arguments.INTEGER.create(event))
+      .executes(function (ctx) { return raidSet(ctx, Math.max(0, Math.min(GL_RAID_DAYS, Arguments.INTEGER.getResult(ctx, 'n')))) })))
+
   event.register(Commands.literal('gl')
+    .then(raid)
     .then(Commands.literal('class').requires(op).then(classJoin))
     .then(Commands.literal('trial').requires(op).then(trialBegin))
     .then(lore).then(choose).then(status))
