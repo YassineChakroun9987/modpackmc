@@ -249,7 +249,7 @@ When a mod is dropped, check this table for libraries that become `orphaned`.
 | Xaero's Minimap + World Map | 26.6.0 · 1.47.0 | both | Minimap with waypoints and a full-screen world map (M) | — | testing |
 | Open Parties and Claims | 0.33.0 | both | Claim land so friends and mobs can't grief it; **uses FTB Teams as its party system** | — | tuned |
 | Sophisticated Backpacks | 3.26.20 | both | Upgradable backpacks (pickup, magnet, feeding, crafting…) | Sophisticated Core | testing |
-| Corpse | 1.1.22 | both | When you die, your items stay in a corpse you can loot back (no despawn) | — | testing |
+| Corpse | 1.1.22 | both | When you die, your items stay in a corpse you can loot back (no despawn). Our `glue/corpse_quickloot.js`: right-click your own body = everything back in its old slot, Curios too; Shift + right-click = the normal window | — | testing |
 | FTB Ultimine | 2101.1.15 | both | Hold the key (default `` ` ``) to mine a whole vein or tree at once (64 blocks) | FTB Library | testing |
 | Polymorph | 1.1.0 | both | Pick which output you get when two mods' recipes overlap | — | testing |
 | Enchantment Descriptions | 21.1.11 | both | Every enchantment explains itself in its tooltip | Bookshelf, Prickle | testing |

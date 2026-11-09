@@ -94,3 +94,17 @@ The chapter id is the file name, so cross-chapter keys are `<file>:<key>`, e.g. 
 - Inside functions, use `var` (Rhino throws "redeclaration of var" for `const`/`let` in some blocks).
 - No computed object keys (`{[k]: v}`). Build objects with `o[k] = v`.
 - Every file in `kubejs/data` must have a lowercase path, or KubeJS crashes at startup.
+- `event.cancel()` **throws**: it ends the handler on the spot, so it must be the last line.
+  Code after it never runs (that's how the NPC dialogue was silently dead until 2026-11-09).
+- `Item.of('<unknown id>')` throws an error that JS `try/catch` can't catch: the whole command
+  fails with "An unexpected error occurred". Check the item registry first.
+- Entities: `getUUID()` is renamed to `getUuid()` (also `getType`, `getXRot`, `getPersistentData`
+  and others; see KubeJS's `EntityMixin`). Java `UUID`s from mod APIs are unaffected.
+- A JS error in a command handler only shows as "An unexpected error occurred". To see the stack
+  trace, run the code from `server.scheduleInTicks(1, ...)`: KubeJS prints the full trace.
+
+## Server data (`server.persistentData`)
+| Key | Holds | Written by |
+|---|---|---|
+| `gl` | story state: countdown, village/outpost/crash positions, flags | `story/` |
+| `gl_corpse.<player uuid>` | the last 8 deaths' curio slots (slot id, index, cosmetic, item), so a body's curios go back to the exact slot | `glue/corpse_quickloot.js` |

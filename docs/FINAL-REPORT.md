@@ -10,13 +10,13 @@ check. Everything is committed to git, so any decision can be undone (`git log -
 | | |
 |---|---|
 | **Server** | Boots in ~45 s with **0 errors** and **0 unreviewed warnings** (2 known, harmless and explained) |
-| **Mods** | 148 server jars + 9 client-only; the `greenlanterns` client is **in sync** |
+| **Mods** | 149 server jars + 9 client-only; the `greenlanterns` client is **in sync** |
 | **World** | Fresh world `greenlanterns`, pre-generated 1,200 blocks around the spawn village. Older worlds are in `server/backups/` |
 | **Quest book** | "The Book of Oa": **26 chapters, 646 quests** (story, 7 classes, finale, 16 mod guides) |
 | **Space** | Oa, Korugar, the Moon and deep space are real places (Create Cosmonautics) |
 | **Classes** | 8 skill trees (Adventurer + 7 lights): 22 + 7 × 34 nodes |
 | **Loot** | 747 chest tables sorted into 5 difficulty tiers, items from every gear/magic mod, scaled by Luck |
-| **Self-test** | `/gl_dev selftest`: **32/32 checks pass** on a fresh world (IDs, skill categories, trial scoring, the outpost, Warlord Vex, the crash site, both NPCs) |
+| **Self-test** | `/gl_dev selftest`: **49/49 checks pass** on a fresh world (IDs, skill categories, trial scoring, the outpost, Warlord Vex, the crash site, both NPCs, corpse quick-loot) |
 
 ## 2. Before you play (5 minutes)
 
@@ -140,7 +140,7 @@ The ones you're most likely to want to change are marked ★.
 |---|---|
 | Map | Xaero's Minimap + World Map |
 | Backpacks | Sophisticated Backpacks |
-| Gravestone | Corpse (your items wait in your body) |
+| Gravestone | Corpse (your items wait in your body). **Right-click your own body** and everything goes back where it was, Curios slots too; **Shift + right-click** opens the normal window (see §10) |
 | Fast travel | Waystones |
 | Land claims | Open Parties and Claims |
 | Vein mining | FTB Ultimine (hold `` ` ``) |
@@ -174,6 +174,10 @@ Things that need a real player, so I couldn't test them headless:
       its join quest, and that XP feels right. The curve is level 10 ≈ 1.9k XP, level 25 ≈ 13k XP.
 - [ ] Parties: make an FTB party with a friend and check friendly fire is off and XP is shared.
 - [ ] Loot: open the same kind of chest with and without `/effect give @s luck 60 5`.
+- [ ] Corpse: die wearing a backpack, spellbook and ring, respawn, pick something up, then
+      right-click your body: everything is back in its old slot and the body disappears.
+      Shift + right-click opens the window instead. A friend right-clicking your body gets the
+      normal window.
 
 **Quest hints to confirm**
 - [ ] How Lord Pumpkinhead is summoned and where the Supreme Bonescaller spawns (Born in Chaos).
@@ -226,7 +230,8 @@ a boot, and a second boot leaves the files byte-for-byte unchanged.
 
 ## 8. Still yours to decide
 
-- Shaders (Iris) and EMI next to JEI: both client-side taste.
+- Shaders (Iris) and EMI next to JEI: both client-side taste. If you add Iris, also add
+  **Enhanced Celestials 2: Shader Support** (both sides), or the moons look wrong with shaders.
 - Whether anything in section 4 should change, especially ★ 1–3.
 - When you'd like to publish the repo anywhere: change the RCON password first.
 
@@ -235,7 +240,7 @@ a boot, and a second boot leaves the files byte-for-byte unchanged.
 | What | Where | How to change it |
 |---|---|---|
 | Story engine | `server/kubejs/server_scripts/story/` | edit, then `/reload` (or restart) |
-| Party/tag glue | `server/kubejs/server_scripts/glue/` | same |
+| Party/tag glue, corpse quick-loot | `server/kubejs/server_scripts/glue/` | same |
 | Quest book | `quests/src/*.json` | `python -I tools/questgen.py --check`, then without `--check` |
 | Skill trees | `tools/skills/gen_skills.py` | run it, then `tools/skills/check_skills.py` |
 | Loot | `tools/loot/gen_loot.py` + `server/kubejs/server_scripts/loot/` | run it, then `tools/loot/check_loot.py` |
@@ -245,3 +250,31 @@ a boot, and a second boot leaves the files byte-for-byte unchanged.
 | Pre-generate | `python -I tools/pregen.py --radius 1200` | server must be stopped |
 | Admin commands | `/gl class join <p> <id>`, `/gl trial begin <p> <id>`, `/gl lore <p> <entry>` | op only |
 | Player commands | `/gl status` (your classes and ring), `/gl choose <n>` (trial answers) | anyone |
+
+## 10. Changes after the overnight build (2026-11-09, morning)
+
+**Enhanced Celestials → Enhanced Celestials 2.** Version 6.0.2.6 showed an "Enhanced Celestials 2
+is here!" screen every time you joined a world, and had no setting to turn it off. It's replaced
+by **EC 2 Core + Default Lunar Events**: the same blood, blue, harvest and super moons, and the
+version that's still maintained. Going back to 6.0.2.5 instead would probably have broken with
+our newer Data Anchor library. Your friends' `mods` folders need the same swap: remove
+`Enhanced-Celestials-NeoForge-1.21.1-6.0.2.6.jar` and add the two `Enhanced-Celestials-2-*` jars.
+
+**Corpse quick-loot** (`glue/corpse_quickloot.js`). Right-click **your own** body:
+- hotbar, inventory, armour and offhand items go back into the exact slots they were in;
+- Curios (backpack, spellbook, rings, necklace...) go back into the exact curio slot they were
+  in. Corpse doesn't record curio slots, so the script notes them at the moment you die;
+- anything you picked up since respawning is moved to a free slot, not lost;
+- if your pack is too full, the rest stays in the body and chat tells you so;
+- the empty body disappears.
+
+**Shift + right-click** still opens the normal Corpse window. Other people's bodies, and other
+people at yours, work exactly as before. A body from before this script existed has no curio
+note, so its curios go into whatever empty slot fits them. The self-test covers all of this with
+a fake player (16 checks).
+
+**Bug fix: the story NPCs never spoke.** In KubeJS 7, `event.cancel()` ends the script on the spot,
+and the NPC script called it *before* the dialogue. So Elder Maren and Kaelen would have said
+nothing. Worse, Kaelen's tale is what unlocks **Act I**, so the story would have stalled after the
+crash. The dialogue now runs first and the cancel comes last. This is still on the in-game
+checklist (§5): it needs a real right-click to confirm.

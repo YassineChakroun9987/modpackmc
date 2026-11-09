@@ -57,7 +57,18 @@ ServerEvents.commandRegistry(function (event) {
       check('elder spawned', d.getBoolean('elderSpawned'))
       console.info('[selftest] village ' + d.getInt('vx') + ',' + d.getInt('vz') + ' outpost ' + ox + ',' + d.getInt('oy') + ',' + oz + ' crash ' + cx + ',' + d.getInt('cy') + ',' + cz)
       } catch (err) { bad++; console.error('[selftest] world placement threw: ' + err); if (err.javaException) console.error('[selftest]   ' + err.javaException) }
+      check('NPC talk handler present', typeof glNpcTalk === 'function')
+      try { glCorpseSelftest(server, check) } catch (err) { bad++; console.error('[selftest] corpse quick-loot threw: ' + err); if (err.javaException) console.error('[selftest]   ' + err.javaException) }
       console.info('[selftest] DONE: ' + ok + ' passed, ' + bad + ' failed')
+      return bad === 0 ? 1 : 0
+    })))
+  // /gl_dev corpsetest: only the corpse quick-loot round trip.
+  event.register(Commands.literal('gl_dev').requires(function (s) { return s.hasPermission(2) })
+    .then(Commands.literal('corpsetest').executes(function (ctx) {
+      var ok = 0, bad = 0
+      function check(name, cond) { if (cond) { ok++ } else { bad++; console.error('[corpsetest] FAIL ' + name) } }
+      try { glCorpseSelftest(ctx.source.getServer(), check) } catch (err) { bad++; console.error('[corpsetest] threw: ' + err) }
+      console.info('[corpsetest] DONE: ' + ok + ' passed, ' + bad + ' failed')
       return bad === 0 ? 1 : 0
     })))
 })
