@@ -988,10 +988,9 @@
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [{
-				entity: "mowziesmobs:umvuthi"
 				id: "2A85A6DA4ABB83FF"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_mowziesmobs_umvuthi"
+				type: "gamestage"
 			}]
 			x: 12.0d
 			y: -1.5d
@@ -1261,11 +1260,10 @@
 			size: 2.25d
 			tasks: [
 				{
-					entity: "iceandfire:hydra"
 					id: "231750BF0C88509D"
 					optional_task: true
-					type: "kill"
-					value: 1L
+					stage: "gl_boss_iceandfire_hydra"
+					type: "gamestage"
 				}
 				{
 					id: "3B60ED4D41709ADF"
@@ -1442,10 +1440,9 @@
 			shape: "hexagon"
 			size: 1.4d
 			tasks: [{
-				entity: "cataclysm:the_leviathan"
 				id: "7D4D899357F36463"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_cataclysm_the_leviathan"
+				type: "gamestage"
 			}]
 			x: 26.75d
 			y: -3.0d
@@ -1520,10 +1517,9 @@
 			shape: "hexagon"
 			size: 1.4d
 			tasks: [{
-				entity: "iceandfire:sea_serpent"
 				id: "23B140BDB3EEA4BB"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_iceandfire_sea_serpent"
+				type: "gamestage"
 			}]
 			x: 26.75d
 			y: -1.5d
@@ -1697,10 +1693,9 @@
 			shape: "hexagon"
 			size: 1.4d
 			tasks: [{
-				entity: "legendary_monsters:overgrown_colossus"
 				id: "6DB723E7670C44FF"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_legendary_monsters_overgrown_colossus"
+				type: "gamestage"
 			}]
 			x: 28.25d
 			y: 0.0d
@@ -1969,6 +1964,341 @@
 			}]
 			x: 36.25d
 			y: 0.0d
+		}
+		{
+			dependencies: ["1CCA99026B690E83"]
+			icon: {
+				id: "legendary_monsters:skeletosaurus_spawn_egg"
+			}
+			id: "75AC62A5044069AA"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "0C48A49632C9BA5C"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "5DBEE3FE235B7471"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:indigo 200"
+					id: "530FF082EDDB925A"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "1E59D4EB81DC2A05"
+					structure: "legendary_monsters:skeletosaurus_nest"
+					type: "structure"
+				}
+				{
+					id: "42B32CB1683A82A3"
+					stage: "gl_boss_legendary_monsters_skeletosaurus"
+					type: "gamestage"
+				}
+			]
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["1CCA99026B690E83"]
+			icon: {
+				id: "minecraft:elder_guardian_spawn_egg"
+			}
+			id: "580BBF1A13957D2A"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "5F0721D92B70292A"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "177AD7711A38A039"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:indigo 200"
+					id: "029DC7C40A07BC7D"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				id: "405DE336FE463885"
+				stage: "gl_boss_minecraft_elder_guardian"
+				type: "gamestage"
+			}]
+			x: 12.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["1CCA99026B690E83"]
+			icon: {
+				id: "cataclysm:clawdian_spawn_egg"
+			}
+			id: "692AD404E2BEFFA1"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "2014BF32E941277D"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "57868538552FE153"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:indigo 200"
+					id: "601C572AA36B894D"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				id: "725737D577345F53"
+				stage: "gl_boss_cataclysm_clawdian"
+				type: "gamestage"
+			}]
+			x: 13.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["1CCA99026B690E83"]
+			icon: {
+				id: "iceandfire:spawn_egg_gorgon"
+			}
+			id: "5D71CBD42E75A340"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "5ADCD217259DFB69"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "7576ABED7E2477DA"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:indigo 200"
+					id: "0DF6961A5EEACEC1"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "20D94E37C12FCEDA"
+					structure: "iceandfire:gorgon_temple"
+					type: "structure"
+				}
+				{
+					id: "61E1F939504966FA"
+					stage: "gl_boss_iceandfire_gorgon"
+					type: "gamestage"
+				}
+			]
+			x: 15.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4884995A80241E83"]
+			icon: {
+				id: "iceandfire:spawn_egg_fire_dragon"
+			}
+			id: "5D8296614356A2E8"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "02D548CD74D7DBFA"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "56181637990BDF66"
+					type: "xp"
+					xp: 500
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:indigo 350"
+					id: "6A4045662D6314D7"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "107F25E3E22B4012"
+					structure: "iceandfire:fire_dragon_roost"
+					type: "structure"
+				}
+				{
+					id: "1FFA22F297727A2E"
+					stage: "gl_boss_iceandfire_fire_dragon"
+					type: "gamestage"
+				}
+			]
+			x: 25.25d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4884995A80241E83"]
+			icon: {
+				id: "legendary_monsters:cloud_golem_spawn_egg"
+			}
+			id: "5CA1855D1BA89E56"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "29B94E894187F7B1"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "0A1EAD86D5921A1D"
+					type: "xp"
+					xp: 500
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:indigo 350"
+					id: "023E3224DF7020A5"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "08E8CDC90BDBDB78"
+					structure: "legendary_monsters:cloudy_temple"
+					type: "structure"
+				}
+				{
+					id: "6B71B9780C13DFA4"
+					stage: "gl_boss_legendary_monsters_cloud_golem"
+					type: "gamestage"
+				}
+			]
+			x: 26.75d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4884995A80241E83"]
+			icon: {
+				id: "iceandfire:spawn_egg_ice_dragon"
+			}
+			id: "311658FDCD478544"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "5B6C4F0A27E1AA26"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "5FD3ECE032A4C898"
+					type: "xp"
+					xp: 500
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:indigo 350"
+					id: "021427BB0A8AD28B"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "346510F284F8B020"
+					structure: "iceandfire:ice_dragon_roost"
+					type: "structure"
+				}
+				{
+					id: "14ED95A4BBAD3817"
+					stage: "gl_boss_iceandfire_ice_dragon"
+					type: "gamestage"
+				}
+			]
+			x: 28.25d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"068B7FCC51EA685B"
+				"36E219F5BA54FDAF"
+				"0A2F414F719E975D"
+				"4AA25BB8BF76A321"
+				"75AC62A5044069AA"
+				"580BBF1A13957D2A"
+				"5D71CBD42E75A340"
+				"5D8296614356A2E8"
+				"5CA1855D1BA89E56"
+				"311658FDCD478544"
+			]
+			hide_dependency_lines: true
+			icon: {
+				id: "createlanterns:indigo_power_ring"
+			}
+			id: "36935A483D60B425"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "70F0D965BA3B8AED"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "44034B8300E93BBF"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:indigo 600"
+					id: "62BE6A54A857E988"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "2F3949F4F3F57187"
+				type: "checkmark"
+			}]
+			x: 34.25d
+			y: 4.5d
 		}
 	]
 }

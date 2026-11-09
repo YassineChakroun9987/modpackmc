@@ -557,7 +557,7 @@
       "y": 0,
       "shape": "diamond",
       "size": 1.75,
-      "deps": ["final_castle", "summit"],
+      "deps": ["final_castle", "summit", "light_ready", "cata_ignis", "cata_leviathan", "cata_maledictus", "cata_harbinger"],
       "tasks": [
         {"type": "checkmark"}
       ],
@@ -870,6 +870,7 @@
         {"type": "xp", "xp": 8000},
         {"type": "skill_xp", "category": "adventurer", "amount": 2500}
       ]
-    }
+    },
+    {"key": "light_ready", "title": "&6Your Light Is Ready", "desc": ["No one walks into the End alone, and no light reaches it unproven.", "", "Complete &eThe Light Is Ready&r in any class chapter you follow (80% of that light's bosses)."], "icon": "createlanterns:power_ring", "x": 16.5, "y": 1.5, "shape": "gear", "deps": ["class_red:light_ready", "class_orange:light_ready", "class_yellow:light_ready", "class_green:light_ready", "class_blue:light_ready", "class_indigo:light_ready", "class_violet:light_ready"], "dep_mode": "one", "tasks": [{"type": "checkmark"}], "rewards": [{"type": "xp", "xp": 500}]}
   ]
 }

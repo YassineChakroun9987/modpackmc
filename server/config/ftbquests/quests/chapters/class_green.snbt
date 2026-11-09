@@ -731,10 +731,9 @@
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [{
-				entity: "irons_spellbooks:archevoker"
 				id: "5DD371603A2F9060"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_irons_spellbooks_archevoker"
+				type: "gamestage"
 			}]
 			x: 12.0d
 			y: 0.0d
@@ -1355,11 +1354,10 @@
 			size: 2.25d
 			tasks: [
 				{
-					entity: "irons_spellbooks:dead_king"
 					id: "4E161FF8A3094BBF"
 					optional_task: true
-					type: "kill"
-					value: 1L
+					stage: "gl_boss_irons_spellbooks_dead_king"
+					type: "gamestage"
 				}
 				{
 					id: "0A43BCCEA1CAB16E"
@@ -1735,10 +1733,9 @@
 			shape: "hexagon"
 			size: 1.4d
 			tasks: [{
-				entity: "legendary_monsters:posessed_paladin"
 				id: "708A11B9ABC8D95F"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_legendary_monsters_posessed_paladin"
+				type: "gamestage"
 			}]
 			x: 28.25d
 			y: -1.5d
@@ -1785,7 +1782,6 @@
 				id: "mutantmonsters:hulk_hammer"
 			}
 			id: "347233F755BC9DA7"
-			optional: true
 			rewards: [
 				{
 					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
@@ -1809,10 +1805,9 @@
 			]
 			shape: "hexagon"
 			tasks: [{
-				entity: "mutantmonsters:mutant_zombie"
 				id: "009C38FB9D894510"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_mutantmonsters_mutant_zombie"
+				type: "gamestage"
 			}]
 			x: 28.25d
 			y: 1.5d
@@ -1914,6 +1909,267 @@
 			}]
 			x: 36.25d
 			y: 0.0d
+		}
+		{
+			dependencies: ["677A3B4AB7E3510B"]
+			icon: {
+				id: "iceandfire:spawn_egg_cyclops"
+			}
+			id: "0CE5DB500EB914B7"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "7EA6EBCB4AA84913"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "238E11558026E995"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:green 200"
+					id: "2A55BD752C3A2CFE"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "3B5E8FDE632AA705"
+					structure: "iceandfire:cyclops_cave"
+					type: "structure"
+				}
+				{
+					id: "7416A806BDAAC8B3"
+					stage: "gl_boss_iceandfire_cyclops"
+					type: "gamestage"
+				}
+			]
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["677A3B4AB7E3510B"]
+			icon: {
+				id: "legendary_monsters:haunted_knight_spawn_egg"
+			}
+			id: "3ADC7F9900766977"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "01B3A666FC7C112E"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "044A56341393CC62"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:green 200"
+					id: "5327B1EBFEC96BF2"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "7B90C51A9814B73B"
+					structure: "legendary_monsters:collapsed_kingdom"
+					type: "structure"
+				}
+				{
+					id: "6C9F0DCB3EA26443"
+					stage: "gl_boss_legendary_monsters_haunted_knight"
+					type: "gamestage"
+				}
+			]
+			x: 12.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["677A3B4AB7E3510B"]
+			icon: {
+				id: "companions:sacred_pontiff_spawn_egg"
+			}
+			id: "7C9AAAE1FD428D25"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "7E6EF5167949AF7D"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "374B749313BAB7AC"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:green 200"
+					id: "30909A6EB436E088"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "4005FBD5E468326B"
+					structure: "companions:companions_monkey_temple"
+					type: "structure"
+				}
+				{
+					id: "17DA66FF32BA1334"
+					stage: "gl_boss_companions_sacred_pontiff"
+					type: "gamestage"
+				}
+			]
+			x: 13.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["78D7034446F1BEB5"]
+			icon: {
+				id: "legendary_monsters:fractured_apostle_spawn_egg"
+			}
+			id: "7A23DDCD976EF04C"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "182DE408C0561C11"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "64C7EABCB83F3C74"
+					type: "xp"
+					xp: 500
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:green 350"
+					id: "4CB7B851565573D3"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "78969C2167610E37"
+					structure: "legendary_monsters:collapsed_kingdom"
+					type: "structure"
+				}
+				{
+					id: "0F5A9D7E1E3E40B8"
+					stage: "gl_boss_legendary_monsters_fractured_apostle"
+					type: "gamestage"
+				}
+			]
+			x: 25.25d
+			y: 4.5d
+		}
+		{
+			dependencies: ["78D7034446F1BEB5"]
+			icon: {
+				id: "minecraft:wither_skeleton_skull"
+			}
+			id: "38472DC8537FCE3A"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "408788DA90CDA1BD"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "0777119879309A4E"
+					type: "xp"
+					xp: 500
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:green 350"
+					id: "1AA5A8475D3EAAA6"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "7E1F7B742FD2E7D0"
+					structure: "iceandfire:mausoleum"
+					type: "structure"
+				}
+				{
+					id: "3EF36769BA05A096"
+					stage: "gl_boss_iceandfire_dread_lich"
+					type: "gamestage"
+				}
+			]
+			x: 26.75d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"0C882911171A6261"
+				"02B017B1537701A1"
+				"499BC04DBAB0C257"
+				"347233F755BC9DA7"
+				"0CE5DB500EB914B7"
+				"3ADC7F9900766977"
+				"7A23DDCD976EF04C"
+				"38472DC8537FCE3A"
+			]
+			hide_dependency_lines: true
+			icon: {
+				id: "createlanterns:power_ring"
+			}
+			id: "0FB3EC2DF5FA7E48"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "3166289C3F962DA4"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "36491D87DE235D0F"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:green 600"
+					id: "4D3A2C83AC500618"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "7DB0050E52EED9E0"
+				type: "checkmark"
+			}]
+			x: 34.25d
+			y: 4.5d
 		}
 	]
 }

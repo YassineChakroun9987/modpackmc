@@ -9,6 +9,16 @@ GL_CLASS_IDS.forEach(function (id) { GL_TRIAL_BOSSES[GL_CLASSES[id].boss] = id }
 EntityEvents.death(function (event) {
   var e = event.entity
   var type = String(e.type)
+  // Any quest boss (story/51_boss_list.js, generated from quests/bosses.json): credit everyone within
+  // 64 blocks, so a party clears the boss quest together whoever lands the last hit.
+  var boss = (typeof GL_BOSS_LIST !== 'undefined') ? GL_BOSS_LIST[type] : null
+  if (boss) {
+    var credited = 0
+    glNearbyPlayers(e).forEach(function (p) { if (glGiveStage(p, boss[0])) credited++ })
+    if (credited > 0) glNearbyPlayers(e).forEach(function (p) {
+      glSay(p, '§6§l✦ ' + boss[1] + ' has fallen.§r§7 Everyone who fought it gets the credit.')
+    })
+  }
   var cls = GL_TRIAL_BOSSES[type]
   if (cls) {
     var c = GL_CLASSES[cls]

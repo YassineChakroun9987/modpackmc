@@ -208,10 +208,9 @@
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [{
-				entity: "minecraft:wither"
 				id: "277E6BE882288218"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_minecraft_wither"
+				type: "gamestage"
 			}]
 			x: 3.0d
 			y: 0.0d
@@ -329,11 +328,10 @@
 			size: 1.25d
 			tasks: [
 				{
-					entity: "twilightforest:naga"
 					id: "6E8437E0291A09A4"
 					optional_task: true
-					type: "kill"
-					value: 1L
+					stage: "gl_boss_twilightforest_naga"
+					type: "gamestage"
 				}
 				{
 					id: "3DC4865DCDD974DB"
@@ -381,11 +379,10 @@
 			size: 1.25d
 			tasks: [
 				{
-					entity: "twilightforest:lich"
 					id: "57D41D51904A2706"
 					optional_task: true
-					type: "kill"
-					value: 1L
+					stage: "gl_boss_twilightforest_lich"
+					type: "gamestage"
 				}
 				{
 					id: "6212AF8E9483D09E"
@@ -433,11 +430,10 @@
 			size: 1.25d
 			tasks: [
 				{
-					entity: "twilightforest:minoshroom"
 					id: "60DDA7D9EA39C3D0"
 					optional_task: true
-					type: "kill"
-					value: 1L
+					stage: "gl_boss_twilightforest_minoshroom"
+					type: "gamestage"
 				}
 				{
 					id: "0EF6E1F53B71F8CE"
@@ -485,11 +481,10 @@
 			size: 1.25d
 			tasks: [
 				{
-					entity: "twilightforest:hydra"
 					id: "57044C2C1DF29403"
 					optional_task: true
-					type: "kill"
-					value: 1L
+					stage: "gl_boss_twilightforest_hydra"
+					type: "gamestage"
 				}
 				{
 					id: "0D70D0A1D4378885"
@@ -589,11 +584,10 @@
 			size: 1.25d
 			tasks: [
 				{
-					entity: "twilightforest:ur_ghast"
 					id: "3349ED3BE21BB75A"
 					optional_task: true
-					type: "kill"
-					value: 1L
+					stage: "gl_boss_twilightforest_ur_ghast"
+					type: "gamestage"
 				}
 				{
 					id: "75399A09E6A2E24A"
@@ -641,11 +635,10 @@
 			size: 1.25d
 			tasks: [
 				{
-					entity: "twilightforest:alpha_yeti"
 					id: "5CD48B72D258E4A6"
 					optional_task: true
-					type: "kill"
-					value: 1L
+					stage: "gl_boss_twilightforest_alpha_yeti"
+					type: "gamestage"
 				}
 				{
 					id: "2B3BEAC2B77843F4"
@@ -693,11 +686,10 @@
 			size: 1.25d
 			tasks: [
 				{
-					entity: "twilightforest:snow_queen"
 					id: "08FAD43769548487"
 					optional_task: true
-					type: "kill"
-					value: 1L
+					stage: "gl_boss_twilightforest_snow_queen"
+					type: "gamestage"
 				}
 				{
 					id: "708FBF3DBC167995"
@@ -787,10 +779,9 @@
 			shape: "hexagon"
 			size: 1.25d
 			tasks: [{
-				entity: "cataclysm:ignis"
 				id: "43F300168936D634"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_cataclysm_ignis"
+				type: "gamestage"
 			}]
 			x: 3.0d
 			y: 3.0d
@@ -831,10 +822,9 @@
 			shape: "hexagon"
 			size: 1.25d
 			tasks: [{
-				entity: "cataclysm:the_leviathan"
 				id: "43A8CC97F21B3EC7"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_cataclysm_the_leviathan"
+				type: "gamestage"
 			}]
 			x: 4.5d
 			y: 3.0d
@@ -875,10 +865,9 @@
 			shape: "hexagon"
 			size: 1.25d
 			tasks: [{
-				entity: "cataclysm:scylla"
 				id: "3CCF63BB45712642"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_cataclysm_scylla"
+				type: "gamestage"
 			}]
 			x: 6.0d
 			y: 3.0d
@@ -919,10 +908,9 @@
 			shape: "hexagon"
 			size: 1.25d
 			tasks: [{
-				entity: "cataclysm:maledictus"
 				id: "26FC2B0D9DA9B8DD"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_cataclysm_maledictus"
+				type: "gamestage"
 			}]
 			x: 7.5d
 			y: 3.0d
@@ -963,10 +951,9 @@
 			shape: "hexagon"
 			size: 1.25d
 			tasks: [{
-				entity: "cataclysm:the_harbinger"
 				id: "03523FBDE19596D3"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_cataclysm_the_harbinger"
+				type: "gamestage"
 			}]
 			x: 9.0d
 			y: 3.0d
@@ -1025,6 +1012,11 @@
 			dependencies: [
 				"0098A1286BF9C5FD"
 				"6CBAE237A6AB3291"
+				"3184BE7CC32B78D4"
+				"7338EA1F65C3023C"
+				"293DE41D7936108C"
+				"09F0496E152667BB"
+				"71B5CB47856D252D"
 			]
 			icon: {
 				id: "minecraft:lodestone"
@@ -1231,11 +1223,10 @@
 			size: 1.75d
 			tasks: [
 				{
-					entity: "minecraft:ender_dragon"
 					id: "3DF05678D60818BE"
 					optional_task: true
-					type: "kill"
-					value: 1L
+					stage: "gl_boss_minecraft_ender_dragon"
+					type: "gamestage"
 				}
 				{
 					advancement: "minecraft:end/kill_dragon"
@@ -1495,10 +1486,9 @@
 			shape: "hexagon"
 			size: 2.25d
 			tasks: [{
-				entity: "legendary_monsters:the_obliterator"
 				id: "7752C426B1F8D6CF"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_legendary_monsters_the_obliterator"
+				type: "gamestage"
 			}]
 			x: 36.25d
 			y: -1.75d
@@ -1602,13 +1592,40 @@
 			shape: "hexagon"
 			size: 2.25d
 			tasks: [{
-				entity: "darkdoppelganger:dark_doppelganger"
 				id: "14EE24B6A7F3B9CB"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_darkdoppelganger_dark_doppelganger"
+				type: "gamestage"
 			}]
 			x: 36.25d
 			y: 1.75d
+		}
+		{
+			dependencies: [
+				"23D85C8C3DA4A060"
+				"706973B7743776B1"
+				"636F1FC1A79594C1"
+				"0FB3EC2DF5FA7E48"
+				"114AE2F37E7F45E9"
+				"36935A483D60B425"
+				"292DEDBF4DF09C23"
+			]
+			dependency_requirement: "one_completed"
+			icon: {
+				id: "createlanterns:power_ring"
+			}
+			id: "3184BE7CC32B78D4"
+			rewards: [{
+				id: "7651004AEF976A4E"
+				type: "xp"
+				xp: 500
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "09A88D5475C9DF81"
+				type: "checkmark"
+			}]
+			x: 16.5d
+			y: 1.5d
 		}
 	]
 }

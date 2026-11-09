@@ -111,6 +111,13 @@
 	chapter_group.151E3065A6314194.title: "&6The Story"
 	chapter_group.4FA3695F5F82A1E1.title: "&aGuides & Adventures"
 	file.0000000000000001.title: "The Book of Oa"
+	quest.00322C7286E6A97D.quest_desc: [
+		"A Ruined Pyramid lies half-buried in the desert. Its Sentinel wakes when you take what it guards."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.00322C7286E6A97D.quest_subtitle: "Boss"
+	quest.00322C7286E6A97D.title: "The Dune Sentinel"
 	quest.004968C103D394F1.quest_desc: [
 		"The &eSeashelf&r is built from ocean materials. Some shelves can be &einfused&r on the enchanting table itself into stronger versions."
 		"Combine Hellshelves and Seashelves to balance your table."
@@ -234,6 +241,15 @@
 		"Optional: visit a frozen biome (snowy plains, ice spikes, a glacier, frozen peaks...)."
 	]
 	quest.0427BF9BA26E3E1F.title: "A Taste of Winter"
+	quest.0488E111E855D28E.quest_desc: [
+		"A cobra-headed guardian of Cataclysm's desert ruins. It strikes fast and spits venom: keep your distance, then close in."
+		""
+		"&eShared boss:&r the Orange light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.0488E111E855D28E.quest_subtitle: "Shared boss"
+	quest.0488E111E855D28E.title: "Wadjet"
 	quest.04AD09DB0F41B7E4.quest_desc: [
 		"In the End, there are islands where even light is afraid to go."
 		""
@@ -257,6 +273,15 @@
 		"Charge it from your energy network before every fight."
 	]
 	quest.056E172D848CAC7B.title: "The Wyvern Chestpiece"
+	quest.05AF7972D359F464.quest_desc: [
+		"Fire dragons nest in roosts in warm lands, and in caves below them. A grown dragon is a boss of its own: fire resistance, a good shield, and friends."
+		""
+		"&eShared boss:&r the Indigo light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.05AF7972D359F464.quest_subtitle: "Shared boss"
+	quest.05AF7972D359F464.title: "Slay a Fire Dragon"
 	quest.05B5D8418D6E840F.quest_desc: [
 		"Deep in the factory, a war machine of the old empire boots up and speaks in a voice like grinding gears."
 		""
@@ -488,6 +513,24 @@
 		"Defeat the &eArchevoker&r in the Evoker Fort. Kill the vexes first; fight as a party."
 	]
 	quest.0C882911171A6261.title: "The Archevoker"
+	quest.0CCAF1432B9BFF27.quest_desc: [
+		"High above the land floats the Cloudy Temple. Its guardian is made of storm and stone. Get there by airship or ring, and don't fall."
+		""
+		"&eShared boss:&r the Blue and Indigo lights hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.0CCAF1432B9BFF27.quest_subtitle: "Shared boss"
+	quest.0CCAF1432B9BFF27.title: "The Cloud Golem"
+	quest.0CE5DB500EB914B7.quest_desc: [
+		"A one-eyed giant keeps its sheep in a cave by the sea (Ice and Fire). It can swallow you whole. Blind it with an arrow to the eye, then bring it down."
+		""
+		"&eShared boss:&r the Orange light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.0CE5DB500EB914B7.quest_subtitle: "Shared boss"
+	quest.0CE5DB500EB914B7.title: "The Cyclops"
 	quest.0CF6728348EC1FBC.quest_desc: [
 		"Two upgrades for miners:"
 		"&eCompacting&r turns 9 nuggets into an ingot and 9 ingots into a block, all by itself."
@@ -549,6 +592,15 @@
 		"Find a &eBlood Cultist Hut&r (Discerning the Eldritch) and kill the &eBlood Matriarch&r. Bring the party: her cultists heal her."
 	]
 	quest.0F2D874979F10118.title: "Mother of Blood"
+	quest.0FB3EC2DF5FA7E48.quest_desc: [
+		"The corruption has generals. Your light has hunted them down, one by one."
+		""
+		"Defeat &e8 of this light's 9 bosses&r (every boss quest in this chapter that isn't marked optional). Then your light is ready for &6The Last Light&r: the final road to the Devourer of Gods needs this quest from at least one light you follow."
+		""
+		"&7Boss kills count for everyone within 64 blocks: bring your party."
+	]
+	quest.0FB3EC2DF5FA7E48.quest_subtitle: "8 of 9 bosses"
+	quest.0FB3EC2DF5FA7E48.title: "&aThe Light Is Ready"
 	quest.102BADC4951F1256.quest_desc: [
 		"Scrolls fade. Ink binds."
 		""
@@ -586,6 +638,15 @@
 		"Raise your fire dragon (feed it meat; Dragon Meal speeds it up) and forge it &eiron dragon armor&r (head and body). At stage 3 you can ride it into the sky."
 	]
 	quest.10B45934FFB9236C.title: "Saddle of Iron, Wings of Fire"
+	quest.114AE2F37E7F45E9.quest_desc: [
+		"The corruption has generals. Your light has hunted them down, one by one."
+		""
+		"Defeat &e8 of this light's 10 bosses&r (every boss quest in this chapter that isn't marked optional). Then your light is ready for &6The Last Light&r: the final road to the Devourer of Gods needs this quest from at least one light you follow."
+		""
+		"&7Boss kills count for everyone within 64 blocks: bring your party."
+	]
+	quest.114AE2F37E7F45E9.quest_subtitle: "8 of 10 bosses"
+	quest.114AE2F37E7F45E9.title: "&bThe Light Is Ready"
 	quest.115F6F1FF8805672.quest_desc: [
 		"A Create &eMechanical Harvester&r on a moving contraption (a piston, bearing or cart) cuts ripe crops and replants them as it passes."
 		"Add a belt or chute to collect the harvest. See the Create chapter for the basics."
@@ -772,6 +833,15 @@
 		"Crushed ore smelts into more ingots than raw ore, and often gives Experience Nuggets too."
 	]
 	quest.16285CFDC0D796D1.title: "Crushing Wheels"
+	quest.165C531F07C5396A.quest_desc: [
+		"Now and then a creeper twists into a mutant: it leaps, charges and explodes again and again without dying. It prowls the Overworld at night. Shields up."
+		""
+		"&eShared boss:&r the Orange and Yellow lights hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.165C531F07C5396A.quest_subtitle: "Shared boss"
+	quest.165C531F07C5396A.title: "Mutant Creeper"
 	quest.166FF0362888C2B9.quest_desc: [
 		"Some coffins are sealed for a reason."
 		""
@@ -800,6 +870,13 @@
 		"Find a &eSky Village&r floating high above the land."
 	]
 	quest.17A9DC484E24C235.title: "Village in the Clouds"
+	quest.17FFF05179437A1D.quest_desc: [
+		"Rarely, an enderman becomes a mutant with four arms. It throws blocks, makes clones and teleports you. It walks the night like the others."
+		""
+		"Defeat it. &7Optional: not needed for The Light Is Ready."
+	]
+	quest.17FFF05179437A1D.quest_subtitle: "Boss"
+	quest.17FFF05179437A1D.title: "Mutant Enderman"
 	quest.18A40BBFDEDB5230.quest_desc: [
 		"&eEndshelves&r need Infused Dragon's Breath, so they come after the Ender Dragon. They're the strongest shelves, and can be upgraded into Draconic Endshelves."
 		"Deep-dark &eDeepshelves&r are worth building too."
@@ -861,6 +938,15 @@
 		"A &eSigil of Socketing&r adds a socket; a &eSigil of Withdrawal&r takes gems back out. Socket a gem now."
 	]
 	quest.1A4F58C83D0C4D15.title: "Gems and Sockets"
+	quest.1A5DDA9F8A61E280.quest_desc: [
+		"In the remains of an ancient tower stands the Endersent, an enderman as tall as the tower was. It teleports, and so must you."
+		""
+		"&eShared boss:&r the Violet light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.1A5DDA9F8A61E280.quest_subtitle: "Shared boss"
+	quest.1A5DDA9F8A61E280.title: "The Endersent"
 	quest.1A5E64D7B0CE7CCA.quest_desc: [
 		"A forest where it's always dusk, and where ancient things guard the way to their masters."
 		""
@@ -941,6 +1027,13 @@
 		"Recruit a &eGuard&r (Guard Villagers): sneak and right-click an unemployed villager while holding a sword or crossbow. Keep the villagers alive!"
 	]
 	quest.1C7CF2E95844D04B.title: "Hire Spears"
+	quest.1C88E5A8E873FF4E.quest_desc: [
+		"Deep in a warped forest of the Nether, a fungal giant guards its nest. Burn it, cut it, but don't stand in its spores."
+		""
+		"Find the place and defeat it. &7Optional: not needed for The Light Is Ready."
+	]
+	quest.1C88E5A8E873FF4E.quest_subtitle: "Boss"
+	quest.1C88E5A8E873FF4E.title: "The Warped Fungussus"
 	quest.1CA863EEDF4D5535.quest_desc: [
 		"There are dragons of every kind, and every kind wants something different from you."
 		""
@@ -1008,6 +1101,15 @@
 	]
 	quest.1EFE5240E7146A81.quest_subtitle: "Extreme gear"
 	quest.1EFE5240E7146A81.title: "Mythic Winter"
+	quest.1F10B18A4FC5C533.quest_desc: [
+		"Bones the size of houses walk in the Skeletosaurus Nest. Its raptor brood hunts with it."
+		""
+		"&eShared boss:&r the Indigo light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.1F10B18A4FC5C533.quest_subtitle: "Shared boss"
+	quest.1F10B18A4FC5C533.title: "Skeletosaurus"
 	quest.1F1FE50908BB6FCA.quest_desc: [
 		"Mekanism machines run on energy (they take FE too). A &eHeat Generator&r burns lava or fuel; solar and wind generators make free power; a Create alternator works as well."
 		"Build a Heat Generator to start."
@@ -1156,6 +1258,15 @@
 		"Fire resistance, ice spells, and a full party."
 	]
 	quest.23BBEB9A964DEB4B.title: "IV. The Echo of Tyros"
+	quest.23D85C8C3DA4A060.quest_desc: [
+		"The corruption has generals. Your light has hunted them down, one by one."
+		""
+		"Defeat &e11 of this light's 13 bosses&r (every boss quest in this chapter that isn't marked optional). Then your light is ready for &6The Last Light&r: the final road to the Devourer of Gods needs this quest from at least one light you follow."
+		""
+		"&7Boss kills count for everyone within 64 blocks: bring your party."
+	]
+	quest.23D85C8C3DA4A060.quest_subtitle: "11 of 13 bosses"
+	quest.23D85C8C3DA4A060.title: "&cThe Light Is Ready"
 	quest.23E240F2FE8C0FF5.quest_desc: [
 		"Every hero ends up with a cellar full of loot. Let's make it a good one."
 		""
@@ -1245,6 +1356,15 @@
 	]
 	quest.25DDBB1E29BA8F0B.quest_subtitle: "Ore processing, tier 1"
 	quest.25DDBB1E29BA8F0B.title: "Two for One"
+	quest.25DE137B460B7468.quest_desc: [
+		"A cobra-headed guardian of Cataclysm's desert ruins. It strikes fast and spits venom: keep your distance, then close in."
+		""
+		"&eShared boss:&r the Violet light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.25DE137B460B7468.quest_subtitle: "Shared boss"
+	quest.25DE137B460B7468.title: "Wadjet"
 	quest.2614B042F2A60027.quest_desc: [
 		"A ring found you. Red, White or Black, you are a &eLantern&r now: you can fly, and your will takes shape as constructs."
 		""
@@ -1361,6 +1481,15 @@
 		"Find an &eApotheosis gem&r (rare mob and chest drop) and build a &eGem Cutting Table&r to raise gem rarity."
 	]
 	quest.29212BDA019C5EB1.title: "Gem Cutter"
+	quest.292DEDBF4DF09C23.quest_desc: [
+		"The corruption has generals. Your light has hunted them down, one by one."
+		""
+		"Defeat &e12 of this light's 14 bosses&r (every boss quest in this chapter that isn't marked optional). Then your light is ready for &6The Last Light&r: the final road to the Devourer of Gods needs this quest from at least one light you follow."
+		""
+		"&7Boss kills count for everyone within 64 blocks: bring your party."
+	]
+	quest.292DEDBF4DF09C23.quest_subtitle: "12 of 14 bosses"
+	quest.292DEDBF4DF09C23.title: "&dThe Light Is Ready"
 	quest.293DE41D7936108C.quest_desc: [
 		"The Devourer's shadow wakes the old Cataclysm bosses. Put them down before they join it."
 		""
@@ -1552,6 +1681,13 @@
 		"Reach it from deep space, by ring or by ship. Go armed."
 	]
 	quest.2ED7BD0588C69B6C.title: "Korugar"
+	quest.2F45594CE29CA5FC.quest_desc: [
+		"Kobolds hold the desert sites of Cataclysm, and their champion fights in an arena of bones and sand."
+		""
+		"Defeat it. &7Optional: not needed for The Light Is Ready."
+	]
+	quest.2F45594CE29CA5FC.quest_subtitle: "Boss"
+	quest.2F45594CE29CA5FC.title: "The Kobolediator"
 	quest.2F7331C2531580DD.quest_desc: [
 		"Violet hunts at night, where the dead don't stay buried."
 		""
@@ -1610,6 +1746,15 @@
 		"&eHold Shift and drag&r across slots to move many stacks at once. &eRight-click and drag&r to spread a stack evenly over several slots."
 	]
 	quest.3114135D9FF5FD48.title: "Faster Fingers"
+	quest.311658FDCD478544.quest_desc: [
+		"Ice dragons nest in roosts in the frozen lands and in ice caves. Its breath freezes you solid: fire, and friends, help."
+		""
+		"&eShared boss:&r the Blue light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.311658FDCD478544.quest_subtitle: "Shared boss"
+	quest.311658FDCD478544.title: "Slay an Ice Dragon"
 	quest.311B254EFCB5ED7C.quest_desc: [
 		"Green is the light of those who keep others safe, and that starts with knowing them."
 		""
@@ -1643,12 +1788,27 @@
 		"Read the &eChronicle of Shadows&r, Apotheosis's own guide: craft a book with a gold ingot. It explains every system in this chapter."
 	]
 	quest.31745A40CBF5328D.title: "Loot With a Pedigree"
+	quest.3184BE7CC32B78D4.quest_desc: [
+		"No one walks into the End alone, and no light reaches it unproven."
+		""
+		"Complete &eThe Light Is Ready&r in any class chapter you follow (80% of that light's bosses)."
+	]
+	quest.3184BE7CC32B78D4.title: "&6Your Light Is Ready"
 	quest.31B69BEBEBA20614.quest_desc: [
 		"Copper thread and storm-silk: robes that hum."
 		""
 		"Craft the full &eElectromancer&r set (Iron's Spells). It boosts lightning spell power and mana."
 	]
 	quest.31B69BEBEBA20614.title: "The Electromancer's Coat"
+	quest.32190826B1235FD2.quest_desc: [
+		"In the remains of a soul fortress in the Nether, a withered horror waits among the bones."
+		""
+		"&eShared boss:&r the Violet light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.32190826B1235FD2.quest_subtitle: "Shared boss"
+	quest.32190826B1235FD2.title: "The Withered Abomination"
 	quest.322031015C27349E.quest_desc: [
 		"Deep in the troll caves, a Troll Vault holds the &eLamp of Cinders&r. Its flame burns away the thorns that wall off the last region."
 		"Bring it out alive."
@@ -1784,6 +1944,15 @@
 	]
 	quest.362AE6AB138063AE.quest_subtitle: "Optional"
 	quest.362AE6AB138063AE.title: "A Bottomless Hoard"
+	quest.36935A483D60B425.quest_desc: [
+		"The corruption has generals. Your light has hunted them down, one by one."
+		""
+		"Defeat &e10 of this light's 12 bosses&r (every boss quest in this chapter that isn't marked optional). Then your light is ready for &6The Last Light&r: the final road to the Devourer of Gods needs this quest from at least one light you follow."
+		""
+		"&7Boss kills count for everyone within 64 blocks: bring your party."
+	]
+	quest.36935A483D60B425.quest_subtitle: "10 of 12 bosses"
+	quest.36935A483D60B425.title: "&9The Light Is Ready"
 	quest.36B1FF2EFF4A47A8.quest_desc: [
 		"A hungry guard is a dead guard. Stock the larder before the siege."
 		""
@@ -1857,6 +2026,15 @@
 		"Find a &eDungeons and Taverns&r tavern. Taverns sit near roads in most biomes; their traders sell maps to other structures."
 	]
 	quest.380E4D081B8C3972.title: "A Warm Tavern"
+	quest.38472DC8537FCE3A.quest_desc: [
+		"Mausoleums in the frozen north hold a Dread Lich and its army of thralls, ghouls and dread knights. Holy fire, ice resistance and a full party."
+		""
+		"&eShared boss:&r the Blue and Violet lights hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.38472DC8537FCE3A.quest_subtitle: "Shared boss"
+	quest.38472DC8537FCE3A.title: "The Dread Lich"
 	quest.38951A087DFB8D92.quest_desc: [
 		"Awakened draconium and Wyvern Cores fuse into a &eDraconic Core&r."
 		"With it come Draconic injectors, Draconic energy crystals and Draconic gear."
@@ -1962,6 +2140,22 @@
 	]
 	quest.3ABEA8EF80C1F8D9.quest_subtitle: "Shared quest progress"
 	quest.3ABEA8EF80C1F8D9.title: "Form a Team"
+	quest.3ADC7F9900766977.quest_desc: [
+		"The Collapsed Kingdom's dungeons are full of the dead who still guard their king. The Haunted Knight commands them."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.3ADC7F9900766977.quest_subtitle: "Boss"
+	quest.3ADC7F9900766977.title: "The Haunted Knight"
+	quest.3B0EC56957A2869D.quest_desc: [
+		"High above the land floats the Cloudy Temple. Its guardian is made of storm and stone. Get there by airship or ring, and don't fall."
+		""
+		"&eShared boss:&r the Yellow and Indigo lights hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.3B0EC56957A2869D.quest_subtitle: "Shared boss"
+	quest.3B0EC56957A2869D.title: "The Cloud Golem"
 	quest.3B1C74E3DC0DC181.quest_desc: [
 		"The &eNight Fury&r is the rarest and fastest of them all. Few have seen one; fewer have tamed one."
 		"Optional, and a long hunt."
@@ -2036,6 +2230,15 @@
 	]
 	quest.3C87BED9F9E36848.quest_subtitle: "The Warband marches"
 	quest.3C87BED9F9E36848.title: "Day Seven"
+	quest.3C9B098D2FAF5004.quest_desc: [
+		"In the remains of a soul fortress in the Nether, a withered horror waits among the bones."
+		""
+		"&eShared boss:&r the Red light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.3C9B098D2FAF5004.quest_subtitle: "Shared boss"
+	quest.3C9B098D2FAF5004.title: "The Withered Abomination"
 	quest.3CD7945E9E85193A.quest_desc: [
 		"Three altars (Sword, Maw and Bat) summon &eShade&r bosses when you activate them with &eCrystallized Blood&r."
 		"Defeat the &eShade Maw&r. Optional, and not a fight for one."
@@ -2109,6 +2312,24 @@
 		"Get the &eVillager Bible&r spellbook (Iron's Spells, see JEI). It favours holy spells."
 	]
 	quest.3FABA7B06F979873.title: "The Villager Bible"
+	quest.3FAF16A4ECFD351F.quest_desc: [
+		"In her temple the Gorgon turns all who meet her gaze to stone. Fight her without looking: with your back turned, or behind a shield, or blind."
+		""
+		"&eShared boss:&r the Indigo light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.3FAF16A4ECFD351F.quest_subtitle: "Shared boss"
+	quest.3FAF16A4ECFD351F.title: "The Gorgon"
+	quest.3FDEC14DB19D9B25.quest_desc: [
+		"Ice dragons nest in roosts in the frozen lands and in ice caves. Its breath freezes you solid: fire, and friends, help."
+		""
+		"&eShared boss:&r the Indigo light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.3FDEC14DB19D9B25.quest_subtitle: "Shared boss"
+	quest.3FDEC14DB19D9B25.title: "Slay an Ice Dragon"
 	quest.401D599376786D79.quest_desc: [
 		"The Forest has its own materials. &eIronwood&r (from raw ironwood found in hollow trees and chests) and &eSteeleaf&r (from steeleaf plants) make sturdy early armour and tools."
 		"Hollow hills hold ore and treasure, guarded by redcaps."
@@ -2216,6 +2437,13 @@
 		"Optional, but it saves hours of wandering."
 	]
 	quest.4470410443BFCE80.title: "A Map of Twilight"
+	quest.4487EE4EE10993AC.quest_desc: [
+		"In a Shulker Tower in the End, one of the chests isn't a chest."
+		""
+		"Find the place and defeat it. &7Optional: not needed for The Light Is Ready."
+	]
+	quest.4487EE4EE10993AC.quest_subtitle: "Boss"
+	quest.4487EE4EE10993AC.title: "The Shulker Mimic"
 	quest.4499E4D28A76D2DA.quest_desc: [
 		"Eldritch cults gather in hidden places: the &eCultist Base&r, blood cultist huts and the Electromancer Tower. Their apostles and acolytes cast forbidden spells."
 		"Find a Cultist Base. Read their &eGuardian's Guidebook&r if you find one: it is this addon's guide."
@@ -2227,12 +2455,28 @@
 	]
 	quest.449CD85FB94FBE59.quest_subtitle: "How to read this ladder"
 	quest.449CD85FB94FBE59.title: "The Bestiary of Ruin"
+	quest.454859A524953B58.quest_desc: [
+		"Ocean monuments hold Elder Guardians. Their curse is Mining Fatigue; a Conduit, water breathing and a fast sword are the cure."
+		""
+		"&eShared boss:&r the Indigo light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.454859A524953B58.quest_subtitle: "Shared boss"
+	quest.454859A524953B58.title: "Elder Guardian"
 	quest.45BF99755114F784.quest_desc: [
 		"Call bigger things."
 		""
 		"Upgrade to a &eGreater Conjurer's Talisman&r."
 	]
 	quest.45BF99755114F784.title: "Greater Conjuring"
+	quest.45C269F3299BAB6C.quest_desc: [
+		"In the Nether's lava seas, a Lava Eater nests in its own den (Legendary Monsters). It swims through lava as you swim through water: fight it from solid ground."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.45C269F3299BAB6C.quest_subtitle: "Boss"
+	quest.45C269F3299BAB6C.title: "The Lava Eater"
 	quest.45E7FE276D6092BF.quest_desc: [
 		"Hearty meals give &eNourishment&r: your food bar stops dropping (except while you heal). Soups and stews give &eComfort&r: you regenerate however hungry you are."
 		"Eat one before a long dungeon. AppleSkin shows how much each meal restores."
@@ -2310,6 +2554,15 @@
 	]
 	quest.47AD8C9420FF2818.quest_subtitle: "Class level 25"
 	quest.47AD8C9420FF2818.title: "The Dream"
+	quest.47B6C347E127AB7A.quest_desc: [
+		"Mausoleums in the frozen north hold a Dread Lich and its army of thralls, ghouls and dread knights. Holy fire, ice resistance and a full party."
+		""
+		"&eShared boss:&r the Green and Violet lights hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.47B6C347E127AB7A.quest_subtitle: "Shared boss"
+	quest.47B6C347E127AB7A.title: "The Dread Lich"
 	quest.4815C4F1359E41EB.quest_desc: [
 		"Drink it and your skin hardens into living wood."
 		""
@@ -2799,6 +3052,15 @@
 	]
 	quest.57EC4D6EE9B557F7.quest_subtitle: "Applied Energistics 2"
 	quest.57EC4D6EE9B557F7.title: "A Stone From the Sky"
+	quest.580BBF1A13957D2A.quest_desc: [
+		"Ocean monuments hold Elder Guardians. Their curse is Mining Fatigue; a Conduit, water breathing and a fast sword are the cure."
+		""
+		"&eShared boss:&r the Yellow light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.580BBF1A13957D2A.quest_subtitle: "Shared boss"
+	quest.580BBF1A13957D2A.title: "Elder Guardian"
 	quest.584D0173CCE0FD42.quest_desc: [
 		"An obsidian pillar on a lonely End island. It hums. It waits."
 		""
@@ -2947,6 +3209,15 @@
 		"Netherite upgrades gear and appears in many late recipes: the Levitation Stone, battlemage robes, the best backpacks."
 	]
 	quest.5C8C64615BBE08D1.title: "Ancient Debris"
+	quest.5CA1855D1BA89E56.quest_desc: [
+		"High above the land floats the Cloudy Temple. Its guardian is made of storm and stone. Get there by airship or ring, and don't fall."
+		""
+		"&eShared boss:&r the Yellow and Blue lights hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.5CA1855D1BA89E56.quest_subtitle: "Shared boss"
+	quest.5CA1855D1BA89E56.title: "The Cloud Golem"
 	quest.5D0D612A79DD550E.quest_desc: [
 		"Every crypt has a door. Few have locks that work from the inside."
 		""
@@ -2959,6 +3230,24 @@
 		"Visit Terralith's &eAmethyst Canyon&r or &eAmethyst Rainforest&r and gather &e16 amethyst shards&r."
 	]
 	quest.5D0F4BE2C2804E47.title: "Singing Stone"
+	quest.5D71CBD42E75A340.quest_desc: [
+		"In her temple the Gorgon turns all who meet her gaze to stone. Fight her without looking: with your back turned, or behind a shield, or blind."
+		""
+		"&eShared boss:&r the Violet light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.5D71CBD42E75A340.quest_subtitle: "Shared boss"
+	quest.5D71CBD42E75A340.title: "The Gorgon"
+	quest.5D8296614356A2E8.quest_desc: [
+		"Fire dragons nest in roosts in warm lands, and in caves below them. A grown dragon is a boss of its own: fire resistance, a good shield, and friends."
+		""
+		"&eShared boss:&r the Red light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.5D8296614356A2E8.quest_subtitle: "Shared boss"
+	quest.5D8296614356A2E8.title: "Slay a Fire Dragon"
 	quest.5DAF902CAD118182.quest_desc: [
 		"Some villages already learned to build walls. They need a captain."
 		""
@@ -3023,6 +3312,15 @@
 		"Find a &eTier 3&r shrine and clear it. Bring the party and plenty of food."
 	]
 	quest.5F5FCB8D88F2C953.title: "The Third Trial"
+	quest.5F7443FF68611817.quest_desc: [
+		"Now and then a creeper twists into a mutant: it leaps, charges and explodes again and again without dying. It prowls the Overworld at night. Shields up."
+		""
+		"&eShared boss:&r the Red and Yellow lights hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.5F7443FF68611817.quest_subtitle: "Shared boss"
+	quest.5F7443FF68611817.title: "Mutant Creeper"
 	quest.5FF39B3DB1D14C17.quest_desc: [
 		"&eMithril&r (Iron's Spells) is rare and hides deep in the deepslate layer. Ultimine helps once you find a vein."
 		"Mages need it: mithril goes into every Empty Upgrade Orb and into Mithril Weave for the best school armour."
@@ -3143,6 +3441,15 @@
 		"Kill &eScylla&r in the Acropolis. Stay off the water when she calls the storm; fight as a party."
 	]
 	quest.6368E9B89CBB7FF6.title: "The Storm Spire"
+	quest.636F1FC1A79594C1.quest_desc: [
+		"The corruption has generals. Your light has hunted them down, one by one."
+		""
+		"Defeat &e8 of this light's 10 bosses&r (every boss quest in this chapter that isn't marked optional). Then your light is ready for &6The Last Light&r: the final road to the Devourer of Gods needs this quest from at least one light you follow."
+		""
+		"&7Boss kills count for everyone within 64 blocks: bring your party."
+	]
+	quest.636F1FC1A79594C1.quest_subtitle: "8 of 10 bosses"
+	quest.636F1FC1A79594C1.title: "&eThe Light Is Ready"
 	quest.63A69A337F7F728F.quest_desc: [
 		"Climb the &eLich Tower&r. The Lich hides behind a shield and shadow clones: hit the real one when its shield drops, and swat its fireballs back at it."
 		"It drops the &eScepters&r (Twilight, Life Draining, Zombie, Fortification). Its death opens three paths: the swamp, the dark forest and the snow."
@@ -3164,6 +3471,22 @@
 		"Some mixes need heat under the basin. That's the next step."
 	]
 	quest.6433E7CC1DF22252.title: "The Mechanical Mixer"
+	quest.643A86D100A28318.quest_desc: [
+		"In the remains of an ancient tower stands the Endersent, an enderman as tall as the tower was. It teleports, and so must you."
+		""
+		"&eShared boss:&r the Yellow light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.643A86D100A28318.quest_subtitle: "Shared boss"
+	quest.643A86D100A28318.title: "The Endersent"
+	quest.64498278ABAB751A.quest_desc: [
+		"The draugr chieftain of the Frosted Prison, where Maledictus is chained. Clear the prison floor by floor."
+		""
+		"Find the place and defeat it. &7Optional: not needed for The Light Is Ready."
+	]
+	quest.64498278ABAB751A.quest_subtitle: "Boss"
+	quest.64498278ABAB751A.title: "Aptrgangr"
 	quest.647E8E2E39C45C3F.quest_desc: [
 		"A &ePattern Encoding Terminal&r writes recipes onto blank patterns. A pattern tells the network how to make one thing."
 		"Encode a pattern for something you craft often."
@@ -3211,6 +3534,15 @@
 		"Kill the &eNaga&r in its courtyard. Its scales make good armor. The trophy counts too."
 	]
 	quest.65C0AEACD3B72D54.title: "The Naga"
+	quest.65DC6FB681F8F284.quest_desc: [
+		"Now and then a creeper twists into a mutant: it leaps, charges and explodes again and again without dying. It prowls the Overworld at night. Shields up."
+		""
+		"&eShared boss:&r the Red and Orange lights hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.65DC6FB681F8F284.quest_subtitle: "Shared boss"
+	quest.65DC6FB681F8F284.title: "Mutant Creeper"
 	quest.65EF4050B698E190.quest_desc: [
 		"Speed and power, perfected."
 		""
@@ -3252,6 +3584,13 @@
 		"Next: take it to the sky with Create Aeronautics."
 	]
 	quest.68F37FEF1C88C1B4.title: "The Clockwork Factory"
+	quest.692AD404E2BEFFA1.quest_desc: [
+		"A giant crab-knight of Cataclysm's ocean ruins. Its claws break shields."
+		""
+		"Defeat it. &7Optional: not needed for The Light Is Ready."
+	]
+	quest.692AD404E2BEFFA1.quest_subtitle: "Boss"
+	quest.692AD404E2BEFFA1.title: "Clawdian"
 	quest.6940B5CF0F9AC447.quest_desc: [
 		"Purple banners on a wall of logs. Inside, a throne made for something enormous."
 		""
@@ -3415,6 +3754,15 @@
 		"Optional: find a legendary frost weapon: the &eBoreal Blade&r, &eFrostfall&r, &eIcewhisper&r, &eThe Snowgrave&r or &eThe Ice Spear&r."
 	]
 	quest.6D46B9E14415956C.title: "Blades of Winter"
+	quest.6D5FB3D44F81FF2C.quest_desc: [
+		"Mausoleums in the frozen north hold a Dread Lich and its army of thralls, ghouls and dread knights. Holy fire, ice resistance and a full party."
+		""
+		"&eShared boss:&r the Green and Blue lights hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.6D5FB3D44F81FF2C.quest_subtitle: "Shared boss"
+	quest.6D5FB3D44F81FF2C.title: "The Dread Lich"
 	quest.6D7DB039636DD04B.quest_desc: [
 		"The Warband's swords were cheap. Yours shouldn't be."
 		""
@@ -3518,6 +3866,15 @@
 		"Visit one. Guards defend it, traders deal there, and many keep a waystone near the centre."
 	]
 	quest.7052ADBC6D6313B0.title: "Villages of a Hundred Styles"
+	quest.706973B7743776B1.quest_desc: [
+		"The corruption has generals. Your light has hunted them down, one by one."
+		""
+		"Defeat &e11 of this light's 13 bosses&r (every boss quest in this chapter that isn't marked optional). Then your light is ready for &6The Last Light&r: the final road to the Devourer of Gods needs this quest from at least one light you follow."
+		""
+		"&7Boss kills count for everyone within 64 blocks: bring your party."
+	]
+	quest.706973B7743776B1.quest_subtitle: "11 of 13 bosses"
+	quest.706973B7743776B1.title: "&6The Light Is Ready"
 	quest.707B09DA72D72293.quest_desc: [
 		"The Graveyard's champion answers only to blood."
 		""
@@ -3633,6 +3990,13 @@
 		"Craft an &eEnder Upgrade Orb&r and apply it at the Arcane Anvil."
 	]
 	quest.74934E59ECB55A19.title: "Deeper Void"
+	quest.74D23ED3CB07721B.quest_desc: [
+		"Before the Harbinger wakes, a war machine prowls the halls of the Ancient Factory. Take it apart."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.74D23ED3CB07721B.quest_subtitle: "Boss"
+	quest.74D23ED3CB07721B.title: "The Prowler"
 	quest.75060753C86B9AA0.quest_desc: [
 		"Spiders that spit frost, nesting in a cave of blue ice."
 		""
@@ -3651,6 +4015,15 @@
 	]
 	quest.751C49660BC52CEE.quest_subtitle: "Apothic Enchanting"
 	quest.751C49660BC52CEE.title: "Three Stats"
+	quest.75AC62A5044069AA.quest_desc: [
+		"Bones the size of houses walk in the Skeletosaurus Nest. Its raptor brood hunts with it."
+		""
+		"&eShared boss:&r the Orange light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.75AC62A5044069AA.quest_subtitle: "Shared boss"
+	quest.75AC62A5044069AA.title: "Skeletosaurus"
 	quest.75C9C63F8FB2336B.quest_desc: [
 		"&eCreate Aeronautics&r lets you build things that fly. The heart of every flying build is the &ePhysics Assembler&r: it turns a structure into a &eSimulated Contraption&r with real weight and momentum, and you can still walk around on it and use it."
 		"Hold &eW&r over any Aeronautics block to Ponder it. Get a Physics Assembler."
@@ -3719,12 +4092,30 @@
 		"They're tuned light, so even a big base won't lag. Make any one."
 	]
 	quest.779D4658EE0C671A.title: "Hands-Free"
+	quest.77B35123CE4BF5BC.quest_desc: [
+		"A one-eyed giant keeps its sheep in a cave by the sea (Ice and Fire). It can swallow you whole. Blind it with an arrow to the eye, then bring it down."
+		""
+		"&eShared boss:&r the Green light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.77B35123CE4BF5BC.quest_subtitle: "Shared boss"
+	quest.77B35123CE4BF5BC.title: "The Cyclops"
 	quest.77DC82B72036CC49.quest_desc: [
 		"Your hair stands up when you walk into a room. The light is charging you."
 		""
 		"Craft a &eLightning Rune&r (see JEI). Look for &eLightning Bolt&r, &eElectrocute&r and &eBall Lightning&r scrolls."
 	]
 	quest.77DC82B72036CC49.title: "Static"
+	quest.7840953CD41062F6.quest_desc: [
+		"In the Collapsed Kingdom's great arena, a broken saint leads the haunted guard."
+		""
+		"&eShared boss:&r the Green light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.7840953CD41062F6.quest_subtitle: "Shared boss"
+	quest.7840953CD41062F6.title: "The Fractured Apostle"
 	quest.7848E4B720F4CFD0.quest_desc: [
 		"&eJade&r shows a small panel at the top of the screen: the block or mob under your crosshair, its health, and which mod it comes from."
 		"Use it to name a strange ore or mob, and to check a machine's progress or a crop's growth without opening anything."
@@ -3798,6 +4189,15 @@
 		"It's the first step of Draconic Evolution, the pack's most powerful tech line."
 	]
 	quest.79F1CAD28503EC44.title: "Draconium"
+	quest.7A23DDCD976EF04C.quest_desc: [
+		"In the Collapsed Kingdom's great arena, a broken saint leads the haunted guard."
+		""
+		"&eShared boss:&r the Violet light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
+		""
+		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+	]
+	quest.7A23DDCD976EF04C.quest_subtitle: "Shared boss"
+	quest.7A23DDCD976EF04C.title: "The Fractured Apostle"
 	quest.7A667AA0939251B3.quest_desc: [
 		"A good adventurer reads the world before it bites."
 		""
@@ -3870,6 +4270,13 @@
 		"Optional, Yellow ring only: learn &eThunderclap&r and &eStorm Cage&r (Spectral Hub HUD)."
 	]
 	quest.7C962F8196C77292.title: "The Yellow Answered"
+	quest.7C9AAAE1FD428D25.quest_desc: [
+		"In a jungle Monkey Temple, a false priest of fire holds court (Companions!)."
+		""
+		"Find the place and defeat it. &7Optional: not needed for The Light Is Ready."
+	]
+	quest.7C9AAAE1FD428D25.quest_subtitle: "Boss"
+	quest.7C9AAAE1FD428D25.title: "The Sacred Pontiff"
 	quest.7CE2218CD9247712.quest_desc: [
 		"A voice in the crackle of every fire: &o\"Rage is not weakness. Rage is fuel.\"&r"
 		""
@@ -3967,4 +4374,138 @@
 	]
 	quest.7FEDAD19B0F2B46F.quest_subtitle: "Ice and Fire"
 	quest.7FEDAD19B0F2B46F.title: "The Bestiary"
+	task.009C38FB9D894510.title: "Defeat Mutant Zombie"
+	task.01E8D7E5065EE419.title: "Defeat Cumulonimbus"
+	task.02A88AFEDCA4B09C.title: "Defeat Wadjet"
+	task.03523FBDE19596D3.title: "Defeat The Harbinger"
+	task.06639639353DFB06.title: "Defeat Echo of Tyros, First Flamebearer"
+	task.08F6BB424454EFC2.title: "Defeat Ice Spider"
+	task.08FAD43769548487.title: "Defeat Snow Queen"
+	task.09810907E6666682.title: "Defeat Scylla"
+	task.09CC78DC8B828A0F.title: "Defeat Ancient Remnant"
+	task.0F5A9D7E1E3E40B8.title: "Defeat Fractured Apostle"
+	task.0FC9C0FB921A2FB7.title: "Defeat Fire Dragon"
+	task.1223460ED3653105.title: "Defeat Ender Guardian"
+	task.14ED95A4BBAD3817.title: "Defeat Ice Dragon"
+	task.14EE24B6A7F3B9CB.title: "Defeat Dark Doppelganger"
+	task.160D3A4395D767A6.title: "Defeat Withered Abomination"
+	task.17DA66FF32BA1334.title: "Defeat Sacred Pontiff"
+	task.17E7937E82D115D9.title: "Defeat Netherite Monstrosity"
+	task.17EF3D370A031305.title: "Defeat The Ascended One"
+	task.186CA723756A7D92.title: "Defeat Spiders Mother"
+	task.19130FC2DB0701A6.title: "Defeat Cyclops"
+	task.19BE68536C469DC3.title: "Defeat Minoshroom"
+	task.1A9008FEC62FA54F.title: "Defeat Archevoker"
+	task.1AA4B16783D39898.title: "Defeat Cumulonimbus"
+	task.1DE1CB8330542340.title: "Defeat Snow Queen"
+	task.1E75B2E773A89BC4.title: "Defeat Night Lich"
+	task.1EACB4D69665D821.title: "Defeat Ferrous Wroughtnaut"
+	task.1FFA22F297727A2E.title: "Defeat Fire Dragon"
+	task.2111427FFD5C85DC.title: "Defeat Hydra"
+	task.22C5F4086D0BF464.title: "Defeat Nightmare Stalker"
+	task.231750BF0C88509D.title: "Defeat Hydra"
+	task.23B140BDB3EEA4BB.title: "Defeat Sea Serpent"
+	task.23B99DE598D691B9.title: "Defeat Ignis"
+	task.2411C4EB8E1DF187.title: "Defeat Night Lich"
+	task.24255F98C22ADA31.title: "Defeat Mutant Creeper"
+	task.253B66C9E673E8A8.title: "Defeat Nether Gauntlet"
+	task.26FC2B0D9DA9B8DD.title: "Defeat Maledictus"
+	task.277B7420AB89F533.title: "Defeat The Harbinger"
+	task.277E6BE882288218.title: "Defeat Wither"
+	task.281195D1B6F9102D.title: "Defeat Frostmaw"
+	task.28754D68DE29E844.title: "Defeat Lightning Dragon"
+	task.28E2243F79FD350D.title: "Defeat Obsidilith"
+	task.294ED2CE140A6700.title: "Defeat Mutant Enderman"
+	task.2A85A6DA4ABB83FF.title: "Defeat Umvuthi, the Sunbird"
+	task.2A8AC732A2E7A636.title: "Defeat Maledictus"
+	task.2B531700C30CF4DA.title: "Defeat Lord Pumpkinhead"
+	task.2B869624EB487F96.title: "Defeat Corrupted Champion"
+	task.2C5E101F37FD0360.title: "Defeat Void Blossom"
+	task.308D60CA6143427E.title: "Defeat Pyromancer"
+	task.31200C8E32EAA2DA.title: "Defeat Netherite Monstrosity"
+	task.31DDC20CFAEF6D60.title: "Defeat Obsidilith"
+	task.31FC639300790402.title: "Defeat Nightmare Stalker"
+	task.330BCD3BBCA81B5C.title: "Defeat Ender Guardian"
+	task.3349ED3BE21BB75A.title: "Defeat Ur-Ghast"
+	task.381432B70AC52038.title: "Defeat Twilight Lich"
+	task.3C132EFFA5108689.title: "Defeat Ancient Knight"
+	task.3C5C40FCE65CA372.title: "Defeat Ur-Ghast"
+	task.3CCF63BB45712642.title: "Defeat Scylla"
+	task.3D44AE6D966571EF.title: "Defeat Mutant Skeleton"
+	task.3D9AF5AEC0732481.title: "Defeat Mutant Zombie"
+	task.3DF05678D60818BE.title: "Defeat Ender Dragon"
+	task.3EF36769BA05A096.title: "Defeat Dread Lich"
+	task.3F5E48E966538687.title: "Defeat Skeletosaurus"
+	task.3FE295B366A7EF04.title: "Defeat Naga"
+	task.405DE336FE463885.title: "Defeat Elder Guardian"
+	task.40F3725E6DF488E1.title: "Defeat Chorusent"
+	task.415588E52FB3D3BA.title: "Defeat Elder Guardian"
+	task.41C8809DDDD7A3D4.title: "Defeat The Obliterator"
+	task.42B32CB1683A82A3.title: "Defeat Skeletosaurus"
+	task.43A8CC97F21B3EC7.title: "Defeat The Leviathan"
+	task.43F300168936D634.title: "Defeat Ignis"
+	task.4485CA1F0A2F1E92.title: "Defeat Echo of Tyros, First Flamebearer"
+	task.46F0AF0911E2114A.title: "Defeat Cryomancer"
+	task.4766CB71BE4803BC.title: "Defeat Kobolediator"
+	task.479D5216072C7AA5.title: "Defeat Ogre King"
+	task.47A0511B055BEAA7.title: "Defeat The Harbinger"
+	task.4B103DB54D86E360.title: "Defeat Grunt Captain"
+	task.4B657E5D801684FB.title: "Defeat Wadjet"
+	task.4D5D35B6452D7B10.title: "Defeat Dread Lich"
+	task.4E161FF8A3094BBF.title: "Defeat The Dead King"
+	task.4E8C14728272769E.title: "Defeat Frostmaw"
+	task.4F8351783441002E.title: "Defeat Umvuthi, the Sunbird"
+	task.4FAEF45117014EDE.title: "Defeat Overgrown Colossus"
+	task.50EB8DC1DD54F716.title: "Defeat Mutant Creeper"
+	task.5157A247FCFB7128.title: "Defeat Electromancer"
+	task.5285B426EE77A6A3.title: "Defeat Frostbitten Golem"
+	task.53C99DEF2E0E03F6.title: "Defeat Lord Pumpkinhead"
+	task.53DED58F272058D3.title: "Defeat Ice Dragon"
+	task.5483F3EB045689E7.title: "Defeat Warped Fungussus"
+	task.558A09EF288FBA04.title: "Defeat Nether Gauntlet"
+	task.55D479EF70EE0169.title: "Defeat Gorgon"
+	task.57044C2C1DF29403.title: "Defeat Hydra"
+	task.5785D5DC09BB8446.title: "Defeat Fractured Apostle"
+	task.57D41D51904A2706.title: "Defeat Twilight Lich"
+	task.58FA198BDFF95138.title: "Defeat Void Worm"
+	task.5B0656C1D8BAB9EE.title: "Defeat Aptrgangr"
+	task.5B7270D1771729D5.title: "Defeat Dune Sentinel"
+	task.5CD48B72D258E4A6.title: "Defeat Alpha Yeti"
+	task.5DD371603A2F9060.title: "Defeat Archevoker"
+	task.5DEA819B72440C5F.title: "Defeat Alpha Yeti"
+	task.60DDA7D9EA39C3D0.title: "Defeat Minoshroom"
+	task.6152E0D554E9E782.title: "Defeat Chorusent"
+	task.61E1F939504966FA.title: "Defeat Gorgon"
+	task.6283444493B1B75E.title: "Defeat Ancient Remnant"
+	task.636535374616168C.title: "Defeat Warden"
+	task.63CB86E7D9E4BAB1.title: "Defeat The Leviathan"
+	task.66D549DB3828F49D.title: "Defeat Frostbitten Golem"
+	task.6749770654D2DD88.title: "Defeat Ogre King"
+	task.67F04406EF085360.title: "Defeat Ancient Guardian"
+	task.688D7201410AF1A9.title: "Defeat Mutant Skeleton"
+	task.6974C811958F8C96.title: "Defeat Corrupted Champion"
+	task.69C94BFDDE1CD2E8.title: "Defeat Ignis"
+	task.6B0D82F7A092E30C.title: "Defeat Naga"
+	task.6B71B9780C13DFA4.title: "Defeat Cumulonimbus"
+	task.6C9F0DCB3EA26443.title: "Defeat Haunted Knight"
+	task.6DB723E7670C44FF.title: "Defeat Overgrown Colossus"
+	task.6E8437E0291A09A4.title: "Defeat Naga"
+	task.707A79C2857AA50C.title: "Defeat Shulker Mimic"
+	task.708A11B9ABC8D95F.title: "Defeat Possessed Paladin"
+	task.71D5954A08394618.title: "Defeat The Ascended One"
+	task.725737D577345F53.title: "Defeat Clawdian"
+	task.7416A806BDAAC8B3.title: "Defeat Cyclops"
+	task.7516AF60CA47DA29.title: "Defeat Dread Lich"
+	task.75ABB6DC0B8C320F.title: "Defeat The Dead King"
+	task.7752C426B1F8D6CF.title: "Defeat The Obliterator"
+	task.7822270F2D25A35A.title: "Defeat Withered Abomination"
+	task.792784D1F80B541C.title: "Defeat Death Worm"
+	task.79EF5BE6FEAA0AC4.title: "Defeat Lava Eater"
+	task.7A08D11B5A848F77.title: "Defeat The Prowler"
+	task.7CED384D4802C3BE.title: "Defeat Ferrous Wroughtnaut"
+	task.7D4D899357F36463.title: "Defeat The Leviathan"
+	task.7DC4F518A705FE7B.title: "Defeat Supreme Bonescaller"
+	task.7E19FFABEA44595B.title: "Defeat Mutant Creeper"
+	task.7EC69270863A479E.title: "Defeat Blood Matriarch"
+	task.7ED5319365A420A6.title: "Defeat Supreme Bonescaller"
 }

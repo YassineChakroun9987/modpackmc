@@ -65,10 +65,9 @@
 			]
 			shape: "diamond"
 			tasks: [{
-				entity: "kingsandmonsters:ogre_grunt_captain"
 				id: "4B103DB54D86E360"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_kingsandmonsters_ogre_grunt_captain"
+				type: "gamestage"
 			}]
 			x: 3.0d
 			y: -4.5d
@@ -98,10 +97,9 @@
 			shape: "diamond"
 			size: 1.25d
 			tasks: [{
-				entity: "kingsandmonsters:ogre_lord"
 				id: "6749770654D2DD88"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_kingsandmonsters_ogre_lord"
+				type: "gamestage"
 			}]
 			x: 6.5d
 			y: -4.5d
@@ -131,10 +129,9 @@
 			shape: "diamond"
 			size: 1.25d
 			tasks: [{
-				entity: "bosses_of_mass_destruction:lich"
 				id: "2411C4EB8E1DF187"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_bosses_of_mass_destruction_lich"
+				type: "gamestage"
 			}]
 			x: 6.5d
 			y: -3.0d
@@ -164,10 +161,9 @@
 			shape: "diamond"
 			size: 1.25d
 			tasks: [{
-				entity: "bosses_of_mass_destruction:gauntlet"
 				id: "253B66C9E673E8A8"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_bosses_of_mass_destruction_gauntlet"
+				type: "gamestage"
 			}]
 			x: 8.5d
 			y: -3.0d
@@ -197,10 +193,9 @@
 			shape: "diamond"
 			size: 1.25d
 			tasks: [{
-				entity: "bosses_of_mass_destruction:obsidilith"
 				id: "28E2243F79FD350D"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_bosses_of_mass_destruction_obsidilith"
+				type: "gamestage"
 			}]
 			x: 11.0d
 			y: -3.0d
@@ -229,10 +224,9 @@
 			]
 			shape: "diamond"
 			tasks: [{
-				entity: "born_in_chaos_v1:mother_spider"
 				id: "186CA723756A7D92"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_born_in_chaos_v1_mother_spider"
+				type: "gamestage"
 			}]
 			x: 3.0d
 			y: -1.5d
@@ -262,10 +256,9 @@
 			shape: "diamond"
 			size: 1.25d
 			tasks: [{
-				entity: "born_in_chaos_v1:lord_pumpkinhead"
 				id: "2B531700C30CF4DA"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_born_in_chaos_v1_lord_pumpkinhead"
+				type: "gamestage"
 			}]
 			x: 10.0d
 			y: -1.5d
@@ -301,10 +294,9 @@
 			]
 			shape: "diamond"
 			tasks: [{
-				entity: "irons_spellbooks:archevoker"
 				id: "1A9008FEC62FA54F"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_irons_spellbooks_archevoker"
+				type: "gamestage"
 			}]
 			x: 3.0d
 			y: 0.0d
@@ -341,10 +333,9 @@
 			shape: "diamond"
 			size: 1.25d
 			tasks: [{
-				entity: "irons_spellbooks:dead_king"
 				id: "75ABB6DC0B8C320F"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_irons_spellbooks_dead_king"
+				type: "gamestage"
 			}]
 			x: 10.0d
 			y: 0.0d
@@ -381,10 +372,9 @@
 			shape: "diamond"
 			size: 1.5d
 			tasks: [{
-				entity: "irons_spellbooks:fire_boss"
 				id: "06639639353DFB06"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_irons_spellbooks_fire_boss"
+				type: "gamestage"
 			}]
 			x: 14.0d
 			y: 0.0d
@@ -414,10 +404,9 @@
 			shape: "diamond"
 			size: 1.25d
 			tasks: [{
-				entity: "graveyard:lich"
 				id: "6974C811958F8C96"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_graveyard_lich"
+				type: "gamestage"
 			}]
 			x: 6.5d
 			y: 1.5d
@@ -447,10 +436,9 @@
 			shape: "diamond"
 			size: 1.25d
 			tasks: [{
-				entity: "cataclysm:the_harbinger"
 				id: "277B7420AB89F533"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_cataclysm_the_harbinger"
+				type: "gamestage"
 			}]
 			x: 6.5d
 			y: 3.0d
@@ -480,10 +468,9 @@
 			shape: "diamond"
 			size: 1.25d
 			tasks: [{
-				entity: "cataclysm:netherite_monstrosity"
 				id: "17E7937E82D115D9"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_cataclysm_netherite_monstrosity"
+				type: "gamestage"
 			}]
 			x: 8.5d
 			y: 3.0d
@@ -513,10 +500,9 @@
 			shape: "diamond"
 			size: 1.25d
 			tasks: [{
-				entity: "cataclysm:ignis"
 				id: "69C94BFDDE1CD2E8"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_cataclysm_ignis"
+				type: "gamestage"
 			}]
 			x: 10.5d
 			y: 3.0d
@@ -546,10 +532,9 @@
 			shape: "diamond"
 			size: 1.25d
 			tasks: [{
-				entity: "cataclysm:ancient_remnant"
 				id: "6283444493B1B75E"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_cataclysm_ancient_remnant"
+				type: "gamestage"
 			}]
 			x: 12.5d
 			y: 3.0d
@@ -579,10 +564,9 @@
 			shape: "diamond"
 			size: 1.25d
 			tasks: [{
-				entity: "cataclysm:the_leviathan"
 				id: "63CB86E7D9E4BAB1"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_cataclysm_the_leviathan"
+				type: "gamestage"
 			}]
 			x: 10.5d
 			y: 4.5d
@@ -611,10 +595,9 @@
 			]
 			shape: "diamond"
 			tasks: [{
-				entity: "legendary_monsters:frostbitten_golem"
 				id: "5285B426EE77A6A3"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_legendary_monsters_frostbitten_golem"
+				type: "gamestage"
 			}]
 			x: 3.0d
 			y: 6.0d
@@ -644,10 +627,9 @@
 			shape: "diamond"
 			size: 1.25d
 			tasks: [{
-				entity: "legendary_monsters:overgrown_colossus"
 				id: "4FAEF45117014EDE"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_legendary_monsters_overgrown_colossus"
+				type: "gamestage"
 			}]
 			x: 6.5d
 			y: 6.0d
@@ -682,10 +664,9 @@
 			shape: "diamond"
 			size: 1.75d
 			tasks: [{
-				entity: "legendary_monsters:the_obliterator"
 				id: "41C8809DDDD7A3D4"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_legendary_monsters_the_obliterator"
+				type: "gamestage"
 			}]
 			x: 14.0d
 			y: 6.0d

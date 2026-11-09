@@ -241,10 +241,9 @@
 					type: "structure"
 				}
 				{
-					entity: "mowziesmobs:ferrous_wroughtnaut"
 					id: "7CED384D4802C3BE"
-					type: "kill"
-					value: 1L
+					stage: "gl_boss_mowziesmobs_ferrous_wroughtnaut"
+					type: "gamestage"
 				}
 			]
 			x: 4.5d
@@ -726,10 +725,9 @@
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [{
-				entity: "bosses_of_mass_destruction:void_blossom"
 				id: "2C5E101F37FD0360"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_bosses_of_mass_destruction_void_blossom"
+				type: "gamestage"
 			}]
 			x: 13.5d
 			y: -3.0d
@@ -1188,10 +1186,9 @@
 			]
 			shape: "hexagon"
 			tasks: [{
-				entity: "iceandfire:deathworm"
 				id: "792784D1F80B541C"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_iceandfire_deathworm"
+				type: "gamestage"
 			}]
 			x: 13.5d
 			y: 3.0d
@@ -1289,11 +1286,10 @@
 			size: 2.25d
 			tasks: [
 				{
-					entity: "kingsandmonsters:ogre_lord"
 					id: "479D5216072C7AA5"
 					optional_task: true
-					type: "kill"
-					value: 1L
+					stage: "gl_boss_kingsandmonsters_ogre_lord"
+					type: "gamestage"
 				}
 				{
 					id: "4A789C8CE624DE02"
@@ -1566,10 +1562,9 @@
 			shape: "hexagon"
 			size: 1.4d
 			tasks: [{
-				entity: "cataclysm:ancient_remnant"
 				id: "09CC78DC8B828A0F"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_cataclysm_ancient_remnant"
+				type: "gamestage"
 			}]
 			x: 26.75d
 			y: 0.0d
@@ -1701,10 +1696,9 @@
 			shape: "hexagon"
 			size: 1.4d
 			tasks: [{
-				entity: "cataclysm:ender_guardian"
 				id: "330BCD3BBCA81B5C"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_cataclysm_ender_guardian"
+				type: "gamestage"
 			}]
 			x: 26.75d
 			y: -3.0d
@@ -1825,10 +1819,9 @@
 			shape: "hexagon"
 			size: 1.4d
 			tasks: [{
-				entity: "legendary_monsters:ancient_guardian"
 				id: "67F04406EF085360"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_legendary_monsters_ancient_guardian"
+				type: "gamestage"
 			}]
 			x: 29.75d
 			y: 0.0d
@@ -2016,6 +2009,292 @@
 			]
 			x: 28.25d
 			y: 1.5d
+		}
+		{
+			dependencies: ["7E90C80B6188C248"]
+			icon: {
+				id: "mutantmonsters:mutant_creeper_spawn_egg"
+			}
+			id: "5F7443FF68611817"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "5C5AA6518F2F5888"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "41402C0E22E36E07"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:orange 200"
+					id: "7CF5EAE5DE014631"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				id: "7E19FFABEA44595B"
+				stage: "gl_boss_mutantmonsters_mutant_creeper"
+				type: "gamestage"
+			}]
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7E90C80B6188C248"]
+			icon: {
+				id: "legendary_monsters:dune_sentinel_spawn_egg"
+			}
+			id: "00322C7286E6A97D"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "0A8A2A4C9C7F4C9B"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "7F9D29D5A7A7A6D6"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:orange 200"
+					id: "7A4DE23979060CD9"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "4F55B7D2BEBAB63F"
+					structure: "legendary_monsters:ruined_pyramid"
+					type: "structure"
+				}
+				{
+					id: "5B7270D1771729D5"
+					stage: "gl_boss_legendary_monsters_dune_sentinel"
+					type: "gamestage"
+				}
+			]
+			x: 12.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7E90C80B6188C248"]
+			icon: {
+				id: "cataclysm:wadjet_spawn_egg"
+			}
+			id: "25DE137B460B7468"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "0FF0782F774CF9B3"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "22F7A167E2503D44"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:orange 200"
+					id: "4F7F03E14FB6E78D"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				id: "4B657E5D801684FB"
+				stage: "gl_boss_cataclysm_wadjet"
+				type: "gamestage"
+			}]
+			x: 13.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7E90C80B6188C248"]
+			icon: {
+				id: "cataclysm:kobolediator_spawn_egg"
+			}
+			id: "2F45594CE29CA5FC"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "678E13BC118AAB64"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "289A3A82B372DD5D"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:orange 200"
+					id: "5BDFD71C53A55EA0"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				id: "4766CB71BE4803BC"
+				stage: "gl_boss_cataclysm_kobolediator"
+				type: "gamestage"
+			}]
+			x: 15.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7E90C80B6188C248"]
+			icon: {
+				id: "iceandfire:spawn_egg_cyclops"
+			}
+			id: "77B35123CE4BF5BC"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "0D5573D891E229BC"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "728550B736E1C8C3"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:orange 200"
+					id: "39FAEDC65FF06BAB"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "057CF14941FC89DC"
+					structure: "iceandfire:cyclops_cave"
+					type: "structure"
+				}
+				{
+					id: "19130FC2DB0701A6"
+					stage: "gl_boss_iceandfire_cyclops"
+					type: "gamestage"
+				}
+			]
+			x: 10.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7E90C80B6188C248"]
+			icon: {
+				id: "legendary_monsters:skeletosaurus_spawn_egg"
+			}
+			id: "1F10B18A4FC5C533"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "54FE0FEEE4A9460C"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "1011A30D5DF40E15"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:orange 200"
+					id: "67462643811AD9E5"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "7D4DAFAB4EE4B651"
+					structure: "legendary_monsters:skeletosaurus_nest"
+					type: "structure"
+				}
+				{
+					id: "3F5E48E966538687"
+					stage: "gl_boss_legendary_monsters_skeletosaurus"
+					type: "gamestage"
+				}
+			]
+			x: 12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"0A9A8A8E44341A20"
+				"21C8764B60285A29"
+				"0A50BE76CAC54284"
+				"379605E26CF23304"
+				"15D894FF564947FE"
+				"275825B06E09C8CB"
+				"5F7443FF68611817"
+				"00322C7286E6A97D"
+				"25DE137B460B7468"
+				"77B35123CE4BF5BC"
+				"1F10B18A4FC5C533"
+			]
+			hide_dependency_lines: true
+			icon: {
+				id: "createlanterns:orange_power_ring"
+			}
+			id: "706973B7743776B1"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "06686CA5B2B550E7"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "460EC05114210D58"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:orange 600"
+					id: "3970E9ADA1941174"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "7397F78BA88169E6"
+				type: "checkmark"
+			}]
+			x: 34.25d
+			y: 4.5d
 		}
 	]
 }

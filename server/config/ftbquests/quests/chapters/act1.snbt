@@ -994,32 +994,28 @@
 			size: 1.5d
 			tasks: [
 				{
-					entity: "mowziesmobs:ferrous_wroughtnaut"
 					id: "1EACB4D69665D821"
 					optional_task: true
-					type: "kill"
-					value: 1L
+					stage: "gl_boss_mowziesmobs_ferrous_wroughtnaut"
+					type: "gamestage"
 				}
 				{
-					entity: "born_in_chaos_v1:supreme_bonescaller"
 					id: "7DC4F518A705FE7B"
 					optional_task: true
-					type: "kill"
-					value: 1L
+					stage: "gl_boss_born_in_chaos_v1_supreme_bonescaller"
+					type: "gamestage"
 				}
 				{
-					entity: "born_in_chaos_v1:nightmare_stalker"
 					id: "22C5F4086D0BF464"
 					optional_task: true
-					type: "kill"
-					value: 1L
+					stage: "gl_boss_born_in_chaos_v1_nightmare_stalker"
+					type: "gamestage"
 				}
 				{
-					entity: "irons_spellbooks:citadel_keeper"
 					id: "3C132EFFA5108689"
 					optional_task: true
-					type: "kill"
-					value: 1L
+					stage: "gl_boss_irons_spellbooks_citadel_keeper"
+					type: "gamestage"
 				}
 			]
 			x: 7.5d

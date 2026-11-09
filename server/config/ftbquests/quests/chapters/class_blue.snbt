@@ -285,10 +285,9 @@
 					type: "structure"
 				}
 				{
-					entity: "irons_spellbooks:ice_spider"
 					id: "08F6BB424454EFC2"
-					type: "kill"
-					value: 1L
+					stage: "gl_boss_irons_spellbooks_ice_spider"
+					type: "gamestage"
 				}
 			]
 			x: 6.0d
@@ -470,10 +469,9 @@
 			]
 			shape: "hexagon"
 			tasks: [{
-				entity: "irons_spellbooks:cryomancer"
 				id: "46F0AF0911E2114A"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_irons_spellbooks_cryomancer"
+				type: "gamestage"
 			}]
 			x: 1.5d
 			y: 1.5d
@@ -989,10 +987,9 @@
 			shape: "hexagon"
 			size: 1.5d
 			tasks: [{
-				entity: "mowziesmobs:frostmaw"
 				id: "4E8C14728272769E"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_mowziesmobs_frostmaw"
+				type: "gamestage"
 			}]
 			x: 12.0d
 			y: -3.0d
@@ -1366,11 +1363,10 @@
 			size: 2.25d
 			tasks: [
 				{
-					entity: "bosses_of_mass_destruction:lich"
 					id: "1E75B2E773A89BC4"
 					optional_task: true
-					type: "kill"
-					value: 1L
+					stage: "gl_boss_bosses_of_mass_destruction_lich"
+					type: "gamestage"
 				}
 				{
 					id: "4B26316C8172E62B"
@@ -1547,10 +1543,9 @@
 			shape: "hexagon"
 			size: 1.4d
 			tasks: [{
-				entity: "cataclysm:maledictus"
 				id: "2A8AC732A2E7A636"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_cataclysm_maledictus"
+				type: "gamestage"
 			}]
 			x: 26.75d
 			y: -3.0d
@@ -1652,10 +1647,9 @@
 			shape: "hexagon"
 			size: 1.4d
 			tasks: [{
-				entity: "legendary_monsters:frostbitten_golem"
 				id: "66D549DB3828F49D"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_legendary_monsters_frostbitten_golem"
+				type: "gamestage"
 			}]
 			x: 26.75d
 			y: -1.5d
@@ -2074,6 +2068,224 @@
 			}]
 			x: 36.25d
 			y: 0.0d
+		}
+		{
+			dependencies: ["73480E81040913A6"]
+			icon: {
+				id: "cataclysm:aptrgangr_spawn_egg"
+			}
+			id: "64498278ABAB751A"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+					id: "360F3F32E71BB681"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "4AB5D9412D8202DA"
+					type: "xp"
+					xp: 300
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:blue 200"
+					id: "2F185D7BBBAEC7FC"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "083F44B9334C32C6"
+					structure: "cataclysm:frosted_prison"
+					type: "structure"
+				}
+				{
+					id: "5B0656C1D8BAB9EE"
+					stage: "gl_boss_cataclysm_aptrgangr"
+					type: "gamestage"
+				}
+			]
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7E9953BD626315B9"]
+			icon: {
+				id: "legendary_monsters:cloud_golem_spawn_egg"
+			}
+			id: "3B0EC56957A2869D"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "42029CCFC21DE390"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "582834C77DA474D2"
+					type: "xp"
+					xp: 500
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:blue 350"
+					id: "7208377C09B71C7C"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "6BF58A0FBC667C5F"
+					structure: "legendary_monsters:cloudy_temple"
+					type: "structure"
+				}
+				{
+					id: "1AA4B16783D39898"
+					stage: "gl_boss_legendary_monsters_cloud_golem"
+					type: "gamestage"
+				}
+			]
+			x: 25.25d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7E9953BD626315B9"]
+			icon: {
+				id: "minecraft:wither_skeleton_skull"
+			}
+			id: "47B6C347E127AB7A"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "73AD07F93BE549CE"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "49A3FE54595B424F"
+					type: "xp"
+					xp: 500
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:blue 350"
+					id: "5D6FA6D400CE32A6"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "2E8F562E7ECD248C"
+					structure: "iceandfire:mausoleum"
+					type: "structure"
+				}
+				{
+					id: "4D5D35B6452D7B10"
+					stage: "gl_boss_iceandfire_dread_lich"
+					type: "gamestage"
+				}
+			]
+			x: 26.75d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7E9953BD626315B9"]
+			icon: {
+				id: "iceandfire:spawn_egg_ice_dragon"
+			}
+			id: "3FDEC14DB19D9B25"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "4984A7064F04667E"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "288FCB1CDCEC0C00"
+					type: "xp"
+					xp: 500
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:blue 350"
+					id: "1893D93909683537"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "180FDD8DA68DB2BB"
+					structure: "iceandfire:ice_dragon_roost"
+					type: "structure"
+				}
+				{
+					id: "53DED58F272058D3"
+					stage: "gl_boss_iceandfire_ice_dragon"
+					type: "gamestage"
+				}
+			]
+			x: 28.25d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"558F18D1C97008FD"
+				"0E949DE9DA61EBCE"
+				"5E095EF50ACD8483"
+				"397CD37A58E6EAA6"
+				"70BC4A9E27A2B814"
+				"3B0EC56957A2869D"
+				"47B6C347E127AB7A"
+				"3FDEC14DB19D9B25"
+			]
+			hide_dependency_lines: true
+			icon: {
+				id: "createlanterns:blue_power_ring"
+			}
+			id: "114AE2F37E7F45E9"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "6AF5FC7EA4EAB31A"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "0E15A8B084BF038A"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:blue 600"
+					id: "7C1BDC55E41572E5"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "10C5B91EC97B1CFF"
+				type: "checkmark"
+			}]
+			x: 34.25d
+			y: 4.5d
 		}
 	]
 }

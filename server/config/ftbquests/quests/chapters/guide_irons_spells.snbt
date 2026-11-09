@@ -539,10 +539,9 @@
 			shape: "diamond"
 			size: 1.25d
 			tasks: [{
-				entity: "discerning_the_eldritch:ascended_one"
 				id: "71D5954A08394618"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_discerning_the_eldritch_ascended_one"
+				type: "gamestage"
 			}]
 			x: 7.5d
 			y: 6.0d

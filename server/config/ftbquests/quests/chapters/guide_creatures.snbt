@@ -121,10 +121,9 @@
 			]
 			shape: "diamond"
 			tasks: [{
-				entity: "alexsmobs:void_worm"
 				id: "58FA198BDFF95138"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_alexsmobs_void_worm"
+				type: "gamestage"
 			}]
 			x: 8.0d
 			y: -2.5d
@@ -153,10 +152,9 @@
 			]
 			shape: "diamond"
 			tasks: [{
-				entity: "mowziesmobs:umvuthi"
 				id: "4F8351783441002E"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_mowziesmobs_umvuthi"
+				type: "gamestage"
 			}]
 			x: 2.5d
 			y: 0.0d
@@ -209,10 +207,9 @@
 			]
 			shape: "diamond"
 			tasks: [{
-				entity: "mowziesmobs:frostmaw"
 				id: "281195D1B6F9102D"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_mowziesmobs_frostmaw"
+				type: "gamestage"
 			}]
 			x: 7.5d
 			y: 0.0d
@@ -233,10 +230,9 @@
 			}]
 			shape: "diamond"
 			tasks: [{
-				entity: "mowziesmobs:naga"
 				id: "6B0D82F7A092E30C"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_mowziesmobs_naga"
+				type: "gamestage"
 			}]
 			x: 10.0d
 			y: 1.5d
@@ -264,10 +260,9 @@
 				}
 			]
 			tasks: [{
-				entity: "mutantmonsters:mutant_zombie"
 				id: "3D9AF5AEC0732481"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_mutantmonsters_mutant_zombie"
+				type: "gamestage"
 			}]
 			x: 2.0d
 			y: 2.5d
@@ -286,10 +281,9 @@
 				type: "command"
 			}]
 			tasks: [{
-				entity: "mutantmonsters:mutant_skeleton"
 				id: "3D44AE6D966571EF"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_mutantmonsters_mutant_skeleton"
+				type: "gamestage"
 			}]
 			x: 4.0d
 			y: 2.5d

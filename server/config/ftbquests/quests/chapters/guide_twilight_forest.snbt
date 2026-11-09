@@ -114,10 +114,9 @@
 			shape: "diamond"
 			size: 1.25d
 			tasks: [{
-				entity: "twilightforest:naga"
 				id: "3FE295B366A7EF04"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_twilightforest_naga"
+				type: "gamestage"
 			}]
 			x: 3.5d
 			y: 0.0d
@@ -147,10 +146,9 @@
 			shape: "diamond"
 			size: 1.25d
 			tasks: [{
-				entity: "twilightforest:lich"
 				id: "381432B70AC52038"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_twilightforest_lich"
+				type: "gamestage"
 			}]
 			x: 6.5d
 			y: 0.0d
@@ -170,10 +168,9 @@
 			}]
 			shape: "diamond"
 			tasks: [{
-				entity: "twilightforest:minoshroom"
 				id: "19BE68536C469DC3"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_twilightforest_minoshroom"
+				type: "gamestage"
 			}]
 			x: 9.5d
 			y: -2.5d
@@ -203,10 +200,9 @@
 			shape: "diamond"
 			size: 1.25d
 			tasks: [{
-				entity: "twilightforest:hydra"
 				id: "2111427FFD5C85DC"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_twilightforest_hydra"
+				type: "gamestage"
 			}]
 			x: 12.5d
 			y: -2.5d
@@ -259,10 +255,9 @@
 			shape: "diamond"
 			size: 1.25d
 			tasks: [{
-				entity: "twilightforest:ur_ghast"
 				id: "3C5C40FCE65CA372"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_twilightforest_ur_ghast"
+				type: "gamestage"
 			}]
 			x: 12.5d
 			y: 0.0d
@@ -282,10 +277,9 @@
 			}]
 			shape: "diamond"
 			tasks: [{
-				entity: "twilightforest:alpha_yeti"
 				id: "5DEA819B72440C5F"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_twilightforest_alpha_yeti"
+				type: "gamestage"
 			}]
 			x: 9.5d
 			y: 2.5d
@@ -315,10 +309,9 @@
 			shape: "diamond"
 			size: 1.25d
 			tasks: [{
-				entity: "twilightforest:snow_queen"
 				id: "1DE1CB8330542340"
-				type: "kill"
-				value: 1L
+				stage: "gl_boss_twilightforest_snow_queen"
+				type: "gamestage"
 			}]
 			x: 12.5d
 			y: 2.5d

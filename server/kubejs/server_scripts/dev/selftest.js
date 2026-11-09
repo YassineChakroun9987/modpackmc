@@ -58,6 +58,8 @@ ServerEvents.commandRegistry(function (event) {
       console.info('[selftest] village ' + d.getInt('vx') + ',' + d.getInt('vz') + ' outpost ' + ox + ',' + d.getInt('oy') + ',' + oz + ' crash ' + cx + ',' + d.getInt('cy') + ',' + cz)
       } catch (err) { bad++; console.error('[selftest] world placement threw: ' + err); if (err.javaException) console.error('[selftest]   ' + err.javaException) }
       check('NPC talk handler present', typeof glNpcTalk === 'function')
+      var missingBosses = Object.keys(GL_BOSS_LIST).filter(function (id) { return !ents.containsKey($ResourceLocation.parse(id)) })
+      check('every quest boss exists (' + Object.keys(GL_BOSS_LIST).length + ')' + (missingBosses.length ? ': missing ' + missingBosses.join(', ') : ''), missingBosses.length === 0)
       try { glCorpseSelftest(server, check) } catch (err) { bad++; console.error('[selftest] corpse quick-loot threw: ' + err); if (err.javaException) console.error('[selftest]   ' + err.javaException) }
       console.info('[selftest] DONE: ' + ok + ' passed, ' + bad + ' failed')
       return bad === 0 ? 1 : 0
