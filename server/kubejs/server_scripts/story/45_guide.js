@@ -42,7 +42,7 @@ function glGuideLines(player, next, voice) {
           '§7' + next.where + ' (' + w[1] + ')']
 }
 
-// Explorer map with a red X on the nearest lair of `structure`, or null if none within ~1,600 blocks.
+// Explorer map with a red X on the nearest lair of `structure`, or null if none within ~1,000 blocks (64 chunks keeps the search short).
 function glLairMap(player, structure, title) {
   var level = player.level
   var $Reg = Java.loadClass('net.minecraft.core.registries.Registries')
@@ -51,7 +51,7 @@ function glLairMap(player, structure, title) {
   var $List = Java.loadClass('java.util.List')
   var reg = player.server.registryAccess().registryOrThrow($Reg.STRUCTURE)
   var holder = reg.getHolderOrThrow($Key.create($Reg.STRUCTURE, $ResourceLocation.parse(structure)))
-  var found = level.getChunkSource().getGenerator().findNearestMapStructure(level, $HolderSet['direct(java.util.List)']($List.of(holder)), player.blockPosition(), 100, false)
+  var found = level.getChunkSource().getGenerator().findNearestMapStructure(level, $HolderSet['direct(java.util.List)']($List.of(holder)), player.blockPosition(), 64, false)
   if (!found) return null
   var pos = found.getFirst()
   var $MapItem = Java.loadClass('net.minecraft.world.item.MapItem')
