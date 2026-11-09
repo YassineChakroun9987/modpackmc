@@ -31,7 +31,10 @@ PlayerEvents.tick(function (event) {
 // Average power of the players around a position (null if nobody is near).
 function glAreaPower(level, x, y, z) {
   var near = [], nearest = null, nd = Infinity
-  level.players().forEach(function (p) {
+  var dim = String(level.dimension)
+  // server.players + a dimension check (level.players() isn't callable from KubeJS).
+  level.getServer().players.forEach(function (p) {
+    if (String(p.level.dimension) !== dim) return
     var d = p.distanceToSqr(x, y, z)
     var pw = GL_POWER[String(p.getUuid())]
     if (pw === undefined) pw = glPowerLevel(p)
@@ -88,7 +91,7 @@ EntityEvents.spawned(function (event) {
   var e = event.entity
   if (e.level.isClientSide() || !glShouldScale(e)) return
   var L = glAreaPower(e.level, e.getX(), e.getY(), e.getZ())
-  if (L === null || L < 1) { e.addTag('gl_scaled'); return }
+  if (L === null || L < 1) return   // nobody (or only level-0 players) near: leave it unscaled for now, it's checked again when it next loads
   glApplyMobScale(e, Math.round(L))
 })
 

@@ -80,6 +80,7 @@ ServerEvents.commandRegistry(function (event) {
       try {
         var z = Java.loadClass('net.minecraft.world.entity.EntityType').ZOMBIE.create(server.overworld())
         check('scaling: a fresh zombie is scalable', glShouldScale(z))
+        check('scaling: area power with nobody near is null (and does not throw)', glAreaPower(server.overworld(), 0, 64, 0) === null)
         var elite = glApplyMobScale(z, 50, true)
         var A = Java.loadClass('net.minecraft.world.entity.ai.attributes.Attributes')
         var hp = z.getMaxHealth(), dmg = z.getAttributeValue(A.ATTACK_DAMAGE), arm = z.getAttributeValue(A.ARMOR)
