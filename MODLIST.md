@@ -140,7 +140,7 @@ Each class draws its spells from one or two Iron's Spells schools (see `docs/CON
 | Companions! | 1.3.7 | both | New tameable companion creatures | Knight Lib | — | testing |
 | Redomesticate | 2.0.0 | both | Better pets: pet beds, pet enchantments, pet commands (a fork of Domestication Innovation) | — | — | testing |
 | Guard Villagers | 2.4.12 | both | Give a villager a sword or crossbow and it becomes a guard: the Prologue's raid defence | — | — | testing |
-| Enhanced Celestials | 6.0.2.6 | both | Blood moons, harvest moons and blue moons | CorgiLib, Data Anchor | — | testing |
+| Enhanced Celestials 2: Core + Default Lunar Events | 2.0.3.4 · 2.0.1.4 | both | Blood, blue, harvest and super moons (replaced EC 1 6.0.2.6 on 2026-11-09: it showed an "EC 2 is here" popup on every world join, with no setting to turn it off. Shader Support add-on skipped: it needs Iris) | CorgiLib, Data Anchor | — | testing |
 
 ### Create, airships and tech (added 2026-11-09)
 | Mod | Version | Side | Role in the pack | Depends on | Tweaks made | Status |
@@ -202,7 +202,7 @@ When a mod is dropped, check this table for libraries that become `orphaned`.
 | Fzzy Config | 0.7.7 | both | Simply Swords, Simply Tooltips | No | needed |
 | Kotlin for Forge | 5.12.0 | both | Fzzy Config | No | needed |
 | Collective | 8.84 | both | Village Spawn Point | No | needed |
-| CorgiLib · Data Anchor | 5.0.0.10 · 2.0.0.18 | both | Enhanced Celestials | No | needed |
+| CorgiLib · Data Anchor | 5.0.0.10 · 2.0.0.18 | both | Enhanced Celestials 2 | No | needed |
 | GuideME | 21.1.22 | both | Applied Energistics 2 (its in-game guide) | No | needed |
 | Brandon's Core · CodeChicken Lib | 3.2.1 · 4.6.1 | both | Draconic Evolution | No | needed |
 | Sophisticated Core | 1.5.31 | both | Sophisticated Backpacks | No | needed |
@@ -506,3 +506,4 @@ Structurify is the **only** thing that controls placement. Cristel Lib's auto-co
 | 2026-11-09 | Quest book fixes: ids kept below 8000…, stage tasks as `gamestage` (FTB had silently re-id'd ~half the quests and dropped all 44 stage tasks) | 147 | 44.4s | 0 (+2 known) |
 | 2026-11-09 | + Create Cosmonautics (Oa, Korugar, Moon, deep space become real dimensions) | 148 | 44.2s | 0 (+2 known); Lanterns config gained a `[cosmonautics]` section |
 | 2026-11-09 | **Final real world**, pre-generated 1,200 blocks around spawn (≈22,800 chunks, ~8 min) | 148 | — | 0 (+ known Philips Ruins item frames during generation) |
+| 2026-11-09 | Enhanced Celestials 1 → EC 2 Core + Default Lunar Events (no join popup); real world loads fine (one-time "enhancedcelestials MISSING" version note) | 149 | 44.5s | 0 (+2 known); selftest 32/32 |
