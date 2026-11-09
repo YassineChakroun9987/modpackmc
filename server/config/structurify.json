@@ -37,6 +37,10 @@
       "override_global_flatness_check": true,
       "enable_flatness_check": true,
       "flatness_check_mode": "AUTO"
+    },
+    {
+      "name": "minecraft:stronghold_big",
+      "is_disabled": true
     }
   ],
   "structure_sets": [

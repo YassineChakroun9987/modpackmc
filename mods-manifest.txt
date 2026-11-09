@@ -139,6 +139,7 @@ server  resourcefulconfig-neoforge-1.21-3.0.11.jar                              
 server  SkyVillages-1.0.6-1.21.x-neoforge-release.jar                           645eb49d4019e5550afd4055f380c26edd126611
 server  structure_layout_optimizer-neoforge-1.0.12.jar                          052c31cb9881c04c17d949345539aa8684f474bf
 server  tlc-neoforge-1.21.1-2.1.0.jar                                           419b6f9c19da9dac1602b98dc8a93ce4d02d9eda
+server  trek-B0.6.2.jar                                                         e83cbdbe987129cb039ead47d11994d8cbdb1ade
 server  villagespawnpoint-1.21.1-6.0.jar                                        c6d3c35ccad1ce88b37f3a981049006c996c1886
 server  YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar                      90529257dbd92558998c65178294bc7b2fd16a64
 server  YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar                           73a660c13063450e555e5e2c015ae24d606b32b4

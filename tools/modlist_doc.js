@@ -117,6 +117,7 @@ const CATEGORIES = [
       { title: '2.8 Villages', rows: [
         ['Epic Structures: Villages', '2.0.0', 'Rebuilds the classic villages as large medieval towns with churches, windmills and walls. The story starts in one.', /^epic-structures-villages-/],
         ['ChoiceTheorem\'s Overhauled Village (CTOV)', '3.6.4', 'Overhauled villages for 21 biomes in small, medium and large sizes, some fortified, plus pillager outposts.', /^\[neoforge\]ctov-/],
+        ['Trek', 'B0.6.2', 'Seven extra village styles (plains, desert, savanna, snowy, taiga, swamp, cherry) plus ruins, camps and dungeons in every dimension.', /^trek-/],
         ['Towns and Towers', '1.13.11', 'Extra village styles and pillager outposts for many biomes.', /^t_and_t-/],
         ['Sky Villages', '1.0.6', 'Floating villages high above the land.', /^SkyVillages-/],
         ['Village Spawn Point', '6.0', 'Starts new worlds in a village. Our story script then moves you to the nearest medieval town.', /^villagespawnpoint-/],

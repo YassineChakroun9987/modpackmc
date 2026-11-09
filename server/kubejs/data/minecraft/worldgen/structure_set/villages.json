@@ -25,6 +25,34 @@
     {
       "structure": "minecraft:village_taiga",
       "weight": 30
+    },
+    {
+      "structure": "trek:village/plains",
+      "weight": 20
+    },
+    {
+      "structure": "trek:village/desert",
+      "weight": 20
+    },
+    {
+      "structure": "trek:village/savanna",
+      "weight": 20
+    },
+    {
+      "structure": "trek:village/snowy",
+      "weight": 20
+    },
+    {
+      "structure": "trek:village/taiga",
+      "weight": 20
+    },
+    {
+      "structure": "trek:village/swamp_vanilla",
+      "weight": 20
+    },
+    {
+      "structure": "trek:village/cherry",
+      "weight": 20
     }
   ]
 }

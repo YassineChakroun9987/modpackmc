@@ -335,3 +335,12 @@ shows your level and the area's. Tuning is at the top of `story/70_mob_scaling.j
 
 **Console:** a green "GREEN LANTERNS SERVER IS READY" banner shows in the server window when startup is done.
 
+**Trek** (from the chinatown pack) adds 7 village styles (plains, desert, savanna, snowy, taiga, swamp,
+cherry) to the village mix, about 30% of villages where they fit, plus ruins and dungeons. Its
+stronghold is switched off (YUNG's Better Strongholds stays the stronghold) and its chests use our
+loot tiers. The world was regenerated for it; the story town is now an Epic savanna town.
+
+**Fixed: the crashed Lantern ship was never built.** The placement command failed silently (the
+ship reached into unloaded chunks). It now loads the whole site, builds the 47x19x29 ship centred on
+the crash point, and the self-test checks the hull is really there.
+

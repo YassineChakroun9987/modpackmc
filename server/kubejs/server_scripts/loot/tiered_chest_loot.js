@@ -151,6 +151,11 @@ var GL_LOOT_TIER_RULES = [
   [/^philipsruins:chest\/end_ruins_loot$/, 4],
   [/^philipsruins:chest\//, 2],
 
+  // ---- Trek (loot folders are its own rarity tiers)
+  [/^trek:(overworld\/(very_common|common)|village)\//, 1],
+  [/^trek:(overworld\/medium|pillagers)\//, 2],
+  [/^trek:overworld\/rare\//, 3],
+  [/^trek:overworld\/very_rare\//, 4],
   // ---- Towns and Towers, CTOV, Sky Villages, Terralith villages
   [/^kaisyn:outpost\/common\/armory$/, 2],
   [/^kaisyn:(outpost|village)\//, 1],
