@@ -91,6 +91,22 @@ ServerEvents.commandRegistry(function (event) {
         check('scaling: never scaled twice', !glShouldScale(z))
         z.discard()
       } catch (err) { bad++; console.error('[selftest] scaling threw: ' + err) }
+      try {
+        // A stand-in container (glCapChest only needs these four methods; SimpleContainer's constructor is
+        // overloaded and Rhino can't pick one).
+        var slots = []; for (var bs = 0; bs < 27; bs++) slots.push($ItemStack.EMPTY)
+        var box = { getContainerSize: function () { return 27 }, getItem: function (i) { return slots[i] },
+                    setItem: function (i, s) { slots[i] = s }, setChanged: function () {} }
+        for (var bi = 0; bi < 22; bi++) box.setItem(bi, Item.of(bi % 2 ? 'minecraft:rotten_flesh' : 'minecraft:string', 3))
+        box.setItem(22, Item.of('minecraft:diamond_sword')); box.setItem(23, Item.of('minecraft:golden_apple'))
+        box.setItem(24, Item.of('minecraft:diamond', 2))
+        var capped = glCapChest(box, 1), left = 0, keptSword = false
+        for (var bj = 0; bj < 27; bj++) { if (!box.getItem(bj).isEmpty()) left++; if (String(box.getItem(bj).id) === 'minecraft:diamond_sword') keptSword = true }
+        check('chest cap: tier 1 chest trimmed to 9 stacks (' + left + ')', left === 9)
+        check('chest cap: junk goes first, the sword stays', keptSword && capped.stacksRemoved === 16)
+        check('chest tier: a village chest is tier 1, a Nether chest at least 3',
+          glChestTier('minecraft:chests/village/village_plains_house', 'minecraft:overworld') === 1 && glChestTier('minecraft:chests/village/village_plains_house', 'minecraft:the_nether') >= 3)
+      } catch (err) { bad++; console.error('[selftest] chest cap threw: ' + err) }
       try { glCorpseSelftest(server, check) } catch (err) { bad++; console.error('[selftest] corpse quick-loot threw: ' + err); if (err.javaException) console.error('[selftest]   ' + err.javaException) }
       console.info('[selftest] DONE: ' + ok + ' passed, ' + bad + ' failed')
       return bad === 0 ? 1 : 0

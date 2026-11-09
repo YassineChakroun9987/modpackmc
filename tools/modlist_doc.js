@@ -217,7 +217,6 @@ const CATEGORIES = [
         ['Jade', '15.10.6', 'Shows what you\'re looking at: the block or mob, its health and which mod it comes from.', /^Jade-/],
         ['AppleSkin', '3.0.9', 'Shows how much hunger and saturation food gives.', /^appleskin-/],
         ['AttributeFix', '21.1.3', 'Removes vanilla stat caps so RPG gear can go higher.', /^attributefix-/],
-        ['Lootr', '1.11.38', 'Every player gets their own loot from each structure chest: no loot stealing.', /^lootr-/],
         ['Waystones', '21.1.46', 'Teleport between the waystones you\'ve found.', /^waystones-/],
         ['Xaero\'s Minimap + World Map', '26.6.0 · 1.47.0', 'A minimap with waypoints and a full world map (press M).', /^xaero(minimap|worldmap)-/],
         ['Open Parties and Claims', '0.33.0', 'Claim land so nobody can grief it. Uses your FTB party.', /^open-parties-and-claims-/],

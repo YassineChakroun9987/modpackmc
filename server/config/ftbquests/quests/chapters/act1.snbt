@@ -529,10 +529,9 @@
 				}
 			]
 			tasks: [{
-				advancement: "lootr:1chest"
-				criterion: ""
 				id: "70C1B49CF47CBAE9"
-				type: "advancement"
+				stage: "gl_loot_1"
+				type: "gamestage"
 			}]
 			x: 6.0d
 			y: -1.5d

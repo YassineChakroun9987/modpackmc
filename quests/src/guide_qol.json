@@ -143,13 +143,13 @@
       "key": "loot_share",
       "title": "Share the Spoils",
       "desc": [
-        "Dungeon chests here use &eLootr&r: every player gets their own loot from every chest. Don't race your friends; everyone loots everything.",
+        "A chest's loot belongs to whoever opens it first, so explore together and share. Be the first to open &e10 loot chests&r.",
         "Open ten structure chests. Shared things (a boss drop on the floor, a feast) are yours to split fairly."
       ],
-      "icon": "lootr:lootr_chest",
+      "icon": "minecraft:chest",
       "x": 10, "y": 0,
       "deps": ["opac_claim"],
-      "tasks": [{"type": "advancement", "advancement": "lootr:10loot"}],
+      "tasks": [{"type": "stage", "stage": "gl_loot_10"}],
       "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
     },
     {

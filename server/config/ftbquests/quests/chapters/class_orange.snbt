@@ -341,10 +341,9 @@
 				}
 			]
 			tasks: [{
-				advancement: "lootr:25loot"
-				criterion: ""
 				id: "3D0259AC513A48D3"
-				type: "advancement"
+				stage: "gl_loot_25"
+				type: "gamestage"
 			}]
 			x: 3.0d
 			y: -1.5d

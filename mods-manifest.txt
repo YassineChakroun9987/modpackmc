@@ -85,7 +85,6 @@ both    legendary_monsters-2.2.4-1.21.1.jar                                     
 both    lionfishapi-3.1.jar                                                     353ca00ed118eb67cf11085abbbd699884722326
 both    lithostitched-1.8.1-neoforge-21.1.jar                                   88cdded5b617e19b4d2676948b5550699de23578
 both    lodestone-1.21.1-1.8.2.jar                                              d1f7c638fac5192e01b1873f27e694a3c262ad11
-both    lootr-neoforge-1.21.1-1.11.38.127.jar                                   7a305b581abd90e1a8b7c1bb5eb4511d2653aa58
 both    Mekanism-1.21.1-10.7.19.85.jar                                          b78945c40cfe7640408f3fd1e44da385a8c8b805
 both    MekanismGenerators-1.21.1-10.7.19.85.jar                                44c4d8006597580ff7e4101b5a22f7b426cdcaf6
 both    minecraftdungeonsv1-9.0.1-neoforge-1.21.1.jar                           ca9c3f640b55ea269a8a808891a18415c6fb7fb3

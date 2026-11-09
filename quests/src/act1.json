@@ -243,14 +243,14 @@
       "desc": [
         "Friends share danger, not loot. The chests here remember who opened them.",
         "",
-        "Open a structure chest. With &eLootr&r every player gets their own loot from each chest, so nobody steals from the party."
+        "Open a structure chest nobody has opened before. Its loot is shared: whoever opens it first finds what's inside, so split it with your party."
       ],
       "icon": "minecraft:chest",
       "x": 6,
       "y": -1.5,
       "deps": ["dungeon"],
       "tasks": [
-        {"type": "advancement", "advancement": "lootr:1chest"}
+        {"type": "stage", "stage": "gl_loot_1"}
       ],
       "rewards": [
         {"type": "item", "item": "minecraft:gold_ingot", "count": 4},

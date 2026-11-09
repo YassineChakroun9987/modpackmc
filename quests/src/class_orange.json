@@ -156,14 +156,14 @@
       "desc": [
         "Every chest is a promise.",
         "",
-        "Open &e25 loot chests&r in structures (Lootr counts each one you open for yourself). Opening loot chests gives Orange XP."
+        "Be the first to open &e25 loot chests&r in structures. Every fresh loot chest you open gives Orange XP."
       ],
       "icon": "minecraft:chest",
       "x": 3,
       "y": -1.5,
       "deps": ["archaeology"],
       "tasks": [
-        {"type": "advancement", "advancement": "lootr:25loot"}
+        {"type": "stage", "stage": "gl_loot_25"}
       ],
       "rewards": [
         {"type": "loot", "table": "greenlanterns:rewards/tier_1"},

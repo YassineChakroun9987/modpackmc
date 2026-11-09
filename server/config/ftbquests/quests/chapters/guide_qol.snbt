@@ -205,7 +205,7 @@
 		{
 			dependencies: ["69B7B5EDDAC4FD51"]
 			icon: {
-				id: "lootr:lootr_chest"
+				id: "minecraft:chest"
 			}
 			id: "798C7EC882531A15"
 			rewards: [{
@@ -216,10 +216,9 @@
 				type: "command"
 			}]
 			tasks: [{
-				advancement: "lootr:10loot"
-				criterion: ""
 				id: "110F68002C549E5D"
-				type: "advancement"
+				stage: "gl_loot_10"
+				type: "gamestage"
 			}]
 			x: 10.0d
 			y: 0.0d

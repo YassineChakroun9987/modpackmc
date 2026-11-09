@@ -24,14 +24,8 @@
 //     (lootTables runs while the loot registry loads; modifiers runs later, when
 //     the global loot modifiers load, on every start and every /reload.)
 //
-//  Lootr
-//  - Lootr fills each player's copy with LootTable.fill(), passing that
-//    player's luck and the chest position. Loot modifiers run inside fill(),
-//    so the injection, the quality weights and the dimension/structure checks
-//    all work per player. Nothing special is needed.
-//  - Lootr rolls a player's copy the first time that player opens the chest.
-//    Changes here only show in chests nobody has opened yet (or after Lootr's
-//    refresh/decay, if enabled).
+//  Chests are shared (Lootr was removed 2026-11-09): a chest rolls once, when it's first opened,
+//  with the opener's luck. glue/chest_loot.js then caps scroll rarity and stack count by tier.
 //
 //  Tuning: edit the data block below, then /reload.
 //  The server log prints "[greenlanterns/loot]" lines with table counts per tier.

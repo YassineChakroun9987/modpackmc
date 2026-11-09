@@ -1931,7 +1931,7 @@
 	quest.316EF1ACDC7E5F1A.quest_desc: [
 		"Every chest is a promise."
 		""
-		"Open &e25 loot chests&r in structures (Lootr counts each one you open for yourself). Opening loot chests gives Orange XP."
+		"Be the first to open &e25 loot chests&r in structures. Every fresh loot chest you open gives Orange XP."
 	]
 	quest.316EF1ACDC7E5F1A.title: "Treasure Hunter"
 	quest.3171F9F01152DBDE.quest_desc: [
@@ -2675,7 +2675,7 @@
 	quest.4499E4D28A76D2DA.title: "Discerning the Eldritch"
 	quest.449CD85FB94FBE59.quest_desc: [
 		"The corruption breeds monsters. This ladder runs left to right: &fI&r early, &aII&r mid, &9III&r late, &5IV&r extreme. Each row is one mod's line of bosses."
-		"&eCo-op:&r boss kills count for everyone in your team; chests use Lootr, so each player gets their own loot. If you die, your corpse waits for you, and a friend can carry it out."
+		"&eCo-op:&r boss kills count for everyone in your team; a chest's loot goes to whoever opens it first, so share it. If you die, your corpse waits for you, and a friend can carry it out."
 	]
 	quest.449CD85FB94FBE59.quest_subtitle: "How to read this ladder"
 	quest.449CD85FB94FBE59.title: "The Bestiary of Ruin"
@@ -2910,7 +2910,7 @@
 	quest.4B182067015DB71B.quest_desc: [
 		"Friends share danger, not loot. The chests here remember who opened them."
 		""
-		"Open a structure chest. With &eLootr&r every player gets their own loot from each chest, so nobody steals from the party."
+		"Open a structure chest nobody has opened before. Its loot is shared: whoever opens it first finds what's inside, so split it with your party."
 	]
 	quest.4B182067015DB71B.title: "Yours Alone"
 	quest.4B9B92C773BE9BA3.quest_desc: [
@@ -4528,7 +4528,7 @@
 	]
 	quest.798B250CF318A486.title: "The Questing Ram"
 	quest.798C7EC882531A15.quest_desc: [
-		"Dungeon chests here use &eLootr&r: every player gets their own loot from every chest. Don't race your friends; everyone loots everything."
+		"A chest's loot belongs to whoever opens it first, so explore together and share. Be the first to open &e10 loot chests&r."
 		"Open ten structure chests. Shared things (a boss drop on the floor, a feast) are yours to split fairly."
 	]
 	quest.798C7EC882531A15.title: "Share the Spoils"

@@ -246,7 +246,7 @@ When a mod is dropped, check this table for libraries that become `orphaned`.
 | Controlling | 19.0.5 | client | Searchable keybind menu that shows conflicts. Needed once dozens of mods add keys | Searchables | testing |
 | Mouse Tweaks | 2.26.1 | client | Drag and scroll-wheel item moving in inventories | none | testing |
 | Traveler's Titles | 5.1.3 | client | RPG-style title on screen when you enter a new biome or dimension | YUNG's API | testing |
-| Lootr | 1.11.38 | both | **Every player gets their own loot** from each structure chest, so friends don't loot-steal | none | testing |
+| ~~Lootr~~ | — | — | **Removed 2026-11-09** (owner: "if a chest is opened it is opened"). Chests are shared again; `glue/chest_loot.js` caps loot per chest tier | — | dropped |
 | Waystones | 21.1.46 | both | Teleport network between waystones you've found (costs XP); waystones spawn in villages | Balm | testing |
 | Xaero's Minimap + World Map | 26.6.0 · 1.47.0 | both | Minimap with waypoints and a full-screen world map (M) | — | testing |
 | Open Parties and Claims | 0.33.0 | both | Claim land so friends and mobs can't grief it; **uses FTB Teams as its party system** | — | tuned |

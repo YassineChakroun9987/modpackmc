@@ -12,7 +12,7 @@
       "subtitle": "How to read this ladder",
       "desc": [
         "The corruption breeds monsters. This ladder runs left to right: &fI&r early, &aII&r mid, &9III&r late, &5IV&r extreme. Each row is one mod's line of bosses.",
-        "&eCo-op:&r boss kills count for everyone in your team; chests use Lootr, so each player gets their own loot. If you die, your corpse waits for you, and a friend can carry it out."
+        "&eCo-op:&r boss kills count for everyone in your team; a chest's loot goes to whoever opens it first, so share it. If you die, your corpse waits for you, and a friend can carry it out."
       ],
       "icon": "minecraft:writable_book",
       "x": 0, "y": 0,
