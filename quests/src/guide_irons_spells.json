@@ -4,7 +4,7 @@
   "subtitle": "Iron's Spells 'n Spellbooks: books, ink, scrolls, orbs, schools and addons.",
   "icon": "irons_spellbooks:gold_spell_book",
   "group": "mods",
-  "order": 7,
+  "order": 8,
   "quests": [
     {
       "key": "arcane_essence",

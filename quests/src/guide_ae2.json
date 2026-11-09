@@ -4,7 +4,7 @@
   "subtitle": "Applied Energistics 2: from a fallen meteorite to your first ME network and autocrafting.",
   "icon": "ae2:controller",
   "group": "mods",
-  "order": 14,
+  "order": 15,
   "quests": [
     {
       "key": "meteorite",

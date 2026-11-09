@@ -206,7 +206,7 @@ When a mod is dropped, check this table for libraries that become `orphaned`.
 | CorgiLib · Data Anchor | 5.0.0.10 · 2.0.0.18 | both | Enhanced Celestials 2 | No | needed |
 | GuideME | 21.1.22 | both | Applied Energistics 2 (its in-game guide) | No | needed |
 | Brandon's Core · CodeChicken Lib | 3.2.1 · 4.6.1 | both | Draconic Evolution | No | needed |
-| Sophisticated Core | 1.5.31 | both | Sophisticated Backpacks | No | needed |
+| Sophisticated Core | 1.5.31 | both | Sophisticated Backpacks, Sophisticated Storage (update all three together) | No | needed |
 | Balm | 21.0.67 | both | Waystones | No | needed |
 | FTB Library | 2101.1.39 | both | FTB Quests, FTB Teams, FTB Ultimine, FTB XMod Compat | No | needed |
 | Simply Tooltips | 0.1.5 | client | Simply Swords (tooltips) | No | needed |
@@ -250,6 +250,7 @@ When a mod is dropped, check this table for libraries that become `orphaned`.
 | Xaero's Minimap + World Map | 26.6.0 · 1.47.0 | both | Minimap with waypoints and a full-screen world map (M) | — | testing |
 | Open Parties and Claims | 0.33.0 | both | Claim land so friends and mobs can't grief it; **uses FTB Teams as its party system** | — | tuned |
 | Sophisticated Backpacks | 3.26.20 | both | Upgradable backpacks (pickup, magnet, feeding, crafting…) | Sophisticated Core | testing |
+| **Sophisticated Storage** | 1.6.16 | both | Chests, barrels and shulker boxes that take upgrades and tier up in place (27 → 132 slots); limited barrels (drawers); a **controller** that turns a room of storage into one searchable network. The non-tech step between chests and AE2. **Broken storage drops packed with its contents** (`dropPacked = true`: no item explosions). Lag-tested (see notes). Quest chapter *The Quartermaster's Ledger* + 2 optional Orange quests; upgrades in loot tiers 1–5 | Sophisticated Core | tuned |
 | Corpse | 1.1.22 | both | When you die, your items stay in a corpse you can loot back (no despawn). Our `glue/corpse_quickloot.js`: right-click your own body = everything back in its old slot, Curios too; Shift + right-click = the normal window | — | testing |
 | FTB Ultimine | 2101.1.15 | both | Hold the key (default `` ` ``) to mine a whole vein or tree at once (64 blocks) | FTB Library | testing |
 | Polymorph | 1.1.0 | both | Pick which output you get when two mods' recipes overlap | — | testing |
@@ -411,6 +412,12 @@ Structurify is the **only** thing that controls placement. Cristel Lib's auto-co
 - **Loot:** its chests use `minecraft:chests/wood|random|mineral|dye|stone|trash`, all tier 1 in `loot/tiered_chest_loot.js`.
 - Not rebuilt (still vanilla): villager/animal spawn pieces, a few lamps and street ends, and 4 taiga houses.
 
+#### Sophisticated Storage: settings and lag test
+- **Config:** `config/sophisticatedstorage-common.toml` `dropPacked = true`. Breaking a storage (player or explosion) drops one packed item; the contents live in the world's saved data under an ID, not inside the item, so a full chest in your pocket can't make huge packets. That also disables the packing-tape recipe (not needed).
+- **Kept at defaults on purpose:** magnet range 3 (advanced 5), controller range 15, hopper upgrade 1 item per 8 ticks (advanced 4 per 2). The Omega stack upgrade stays craftable (9 tier-5 upgrades), the same as Sophisticated Backpacks' Omega. Infinity upgrades and the debug tool have no recipe (creative only).
+- **Lag test** (`/gl_dev storagestress`, throwaway world): 400 iron chests and barrels in two touching layers, half full, each with a magnet and a hopper upgrade, linked to a controller, with 1,200 loose items dropped on them over 30 s. Average tick time **5.3–6.3 ms** with all of that, against a 5.5–9.6 ms baseline before placing anything (budget 50 ms): no measurable cost. The magnets collected every item; the controller linked the 300 storages within its 15-block range. A full chest broken by a (fake) player dropped **1** packed item instead of 199 stacks.
+- **Connections:** quest chapter `guide_storage` (12 quests, mod-guide slot 2, right after *Arms and Armour*); Orange (Hoardwarden) gets 2 optional quests, *The Counting House* and *A Bottomless Hoard*; storage upgrades are in chest loot tiers 1–5 next to the backpack ones (`tools/loot/gen_loot.py`). Controller, Storage Input/Output/I/O blocks expose the network to hoppers, Create funnels and AE2 storage buses.
+
 #### Castle in the Sky
 - **How we verified it** (CurseForge-only): the cfwidget API gave the official file ID (8200620). Downloading that from `mediafilez.forgecdn.net` gave the same SHA-1 as the chinatown jar (`5cb283e4…`). Use the same method for other CurseForge-only jars.
 - **Recipe fix:** the jar's 1.21.1 build ships the levitation stone recipe in the **1.21.2+ format** (plain-string ingredients), which 1.21.1 can't read.
@@ -520,3 +527,4 @@ Structurify is the **only** thing that controls placement. Cristel Lib's auto-co
 | 2026-11-09 | Corpse quick-loot + NPC dialogue fix | 149 | 46.2s | 0 (+2 known); selftest 49/49 |
 | 2026-11-09 | + Epic Structures: Villages; classic villages back on (weight 30, no zombie centres); CTOV small 10 → 3; story town script | 150 | 54.6s | 0 (+2 known); selftest 49/49 |
 | 2026-11-09 | **World regenerated** around the Epic plains town at (-1040, 784), pre-generated 1,200 blocks (~22,800 chunks, 18 min) | 150 | — | 0 (+316 known: Philips Ruins item frames, one Terralith frostfire column) |
+| 2026-11-09 | + Sophisticated Storage (dropPacked on); quest book 27 chapters / 660 quests; storage loot | 151 | 57.5s | 0 (+2 known); selftest 49/49; storage lag test passed |

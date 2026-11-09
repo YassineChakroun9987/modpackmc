@@ -112,6 +112,7 @@ both    simplyswords-neoforge-1.70.2-1.21.1.jar                                 
 both    sky_whale_ship-neoforge-1.21.1.jar                                      6e2cba680535a5900b83fa4a4dd9f332141a36b9
 both    sophisticatedbackpacks-1.21.1-3.26.20.2244.jar                          65cd49f3e37fa3ca3abc721a17f8fe68cd4cfe90
 both    sophisticatedcore-1.21.1-1.5.31.2460.jar                                7b2457e2c11802f42383bb1863dd8b63c40456e1
+both    sophisticatedstorage-1.21.1-1.6.16.2222.jar                             33d8daae028961f3b8d8b8e9e1c6d3ab91f6d2c2
 both    spark-1.10.124-neoforge.jar                                             9430cc2ab64ff89d698be593769fb9f9ee4efae6
 both    spectral_hub-v4.jar                                                     881ab90c3787a149a56650b21341ea134168c085
 both    structurify-neoforge-2.0.43+mc1.21.1.jar                                efd954533911c8a63f96cad82b96bcde47120ca2

@@ -15,7 +15,7 @@ check. Everything is committed to git, so any decision can be undone (`git log -
 | **Server** | Boots in ~45 s with **0 errors** and **0 unreviewed warnings** (2 known, harmless and explained) |
 | **Mods** | 149 server jars + 9 client-only; the `greenlanterns` client is **in sync** |
 | **World** | Fresh world `greenlanterns`, pre-generated 1,200 blocks around the spawn village. Older worlds are in `server/backups/` |
-| **Quest book** | "The Book of Oa": **26 chapters, 646 quests** (story, 7 classes, finale, 16 mod guides) |
+| **Quest book** | "The Book of Oa": **27 chapters, 660 quests** (story, 7 classes, finale, 17 mod guides) |
 | **Space** | Oa, Korugar, the Moon and deep space are real places (Create Cosmonautics) |
 | **Classes** | 8 skill trees (Adventurer + 7 lights): 22 + 7 × 34 nodes |
 | **Loot** | 747 chest tables sorted into 5 difficulty tiers, items from every gear/magic mod, scaled by Luck |
@@ -181,6 +181,9 @@ Things that need a real player, so I couldn't test them headless:
       right-click your body: everything is back in its old slot and the body disappears.
       Shift + right-click opens the window instead. A friend right-clicking your body gets the
       normal window.
+- [ ] Storage: put a Sophisticated chest and a controller down, break the full chest (it should
+      drop as one packed chest), and search from the controller. The storage guide is right after
+      *Arms and Armour* in the quest book.
 
 **Quest hints to confirm**
 - [ ] How Lord Pumpkinhead is summoned and where the Supreme Bonescaller spawns (Born in Chaos).
@@ -296,3 +299,17 @@ one, which is why it didn't feel much better than vanilla. Now:
   before the prologue begins. On our seed it's a plains town at (-1040, 784).
 - The world was regenerated for this (you said that's fine while we're in development). The
   old one is in `server/backups/world-ctov-spawn-2026-11-09`.
+
+**Sophisticated Storage** (added at your request). Chests, barrels and shulker boxes that take
+upgrades and tier up in place (27 to 132 slots), drawer-style limited barrels, and a controller
+that turns a room of storage into one searchable network. It's the non-tech step before AE2.
+- **No item explosions:** breaking a storage drops it *packed*, with everything inside, like a
+  shulker box. The contents live in the world's save, not in the item, so carrying a full chest
+  can't cause network trouble.
+- **Lag:** tested with 400 storages, each with a magnet and a hopper upgrade, all linked to a
+  controller, with 1,200 loose items dropped on them. The server stayed at about 5–6 ms per tick
+  (the limit is 50), the same as without them.
+- **Connected:** a new mod guide, *The Quartermaster's Ledger* (12 quests, right after *Arms and
+  Armour*); two optional Orange quests for the Hoardwarden (*The Counting House*, *A Bottomless
+  Hoard*); storage upgrades in chest loot, tiers 1 to 5. Your friends need the one new jar.
+

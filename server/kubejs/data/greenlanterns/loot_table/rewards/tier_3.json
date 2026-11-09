@@ -741,6 +741,16 @@
         },
         {
           "type": "minecraft:item",
+          "name": "sophisticatedstorage:basic_to_iron_tier_upgrade",
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sophisticatedstorage:compacting_upgrade",
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
           "name": "waystones:warp_stone",
           "quality": 2
         },

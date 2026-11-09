@@ -4,7 +4,7 @@
   "subtitle": "Draconium to Wyvern to Draconic to Chaotic: the strongest tech in the pack.",
   "icon": "draconicevolution:draconic_chestpiece",
   "group": "mods",
-  "order": 15,
+  "order": 16,
   "quests": [
     {
       "key": "draconium",

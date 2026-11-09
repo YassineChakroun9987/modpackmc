@@ -4,7 +4,7 @@
   "subtitle": "Alex's Mobs, Mowzie's Mobs, mutants, odd allies, pets and guards.",
   "icon": "alexsmobs:animal_dictionary",
   "group": "mods",
-  "order": 5,
+  "order": 6,
   "quests": [
     {
       "key": "dictionary",

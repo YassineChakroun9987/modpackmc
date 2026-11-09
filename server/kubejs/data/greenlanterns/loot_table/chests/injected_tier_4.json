@@ -1092,6 +1092,16 @@
         },
         {
           "type": "minecraft:item",
+          "name": "sophisticatedstorage:iron_to_gold_tier_upgrade",
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sophisticatedstorage:stack_upgrade_tier_2",
+          "quality": 1
+        },
+        {
+          "type": "minecraft:item",
           "name": "minecraft:totem_of_undying",
           "weight": 2,
           "quality": 2

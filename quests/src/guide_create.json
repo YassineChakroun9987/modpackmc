@@ -4,7 +4,7 @@
   "subtitle": "Create from the first water wheel to trains, plus electric power from Crafts & Additions.",
   "icon": "create:cogwheel",
   "group": "mods",
-  "order": 11,
+  "order": 12,
   "quests": [
     {
       "key": "ponder",

@@ -1,0 +1,377 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "guide_storage"
+	group: "4FA3695F5F82A1E1"
+	icon: {
+		id: "sophisticatedstorage:iron_chest"
+	}
+	id: "62D9FF6B4F2A3FC9"
+	images: [ ]
+	order_index: 2
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["0C1EA8A1216376F7"]
+			icon: {
+				id: "sophisticatedstorage:chest"
+			}
+			id: "23E240F2FE8C0FF5"
+			rewards: [
+				{
+					id: "3384EA0F31DF9DC6"
+					type: "xp"
+					xp: 60
+				}
+				{
+					id: "4A0A48DA317750D4"
+					item: {
+						count: 1
+						id: "sophisticatedstorage:upgrade_base"
+					}
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [
+				{
+					id: "630842E6767E266C"
+					item: { count: 1, id: "sophisticatedstorage:chest" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "3DB4691BDC9B9E9B"
+					item: { count: 1, id: "sophisticatedstorage:barrel" }
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["23E240F2FE8C0FF5"]
+			icon: {
+				id: "sophisticatedstorage:basic_to_iron_tier_upgrade"
+			}
+			id: "29EF89870067439C"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+					id: "0929D7CA79425A61"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "7B554E308F4AF545"
+					type: "xp"
+					xp: 80
+				}
+			]
+			tasks: [
+				{
+					id: "7AAB164B576CFB69"
+					item: { count: 1, id: "sophisticatedstorage:basic_to_copper_tier_upgrade" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "398B098A47E1D292"
+					item: { count: 1, id: "sophisticatedstorage:basic_to_iron_tier_upgrade" }
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["23E240F2FE8C0FF5"]
+			icon: {
+				id: "sophisticatedstorage:upgrade_base"
+			}
+			id: "6029AB0583C7F139"
+			rewards: [{
+				id: "771FC965793E76E9"
+				type: "xp"
+				xp: 50
+			}]
+			tasks: [{
+				id: "31A9F5C2102FA337"
+				item: { count: 1, id: "sophisticatedstorage:upgrade_base" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6029AB0583C7F139"]
+			icon: {
+				id: "sophisticatedstorage:stack_upgrade_tier_1"
+			}
+			id: "7C296E750C89C9AA"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_1"
+				id: "67255715F1B12589"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "6B9C9B82C5F2DD61"
+				item: { count: 1, id: "sophisticatedstorage:stack_upgrade_tier_1" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["7C296E750C89C9AA"]
+			icon: {
+				id: "sophisticatedstorage:compacting_upgrade"
+			}
+			id: "0CF6728348EC1FBC"
+			rewards: [{
+				id: "374B6FC2B35A856C"
+				type: "xp"
+				xp: 100
+			}]
+			tasks: [
+				{
+					id: "754931A8CF9E42E8"
+					item: { count: 1, id: "sophisticatedstorage:compacting_upgrade" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "2CCE0509D3A6178E"
+					item: { count: 1, id: "sophisticatedstorage:void_upgrade" }
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0CF6728348EC1FBC"]
+			icon: {
+				id: "sophisticatedstorage:magnet_upgrade"
+			}
+			id: "779D4658EE0C671A"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+				id: "518F631058007AD3"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [
+				{
+					id: "6516C0CDBA7E2774"
+					item: { count: 1, id: "sophisticatedstorage:magnet_upgrade" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "6637D6463A941E07"
+					item: { count: 1, id: "sophisticatedstorage:hopper_upgrade" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "56FFEBE7DE383048"
+					item: { count: 1, id: "sophisticatedstorage:smelting_upgrade" }
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["29EF89870067439C"]
+			icon: {
+				id: "sophisticatedstorage:controller"
+			}
+			id: "09FDB2CADE3A11D0"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					id: "2332FBBE3467D831"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "44CA800B771E62B0"
+					type: "xp"
+					xp: 150
+				}
+			]
+			shape: "gear"
+			size: 1.25d
+			tasks: [{
+				id: "5213662632B25AB3"
+				item: { count: 1, id: "sophisticatedstorage:controller" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["09FDB2CADE3A11D0"]
+			icon: {
+				id: "sophisticatedstorage:storage_link"
+			}
+			id: "3429FBDC224B5856"
+			rewards: [{
+				id: "5206E18EF2465F77"
+				type: "xp"
+				xp: 120
+			}]
+			tasks: [{
+				id: "360D41B4EB2F7D68"
+				item: { count: 1, id: "sophisticatedstorage:storage_link" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["23E240F2FE8C0FF5"]
+			icon: {
+				id: "sophisticatedstorage:limited_barrel_4"
+			}
+			id: "5987165544FAB182"
+			rewards: [{
+				id: "50725C8006507C2E"
+				type: "xp"
+				xp: 80
+			}]
+			tasks: [
+				{
+					id: "48A7D050F89EC01C"
+					item: { count: 1, id: "sophisticatedstorage:limited_barrel_1" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "13B5BB1A22CB12A6"
+					item: { count: 1, id: "sophisticatedstorage:limited_barrel_2" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "096AE76B18ED5AE7"
+					item: { count: 1, id: "sophisticatedstorage:limited_barrel_3" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "59994D5943B6E0C1"
+					item: { count: 1, id: "sophisticatedstorage:limited_barrel_4" }
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3429FBDC224B5856"]
+			icon: {
+				id: "sophisticatedstorage:gold_to_diamond_tier_upgrade"
+			}
+			id: "5887F13DAC8CA6DB"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "093CA48A7CD3E518"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [
+				{
+					id: "10758B90E96B6A7B"
+					item: { count: 1, id: "sophisticatedstorage:iron_to_gold_tier_upgrade" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "34C6484D89E43001"
+					item: { count: 1, id: "sophisticatedstorage:gold_to_diamond_tier_upgrade" }
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5987165544FAB182"]
+			icon: {
+				id: "sophisticatedstorage:shulker_box"
+			}
+			id: "09393ABAFC6EA389"
+			rewards: [{
+				command: "/loot give {p} loot greenlanterns:rewards/tier_3"
+				id: "5DC9CCE7E294488E"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			tasks: [{
+				id: "66436AF7CDD87BCA"
+				item: { count: 1, id: "sophisticatedstorage:shulker_box" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"5887F13DAC8CA6DB"
+				"779D4658EE0C671A"
+			]
+			icon: {
+				id: "sophisticatedstorage:netherite_chest"
+			}
+			id: "09B2D9960B6507DF"
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "54C917B9CC7BF40E"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "089B387779DB79E9"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:adventurer 150"
+					id: "105FFA9F5EF853F9"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "79FD65DE30B861C8"
+				item: { count: 1, id: "sophisticatedstorage:diamond_to_netherite_tier_upgrade" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 0.0d
+		}
+	]
+}

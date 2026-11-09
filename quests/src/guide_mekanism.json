@@ -4,7 +4,7 @@
   "subtitle": "Mekanism: power, steel, ore that multiplies, and the MekaSuit.",
   "icon": "mekanism:steel_casing",
   "group": "mods",
-  "order": 13,
+  "order": 14,
   "quests": [
     {
       "key": "osmium",

@@ -210,6 +210,14 @@
         },
         {
           "type": "minecraft:item",
+          "name": "sophisticatedstorage:upgrade_base"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "sophisticatedstorage:basic_tier_upgrade"
+        },
+        {
+          "type": "minecraft:item",
           "name": "apotheosis:gem_dust",
           "functions": [
             {

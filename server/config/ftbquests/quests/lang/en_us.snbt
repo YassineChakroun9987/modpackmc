@@ -67,6 +67,10 @@
 		"Stormwright. Faster than thunder, brighter than lightning."
 	]
 	chapter.5D38886831F6A98D.title: "&eThe Yellow Light: Path of the Storm"
+	chapter.62D9FF6B4F2A3FC9.chapter_subtitle: [
+		"Chests that grow, sort themselves and answer to one desk."
+	]
+	chapter.62D9FF6B4F2A3FC9.title: "&aThe Quartermaster's Ledger"
 	chapter.64793592AA5F9802.chapter_subtitle: [
 		"Apotheosis: rarity, gems, reforging, world tiers, enchanting and spawners."
 	]
@@ -354,6 +358,12 @@
 		"An endless supply of drops, on a switch. Put it in a claimed chunk."
 	]
 	quest.092F6FDB87644B0C.title: "The Ultimate Spawner"
+	quest.09393ABAFC6EA389.quest_desc: [
+		"Sophisticated &eshulker boxes&r take upgrades and tiers too, and you can carry them full. They just can't hold other shulker boxes."
+		""
+		"You'll need shulker shells from the End."
+	]
+	quest.09393ABAFC6EA389.title: "Pack It Up"
 	quest.0965445B21EB0247.quest_desc: [
 		"Other dragons fly here too: Gronckles, Deadly Nadders, Monstrous Nightmares, Skrills, Whispering Deaths, and the Night Fury. These ones can be &ebefriended&r."
 		"Find a &eHooligan&r (a travelling Viking) and trade with them for the &eBook of Dragons&r. It records what you learn about each species."
@@ -377,12 +387,26 @@
 		"Craft a &epet bed&r (Redomesticate). Pets bound to a bed come back to it instead of dying for good."
 	]
 	quest.096D4EE90DBDF2C5.title: "A Bed by the Fire"
+	quest.09B2D9960B6507DF.quest_desc: [
+		"The last tier: &8Netherite&r storage, with 132 slots and 5 upgrade slots. Add Stack Upgrades and one chest holds a kingdom's treasury."
+		""
+		"Make a &eDiamond to Netherite&r tier upgrade."
+	]
+	quest.09B2D9960B6507DF.title: "The Netherite Vault"
 	quest.09F0496E152667BB.quest_desc: [
 		"The Devourer's shadow wakes the old Cataclysm bosses. Put them down before they join it."
 		""
 		"Optional: Kill &eMaledictus&r in the Frosted Prison. Another class's chapter may already have sent you there."
 	]
 	quest.09F0496E152667BB.title: "The Cursed Warlord"
+	quest.09FDB2CADE3A11D0.quest_desc: [
+		"A &eStorage Controller&r turns a room of chests into one store."
+		""
+		"Place it touching your storage. Every storage that touches it, or touches one that does, joins its network, as long as it's within &e15 blocks&r. Open the controller to see and search everything at once; whatever you put in goes where it fits best."
+		""
+		"&7(It works with your sorting: an item goes first to a storage that already holds it.)"
+	]
+	quest.09FDB2CADE3A11D0.title: "The Quartermaster's Desk"
 	quest.0A18BBAFF3F2E674.quest_desc: [
 		"In the End stands a pillar of living obsidian. The &eObsidilith&r sends out shockwaves, raises spikes from the floor and drops anvils."
 		"Keep moving, and don't fight it near the edge of an island."
@@ -464,6 +488,14 @@
 		"Defeat the &eArchevoker&r in the Evoker Fort. Kill the vexes first; fight as a party."
 	]
 	quest.0C882911171A6261.title: "The Archevoker"
+	quest.0CF6728348EC1FBC.quest_desc: [
+		"Two upgrades for miners:"
+		"&eCompacting&r turns 9 nuggets into an ingot and 9 ingots into a block, all by itself."
+		"&eVoid&r deletes what you tell it to: cobblestone, dirt, netherrack. Perfect next to vein mining."
+		""
+		"Make either one."
+	]
+	quest.0CF6728348EC1FBC.title: "Compact the Rubble"
 	quest.0D318D653EC14377.quest_desc: [
 		"Armor stitched from shadow. It makes no sound."
 		""
@@ -1124,6 +1156,15 @@
 		"Fire resistance, ice spells, and a full party."
 	]
 	quest.23BBEB9A964DEB4B.title: "IV. The Echo of Tyros"
+	quest.23E240F2FE8C0FF5.quest_desc: [
+		"Every hero ends up with a cellar full of loot. Let's make it a good one."
+		""
+		"A &eSophisticated chest&r or &ebarrel&r starts like any chest: 27 slots. But it takes &eupgrades&r, it can be &eraised a tier without emptying it&r, and when you break it, it &ekeeps everything inside&r: it drops as one packed chest, like a shulker box. No more emptying a room to move it."
+		""
+		"Make either one (JEI shows the recipe). You can recolour and re-texture them later at a &eDecoration Table&r."
+	]
+	quest.23E240F2FE8C0FF5.quest_subtitle: "Sophisticated Storage"
+	quest.23E240F2FE8C0FF5.title: "A Proper Chest"
 	quest.23E87BF2241821DC.quest_desc: [
 		"A &eDragonforge&r is a 3x3x3 shell of Dragonforge Bricks with a core in the centre and an aperture in the wall. A dragon's breath into the aperture is what heats it."
 		"Use your own tamed dragon (or a captured one). Build the core."
@@ -1222,6 +1263,15 @@
 		"Steel is the backbone of every other Mekanism machine."
 	]
 	quest.269607E68DC71B58.title: "The Metallurgic Infuser"
+	quest.26AB5EAE518480B7.quest_desc: [
+		"Treasure you can't find is treasure you don't have. A Hoardwarden counts."
+		""
+		"Build a &eStorage Controller&r and a &eStack Upgrade&r: a desk to keep the ledger and shelves that hold twice what they should. The mod guide &aThe Quartermaster's Ledger&r shows how."
+		""
+		"&7Optional: it doesn't hold up your path."
+	]
+	quest.26AB5EAE518480B7.quest_subtitle: "Optional"
+	quest.26AB5EAE518480B7.title: "The Counting House"
 	quest.26F5D51B0ACA9B09.quest_desc: [
 		"Lift, thrust, steering and a heading: put them together into a real airship or plane, with a deck your friends can stand on."
 		"Fly it to a Sky Village or a Heavenly fortress. Name it with a &eNameplate&r; every good ship has a name."
@@ -1333,6 +1383,14 @@
 		"Chaotic injectors, crystals and gear follow."
 	]
 	quest.29C499638BB4A9C2.title: "The Chaotic Core"
+	quest.29EF89870067439C.quest_desc: [
+		"Right-click a placed storage with a &etier upgrade&r and it grows on the spot, contents and all."
+		""
+		"&6Copper&r 45 slots · &7Iron&r 54 slots and 2 upgrade slots · &eGold&r 81 and 3 · &bDiamond&r 108 and 4 · &8Netherite&r 132 and 5."
+		""
+		"Make a &eBasic to Copper&r or &eBasic to Iron&r tier upgrade."
+	]
+	quest.29EF89870067439C.title: "Bands of Copper and Iron"
 	quest.2A113FF21602753D.quest_desc: [
 		"Robes woven to drink heat and give it back as power."
 		""
@@ -1657,6 +1715,12 @@
 		"Its Fiery Tears join the Hydra's blood for Fiery gear."
 	]
 	quest.341E17319D8504C7.title: "IV-b. The Ur-Ghast"
+	quest.3429FBDC224B5856.quest_desc: [
+		"Storage that doesn't touch the rest can still join: a &eStorage Link&r connects whatever it touches to a controller in range."
+		""
+		"&eStorage Input&r, &eOutput&r and &eI/O&r blocks open the whole network to hoppers, Create funnels and pipes. Feed your farm straight into the vault."
+	]
+	quest.3429FBDC224B5856.title: "Long Reach"
 	quest.347233F755BC9DA7.quest_desc: [
 		"Something huge is beating on the village walls."
 		""
@@ -1711,6 +1775,15 @@
 		"Blazes live in Nether fortresses. A Central Power Battery keeps burners lit for free (see the Lanterns chapter)."
 	]
 	quest.35DCA83A9AAB7427.title: "A Blaze in a Cage"
+	quest.362AE6AB138063AE.quest_desc: [
+		"Nine blocks of each is a start. A true Hoardwarden's vault has no bottom."
+		""
+		"Make a &8Diamond to Netherite&r tier upgrade and a &eTier 4 Stack Upgrade&r (kept, not consumed). One netherite chest with those holds more than a dragon's lair."
+		""
+		"&7Optional: it doesn't hold up your path."
+	]
+	quest.362AE6AB138063AE.quest_subtitle: "Optional"
+	quest.362AE6AB138063AE.title: "A Bottomless Hoard"
 	quest.36B1FF2EFF4A47A8.quest_desc: [
 		"A hungry guard is a dead guard. Stock the larder before the siege."
 		""
@@ -2737,6 +2810,12 @@
 		"Lantern ring trials sit around this tier."
 	]
 	quest.5868E0324D1F7072.title: "World Tier: Summit"
+	quest.5887F13DAC8CA6DB.quest_desc: [
+		"Raise your storage to &eGold&r (81 slots, 3 upgrade slots) or &bDiamond&r (108 slots, 4 upgrade slots)."
+		""
+		"Make an &eIron to Gold&r or &eGold to Diamond&r tier upgrade."
+	]
+	quest.5887F13DAC8CA6DB.title: "Gold and Diamond"
 	quest.58A9636561642D33.quest_desc: [
 		"Put a &eSkillet&r on a campfire or stove and right-click raw food onto it to cook it quickly."
 		"It's also a heavy, clanging weapon in a pinch."
@@ -2766,6 +2845,12 @@
 		"Find a mage tower: a &eTerralith&r Mage Tower or an &eIron's Spells&r mountain tower. Loot the bookshelves and chests for spells."
 	]
 	quest.5928D38F7250B143.title: "The Mage's Spire"
+	quest.5987165544FAB182.quest_desc: [
+		"&eLimited barrels&r hold one kind of item per section and show it on the front, with the count. They're drawers for a tidy base: one, two, three or four sections."
+		""
+		"Make any limited barrel."
+	]
+	quest.5987165544FAB182.title: "One Thing per Drawer"
 	quest.598B95EF8B9711AB.quest_desc: [
 		"&eAlex's Mobs&r puts more than ninety creatures into the world, from roadrunners to cachalot whales. Some are friendly, some can be tamed, some will eat you."
 		"Craft the &eAnimal Dictionary&r (see JEI). Each creature has a page: where it lives, what it drops, how to tame it."
@@ -2943,6 +3028,14 @@
 		"Mages need it: mithril goes into every Empty Upgrade Orb and into Mithril Weave for the best school armour."
 	]
 	quest.5FF39B3DB1D14C17.title: "Mithril, Deep Down"
+	quest.6029AB0583C7F139.quest_desc: [
+		"Almost every upgrade starts as an &eUpgrade Base&r: planks and iron. Upgrades go in the slots on the side of the storage's window."
+		""
+		"Wood and copper storage have &e1&r upgrade slot; every tier after that adds one."
+		""
+		"&7(The same idea as your backpack's upgrades. Backpack and storage upgrades are different items, though: JEI shows which is which.)"
+	]
+	quest.6029AB0583C7F139.title: "The Upgrade Base"
 	quest.60408AB88EDF0604.quest_desc: [
 		"Conquer the Castle in the Sky. Few find it, and fewer leave with its crystal."
 		"The Lantern Corps took note."
@@ -3617,6 +3710,15 @@
 		"Find an Iron's &ePyromancer Tower&r and defeat a &ePyromancer&r. Its loot is full of fire scrolls."
 	]
 	quest.7766E7D4C1D7CFCF.title: "The Pyromancer's Tower"
+	quest.779D4658EE0C671A.quest_desc: [
+		"Storage that works while you're away:"
+		"&eMagnet&r pulls in loose items nearby (3 blocks; 5 for the advanced one)."
+		"&eHopper&r moves items in and out like a hopper."
+		"&eSmelting&r turns the storage into a furnace that never runs out of room."
+		""
+		"They're tuned light, so even a big base won't lag. Make any one."
+	]
+	quest.779D4658EE0C671A.title: "Hands-Free"
 	quest.77DC82B72036CC49.quest_desc: [
 		"Your hair stands up when you walk into a room. The light is charging you."
 		""
@@ -3737,6 +3839,12 @@
 		"Kill &e20 zombies&r, &e10 skeletons&r and &e3 phantoms&r. Night kills, sneaking kills and undead kills all give extra Violet XP."
 	]
 	quest.7C1FF337E551EFCE.title: "Nightwalker"
+	quest.7C296E750C89C9AA.quest_desc: [
+		"A &eStack Upgrade&r lets every slot hold more than a normal stack. Higher tiers multiply more, all the way to the endgame &eOmega&r tier."
+		""
+		"A barrel with two Stack Upgrades swallows a whole mining trip."
+	]
+	quest.7C296E750C89C9AA.title: "Stack It High"
 	quest.7C5CF90E8522AB79.quest_desc: [
 		"A dragon of pure chaos, wrapped in crystal shields. Its fire ignores armor."
 		""

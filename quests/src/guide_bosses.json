@@ -4,7 +4,7 @@
   "subtitle": "Every great monster in the pack, from first blood to the extreme.",
   "icon": "cataclysm:the_incinerator",
   "group": "mods",
-  "order": 10,
+  "order": 11,
   "quests": [
     {
       "key": "bestiary",

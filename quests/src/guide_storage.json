@@ -1,0 +1,213 @@
+{
+  "id": "guide_storage",
+  "title": "&aThe Quartermaster's Ledger",
+  "subtitle": "Chests that grow, sort themselves and answer to one desk.",
+  "icon": "sophisticatedstorage:iron_chest",
+  "group": "mods",
+  "order": 2,
+  "quests": [
+    {
+      "key": "chest",
+      "title": "A Proper Chest",
+      "subtitle": "Sophisticated Storage",
+      "desc": [
+        "Every hero ends up with a cellar full of loot. Let's make it a good one.",
+        "",
+        "A &eSophisticated chest&r or &ebarrel&r starts like any chest: 27 slots. But it takes &eupgrades&r, it can be &eraised a tier without emptying it&r, and when you break it, it &ekeeps everything inside&r: it drops as one packed chest, like a shulker box. No more emptying a room to move it.",
+        "",
+        "Make either one (JEI shows the recipe). You can recolour and re-texture them later at a &eDecoration Table&r."
+      ],
+      "icon": "sophisticatedstorage:chest",
+      "x": 0, "y": 0, "shape": "hexagon", "size": 1.25,
+      "deps": ["prologue:tools"],
+      "tasks": [
+        {"type": "item", "item": "sophisticatedstorage:chest", "optional": true},
+        {"type": "item", "item": "sophisticatedstorage:barrel", "optional": true}
+      ],
+      "rewards": [{"type": "xp", "xp": 60}, {"type": "item", "item": "sophisticatedstorage:upgrade_base", "count": 1}]
+    },
+    {
+      "key": "tier_up",
+      "title": "Bands of Copper and Iron",
+      "desc": [
+        "Right-click a placed storage with a &etier upgrade&r and it grows on the spot, contents and all.",
+        "",
+        "&6Copper&r 45 slots · &7Iron&r 54 slots and 2 upgrade slots · &eGold&r 81 and 3 · &bDiamond&r 108 and 4 · &8Netherite&r 132 and 5.",
+        "",
+        "Make a &eBasic to Copper&r or &eBasic to Iron&r tier upgrade."
+      ],
+      "icon": "sophisticatedstorage:basic_to_iron_tier_upgrade",
+      "x": 2, "y": 0,
+      "deps": ["chest"],
+      "tasks": [
+        {"type": "item", "item": "sophisticatedstorage:basic_to_copper_tier_upgrade", "optional": true},
+        {"type": "item", "item": "sophisticatedstorage:basic_to_iron_tier_upgrade", "optional": true}
+      ],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}, {"type": "xp", "xp": 80}]
+    },
+    {
+      "key": "upgrade_base",
+      "title": "The Upgrade Base",
+      "desc": [
+        "Almost every upgrade starts as an &eUpgrade Base&r: planks and iron. Upgrades go in the slots on the side of the storage's window.",
+        "",
+        "Wood and copper storage have &e1&r upgrade slot; every tier after that adds one.",
+        "",
+        "&7(The same idea as your backpack's upgrades. Backpack and storage upgrades are different items, though: JEI shows which is which.)"
+      ],
+      "icon": "sophisticatedstorage:upgrade_base",
+      "x": 2, "y": -1.5,
+      "deps": ["chest"],
+      "tasks": [{"type": "item", "item": "sophisticatedstorage:upgrade_base"}],
+      "rewards": [{"type": "xp", "xp": 50}]
+    },
+    {
+      "key": "stack",
+      "title": "Stack It High",
+      "desc": [
+        "A &eStack Upgrade&r lets every slot hold more than a normal stack. Higher tiers multiply more, all the way to the endgame &eOmega&r tier.",
+        "",
+        "A barrel with two Stack Upgrades swallows a whole mining trip."
+      ],
+      "icon": "sophisticatedstorage:stack_upgrade_tier_1",
+      "x": 4, "y": -1.5,
+      "deps": ["upgrade_base"],
+      "tasks": [{"type": "item", "item": "sophisticatedstorage:stack_upgrade_tier_1"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_1"}]
+    },
+    {
+      "key": "compacting",
+      "title": "Compact the Rubble",
+      "desc": [
+        "Two upgrades for miners:",
+        "&eCompacting&r turns 9 nuggets into an ingot and 9 ingots into a block, all by itself.",
+        "&eVoid&r deletes what you tell it to: cobblestone, dirt, netherrack. Perfect next to vein mining.",
+        "",
+        "Make either one."
+      ],
+      "icon": "sophisticatedstorage:compacting_upgrade",
+      "x": 6, "y": -1.5,
+      "deps": ["stack"],
+      "tasks": [
+        {"type": "item", "item": "sophisticatedstorage:compacting_upgrade", "optional": true},
+        {"type": "item", "item": "sophisticatedstorage:void_upgrade", "optional": true}
+      ],
+      "rewards": [{"type": "xp", "xp": 100}]
+    },
+    {
+      "key": "hands_free",
+      "title": "Hands-Free",
+      "desc": [
+        "Storage that works while you're away:",
+        "&eMagnet&r pulls in loose items nearby (3 blocks; 5 for the advanced one).",
+        "&eHopper&r moves items in and out like a hopper.",
+        "&eSmelting&r turns the storage into a furnace that never runs out of room.",
+        "",
+        "They're tuned light, so even a big base won't lag. Make any one."
+      ],
+      "icon": "sophisticatedstorage:magnet_upgrade",
+      "x": 8, "y": -1.5,
+      "deps": ["compacting"],
+      "tasks": [
+        {"type": "item", "item": "sophisticatedstorage:magnet_upgrade", "optional": true},
+        {"type": "item", "item": "sophisticatedstorage:hopper_upgrade", "optional": true},
+        {"type": "item", "item": "sophisticatedstorage:smelting_upgrade", "optional": true}
+      ],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}]
+    },
+    {
+      "key": "controller",
+      "title": "The Quartermaster's Desk",
+      "desc": [
+        "A &eStorage Controller&r turns a room of chests into one store.",
+        "",
+        "Place it touching your storage. Every storage that touches it, or touches one that does, joins its network, as long as it's within &e15 blocks&r. Open the controller to see and search everything at once; whatever you put in goes where it fits best.",
+        "",
+        "&7(It works with your sorting: an item goes first to a storage that already holds it.)"
+      ],
+      "icon": "sophisticatedstorage:controller",
+      "x": 4, "y": 0, "shape": "gear", "size": 1.25,
+      "deps": ["tier_up"],
+      "tasks": [{"type": "item", "item": "sophisticatedstorage:controller"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_2"}, {"type": "xp", "xp": 150}]
+    },
+    {
+      "key": "storage_link",
+      "title": "Long Reach",
+      "desc": [
+        "Storage that doesn't touch the rest can still join: a &eStorage Link&r connects whatever it touches to a controller in range.",
+        "",
+        "&eStorage Input&r, &eOutput&r and &eI/O&r blocks open the whole network to hoppers, Create funnels and pipes. Feed your farm straight into the vault."
+      ],
+      "icon": "sophisticatedstorage:storage_link",
+      "x": 6, "y": 0,
+      "deps": ["controller"],
+      "tasks": [{"type": "item", "item": "sophisticatedstorage:storage_link"}],
+      "rewards": [{"type": "xp", "xp": 120}]
+    },
+    {
+      "key": "limited",
+      "title": "One Thing per Drawer",
+      "desc": [
+        "&eLimited barrels&r hold one kind of item per section and show it on the front, with the count. They're drawers for a tidy base: one, two, three or four sections.",
+        "",
+        "Make any limited barrel."
+      ],
+      "icon": "sophisticatedstorage:limited_barrel_4",
+      "x": 2, "y": 1.5,
+      "deps": ["chest"],
+      "tasks": [
+        {"type": "item", "item": "sophisticatedstorage:limited_barrel_1", "optional": true},
+        {"type": "item", "item": "sophisticatedstorage:limited_barrel_2", "optional": true},
+        {"type": "item", "item": "sophisticatedstorage:limited_barrel_3", "optional": true},
+        {"type": "item", "item": "sophisticatedstorage:limited_barrel_4", "optional": true}
+      ],
+      "rewards": [{"type": "xp", "xp": 80}]
+    },
+    {
+      "key": "gold_diamond",
+      "title": "Gold and Diamond",
+      "desc": [
+        "Raise your storage to &eGold&r (81 slots, 3 upgrade slots) or &bDiamond&r (108 slots, 4 upgrade slots).",
+        "",
+        "Make an &eIron to Gold&r or &eGold to Diamond&r tier upgrade."
+      ],
+      "icon": "sophisticatedstorage:gold_to_diamond_tier_upgrade",
+      "x": 8, "y": 0,
+      "deps": ["storage_link"],
+      "tasks": [
+        {"type": "item", "item": "sophisticatedstorage:iron_to_gold_tier_upgrade", "optional": true},
+        {"type": "item", "item": "sophisticatedstorage:gold_to_diamond_tier_upgrade", "optional": true}
+      ],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "shulker",
+      "title": "Pack It Up",
+      "desc": [
+        "Sophisticated &eshulker boxes&r take upgrades and tiers too, and you can carry them full. They just can't hold other shulker boxes.",
+        "",
+        "You'll need shulker shells from the End."
+      ],
+      "icon": "sophisticatedstorage:shulker_box",
+      "x": 4, "y": 1.5,
+      "deps": ["limited"],
+      "tasks": [{"type": "item", "item": "sophisticatedstorage:shulker_box"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_3"}]
+    },
+    {
+      "key": "netherite_vault",
+      "title": "The Netherite Vault",
+      "desc": [
+        "The last tier: &8Netherite&r storage, with 132 slots and 5 upgrade slots. Add Stack Upgrades and one chest holds a kingdom's treasury.",
+        "",
+        "Make a &eDiamond to Netherite&r tier upgrade."
+      ],
+      "icon": "sophisticatedstorage:netherite_chest",
+      "x": 10, "y": 0, "shape": "hexagon", "size": 1.5,
+      "deps": ["gold_diamond", "hands_free"],
+      "tasks": [{"type": "item", "item": "sophisticatedstorage:diamond_to_netherite_tier_upgrade"}],
+      "rewards": [{"type": "loot", "table": "greenlanterns:rewards/tier_4"}, {"type": "xp_levels", "levels": 5}, {"type": "skill_xp", "category": "adventurer", "amount": 150}]
+    }
+  ]
+}

@@ -4,7 +4,7 @@
   "subtitle": "Vein mining, crystal caves and every ore the pack adds.",
   "icon": "minecraft:iron_pickaxe",
   "group": "mods",
-  "order": 3,
+  "order": 4,
   "quests": [
     {
       "key": "ultimine",

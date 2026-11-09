@@ -4,7 +4,7 @@
   "subtitle": "Ice and Fire's dragons and myths, and the dragons of Berk you can bond with.",
   "icon": "iceandfire:dragonegg_red",
   "group": "mods",
-  "order": 8,
+  "order": 9,
   "quests": [
     {
       "key": "bestiary",

@@ -4,7 +4,7 @@
   "subtitle": "A realm of endless dusk, and the boss order that unlocks it.",
   "icon": "twilightforest:naga_trophy",
   "group": "mods",
-  "order": 9,
+  "order": 10,
   "quests": [
     {
       "key": "portal",

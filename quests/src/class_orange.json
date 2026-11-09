@@ -1006,6 +1006,58 @@
         {"type": "xp", "xp": 2000},
         {"type": "skill_xp", "category": "orange", "amount": 1500}
       ]
+    },
+    {
+      "key": "counting_house",
+      "title": "The Counting House",
+      "subtitle": "Optional",
+      "desc": [
+        "Treasure you can't find is treasure you don't have. A Hoardwarden counts.",
+        "",
+        "Build a &eStorage Controller&r and a &eStack Upgrade&r: a desk to keep the ledger and shelves that hold twice what they should. The mod guide &aThe Quartermaster's Ledger&r shows how.",
+        "",
+        "&7Optional: it doesn't hold up your path."
+      ],
+      "icon": "sophisticatedstorage:controller",
+      "x": 3,
+      "y": -3,
+      "optional": true,
+      "deps": ["lootr25"],
+      "tasks": [
+        {"type": "item", "item": "sophisticatedstorage:controller"},
+        {"type": "item", "item": "sophisticatedstorage:stack_upgrade_tier_1"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_2"},
+        {"type": "xp", "xp": 150},
+        {"type": "skill_xp", "category": "orange", "amount": 150}
+      ]
+    },
+    {
+      "key": "bottomless_hoard",
+      "title": "A Bottomless Hoard",
+      "subtitle": "Optional",
+      "desc": [
+        "Nine blocks of each is a start. A true Hoardwarden's vault has no bottom.",
+        "",
+        "Make a &8Diamond to Netherite&r tier upgrade and a &eTier 4 Stack Upgrade&r (kept, not consumed). One netherite chest with those holds more than a dragon's lair.",
+        "",
+        "&7Optional: it doesn't hold up your path."
+      ],
+      "icon": "sophisticatedstorage:netherite_barrel",
+      "x": 28.25,
+      "y": 1.5,
+      "optional": true,
+      "deps": ["hoard"],
+      "tasks": [
+        {"type": "item", "item": "sophisticatedstorage:diamond_to_netherite_tier_upgrade"},
+        {"type": "item", "item": "sophisticatedstorage:stack_upgrade_tier_4"}
+      ],
+      "rewards": [
+        {"type": "loot", "table": "greenlanterns:rewards/tier_4"},
+        {"type": "xp", "xp": 600},
+        {"type": "skill_xp", "category": "orange", "amount": 400}
+      ]
     }
   ]
 }

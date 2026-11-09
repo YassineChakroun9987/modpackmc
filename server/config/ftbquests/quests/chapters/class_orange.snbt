@@ -1931,5 +1931,91 @@
 			x: 36.25d
 			y: 0.0d
 		}
+		{
+			dependencies: ["316EF1ACDC7E5F1A"]
+			icon: {
+				id: "sophisticatedstorage:controller"
+			}
+			id: "26AB5EAE518480B7"
+			optional: true
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_2"
+					id: "58C304F4EEF774D5"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "40E6440A87C0A59B"
+					type: "xp"
+					xp: 150
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:orange 150"
+					id: "19B7BC3A288C9FC7"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1B7806D22CBBB44A"
+					item: { count: 1, id: "sophisticatedstorage:controller" }
+					type: "item"
+				}
+				{
+					id: "63802AAE63F195BF"
+					item: { count: 1, id: "sophisticatedstorage:stack_upgrade_tier_1" }
+					type: "item"
+				}
+			]
+			x: 3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["12C16FD16CE3413E"]
+			icon: {
+				id: "sophisticatedstorage:netherite_barrel"
+			}
+			id: "362AE6AB138063AE"
+			optional: true
+			rewards: [
+				{
+					command: "/loot give {p} loot greenlanterns:rewards/tier_4"
+					id: "301B7F53B5D40EED"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "4740396A389A23BF"
+					type: "xp"
+					xp: 600
+				}
+				{
+					command: "/puffish_skills experience add {p} greenlanterns:orange 400"
+					id: "34A762DA80B058A9"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "567CCA0DF31DAB53"
+					item: { count: 1, id: "sophisticatedstorage:diamond_to_netherite_tier_upgrade" }
+					type: "item"
+				}
+				{
+					id: "7853DC24FEFE5A4C"
+					item: { count: 1, id: "sophisticatedstorage:stack_upgrade_tier_4" }
+					type: "item"
+				}
+			]
+			x: 28.25d
+			y: 1.5d
+		}
 	]
 }
