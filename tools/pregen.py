@@ -54,6 +54,14 @@ def main():
         sys.exit("!! Server did not start within 600s.")
     report()
 
+    # On a new world, story/05_town.js moves spawn to the story town right after "Done".
+    # Pre-generate around the town, not around the old spawn: wait for its log line.
+    t1 = time.time()
+    while time.time() - t1 < 180 and "[gl] story town" not in LOG.read_text(encoding="utf-8", errors="replace"):
+        time.sleep(1)
+    town = [l for l in log_lines() if "[gl] story town" in l]
+    print(town[-1].split("]: ", 1)[-1] if town else "(no story-town line: this world already had its town picked)")
+
     worlds = ["minecraft:overworld"] + (["minecraft:the_nether"] if a.nether else [])
     start_line = len(log_lines())
     send(proc, "chunky world minecraft:overworld")

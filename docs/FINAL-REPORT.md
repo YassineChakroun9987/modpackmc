@@ -3,6 +3,9 @@
 What I built overnight, every decision I made for you, and what still needs a real player to
 check. Everything is committed to git, so any decision can be undone (`git log --oneline`).
 
+> **Phase: development.** The world may be regenerated whenever a worldgen change needs it (you
+> said so on 2026-11-09). Tell me when you start playing for real, and from then on it won't be.
+
 ---
 
 ## 1. Status in one look
@@ -278,3 +281,18 @@ and the NPC script called it *before* the dialogue. So Elder Maren and Kaelen wo
 nothing. Worse, Kaelen's tale is what unlocks **Act I**, so the story would have stalled after the
 crash. The dialogue now runs first and the cancel comes last. This is still on the in-game
 checklist (§5): it needs a real right-click to confirm.
+
+**Villages: Epic Structures towns + a story town.** CTOV is a "vanilla-plus" mod, and with its
+default weights two-thirds of its villages were *small*. Your spawn village was a small savanna
+one, which is why it didn't feel much better than vanilla. Now:
+- **Epic Structures: Villages** rebuilds the 5 classic village types (plains, taiga, savanna,
+  snowy, desert) as sprawling medieval towns: churches with spires, windmills, walled taiga towns,
+  and a Roman-style savanna town with an arena. The classic villages are switched back on for it.
+  It has no zombie variants, so nothing classic-looking appears.
+- In those biomes about 60% of villages are Epic towns and 40% are CTOV villages. CTOV's small
+  villages are much rarer (weight 10 → 3), and other biomes (jungle, swamp, beach, mesa...) keep
+  CTOV's.
+- **The story always starts in an Epic town:** on a new world, spawn moves to the nearest one
+  before the prologue begins. On our seed it's a plains town at (-1040, 784).
+- The world was regenerated for this (you said that's fine while we're in development). The
+  old one is in `server/backups/world-ctov-spawn-2026-11-09`.

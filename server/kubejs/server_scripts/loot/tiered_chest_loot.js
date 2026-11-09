@@ -65,7 +65,7 @@ var GL_LOOT_TIER_RULES = [
 
   // ---- Vanilla (and Born in Chaos / D&T tables in the minecraft namespace)
   [/^minecraft:chests\/village\//, 1],
-  [/^minecraft:chests\/(village_desert_house|wood|random|mineral|dye)$/, 1],   // created below (Cataclysm / Grim Kingdoms)
+  [/^minecraft:chests\/(village_desert_house|wood|random|mineral|dye|stone|trash)$/, 1],   // Epic Villages' chests; created below if missing (Cataclysm / Grim Kingdoms)
   [/^minecraft:chests\/(igloo_chest|shipwreck_supply|shipwreck_map|underwater_ruin_small|ruined_portal)$/, 1],
   [/^minecraft:chests\/(basic_chest|chest_level_1|farm_drop)$/, 1],              // Born in Chaos
   [/^minecraft:chests\/(chest_level_2|firewell_d|shater)$/, 2],                  // Born in Chaos

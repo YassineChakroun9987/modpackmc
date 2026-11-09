@@ -130,6 +130,7 @@ server  castles_and_keeps-1.0.9.1-1.21.1-neoforge.jar                           
 server  Chunky-NeoForge-1.4.23.jar                                              ab0c74743a653020fe2dfc4986b43e893947f3e9
 server  DungeonsArise-1.21.1-2.1.68-release.jar                                 c651339154da7b9e9cf47a80fdef22c4d59cad5c
 server  DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar                        ac9edb266a1360e9e4c80ed0b2f931f1505307eb
+server  epic-structures-villages-2.0.0.jar                                      fc4f4998c5cfc35484101a9254bd0bd52ed431b2
 server  floating_islands-1.5.3-1.21.1-neoforge.jar                              bfb9afd9bf774fe4274e3bf880063837e35c8fb8
 server  lootjs-neoforge-1.21.1-3.7.0.jar                                        54ffddd1763ae4af84e9bbcb22e4081a1e7f3556
 server  pufferfish_unofficial_additions-1.21.1-2.2.8.jar                        b273ea691e027b33fb9a19fb966c5f072edfa5c0

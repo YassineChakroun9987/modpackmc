@@ -18,7 +18,7 @@
 	#CTOV small village spawn weight
 	# Default: 10
 	# Range: > 0
-	smallVillageWeight = 10
+	smallVillageWeight = 3
 	#CTOV medium village spawn weight
 	# Default: 4
 	# Range: > 0

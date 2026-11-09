@@ -106,5 +106,10 @@ The chapter id is the file name, so cross-chapter keys are `<file>:<key>`, e.g. 
 ## Server data (`server.persistentData`)
 | Key | Holds | Written by |
 |---|---|---|
-| `gl` | story state: countdown, village/outpost/crash positions, flags | `story/` |
+| `gl` | story state: countdown, village/outpost/crash positions, flags (`townPicked`: spawn already moved to the story town) | `story/` |
 | `gl_corpse.<player uuid>` | the last 8 deaths' curio slots (slot id, index, cosmetic, item), so a body's curios go back to the exact slot | `glue/corpse_quickloot.js` |
+
+## Data tags we own
+| Tag | Holds | Used by |
+|---|---|---|
+| `greenlanterns:story_town` (structure) | the 5 classic village types, i.e. Epic Structures towns | `story/05_town.js` picks the nearest one as the story village |

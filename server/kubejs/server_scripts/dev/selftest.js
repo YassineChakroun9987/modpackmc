@@ -62,6 +62,34 @@ ServerEvents.commandRegistry(function (event) {
       console.info('[selftest] DONE: ' + ok + ' passed, ' + bad + ' failed')
       return bad === 0 ? 1 : 0
     })))
+  // /gl_dev villageweights: the live "minecraft:villages" structure set (after every mod changed it).
+  event.register(Commands.literal('gl_dev').requires(function (s) { return s.hasPermission(2) })
+    .then(Commands.literal('villageweights').executes(function (ctx) {
+      var $Reg = Java.loadClass('net.minecraft.core.registries.Registries')
+      var set = ctx.source.getServer().registryAccess().registryOrThrow($Reg.STRUCTURE_SET).get($ResourceLocation.parse('minecraft:villages'))
+      var total = 0, lines = []
+      set.structures().forEach(function (e) {
+        var key = e.structure().unwrapKey()
+        lines.push(e.weight() + '  ' + (key.isPresent() ? key.get().location() : '?'))
+        total += e.weight()
+      })
+      lines.forEach(function (l) { console.info('[villageweights] ' + l) })
+      console.info('[villageweights] ' + lines.length + ' entries, total weight ' + total + ', placement ' + set.placement())
+      // Which biomes may hold a classic (Epic) village, and the biome at spawn.
+      var server = ctx.source.getServer(), level = server.overworld()
+      var biomes = server.registryAccess().registryOrThrow($Reg.BIOME)
+      var $TagKey = Java.loadClass('net.minecraft.tags.TagKey')
+      var here = String(level.getBiome(level.getSharedSpawnPos()).unwrapKey().get().location())
+      console.info('[villageweights] spawn biome: ' + here)
+      ;['plains', 'desert', 'savanna', 'snowy', 'taiga'].forEach(function (b) {
+        var tag = $TagKey.create($Reg.BIOME, $ResourceLocation.parse('minecraft:has_structure/village_' + b))
+        var names = []
+        var it = biomes.getTagOrEmpty(tag).iterator()
+        while (it.hasNext()) names.push(String(it.next().unwrapKey().get().location()))
+        console.info('[villageweights] village_' + b + ' biomes (' + names.length + '): ' + names.join(' ') + (names.indexOf(here) >= 0 ? '   <-- includes spawn' : ''))
+      })
+      return 1
+    })))
   // /gl_dev corpsetest: only the corpse quick-loot round trip.
   event.register(Commands.literal('gl_dev').requires(function (s) { return s.hasPermission(2) })
     .then(Commands.literal('corpsetest').executes(function (ctx) {

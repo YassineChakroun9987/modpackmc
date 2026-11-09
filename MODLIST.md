@@ -74,7 +74,8 @@ Every structure here picks biomes by **tag** (D&T: 90 of 97), so they all reach 
 | Philips Ruins | 1.21.1-2.0 | both | 17 ruins with loot: ancient crypts, dungeons, towers | — | — (known harmless error, see notes) | testing |
 | Grim Kingdoms: Lost Structures & Ruins (Vanilla Ed.) | 2.0.0 | both | 65 lost-kingdom ruins, watchtowers, camps | — | — | testing |
 | Ember's Castles and Keeps | 1.0.9.1 | server | 8 towers and keeps, including an undead castle and pillager towers | — | — | testing |
-| **ChoiceTheorem's Overhauled Village (CTOV)** | 3.6.4 | server | **Replaces the vanilla villages** (owner: "no classic vanilla villages"): 21 biome variants in small, medium and large sizes, fortified versions, + pillager outposts | Lithostitched | vanilla villages disabled in Structurify; 7 dead *Wares*-compat loot tables disabled | tuned |
+| **ChoiceTheorem's Overhauled Village (CTOV)** | 3.6.4 | server | Overhauled villages (owner: "no classic vanilla villages"): 21 biome variants in small, medium and large sizes, fortified versions, + pillager outposts. Shares the village slots with Epic Villages' towns | Lithostitched | small-village weight 10 → 3; 7 dead *Wares*-compat loot tables disabled | tuned |
+| **Epic Structures: Villages** | 2.0.0 | server | Rebuilds the 5 classic village types (plains, taiga, savanna, snowy, desert) as **sprawling medieval towns**: church spires, windmills, walled taiga towns, a Roman-style savanna town. Data pack only (no code, no new blocks). **The story town is always one of these** (`story/05_town.js`) | — | classic villages re-enabled (they're Epic towns now), weight 1 → 30, zombie variants removed | tuned |
 | Towns and Towers | 1.13.11 | both | Extra village styles and biome pillager outposts (24 outpost + 15 village variants), alongside CTOV | Cristel Lib | Cristel's auto-config for *other* mods turned off | tuned |
 | Sky Villages | 1.0.6 | server | Floating villages high above the land | Architectury | — | testing |
 | Ember's Floating Islands | 1.5.3 | server | 17 sky islands (amethyst, cemetery, cherry shrine, camps) | — | — | testing |
@@ -369,11 +370,11 @@ Structurify is the **only** thing that controls placement. Cristel Lib's auto-co
 |---|---|---|
 | `prevent_structure_overlap` | on | No structure may cut into another |
 | Global spacing ×1.5 | on | ~15 structure mods at their default density would crowd every hill |
-| `minecraft:villages` | exempt (default spacing) | The prologue needs a village at spawn; the Blue class lives in villages |
+| `minecraft:villages` | exempt (default spacing) | The prologue needs a village at spawn; the Green class lives in villages |
 | `betterstrongholds:stronghold` | exempt | ×1.5 pushed the stronghold ring from ~2,400 to ~4,450 blocks; exempt brings it back to ~2,100 |
 | `castle_in_the_sky:castle_in_the_sky` | exempt | A unique landmark, already rare by design (500/300 chunks) |
 | Flatness check (AUTO) | `dungeons_arise:` illager_windmill, wishing_well, giant_mushroom, jungle_tree_house, shiraz_palace | Surface builds with no terrain adaptation. Instead of floating on Terralith slopes, they only spawn on flat ground |
-| **Disabled** | `minecraft:village_plains`, `_desert`, `_savanna`, `_snowy`, `_taiga` | Owner wants no classic villages. CTOV only *outweighs* them and has no "vanilla off" switch. `/locate` now answers "structure is currently disabled" |
+| ~~Disabled~~ **re-enabled 2026-11-09** | `minecraft:village_plains`, `_desert`, `_savanna`, `_snowy`, `_taiga` | They were off because the owner wants no classic villages. Epic Villages now rebuilds them as medieval towns, so they're back on |
 
 **Left alone on purpose:**
 - WDA's fixed-height structures (Heavenly sky fortresses at y200, Mechanical Nest, Thornborn and Bandit Towers) are meant to float.
@@ -393,13 +394,22 @@ Structurify is the **only** thing that controls placement. Cristel Lib's auto-co
 #### CTOV: villages
 - **How it works:**
   - CTOV registers its villages in code and adds them to the `#minecraft:village` tag, so Village Spawn Point, village maps and raids treat them as villages.
-  - Weights live in `config/ctov-common.toml`: small 10, medium 4, large 1, outposts 1, plus a list of enabled variants.
+  - Weights live in `config/ctov-common.toml`: small **3** (was 10: most villages were small and felt like vanilla), medium 4, large 1, outposts 1, plus a list of enabled variants.
+  - CTOV's villages go into the same `minecraft:villages` structure set as the classic ones, each with its config weight (`/gl_dev villageweights` prints the live set and the biome tags).
   - Its 1,040 Lithostitched modifiers are all *conditional* add-ons that put other mods' workstations into its villages when those mods are installed.
-- **On our seed:** the nearest village to spawn is `ctov:medium/village_savanna_na` (226 blocks).
+- **On our seed:** Village Spawn Point first picks `ctov:medium/village_savanna` (-224, 32); `story/05_town.js` then moves spawn to the nearest Epic town (see below).
 - **Dead data:** `server/kubejs/data/wares/loot_table/chests/village/*_warehouse.json` disables 7 loot tables CTOV ships for the *Wares* mod.
   - They use `minecraft:set_nbt`, which was removed in 1.20.5, so each logged an ERROR. Nothing in CTOV references them.
   - Delete the folder if we ever add Wares and CTOV updates them.
-- D&T's extra pieces for vanilla taiga, jungle and swamp villages are unused now that vanilla villages are off. They're harmless.
+- D&T's extra pieces for vanilla taiga, jungle and swamp villages can appear again now that classic villages are back (as Epic towns).
+
+#### Epic Structures: Villages: medieval towns
+- **How it works:** it only replaces the classic village *building pieces* (249 of vanilla's 483), using the vanilla layout rules. That's why the classic villages had to be switched back on in Structurify.
+- **Mix:** `server/kubejs/data/minecraft/worldgen/structure_set/villages.json` gives each classic type weight 30 (vanilla: 1). In a plains/taiga/savanna biome that's roughly 60% Epic towns, 40% CTOV. Other biomes (jungle, swamp, beach, mesa...) keep CTOV only.
+- **No abandoned (zombie) villages:** Epic doesn't rebuild those, so they'd look classic. `server/kubejs/data/minecraft/worldgen/template_pool/village/<type>/town_centers.json` are the vanilla pools without the zombie entries.
+- **Story town:** `story/05_town.js` moves a new world's spawn to the nearest Epic town (tag `greenlanterns:story_town`) before the prologue starts, and `tools/pregen.py` waits for it. On our seed: an Epic plains town at (-1040, 784).
+- **Loot:** its chests use `minecraft:chests/wood|random|mineral|dye|stone|trash`, all tier 1 in `loot/tiered_chest_loot.js`.
+- Not rebuilt (still vanilla): villager/animal spawn pieces, a few lamps and street ends, and 4 taiga houses.
 
 #### Castle in the Sky
 - **How we verified it** (CurseForge-only): the cfwidget API gave the official file ID (8200620). Downloading that from `mediafilez.forgecdn.net` gave the same SHA-1 as the chinatown jar (`5cb283e4…`). Use the same method for other CurseForge-only jars.
@@ -507,3 +517,6 @@ Structurify is the **only** thing that controls placement. Cristel Lib's auto-co
 | 2026-11-09 | + Create Cosmonautics (Oa, Korugar, Moon, deep space become real dimensions) | 148 | 44.2s | 0 (+2 known); Lanterns config gained a `[cosmonautics]` section |
 | 2026-11-09 | **Final real world**, pre-generated 1,200 blocks around spawn (≈22,800 chunks, ~8 min) | 148 | — | 0 (+ known Philips Ruins item frames during generation) |
 | 2026-11-09 | Enhanced Celestials 1 → EC 2 Core + Default Lunar Events (no join popup); real world loads fine (one-time "enhancedcelestials MISSING" version note) | 149 | 44.5s | 0 (+2 known); selftest 32/32 |
+| 2026-11-09 | Corpse quick-loot + NPC dialogue fix | 149 | 46.2s | 0 (+2 known); selftest 49/49 |
+| 2026-11-09 | + Epic Structures: Villages; classic villages back on (weight 30, no zombie centres); CTOV small 10 → 3; story town script | 150 | 54.6s | 0 (+2 known); selftest 49/49 |
+| 2026-11-09 | **World regenerated** around the Epic plains town at (-1040, 784), pre-generated 1,200 blocks (~22,800 chunks, 18 min) | 150 | — | 0 (+316 known: Philips Ruins item frames, one Terralith frostfire column) |

@@ -18,6 +18,11 @@ TS = re.compile(r"^\[(\d{2}\w{3}\d{4} \d{2}:\d{2}:\d{2}\.\d{3})\]")
 # WARN lines we've already analysed and decided are harmless (see MODLIST.md notes).
 KNOWN_HARMLESS = [
     r"VanillaPackResourcesBuilder/\]: Assets URL",               # always printed by NeoForge servers
+    # Worldgen, seen while pre-generating: a structure piece's jigsaw names a blank or missing pool
+    # (nothing is attached there), and a mob saved in a structure carries an attribute from a mod we
+    # don't have (the game drops that attribute). Neither breaks the structure.
+    r"lithostitched/\]: Couldn't find template pool reference: (minecraft: |kaisyn:)",
+    r"AttributeMap/\]: Ignoring unknown attribute 'caelus:",
     r"OFFLINE/INSECURE MODE|no attempt to authenticate|hackers to connect|\"online-mode\" to \"true\"",
     r"ModernFix/\]: (Dedicated server took|Initial datapack load took)",  # timing info
     r"modernfix\.perf_mod_warning",                               # "how to silence ModernFix nudges"
@@ -54,6 +59,9 @@ KNOWN_ERRORS = [
      "Jupiter (Ice and Fire's config lib) reads its config before creating it; only on the very first boot"),
     (r"RuntimeDistCleaner/DISTXFORM\]: Attempted to load class net/minecraft/client/",
      "a mod's client-only mixin (FamiliarsLib ItemRenderer) is tried on the dedicated server and skipped; clients are unaffected"),
+    (r"Detected setBlock in a far chunk .*terralith:cave/frostfire/columns",
+     "a Terralith frostfire-cave ice column reaches past its chunk; the game skips those blocks (one column cut short "
+     "underground). Seen once while pre-generating the Epic-town world, 40 lines for one column"),
 ]
 
 

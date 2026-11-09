@@ -7,6 +7,11 @@ you your class ring, or the White or Black ring, depending on your choices.
 
 **Start here:** `docs/FINAL-REPORT.md` (what's in the pack, every design decision, what to test).
 
+> **Phase: DEVELOPMENT** (owner, 2026-11-09). The server world may be regenerated whenever a
+> worldgen change needs it: back up `server/world` to `server/backups/`, then
+> `python -I tools/pregen.py --radius 1200`. When the owner says play has started, change this line to
+> **Phase: PLAYING**. From then on there are no regenerations, and worldgen changes only reach new chunks.
+
 ## Stack
 
 | Thing     | Version                                   |
