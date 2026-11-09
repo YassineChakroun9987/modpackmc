@@ -60,6 +60,28 @@ ServerEvents.commandRegistry(function (event) {
       check('NPC talk handler present', typeof glNpcTalk === 'function')
       var missingBosses = Object.keys(GL_BOSS_LIST).filter(function (id) { return !ents.containsKey($ResourceLocation.parse(id)) })
       check('every quest boss exists (' + Object.keys(GL_BOSS_LIST).length + ')' + (missingBosses.length ? ': missing ' + missingBosses.join(', ') : ''), missingBosses.length === 0)
+      try {
+        var $FPF = Java.loadClass('net.neoforged.neoforge.common.util.FakePlayerFactory')
+        var gp = $FPF.get(server.overworld(), new (Java.loadClass('com.mojang.authlib.GameProfile'))(Java.loadClass('java.util.UUID').fromString('00000000-0000-4000-8000-00000000901d'), 'gl_guide_test'))
+        check('guide: no class -> no boss', glNextBoss(gp) === null)
+        var nb = glNextBoss(gp, function (s) { return s === 'gl_class_red' })
+        check('guide: Red recruit gets an early Red boss (' + (nb ? nb.name : 'none') + ')', nb !== null && GL_CLASS_BOSSES.red.some(function (r) { return r[0] === nb.id && r[1] === '' }))
+        var lm = glLairMap(gp, 'kingsandmonsters:ogre_outpost_plains', 'Lair test')
+        check('guide: lair map made for an ogre outpost' + (lm ? ' at ' + lm.x + ',' + lm.z : ''), lm !== null && String(lm.map.id) === 'minecraft:filled_map')
+      } catch (err) { bad++; console.error('[selftest] guide threw: ' + err) }
+      try {
+        var z = Java.loadClass('net.minecraft.world.entity.EntityType').ZOMBIE.create(server.overworld())
+        check('scaling: a fresh zombie is scalable', glShouldScale(z))
+        var elite = glApplyMobScale(z, 50, true)
+        var A = Java.loadClass('net.minecraft.world.entity.ai.attributes.Attributes')
+        var hp = z.getMaxHealth(), dmg = z.getAttributeValue(A.ATTACK_DAMAGE), arm = z.getAttributeValue(A.ARMOR)
+        console.info('[selftest] scaling: power-50 elite zombie hp=' + hp + ' dmg=' + dmg.toFixed(2) + ' armour=' + arm)
+        check('scaling: power-50 elite zombie has 72 hp (20 x 3.6)', elite && Math.abs(hp - 72) < 0.01)
+        check('scaling: damage x2.55 (3 -> 7.65)', Math.abs(dmg - 7.65) < 0.01)
+        check('scaling: +10 armour (2 -> 12)', Math.abs(arm - 12) < 0.01)
+        check('scaling: never scaled twice', !glShouldScale(z))
+        z.discard()
+      } catch (err) { bad++; console.error('[selftest] scaling threw: ' + err) }
       try { glCorpseSelftest(server, check) } catch (err) { bad++; console.error('[selftest] corpse quick-loot threw: ' + err); if (err.javaException) console.error('[selftest]   ' + err.javaException) }
       console.info('[selftest] DONE: ' + ok + ' passed, ' + bad + ' failed')
       return bad === 0 ? 1 : 0

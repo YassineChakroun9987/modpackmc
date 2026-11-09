@@ -1,82 +1,482 @@
 {
- "alexsmobs:void_worm": "Void Worm",
- "born_in_chaos_v1:lord_pumpkinhead": "Lord Pumpkinhead",
- "born_in_chaos_v1:mother_spider": "Spiders Mother",
- "born_in_chaos_v1:nightmare_stalker": "Nightmare Stalker",
- "born_in_chaos_v1:supreme_bonescaller": "Supreme Bonescaller",
- "bosses_of_mass_destruction:gauntlet": "Nether Gauntlet",
- "bosses_of_mass_destruction:lich": "Night Lich",
- "bosses_of_mass_destruction:obsidilith": "Obsidilith",
- "bosses_of_mass_destruction:void_blossom": "Void Blossom",
- "cataclysm:ancient_remnant": "Ancient Remnant",
- "cataclysm:aptrgangr": "Aptrgangr",
- "cataclysm:clawdian": "Clawdian",
- "cataclysm:ender_guardian": "Ender Guardian",
- "cataclysm:ignis": "Ignis",
- "cataclysm:kobolediator": "Kobolediator",
- "cataclysm:maledictus": "Maledictus",
- "cataclysm:netherite_monstrosity": "Netherite Monstrosity",
- "cataclysm:scylla": "Scylla",
- "cataclysm:the_harbinger": "The Harbinger",
- "cataclysm:the_leviathan": "The Leviathan",
- "cataclysm:the_prowler": "The Prowler",
- "cataclysm:wadjet": "Wadjet",
- "companions:sacred_pontiff": "Sacred Pontiff",
- "darkdoppelganger:dark_doppelganger": "Dark Doppelganger",
- "discerning_the_eldritch:ascended_one": "The Ascended One",
- "discerning_the_eldritch:blood_matriarch": "Blood Matriarch",
- "discerning_the_eldritch:electromancer": "Electromancer",
- "graveyard:lich": "Corrupted Champion",
- "iceandfire:cyclops": "Cyclops",
- "iceandfire:deathworm": "Death Worm",
- "iceandfire:dread_lich": "Dread Lich",
- "iceandfire:fire_dragon": "Fire Dragon",
- "iceandfire:gorgon": "Gorgon",
- "iceandfire:hydra": "Hydra",
- "iceandfire:ice_dragon": "Ice Dragon",
- "iceandfire:lightning_dragon": "Lightning Dragon",
- "iceandfire:sea_serpent": "Sea Serpent",
- "irons_spellbooks:archevoker": "Archevoker",
- "irons_spellbooks:citadel_keeper": "Ancient Knight",
- "irons_spellbooks:cryomancer": "Cryomancer",
- "irons_spellbooks:dead_king": "The Dead King",
- "irons_spellbooks:fire_boss": "Echo of Tyros, First Flamebearer",
- "irons_spellbooks:ice_spider": "Ice Spider",
- "irons_spellbooks:pyromancer": "Pyromancer",
- "kingsandmonsters:ogre_grunt_captain": "Grunt Captain",
- "kingsandmonsters:ogre_lord": "Ogre King",
- "legendary_monsters:ancient_guardian": "Ancient Guardian",
- "legendary_monsters:cloud_golem": "Cumulonimbus",
- "legendary_monsters:dune_sentinel": "Dune Sentinel",
- "legendary_monsters:endersent": "Chorusent",
- "legendary_monsters:fractured_apostle": "Fractured Apostle",
- "legendary_monsters:frostbitten_golem": "Frostbitten Golem",
- "legendary_monsters:haunted_knight": "Haunted Knight",
- "legendary_monsters:lava_eater": "Lava Eater",
- "legendary_monsters:overgrown_colossus": "Overgrown Colossus",
- "legendary_monsters:posessed_paladin": "Possessed Paladin",
- "legendary_monsters:shulker_mimic": "Shulker Mimic",
- "legendary_monsters:skeletosaurus": "Skeletosaurus",
- "legendary_monsters:the_obliterator": "The Obliterator",
- "legendary_monsters:warped_fungussus": "Warped Fungussus",
- "legendary_monsters:withered_abomination": "Withered Abomination",
- "minecraft:elder_guardian": "Elder Guardian",
- "minecraft:ender_dragon": "Ender Dragon",
- "minecraft:warden": "Warden",
- "minecraft:wither": "Wither",
- "mowziesmobs:ferrous_wroughtnaut": "Ferrous Wroughtnaut",
- "mowziesmobs:frostmaw": "Frostmaw",
- "mowziesmobs:naga": "Naga",
- "mowziesmobs:umvuthi": "Umvuthi, the Sunbird",
- "mutantmonsters:mutant_creeper": "Mutant Creeper",
- "mutantmonsters:mutant_enderman": "Mutant Enderman",
- "mutantmonsters:mutant_skeleton": "Mutant Skeleton",
- "mutantmonsters:mutant_zombie": "Mutant Zombie",
- "twilightforest:alpha_yeti": "Alpha Yeti",
- "twilightforest:hydra": "Hydra",
- "twilightforest:lich": "Twilight Lich",
- "twilightforest:minoshroom": "Minoshroom",
- "twilightforest:naga": "Naga",
- "twilightforest:snow_queen": "Snow Queen",
- "twilightforest:ur_ghast": "Ur-Ghast"
+ "alexsmobs:void_worm": {
+  "name": "Void Worm",
+  "where": "Craft or find a Mysterious Worm and throw it into the void below the End islands: the Void Worm rises to take it.",
+  "structure": null,
+  "world": "end"
+ },
+ "born_in_chaos_v1:lord_pumpkinhead": {
+  "name": "Lord Pumpkinhead",
+  "where": "The headless lord answers Lord Pumpkinhead's Lamp; JEI shows how to fill and use it. He rides out at night.",
+  "structure": null,
+  "world": "overworld"
+ },
+ "born_in_chaos_v1:mother_spider": {
+  "name": "Spiders Mother",
+  "where": "Spawns at night in the Overworld with Born in Chaos's horrors, more often on a Blood Moon. Her brood comes with her.",
+  "structure": null,
+  "world": "overworld"
+ },
+ "born_in_chaos_v1:nightmare_stalker": {
+  "name": "Nightmare Stalker",
+  "where": "Hunts at night in the Overworld, rarely: it finds you. Blood Moons bring it more often.",
+  "structure": null,
+  "world": "overworld"
+ },
+ "born_in_chaos_v1:supreme_bonescaller": {
+  "name": "Supreme Bonescaller",
+  "where": "A rare night spawn in the Overworld, raising skeletons around it. Look for the ring of risen dead.",
+  "structure": null,
+  "world": "overworld"
+ },
+ "bosses_of_mass_destruction:gauntlet": {
+  "name": "Nether Gauntlet",
+  "where": "Sleeps in its arena in the Nether: a giant stone fist.",
+  "structure": "bosses_of_mass_destruction:gauntlet_arena",
+  "world": "nether"
+ },
+ "bosses_of_mass_destruction:lich": {
+  "name": "Night Lich",
+  "where": "Waits at the top of a tower in snowy lands.",
+  "structure": "bosses_of_mass_destruction:lich_tower",
+  "world": "overworld"
+ },
+ "bosses_of_mass_destruction:obsidilith": {
+  "name": "Obsidilith",
+  "where": "A pillar of living obsidian on the End islands.",
+  "structure": "bosses_of_mass_destruction:obsidilith_arena",
+  "world": "end"
+ },
+ "bosses_of_mass_destruction:void_blossom": {
+  "name": "Void Blossom",
+  "where": "Grows in a hollow deep under the Overworld, in lush caves.",
+  "structure": "bosses_of_mass_destruction:void_blossom",
+  "world": "overworld"
+ },
+ "cataclysm:ancient_remnant": {
+  "name": "Ancient Remnant",
+  "where": "Buried under the desert in the Cursed Pyramid.",
+  "structure": "cataclysm:cursed_pyramid",
+  "world": "overworld"
+ },
+ "cataclysm:aptrgangr": {
+  "name": "Aptrgangr",
+  "where": "The draugr chieftain inside the Frosted Prison, in icy lands.",
+  "structure": "cataclysm:frosted_prison",
+  "world": "overworld"
+ },
+ "cataclysm:clawdian": {
+  "name": "Clawdian",
+  "where": "Lives in Cataclysm's ruins at sea. Search warm oceans and coasts.",
+  "structure": null,
+  "world": "overworld"
+ },
+ "cataclysm:ender_guardian": {
+  "name": "Ender Guardian",
+  "where": "Guards the Ruined Citadel on the outer End islands.",
+  "structure": "cataclysm:ruined_citadel",
+  "world": "end"
+ },
+ "cataclysm:ignis": {
+  "name": "Ignis",
+  "where": "Fights in the Burning Arena in the Nether.",
+  "structure": "cataclysm:burning_arena",
+  "world": "nether"
+ },
+ "cataclysm:kobolediator": {
+  "name": "Kobolediator",
+  "where": "The kobolds' champion in Cataclysm's desert sites.",
+  "structure": null,
+  "world": "overworld"
+ },
+ "cataclysm:maledictus": {
+  "name": "Maledictus",
+  "where": "Chained at the bottom of the Frosted Prison, in icy lands.",
+  "structure": "cataclysm:frosted_prison",
+  "world": "overworld"
+ },
+ "cataclysm:netherite_monstrosity": {
+  "name": "Netherite Monstrosity",
+  "where": "Sleeps in the Soul Black Smith forge in the Nether.",
+  "structure": "cataclysm:soul_black_smith",
+  "world": "nether"
+ },
+ "cataclysm:scylla": {
+  "name": "Scylla",
+  "where": "Rules the Acropolis, an island temple in a stormy sea.",
+  "structure": "cataclysm:acropolis",
+  "world": "overworld"
+ },
+ "cataclysm:the_harbinger": {
+  "name": "The Harbinger",
+  "where": "Waits to be switched on deep in the Ancient Factory.",
+  "structure": "cataclysm:ancient_factory",
+  "world": "overworld"
+ },
+ "cataclysm:the_leviathan": {
+  "name": "The Leviathan",
+  "where": "Rules the Sunken City at the bottom of the ocean.",
+  "structure": "cataclysm:sunken_city",
+  "world": "overworld"
+ },
+ "cataclysm:the_prowler": {
+  "name": "The Prowler",
+  "where": "Patrols the halls of the Ancient Factory.",
+  "structure": "cataclysm:ancient_factory",
+  "world": "overworld"
+ },
+ "cataclysm:wadjet": {
+  "name": "Wadjet",
+  "where": "Guards Cataclysm's desert ruins, near the Cursed Pyramid.",
+  "structure": null,
+  "world": "overworld"
+ },
+ "companions:sacred_pontiff": {
+  "name": "Sacred Pontiff",
+  "where": "Holds court in a jungle Monkey Temple.",
+  "structure": "companions:companions_monkey_temple",
+  "world": "overworld"
+ },
+ "darkdoppelganger:dark_doppelganger": {
+  "name": "Dark Doppelganger",
+  "where": "Build a Shadow Altar and use a Shadow Orb on it (JEI shows both): your darker self steps out.",
+  "structure": null,
+  "world": "overworld"
+ },
+ "discerning_the_eldritch:ascended_one": {
+  "name": "The Ascended One",
+  "where": "The cultists' god, called up at the heart of a cultist base. Follow the blood cultists.",
+  "structure": null,
+  "world": "overworld"
+ },
+ "discerning_the_eldritch:blood_matriarch": {
+  "name": "Blood Matriarch",
+  "where": "Leads the blood cultists from their hut.",
+  "structure": "discerning_the_eldritch:blood_cultist_hut",
+  "world": "overworld"
+ },
+ "discerning_the_eldritch:electromancer": {
+  "name": "Electromancer",
+  "where": "Commands storms from the top of its tower.",
+  "structure": "discerning_the_eldritch:electromancer_tower",
+  "world": "overworld"
+ },
+ "graveyard:lich": {
+  "name": "Corrupted Champion",
+  "where": "Call it up at the altar of a Lich Prison (The Graveyard).",
+  "structure": "graveyard:lich_prison",
+  "world": "overworld"
+ },
+ "iceandfire:cyclops": {
+  "name": "Cyclops",
+  "where": "Keeps its flock in a cave by the sea.",
+  "structure": "iceandfire:cyclops_cave",
+  "world": "overworld"
+ },
+ "iceandfire:deathworm": {
+  "name": "Death Worm",
+  "where": "Burrows under desert sand. Walk the dunes and it will find you.",
+  "structure": null,
+  "world": "overworld"
+ },
+ "iceandfire:dread_lich": {
+  "name": "Dread Lich",
+  "where": "Rules a mausoleum in the frozen north.",
+  "structure": "iceandfire:mausoleum",
+  "world": "overworld"
+ },
+ "iceandfire:fire_dragon": {
+  "name": "Fire Dragon",
+  "where": "Nests in roosts in warm lands and in fire dragon caves.",
+  "structure": "iceandfire:fire_dragon_roost",
+  "world": "overworld"
+ },
+ "iceandfire:gorgon": {
+  "name": "Gorgon",
+  "where": "Waits in her temple. Don't look at her.",
+  "structure": "iceandfire:gorgon_temple",
+  "world": "overworld"
+ },
+ "iceandfire:hydra": {
+  "name": "Hydra",
+  "where": "Lairs in a cave in the swamps.",
+  "structure": "iceandfire:hydra_cave",
+  "world": "overworld"
+ },
+ "iceandfire:ice_dragon": {
+  "name": "Ice Dragon",
+  "where": "Nests in roosts in frozen lands and in ice dragon caves.",
+  "structure": "iceandfire:ice_dragon_roost",
+  "world": "overworld"
+ },
+ "iceandfire:lightning_dragon": {
+  "name": "Lightning Dragon",
+  "where": "Nests in roosts in dry lands and in lightning dragon caves.",
+  "structure": "iceandfire:lightning_dragon_roost",
+  "world": "overworld"
+ },
+ "iceandfire:sea_serpent": {
+  "name": "Sea Serpent",
+  "where": "Swims the deep oceans and surfaces in storms.",
+  "structure": null,
+  "world": "overworld"
+ },
+ "irons_spellbooks:archevoker": {
+  "name": "Archevoker",
+  "where": "Leads an evoker fort.",
+  "structure": "irons_spellbooks:evoker_fort",
+  "world": "overworld"
+ },
+ "irons_spellbooks:citadel_keeper": {
+  "name": "Ancient Knight",
+  "where": "Ancient Knights still guard Iron's Citadel.",
+  "structure": "irons_spellbooks:citadel",
+  "world": "overworld"
+ },
+ "irons_spellbooks:cryomancer": {
+  "name": "Cryomancer",
+  "where": "Ice mages wander the frozen lands and guard Iron's cold ruins.",
+  "structure": null,
+  "world": "overworld"
+ },
+ "irons_spellbooks:dead_king": {
+  "name": "The Dead King",
+  "where": "Rises from his throne in the Catacombs. A Wayward Compass points the way; a Dead King Phylactery raises him again.",
+  "structure": "irons_spellbooks:catacombs",
+  "world": "overworld"
+ },
+ "irons_spellbooks:fire_boss": {
+  "name": "Echo of Tyros, First Flamebearer",
+  "where": "Burns at the heart of Iron's Citadel.",
+  "structure": "irons_spellbooks:citadel",
+  "world": "overworld"
+ },
+ "irons_spellbooks:ice_spider": {
+  "name": "Ice Spider",
+  "where": "Weaves its den in icy caves.",
+  "structure": "irons_spellbooks:ice_spider_den",
+  "world": "overworld"
+ },
+ "irons_spellbooks:pyromancer": {
+  "name": "Pyromancer",
+  "where": "Lives at the top of a pyromancer tower.",
+  "structure": "irons_spellbooks:pyromancer_tower",
+  "world": "overworld"
+ },
+ "kingsandmonsters:ogre_grunt_captain": {
+  "name": "Grunt Captain",
+  "where": "Leads every ogre outpost in the plains and swamps.",
+  "structure": "kingsandmonsters:ogre_outpost_plains",
+  "world": "overworld"
+ },
+ "kingsandmonsters:ogre_lord": {
+  "name": "Ogre King",
+  "where": "Sits on his throne in the Ogre King's Fort.",
+  "structure": "kingsandmonsters:ogre_kings_fort",
+  "world": "overworld"
+ },
+ "legendary_monsters:ancient_guardian": {
+  "name": "Ancient Guardian",
+  "where": "Guards the Ancient Stronghold.",
+  "structure": "legendary_monsters:ancient_stronghold",
+  "world": "overworld"
+ },
+ "legendary_monsters:cloud_golem": {
+  "name": "Cumulonimbus",
+  "where": "Guards the Cloudy Temple, high in the sky.",
+  "structure": "legendary_monsters:cloudy_temple",
+  "world": "overworld"
+ },
+ "legendary_monsters:dune_sentinel": {
+  "name": "Dune Sentinel",
+  "where": "Wakes in a Ruined Pyramid in the desert.",
+  "structure": "legendary_monsters:ruined_pyramid",
+  "world": "overworld"
+ },
+ "legendary_monsters:endersent": {
+  "name": "Chorusent",
+  "where": "Stands in the remains of an ancient tower.",
+  "structure": "legendary_monsters:ancient_tower_remains",
+  "world": "overworld"
+ },
+ "legendary_monsters:fractured_apostle": {
+  "name": "Fractured Apostle",
+  "where": "Leads the dead in the Collapsed Kingdom's arena.",
+  "structure": "legendary_monsters:collapsed_kingdom",
+  "world": "overworld"
+ },
+ "legendary_monsters:frostbitten_golem": {
+  "name": "Frostbitten Golem",
+  "where": "Guards the Frostbitten Temple in the snow.",
+  "structure": "legendary_monsters:frostbitten_temple",
+  "world": "overworld"
+ },
+ "legendary_monsters:haunted_knight": {
+  "name": "Haunted Knight",
+  "where": "Haunts the Collapsed Kingdom's dungeons.",
+  "structure": "legendary_monsters:collapsed_kingdom",
+  "world": "overworld"
+ },
+ "legendary_monsters:lava_eater": {
+  "name": "Lava Eater",
+  "where": "Nests in the Nether's lava seas.",
+  "structure": "legendary_monsters:lava_eater_spawn",
+  "world": "nether"
+ },
+ "legendary_monsters:overgrown_colossus": {
+  "name": "Overgrown Colossus",
+  "where": "Sleeps in the Mossy Temple.",
+  "structure": "legendary_monsters:mossy_temple",
+  "world": "overworld"
+ },
+ "legendary_monsters:posessed_paladin": {
+  "name": "Possessed Paladin",
+  "where": "Fights in the Collapsed Kingdom's great arena.",
+  "structure": "legendary_monsters:collapsed_kingdom",
+  "world": "overworld"
+ },
+ "legendary_monsters:shulker_mimic": {
+  "name": "Shulker Mimic",
+  "where": "Hides among the chests of a Shulker Tower in the End.",
+  "structure": "legendary_monsters:shulker_tower",
+  "world": "end"
+ },
+ "legendary_monsters:skeletosaurus": {
+  "name": "Skeletosaurus",
+  "where": "Walks the Skeletosaurus Nest.",
+  "structure": "legendary_monsters:skeletosaurus_nest",
+  "world": "overworld"
+ },
+ "legendary_monsters:the_obliterator": {
+  "name": "The Obliterator",
+  "where": "Waits on a Space Station in the End.",
+  "structure": "legendary_monsters:space_station",
+  "world": "end"
+ },
+ "legendary_monsters:warped_fungussus": {
+  "name": "Warped Fungussus",
+  "where": "Grows in its nest in a warped forest.",
+  "structure": "legendary_monsters:warped_fungussus_nest",
+  "world": "nether"
+ },
+ "legendary_monsters:withered_abomination": {
+  "name": "Withered Abomination",
+  "where": "Waits in the remains of a soul fortress.",
+  "structure": "legendary_monsters:soul_fortress_remains",
+  "world": "nether"
+ },
+ "minecraft:elder_guardian": {
+  "name": "Elder Guardian",
+  "where": "Three of them guard every ocean monument.",
+  "structure": "betteroceanmonuments:ocean_monument",
+  "world": "overworld"
+ },
+ "minecraft:ender_dragon": {
+  "name": "Ender Dragon",
+  "where": "Circles the main End island. Reach the End through a stronghold's portal.",
+  "structure": null,
+  "world": "end"
+ },
+ "minecraft:warden": {
+  "name": "Warden",
+  "where": "Rises in the deep dark of an ancient city when the shriekers call it. Sneak.",
+  "structure": "minecraft:ancient_city",
+  "world": "overworld"
+ },
+ "minecraft:wither": {
+  "name": "Wither",
+  "where": "Build it yourself: four soul sand in a T and three wither skeleton skulls on top. Do it far from home.",
+  "structure": null,
+  "world": "overworld"
+ },
+ "mowziesmobs:ferrous_wroughtnaut": {
+  "name": "Ferrous Wroughtnaut",
+  "where": "Stands in its chamber, deep underground.",
+  "structure": "mowziesmobs:wrought_chamber",
+  "world": "overworld"
+ },
+ "mowziesmobs:frostmaw": {
+  "name": "Frostmaw",
+  "where": "Sleeps in the snow on frozen plains.",
+  "structure": "mowziesmobs:frostmaw_spawn",
+  "world": "overworld"
+ },
+ "mowziesmobs:naga": {
+  "name": "Naga",
+  "where": "Flies along sea cliffs and ocean coasts.",
+  "structure": null,
+  "world": "overworld"
+ },
+ "mowziesmobs:umvuthi": {
+  "name": "Umvuthi, the Sunbird",
+  "where": "Rules the Umvuthana grove in the savanna.",
+  "structure": "mowziesmobs:umvuthana_grove",
+  "world": "overworld"
+ },
+ "mutantmonsters:mutant_creeper": {
+  "name": "Mutant Creeper",
+  "where": "A rare night spawn in the Overworld.",
+  "structure": null,
+  "world": "overworld"
+ },
+ "mutantmonsters:mutant_enderman": {
+  "name": "Mutant Enderman",
+  "where": "A rare night spawn in the Overworld.",
+  "structure": null,
+  "world": "overworld"
+ },
+ "mutantmonsters:mutant_skeleton": {
+  "name": "Mutant Skeleton",
+  "where": "A rare night spawn in the Overworld.",
+  "structure": null,
+  "world": "overworld"
+ },
+ "mutantmonsters:mutant_zombie": {
+  "name": "Mutant Zombie",
+  "where": "A rare night spawn in the Overworld.",
+  "structure": null,
+  "world": "overworld"
+ },
+ "twilightforest:alpha_yeti": {
+  "name": "Alpha Yeti",
+  "where": "Lairs in a yeti cave in the Twilight Forest's snowy lands.",
+  "structure": "twilightforest:yeti_cave",
+  "world": "twilight"
+ },
+ "twilightforest:hydra": {
+  "name": "Hydra",
+  "where": "Lairs in the Twilight Forest's fire swamp.",
+  "structure": "twilightforest:hydra_lair",
+  "world": "twilight"
+ },
+ "twilightforest:lich": {
+  "name": "Twilight Lich",
+  "where": "Waits at the top of the Lich Tower in the Twilight Forest.",
+  "structure": "twilightforest:lich_tower",
+  "world": "twilight"
+ },
+ "twilightforest:minoshroom": {
+  "name": "Minoshroom",
+  "where": "Guards the heart of the Labyrinth in the Twilight Forest's swamps.",
+  "structure": "twilightforest:labyrinth",
+  "world": "twilight"
+ },
+ "twilightforest:naga": {
+  "name": "Naga",
+  "where": "Coils in the Naga Courtyard in the Twilight Forest.",
+  "structure": "twilightforest:naga_courtyard",
+  "world": "twilight"
+ },
+ "twilightforest:snow_queen": {
+  "name": "Snow Queen",
+  "where": "Rules the Aurora Palace in the Twilight Forest's glacier.",
+  "structure": "twilightforest:aurora_palace",
+  "world": "twilight"
+ },
+ "twilightforest:ur_ghast": {
+  "name": "Ur-Ghast",
+  "where": "Waits at the top of a Dark Tower in the Twilight Forest.",
+  "structure": "twilightforest:dark_tower",
+  "world": "twilight"
+ }
 }

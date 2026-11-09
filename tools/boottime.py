@@ -23,6 +23,7 @@ KNOWN_HARMLESS = [
     # don't have (the game drops that attribute). Neither breaks the structure.
     r"lithostitched/\]: Couldn't find template pool reference: (minecraft: |kaisyn:)",
     r"AttributeMap/\]: Ignoring unknown attribute 'caelus:",
+    r"\[Update\] .* has an update available",                    # Collective's update checker (informational)
     r"OFFLINE/INSECURE MODE|no attempt to authenticate|hackers to connect|\"online-mode\" to \"true\"",
     r"ModernFix/\]: (Dedicated server took|Initial datapack load took)",  # timing info
     r"modernfix\.perf_mod_warning",                               # "how to silence ModernFix nudges"

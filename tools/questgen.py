@@ -84,7 +84,9 @@ class Dbl(float):
 # Bosses: quests/bosses.json maps entity id -> display name. A single kill task on a listed boss is written
 # as a gamestage task on "gl_boss_<ns>_<path>" titled "Defeat <name>"; story/51_boss_list.js (written
 # below) gives that stage to every player within 64 blocks when the boss dies, so the whole party gets credit.
-BOSSES = json.loads((ROOT / "quests" / "bosses.json").read_text(encoding="utf-8"))
+BOSS_INFO = json.loads((ROOT / "quests" / "bosses.json").read_text(encoding="utf-8"))   # id -> {name, where, structure, world}
+BOSSES = {k: v["name"] for k, v in BOSS_INFO.items()}
+WORLD_NAME = {"overworld": "the Overworld", "nether": "the Nether", "end": "the End", "twilight": "the Twilight Forest"}
 BOSS_JS = ROOT / "server" / "kubejs" / "server_scripts" / "story" / "51_boss_list.js"
 
 
@@ -254,8 +256,14 @@ def main():
             lang[f"quest.{qid}.title"] = q["title"]
             if q.get("subtitle"):
                 lang[f"quest.{qid}.quest_subtitle"] = q["subtitle"]
-            if q.get("desc"):
-                lang[f"quest.{qid}.quest_desc"] = q["desc"] if isinstance(q["desc"], list) else [q["desc"]]
+            desc = list(q["desc"]) if isinstance(q.get("desc"), list) else ([q["desc"]] if q.get("desc") else [])
+            for b in dict.fromkeys(t["entity"] for t in tasks if t["type"] == "kill" and t["entity"] in BOSS_INFO and int(t.get("count", 1)) == 1):
+                info = BOSS_INFO[b]
+                desc += ["", f"&6Where:&r {info['where']} ({WORLD_NAME[info['world']]})"]
+                if info.get("structure"):
+                    desc.append("&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide.")
+            if desc:
+                lang[f"quest.{qid}.quest_desc"] = desc
         if spec.get("group") not in group_ids:
             problems.append(f"{spec['id']}: group must be one of {list(group_ids)}")
         icon = spec.get("icon", "minecraft:book")
@@ -310,7 +318,23 @@ def main():
           "// Boss id -> [quest stage, display name]. story/50_bosses.js gives the stage to every player",
           "// within 64 blocks when one of these dies, so boss quests credit the whole party.",
           "var GL_BOSS_LIST = {"]
-    js += [f"  '{e}': ['{boss_stage(e)}', '{n.replace(chr(39), chr(92) + chr(39))}']," for e, n in sorted(BOSSES.items())]
+    esc = lambda s: (s or "").replace("\\", "\\\\").replace(chr(39), chr(92) + chr(39))
+    js += [f"  '{e}': ['{boss_stage(e)}', '{esc(i['name'])}', '{esc(i.get('structure'))}', '{i['world']}', '{esc(i['where'])}'],"
+           for e, i in sorted(BOSS_INFO.items())]
+    js += ["}", "", "// Each class's boss quests in book order: [boss id, stage needed before Kaelen points you at it].",
+           "var GL_CLASS_BOSSES = {"]
+    for f, spec in loaded:
+        if not spec["id"].startswith("class_"):
+            continue
+        c = spec["id"][6:]
+        rows = []
+        for q in sorted(spec["quests"], key=lambda q: (q.get("x", 0), q.get("y", 0))):
+            x = q.get("x", 0)
+            need = "" if x < 9 else f"gl_whisper_{c}" if x < 16.5 else f"gl_dream_{c}" if x < 23.26 else "gl_ringbearer"
+            for tk in q.get("tasks", []):
+                if tk["type"] == "kill" and tk["entity"] in BOSS_INFO and f"'{tk['entity']}'" not in "".join(rows):
+                    rows.append(f"['{tk['entity']}', '{need}']")
+        js.append(f"  {c}: [{', '.join(rows)}],")
     js += ["}", ""]
     BOSS_JS.write_text(chr(10).join(js), encoding="utf-8")
 

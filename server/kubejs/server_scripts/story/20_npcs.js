@@ -40,7 +40,10 @@ var GL_TALKING = {}
 ItemEvents.entityInteracted(function (event) {
   var t = event.target
   if (!t || !t.getTags || !t.getTags().contains('gl_npc')) return
-  if (String(event.hand) === 'MAIN_HAND') glNpcTalk(event.server, event.player, t)
+  if (String(event.hand) === 'MAIN_HAND') {
+    // Kaelen + an empty map = a map to your next boss (story/45_guide.js); otherwise he talks.
+    if (!(t.getTags().contains('gl_npc_lantern') && glLanternMap(event.server, event.player))) glNpcTalk(event.server, event.player, t)
+  }
   event.cancel()
 })
 

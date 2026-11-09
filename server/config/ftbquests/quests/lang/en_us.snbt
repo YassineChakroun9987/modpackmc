@@ -115,6 +115,9 @@
 		"A Ruined Pyramid lies half-buried in the desert. Its Sentinel wakes when you take what it guards."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Wakes in a Ruined Pyramid in the desert. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.00322C7286E6A97D.quest_subtitle: "Boss"
 	quest.00322C7286E6A97D.title: "The Dune Sentinel"
@@ -149,6 +152,9 @@
 		"The Netherite Monstrosity hammers anything that enters its forge into scrap."
 		""
 		"Kill the &eNetherite Monstrosity&r in the Soul Black Smith. It is slow but its lava waves hurt; keep moving. A party helps a lot."
+		""
+		"&6Where:&r Sleeps in the Soul Black Smith forge in the Nether. (the Nether)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.015CCA309D0AEC3F.title: "The Blacksmith's Wrath"
 	quest.017ADBB5FF842334.quest_desc: [
@@ -178,6 +184,9 @@
 	quest.02374E2D16A15D80.quest_desc: [
 		"Atop the &eAurora Palace&r on the Glacier, the &eSnow Queen&r shields herself with orbiting ice crystals and drops blizzards on you."
 		"Frostbinders will feel at home. Everyone else: break the crystals, then strike while she's exposed."
+		""
+		"&6Where:&r Rules the Aurora Palace in the Twilight Forest's glacier. (the Twilight Forest)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.02374E2D16A15D80.title: "IV-c. The Snow Queen"
 	quest.026303C6D76AC6B0.quest_desc: [
@@ -203,6 +212,9 @@
 		"On a throne of bone in the Catacombs, a crowned corpse opens its eyes. His court rises with him."
 		""
 		"Defeat the &eDead King&r deep in Iron's Catacombs (disturb his corpse on the throne). Holy spells and fire hurt him. Party members within 64 blocks get the trial credit too."
+		""
+		"&6Where:&r Rises from his throne in the Catacombs. A Wayward Compass points the way; a Dead King Phylactery raises him again. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.02B017B1537701A1.quest_subtitle: "Ring trial: the boss"
 	quest.02B017B1537701A1.title: "&aThe Dead King"
@@ -247,6 +259,8 @@
 		"&eShared boss:&r the Orange light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Guards Cataclysm's desert ruins, near the Cursed Pyramid. (the Overworld)"
 	]
 	quest.0488E111E855D28E.quest_subtitle: "Shared boss"
 	quest.0488E111E855D28E.title: "Wadjet"
@@ -279,6 +293,9 @@
 		"&eShared boss:&r the Indigo light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Nests in roosts in warm lands and in fire dragon caves. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.05AF7972D359F464.quest_subtitle: "Shared boss"
 	quest.05AF7972D359F464.title: "Slay a Fire Dragon"
@@ -286,6 +303,9 @@
 		"Deep in the factory, a war machine of the old empire boots up and speaks in a voice like grinding gears."
 		""
 		"Kill &eThe Harbinger&r in the Ancient Factory (Cataclysm). It fires lasers and missiles; use cover and close in. Party members within 64 blocks get the trial credit too."
+		""
+		"&6Where:&r Waits to be switched on deep in the Ancient Factory. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.05B5D8418D6E840F.quest_subtitle: "Ring trial: the boss"
 	quest.05B5D8418D6E840F.title: "&eThe Iron Prophet"
@@ -321,6 +341,9 @@
 		"The Hydra rises from the bog: nine heads, nine hungers, and every one of them in pain."
 		""
 		"Kill the &eHydra&r in its swamp cave (Ice and Fire). Its heads grow back, so focus them down together; your beasts and summons can keep the others busy. Party members within 64 blocks get the trial credit too."
+		""
+		"&6Where:&r Lairs in a cave in the swamps. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.068B7FCC51EA685B.quest_subtitle: "Ring trial: the boss"
 	quest.068B7FCC51EA685B.title: "&9The Many Heads"
@@ -357,6 +380,9 @@
 		"Umvuthi, the beast-caller, summons his tribe and burns the ground with sunlight."
 		""
 		"Defeat &eUmvuthi&r in his grove. Kill his followers and stay out of the sunstrikes."
+		""
+		"&6Where:&r Rules the Umvuthana grove in the savanna. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.0827D67E16FA41D8.title: "Sun and Mask"
 	quest.0836CA1FEF5713ED.quest_desc: [
@@ -376,6 +402,8 @@
 		"On the darkest nights a rider with a burning head leads the harvest of souls."
 		""
 		"Kill &eLord Pumpkinhead&r (Born in Chaos). Check JEI and the Born in Chaos advancements for how he is called."
+		""
+		"&6Where:&r The headless lord answers Lord Pumpkinhead's Lamp; JEI shows how to fill and use it. He rides out at night. (the Overworld)"
 	]
 	quest.091321F1D685F52A.title: "The Pumpkin King"
 	quest.092F6FDB87644B0C.quest_desc: [
@@ -422,6 +450,9 @@
 		"The Devourer's shadow wakes the old Cataclysm bosses. Put them down before they join it."
 		""
 		"Optional: Kill &eMaledictus&r in the Frosted Prison. Another class's chapter may already have sent you there."
+		""
+		"&6Where:&r Chained at the bottom of the Frosted Prison, in icy lands. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.09F0496E152667BB.title: "The Cursed Warlord"
 	quest.09FDB2CADE3A11D0.quest_desc: [
@@ -435,12 +466,17 @@
 	quest.0A18BBAFF3F2E674.quest_desc: [
 		"In the End stands a pillar of living obsidian. The &eObsidilith&r sends out shockwaves, raises spikes from the floor and drops anvils."
 		"Keep moving, and don't fight it near the edge of an island."
+		""
+		"&6Where:&r A pillar of living obsidian on the End islands. (the End)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.0A18BBAFF3F2E674.title: "III. The Obsidilith"
 	quest.0A2F414F719E975D.quest_desc: [
 		"A serpent as long as a ship circles in the open ocean."
 		""
 		"Kill a &eSea Serpent&r (Ice and Fire) in deep ocean. A boat is a bad idea; fly."
+		""
+		"&6Where:&r Swims the deep oceans and surfaces in storms. (the Overworld)"
 	]
 	quest.0A2F414F719E975D.title: "Serpent of the Deep"
 	quest.0A326122AA9487F0.quest_desc: [
@@ -451,12 +487,18 @@
 	quest.0A3F0AB0C4E3B7A4.quest_desc: [
 		"The &eSunken City&r lies at the bottom of the sea, and the &eLeviathan&r rules it. Fight underwater: Water Breathing, Respiration, and a Tide Guardian or Conduit if you have one."
 		"Lantern rings keep you breathing while lit."
+		""
+		"&6Where:&r Rules the Sunken City at the bottom of the ocean. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.0A3F0AB0C4E3B7A4.title: "III. The Leviathan"
 	quest.0A50BE76CAC54284.quest_desc: [
 		"The Ogre King rises from his throne, club in hand, crown askew. He thinks the hoard is his."
 		""
 		"Kill the &eOgre King&r in his fort (plains or swamp). His guards come first. Party members within 64 blocks get the trial credit too."
+		""
+		"&6Where:&r Sits on his throne in the Ogre King's Fort. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.0A50BE76CAC54284.quest_subtitle: "Ring trial: the boss"
 	quest.0A50BE76CAC54284.title: "&6Crown of the Ogre King"
@@ -464,6 +506,9 @@
 		"Below the hills, an empty suit of armor still guards a treasure no one remembers."
 		""
 		"Find a Mowzie's &eWrought Chamber&r underground and defeat the &eFerrous Wroughtnaut&r. Hit it only when it's stuck after a swing; its armor shrugs off everything else."
+		""
+		"&6Where:&r Stands in its chamber, deep underground. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.0A9A8A8E44341A20.title: "The Iron Ghost"
 	quest.0AD1E48B85E3BF19.quest_desc: [
@@ -511,6 +556,9 @@
 		"The master of the fort casts fangs, vexes and worse."
 		""
 		"Defeat the &eArchevoker&r in the Evoker Fort. Kill the vexes first; fight as a party."
+		""
+		"&6Where:&r Leads an evoker fort. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.0C882911171A6261.title: "The Archevoker"
 	quest.0CCAF1432B9BFF27.quest_desc: [
@@ -519,6 +567,9 @@
 		"&eShared boss:&r the Blue and Indigo lights hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Guards the Cloudy Temple, high in the sky. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.0CCAF1432B9BFF27.quest_subtitle: "Shared boss"
 	quest.0CCAF1432B9BFF27.title: "The Cloud Golem"
@@ -528,6 +579,9 @@
 		"&eShared boss:&r the Orange light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Keeps its flock in a cave by the sea. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.0CE5DB500EB914B7.quest_subtitle: "Shared boss"
 	quest.0CE5DB500EB914B7.title: "The Cyclops"
@@ -584,12 +638,18 @@
 		"A great white ape sleeps in the snow, a crystal of living ice clutched in its fist."
 		""
 		"Kill the &eFrostmaw&r (Mowzie's Mobs) in snowy lands. Its breath freezes; dodge the ground slams."
+		""
+		"&6Where:&r Sleeps in the snow on frozen plains. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.0E949DE9DA61EBCE.title: "The White Beast"
 	quest.0F2D874979F10118.quest_desc: [
 		"Blood cultists sing to a mother who drinks the strength of her children."
 		""
 		"Find a &eBlood Cultist Hut&r (Discerning the Eldritch) and kill the &eBlood Matriarch&r. Bring the party: her cultists heal her."
+		""
+		"&6Where:&r Leads the blood cultists from their hut. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.0F2D874979F10118.title: "Mother of Blood"
 	quest.0FB3EC2DF5FA7E48.quest_desc: [
@@ -679,6 +739,9 @@
 		"A tower crowned with copper. On top, a mage who has bottled a thunderstorm."
 		""
 		"Find an &eElectromancer Tower&r (Discerning the Eldritch) and defeat the &eElectromancer&r."
+		""
+		"&6Where:&r Commands storms from the top of its tower. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.11CC35B3BCAAD7FF.title: "The Storm Tower"
 	quest.11E6ACD9326C6915.quest_desc: [
@@ -690,6 +753,9 @@
 	quest.11E9E3CDB830BBC9.quest_desc: [
 		"In the &eBurning Arena&r, the flame knight &eIgnis&r fights in three phases, each hotter than the last. In the end his sword and shield fall to the worthy."
 		"His Ignitium makes some of the best armour in the game."
+		""
+		"&6Where:&r Fights in the Burning Arena in the Nether. (the Nether)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.11E9E3CDB830BBC9.title: "III. Ignis"
 	quest.11FD155EC8998B9C.quest_desc: [
@@ -762,6 +828,9 @@
 		"At the altar, at night, blood and bone call him back: the Corrupted Champion, the Graveyard's lich."
 		""
 		"At the &eLich Prison&r altar, at &enight&r, use a &efull Vial of Blood&r and all &ethree bone staff pieces&r to summon him, then kill him. Party members within 64 blocks get the trial credit too."
+		""
+		"&6Where:&r Call it up at the altar of a Lich Prison (The Graveyard). (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.13DC9C345CA75F0D.quest_subtitle: "Ring trial: the boss"
 	quest.13DC9C345CA75F0D.title: "&5The Corrupted Champion"
@@ -807,6 +876,9 @@
 		"A colossus of void-steel, and its fist is the treasure."
 		""
 		"Kill the &eEnder Guardian&r in the Ruined Citadel. Watch for its void runes on the floor."
+		""
+		"&6Where:&r Guards the Ruined Citadel on the outer End islands. (the End)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.15D894FF564947FE.title: "The Guardian's Fist"
 	quest.15DD094307D61169.quest_desc: [
@@ -819,6 +891,8 @@
 	quest.161BBFD2D2735C41.quest_desc: [
 		"&eBorn in Chaos&r fills the night with horrors: decaying zombies, bone imps, dread hounds, pumpkin-headed riders. Blood Moons bring more of them."
 		"The swollen &eMother Spider&r never hunts alone: her spiderlings swarm you. Kill the brood fast."
+		""
+		"&6Where:&r Spawns at night in the Overworld with Born in Chaos's horrors, more often on a Blood Moon. Her brood comes with her. (the Overworld)"
 	]
 	quest.161BBFD2D2735C41.quest_subtitle: "Born in Chaos"
 	quest.161BBFD2D2735C41.title: "I. The Mother Spider"
@@ -839,6 +913,8 @@
 		"&eShared boss:&r the Orange and Yellow lights hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r A rare night spawn in the Overworld. (the Overworld)"
 	]
 	quest.165C531F07C5396A.quest_subtitle: "Shared boss"
 	quest.165C531F07C5396A.title: "Mutant Creeper"
@@ -874,6 +950,8 @@
 		"Rarely, an enderman becomes a mutant with four arms. It throws blocks, makes clones and teleports you. It walks the night like the others."
 		""
 		"Defeat it. &7Optional: not needed for The Light Is Ready."
+		""
+		"&6Where:&r A rare night spawn in the Overworld. (the Overworld)"
 	]
 	quest.17FFF05179437A1D.quest_subtitle: "Boss"
 	quest.17FFF05179437A1D.title: "Mutant Enderman"
@@ -886,6 +964,9 @@
 		"Ignis was a hero once. Now he is fire wearing armor."
 		""
 		"Kill &eIgnis&r in the Burning Arena. He has three phases and his shield reflects; strike between his combos."
+		""
+		"&6Where:&r Fights in the Burning Arena in the Nether. (the Nether)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.18B3431556178FEC.title: "Ignis"
 	quest.18FEBB4AB2572697.quest_desc: [
@@ -908,6 +989,9 @@
 	quest.1951EF18DDFE386F.quest_desc: [
 		"In the Nether's &eSoul Black Smith&r forge sleeps the &eNetherite Monstrosity&r, a living siege engine that sprays lava and shakes the ground."
 		"Fire resistance is not optional."
+		""
+		"&6Where:&r Sleeps in the Soul Black Smith forge in the Nether. (the Nether)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.1951EF18DDFE386F.title: "III. The Netherite Monstrosity"
 	quest.1962471694C78C7F.quest_desc: [
@@ -931,6 +1015,8 @@
 		"Three skulls, soul sand, and a storm of black fire. An old test, and still a good one."
 		""
 		"Summon and kill the &eWither&r (3 wither skeleton skulls on soul sand). Fight it underground or far from your base."
+		""
+		"&6Where:&r Build it yourself: four soul sand in a T and three wither skeleton skulls on top. Do it far from home. (the Overworld)"
 	]
 	quest.1A2F375D6DDFCC4C.title: "The Withered King"
 	quest.1A4F58C83D0C4D15.quest_desc: [
@@ -944,6 +1030,9 @@
 		"&eShared boss:&r the Violet light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Stands in the remains of an ancient tower. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.1A5DDA9F8A61E280.quest_subtitle: "Shared boss"
 	quest.1A5DDA9F8A61E280.title: "The Endersent"
@@ -962,6 +1051,9 @@
 	quest.1A65CBBEF6215580.quest_desc: [
 		"In the Nether, a giant stone fist sleeps in its arena. The &eGauntlet&r punches, fires lasers and blasts the ground. Hit its glowing eye when it opens."
 		"The Bloodfire Berserker's trial. Its cousin the &eVoid Blossom&r grows in lush caves below the Overworld."
+		""
+		"&6Where:&r Sleeps in its arena in the Nether: a giant stone fist. (the Nether)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.1A65CBBEF6215580.title: "II. The Nether Gauntlet"
 	quest.1AA30515C29411EC.quest_desc: [
@@ -973,6 +1065,9 @@
 	quest.1AC7BF77F1623A7A.quest_desc: [
 		"&eLegendary Monsters&r hides a boss in each of its temples and ruins. In the &eFrostbitten Temple&r, an icy golem guards the treasure."
 		"Its eyes (Eye of Frost, Eye of Moss...) belong to these bosses; look them up in JEI."
+		""
+		"&6Where:&r Guards the Frostbitten Temple in the snow. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.1AC7BF77F1623A7A.quest_subtitle: "Legendary Monsters"
 	quest.1AC7BF77F1623A7A.title: "I. The Frostbitten Golem"
@@ -1009,6 +1104,9 @@
 		"The monolith wakes, and it remembers being a god."
 		""
 		"Kill the &eObsidilith&r. Its attack patterns are colour-coded; learn them, then strike."
+		""
+		"&6Where:&r A pillar of living obsidian on the End islands. (the End)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.1C44FC28B9B0C90F.title: "Obsidilith"
 	quest.1C65139AC587CC51.quest_desc: [
@@ -1031,6 +1129,9 @@
 		"Deep in a warped forest of the Nether, a fungal giant guards its nest. Burn it, cut it, but don't stand in its spores."
 		""
 		"Find the place and defeat it. &7Optional: not needed for The Light Is Ready."
+		""
+		"&6Where:&r Grows in its nest in a warped forest. (the Nether)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.1C88E5A8E873FF4E.quest_subtitle: "Boss"
 	quest.1C88E5A8E873FF4E.title: "The Warped Fungussus"
@@ -1050,6 +1151,9 @@
 	quest.1DAE5DAC9D6F6EF0.quest_desc: [
 		"At the head of an &eevoker fort&r stands the &eArchevoker&r, an illager mage with fangs, vexes and shields of its own."
 		"Its robes are Archevoker school armour: Lightwardens take note."
+		""
+		"&6Where:&r Leads an evoker fort. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.1DAE5DAC9D6F6EF0.quest_subtitle: "Iron's Spells"
 	quest.1DAE5DAC9D6F6EF0.title: "I. The Archevoker"
@@ -1092,6 +1196,9 @@
 		"The Devourer's shadow wakes the old Cataclysm bosses. Put them down before they join it."
 		""
 		"Optional: Kill &eScylla&r in the Acropolis (at sea). Another class's chapter may already have sent you there."
+		""
+		"&6Where:&r Rules the Acropolis, an island temple in a stormy sea. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.1EF55A06379C0DF8.title: "Storm Queen"
 	quest.1EFE5240E7146A81.quest_desc: [
@@ -1107,6 +1214,9 @@
 		"&eShared boss:&r the Indigo light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Walks the Skeletosaurus Nest. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.1F10B18A4FC5C533.quest_subtitle: "Shared boss"
 	quest.1F10B18A4FC5C533.title: "Skeletosaurus"
@@ -1165,6 +1275,8 @@
 		"The dunes ripple the wrong way."
 		""
 		"Optional: kill a &eDeath Worm&r in a desert (Ice and Fire). Its chitin makes good armor."
+		""
+		"&6Where:&r Burrows under desert sand. Walk the dunes and it will find you. (the Overworld)"
 	]
 	quest.213C0FE1515AC3F9.title: "Something Under the Sand"
 	quest.214D41F2772E9FD8.quest_desc: [
@@ -1183,12 +1295,18 @@
 		"In the snowy forest, the lord of the yetis throws ice like boulders."
 		""
 		"Kill the &eAlpha Yeti&r in its cave. The trophy counts too."
+		""
+		"&6Where:&r Lairs in a yeti cave in the Twilight Forest's snowy lands. (the Twilight Forest)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.21C87627A3F954DE.title: "The Alpha Yeti"
 	quest.21C8764B60285A29.quest_desc: [
 		"In a lush cave, a flower the size of a house has learned to hate."
 		""
 		"Kill the &eVoid Blossom&r (Bosses of Mass Destruction) in its overgrown cavern underground. Kill its spore minions fast."
+		""
+		"&6Where:&r Grows in a hollow deep under the Overworld, in lush caves. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.21C8764B60285A29.title: "The Deep Bloom"
 	quest.21DC7910ED86F2C2.quest_desc: [
@@ -1212,6 +1330,9 @@
 		"A dragon made of storm. It thinks the sky is its alone. Correct it."
 		""
 		"Kill an adult &elightning dragon&r (Ice and Fire). They roost in jungles, savannas and badlands."
+		""
+		"&6Where:&r Nests in roosts in dry lands and in lightning dragon caves. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.22AD767CB6A4FAC9.title: "Storm Rival"
 	quest.22D587B91368DFE4.quest_desc: [
@@ -1256,6 +1377,9 @@
 	quest.23BBEB9A964DEB4B.quest_desc: [
 		"In Iron's &eCitadel&r, where the Ancient Knights still stand guard, burns the &eEcho of Tyros, First Flamebearer&r: a fire mage boss of the extreme tier."
 		"Fire resistance, ice spells, and a full party."
+		""
+		"&6Where:&r Burns at the heart of Iron's Citadel. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.23BBEB9A964DEB4B.title: "IV. The Echo of Tyros"
 	quest.23D85C8C3DA4A060.quest_desc: [
@@ -1362,6 +1486,8 @@
 		"&eShared boss:&r the Violet light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Guards Cataclysm's desert ruins, near the Cursed Pyramid. (the Overworld)"
 	]
 	quest.25DE137B460B7468.quest_subtitle: "Shared boss"
 	quest.25DE137B460B7468.title: "Wadjet"
@@ -1412,6 +1538,9 @@
 		"Under an old stronghold, a guardian of carved stone was built to keep thieves out. You're a thief."
 		""
 		"Defeat the &eAncient Guardian&r (Legendary Monsters). Its &eGuide Book&r and structure advancements show where it waits."
+		""
+		"&6Where:&r Guards the Ancient Stronghold. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.275825B06E09C8CB.title: "The Stone That Walks"
 	quest.2786786758B27169.quest_desc: [
@@ -1423,6 +1552,8 @@
 	quest.27B62C75A5F32909.quest_desc: [
 		"Rarely, a zombie, skeleton, creeper or enderman comes back huge: a &eMutant&r. They're mini-bosses that roam the night."
 		"The &eMutant Zombie&r gets back up after it falls unless you burn its body. Fight it with fire nearby."
+		""
+		"&6Where:&r A rare night spawn in the Overworld. (the Overworld)"
 	]
 	quest.27B62C75A5F32909.title: "Mutant Monsters"
 	quest.27C3398D849C054D.quest_desc: [
@@ -1457,6 +1588,9 @@
 	quest.28C651EF57364F08.quest_desc: [
 		"Under the desert, the &eCursed Pyramid&r hides the &eAncient Remnant&r, a colossal sand-beast that charges through walls."
 		"Cataclysm has more to hunt at this tier: the Ender Guardian in the Ruined Citadel, Maledictus in the Frosted Prison, Scylla in the Acropolis."
+		""
+		"&6Where:&r Buried under the desert in the Cursed Pyramid. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.28C651EF57364F08.title: "III. The Ancient Remnant"
 	quest.28CFC2D2F0AA2CD9.quest_desc: [
@@ -1494,6 +1628,9 @@
 		"The Devourer's shadow wakes the old Cataclysm bosses. Put them down before they join it."
 		""
 		"Optional: Kill &eThe Leviathan&r in the Sunken City (deep ocean). Another class's chapter may already have sent you there."
+		""
+		"&6Where:&r Rules the Sunken City at the bottom of the ocean. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.293DE41D7936108C.title: "From the Abyss"
 	quest.294D92BDCA54BD55.quest_desc: [
@@ -1564,6 +1701,9 @@
 	quest.2B3D7803A016166B.quest_desc: [
 		"Follow a &eWayward Compass&r to the Catacombs. The &eDead King&r rises from his throne with a blade of the grave and the spells of a dead age."
 		"The Lightwarden's trial. He can be raised again: use a Dead King Phylactery on his soul."
+		""
+		"&6Where:&r Rises from his throne in the Catacombs. A Wayward Compass points the way; a Dead King Phylactery raises him again. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.2B3D7803A016166B.title: "III. The Dead King"
 	quest.2B718B18C041149D.quest_desc: [
@@ -1581,6 +1721,8 @@
 		"Something follows you home on dark nights. It only moves when you aren't looking."
 		""
 		"Kill the &eNightmare Stalker&r (Born in Chaos). It hunts at night; keep it in front of you."
+		""
+		"&6Where:&r Hunts at night in the Overworld, rarely: it finds you. Blood Moons bring it more often. (the Overworld)"
 	]
 	quest.2BDDF6ED76D0BB73.title: "The Stalker"
 	quest.2BDE79183100B325.quest_desc: [
@@ -1685,6 +1827,8 @@
 		"Kobolds hold the desert sites of Cataclysm, and their champion fights in an arena of bones and sand."
 		""
 		"Defeat it. &7Optional: not needed for The Light Is Ready."
+		""
+		"&6Where:&r The kobolds' champion in Cataclysm's desert sites. (the Overworld)"
 	]
 	quest.2F45594CE29CA5FC.quest_subtitle: "Boss"
 	quest.2F45594CE29CA5FC.title: "The Kobolediator"
@@ -1697,12 +1841,18 @@
 	quest.2FB5CC52F4BE55B9.quest_desc: [
 		"On a &eSpace Station&r in the End waits &eThe Obliterator&r. No hit on it does more than 20 damage, it adapts to your attacks, and it heals if you leave it alone."
 		"It can't be hurt while you fly or hold high ground: fight it on its own level, rings off."
+		""
+		"&6Where:&r Waits on a Space Station in the End. (the End)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.2FB5CC52F4BE55B9.title: "IV. The Obliterator"
 	quest.2FDAFDFEC10078B7.quest_desc: [
 		"The Warden is blind. It doesn't need eyes."
 		""
 		"Either &ekill the Warden&r, or outlast it: loot &e16 echo shards&r from the city while it hunts you."
+		""
+		"&6Where:&r Rises in the deep dark of an ancient city when the shriekers call it. Sneak. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.2FDAFDFEC10078B7.title: "Outlast the Warden"
 	quest.303B6152FB3715C9.quest_desc: [
@@ -1752,6 +1902,9 @@
 		"&eShared boss:&r the Blue light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Nests in roosts in frozen lands and in ice dragon caves. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.311658FDCD478544.quest_subtitle: "Shared boss"
 	quest.311658FDCD478544.title: "Slay an Ice Dragon"
@@ -1770,6 +1923,9 @@
 		"It is huge. It is armored. It never saw you."
 		""
 		"Kill the &eEnder Guardian&r in the Ruined Citadel. Strike from behind; dodge the void runes."
+		""
+		"&6Where:&r Guards the Ruined Citadel on the outer End islands. (the End)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.315F01947224A3A6.title: "Assassinate the Guardian"
 	quest.316EF1ACDC7E5F1A.quest_desc: [
@@ -1806,6 +1962,9 @@
 		"&eShared boss:&r the Violet light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Waits in the remains of a soul fortress. (the Nether)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.32190826B1235FD2.quest_subtitle: "Shared boss"
 	quest.32190826B1235FD2.title: "The Withered Abomination"
@@ -1829,6 +1988,9 @@
 		"The Gauntlet wakes when you step into its hall: a giant armored fist of the old Nether lords."
 		""
 		"Kill the &eNether Gauntlet&r in its blackstone arena in the Nether (the quest before helps you find it). Fire resistance helps. Party members within 64 blocks get the trial credit too."
+		""
+		"&6Where:&r Sleeps in its arena in the Nether: a giant stone fist. (the Nether)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.3246C3EBFC7D1AB3.quest_subtitle: "Ring trial: the boss"
 	quest.3246C3EBFC7D1AB3.title: "&cThe Crucible of Rage"
@@ -1873,6 +2035,9 @@
 	quest.341E17319D8504C7.quest_desc: [
 		"Climb the &eDark Tower&r (carminite builders, ghastlings, towerwood borers) to the Ur-Ghast's chamber. Kill ghasts near a &eGhast Trap&r to drag it down."
 		"Its Fiery Tears join the Hydra's blood for Fiery gear."
+		""
+		"&6Where:&r Waits at the top of a Dark Tower in the Twilight Forest. (the Twilight Forest)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.341E17319D8504C7.title: "IV-b. The Ur-Ghast"
 	quest.3429FBDC224B5856.quest_desc: [
@@ -1885,6 +2050,8 @@
 		"Something huge is beating on the village walls."
 		""
 		"Optional: kill a &eMutant Zombie&r (Mutant Monsters). Burn it before it gets back up."
+		""
+		"&6Where:&r A rare night spawn in the Overworld. (the Overworld)"
 	]
 	quest.347233F755BC9DA7.title: "Too Big to Bury"
 	quest.34BC81A57C996B15.quest_desc: [
@@ -1923,11 +2090,17 @@
 		"A ghast as old as the forest cries at the top of a dark tower."
 		""
 		"Climb the &eDark Tower&r and kill the &eUr-Ghast&r. Destroy its tears. The trophy counts too."
+		""
+		"&6Where:&r Waits at the top of a Dark Tower in the Twilight Forest. (the Twilight Forest)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.358575D46049BD70.title: "The Ur-Ghast"
 	quest.35962FDF975D78EB.quest_desc: [
 		"Moss and stone walk in the &eMossy Temple&r: the &eOvergrown Colossus&r. It's slow and it hits very hard."
 		"Other Legendary bosses wait in the Cloudy Temple, the Ruined Pyramid, the Shulker Tower and the Skeletosaurus Nest."
+		""
+		"&6Where:&r Sleeps in the Mossy Temple. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.35962FDF975D78EB.title: "II. The Overgrown Colossus"
 	quest.35DCA83A9AAB7427.quest_desc: [
@@ -1963,12 +2136,18 @@
 		"The Leviathan is the sea's oldest beast. It does not hate you. It is just hungry."
 		""
 		"Kill &eThe Leviathan&r in the Sunken City. Fight it underwater with the party; its tentacles grab and its beam burns."
+		""
+		"&6Where:&r Rules the Sunken City at the bottom of the ocean. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.36E219F5BA54FDAF.title: "Leviathan"
 	quest.36EDD4546670CEEA.quest_desc: [
 		"An ancient fire-king's echo still burns, waiting for a challenger worthy of his scythe."
 		""
 		"Kill &eTyros&r, Iron's Spells' fire boss (see JEI for the &eCinderous Soulcaller&r and how to call him). One of the hardest fire fights in the pack: bring the party."
+		""
+		"&6Where:&r Burns at the heart of Iron's Citadel. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.36EDD4546670CEEA.title: "The Echo of Tyros"
 	quest.36FB59925FCF8B9B.quest_desc: [
@@ -1997,12 +2176,18 @@
 		"&o\"Your doom approaches.\"&r It caps every hit, adapts to your damage, and heals if you leave it alone."
 		""
 		"Optional: kill &eThe Obliterator&r. It is &cinvulnerable while you fly or hold high ground&r: fight it on foot, as a party."
+		""
+		"&6Where:&r Waits on a Space Station in the End. (the End)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.376409C57EF41CCA.title: "The Obliterator"
 	quest.379605E26CF23304.quest_desc: [
 		"The pharaoh's guardian: a skeleton the size of a temple, still guarding the gold."
 		""
 		"Kill the &eAncient Remnant&r deep in the Cursed Pyramid. Its sandstorms blind; fight it as a party."
+		""
+		"&6Where:&r Buried under the desert in the Cursed Pyramid. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.379605E26CF23304.title: "The Ancient Remnant"
 	quest.37B03381095496C5.quest_desc: [
@@ -2032,6 +2217,9 @@
 		"&eShared boss:&r the Blue and Violet lights hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Rules a mausoleum in the frozen north. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.38472DC8537FCE3A.quest_subtitle: "Shared boss"
 	quest.38472DC8537FCE3A.title: "The Dread Lich"
@@ -2067,6 +2255,9 @@
 	quest.3918EB5A28D9957C.quest_desc: [
 		"In the &eSnowy Forest&r, a cave holds the &eAlpha Yeti&r. It throws ice and pounds the ground: watch for falling icicles."
 		"Its fur makes Yeti armour, and its death opens the Glacier."
+		""
+		"&6Where:&r Lairs in a yeti cave in the Twilight Forest's snowy lands. (the Twilight Forest)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.3918EB5A28D9957C.title: "III-c. The Alpha Yeti"
 	quest.393E219782FBBE11.quest_desc: [
@@ -2091,6 +2282,9 @@
 		"Maledictus: a cursed warlord with a phantom army and a grudge older than the ice."
 		""
 		"Kill &eMaledictus&r in the Frosted Prison. He summons phantom weapons; keep moving and fight as a party."
+		""
+		"&6Where:&r Chained at the bottom of the Frosted Prison, in icy lands. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.397CD37A58E6EAA6.title: "Prison of Curses"
 	quest.398BA86B092F2DE7.quest_desc: [
@@ -2144,6 +2338,9 @@
 		"The Collapsed Kingdom's dungeons are full of the dead who still guard their king. The Haunted Knight commands them."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Haunts the Collapsed Kingdom's dungeons. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.3ADC7F9900766977.quest_subtitle: "Boss"
 	quest.3ADC7F9900766977.title: "The Haunted Knight"
@@ -2153,6 +2350,9 @@
 		"&eShared boss:&r the Yellow and Indigo lights hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Guards the Cloudy Temple, high in the sky. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.3B0EC56957A2869D.quest_subtitle: "Shared boss"
 	quest.3B0EC56957A2869D.title: "The Cloud Golem"
@@ -2236,6 +2436,9 @@
 		"&eShared boss:&r the Red light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Waits in the remains of a soul fortress. (the Nether)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.3C9B098D2FAF5004.quest_subtitle: "Shared boss"
 	quest.3C9B098D2FAF5004.title: "The Withered Abomination"
@@ -2283,6 +2486,9 @@
 		"On the glacier, a palace of aurora, and a queen who has never been warm."
 		""
 		"Kill the &eSnow Queen&r at the top of the &eAurora Palace&r. The trophy counts too."
+		""
+		"&6Where:&r Rules the Aurora Palace in the Twilight Forest's glacier. (the Twilight Forest)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.3DDEF31A1820C9B1.title: "The Snow Queen"
 	quest.3DEC395F71CBFAA9.quest_desc: [
@@ -2318,6 +2524,9 @@
 		"&eShared boss:&r the Indigo light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Waits in her temple. Don't look at her. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.3FAF16A4ECFD351F.quest_subtitle: "Shared boss"
 	quest.3FAF16A4ECFD351F.title: "The Gorgon"
@@ -2327,6 +2536,9 @@
 		"&eShared boss:&r the Indigo light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Nests in roosts in frozen lands and in ice dragon caves. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.3FDEC14DB19D9B25.quest_subtitle: "Shared boss"
 	quest.3FDEC14DB19D9B25.title: "Slay an Ice Dragon"
@@ -2338,6 +2550,8 @@
 	quest.40B02B3592E9B845.quest_desc: [
 		"Something enormous lives in the void under the End islands. The &eVoid Worm&r can be called up there (its dictionary page says how), and it splits into pieces when hurt."
 		"Kill every piece. Its parts make the &eDimensional Carver&r, a portal you can carry."
+		""
+		"&6Where:&r Craft or find a Mysterious Worm and throw it into the void below the End islands: the Void Worm rises to take it. (the End)"
 	]
 	quest.40B02B3592E9B845.title: "The Void Worm"
 	quest.40DFF024CA3B3563.quest_desc: [
@@ -2365,12 +2579,17 @@
 	quest.4173CDC6BD4DDD01.quest_desc: [
 		"&eMowzie's Mobs&r adds handcrafted mini-bosses (you may already have met the Ferrous Wroughtnaut). In the savanna, masked Umvuthana guard their chief in a hidden &egrove&r."
 		"Defeat &eUmvuthi&r. Kill the masked followers first; the chief calls the sun down on you."
+		""
+		"&6Where:&r Rules the Umvuthana grove in the savanna. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.4173CDC6BD4DDD01.quest_subtitle: "Mowzie's Mobs"
 	quest.4173CDC6BD4DDD01.title: "Umvuthi, the Sunbird"
 	quest.417DD7ABCC04D54B.quest_desc: [
 		"The &eMutant Skeleton&r fires volleys of arrows and leaves its bones behind."
 		"Its ribs, skull and limbs craft into &eMutant Skeleton armour&r."
+		""
+		"&6Where:&r A rare night spawn in the Overworld. (the Overworld)"
 	]
 	quest.417DD7ABCC04D54B.title: "Bones of a Giant"
 	quest.418812DFB57AF3F8.quest_desc: [
@@ -2423,6 +2642,8 @@
 	quest.4428B46FAA6F2B38.quest_desc: [
 		"At the heart of the cult waits the &5Ascended One&r, one of the deadliest mages in the world. Its fall opens the way to the eldritch arts (Eldritch Soulshards, the Apocrypha, demonic weapons)."
 		"An extreme fight. Bring your best book, your best robes and your whole party."
+		""
+		"&6Where:&r The cultists' god, called up at the heart of a cultist base. Follow the blood cultists. (the Overworld)"
 	]
 	quest.4428B46FAA6F2B38.title: "The Ascended One"
 	quest.444339F7215B5BB3.quest_desc: [
@@ -2441,6 +2662,9 @@
 		"In a Shulker Tower in the End, one of the chests isn't a chest."
 		""
 		"Find the place and defeat it. &7Optional: not needed for The Light Is Ready."
+		""
+		"&6Where:&r Hides among the chests of a Shulker Tower in the End. (the End)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.4487EE4EE10993AC.quest_subtitle: "Boss"
 	quest.4487EE4EE10993AC.title: "The Shulker Mimic"
@@ -2461,6 +2685,9 @@
 		"&eShared boss:&r the Indigo light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Three of them guard every ocean monument. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.454859A524953B58.quest_subtitle: "Shared boss"
 	quest.454859A524953B58.title: "Elder Guardian"
@@ -2474,6 +2701,9 @@
 		"In the Nether's lava seas, a Lava Eater nests in its own den (Legendary Monsters). It swims through lava as you swim through water: fight it from solid ground."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Nests in the Nether's lava seas. (the Nether)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.45C269F3299BAB6C.quest_subtitle: "Boss"
 	quest.45C269F3299BAB6C.title: "The Lava Eater"
@@ -2560,6 +2790,9 @@
 		"&eShared boss:&r the Green and Violet lights hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Rules a mausoleum in the frozen north. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.47B6C347E127AB7A.quest_subtitle: "Shared boss"
 	quest.47B6C347E127AB7A.title: "The Dread Lich"
@@ -2577,6 +2810,9 @@
 	quest.485CA0D160F4CB53.quest_desc: [
 		"In the &eSwamp&r lies a Labyrinth. A Maze Map helps; minotaurs roam its halls. The &eMinoshroom&r at its heart charges like a bull."
 		"It drops a Minotaur Axe and &eMeef Stroganoff&r. Eat the stroganoff: the Fire Swamp beyond needs it."
+		""
+		"&6Where:&r Guards the heart of the Labyrinth in the Twilight Forest's swamps. (the Twilight Forest)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.485CA0D160F4CB53.title: "III-a. The Minoshroom"
 	quest.487B03288CED39F6.quest_desc: [
@@ -2596,6 +2832,9 @@
 		"Three heads breathing fire across a burning swamp."
 		""
 		"Kill the &eHydra&r in its lair in the Fire Swamp. Bring fire resistance. The trophy counts too."
+		""
+		"&6Where:&r Lairs in the Twilight Forest's fire swamp. (the Twilight Forest)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.48A4D05E80DA307A.title: "The Fire Swamp Hydra"
 	quest.48EA6271CE4DF52E.quest_desc: [
@@ -2606,6 +2845,9 @@
 	quest.48ED16F24901F306.quest_desc: [
 		"In snowy lands a giant white ape sleeps, often clutching an &eIce Crystal&r. Wake it and it fights with ice breath and ground slams."
 		"Keep moving to dodge the ice breath, and bring a ranged weapon. Frostbinders will want that crystal."
+		""
+		"&6Where:&r Sleeps in the snow on frozen plains. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.48ED16F24901F306.title: "Frostmaw"
 	quest.49363DC1B5982350.quest_desc: [
@@ -2617,6 +2859,9 @@
 		"A paladin who swore your oath once. Something else holds his sword now."
 		""
 		"Defeat the &ePossessed Paladin&r (Legendary Monsters). Its &eGuide Book&r and structure advancements show where he waits."
+		""
+		"&6Where:&r Fights in the Collapsed Kingdom's great arena. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.499BC04DBAB0C257.title: "The Fallen Paladin"
 	quest.49D3F64B0581741A.quest_desc: [
@@ -2635,6 +2880,9 @@
 		"A giant of moss and stone, the forest's anger given legs."
 		""
 		"Defeat the &eOvergrown Colossus&r (Legendary Monsters). Its &eGuide Book&r and structure advancements show where it sleeps."
+		""
+		"&6Where:&r Sleeps in the Mossy Temple. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.4AA25BB8BF76A321.title: "The Overgrown Colossus"
 	quest.4AA50782E9120B3B.quest_desc: [
@@ -2963,6 +3211,8 @@
 		"A mage in white wanders the snow, freezing anything that comes close."
 		""
 		"Defeat an Iron's &eCryomancer&r in cold lands (or near ice structures). Frost resistance helps."
+		""
+		"&6Where:&r Ice mages wander the frozen lands and guard Iron's cold ruins. (the Overworld)"
 	]
 	quest.558F18D1C97008FD.title: "The Cryomancer"
 	quest.55959D7C0EDBFFE4.quest_desc: [
@@ -3022,6 +3272,9 @@
 	quest.56F29CB5B97E013D.quest_desc: [
 		"In the burning &eFire Swamp&r, the three-headed &eHydra&r guards its lair. Hit its heads when they open to bite, and keep out of the fire."
 		"Its &eFiery Blood&r makes the Fiery set. (This is Twilight's Hydra; Ice and Fire has another.)"
+		""
+		"&6Where:&r Lairs in the Twilight Forest's fire swamp. (the Twilight Forest)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.56F29CB5B97E013D.title: "IV-a. The Hydra"
 	quest.56FE3DB0C3721ECE.quest_desc: [
@@ -3058,6 +3311,9 @@
 		"&eShared boss:&r the Yellow light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Three of them guard every ocean monument. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.580BBF1A13957D2A.quest_subtitle: "Shared boss"
 	quest.580BBF1A13957D2A.title: "Elder Guardian"
@@ -3131,6 +3387,9 @@
 	quest.59D970A32FEC8FEE.quest_desc: [
 		"In the &eOgre King's Fort&r the King sits on his throne with his guard, mages and brutes. Break the guard first, then the King."
 		"He is the Hoardwarden's trial. His crown and club are worth the trip."
+		""
+		"&6Where:&r Sits on his throne in the Ogre King's Fort. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.59D970A32FEC8FEE.title: "II. The Ogre King"
 	quest.59F28861F4828FB3.quest_desc: [
@@ -3215,6 +3474,9 @@
 		"&eShared boss:&r the Yellow and Blue lights hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Guards the Cloudy Temple, high in the sky. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.5CA1855D1BA89E56.quest_subtitle: "Shared boss"
 	quest.5CA1855D1BA89E56.title: "The Cloud Golem"
@@ -3236,6 +3498,9 @@
 		"&eShared boss:&r the Violet light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Waits in her temple. Don't look at her. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.5D71CBD42E75A340.quest_subtitle: "Shared boss"
 	quest.5D71CBD42E75A340.title: "The Gorgon"
@@ -3245,6 +3510,9 @@
 		"&eShared boss:&r the Red light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Nests in roosts in warm lands and in fire dragon caves. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.5D8296614356A2E8.quest_subtitle: "Shared boss"
 	quest.5D8296614356A2E8.title: "Slay a Fire Dragon"
@@ -3269,6 +3537,9 @@
 		"At the top of the frozen tower, the Night Lich raises its staff, and the snow begins to scream."
 		""
 		"Kill the &eNight Lich&r at the top of its Lich Tower in frozen lands. Dodge its frost volleys; kill the summoned minions. Party members within 64 blocks get the trial credit too."
+		""
+		"&6Where:&r Waits at the top of a tower in snowy lands. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.5E095EF50ACD8483.quest_subtitle: "Ring trial: the boss"
 	quest.5E095EF50ACD8483.title: "&bThe Lich of the North"
@@ -3318,6 +3589,8 @@
 		"&eShared boss:&r the Red and Yellow lights hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r A rare night spawn in the Overworld. (the Overworld)"
 	]
 	quest.5F7443FF68611817.quest_subtitle: "Shared boss"
 	quest.5F7443FF68611817.title: "Mutant Creeper"
@@ -3376,6 +3649,9 @@
 	quest.61ECA44BBA92455E.quest_desc: [
 		"A tower in the snow hides the &eNight Lich&r. It hurls volleys of blue fire and calls down comets. Keep moving and use cover."
 		"The Frostbinder's trial."
+		""
+		"&6Where:&r Waits at the top of a tower in snowy lands. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.61ECA44BBA92455E.quest_subtitle: "Bosses of Mass Destruction"
 	quest.61ECA44BBA92455E.title: "II. The Night Lich"
@@ -3394,6 +3670,9 @@
 		"Under the swamp, a labyrinth. At its centre, a bull with a mushroom for a head."
 		""
 		"Find the &eLabyrinth&r and kill the &eMinoshroom&r. A Maze Map helps. The trophy counts too."
+		""
+		"&6Where:&r Guards the heart of the Labyrinth in the Twilight Forest's swamps. (the Twilight Forest)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.6265D4BBE1FE0B0E.title: "The Minoshroom"
 	quest.626A9B3BB36AD8A6.quest_desc: [
@@ -3417,11 +3696,24 @@
 		"The dungeons have masters. Topple one and the world will start to notice you."
 		""
 		"Defeat one early champion: Mowzie's &eFerrous Wroughtnaut&r (Wrought Chamber, underground), Born in Chaos's &eSupreme Bonescaller&r or &eNightmare Stalker&r, or Iron's &eAncient Knight&r (Citadel). Fight as a party."
+		""
+		"&6Where:&r Stands in its chamber, deep underground. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
+		""
+		"&6Where:&r A rare night spawn in the Overworld, raising skeletons around it. Look for the ring of risen dead. (the Overworld)"
+		""
+		"&6Where:&r Hunts at night in the Overworld, rarely: it finds you. Blood Moons bring it more often. (the Overworld)"
+		""
+		"&6Where:&r Ancient Knights still guard Iron's Citadel. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.62AE0482EA7D0527.title: "A Champion Falls"
 	quest.631999F78D616C16.quest_desc: [
 		"&eOgre outposts&r dot the plains and swamps. The &eGrunt Captain&r leads each warband: big, slow, and it hits like a falling tree."
 		"If you find the Kings & Monsters Compendium, read it: it's a field guide to ogre country."
+		""
+		"&6Where:&r Leads every ogre outpost in the plains and swamps. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.631999F78D616C16.quest_subtitle: "Kings & Monsters"
 	quest.631999F78D616C16.title: "I. The Grunt Captain"
@@ -3439,6 +3731,9 @@
 		"Scylla guards the storm's heart. She is lightning given a spear."
 		""
 		"Kill &eScylla&r in the Acropolis. Stay off the water when she calls the storm; fight as a party."
+		""
+		"&6Where:&r Rules the Acropolis, an island temple in a stormy sea. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.6368E9B89CBB7FF6.title: "The Storm Spire"
 	quest.636F1FC1A79594C1.quest_desc: [
@@ -3453,6 +3748,9 @@
 	quest.63A69A337F7F728F.quest_desc: [
 		"Climb the &eLich Tower&r. The Lich hides behind a shield and shadow clones: hit the real one when its shield drops, and swat its fireballs back at it."
 		"It drops the &eScepters&r (Twilight, Life Draining, Zombie, Fortification). Its death opens three paths: the swamp, the dark forest and the snow."
+		""
+		"&6Where:&r Waits at the top of the Lich Tower in the Twilight Forest. (the Twilight Forest)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.63A69A337F7F728F.title: "II. The Twilight Lich"
 	quest.63B682A21FF45F93.quest_desc: [
@@ -3477,6 +3775,9 @@
 		"&eShared boss:&r the Yellow light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Stands in the remains of an ancient tower. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.643A86D100A28318.quest_subtitle: "Shared boss"
 	quest.643A86D100A28318.title: "The Endersent"
@@ -3484,6 +3785,9 @@
 		"The draugr chieftain of the Frosted Prison, where Maledictus is chained. Clear the prison floor by floor."
 		""
 		"Find the place and defeat it. &7Optional: not needed for The Light Is Ready."
+		""
+		"&6Where:&r The draugr chieftain inside the Frosted Prison, in icy lands. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.64498278ABAB751A.quest_subtitle: "Boss"
 	quest.64498278ABAB751A.title: "Aptrgangr"
@@ -3532,6 +3836,9 @@
 		"A great serpent coils in a courtyard of mossy stone."
 		""
 		"Kill the &eNaga&r in its courtyard. Its scales make good armor. The trophy counts too."
+		""
+		"&6Where:&r Coils in the Naga Courtyard in the Twilight Forest. (the Twilight Forest)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.65C0AEACD3B72D54.title: "The Naga"
 	quest.65DC6FB681F8F284.quest_desc: [
@@ -3540,6 +3847,8 @@
 		"&eShared boss:&r the Red and Orange lights hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r A rare night spawn in the Overworld. (the Overworld)"
 	]
 	quest.65DC6FB681F8F284.quest_subtitle: "Shared boss"
 	quest.65DC6FB681F8F284.title: "Mutant Creeper"
@@ -3577,6 +3886,9 @@
 	quest.68D95F7C8504CE4F.quest_desc: [
 		"In a walled &eNaga Courtyard&r coils a giant serpent. It charges in straight lines: sidestep, then hit it while it turns."
 		"Its scales make Naga armour. Killing it opens the way to the Lich."
+		""
+		"&6Where:&r Coils in the Naga Courtyard in the Twilight Forest. (the Twilight Forest)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.68D95F7C8504CE4F.title: "I. The Naga"
 	quest.68F37FEF1C88C1B4.quest_desc: [
@@ -3588,6 +3900,8 @@
 		"A giant crab-knight of Cataclysm's ocean ruins. Its claws break shields."
 		""
 		"Defeat it. &7Optional: not needed for The Light Is Ready."
+		""
+		"&6Where:&r Lives in Cataclysm's ruins at sea. Search warm oceans and coasts. (the Overworld)"
 	]
 	quest.692AD404E2BEFFA1.quest_subtitle: "Boss"
 	quest.692AD404E2BEFFA1.title: "Clawdian"
@@ -3605,6 +3919,8 @@
 	quest.69793773ECA52D20.quest_desc: [
 		"The headless lord rides a hellish steed and throws burning pumpkin bombs. Knock him from the saddle and he fights on foot, angrier."
 		"Born in Chaos's darkest knight."
+		""
+		"&6Where:&r The headless lord answers Lord Pumpkinhead's Lamp; JEI shows how to fill and use it. He rides out at night. (the Overworld)"
 	]
 	quest.69793773ECA52D20.title: "III. Lord Pumpkinhead"
 	quest.699F1A9D5C701BF2.quest_desc: [
@@ -3627,6 +3943,8 @@
 		"A skeleton the size of a house, and it shoots like one."
 		""
 		"Optional: kill a &eMutant Skeleton&r (Mutant Monsters). Its bones make armor."
+		""
+		"&6Where:&r A rare night spawn in the Overworld. (the Overworld)"
 	]
 	quest.6A09F5CCC3DCBBE0.title: "Bones of a Giant"
 	quest.6A100BE6A6B3CAF1.quest_desc: [
@@ -3760,6 +4078,9 @@
 		"&eShared boss:&r the Green and Blue lights hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Rules a mausoleum in the frozen north. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.6D5FB3D44F81FF2C.quest_subtitle: "Shared boss"
 	quest.6D5FB3D44F81FF2C.title: "The Dread Lich"
@@ -3812,6 +4133,8 @@
 	quest.6EB488C095E5AEC5.quest_desc: [
 		"Along ocean cliffs, the winged sea serpent &eNaga&r dives at anyone on the shore and spits poison."
 		"Hit it while it's grounded after a dive. Its fangs make a poison dagger."
+		""
+		"&6Where:&r Flies along sea cliffs and ocean coasts. (the Overworld)"
 	]
 	quest.6EB488C095E5AEC5.title: "The Naga"
 	quest.6EBE9D9DFCCBD788.quest_desc: [
@@ -3836,6 +4159,9 @@
 		"A lich rules the tall tower at the forest's heart, behind a shield of spinning shields."
 		""
 		"Climb the &eLich Tower&r and kill the &eTwilight Lich&r. Break his shields first. The trophy counts too."
+		""
+		"&6Where:&r Waits at the top of the Lich Tower in the Twilight Forest. (the Twilight Forest)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.6FC18666677E14CD.title: "The Twilight Lich"
 	quest.6FD74E6486C0CC43.quest_desc: [
@@ -3847,6 +4173,8 @@
 		"Their god walks. It wears a human shape badly."
 		""
 		"Defeat the &eAscended One&r (Discerning the Eldritch) at the heart of the cult. One of the hardest void fights in the pack: bring the party."
+		""
+		"&6Where:&r The cultists' god, called up at the heart of a cultist base. Follow the blood cultists. (the Overworld)"
 	]
 	quest.6FF3A1335D817D2F.title: "The Ascended One"
 	quest.6FF59B24D5B09D9B.quest_desc: [
@@ -3891,6 +4219,9 @@
 		"A temple frozen solid, and a golem of primal ice that has forgotten how to stop."
 		""
 		"Defeat the &eFrostbitten Golem&r (Legendary Monsters) in its Frostbitten Temple. The mod's &eGuide Book&r helps you find it."
+		""
+		"&6Where:&r Guards the Frostbitten Temple in the snow. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.70BC4A9E27A2B814.title: "The Frostbitten Golem"
 	quest.70CE010C336C4710.quest_desc: [
@@ -3920,6 +4251,9 @@
 		"The Devourer's shadow wakes the old Cataclysm bosses. Put them down before they join it."
 		""
 		"Optional: Kill &eThe Harbinger&r in the Ancient Factory. Another class's chapter may already have sent you there."
+		""
+		"&6Where:&r Waits to be switched on deep in the Ancient Factory. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.71B5CB47856D252D.title: "The War Machine"
 	quest.71C4D45EA9A1B379.quest_desc: [
@@ -3960,6 +4294,9 @@
 		"The Devourer's shadow wakes the old Cataclysm bosses. Put them down before they join it."
 		""
 		"Optional: Kill &eIgnis&r in the Burning Arena (Nether). Another class's chapter may already have sent you there."
+		""
+		"&6Where:&r Fights in the Burning Arena in the Nether. (the Nether)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.7338EA1F65C3023C.title: "Ignis Rekindled"
 	quest.73480E81040913A6.quest_desc: [
@@ -3994,6 +4331,9 @@
 		"Before the Harbinger wakes, a war machine prowls the halls of the Ancient Factory. Take it apart."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Patrols the halls of the Ancient Factory. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.74D23ED3CB07721B.quest_subtitle: "Boss"
 	quest.74D23ED3CB07721B.title: "The Prowler"
@@ -4001,6 +4341,9 @@
 		"Spiders that spit frost, nesting in a cave of blue ice."
 		""
 		"Find an Iron's &eIce Spider Den&r in a snowy biome and kill an &eIce Spider&r."
+		""
+		"&6Where:&r Weaves its den in icy caves. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.75060753C86B9AA0.title: "The Ice Spider Den"
 	quest.750B3DD782BB8603.quest_desc: [
@@ -4021,6 +4364,9 @@
 		"&eShared boss:&r the Orange light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Walks the Skeletosaurus Nest. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.75AC62A5044069AA.quest_subtitle: "Shared boss"
 	quest.75AC62A5044069AA.title: "Skeletosaurus"
@@ -4034,6 +4380,8 @@
 		"When the old dragon falls, something tears through the sky to eat it."
 		""
 		"Kill the &eEnder Dragon&r (respawn it with 4 End Crystals on the exit portal if it's already dead). Watch what comes for its corpse."
+		""
+		"&6Where:&r Circles the main End island. Reach the End through a stronghold's portal. (the End)"
 	]
 	quest.75E0D67EC6120A62.title: "The Devouring"
 	quest.762F8B701205F098.quest_desc: [
@@ -4074,6 +4422,9 @@
 	quest.775D2B038E5FA321.quest_desc: [
 		"&eThe Graveyard&r spreads graveyards, crypts and haunted houses, and ghouls, revenants and wraiths with them. In a &eLich Prison&r, an altar can call up the &eCorrupted Champion&r."
 		"The Voidblade's trial. Bring a full party and something holy."
+		""
+		"&6Where:&r Call it up at the altar of a Lich Prison (The Graveyard). (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.775D2B038E5FA321.quest_subtitle: "The Graveyard"
 	quest.775D2B038E5FA321.title: "II. The Corrupted Champion"
@@ -4081,6 +4432,9 @@
 		"A tower of black brick and a mage who answers questions with fireballs."
 		""
 		"Find an Iron's &ePyromancer Tower&r and defeat a &ePyromancer&r. Its loot is full of fire scrolls."
+		""
+		"&6Where:&r Lives at the top of a pyromancer tower. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.7766E7D4C1D7CFCF.title: "The Pyromancer's Tower"
 	quest.779D4658EE0C671A.quest_desc: [
@@ -4098,6 +4452,9 @@
 		"&eShared boss:&r the Green light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Keeps its flock in a cave by the sea. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.77B35123CE4BF5BC.quest_subtitle: "Shared boss"
 	quest.77B35123CE4BF5BC.title: "The Cyclops"
@@ -4113,6 +4470,9 @@
 		"&eShared boss:&r the Green light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Leads the dead in the Collapsed Kingdom's arena. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.7840953CD41062F6.quest_subtitle: "Shared boss"
 	quest.7840953CD41062F6.title: "The Fractured Apostle"
@@ -4195,6 +4555,9 @@
 		"&eShared boss:&r the Violet light hunt it too. Fight it together: everyone within 64 blocks when it falls gets the credit."
 		""
 		"Find the place and defeat it. Counts toward &eThe Light Is Ready&r."
+		""
+		"&6Where:&r Leads the dead in the Collapsed Kingdom's arena. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.7A23DDCD976EF04C.quest_subtitle: "Shared boss"
 	quest.7A23DDCD976EF04C.title: "The Fractured Apostle"
@@ -4274,6 +4637,9 @@
 		"In a jungle Monkey Temple, a false priest of fire holds court (Companions!)."
 		""
 		"Find the place and defeat it. &7Optional: not needed for The Light Is Ready."
+		""
+		"&6Where:&r Holds court in a jungle Monkey Temple. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.7C9AAAE1FD428D25.quest_subtitle: "Boss"
 	quest.7C9AAAE1FD428D25.title: "The Sacred Pontiff"
@@ -4294,6 +4660,8 @@
 		"It wears your armor, swings your weapon, casts your spells. It is you, without the light."
 		""
 		"Optional: in &ethe End&r, place the Shadow Orb on the Shadow Altar. Whoever offers it is copied. Kill the &eDark Doppelganger&r."
+		""
+		"&6Where:&r Build a Shadow Altar and use a Shadow Orb on it (JEI shows both): your darker self steps out. (the Overworld)"
 	]
 	quest.7D62C50B862E12BC.title: "Your Own Shadow"
 	quest.7D7F5DCA07945469.quest_desc: [
@@ -4325,6 +4693,9 @@
 	quest.7EC8E525A8B9CFE7.quest_desc: [
 		"&eCataclysm&r's bosses live in huge dungeons. In the &eAncient Factory&r, the &eHarbinger&r, a wither-machine of missiles and lasers, waits to be switched on."
 		"The Stormwright's trial. Strafe its lasers and shoot down its missiles."
+		""
+		"&6Where:&r Waits to be switched on deep in the Ancient Factory. (the Overworld)"
+		"&7Kaelen, at the crashed Lantern ship, marks it on a map: bring him an empty map. Or type /gl guide."
 	]
 	quest.7EC8E525A8B9CFE7.quest_subtitle: "L_Ender's Cataclysm"
 	quest.7EC8E525A8B9CFE7.title: "II. The Harbinger"
@@ -4360,6 +4731,8 @@
 		"Something raises the dead faster than you can put them down. Find it and break it."
 		""
 		"Kill the &eSupreme Bonescaller&r (Born in Chaos). It stalks dark nights and cursed ground with an army of skeletons; bring friends to deal with the minions."
+		""
+		"&6Where:&r A rare night spawn in the Overworld, raising skeletons around it. Look for the ring of risen dead. (the Overworld)"
 	]
 	quest.7F9A0B2C1844CA8F.title: "Bonecaller"
 	quest.7FBF260747BE587A.quest_desc: [

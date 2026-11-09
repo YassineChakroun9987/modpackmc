@@ -314,3 +314,24 @@ that turns a room of storage into one searchable network. It's the non-tech step
   Armour*); two optional Orange quests for the Hoardwarden (*The Counting House*, *A Bottomless
   Hoard*); storage upgrades in chest loot, tiers 1 to 5. Your friends need the one new jar.
 
+**Bosses: more of them, shared, and required.** 40 new boss quests across the seven lights (24 new
+bosses, each checked against its structure's files). 13 bosses are shared by two or three lights,
+to encourage co-op: the Mutant Creeper (Red, Orange, Yellow), the Cloud Golem (Yellow, Blue, Indigo)
+and the Dread Lich (Green, Blue, Violet) by three. Each class chapter now ends with **The Light Is
+Ready**, which needs 80-88% of that light's bosses; the road to the Devourer needs one light's gate
+plus 4 of the 5 Cataclysm bosses. Every boss kill credits **everyone within 64 blocks**, so parties
+progress together. The boss list (names, where to find or how to summon, lair structure) lives in
+`quests/bosses.json`; every boss quest now has a "Where:" line from it.
+
+**Finding bosses.** Bring **Kaelen** (at the crashed ship) an **empty map**: he marks the lair of
+your next boss with a red X and tells you how to find or summon it. **/gl guide** gives the same
+directions anywhere ("your ring whispers").
+
+**Monsters scale with you.** Your **power level** is your best skill-tree level (Adventurer or any
+class). Monsters that spawn near you take the average power of the players within 64 blocks: per
+level +4% health, +2.5% damage, +0.2 armour, +0.08 toughness; from level 1 a growing chance of an
+**Elite** (up to 25%). Bosses, story mobs, tamed and summoned creatures aren't scaled. **/gl power**
+shows your level and the area's. Tuning is at the top of `story/70_mob_scaling.js`.
+
+**Console:** a green "GREEN LANTERNS SERVER IS READY" banner shows in the server window when startup is done.
+
