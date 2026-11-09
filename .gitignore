@@ -32,3 +32,7 @@ server/config/chunky/tasks/
 tools/gear_rows.json
 tools/classbook.json
 dist/
+
+# --- Secrets: real files stay local; *.example copies (password = CHANGE_ME) are committed instead
+server/server.properties
+server/config/resourceful-config-web.json
