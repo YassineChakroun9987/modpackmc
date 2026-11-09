@@ -118,6 +118,7 @@ both    spectral_hub-v4.jar                                                     
 both    structurify-neoforge-2.0.43+mc1.21.1.jar                                efd954533911c8a63f96cad82b96bcde47120ca2
 both    t_and_t-fabric-neoforge-1.13.11.jar                                     8f00e36a11568c0b66bbdf5c0e9ee492e511b303
 both    Terralith_1.21.1_v2.6.2_Neoforge.jar                                    d4a9fe71b841f70edfb4b280f9bf5c58e4a28224
+both    trek-B0.6.2.jar                                                         e83cbdbe987129cb039ead47d11994d8cbdb1ade
 both    twilightforest-1.21.1-4.8.3345-universal.jar                            9cfd4154928433e2f1f6cfc3deb48c284debb580
 both    uranus-2.4.1-1.21.1-neoforge.jar                                        2d689d2d9e5861ea0a382a459fa8fb0a3e4b5091
 both    villagertradingplus-neoforge-mc1.21.1-1.1.1.jar                         8ffd86625d67bd911d7f2e90ef5b2f67ab3630ef
@@ -139,7 +140,6 @@ server  resourcefulconfig-neoforge-1.21-3.0.11.jar                              
 server  SkyVillages-1.0.6-1.21.x-neoforge-release.jar                           645eb49d4019e5550afd4055f380c26edd126611
 server  structure_layout_optimizer-neoforge-1.0.12.jar                          052c31cb9881c04c17d949345539aa8684f474bf
 server  tlc-neoforge-1.21.1-2.1.0.jar                                           419b6f9c19da9dac1602b98dc8a93ce4d02d9eda
-server  trek-B0.6.2.jar                                                         e83cbdbe987129cb039ead47d11994d8cbdb1ade
 server  villagespawnpoint-1.21.1-6.0.jar                                        c6d3c35ccad1ce88b37f3a981049006c996c1886
 server  YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar                      90529257dbd92558998c65178294bc7b2fd16a64
 server  YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar                           73a660c13063450e555e5e2c015ae24d606b32b4
