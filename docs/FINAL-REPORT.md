@@ -252,6 +252,7 @@ a boot, and a second boot leaves the files byte-for-byte unchanged.
 | Loot | `tools/loot/gen_loot.py` + `server/kubejs/server_scripts/loot/` | run it, then `tools/loot/check_loot.py` |
 | Names and stages | `docs/CONTRACT.md` | the contract every script and quest follows |
 | Every mod and why | `MODLIST.md` | — |
+| Word lists (mods; armour and weapons) | `docs/Green-Lanterns-Mod-List.docx`, `docs/Green-Lanterns-Armour-and-Weapons.docx` | mods: `node tools/modlist_doc.js`; gear: boot with `--cmd "gl_dev exportgear"`, then `python -I tools/gear_data.py`, then `node tools/gear_doc.js` (both need `npm install docx@9` in a scratch folder, see the script headers) |
 | Test boots | `python -I tools/boottest.py --fresh --cmd "gl_dev selftest"` | results in the log |
 | Pre-generate | `python -I tools/pregen.py --radius 1200` | server must be stopped |
 | Admin commands | `/gl class join <p> <id>`, `/gl trial begin <p> <id>`, `/gl lore <p> <entry>` | op only |
