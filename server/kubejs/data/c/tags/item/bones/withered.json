@@ -1,0 +1,6 @@
+{
+  "values": [
+    "eternalnether:withered_bone",
+    { "id": "legendary_monsters:withered_bone", "required": false }
+  ]
+}

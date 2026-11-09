@@ -35,7 +35,7 @@ sit directly in `mods/` (it ignores subfolders), so this file is where the categ
 | Just Enough Items (JEI) | 19.69.0.457 (**beta**; latest release is 19.64.0.455) | both | Looking up item IDs, tags and recipes while we edit other mods. Also the players' recipe browser | testing |
 | KubeJS | 2101.7.2-build.381 | both | The main editing tool: recipes, tags, custom items (the ring), event scripts (the willpower counter). Lives in `kubejs/` | testing |
 | LootJS | 1.21.1-3.7.0 | server | KubeJS addon for loot tables and mob/chest drops | testing |
-| Almost Unified | 1.4.2 | both | **No duplicate items:** one copper, tin, silver, steel… for every mod. Picks a preferred mod per material (`config/almostunified/`), swaps the rest in recipes, loot and drops | testing |
+| Almost Unified | 1.4.2 | both | **No duplicate items:** one copper, tin, silver, steel… for every mod. Picks a preferred mod per material (`config/almostunified/`), swaps the rest in recipes, loot and drops. Audit 2026-11-09 (all `c:` tags + same-name items): merged steel ingot/nugget → Mekanism, copper nugget → Create, diamond dust → Mekanism, obsidian dust → Create, **dough → Farmer's Delight**, **Withered Bone → Eternal Nether** (tag `c:bones/withered` in `kubejs/data/c/`); **loot unification on**. Every ore and metal comes from one mod only, so world-gen unification isn't needed | tuned |
 | Structurify | 2.0.43 | both | **The one tool that controls structure placement**: overlap prevention, global spacing ×1.5, per-structure flatness checks and biome lists. Config: `server/config/structurify.json` | tuned |
 
 ## 2. Main mods
