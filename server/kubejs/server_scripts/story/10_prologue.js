@@ -147,18 +147,35 @@ function glWarlordSlain(entity) {
   server.scheduleInTicks(200, function () { glCrash(server) })
 }
 
+var GL_SHIP_SIZE = [47, 19, 29]   // createlanterns:oa/crashed_lantern_ship
+
+// Place a structure template (data/<ns>/structure/<path>.nbt) with its corner at x, y, z. Returns true if it
+// was placed. Uses the game's own API instead of the /place command, whose failure glRun hides.
+function glPlaceTemplate(level, id, x, y, z) {
+  var opt = level.getStructureManager().get($ResourceLocation.parse(id))
+  if (!opt.isPresent()) { console.error('[gl] template not found: ' + id); return false }
+  var pos = new $BlockPos(x, y, z)
+  var settings = new (Java.loadClass('net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings'))()
+  return opt.get().placeInWorld(level, pos, pos, settings, level.getRandom(), 2)
+}
+
 function glCrash(server) {
   var d = glData(server)
   if (d.getBoolean('crashPlaced')) return
   var level = server.overworld()
   var cx = d.getInt('cx'), cz = d.getInt('cz')
-  glRun(server, 'execute in minecraft:overworld run forceload add ' + (cx - 16) + ' ' + (cz - 16) + ' ' + (cx + 16) + ' ' + (cz + 16))
-  glEnsureChunks(level, cx, cz, 2)
+  // The template is 47 x 19 x 29 and is placed from its corner: centre it on (cx, cz), and load its whole
+  // footprint first. "place template" refuses unloaded chunks, and glRun is silent, so it used to fail
+  // without a trace (the ship reached 3 chunks past the loaded area).
+  var x0 = cx - GL_SHIP_SIZE[0] / 2 | 0, z0 = cz - GL_SHIP_SIZE[2] / 2 | 0
+  glRun(server, 'execute in minecraft:overworld run forceload add ' + (x0 - 8) + ' ' + (z0 - 8) + ' ' + (x0 + GL_SHIP_SIZE[0] + 8) + ' ' + (z0 + GL_SHIP_SIZE[2] + 8))
+  glEnsureChunks(level, cx, cz, 3)
   var cy = glSurfaceY(level, cx, cz)
-  glRun(server, 'execute in minecraft:overworld run place template createlanterns:oa/crashed_lantern_ship ' + cx + ' ' + (cy - 2) + ' ' + cz)
-  d.putInt('cy', cy); d.putBoolean('crashPlaced', true)
-  glNpcSpawnLantern(server, cx + 2, cy + 1, cz + 2)
-  glRun(server, 'execute in minecraft:overworld run forceload remove ' + (cx - 16) + ' ' + (cz - 16) + ' ' + (cx + 16) + ' ' + (cz + 16))
+  var placed = glPlaceTemplate(level, 'createlanterns:oa/crashed_lantern_ship', x0, cy - 2, z0)
+  console.info('[gl] crashed ship ' + (placed ? 'placed' : 'FAILED to place') + ' at ' + x0 + ',' + (cy - 2) + ',' + z0)
+  d.putInt('cy', cy); d.putInt('shipX', x0); d.putInt('shipZ', z0); d.putBoolean('crashPlaced', true)
+  glNpcSpawnLantern(server, cx, glSurfaceY(level, cx, cz) + 1, cz)
+  glRun(server, 'execute in minecraft:overworld run forceload remove ' + (x0 - 8) + ' ' + (z0 - 8) + ' ' + (x0 + GL_SHIP_SIZE[0] + 8) + ' ' + (z0 + GL_SHIP_SIZE[2] + 8))
   var dir = glDirection(d.getInt('vx'), d.getInt('vz'), cx, cz)
   server.players.forEach(function (p) {
     glRun(server, 'execute at ' + p.username + ' run playsound minecraft:entity.generic.explode ambient ' + p.username + ' ~ ~ ~ 0.6 0.5')

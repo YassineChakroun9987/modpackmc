@@ -45,6 +45,14 @@ ServerEvents.commandRegistry(function (event) {
       check('outpost ground height found', d.getInt('oy') > 0)
       glCrash(server)
       check('crash placed', d.getBoolean('crashPlaced'))
+      // The ship template (createlanterns:oa/crashed_lantern_ship, 47x19x29) really landed: count its quartz hull.
+      var hull = 0, cy0 = d.getInt('cy') - 2, $BP = Java.loadClass('net.minecraft.core.BlockPos')
+      for (var sx = 0; sx < 47; sx++) for (var sy = 0; sy < 19; sy++) for (var sz = 0; sz < 29; sz++) {
+        var bs = server.overworld().getBlockState(new $BP(d.getInt('shipX') + sx, cy0 + sy, d.getInt('shipZ') + sz))
+        if (String(bs.getBlock().getDescriptionId()).indexOf('quartz') >= 0) hull++
+      }
+      console.info('[selftest] crashed ship: ' + hull + ' quartz hull blocks at ' + d.getInt('shipX') + ',' + cy0 + ',' + d.getInt('shipZ'))
+      check('crashed ship is built (quartz hull present)', hull > 300)
       var cx = d.getInt('cx'), cz = d.getInt('cz')
       glRun(server, 'execute in minecraft:overworld run forceload add ' + (cx - 8) + ' ' + (cz - 8) + ' ' + (cx + 8) + ' ' + (cz + 8))
       // Entities in freshly loaded chunks appear a moment later: check after 5 s.
